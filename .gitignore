@@ -10,3 +10,9 @@ build/
 *.db
 .venv/
 venv/
+
+# Runtime data caches refreshed by the backend on a schedule. The
+# `gnta-quarterly-id.txt` checkpoint stays tracked (it pins the
+# last-known-good GNTA media ID so cold-start workers don't re-scan
+# from the base ID). Only the volatile JSON caches are ignored.
+server/data/tourism-cache.json
