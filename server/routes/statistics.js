@@ -300,6 +300,14 @@ async function fetchFlowRanking(tradeFlowCode, year, months, allCountryIds) {
 
   const stats = { withTrade: countryCount, totalMln: total, rawResponse };
   console.log(`country-ranking [flow=${tradeFlowCode} ${year}/m${months.join(',')}]: ${countryCount} countries, total $${total.toFixed(1)}M`);
+  // Diagnostic: when a flow returns zero countries, dump what Geostat
+  // actually said. Lets us tell apart "Geostat returned success+empty"
+  // from "Geostat threw" from "rows had unparseable country IDs".
+  if (countryCount === 0) {
+    console.warn(
+      `country-ranking [flow=${tradeFlowCode} ${year}/m${months.join(',')}]: ZERO COUNTRIES — rawResponse=${JSON.stringify(rawResponse)}`
+    );
+  }
   return { total, perCountry: map, stats };
 }
 
@@ -393,10 +401,27 @@ router.post('/country-ranking', async (req, res) => {
       };
       // Only cache if we got meaningful data; never cache failures.
       const hasData = exp.stats.withTrade > 0 || imp.stats.withTrade > 0;
+      // Diagnostic: same partial-failure detector as /country-aggregate,
+      // but across all four flows. Any flow at withTrade=0 while another
+      // has data means a cached response would carry 0s in the empty flows.
+      const flowCounts = {
+        export: exp.stats.withTrade,
+        import: imp.stats.withTrade,
+        domesticExport: domExp.stats.withTrade,
+        reExport: reExp.stats.withTrade,
+      };
+      const empties = Object.entries(flowCounts).filter(([, n]) => n === 0).map(([k]) => k);
+      const nonEmpties = Object.entries(flowCounts).filter(([, n]) => n > 0).map(([k]) => k);
+      if (empties.length > 0 && nonEmpties.length > 0) {
+        console.warn(
+          `country-ranking [${cacheKey}]: PARTIAL CACHE WRITE — empty=${empties.join(',')} non-empty=${nonEmpties.join(',')}; ` +
+          `frontend will see ${empties.join(' + ')} as 0 for the next hour.`
+        );
+      }
       if (hasData) rankingCacheSet(cacheKey, cached);
       debug.computedMs = Date.now() - t0;
       debug.cached = hasData;
-      console.log(`country-ranking: completed in ${(debug.computedMs / 1000).toFixed(1)}s — exp:${exp.stats.withTrade} imp:${imp.stats.withTrade} countries`);
+      console.log(`country-ranking: completed in ${(debug.computedMs / 1000).toFixed(1)}s — exp:${exp.stats.withTrade} imp:${imp.stats.withTrade} domExp:${domExp.stats.withTrade} reExp:${reExp.stats.withTrade} countries`);
     }
 
     debug.flowStats = cached.flowStats || null;
@@ -525,7 +550,21 @@ async function computeAggregate(year, sortedMonths) {
         import: imp.perCountry,
       },
     };
-    if (exp.stats.withTrade > 0 || imp.stats.withTrade > 0) {
+    // Diagnostic: surface partial-flow cache writes — the suspected
+    // mechanism behind appendix columns rendering 0.00 for one flow.
+    // When one fetch returned data and the other came back empty, the
+    // current OR gate still caches the half-broken response and serves
+    // it for the next hour.
+    const expHas = exp.stats.withTrade > 0;
+    const impHas = imp.stats.withTrade > 0;
+    if (expHas !== impHas) {
+      console.warn(
+        `country-aggregate [${key}]: PARTIAL CACHE WRITE — exp.withTrade=${exp.stats.withTrade} imp.withTrade=${imp.stats.withTrade}; ` +
+        `frontend will see one flow as 0 for the next hour. ` +
+        `exp.raw=${JSON.stringify(exp.stats.rawResponse)} imp.raw=${JSON.stringify(imp.stats.rawResponse)}`
+      );
+    }
+    if (expHas || impHas) {
       aggregateCacheSet(key, data);
     }
     return data;
