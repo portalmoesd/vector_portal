@@ -16,3 +16,10 @@ venv/
 # last-known-good GNTA media ID so cold-start workers don't re-scan
 # from the base ID). Only the volatile JSON caches are ignored.
 server/data/tourism-cache.json
+
+# One-shot migration from previous vector_portal deployment.
+# .migration.env holds DATABASE_URL + OLD_DATABASE_URL connection strings;
+# the backup directories hold per-table CSV dumps of the new DB taken
+# immediately before the destructive TRUNCATE. Neither belongs in git.
+server/scripts/.migration.env
+server/scripts/.migration-backup-*/
