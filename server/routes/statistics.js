@@ -231,10 +231,23 @@ function extractRowCountryId(row) {
 }
 
 async function fetchFlowRanking(tradeFlowCode, year, months, allCountryIds) {
-  // Single Geostat call: pass ALL country IDs + all months + sum=true.
+  // Single Geostat call: pass ALL country IDs + all months + NO sum.
+  //
+  // Earlier versions sent `sum: true` which reliably triggered iisnode
+  // 502s on Geostat for some periods/flows (we saw the partial-failure
+  // logs). The no-sum shape returns:
+  //   - row 0: no `country` field; `usd1000_<year>_<m1>_<m2>...` is
+  //     Georgia's total for the requested months
+  //   - rows 1+: per-country with `country: <id>` and the same column
+  //     key. Strings sometimes ("76019.5336591776"), sometimes numbers,
+  //     sometimes the literal "-" when the country had no trade.
 
   let rawResponse = null;
   const perCountry = {}; // String(countryId) -> valueThd
+  let georgiaTotalThd = 0;
+  // Geostat names the value column based on the months filter we send,
+  // e.g. months=[1,2,3] → "usd1000_2025_1_2_3".
+  const expectedKey = `usd1000_${year}_${months.join('_')}`;
 
   try {
     const json = await geostatFetch('/get_data', {
@@ -245,7 +258,6 @@ async function fetchFlowRanking(tradeFlowCode, year, months, allCountryIds) {
         years: [year],
         months,
         countries: allCountryIds,
-        sum: true,
         locale: 'en',
         page: 1,
         pageSize: 500,
@@ -258,24 +270,21 @@ async function fetchFlowRanking(tradeFlowCode, year, months, allCountryIds) {
     };
 
     if (json && Array.isArray(json.data)) {
-      for (const row of json.data) {
-        if (row.isGroupSummary) continue;
-        const val = extractRowValue(row);
-        if (val <= 0) continue;
-        // Try every plausible field name for the country identifier.
-        let cid = null;
-        for (const f of ['country', 'country_id', 'countryId', 'country_code', 'countries']) {
-          if (row[f] != null && row[f] !== '') { cid = row[f]; break; }
+      const summaryRow = json.data[0];
+      if (summaryRow && summaryRow.country == null) {
+        const v = parseFloat(summaryRow[expectedKey]);
+        if (Number.isFinite(v)) georgiaTotalThd = v;
+      }
+      for (let i = 1; i < json.data.length; i++) {
+        const row = json.data[i];
+        const cid = row.country;
+        if (cid == null) continue;
+        const raw = row[expectedKey];
+        if (raw == null || raw === '' || raw === '-') continue;
+        const num = parseFloat(raw);
+        if (Number.isFinite(num) && num > 0) {
+          perCountry[String(cid)] = num;
         }
-        if (cid == null) {
-          if (!rawResponse.sampleRowKeys) {
-            rawResponse.sampleRowKeys = Object.keys(row);
-            rawResponse.sampleRow = row;
-          }
-          continue;
-        }
-        const key = String(cid);
-        perCountry[key] = (perCountry[key] || 0) + val;
       }
     }
   } catch (err) {
@@ -288,7 +297,10 @@ async function fetchFlowRanking(tradeFlowCode, year, months, allCountryIds) {
     .filter((e) => e.valueMln > 0)
     .sort((a, b) => b.valueMln - a.valueMln);
 
-  const total = entries.reduce((s, e) => s + e.valueMln, 0);
+  // Georgia total comes straight from the summary row Geostat returns —
+  // more reliable than summing per-country rows, which would miss any
+  // country dropped from the response.
+  const total = georgiaTotalThd / 1000;
   const map = {};
   entries.forEach((e, idx) => {
     map[e.cid] = {
