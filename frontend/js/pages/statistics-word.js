@@ -1199,8 +1199,10 @@
       const c = appendix.data[i] && appendix.data[i].country;
       let text = '-';
       let color = COLOR.titleDark;
-      if (c) {
-        const bal = (c.export || 0) - (c.import || 0);
+      // Same null-on-either-side rule as the on-screen appendix:
+      // unknown flow → balance is undefined, render '-'.
+      if (c && c.export != null && c.import != null) {
+        const bal = c.export - c.import;
         color = bal > 0 ? COLOR.positive : (bal < 0 ? COLOR.negative : COLOR.titleDark);
         const sign = bal < 0 ? '-' : '';
         text = `${sign}${formatMln2(Math.abs(bal))}`;
