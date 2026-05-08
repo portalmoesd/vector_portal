@@ -87,6 +87,14 @@ async function getColumnNames(pool, table) {
 }
 
 async function tableHasIdSequence(client, table) {
+  // pg_get_serial_sequence throws "column does not exist" rather than
+  // returning NULL when the column is missing, so guard with a column check.
+  const { rows: idCols } = await client.query(
+    `SELECT 1 FROM information_schema.columns
+      WHERE table_schema = 'public' AND table_name = $1 AND column_name = 'id'`,
+    [table]
+  );
+  if (idCols.length === 0) return null;
   const { rows } = await client.query(
     `SELECT pg_get_serial_sequence($1, 'id') AS seq`,
     [table]
