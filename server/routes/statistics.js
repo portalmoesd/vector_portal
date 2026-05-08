@@ -192,16 +192,16 @@ router.post('/export-report', async (req, res) => {
 // ── POST /api/statistics/country-ranking ────────────────────────────────────
 // Returns the selected country's rank + share of Georgia totals for the
 // given (year, months) across three trade flows. Caches the computed
-// all-countries rankings for 1 hour so subsequent PDF exports hit the cache.
+// all-countries rankings as last-known-good (no TTL) so a transient
+// Geostat partial outage can't poison serving from a previous good run.
+// LRU eviction keeps the cache bounded at RANKING_CACHE_MAX entries.
 
-const RANKING_TTL = 60 * 60 * 1000; // 1 hour
 const RANKING_CACHE_MAX = 32;
 const rankingCache = new Map(); // key -> { data, ts }
 
 function rankingCacheGet(key) {
   const entry = rankingCache.get(key);
   if (!entry) return null;
-  if (Date.now() - entry.ts > RANKING_TTL) { rankingCache.delete(key); return null; }
   return entry.data;
 }
 
@@ -399,11 +399,13 @@ router.post('/country-ranking', async (req, res) => {
         flows: { turnover: turnoverRanked, export: exp.perCountry, import: imp.perCountry, domesticExport: domExp.perCountry, reExport: reExp.perCountry },
         flowStats: { export: exp.stats, import: imp.stats, domesticExport: domExp.stats, reExport: reExp.stats },
       };
-      // Only cache if we got meaningful data; never cache failures.
-      const hasData = exp.stats.withTrade > 0 || imp.stats.withTrade > 0;
-      // Diagnostic: same partial-failure detector as /country-aggregate,
-      // but across all four flows. Any flow at withTrade=0 while another
-      // has data means a cached response would carry 0s in the empty flows.
+      // Only cache when every flow returned data. Caching a partial
+      // result would serve "0" for the empty flow until the entry is
+      // replaced, which is exactly the appendix-zeros bug. With the
+      // AND gate, a Geostat hiccup that leaves one flow empty means
+      // we keep serving the previous good entry (or, on cold cache,
+      // the partial response is returned but not stored, so the next
+      // request retries).
       const flowCounts = {
         export: exp.stats.withTrade,
         import: imp.stats.withTrade,
@@ -411,16 +413,16 @@ router.post('/country-ranking', async (req, res) => {
         reExport: reExp.stats.withTrade,
       };
       const empties = Object.entries(flowCounts).filter(([, n]) => n === 0).map(([k]) => k);
-      const nonEmpties = Object.entries(flowCounts).filter(([, n]) => n > 0).map(([k]) => k);
-      if (empties.length > 0 && nonEmpties.length > 0) {
+      const allHaveData = empties.length === 0;
+      if (!allHaveData && empties.length < 4) {
         console.warn(
-          `country-ranking [${cacheKey}]: PARTIAL CACHE WRITE — empty=${empties.join(',')} non-empty=${nonEmpties.join(',')}; ` +
-          `frontend will see ${empties.join(' + ')} as 0 for the next hour.`
+          `country-ranking [${cacheKey}]: SKIP CACHE — partial Geostat (empty=${empties.join(',')}); ` +
+          `previous good entry (if any) preserved.`
         );
       }
-      if (hasData) rankingCacheSet(cacheKey, cached);
+      if (allHaveData) rankingCacheSet(cacheKey, cached);
       debug.computedMs = Date.now() - t0;
-      debug.cached = hasData;
+      debug.cached = allHaveData;
       console.log(`country-ranking: completed in ${(debug.computedMs / 1000).toFixed(1)}s — exp:${exp.stats.withTrade} imp:${imp.stats.withTrade} domExp:${domExp.stats.withTrade} reExp:${reExp.stats.withTrade} countries`);
     }
 
@@ -506,8 +508,9 @@ router.post('/country-ranking/debug', async (req, res) => {
 // rank/share data, so paying for them was pure overhead. Per-period
 // (Georgia totals) cache is shared across countries; an in-flight
 // promise map keeps concurrent first-callers from stampeding Geostat.
+// No TTL — the AND write-gate below means only complete results land
+// here, so the previous good entry is always safe to keep serving.
 
-const AGGREGATE_TTL = 60 * 60 * 1000; // 1 hour
 const AGGREGATE_CACHE_MAX = 64;
 const aggregateCache = new Map(); // key -> { data, ts }
 const aggregateInflight = new Map(); // key -> Promise<{ totals, flows }>
@@ -515,7 +518,6 @@ const aggregateInflight = new Map(); // key -> Promise<{ totals, flows }>
 function aggregateCacheGet(key) {
   const entry = aggregateCache.get(key);
   if (!entry) return null;
-  if (Date.now() - entry.ts > AGGREGATE_TTL) { aggregateCache.delete(key); return null; }
   return entry.data;
 }
 
@@ -539,6 +541,8 @@ async function computeAggregate(year, sortedMonths) {
       fetchFlowRanking(10, year, sortedMonths, allCountryIds),
       fetchFlowRanking(11, year, sortedMonths, allCountryIds),
     ]);
+    const expHas = exp.stats.withTrade > 0;
+    const impHas = imp.stats.withTrade > 0;
     const data = {
       totals: {
         export: exp.total,
@@ -549,23 +553,23 @@ async function computeAggregate(year, sortedMonths) {
         export: exp.perCountry, // { cid: { valueMln, rank, sharePct } }
         import: imp.perCountry,
       },
+      // The route handler uses these to distinguish "this country has
+      // no trade in that flow" (legit 0) from "the whole flow fetch
+      // failed" (data unavailable, render '-' not '0.00').
+      flowStats: { export: { has: expHas }, import: { has: impHas } },
     };
-    // Diagnostic: surface partial-flow cache writes — the suspected
-    // mechanism behind appendix columns rendering 0.00 for one flow.
-    // When one fetch returned data and the other came back empty, the
-    // current OR gate still caches the half-broken response and serves
-    // it for the next hour.
-    const expHas = exp.stats.withTrade > 0;
-    const impHas = imp.stats.withTrade > 0;
-    if (expHas !== impHas) {
+    // Cache only when every flow returned data. A partial result is
+    // returned to the caller but never stored, so the next request
+    // retries instead of being served from a poisoned cache.
+    if (expHas && impHas) {
+      aggregateCacheSet(key, data);
+    } else if (expHas || impHas) {
       console.warn(
-        `country-aggregate [${key}]: PARTIAL CACHE WRITE — exp.withTrade=${exp.stats.withTrade} imp.withTrade=${imp.stats.withTrade}; ` +
-        `frontend will see one flow as 0 for the next hour. ` +
+        `country-aggregate [${key}]: SKIP CACHE — partial Geostat ` +
+        `(exp.withTrade=${exp.stats.withTrade} imp.withTrade=${imp.stats.withTrade}); ` +
+        `previous good entry (if any) preserved. ` +
         `exp.raw=${JSON.stringify(exp.stats.rawResponse)} imp.raw=${JSON.stringify(imp.stats.rawResponse)}`
       );
-    }
-    if (expHas || impHas) {
-      aggregateCacheSet(key, data);
     }
     return data;
   })();
@@ -595,13 +599,28 @@ router.post('/country-aggregate', async (req, res) => {
     const idKey = String(countryId);
     const expEntry = data.flows.export[idKey];
     const impEntry = data.flows.import[idKey];
-    const expVal = expEntry ? expEntry.valueMln : 0;
-    const impVal = impEntry ? impEntry.valueMln : 0;
-    const country = (expVal > 0 || impVal > 0)
-      ? { export: expVal, import: impVal, turnover: expVal + impVal }
+    // When an entire flow fetch returned 0 countries, we don't know
+    // this country's value — surface null, not 0, so the appendix
+    // renders '-' rather than '0.00'.
+    const expHas = data.flowStats?.export?.has !== false;
+    const impHas = data.flowStats?.import?.has !== false;
+    const expVal = expHas ? (expEntry ? expEntry.valueMln : 0) : null;
+    const impVal = impHas ? (impEntry ? impEntry.valueMln : 0) : null;
+    const country = ((expVal != null && expVal > 0) || (impVal != null && impVal > 0))
+      ? {
+          export: expVal,
+          import: impVal,
+          turnover: (expVal != null && impVal != null) ? expVal + impVal : null,
+        }
       : null;
+    // Same null-vs-0 distinction for Georgia totals.
+    const totals = {
+      export: expHas ? data.totals.export : null,
+      import: impHas ? data.totals.import : null,
+      turnover: (expHas && impHas) ? data.totals.turnover : null,
+    };
 
-    res.json({ success: true, totals: data.totals, country });
+    res.json({ success: true, totals, country });
   } catch (err) {
     console.error('Statistics country-aggregate error:', err.message);
     res.status(502).json({ error: 'Failed to fetch country aggregate', reason: err.message });

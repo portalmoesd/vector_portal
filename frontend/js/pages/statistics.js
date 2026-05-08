@@ -3152,8 +3152,10 @@
 
     const balanceCells = cols.map((_, i) => {
       const c = state.data[i] && state.data[i].country;
-      if (!c) return `<td>-</td>`;
-      const bal = (c.export || 0) - (c.import || 0);
+      // null on either side means that flow's Geostat fetch was empty —
+      // we don't know the value, so balance is undefined, render '-'.
+      if (!c || c.export == null || c.import == null) return `<td>-</td>`;
+      const bal = c.export - c.import;
       const cls = bal > 0 ? 'stat-positive' : (bal < 0 ? 'stat-negative' : '');
       const sign = bal < 0 ? '-' : '';
       return `<td class="${cls}">${sign}${fmtAppendixNum(Math.abs(bal))}</td>`;
