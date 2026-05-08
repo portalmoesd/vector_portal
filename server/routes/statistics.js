@@ -538,12 +538,13 @@ function appendixCacheSet(key, data) {
 }
 
 // Parse a Geostat /get_data response in the new (no-sum) shape.
-// - `data[0]` has no `country` field; its `usd1000_<year>` values are
+// - `data[0]` has no `country` field; its `usd1000_<year>` (multi-year call)
+//   or `usd1000_<year>_<m1>_<m2>...` (call with `months` filter) values are
 //   Georgia totals for that period.
-// - `data[i>0]` rows have `country: <id>` and `usd1000_<year>` columns;
-//   those values are that country's total for the period (in 1000 USD,
-//   sometimes returned as a string with many decimals, sometimes as the
-//   literal "-" when the country had no trade in that year).
+// - `data[i>0]` rows have `country: <id>` and the same column keys; those
+//   values are that country's total for the period (in 1000 USD, sometimes
+//   returned as a string with many decimals, sometimes as the literal "-"
+//   when the country had no trade in that year).
 function parseAppendixGeostatJson(json) {
   const result = { perYear: {}, errored: false, raw: null };
   if (!json || !Array.isArray(json.data)) {
@@ -559,10 +560,16 @@ function parseAppendixGeostatJson(json) {
     result.raw.reason = 'no summary row at index 0';
     return result;
   }
+  // Year column keys can be either `usd1000_<year>` or
+  // `usd1000_<year>_<m1>_<m2>...` depending on whether a `months` filter
+  // was passed. Capture the year and remember the full key so per-country
+  // rows can be looked up by the same string.
+  const yearColumnKey = {}; // year -> exact column key on the row
   for (const k of Object.keys(summaryRow)) {
-    if (!k.startsWith('usd1000_')) continue;
-    const year = parseInt(k.slice('usd1000_'.length), 10);
-    if (!Number.isInteger(year)) continue;
+    const m = k.match(/^usd1000_(\d{4})(?:_\d+)*$/);
+    if (!m) continue;
+    const year = parseInt(m[1], 10);
+    yearColumnKey[year] = k;
     const v = parseFloat(summaryRow[k]);
     result.perYear[year] = {
       gtTotalThd: Number.isFinite(v) ? v : 0,
@@ -574,8 +581,8 @@ function parseAppendixGeostatJson(json) {
     const cid = row.country;
     if (cid == null) continue;
     const cidKey = String(cid);
-    for (const year of Object.keys(result.perYear)) {
-      const raw = row[`usd1000_${year}`];
+    for (const [year, columnKey] of Object.entries(yearColumnKey)) {
+      const raw = row[columnKey];
       if (raw == null || raw === '' || raw === '-') continue;
       const num = parseFloat(raw);
       if (Number.isFinite(num) && num !== 0) {
