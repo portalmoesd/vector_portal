@@ -2967,75 +2967,38 @@
   // Multi-year trade matrix: 6 full years + 2 YTD columns (prior-year YTD
   // and current-year YTD). Rows: Georgia total / country value / YoY change
   // / share, for each of Turnover/Export/Import, plus a single Balance row.
-  // Data source: POST /api/statistics/country-ranking (one call per column,
-  // server-side cached).
+  // Data source: POST /api/statistics/country-appendix (single call;
+  // backend fans out two Geostat calls per flow with the no-sum / multi-
+  // year shape that proves reliable).
 
-  function buildAppendixColumns(latestYear, latestMonth) {
-    const cols = [];
-    if (latestMonth >= 12) {
-      // Recent period is a full year → 6 full years, no YTD comparison
-      for (let y = latestYear - 5; y <= latestYear; y++) {
-        cols.push({ kind: 'full', year: y, label: String(y) });
-      }
-    } else {
-      // 5 full years + the recent YTD period and the same YTD of the prior year
-      for (let y = latestYear - 5; y <= latestYear - 1; y++) {
-        cols.push({ kind: 'full', year: y, label: String(y) });
-      }
-      const months = [];
-      for (let m = 1; m <= latestMonth; m++) months.push(m);
-      const mm = String(latestMonth).padStart(2, '0');
-      cols.push({ kind: 'ytd', year: latestYear - 1, months, label: `${latestYear - 1}.${mm}` });
-      cols.push({ kind: 'ytd', year: latestYear, months, label: `${latestYear}.${mm}` });
-    }
-    return cols;
-  }
-
-  async function fetchAppendixColumn(column, countryId) {
+  async function buildAppendix(latestYear, latestMonth, countryId) {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), 60_000);
-    const months = column.kind === 'full'
-      ? [1,2,3,4,5,6,7,8,9,10,11,12]
-      : column.months;
     try {
-      // /country-aggregate is the slim cousin of /country-ranking — it
-      // skips the dom-export + re-export fetches and the rank sort the
-      // appendix never reads. Response shape: country.{export,import,
-      // turnover} are flat numbers (not {valueMln,rank,sharePct} like
-      // /country-ranking).
-      const res = await fetch(`${PROXY_API}/country-aggregate`, {
+      const res = await fetch(`${PROXY_API}/country-appendix`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ year: column.year, months, countryId }),
+        body: JSON.stringify({ latestYear, latestMonth, countryId }),
         signal: ctrl.signal,
       });
       const j = await res.json().catch(() => null);
       if (!res.ok || !j || !j.success) return null;
-      // Server already returns null when the country has no data for the
-      // period, so `j.country` is the appendix's "country absent" signal.
-      return { totals: j.totals, country: j.country || null };
+      // Server returns columns + per-column { totals, country | null } in
+      // exactly the shape renderAppendix consumes. No client reshaping.
+      const anyData = (j.data || []).some((d) => d && d.totals);
+      if (!anyData) return null;
+      return {
+        latestYear: j.latestYear,
+        latestMonth: j.latestMonth,
+        ytdMode: !!j.ytdMode,
+        columns: j.columns || [],
+        data: j.data || [],
+      };
     } catch (_) {
       return null;
     } finally {
       clearTimeout(timer);
     }
-  }
-
-  async function buildAppendix(latestYear, latestMonth, countryId) {
-    const columns = buildAppendixColumns(latestYear, latestMonth);
-    const settled = await Promise.allSettled(
-      columns.map((c) => fetchAppendixColumn(c, countryId))
-    );
-    const data = settled.map((s) => (s.status === 'fulfilled' ? s.value : null));
-    const anyData = data.some((d) => d && d.totals);
-    if (!anyData) return null;
-    return {
-      latestYear,
-      latestMonth,
-      ytdMode: latestMonth < 12,
-      columns,
-      data,
-    };
   }
 
   function fmtAppendixNum(v) {
