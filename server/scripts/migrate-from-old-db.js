@@ -72,13 +72,18 @@ function buildPool(connectionString, label) {
 
 async function getColumns(pool, table) {
   const { rows } = await pool.query(
-    `SELECT column_name
+    `SELECT column_name, data_type
        FROM information_schema.columns
       WHERE table_schema = 'public' AND table_name = $1
       ORDER BY ordinal_position`,
     [table]
   );
-  return rows.map(r => r.column_name);
+  return rows.map(r => ({ name: r.column_name, type: r.data_type }));
+}
+
+async function getColumnNames(pool, table) {
+  const cols = await getColumns(pool, table);
+  return cols.map(c => c.name);
 }
 
 async function tableHasIdSequence(client, table) {
@@ -99,7 +104,7 @@ async function rowCount(pool, table) {
 }
 
 async function dumpTableToNdjson(pool, table, outDir) {
-  const cols = await getColumns(pool, table);
+  const cols = await getColumnNames(pool, table);
   if (cols.length === 0) return 0;
   const file = path.join(outDir, `${table}.ndjson`);
   const fd = fs.openSync(file, 'w');
@@ -116,12 +121,19 @@ async function dumpTableToNdjson(pool, table, outDir) {
   }
 }
 
-function buildInsert(table, cols, batch) {
+function buildInsert(table, cols, batch, jsonCols) {
   const colList = cols.map(quoteIdent).join(', ');
   const params = [];
   const valueGroups = batch.map(row => {
     const placeholders = cols.map(c => {
-      params.push(row[c]);
+      let v = row[c];
+      // pg's auto-stringification for JS objects bound to JSON/JSONB columns
+      // is unreliable when the parameter type is inferred (rather than declared)
+      // — explicit JSON.stringify avoids "invalid input syntax for type json".
+      if (jsonCols.has(c) && v !== null && typeof v === 'object' && !Buffer.isBuffer(v)) {
+        v = JSON.stringify(v);
+      }
+      params.push(v);
       return '$' + params.length;
     });
     return '(' + placeholders.join(', ') + ')';
@@ -133,24 +145,29 @@ function buildInsert(table, cols, batch) {
 }
 
 async function copyTable(srcPool, dstClient, table) {
-  const srcCols = await getColumns(srcPool, table);
-  const dstCols = await getColumns(dstClient, table);
-  const onlyOld = srcCols.filter(c => !dstCols.includes(c));
-  const onlyNew = dstCols.filter(c => !srcCols.includes(c));
+  const srcMeta = await getColumns(srcPool, table);
+  const dstMeta = await getColumns(dstClient, table);
+  const srcNames = srcMeta.map(c => c.name);
+  const dstNames = dstMeta.map(c => c.name);
+  const onlyOld = srcNames.filter(c => !dstNames.includes(c));
+  const onlyNew = dstNames.filter(c => !srcNames.includes(c));
   if (onlyOld.length || onlyNew.length) {
     const detail = [];
     if (onlyOld.length) detail.push(`only in old: ${onlyOld.join(', ')}`);
     if (onlyNew.length) detail.push(`only in new: ${onlyNew.join(', ')}`);
     throw new Error(`Schema mismatch on table "${table}" — ${detail.join(' | ')}`);
   }
-  const cols = srcCols;
+  const cols = srcNames;
+  const jsonCols = new Set(
+    dstMeta.filter(c => c.type === 'jsonb' || c.type === 'json').map(c => c.name)
+  );
   const orderBy = ORDER_BY_OVERRIDE[table] || (cols.includes('id') ? 'id ASC' : '1');
   const { rows } = await srcPool.query(`SELECT * FROM ${quoteIdent(table)} ORDER BY ${orderBy}`);
   if (rows.length === 0) return 0;
 
   for (let i = 0; i < rows.length; i += BATCH_ROWS) {
     const batch = rows.slice(i, i + BATCH_ROWS);
-    const { text, values } = buildInsert(table, cols, batch);
+    const { text, values } = buildInsert(table, cols, batch, jsonCols);
     await dstClient.query(text, values);
   }
   return rows.length;
@@ -199,8 +216,8 @@ async function main() {
 
     console.log('\n── Schema diff ────────────────────────────────────────────');
     for (const table of TABLE_ORDER) {
-      const oldCols = await getColumns(oldPool, table);
-      const newCols = await getColumns(newPool, table);
+      const oldCols = await getColumnNames(oldPool, table);
+      const newCols = await getColumnNames(newPool, table);
       if (oldCols.length === 0) {
         throw new Error(`Source DB is missing table "${table}" — old DB schema not aligned.`);
       }
