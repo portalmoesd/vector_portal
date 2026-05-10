@@ -2578,18 +2578,25 @@
     }
     const c = state.counts;
     const country = isKa ? state.countryKa : state.countryEn;
+    // Georgian genitive ("of <country>") — proper inflection from the
+    // grammar sheet ("თურქეთის"), with the suffix-fallback for any
+    // country missing from the sheet. Used wherever the prose previously
+    // stuck "-ის" onto the bare nominative.
+    const countryOf = isKa
+      ? (grammarFor(state.countryKa || country).of || (country + 'ის'))
+      : country;
     const b = (s) => `<strong>${escapeHtml(String(s))}</strong>`;
     const fmt = (n) => Number(n || 0).toLocaleString();
     const lines = [];
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'კომპანიები' : 'Companies'}</h4>`);
     if (isKa) {
-      lines.push(`<p>${escapeHtml(country)}-ის კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:</p>`);
-      lines.push(`<p>${b(fmt(c.total))} მოქმედი კომპანია ${escapeHtml(country)}-ის კაპიტალის მონაწილეობით.</p>`);
+      lines.push(`<p>${escapeHtml(countryOf)} კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:</p>`);
+      lines.push(`<p>${b(fmt(c.total))} მოქმედი კომპანია ${escapeHtml(countryOf)} კაპიტალის მონაწილეობით.</p>`);
       lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
-      lines.push(`<li>${b(fmt(c.solo))} კომპანია - ${escapeHtml(country)}-ის კაპიტალით შექმნილი;</li>`);
+      lines.push(`<li>${b(fmt(c.solo))} კომპანია - ${escapeHtml(countryOf)} კაპიტალით შექმნილი;</li>`);
       lines.push(`<li>${b(fmt(c.withGeorgia))} კომპანია - ${escapeHtml(country)} - საქართველოს წილობრივი კაპიტალით შექმნილი;</li>`);
       lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} კომპანია - ${escapeHtml(country)}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;</li>`);
-      lines.push(`<li>${b(fmt(c.withThirdOnly))} კომპანია - ${escapeHtml(country)}-ის და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.</li>`);
+      lines.push(`<li>${b(fmt(c.withThirdOnly))} კომპანია - ${escapeHtml(countryOf)} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.</li>`);
       lines.push(`</ul>`);
     } else {
       lines.push(`<p>Active companies with capital originating from ${escapeHtml(country)}:</p>`);
