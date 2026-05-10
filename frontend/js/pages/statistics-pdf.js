@@ -1111,10 +1111,17 @@
   }
 
   // ── Companies section ──────────────────────────────────────────────────
-  function buildCompaniesSection(state, t, country, lang, countryNameEn) {
+  function buildCompaniesSection(state, t, country, lang, countryNameEn, grammar) {
     if (!state || !state.hasData) return [];
     const isKa = lang === 'ka';
     const displayCountry = isKa ? (state.countryKa || country) : (state.countryEn || countryNameEn || country);
+    // Georgian genitive ("of <country>") from the grammar sheet, falling
+    // back to the suffix concatenation for countries the sheet doesn't
+    // cover. Replaces the previous `${displayCountry}-ის` which produced
+    // "თურქეთი-ის" instead of "თურქეთის".
+    const countryOf = isKa
+      ? ((grammar && grammar.of) || (displayCountry + 'ის'))
+      : displayCountry;
     const c = state.counts;
     const B = (s) => ({ text: s, bold: true });
     const fmt = (n) => Number(n || 0).toLocaleString();
@@ -1126,14 +1133,14 @@
     const nodes = [];
 
     if (isKa) {
-      nodes.push({ text: `${displayCountry}-ის კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:`, ...paraStyle });
-      nodes.push({ text: [B(fmt(c.total)), ` მოქმედი კომპანია ${displayCountry}-ის კაპიტალის მონაწილეობით.`], ...paraStyle });
+      nodes.push({ text: `${countryOf} კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:`, ...paraStyle });
+      nodes.push({ text: [B(fmt(c.total)), ` მოქმედი კომპანია ${countryOf} კაპიტალის მონაწილეობით.`], ...paraStyle });
       nodes.push({
         ul: [
-          { text: [B(fmt(c.solo)), ` კომპანია - ${displayCountry}-ის კაპიტალით შექმნილი;`], ...liStyle },
+          { text: [B(fmt(c.solo)), ` კომპანია - ${countryOf} კაპიტალით შექმნილი;`], ...liStyle },
           { text: [B(fmt(c.withGeorgia)), ` კომპანია - ${displayCountry} - საქართველოს წილობრივი კაპიტალით შექმნილი;`], ...liStyle },
           { text: [B(fmt(c.withGeorgiaAndThird)), ` კომპანია - ${displayCountry}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;`], ...liStyle },
-          { text: [B(fmt(c.withThirdOnly)), ` კომპანია - ${displayCountry}-ის და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.`], ...liStyle },
+          { text: [B(fmt(c.withThirdOnly)), ` კომპანია - ${countryOf} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.`], ...liStyle },
         ],
       });
     } else {
@@ -1465,7 +1472,7 @@
       ? { ...state.investments, sectors: state.investmentsSectors || null }
       : state.investments;
     content.push(...buildInvestmentsSection(investmentsWithSectors, charts, t, country, lang, state.countryGrammar));
-    content.push(...buildCompaniesSection(state.companies, t, country, lang, opts.countryNameEn));
+    content.push(...buildCompaniesSection(state.companies, t, country, lang, opts.countryNameEn, state.countryGrammar));
     content.push(...buildAppendixSection(state.appendix, t, country, lang));
 
     if (content.length === 0) {

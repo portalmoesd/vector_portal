@@ -953,12 +953,19 @@
   // ── Companies section ──────────────────────────────────────────────────
   // Mirrors statistics-pdf.js buildCompaniesSection. Bullet list of
   // company-count breakdowns by capital origin.
-  function buildCompaniesSection(D, state, t, country, lang, countryNameEn) {
+  function buildCompaniesSection(D, state, t, country, lang, countryNameEn, grammar) {
     if (!state || !state.hasData) return [];
     const isKa = lang === 'ka';
     const displayCountry = isKa
       ? (state.countryKa || country)
       : (state.countryEn || countryNameEn || country);
+    // Georgian genitive ("of <country>") from the grammar sheet, falling
+    // back to the suffix concatenation for countries the sheet doesn't
+    // cover. Replaces the previous `${displayCountry}-ის` which produced
+    // "თურქეთი-ის" instead of "თურქეთის".
+    const countryOf = isKa
+      ? ((grammar && grammar.of) || (displayCountry + 'ის'))
+      : displayCountry;
     const c = state.counts || {};
     const B = (s) => ({ text: s, bold: true });
     const fmt = (n) => Number(n || 0).toLocaleString();
@@ -969,10 +976,10 @@
 
     if (isKa) {
       out.push(summaryProseParagraph(D, [
-        `${displayCountry}-ის კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:`,
+        `${countryOf} კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:`,
       ]));
       out.push(summaryProseParagraph(D, [
-        B(fmt(c.total)), ` მოქმედი კომპანია ${displayCountry}-ის კაპიტალის მონაწილეობით.`,
+        B(fmt(c.total)), ` მოქმედი კომპანია ${countryOf} კაპიტალის მონაწილეობით.`,
       ]));
     } else {
       out.push(summaryProseParagraph(D, [
@@ -1005,10 +1012,10 @@
     });
 
     if (isKa) {
-      out.push(bullet([B(fmt(c.solo)), ` კომპანია - ${displayCountry}-ის კაპიტალით შექმნილი;`]));
+      out.push(bullet([B(fmt(c.solo)), ` კომპანია - ${countryOf} კაპიტალით შექმნილი;`]));
       out.push(bullet([B(fmt(c.withGeorgia)), ` კომპანია - ${displayCountry} - საქართველოს წილობრივი კაპიტალით შექმნილი;`]));
       out.push(bullet([B(fmt(c.withGeorgiaAndThird)), ` კომპანია - ${displayCountry}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;`]));
-      out.push(bullet([B(fmt(c.withThirdOnly)), ` კომპანია - ${displayCountry}-ის და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.`]));
+      out.push(bullet([B(fmt(c.withThirdOnly)), ` კომპანია - ${countryOf} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.`]));
     } else {
       out.push(bullet([B(fmt(c.solo)), ` companies - established with capital from only ${displayCountry};`]));
       out.push(bullet([B(fmt(c.withGeorgia)), ` companies - established with joint capital from ${displayCountry} and Georgia;`]));
@@ -1822,7 +1829,7 @@
       ...buildTradeSection(D, state && state.trade, tradeCharts, t, country, lang),
       ...buildTourismSection(D, state && state.tourism, tradeCharts, t, country, lang, grammar),
       ...buildInvestmentsSection(D, investmentsState, tradeCharts, t, country, lang, grammar),
-      ...buildCompaniesSection(D, state && state.companies, t, country, lang, opts && opts.countryNameEn),
+      ...buildCompaniesSection(D, state && state.companies, t, country, lang, opts && opts.countryNameEn, grammar),
       ...buildAppendixSection(D, state && state.appendix, t, country, lang),
     ];
 
