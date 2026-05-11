@@ -34,9 +34,9 @@
   const activeEvents = events.filter(e => e.isActive);
 
   if (activeEvents.length === 0) {
-    eventSelect.innerHTML = '<option value="">No events</option>';
+    eventSelect.innerHTML = `<option value="">${escapeHtml(I18n.tr('dashboard.noEvents'))}</option>`;
   } else {
-    eventSelect.innerHTML = '<option value="">Select event...</option>' +
+    eventSelect.innerHTML = `<option value="">${escapeHtml(I18n.tr('dashboard.selectEventPlaceholder'))}</option>` +
       activeEvents.map(e => {
         const deadline = e.deadlineDate ? formatDate(e.deadlineDate) : '';
         const label = `${e.title} (${e.countryName}${deadline ? ', ' + deadline : ''})`;
@@ -63,7 +63,7 @@
     upcoming.sort((a, b) => new Date(a.deadlineDate) - new Date(b.deadlineDate));
 
     if (upcoming.length === 0) {
-      upcomingListEl.innerHTML = '<div class="empty-state"><p>No upcoming events</p></div>';
+      upcomingListEl.innerHTML = `<div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.noUpcoming'))}</p></div>`;
       return;
     }
 
@@ -72,9 +72,9 @@
         <h4 class="dp-upcoming-event__title">${escapeHtml(e.title)}</h4>
         <div class="dp-upcoming-event__pills">
           <span class="dp-upcoming-event__pill">${escapeHtml(e.countryName)}</span>
-          ${e.deadlineDate ? `<span class="dp-upcoming-event__pill">Deadline: ${formatDate(e.deadlineDate)}</span>` : ''}
+          ${e.deadlineDate ? `<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.deadline'))}: ${formatDate(e.deadlineDate)}</span>` : ''}
           <span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(e.language || 'EN')}</span>
-          ${e.workflowType === 'simple' ? `<span class="dp-upcoming-event__pill" title="Simple workflow: every department contributes its own section, no responsible department.">Simple</span>` : ''}
+          ${e.workflowType === 'simple' ? `<span class="dp-upcoming-event__pill" title="${escapeHtml(I18n.tr('dashboard.workflowSimpleTooltip'))}">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>` : ''}
         </div>
         ${e.occasion ? `<div class="dp-upcoming-event__desc">${e.occasion}</div>` : ''}
       </div>
@@ -104,9 +104,16 @@
       }
     });
 
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'];
-    const dayNames = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN'];
+    // Localised month + weekday names — follow the same locale tag the
+    // rest of the app uses for dates.
+    const calLocale = (typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB';
+    const monthLabel = new Date(year, month, 1).toLocaleDateString(calLocale, { month: 'long', year: 'numeric' });
+    const weekdayFmt = new Intl.DateTimeFormat(calLocale, { weekday: 'short' });
+    // 2024-01-01 is a Monday — build Mon..Sun labels from it.
+    const dayNames = [];
+    for (let i = 0; i < 7; i++) {
+      dayNames.push(weekdayFmt.format(new Date(2024, 0, 1 + i)).toUpperCase());
+    }
 
     const firstDay = new Date(year, month, 1);
     let startDay = firstDay.getDay() - 1;
@@ -130,7 +137,7 @@
     miniCalendarEl.innerHTML = `
       <div class="dp-cal-header">
         <button class="dp-cal-nav" id="calPrev">&lsaquo;</button>
-        <span class="dp-cal-header__title">${monthNames[month]}, ${year}</span>
+        <span class="dp-cal-header__title">${escapeHtml(monthLabel)}</span>
         <button class="dp-cal-nav" id="calNext">&rsaquo;</button>
       </div>
       <div class="dp-cal-grid">${daysHtml}</div>
@@ -186,9 +193,10 @@
         eventDetailsEl.innerHTML = `
             ${ev.occasion ? `<div class="dp-event-details__body">${ev.occasion}</div>` : ''}
             <div class="dp-event-details__meta">
-              <span class="dp-event-details__meta-item">Country <strong>${escapeHtml(ev.countryName)}</strong></span>
-              <span class="dp-event-details__meta-item">Language <span class="dp-lang-pill">${languageLabel(ev.language || 'EN')}</span></span>
-              ${ev.deadlineDate ? `<span class="dp-event-details__meta-item">Deadline <strong>${formatDate(ev.deadlineDate)}</strong></span>` : ''}
+              <span class="dp-event-details__meta-item">${escapeHtml(I18n.tr('dashboard.country'))} <strong>${escapeHtml(ev.countryName)}</strong></span>
+              <span class="dp-event-details__meta-item">${escapeHtml(I18n.tr('dashboard.language'))} <span class="dp-lang-pill">${languageLabel(ev.language || 'EN')}</span></span>
+              ${ev.deadlineDate ? `<span class="dp-event-details__meta-item">${escapeHtml(I18n.tr('dashboard.deadline'))} <strong>${formatDate(ev.deadlineDate)}</strong></span>` : ''}
+              ${ev.workflowType === 'simple' ? `<span class="dp-event-details__meta-item">${escapeHtml(I18n.tr('dashboard.workflow'))} <span class="dp-lang-pill" title="${escapeHtml(I18n.tr('dashboard.workflowSimpleTooltip'))}">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span></span>` : ''}
             </div>
         `;
       }
@@ -223,7 +231,7 @@
       if (visibleSections.length === 0) {
         if (container) {
           container.style.display = '';
-          container.innerHTML = '<div class="card"><div class="empty-state"><p>No sections for this event</p></div></div>';
+          container.innerHTML = `<div class="card"><div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.noSections'))}</p></div></div>`;
         }
         return;
       }
@@ -239,17 +247,17 @@
       let headerActions = '';
       const isDeptA = grid.homeDepartmentId && user.departmentId === grid.homeDepartmentId;
       if (isDS || isDeptA) {
-        headerActions += `<button class="btn btn-outline" onclick="window.location.href='/pages/editor-all.html?event_id=${eventId}'">Open all Sections</button>`;
+        headerActions += `<button class="btn btn-outline" onclick="window.location.href='/pages/editor-all.html?event_id=${eventId}'">${escapeHtml(I18n.tr('dashboard.openAllSections'))}</button>`;
       }
       if (sectionsToApprove.length > 1) {
-        headerActions += `<button class="btn dp-approve-all-btn" id="approveAllBtn">Approve all sections</button>`;
+        headerActions += `<button class="btn dp-approve-all-btn" id="approveAllBtn">${escapeHtml(I18n.tr('dashboard.approveAllSections'))}</button>`;
       }
       // In simple mode the event auto-completes once every section is
       // approved, so the manual "Send to Library" button is redundant
       // (and the event row has typically vanished from the dashboard
       // already because it's now COMPLETED).
       if (isDS && allApproved && grid.workflowType !== 'simple') {
-        headerActions += `<button class="btn btn-primary" id="sendToLibraryBtn">Send to Library</button>`;
+        headerActions += `<button class="btn btn-primary" id="sendToLibraryBtn">${escapeHtml(I18n.tr('dashboard.sendToLibrary'))}</button>`;
       }
 
       const sectionsHtml = visibleSections.map((s, i) => renderSectionRow(s, i, eventId, grid)).join('');
@@ -260,15 +268,15 @@
           <div class="card">
             <div class="dp-sections-card__header">
               <div>
-                <h3 class="dp-sections-card__title">Required sections</h3>
-                <p class="dp-sections-card__subtitle">Review section progress, check who updated each part, and take action.</p>
+                <h3 class="dp-sections-card__title">${escapeHtml(I18n.tr('dashboard.sections'))}</h3>
+                <p class="dp-sections-card__subtitle">${escapeHtml(I18n.tr('dashboard.sectionsSubtitle'))}</p>
               </div>
               <div class="dp-sections-card__actions">${headerActions}</div>
             </div>
             <div class="dp-sections-table-header">
-              <span>SECTION</span>
-              <span>PROGRESS</span>
-              <span style="text-align:right;">ACTIONS</span>
+              <span>${escapeHtml(I18n.tr('dashboard.colSection'))}</span>
+              <span>${escapeHtml(I18n.tr('dashboard.colProgress'))}</span>
+              <span style="text-align:right;">${escapeHtml(I18n.tr('dashboard.colActions'))}</span>
             </div>
             ${sectionsHtml}
           </div>
@@ -303,10 +311,10 @@
     // Build notification banners
     let noticeBanners = '';
     if (returnInfo) {
-      noticeBanners += `<div class="dp-return-notice dp-return-notice--returned">Returned by ${escapeHtml(returnInfo.from || returnInfo.fromRole)}${returnInfo.note ? ': ' + escapeHtml(returnInfo.note) : ''}</div>`;
+      noticeBanners += `<div class="dp-return-notice dp-return-notice--returned">${escapeHtml(I18n.tr('dashboard.returnedBy', { who: returnInfo.from || returnInfo.fromRole || '' }))}${returnInfo.note ? ': ' + escapeHtml(returnInfo.note) : ''}</div>`;
     }
     if (returnReq) {
-      noticeBanners += `<div class="dp-return-notice">Return requested by ${escapeHtml(returnReq.from)}${returnReq.note ? ': ' + escapeHtml(returnReq.note) : ''}</div>`;
+      noticeBanners += `<div class="dp-return-notice">${escapeHtml(I18n.tr('dashboard.returnRequestedBy', { who: returnReq.from || '' }))}${returnReq.note ? ': ' + escapeHtml(returnReq.note) : ''}</div>`;
     }
 
     return `
@@ -323,7 +331,7 @@
           </div>
         </div>
         ${renderPipeline(section, grid, eventId)}
-        <button class="dp-history-toggle" data-section-id="${section.sectionId}" data-event-id="${eventId}">History &#9660;</button>
+        <button class="dp-history-toggle" data-section-id="${section.sectionId}" data-event-id="${eventId}">${escapeHtml(I18n.tr('dashboard.historyToggle'))} &#9660;</button>
         <div class="dp-history-panel" id="historyPanel_${section.sectionId}" style="display:none;"></div>
       </div>
     `;
@@ -366,8 +374,8 @@
     // hijacked into showing the DS as a chain role.
     const amendmentBanner = currentStatus === 'submitted_to_amending_ds'
       ? `<div class="dp-amendment-banner" style="background:#fef3c7;color:#92400e;border:1px solid #fcd34d;border-radius:6px;padding:6px 10px;margin:0 0 8px;font-size:12px;">
-           <strong>Amendment in progress</strong>
-           — the Document Submitter is editing this section. The chain below shows the previous approval history.
+           <strong>${escapeHtml(I18n.tr('dashboard.amendmentInProgress'))}</strong>
+           ${escapeHtml(I18n.tr('dashboard.amendmentNote'))}
          </div>`
       : '';
 
@@ -392,20 +400,20 @@
     // Open (always)
     links.push(`<button class="dp-action-link dp-action-link--open" onclick="window.location.href='/pages/editor.html?event_id=${eventId}&section_id=${section.sectionId}'">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-      OPEN
+      ${escapeHtml(I18n.tr('dashboard.actionOpen'))}
     </button>`);
 
     if (isHolder) {
       if (status === 'draft' || status.startsWith('returned_')) {
         links.push(`<button class="dp-action-link dp-action-link--submit" data-action="submit" data-event="${eventId}" data-section="${section.sectionId}">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-          SUBMIT
+          ${escapeHtml(I18n.tr('dashboard.actionSubmit'))}
         </button>`);
       }
       if (status === `submitted_to_${effRole.toLowerCase()}`) {
         links.push(`<button class="dp-action-link dp-action-link--approve" data-action="approve" data-event="${eventId}" data-section="${section.sectionId}">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
-          APPROVE
+          ${escapeHtml(I18n.tr('dashboard.actionApprove'))}
         </button>`);
         // Return doesn't apply to a DS amendment — the section was
         // already approved before the reopen, so there's nowhere to
@@ -414,7 +422,7 @@
         if (status !== 'submitted_to_amending_ds') {
           links.push(`<button class="dp-action-link dp-action-link--return" data-action="return" data-event="${eventId}" data-section="${section.sectionId}">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-            RETURN
+            ${escapeHtml(I18n.tr('dashboard.actionReturn'))}
           </button>`);
         }
       }
@@ -427,7 +435,7 @@
       if (userIdx !== -1 && holderIdx > userIdx) {
         links.push(`<button class="dp-action-link dp-action-link--ask-return" data-action="ask-to-return" data-event="${eventId}" data-section="${section.sectionId}">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
-          ASK RETURN
+          ${escapeHtml(I18n.tr('dashboard.actionAskReturn'))}
         </button>`);
       }
     }
@@ -436,7 +444,7 @@
     if (section.canPush) {
       links.push(`<button class="dp-action-link dp-action-link--push" data-action="push-section" data-event="${eventId}" data-section="${section.sectionId}">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-        PUSH SECTION
+        ${escapeHtml(I18n.tr('editor.pushSection'))}
       </button>`);
     }
 
@@ -444,7 +452,7 @@
     if (section.canPull) {
       links.push(`<button class="dp-action-link dp-action-link--pull" data-action="pull-section" data-event="${eventId}" data-section="${section.sectionId}">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-        PULL SECTION
+        ${escapeHtml(I18n.tr('editor.pullSection'))}
       </button>`);
     }
 
@@ -465,7 +473,7 @@
     popover.className = 'dp-stage-popover';
     popover.innerHTML = `
       <div class="dp-popover__header">
-        <span class="dp-popover__title">Eligible Users</span>
+        <span class="dp-popover__title">${escapeHtml(I18n.tr('dashboard.eligibleUsers'))}</span>
         <button class="dp-popover__close">&times;</button>
       </div>
       <div class="dp-popover__body">${initialHtml}</div>
@@ -494,7 +502,7 @@
 
   function renderStageUsers(data) {
     if (!data.users || data.users.length === 0) {
-      return '<div class="dp-popover__empty">No eligible users</div>';
+      return `<div class="dp-popover__empty">${escapeHtml(I18n.tr('dashboard.noEligibleUsers'))}</div>`;
     }
     const label = roleLabel(data.role);
     const rows = data.users.map(u => `
@@ -514,7 +522,7 @@
         const eventId = dot.dataset.stageEvent;
         const sectionId = dot.dataset.stageSection;
         const role = dot.dataset.stageRole;
-        const popover = createStagePopover(dot, '<div class="dp-popover__loading">Loading…</div>');
+        const popover = createStagePopover(dot, `<div class="dp-popover__loading">${escapeHtml(I18n.tr('dashboard.loading'))}</div>`);
         try {
           const data = await Api.get(`/api/workflow/stage-users?event_id=${eventId}&section_id=${sectionId}&role=${encodeURIComponent(role)}`);
           popover.querySelector('.dp-popover__body').innerHTML = renderStageUsers(data);
@@ -621,31 +629,39 @@
 
   // ── History Panel ──────────────────────────────────────────────────────────
 
-  const HISTORY_STAGES = [
-    { role: 'COLLABORATOR', label: 'Collaborator' },
-    { role: 'HEAD_COLLABORATOR', label: 'Head Collaborator' },
-    { role: 'SUPER_COLLABORATOR', label: 'Super-Collaborator' },
-    { role: 'CURATOR', label: 'Curator' },
-    { role: 'SUPERVISOR', label: 'Supervisor' },
-    { role: 'DEPUTY', label: 'Deputy' },
-    { role: 'RECEIVING_SUPER_COLLABORATOR', label: 'Super-Collaborator (Review)' },
-    { role: 'RECEIVING_SUPERVISOR', label: 'Supervisor (Review)' },
+  const HISTORY_STAGE_ROLES = [
+    'COLLABORATOR', 'HEAD_COLLABORATOR', 'SUPER_COLLABORATOR', 'CURATOR',
+    'SUPERVISOR', 'DEPUTY', 'RECEIVING_SUPER_COLLABORATOR', 'RECEIVING_SUPERVISOR',
   ];
 
+  function historyStageLabel(role) {
+    if (role === 'RECEIVING_SUPER_COLLABORATOR') return I18n.tr('editor.history.stage.scReview');
+    if (role === 'RECEIVING_SUPERVISOR') return I18n.tr('editor.history.stage.svReview');
+    return roleLabel(role);
+  }
+
+  // bg/color stay literal (colours don't localise); the label is an
+  // i18n key under editor.history.action.* with an English fallback.
   const ACTION_COLORS = {
-    saved:           { bg: '#ede9fe', color: '#5b21b6', label: 'Edited' },
-    submitted:       { bg: '#dbeafe', color: '#1d4ed8', label: 'Submitted' },
-    approved:        { bg: '#dcfce7', color: '#15803d', label: 'Approved' },
-    returned:        { bg: '#fee2e2', color: '#b91c1c', label: 'Returned' },
-    asked_to_return: { bg: '#fef3c7', color: '#92400e', label: 'Asked to Return' },
-    pushed:          { bg: '#e0e7ff', color: '#4338ca', label: 'Pushed' },
-    pulled:          { bg: '#e0e7ff', color: '#4338ca', label: 'Pulled' },
+    saved:           { bg: '#ede9fe', color: '#5b21b6', key: 'saved',        en: 'Edited' },
+    submitted:       { bg: '#dbeafe', color: '#1d4ed8', key: 'submitted',    en: 'Submitted' },
+    approved:        { bg: '#dcfce7', color: '#15803d', key: 'approved',     en: 'Approved' },
+    returned:        { bg: '#fee2e2', color: '#b91c1c', key: 'returned',     en: 'Returned' },
+    asked_to_return: { bg: '#fef3c7', color: '#92400e', key: 'askedToReturn', en: 'Asked to Return' },
+    pushed:          { bg: '#e0e7ff', color: '#4338ca', key: 'pushed',       en: 'Pushed' },
+    pulled:          { bg: '#e0e7ff', color: '#4338ca', key: 'pulled',       en: 'Pulled' },
   };
+
+  function actionLabel(action) {
+    const ac = ACTION_COLORS[action];
+    if (!ac) return action;
+    return _i18n(`editor.history.action.${ac.key}`, ac.en);
+  }
 
   function formatHistoryDate(dateStr) {
     if (!dateStr) return '—';
     const d = new Date(dateStr);
-    return d.toLocaleString('en-GB', {
+    return d.toLocaleString((typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB', {
       day: '2-digit', month: 'short', year: 'numeric',
       hour: '2-digit', minute: '2-digit',
     });
@@ -653,7 +669,7 @@
 
   function renderHistoryTimeline(history) {
     if (!history || history.length === 0) {
-      return '<p style="color: var(--text-muted); font-size: 13px;">No history yet</p>';
+      return `<p style="color: var(--text-muted); font-size: 13px;">${escapeHtml(I18n.tr('dashboard.noHistory'))}</p>`;
     }
 
     // Group by role
@@ -679,30 +695,28 @@
       return collapsed;
     }
 
-    const stageOrder = HISTORY_STAGES.map(s => s.role);
     const orderedRoles = [];
-    for (const stage of HISTORY_STAGES) {
-      if (byRole[stage.role]) orderedRoles.push(stage);
+    for (const role of HISTORY_STAGE_ROLES) {
+      if (byRole[role]) orderedRoles.push(role);
     }
     for (const role of Object.keys(byRole)) {
-      if (!stageOrder.includes(role)) {
-        orderedRoles.push({ role, label: roleLabel(role) });
-      }
+      if (!HISTORY_STAGE_ROLES.includes(role)) orderedRoles.push(role);
     }
 
-    return '<div class="sh-timeline">' + orderedRoles.map(stage => {
-      const entries = collapseEntries(byRole[stage.role]);
+    return '<div class="sh-timeline">' + orderedRoles.map(role => {
+      const entries = collapseEntries(byRole[role]);
       const eventsHtml = entries.map(h => {
-        const ac = ACTION_COLORS[h.action] || { bg: '#f1f5f9', color: '#475569', label: h.action };
-        const actor = escapeHtml(h.userName || 'Unknown');
+        const ac = ACTION_COLORS[h.action] || { bg: '#f1f5f9', color: '#475569' };
+        const actor = escapeHtml(h.userName || I18n.tr('editor.history.unknownUser'));
         const date = formatHistoryDate(h.actedAt);
+        const baseLabel = actionLabel(h.action);
         const label = h.action === 'saved' && h._count > 1
-          ? `${ac.label} (\u00d7${h._count})` : ac.label;
+          ? `${baseLabel} (\u00d7${h._count})` : baseLabel;
 
         if (h.action === 'returned' || h.action === 'asked_to_return') {
           const noteHtml = h.note
             ? escapeHtml(h.note)
-            : '<span class="sh-return-note__empty">No comment provided</span>';
+            : `<span class="sh-return-note__empty">${escapeHtml(I18n.tr('editor.history.noComment'))}</span>`;
           return `<div class="sh-event">
             <span class="sh-actor">${actor}</span>
             <details class="sh-return-details${h.action === 'asked_to_return' ? ' sh-return-details--ask' : ''}">
@@ -723,7 +737,7 @@
       return `<div class="sh-stage">
         <div class="sh-dot"></div>
         <div class="sh-body">
-          <div class="sh-stage-label">${escapeHtml(stage.label.toUpperCase())}</div>
+          <div class="sh-stage-label">${escapeHtml(historyStageLabel(role).toUpperCase())}</div>
           <div class="sh-events">${eventsHtml}</div>
         </div>
       </div>`;
@@ -740,13 +754,13 @@
 
         if (panel.style.display !== 'none') {
           panel.style.display = 'none';
-          btn.innerHTML = 'History &#9660;';
+          btn.innerHTML = `${escapeHtml(I18n.tr('dashboard.historyToggle'))} &#9660;`;
           return;
         }
 
         panel.style.display = 'block';
-        btn.innerHTML = 'History &#9650;';
-        panel.innerHTML = '<p style="color: var(--text-muted); font-size: 13px;">Loading…</p>';
+        btn.innerHTML = `${escapeHtml(I18n.tr('dashboard.historyToggle'))} &#9650;`;
+        panel.innerHTML = `<p style="color: var(--text-muted); font-size: 13px;">${escapeHtml(I18n.tr('dashboard.loading'))}</p>`;
 
         try {
           const result = await Api.get(`/api/workflow/section-history?event_id=${eventId}&section_id=${sectionId}`);
