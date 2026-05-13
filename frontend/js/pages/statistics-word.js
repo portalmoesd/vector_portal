@@ -1015,7 +1015,7 @@
       }),
     });
 
-    if (hasOwn) {
+    if (hasOwn && !(state && state.suppressBreakdown)) {
       if (isKa) {
         out.push(bullet([B(fmt(c.solo)), ` კომპანია - ${countryOf} კაპიტალით შექმნილი;`]));
         out.push(bullet([B(fmt(c.withGeorgia)), ` კომპანია - ${displayCountry} - საქართველოს წილობრივი კაპიტალით შექმნილი;`]));

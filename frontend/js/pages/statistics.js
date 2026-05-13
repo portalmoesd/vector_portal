@@ -2559,11 +2559,12 @@
       // Montenegro" row (the state-union entity) alongside the modern
       // Serbia and Montenegro rows. When the user picks either of the
       // modern countries, surface the combined-row count as an extra
-      // sentence below the per-country breakdown (no breakdown of its
-      // own — just a single line). This rule only applies here.
+      // sentence below the per-country total, and suppress the bullet
+      // breakdown for both countries entirely. Applies only here.
       const COMBINED_KEY = 'სერბია და მონტენეგრო';
+      const isSerbOrMonte = (georgianName === 'სერბეთი' || georgianName === 'მონტენეგრო');
       let combined = null;
-      if (georgianName === 'სერბეთი' || georgianName === 'მონტენეგრო') {
+      if (isSerbOrMonte) {
         const cd = json.countries[COMBINED_KEY];
         if (cd && cd.total > 0) {
           combined = {
@@ -2576,7 +2577,7 @@
       }
 
       pdfState.companies = (data || combined)
-        ? { hasData: !!data, uploadedAt: json.uploadedAt, counts: data || null, countryKa, countryEn, combined }
+        ? { hasData: !!data, uploadedAt: json.uploadedAt, counts: data || null, countryKa, countryEn, combined, suppressBreakdown: isSerbOrMonte }
         : { hasData: false };
 
       renderCompaniesSummary(pdfState.companies, isKa);
@@ -2615,21 +2616,29 @@
       if (isKa) {
         lines.push(`<p>${escapeHtml(countryOf)} კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:</p>`);
         lines.push(`<p>${b(fmt(c.total))} მოქმედი კომპანია ${escapeHtml(countryOf)} კაპიტალის მონაწილეობით.</p>`);
-        lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
-        lines.push(`<li>${b(fmt(c.solo))} კომპანია - ${escapeHtml(countryOf)} კაპიტალით შექმნილი;</li>`);
-        lines.push(`<li>${b(fmt(c.withGeorgia))} კომპანია - ${escapeHtml(country)} - საქართველოს წილობრივი კაპიტალით შექმნილი;</li>`);
-        lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} კომპანია - ${escapeHtml(country)}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;</li>`);
-        lines.push(`<li>${b(fmt(c.withThirdOnly))} კომპანია - ${escapeHtml(countryOf)} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.</li>`);
-        lines.push(`</ul>`);
       } else {
         lines.push(`<p>Active companies with capital originating from ${escapeHtml(country)}:</p>`);
         lines.push(`<p>${b(fmt(c.total))} active companies with capital originating from ${escapeHtml(country)}.</p>`);
-        lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
-        lines.push(`<li>${b(fmt(c.solo))} companies - established with capital from only ${escapeHtml(country)};</li>`);
-        lines.push(`<li>${b(fmt(c.withGeorgia))} companies - established with joint capital from ${escapeHtml(country)} and Georgia;</li>`);
-        lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} companies - established with joint capital from ${escapeHtml(country)}, Georgia and the third country;</li>`);
-        lines.push(`<li>${b(fmt(c.withThirdOnly))} companies - established with joint capital from ${escapeHtml(country)} and third countries.</li>`);
-        lines.push(`</ul>`);
+      }
+      // Breakdown bullets — suppressed for Serbia / Montenegro per the
+      // legacy-union special case (their detail rows don't sum to the
+      // user-facing total once the union row is shown alongside).
+      if (!state.suppressBreakdown) {
+        if (isKa) {
+          lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
+          lines.push(`<li>${b(fmt(c.solo))} კომპანია - ${escapeHtml(countryOf)} კაპიტალით შექმნილი;</li>`);
+          lines.push(`<li>${b(fmt(c.withGeorgia))} კომპანია - ${escapeHtml(country)} - საქართველოს წილობრივი კაპიტალით შექმნილი;</li>`);
+          lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} კომპანია - ${escapeHtml(country)}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;</li>`);
+          lines.push(`<li>${b(fmt(c.withThirdOnly))} კომპანია - ${escapeHtml(countryOf)} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.</li>`);
+          lines.push(`</ul>`);
+        } else {
+          lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
+          lines.push(`<li>${b(fmt(c.solo))} companies - established with capital from only ${escapeHtml(country)};</li>`);
+          lines.push(`<li>${b(fmt(c.withGeorgia))} companies - established with joint capital from ${escapeHtml(country)} and Georgia;</li>`);
+          lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} companies - established with joint capital from ${escapeHtml(country)}, Georgia and the third country;</li>`);
+          lines.push(`<li>${b(fmt(c.withThirdOnly))} companies - established with joint capital from ${escapeHtml(country)} and third countries.</li>`);
+          lines.push(`</ul>`);
+        }
       }
     }
     if (combined) {
