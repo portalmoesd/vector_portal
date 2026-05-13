@@ -2555,8 +2555,28 @@
       // country's English name is in the map
       if (!data) data = json.countries[countryEn] || null;
 
-      pdfState.companies = data
-        ? { hasData: true, uploadedAt: json.uploadedAt, counts: data, countryKa, countryEn }
+      // Special case: the source spreadsheet has a legacy "Serbia and
+      // Montenegro" row (the state-union entity) alongside the modern
+      // Serbia and Montenegro rows. When the user picks either of the
+      // modern countries, surface the combined-row count as an extra
+      // sentence below the per-country breakdown (no breakdown of its
+      // own — just a single line). This rule only applies here.
+      const COMBINED_KEY = 'სერბია და მონტენეგრო';
+      let combined = null;
+      if (georgianName === 'სერბეთი' || georgianName === 'მონტენეგრო') {
+        const cd = json.countries[COMBINED_KEY];
+        if (cd && cd.total > 0) {
+          combined = {
+            total: cd.total,
+            labelKa: 'სერბია-მონტენეგრო',
+            labelKaOf: 'სერბია-მონტენეგროს',
+            labelEn: 'Serbia and Montenegro',
+          };
+        }
+      }
+
+      pdfState.companies = (data || combined)
+        ? { hasData: !!data, uploadedAt: json.uploadedAt, counts: data || null, countryKa, countryEn, combined }
         : { hasData: false };
 
       renderCompaniesSummary(pdfState.companies, isKa);
@@ -2571,12 +2591,14 @@
 
   function renderCompaniesSummary(state, isKa) {
     if (!companiesSummaryEl) return;
-    if (!state || !state.hasData) {
+    const hasOwn = !!(state && state.hasData && state.counts);
+    const combined = state && state.combined;
+    if (!hasOwn && !combined) {
       companiesSummaryEl.innerHTML = `<p>${isKa ? 'აღნიშნული ქვეყნის კაპიტალით დარეგისტრირებული მოქმედი კომპანია ვერ მოიძებნა.' : 'No active companies with capital from this country found.'}</p>`;
       companiesSummaryEl.classList.remove('hidden');
       return;
     }
-    const c = state.counts;
+    const c = state.counts || {};
     const country = isKa ? state.countryKa : state.countryEn;
     // Georgian genitive ("of <country>") — proper inflection from the
     // grammar sheet ("თურქეთის"), with the suffix-fallback for any
@@ -2589,24 +2611,37 @@
     const fmt = (n) => Number(n || 0).toLocaleString();
     const lines = [];
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'კომპანიები' : 'Companies'}</h4>`);
-    if (isKa) {
-      lines.push(`<p>${escapeHtml(countryOf)} კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:</p>`);
-      lines.push(`<p>${b(fmt(c.total))} მოქმედი კომპანია ${escapeHtml(countryOf)} კაპიტალის მონაწილეობით.</p>`);
-      lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
-      lines.push(`<li>${b(fmt(c.solo))} კომპანია - ${escapeHtml(countryOf)} კაპიტალით შექმნილი;</li>`);
-      lines.push(`<li>${b(fmt(c.withGeorgia))} კომპანია - ${escapeHtml(country)} - საქართველოს წილობრივი კაპიტალით შექმნილი;</li>`);
-      lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} კომპანია - ${escapeHtml(country)}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;</li>`);
-      lines.push(`<li>${b(fmt(c.withThirdOnly))} კომპანია - ${escapeHtml(countryOf)} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.</li>`);
-      lines.push(`</ul>`);
-    } else {
-      lines.push(`<p>Active companies with capital originating from ${escapeHtml(country)}:</p>`);
-      lines.push(`<p>${b(fmt(c.total))} active companies with capital originating from ${escapeHtml(country)}.</p>`);
-      lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
-      lines.push(`<li>${b(fmt(c.solo))} companies - established with capital from only ${escapeHtml(country)};</li>`);
-      lines.push(`<li>${b(fmt(c.withGeorgia))} companies - established with joint capital from ${escapeHtml(country)} and Georgia;</li>`);
-      lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} companies - established with joint capital from ${escapeHtml(country)}, Georgia and the third country;</li>`);
-      lines.push(`<li>${b(fmt(c.withThirdOnly))} companies - established with joint capital from ${escapeHtml(country)} and third countries.</li>`);
-      lines.push(`</ul>`);
+    if (hasOwn) {
+      if (isKa) {
+        lines.push(`<p>${escapeHtml(countryOf)} კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:</p>`);
+        lines.push(`<p>${b(fmt(c.total))} მოქმედი კომპანია ${escapeHtml(countryOf)} კაპიტალის მონაწილეობით.</p>`);
+        lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
+        lines.push(`<li>${b(fmt(c.solo))} კომპანია - ${escapeHtml(countryOf)} კაპიტალით შექმნილი;</li>`);
+        lines.push(`<li>${b(fmt(c.withGeorgia))} კომპანია - ${escapeHtml(country)} - საქართველოს წილობრივი კაპიტალით შექმნილი;</li>`);
+        lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} კომპანია - ${escapeHtml(country)}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;</li>`);
+        lines.push(`<li>${b(fmt(c.withThirdOnly))} კომპანია - ${escapeHtml(countryOf)} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.</li>`);
+        lines.push(`</ul>`);
+      } else {
+        lines.push(`<p>Active companies with capital originating from ${escapeHtml(country)}:</p>`);
+        lines.push(`<p>${b(fmt(c.total))} active companies with capital originating from ${escapeHtml(country)}.</p>`);
+        lines.push(`<ul style="margin:0;padding-left:1.2em;">`);
+        lines.push(`<li>${b(fmt(c.solo))} companies - established with capital from only ${escapeHtml(country)};</li>`);
+        lines.push(`<li>${b(fmt(c.withGeorgia))} companies - established with joint capital from ${escapeHtml(country)} and Georgia;</li>`);
+        lines.push(`<li>${b(fmt(c.withGeorgiaAndThird))} companies - established with joint capital from ${escapeHtml(country)}, Georgia and the third country;</li>`);
+        lines.push(`<li>${b(fmt(c.withThirdOnly))} companies - established with joint capital from ${escapeHtml(country)} and third countries.</li>`);
+        lines.push(`</ul>`);
+      }
+    }
+    if (combined) {
+      // Single sentence for the legacy Serbia-Montenegro union — no
+      // breakdown bullets, just the headcount.
+      const cbOf = isKa ? combined.labelKaOf : combined.labelEn;
+      const cbNom = isKa ? combined.labelKa : combined.labelEn;
+      if (isKa) {
+        lines.push(`<p>${b(fmt(combined.total))} მოქმედი კომპანია ${escapeHtml(cbOf)} კაპიტალის მონაწილეობით.</p>`);
+      } else {
+        lines.push(`<p>${b(fmt(combined.total))} active companies with capital originating from ${escapeHtml(cbNom)}.</p>`);
+      }
     }
     companiesSummaryEl.innerHTML = lines.join('');
     companiesSummaryEl.classList.remove('hidden');
