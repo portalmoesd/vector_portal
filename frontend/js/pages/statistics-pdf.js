@@ -1138,25 +1138,30 @@
       if (isKa) {
         nodes.push({ text: `${countryOf} კაპიტალის მონაწილეობით დარეგისტრირებული მოქმედი კომპანიები:`, ...paraStyle });
         nodes.push({ text: [B(fmt(c.total)), ` მოქმედი კომპანია ${countryOf} კაპიტალის მონაწილეობით.`], ...paraStyle });
-        nodes.push({
-          ul: [
-            { text: [B(fmt(c.solo)), ` კომპანია - ${countryOf} კაპიტალით შექმნილი;`], ...liStyle },
-            { text: [B(fmt(c.withGeorgia)), ` კომპანია - ${displayCountry} - საქართველოს წილობრივი კაპიტალით შექმნილი;`], ...liStyle },
-            { text: [B(fmt(c.withGeorgiaAndThird)), ` კომპანია - ${displayCountry}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;`], ...liStyle },
-            { text: [B(fmt(c.withThirdOnly)), ` კომპანია - ${countryOf} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.`], ...liStyle },
-          ],
-        });
       } else {
         nodes.push({ text: `Active companies with capital originating from ${displayCountry}:`, ...paraStyle });
         nodes.push({ text: [B(fmt(c.total)), ` active companies with capital originating from ${displayCountry}.`], ...paraStyle });
-        nodes.push({
-          ul: [
-            { text: [B(fmt(c.solo)), ` companies - established with capital from only ${displayCountry};`], ...liStyle },
-            { text: [B(fmt(c.withGeorgia)), ` companies - established with joint capital from ${displayCountry} and Georgia;`], ...liStyle },
-            { text: [B(fmt(c.withGeorgiaAndThird)), ` companies - established with joint capital from ${displayCountry}, Georgia and the third country;`], ...liStyle },
-            { text: [B(fmt(c.withThirdOnly)), ` companies - established with joint capital from ${displayCountry} and third countries.`], ...liStyle },
-          ],
-        });
+      }
+      if (!(state && state.suppressBreakdown)) {
+        if (isKa) {
+          nodes.push({
+            ul: [
+              { text: [B(fmt(c.solo)), ` კომპანია - ${countryOf} კაპიტალით შექმნილი;`], ...liStyle },
+              { text: [B(fmt(c.withGeorgia)), ` კომპანია - ${displayCountry} - საქართველოს წილობრივი კაპიტალით შექმნილი;`], ...liStyle },
+              { text: [B(fmt(c.withGeorgiaAndThird)), ` კომპანია - ${displayCountry}, საქართველოსა და მესამე ქვეყნის კაპიტალით შექმნილი;`], ...liStyle },
+              { text: [B(fmt(c.withThirdOnly)), ` კომპანია - ${countryOf} და მესამე ქვეყნების წილობრივი კაპიტალით შექმნილი.`], ...liStyle },
+            ],
+          });
+        } else {
+          nodes.push({
+            ul: [
+              { text: [B(fmt(c.solo)), ` companies - established with capital from only ${displayCountry};`], ...liStyle },
+              { text: [B(fmt(c.withGeorgia)), ` companies - established with joint capital from ${displayCountry} and Georgia;`], ...liStyle },
+              { text: [B(fmt(c.withGeorgiaAndThird)), ` companies - established with joint capital from ${displayCountry}, Georgia and the third country;`], ...liStyle },
+              { text: [B(fmt(c.withThirdOnly)), ` companies - established with joint capital from ${displayCountry} and third countries.`], ...liStyle },
+            ],
+          });
+        }
       }
     }
 
