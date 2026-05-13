@@ -586,6 +586,12 @@ function appendixCacheSet(key, data) {
 //   values are that country's total for the period (in 1000 USD, sometimes
 //   returned as a string with many decimals, sometimes as the literal "-"
 //   when the country had no trade in that year).
+//
+// Defensive: Geostat sometimes returns one column per requested month
+// (`usd1000_<year>_1`, `_2`, `_3`) instead of one concatenated column,
+// and sometimes splits a country across multiple rows (one per month).
+// Sum across all matching columns for each year, and accumulate per-cid
+// across rows, so YTD totals come out right either way.
 function parseAppendixGeostatJson(json) {
   const result = { perYear: {}, errored: false, raw: null };
   if (!json || !Array.isArray(json.data)) {
@@ -594,43 +600,83 @@ function parseAppendixGeostatJson(json) {
     return result;
   }
   result.raw = { success: !!json.success, total: json.total, rowCount: json.data.length };
-  const summaryRow = json.data[0];
-  if (!summaryRow || summaryRow.country != null) {
-    // Without a summary row we can't surface Georgia totals confidently.
+
+  // Collect every `usd1000_<year>(_<m>...)` column key from every row,
+  // grouped by year. Some Geostat responses only put the columns on row 0,
+  // others spread per-month columns across per-country rows.
+  const yearColumns = {}; // year -> Array<columnKey>
+  for (const row of json.data) {
+    if (!row || typeof row !== 'object') continue;
+    for (const k of Object.keys(row)) {
+      const m = k.match(/^usd1000_(\d{4})(?:_\d+)*$/);
+      if (!m) continue;
+      const year = parseInt(m[1], 10);
+      if (!yearColumns[year]) yearColumns[year] = [];
+      if (!yearColumns[year].includes(k)) yearColumns[year].push(k);
+    }
+  }
+  result.raw.yearColumns = yearColumns;
+
+  if (Object.keys(yearColumns).length === 0) {
     result.errored = true;
-    result.raw.reason = 'no summary row at index 0';
+    result.raw.reason = 'no usd1000_<year> columns found';
     return result;
   }
-  // Year column keys can be either `usd1000_<year>` or
-  // `usd1000_<year>_<m1>_<m2>...` depending on whether a `months` filter
-  // was passed. Capture the year and remember the full key so per-country
-  // rows can be looked up by the same string.
-  const yearColumnKey = {}; // year -> exact column key on the row
-  for (const k of Object.keys(summaryRow)) {
-    const m = k.match(/^usd1000_(\d{4})(?:_\d+)*$/);
-    if (!m) continue;
-    const year = parseInt(m[1], 10);
-    yearColumnKey[year] = k;
-    const v = parseFloat(summaryRow[k]);
-    result.perYear[year] = {
-      gtTotalThd: Number.isFinite(v) ? v : 0,
-      perCountry: {}, // String(cid) -> thousands USD
-    };
+
+  const summaryRow = json.data[0];
+  const hasSummary = !!summaryRow && summaryRow.country == null;
+
+  // Initialise perYear buckets — gtTotalThd from the summary row when it
+  // exists, otherwise will be back-filled from per-country sums below.
+  for (const yearStr of Object.keys(yearColumns)) {
+    const year = parseInt(yearStr, 10);
+    let gtTotal = 0;
+    if (hasSummary) {
+      for (const col of yearColumns[year]) {
+        const v = parseFloat(summaryRow[col]);
+        if (Number.isFinite(v)) gtTotal += v;
+      }
+    }
+    result.perYear[year] = { gtTotalThd: gtTotal, perCountry: {} };
   }
-  for (let i = 1; i < json.data.length; i++) {
+
+  const startIdx = hasSummary ? 1 : 0;
+  for (let i = startIdx; i < json.data.length; i++) {
     const row = json.data[i];
-    const cid = row.country;
+    const cid = row && row.country;
     if (cid == null) continue;
     const cidKey = String(cid);
-    for (const [year, columnKey] of Object.entries(yearColumnKey)) {
-      const raw = row[columnKey];
-      if (raw == null || raw === '' || raw === '-') continue;
-      const num = parseFloat(raw);
-      if (Number.isFinite(num) && num !== 0) {
-        result.perYear[year].perCountry[cidKey] = num;
+    for (const yearStr of Object.keys(yearColumns)) {
+      const year = parseInt(yearStr, 10);
+      let sum = 0;
+      let hasAny = false;
+      for (const col of yearColumns[year]) {
+        const raw = row[col];
+        if (raw == null || raw === '' || raw === '-') continue;
+        const num = parseFloat(raw);
+        if (Number.isFinite(num)) {
+          sum += num;
+          hasAny = true;
+        }
+      }
+      if (hasAny && sum !== 0) {
+        const bucket = result.perYear[year];
+        bucket.perCountry[cidKey] = (bucket.perCountry[cidKey] || 0) + sum;
       }
     }
   }
+
+  // If Geostat omitted the summary row, derive the Georgia total from the
+  // sum of per-country values so share-% calculations still make sense.
+  if (!hasSummary) {
+    for (const year of Object.keys(result.perYear)) {
+      const bucket = result.perYear[year];
+      if (bucket.gtTotalThd === 0) {
+        bucket.gtTotalThd = Object.values(bucket.perCountry).reduce((s, v) => s + v, 0);
+      }
+    }
+  }
+
   return result;
 }
 
