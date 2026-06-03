@@ -50,6 +50,7 @@ html { scroll-padding-top: 160px; }
    despite the card's 20px × 24px inner padding. */
 .stat-controls .stat-tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
   margin: 14px -24px 0;
   padding: 0 24px;
