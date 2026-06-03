@@ -498,24 +498,26 @@ body.stat-exporting .stat-sections.hidden {
 
 .stat-investments-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   align-items: flex-start;
 }
 
 .stat-investments-table-wrap {
-  flex: 1 1 50%;
+  flex: 1 1 360px;
   min-width: 0;
 }
 
 .stat-investments-chart-wrap {
-  flex: 1 1 50%;
+  flex: 1 1 300px;
   min-width: 0;
+  position: relative;
 }
 
-@media (max-width: 980px) {
-  .stat-investments-row {
-    flex-direction: column;
-  }
+/* Keep the responsive chart canvas from forcing the column wider than its
+   flex track (which would push the table off-screen and hide the chart). */
+.stat-investments-chart-wrap canvas {
+  max-width: 100%;
 }
 
 /* ─── Change colors ──────────────────────────────────────────────────────── */
