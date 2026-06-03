@@ -152,6 +152,9 @@ const App = {
     window.addEventListener('resize', () => { if (isDesktop()) closeMenu(); else collapse(); });
 
     // ── Language switch & logout ─────────────────────────────────────────
+    // The sidebar is injected after I18n.init() translated the document, so
+    // translate its [data-i18n] labels (nav, logout) into the active locale.
+    I18n.translateRoot(sidebar);
     this._refreshLangSwitch();
     sidebar.querySelectorAll('.gp-lang-switch__opt').forEach(btn => {
       btn.addEventListener('click', () => this.setLang(btn.dataset.lang));

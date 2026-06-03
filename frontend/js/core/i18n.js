@@ -9,6 +9,11 @@ const I18n = {
     const saved = localStorage.getItem('locale');
     if (saved) this._locale = saved;
     await this.load(this._locale);
+    // Apply the loaded strings to whatever is already in the DOM so the
+    // page renders in the active locale (Georgian by default) on first
+    // paint — without this, static [data-i18n] fallback text (English)
+    // would show until the user manually toggled the language.
+    this.translateRoot(document);
   },
 
   async load(locale) {
@@ -17,6 +22,7 @@ const I18n = {
       this._strings = await res.json();
       this._locale = locale;
       localStorage.setItem('locale', locale);
+      document.documentElement.lang = locale;
     } catch (e) {
       console.warn(`Failed to load locale "${locale}", falling back to en`);
       if (locale !== 'en') await this.load('en');

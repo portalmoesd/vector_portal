@@ -275,16 +275,22 @@ body.gp-shell-ready .gp-logout:hover {
 }
 
 /* ── Language switch (EN / KA segmented control) ─────────────────────────── */
+/* Collapsed rail: too narrow for a two-option control, so it collapses to a
+   single centered pill showing the active language. The full segmented
+   control is revealed when the sidebar expands (and on mobile). */
 body.gp-shell-ready .gp-lang-switch {
   display: flex;
-  margin: 4px 12px 8px;
+  width: 48px;
+  margin: 4px auto 8px;
   background: rgba(0, 0, 0, 0.05);
   border-radius: 999px;
   padding: 2px;
   gap: 0;
+  transition: width .2s ease, margin .2s ease;
 }
 body.gp-shell-ready .gp-lang-switch__opt {
   flex: 1 1 0;
+  min-width: 0;
   background: transparent;
   border: 0;
   padding: 5px 6px;
@@ -294,7 +300,12 @@ body.gp-shell-ready .gp-lang-switch__opt {
   letter-spacing: 0.5px;
   cursor: pointer;
   color: #64748b;
+  white-space: nowrap;
   transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+}
+/* Collapsed: hide the inactive option so the active one fills the pill. */
+body.gp-shell-ready .gp-lang-switch__opt[aria-pressed="false"] {
+  display: none;
 }
 body.gp-shell-ready .gp-lang-switch__opt:hover {
   color: #1f3346;
@@ -303,6 +314,14 @@ body.gp-shell-ready .gp-lang-switch__opt[aria-pressed="true"] {
   background: #ffffff;
   color: #1f3346;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+/* Expanded: full segmented control with both options visible. */
+body.gp-shell-ready.gp-sidebar-expanded .gp-lang-switch {
+  width: auto;
+  margin: 4px 12px 8px;
+}
+body.gp-shell-ready.gp-sidebar-expanded .gp-lang-switch__opt[aria-pressed="false"] {
+  display: block;
 }
 
 /* ── Mobile toggle & scrim — hidden on desktop ───────────────────────────── */
@@ -463,6 +482,15 @@ body.gp-shell-ready .topbar {
     opacity: 1;
     transform: none;
     pointer-events: auto;
+  }
+
+  /* Mobile drawer is always "expanded" — show the full language switch. */
+  body.gp-shell-ready .gp-lang-switch {
+    width: auto;
+    margin: 4px 12px 8px;
+  }
+  body.gp-shell-ready .gp-lang-switch__opt[aria-pressed="false"] {
+    display: block;
   }
 
   body.gp-shell-ready .gp-profile { margin-top: 0; }
