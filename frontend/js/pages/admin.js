@@ -595,8 +595,20 @@
       try {
         const { res, body: j } = clientParse ? await submitClientSide() : await submitServerSide();
         if (res.ok && j.success) {
-          feedback.textContent = `${labels.success} · ${j.countryCount || 0} ${labels.countries}`;
-          feedback.style.color = 'green';
+          let msg = `${labels.success} · ${j.countryCount || 0} ${labels.countries}`;
+          let color = 'green';
+          // fdi-sectors uploads also refresh the annual FDI table; surface
+          // that outcome so a failed refresh doesn't go unnoticed.
+          if (j.fdiAnnual) {
+            if (j.fdiAnnual.refreshed) {
+              msg += ` · ${I18n.tr('admin.upload.fdiAnnualOk', { period: j.fdiAnnual.latestYear })}`;
+            } else {
+              msg += ` · ${I18n.tr('admin.upload.fdiAnnualFail', { error: j.fdiAnnual.error || '' })}`;
+              color = 'darkorange';
+            }
+          }
+          feedback.textContent = msg;
+          feedback.style.color = color;
           form.reset();
           refresh();
         } else {

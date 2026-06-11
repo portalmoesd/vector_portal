@@ -912,6 +912,8 @@ async function refreshFdiAnnual() {
   if (!xlsxRes.ok) throw new Error(`HTTP ${xlsxRes.status} for ${url}`);
   const buffer = xlsxRes.buffer();
   const result = parseFdiWorkbook(XLSX.read(buffer, { type: 'buffer' }));
+  result.refreshedAt = new Date().toISOString();
+  result.source = url;
   await saveParsedAndRaw('fdi-annual', result, buffer);
   try { require('fs').writeFileSync(FDI_LOCAL, buffer); } catch (_) { /* ephemeral/read-only fs */ }
   fdiCache.data = result;
