@@ -94,27 +94,80 @@ async function geostatFetch(path, options = {}) {
   return res.json();
 }
 
+// ── Persisted trade cache (PostgreSQL) ──────────────────────────────────────
+// Geostat publishes monthly trade data around the 18th-23rd; everything the
+// trade endpoints compute is stable between releases. Computed results are
+// kept in memory (fast path) AND in the trade_cache table so deploys don't
+// wipe them. All DB failures degrade to the previous in-memory behavior.
+
+const db = require('../db');
+
+async function tradeCacheDbGet(key) {
+  try {
+    const { rows } = await db.query('SELECT data FROM trade_cache WHERE key = $1', [key]);
+    return rows.length ? rows[0].data : null;
+  } catch (err) {
+    console.warn(`trade_cache get(${key}) failed:`, err.message);
+    return null;
+  }
+}
+
+async function tradeCacheDbSet(key, data) {
+  try {
+    await db.query(
+      `INSERT INTO trade_cache (key, data, updated_at) VALUES ($1, $2::jsonb, now())
+       ON CONFLICT (key) DO UPDATE SET data = EXCLUDED.data, updated_at = EXCLUDED.updated_at`,
+      [key, JSON.stringify(data)]
+    );
+  } catch (err) {
+    console.warn(`trade_cache set(${key}) failed:`, err.message);
+  }
+}
+
+async function tradeCacheDbDeleteByPrefix(prefix) {
+  try {
+    await db.query(`DELETE FROM trade_cache WHERE key LIKE $1 || '%'`, [prefix]);
+  } catch (err) {
+    console.warn(`trade_cache delete(${prefix}*) failed:`, err.message);
+  }
+}
+
 // ── GET /api/statistics/classificatory ──────────────────────────────────────
 // Returns countries, trade types, years, months, HS codes, etc.
-// Strategy: fetch live every time, fall back to last-known-good only if
-// Geostat is unreachable. `selected.month` changes when Geostat publishes
-// a new month, so a stale cache can make the whole page display an old
-// period — don't gate freshness behind a TTL.
+// Served from a short-TTL cache: the payload only meaningfully changes once
+// a month (`selected.month`), and the publication detector below refreshes
+// it the moment a new month is spotted. The TTL bounds worst-case staleness
+// to a few hours instead of hitting Geostat on every page load.
 
-let classCache = { en: null, ka: null, ts: 0 };
+let classCache = { en: null, ka: null };
+let classCacheTs = { en: 0, ka: 0 };
+const CLASS_TTL = 3 * 60 * 60 * 1000;
 
 router.get('/classificatory', async (req, res) => {
   const lang = req.query.lang === 'ka' ? 'ka' : 'en';
+  if (classCache[lang] && Date.now() - classCacheTs[lang] < CLASS_TTL) {
+    return res.json(classCache[lang]);
+  }
   try {
     const data = await geostatFetch(`/classificatory?lang=${lang}`);
     classCache[lang] = data;
-    classCache.ts = Date.now();
+    classCacheTs[lang] = Date.now();
+    tradeCacheDbSet(`classificatory:${lang}`, data);
+    // A changed selected period means Geostat just published — kick the
+    // detector without holding up this response.
+    maybeDetectNewTradeMonth(data);
     res.json(data);
   } catch (err) {
     console.error('Statistics classificatory error:', err.message);
     if (classCache[lang]) {
-      console.warn(`Serving stale classificatory (${lang}) from ${new Date(classCache.ts).toISOString()}`);
+      console.warn(`Serving stale classificatory (${lang}) from ${new Date(classCacheTs[lang]).toISOString()}`);
       return res.json(classCache[lang]);
+    }
+    const fromDb = await tradeCacheDbGet(`classificatory:${lang}`);
+    if (fromDb) {
+      console.warn(`Serving classificatory (${lang}) from DB cache (Geostat unreachable)`);
+      classCache[lang] = fromDb; // keep ts=0 so the next request retries live
+      return res.json(fromDb);
     }
     res.status(502).json({ error: 'Failed to fetch classificatory data from Geostat' });
   }
@@ -212,6 +265,95 @@ function rankingCacheSet(key, data) {
     if (oldestKey !== undefined) rankingCache.delete(oldestKey);
   }
   rankingCache.set(key, { data, ts: Date.now() });
+}
+
+// Memory → DB → compute. Used by the route and by the publication
+// detector's prewarm. `debug` is the route's optional _debug collector.
+async function getCountryRanking(year, sortedMonths, debug) {
+  const cacheKey = `${year}:${sortedMonths.join(',')}`;
+  let cached = rankingCacheGet(cacheKey);
+  if (cached) {
+    if (debug) debug.cacheHit = true;
+    return cached;
+  }
+  const fromDb = await tradeCacheDbGet(`ranking:${cacheKey}`);
+  if (fromDb) {
+    rankingCacheSet(cacheKey, fromDb);
+    if (debug) debug.cacheHit = 'db';
+    return fromDb;
+  }
+
+  const t0 = Date.now();
+  const allCountryIds = await getAllCountryIds();
+  if (debug) debug.classificatoryCountries = allCountryIds.length;
+  console.log(`country-ranking: computing for ${year}/m${sortedMonths.join(',')}, ${allCountryIds.length} countries`);
+
+  // 4 parallel Geostat calls: export + import + domestic export + re-export.
+  // Each passes ALL country IDs + full months array + sum=true.
+  const [exp, imp, domExp, reExp] = await Promise.all([
+    fetchFlowRanking(10, year, sortedMonths, allCountryIds),
+    fetchFlowRanking(11, year, sortedMonths, allCountryIds),
+    fetchFlowRanking(12, year, sortedMonths, allCountryIds),
+    fetchFlowRanking(13, year, sortedMonths, allCountryIds),
+  ]);
+
+  // Compute turnover per country = export + import
+  const turnoverMap = {};
+  const allCids = new Set([...Object.keys(exp.perCountry), ...Object.keys(imp.perCountry)]);
+  let turnoverTotal = 0;
+  for (const cid of allCids) {
+    const val = (exp.perCountry[cid]?.valueMln || 0) + (imp.perCountry[cid]?.valueMln || 0);
+    if (val > 0) turnoverMap[cid] = val;
+  }
+  // Sort and assign ranks for turnover
+  const turnoverEntries = Object.entries(turnoverMap)
+    .sort(([, a], [, b]) => b - a);
+  turnoverTotal = turnoverEntries.reduce((s, [, v]) => s + v, 0);
+  const turnoverRanked = {};
+  turnoverEntries.forEach(([cid, valueMln], idx) => {
+    turnoverRanked[cid] = {
+      valueMln,
+      rank: idx + 1,
+      sharePct: turnoverTotal > 0 ? (100 * valueMln / turnoverTotal) : 0,
+    };
+  });
+
+  cached = {
+    totals: { turnover: turnoverTotal, export: exp.total, import: imp.total, domesticExport: domExp.total, reExport: reExp.total },
+    flows: { turnover: turnoverRanked, export: exp.perCountry, import: imp.perCountry, domesticExport: domExp.perCountry, reExport: reExp.perCountry },
+    flowStats: { export: exp.stats, import: imp.stats, domesticExport: domExp.stats, reExport: reExp.stats },
+  };
+  // Only cache when every flow returned data. Caching a partial
+  // result would serve "0" for the empty flow until the entry is
+  // replaced, which is exactly the appendix-zeros bug. With the
+  // AND gate, a Geostat hiccup that leaves one flow empty means
+  // we keep serving the previous good entry (or, on cold cache,
+  // the partial response is returned but not stored, so the next
+  // request retries).
+  const flowCounts = {
+    export: exp.stats.withTrade,
+    import: imp.stats.withTrade,
+    domesticExport: domExp.stats.withTrade,
+    reExport: reExp.stats.withTrade,
+  };
+  const empties = Object.entries(flowCounts).filter(([, n]) => n === 0).map(([k]) => k);
+  const allHaveData = empties.length === 0;
+  if (!allHaveData && empties.length < 4) {
+    console.warn(
+      `country-ranking [${cacheKey}]: SKIP CACHE — partial Geostat (empty=${empties.join(',')}); ` +
+      `previous good entry (if any) preserved.`
+    );
+  }
+  if (allHaveData) {
+    rankingCacheSet(cacheKey, cached);
+    await tradeCacheDbSet(`ranking:${cacheKey}`, cached);
+  }
+  if (debug) {
+    debug.computedMs = Date.now() - t0;
+    debug.cached = allHaveData;
+  }
+  console.log(`country-ranking: completed in ${((Date.now() - t0) / 1000).toFixed(1)}s — exp:${exp.stats.withTrade} imp:${imp.stats.withTrade} domExp:${domExp.stats.withTrade} reExp:${reExp.stats.withTrade} countries`);
+  return cached;
 }
 
 // Geostat row helpers
@@ -362,7 +504,7 @@ async function getAllCountryIds() {
   }
   const data = await geostatFetch('/classificatory?lang=en');
   classCache.en = data;
-  classCache.ts = Date.now();
+  classCacheTs.en = Date.now();
   return (data.data?.countries || []).map((c) => c.value).filter((v) => v != null);
 }
 
@@ -396,76 +538,7 @@ router.post('/country-ranking', async (req, res) => {
     debug.countryIdRequested = String(countryId);
     debug.countryIdType = typeof countryId;
 
-    let cached = rankingCacheGet(cacheKey);
-    debug.cacheHit = !!cached;
-
-    if (!cached) {
-      const t0 = Date.now();
-      const allCountryIds = await getAllCountryIds();
-      debug.classificatoryCountries = allCountryIds.length;
-      console.log(`country-ranking: computing for ${year}/m${sortedMonths.join(',')}, ${allCountryIds.length} countries`);
-
-      // 4 parallel Geostat calls: export + import + domestic export + re-export.
-      // Each passes ALL country IDs + full months array + sum=true.
-      const [exp, imp, domExp, reExp] = await Promise.all([
-        fetchFlowRanking(10, year, sortedMonths, allCountryIds),
-        fetchFlowRanking(11, year, sortedMonths, allCountryIds),
-        fetchFlowRanking(12, year, sortedMonths, allCountryIds),
-        fetchFlowRanking(13, year, sortedMonths, allCountryIds),
-      ]);
-
-      // Compute turnover per country = export + import
-      const turnoverMap = {};
-      const allCids = new Set([...Object.keys(exp.perCountry), ...Object.keys(imp.perCountry)]);
-      let turnoverTotal = 0;
-      for (const cid of allCids) {
-        const val = (exp.perCountry[cid]?.valueMln || 0) + (imp.perCountry[cid]?.valueMln || 0);
-        if (val > 0) turnoverMap[cid] = val;
-      }
-      // Sort and assign ranks for turnover
-      const turnoverEntries = Object.entries(turnoverMap)
-        .sort(([, a], [, b]) => b - a);
-      turnoverTotal = turnoverEntries.reduce((s, [, v]) => s + v, 0);
-      const turnoverRanked = {};
-      turnoverEntries.forEach(([cid, valueMln], idx) => {
-        turnoverRanked[cid] = {
-          valueMln,
-          rank: idx + 1,
-          sharePct: turnoverTotal > 0 ? (100 * valueMln / turnoverTotal) : 0,
-        };
-      });
-
-      cached = {
-        totals: { turnover: turnoverTotal, export: exp.total, import: imp.total, domesticExport: domExp.total, reExport: reExp.total },
-        flows: { turnover: turnoverRanked, export: exp.perCountry, import: imp.perCountry, domesticExport: domExp.perCountry, reExport: reExp.perCountry },
-        flowStats: { export: exp.stats, import: imp.stats, domesticExport: domExp.stats, reExport: reExp.stats },
-      };
-      // Only cache when every flow returned data. Caching a partial
-      // result would serve "0" for the empty flow until the entry is
-      // replaced, which is exactly the appendix-zeros bug. With the
-      // AND gate, a Geostat hiccup that leaves one flow empty means
-      // we keep serving the previous good entry (or, on cold cache,
-      // the partial response is returned but not stored, so the next
-      // request retries).
-      const flowCounts = {
-        export: exp.stats.withTrade,
-        import: imp.stats.withTrade,
-        domesticExport: domExp.stats.withTrade,
-        reExport: reExp.stats.withTrade,
-      };
-      const empties = Object.entries(flowCounts).filter(([, n]) => n === 0).map(([k]) => k);
-      const allHaveData = empties.length === 0;
-      if (!allHaveData && empties.length < 4) {
-        console.warn(
-          `country-ranking [${cacheKey}]: SKIP CACHE — partial Geostat (empty=${empties.join(',')}); ` +
-          `previous good entry (if any) preserved.`
-        );
-      }
-      if (allHaveData) rankingCacheSet(cacheKey, cached);
-      debug.computedMs = Date.now() - t0;
-      debug.cached = allHaveData;
-      console.log(`country-ranking: completed in ${(debug.computedMs / 1000).toFixed(1)}s — exp:${exp.stats.withTrade} imp:${imp.stats.withTrade} domExp:${domExp.stats.withTrade} reExp:${reExp.stats.withTrade} countries`);
-    }
+    const cached = await getCountryRanking(year, sortedMonths, debug);
 
     debug.flowStats = cached.flowStats || null;
 
@@ -738,6 +811,12 @@ async function computeAppendixData(latestYear, latestMonth) {
   if (appendixInflight.has(key)) return appendixInflight.get(key);
 
   const promise = (async () => {
+    const fromDb = await tradeCacheDbGet(`appendix:${key}`);
+    if (fromDb) {
+      appendixCacheSet(key, fromDb);
+      return fromDb;
+    }
+
     const allCountryIds = await getAllCountryIds();
     const [exp, imp] = await Promise.all([
       fetchAppendixFlow(10, latestYear, latestMonth, allCountryIds),
@@ -749,6 +828,7 @@ async function computeAppendixData(latestYear, latestMonth) {
     const impOk = !imp.multi.errored && (latestMonth >= 12 || (imp.ytdPrior && !imp.ytdPrior.errored));
     if (expOk && impOk) {
       appendixCacheSet(key, data);
+      await tradeCacheDbSet(`appendix:${key}`, data);
     } else {
       console.warn(
         `country-appendix [${key}]: SKIP CACHE — partial Geostat ` +
@@ -862,6 +942,147 @@ router.post('/country-appendix', async (req, res) => {
     console.error('Statistics country-appendix error:', err.message);
     res.status(502).json({ error: 'Failed to fetch country appendix', reason: err.message });
   }
+});
+
+// ── Monthly trade publication detector ──────────────────────────────────
+// Geostat publishes monthly trade data around the 18th-23rd and quietly
+// revises earlier months of the year at the same time. A daily check (plus
+// an opportunistic trigger from the classificatory route) detects the new
+// month via `selected.month` + probe-forward, drops cached computations for
+// the affected years, prewarms the new period's ranking/appendix, and
+// records the detection in trade_cache under 'trade-state'.
+
+// Server-side twin of the frontend's verifyLatestMonth(): Geostat sometimes
+// publishes a month's rows before bumping `selected.month`.
+async function tradeHasDataFor(year, month) {
+  try {
+    const json = await geostatFetch('/get_data', {
+      method: 'POST',
+      body: JSON.stringify({
+        tradeFlow: 10,
+        measurementUnits: [1],
+        years: [year],
+        months: [month],
+        sum: true,
+        page: 1,
+        pageSize: 1,
+      }),
+    });
+    if (!json || !json.success || !Array.isArray(json.data)) return false;
+    for (const row of json.data) {
+      for (const k of Object.keys(row)) {
+        if (k.startsWith('usd1000_')) {
+          const v = parseFloat(row[k]);
+          if (!isNaN(v) && v > 0) return true;
+        }
+      }
+    }
+    return false;
+  } catch (_) { return false; }
+}
+
+async function invalidateTradeCaches(years) {
+  for (const k of [...rankingCache.keys()]) {
+    if (years.includes(parseInt(k, 10))) rankingCache.delete(k);
+  }
+  for (const k of [...appendixCache.keys()]) {
+    if (years.includes(parseInt(k, 10))) appendixCache.delete(k);
+  }
+  for (const y of years) {
+    await tradeCacheDbDeleteByPrefix(`ranking:${y}:`);
+    await tradeCacheDbDeleteByPrefix(`appendix:${y}:`);
+  }
+}
+
+let tradeCheckRunning = false;
+
+async function checkTradePublication(trigger) {
+  if (tradeCheckRunning) return;
+  tradeCheckRunning = true;
+  try {
+    const data = await geostatFetch('/classificatory?lang=en');
+    classCache.en = data;
+    classCacheTs.en = Date.now();
+    tradeCacheDbSet('classificatory:en', data);
+
+    const sel = data && data.selected;
+    const year = parseInt(sel && sel.year, 10);
+    let month = parseInt(sel && sel.month, 10);
+    if (!Number.isInteger(year) || !Number.isInteger(month)) {
+      throw new Error('classificatory has no selected period');
+    }
+    lastSeenTradePeriod = `${sel.year}-${sel.month}`;
+    if (month < 12) {
+      const [p1, p2] = await Promise.all([
+        tradeHasDataFor(year, month + 1),
+        month + 2 <= 12 ? tradeHasDataFor(year, month + 2) : Promise.resolve(false),
+      ]);
+      if (p1) month = month + 1;
+      if (p2) month = month + 2;
+    }
+
+    const state = await tradeCacheDbGet('trade-state');
+    const now = new Date().toISOString();
+    if (state && state.year === year && state.month === month) {
+      await tradeCacheDbSet('trade-state', { ...state, checkedAt: now });
+      return;
+    }
+
+    console.log(
+      `trade: new month detected — ${year}-${String(month).padStart(2, '0')} ` +
+      `(was ${state ? `${state.year}-${String(state.month).padStart(2, '0')}` : 'none'}, trigger=${trigger})`
+    );
+    // Revisions accompany each release; drop the affected years' caches.
+    await invalidateTradeCaches([year, year - 1]);
+    // Prewarm the standard report views so the first visitor is instant.
+    const ytdMonths = Array.from({ length: month }, (_, i) => i + 1);
+    try { await getCountryRanking(year, ytdMonths); } catch (e) { console.warn('trade prewarm ranking failed:', e.message); }
+    try { await computeAppendixData(year, month); } catch (e) { console.warn('trade prewarm appendix failed:', e.message); }
+    await tradeCacheDbSet('trade-state', { year, month, detectedAt: now, checkedAt: now });
+  } catch (err) {
+    console.warn('trade: publication check failed:', err.message);
+  } finally {
+    tradeCheckRunning = false;
+  }
+}
+
+// Fire-and-forget trigger used by the classificatory route: kick a full
+// check when the live response shows a different period than last seen.
+let lastSeenTradePeriod = null;
+function maybeDetectNewTradeMonth(data) {
+  const sel = data && data.selected;
+  if (!sel) return;
+  const period = `${sel.year}-${sel.month}`;
+  if (period === lastSeenTradePeriod) return;
+  lastSeenTradePeriod = period;
+  checkTradePublication('classificatory').catch(() => {});
+}
+
+// Daily check at 10:10 Tbilisi (= 06:10 UTC, Georgia has no DST), same
+// anchoring approach as the tourism scheduler. Also run shortly after boot
+// so a fresh container picks up anything it missed (delayed so the schema
+// migration in index.js has finished).
+function scheduleTradeCheck() {
+  const UTC_HOUR = 6, UTC_MINUTE = 10;
+  const now = new Date();
+  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), UTC_HOUR, UTC_MINUTE, 0, 0));
+  if (next <= now) next.setUTCDate(next.getUTCDate() + 1);
+  const delay = next - now;
+  console.log(`trade: next publication check in ${(delay / 3600000).toFixed(1)}h (${next.toISOString()}, 10:10 Tbilisi)`);
+  setTimeout(() => {
+    checkTradePublication('scheduled');
+    setInterval(() => checkTradePublication('scheduled'), 24 * 60 * 60 * 1000);
+  }, delay);
+}
+scheduleTradeCheck();
+setTimeout(() => checkTradePublication('boot'), 15_000);
+
+// ── GET /api/statistics/trade-status ─────────────────────────────────────
+// Last detected trade period + when it was detected/checked, for the admin
+// panel's data-status display.
+router.get('/trade-status', async (req, res) => {
+  const state = await tradeCacheDbGet('trade-state');
+  res.json({ success: true, state: state || null });
 });
 
 
@@ -1396,15 +1617,16 @@ function loadTourismFromDisk() {
   return false;
 }
 
-// Schedule daily refresh at 11:00 AM server time
+// Schedule daily refresh at 10:00 Tbilisi time. Georgia is UTC+4 with no
+// DST, so the target is a fixed 06:00 UTC regardless of server timezone.
 function scheduleTourismRefresh() {
-  const HOUR = 11;
+  const TBILISI_HOUR = 10;
+  const UTC_HOUR = TBILISI_HOUR - 4;
   const now = new Date();
-  const next = new Date();
-  next.setHours(HOUR, 0, 0, 0);
-  if (next <= now) next.setDate(next.getDate() + 1);
+  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), UTC_HOUR, 0, 0, 0));
+  if (next <= now) next.setUTCDate(next.getUTCDate() + 1);
   const delay = next - now;
-  console.log(`tourism: next scheduled refresh in ${(delay / 3600000).toFixed(1)}h (${next.toISOString()})`);
+  console.log(`tourism: next scheduled refresh in ${(delay / 3600000).toFixed(1)}h (${next.toISOString()}, 10:00 Tbilisi)`);
   setTimeout(() => {
     refreshTourismData();
     setInterval(refreshTourismData, 24 * 60 * 60 * 1000);

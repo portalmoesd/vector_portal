@@ -259,4 +259,14 @@ CREATE TABLE IF NOT EXISTS admin_uploads (
   uploaded_at  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- Persisted trade-API computations so deploys don't wipe them and Geostat
+-- is hit once per period instead of once per restart. Keys look like
+-- 'ranking:2026:1,2,3', 'appendix:2026:5', 'classificatory:en', and
+-- 'trade-state' (the monthly publication detector's last-seen period).
+CREATE TABLE IF NOT EXISTS trade_cache (
+  key        TEXT PRIMARY KEY,
+  data       JSONB NOT NULL,
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
 COMMIT;
