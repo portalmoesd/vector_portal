@@ -980,23 +980,25 @@ function parseFdiWorkbook(wb) {
   return { success: true, years: years.map(y => y.year), countries, totals, quarters };
 }
 
-// Reads one quarter column of the quarterly sheet into per-country values
-// plus the grand total from the "სულ" row. Same row layout as the annual
-// sheet: col A country code, col B name, values in Thsd. USD.
-function readFdiQuarterColumn(rows, col) {
+// Sums one or more quarter columns of the quarterly sheet into per-country
+// values plus the grand total from the "სულ" row. Same row layout as the
+// annual sheet: col A country code, col B name, values in Thsd. USD.
+function sumFdiQuarterColumns(rows, colIdxs) {
   const countries = {};
   let total = null;
   for (let r = 4; r < rows.length; r++) {
     const row = rows[r];
     if (!row) continue;
-    const raw = row[col];
-    const num = (raw === null || raw === undefined || raw === '-' || raw === '') ? 0 : parseFloat(raw);
-    const val = isNaN(num) ? 0 : num;
+    let sum = 0;
+    for (const c of colIdxs) {
+      const num = parseFloat(row[c]);
+      if (!isNaN(num)) sum += num;
+    }
     const code = parseInt(row[0], 10);
-    if (code && !isNaN(code)) { countries[code] = val; continue; }
+    if (code && !isNaN(code)) { countries[code] = sum; continue; }
     const label = String(row[0] || row[1] || '').trim().toLowerCase();
     if (total === null && (label.includes('სულ') || label.includes('total') || label.includes('ჯამი'))) {
-      total = val;
+      total = sum;
     }
   }
   return { countries, total };
@@ -1004,8 +1006,9 @@ function readFdiQuarterColumn(rows, col) {
 
 // The quarterly sheet ("FDI ") carries per-country values for quarters the
 // annual sheet doesn't have yet (e.g. "I კვ. 2026*" while the annual sheet
-// ends at 2025). Returns quarters newer than the last annual year, each with
-// the same quarter of the previous year attached for change-% comparison.
+// ends at 2025). Quarters of the same year are accumulated into one
+// year-to-date entry (Q1, then Q1+Q2, ...), with the same quarters of the
+// previous year summed for the change-% comparison.
 function parseFdiQuarterSheet(wb, lastAnnualYear) {
   const sheetName = wb.SheetNames.find((n) => n.trim() === 'FDI');
   const ws = sheetName && wb.Sheets[sheetName];
@@ -1023,22 +1026,33 @@ function parseFdiQuarterSheet(wb, lastAnnualYear) {
     cols.push({ col: c, quarter: ROMAN[m[1]], year: parseInt(m[2], 10), preliminary: m[3] === '*' });
   }
 
-  return cols
-    .filter((q) => q.year > lastAnnualYear)
-    .sort((a, b) => a.quarter - b.quarter)
-    .map((q) => {
-      const cur = readFdiQuarterColumn(rows, q.col);
-      const prevCol = cols.find((p) => p.year === q.year - 1 && p.quarter === q.quarter);
-      const prev = prevCol ? readFdiQuarterColumn(rows, prevCol.col) : null;
-      return {
-        year: q.year,
-        quarter: q.quarter,
-        preliminary: q.preliminary,
-        countries: cur.countries, // Thsd. USD
-        total: cur.total,         // Thsd. USD ("სულ" row)
-        prev,                     // same quarter, previous year (or null)
-      };
+  const byYear = new Map();
+  for (const q of cols) {
+    if (q.year <= lastAnnualYear) continue;
+    if (!byYear.has(q.year)) byYear.set(q.year, []);
+    byYear.get(q.year).push(q);
+  }
+
+  const out = [];
+  for (const [year, qcols] of [...byYear.entries()].sort((a, b) => a[0] - b[0])) {
+    qcols.sort((a, b) => a.quarter - b.quarter);
+    const cur = sumFdiQuarterColumns(rows, qcols.map((q) => q.col));
+    const prevCols = qcols
+      .map((q) => cols.find((p) => p.year === year - 1 && p.quarter === q.quarter))
+      .filter(Boolean);
+    const prev = prevCols.length === qcols.length
+      ? sumFdiQuarterColumns(rows, prevCols.map((p) => p.col))
+      : null;
+    out.push({
+      year,
+      quarters: qcols.map((q) => q.quarter), // e.g. [1] or [1, 2]
+      preliminary: qcols.some((q) => q.preliminary),
+      countries: cur.countries, // Thsd. USD, year-to-date
+      total: cur.total,         // Thsd. USD ("სულ" row, year-to-date)
+      prev,                     // same quarters of the previous year (or null)
     });
+  }
+  return out;
 }
 
 router.get('/fdi', async (req, res) => {
