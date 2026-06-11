@@ -2291,15 +2291,21 @@
       });
 
       // Quarter rows: Geostat publishes quarters of the year following the
-      // last full annual year (e.g. "Q1 2026*" while the annual series ends
-      // at 2025). Change % compares with the same quarter a year earlier;
-      // rank and share are computed within the quarter.
+      // last full annual year (e.g. "2026 Q1*" while the annual series ends
+      // at 2025). The server accumulates them year-to-date (Q1, then Q1+Q2),
+      // and the change % compares with the same quarters a year earlier;
+      // rank and share are computed within the same year-to-date window.
       const ROMAN_Q = ['', 'I', 'II', 'III', 'IV'];
       for (const q of (json.quarters || [])) {
         const star = q.preliminary ? '*' : '';
+        const qs = q.quarters || [q.quarter];
+        const range = qs.length > 1 ? `${qs[0]}-Q${qs[qs.length - 1]}` : `${qs[0]}`;
+        const romanRange = qs.length > 1
+          ? `${ROMAN_Q[qs[0]]}-${ROMAN_Q[qs[qs.length - 1]]}`
+          : ROMAN_Q[qs[0]];
         const label = reportLocale === 'ka'
-          ? `${ROMAN_Q[q.quarter]} კვ. ${q.year}${star}`
-          : `Q${q.quarter} ${q.year}${star}`;
+          ? `${q.year} ${romanRange} კვ${star}`
+          : `${q.year} Q${range}${star}`;
         const val = (q.countries[countryCode] || 0) / 1000;
         const prev = ((q.prev && q.prev.countries[countryCode]) || 0) / 1000;
         let rank = null, share = null;
