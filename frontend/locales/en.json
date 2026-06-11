@@ -329,7 +329,9 @@
       "errChooseFile": "Please choose a file",
       "errParser": "Spreadsheet parser not loaded — check your connection",
       "errNoSheet": "Workbook has no sheets",
-      "errNoActive": "No active companies with foreign capital found in the file"
+      "errNoActive": "No active companies with foreign capital found in the file",
+      "fdiAnnualOk": "annual FDI table refreshed through {period}",
+      "fdiAnnualFail": "annual FDI refresh failed ({error}) — previous table kept"
     }
   },
   "library": {
