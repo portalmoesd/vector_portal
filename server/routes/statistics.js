@@ -1396,15 +1396,16 @@ function loadTourismFromDisk() {
   return false;
 }
 
-// Schedule daily refresh at 11:00 AM server time
+// Schedule daily refresh at 10:00 Tbilisi time. Georgia is UTC+4 with no
+// DST, so the target is a fixed 06:00 UTC regardless of server timezone.
 function scheduleTourismRefresh() {
-  const HOUR = 11;
+  const TBILISI_HOUR = 10;
+  const UTC_HOUR = TBILISI_HOUR - 4;
   const now = new Date();
-  const next = new Date();
-  next.setHours(HOUR, 0, 0, 0);
-  if (next <= now) next.setDate(next.getDate() + 1);
+  const next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), UTC_HOUR, 0, 0, 0));
+  if (next <= now) next.setUTCDate(next.getUTCDate() + 1);
   const delay = next - now;
-  console.log(`tourism: next scheduled refresh in ${(delay / 3600000).toFixed(1)}h (${next.toISOString()})`);
+  console.log(`tourism: next scheduled refresh in ${(delay / 3600000).toFixed(1)}h (${next.toISOString()}, 10:00 Tbilisi)`);
   setTimeout(() => {
     refreshTourismData();
     setInterval(refreshTourismData, 24 * 60 * 60 * 1000);
