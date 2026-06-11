@@ -1440,6 +1440,21 @@ function parseFdiSectorsWorkbook(wb) {
     }
   }
 
+  // Countries whose block has no "სულ" row get totals computed by summing
+  // their sector values per period. A period where every sector is empty
+  // stays null so the UI keeps rendering "-".
+  for (const country of Object.values(countries)) {
+    if (Object.keys(country.totals).length) continue;
+    for (const { label } of periodCols) {
+      let sum = null;
+      for (const vals of Object.values(country.sectors)) {
+        const v = vals[label];
+        if (v !== null && v !== undefined) sum = (sum || 0) + v;
+      }
+      country.totals[label] = sum;
+    }
+  }
+
   // Build sector name mapping for the API response (short KA → EN)
   const sectorNameMap = {};
   for (const s of sectorsSet) {
