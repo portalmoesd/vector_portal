@@ -867,13 +867,57 @@ router.post('/country-appendix', async (req, res) => {
 
 
 // ── GET /api/statistics/fdi ──────────────────────────────────────────────
-// Parses FDI by countries XLSX. Tries to download fresh from geostat.ge,
-// falls back to local bundled copy. Cached for 24 hours (updates quarterly).
+// Parses FDI by countries XLSX. Geostat re-publishes the file under a new
+// /media/<id>/ URL each quarterly release, so the link is resolved from the
+// FDI category page at refresh time. A refresh runs when an admin uploads
+// the FDI-by-sector file (both series follow the same quarterly release);
+// the parsed snapshot is persisted in admin_uploads and served unchanged
+// until the next refresh.
 
-const FDI_URL = 'https://www.geostat.ge/media/77508/FDI_Geo_countries.xlsx';
+const FDI_PAGE_URL = 'https://www.geostat.ge/ka/modules/categories/191/pirdapiri-utskhouri-investitsiebi';
+const FDI_FALLBACK_URL = 'https://www.geostat.ge/media/79883/FDI_Geo_countries.xlsx';
 const FDI_LOCAL = require('path').join(__dirname, '../data/FDI_Geo_countries.xlsx');
-let fdiCache = { data: null, ts: 0 };
-const FDI_CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours
+let fdiCache = { data: null };
+
+async function resolveFdiAnnualUrl() {
+  const pageRes = await geostatHttp(FDI_PAGE_URL, {
+    headers: { 'User-Agent': 'VectorPortal/1.0' },
+    timeout: 15_000,
+    followRedirects: true,
+  });
+  if (!pageRes.ok) throw new Error(`FDI category page HTTP ${pageRes.status}`);
+  const html = await pageRes.text();
+  const m = /https?:\/\/[\w.]*geostat\.ge\/media\/\d+\/FDI_Geo_countries\.xlsx/i.exec(html);
+  if (!m) throw new Error('FDI_Geo_countries.xlsx link not found on category page');
+  // The page links bare geostat.ge, which 302s to www; geostatHttp only
+  // accepts *.geostat.ge hosts, so normalize.
+  return m[0].replace('//geostat.ge/', '//www.geostat.ge/');
+}
+
+// Downloads the current annual FDI workbook, parses it, persists the
+// snapshot (DB + local xlsx fallback) and updates the in-memory cache.
+async function refreshFdiAnnual() {
+  let url;
+  try {
+    url = await resolveFdiAnnualUrl();
+  } catch (resolveErr) {
+    console.warn('FDI annual: link resolution failed, trying last known URL:', resolveErr.message);
+    url = FDI_FALLBACK_URL;
+  }
+  const xlsxRes = await geostatHttp(url, {
+    headers: { 'User-Agent': 'VectorPortal/1.0' },
+    timeout: 15_000,
+    followRedirects: true,
+  });
+  if (!xlsxRes.ok) throw new Error(`HTTP ${xlsxRes.status} for ${url}`);
+  const buffer = xlsxRes.buffer();
+  const result = parseFdiWorkbook(XLSX.read(buffer, { type: 'buffer' }));
+  await saveParsedAndRaw('fdi-annual', result, buffer);
+  try { require('fs').writeFileSync(FDI_LOCAL, buffer); } catch (_) { /* ephemeral/read-only fs */ }
+  fdiCache.data = result;
+  console.log(`FDI annual: refreshed from ${url} (${Object.keys(result.countries).length} countries, up to ${result.years[result.years.length - 1]})`);
+  return result;
+}
 
 function parseFdiWorkbook(wb) {
   const ws = wb.Sheets['FDI (annual)'];
@@ -935,35 +979,26 @@ function parseFdiWorkbook(wb) {
 
 router.get('/fdi', async (req, res) => {
   try {
-    if (fdiCache.data && Date.now() - fdiCache.ts < FDI_CACHE_TTL) {
-      return res.json(fdiCache.data);
+    // Snapshot semantics: serve the last refreshed copy as-is. It's replaced
+    // only by the next refresh, triggered from /fdi-sectors/upload.
+    if (fdiCache.data) return res.json(fdiCache.data);
+
+    const saved = await loadParsed('fdi-annual');
+    if (saved) {
+      fdiCache.data = saved;
+      return res.json(saved);
     }
 
-    let wb;
+    // Nothing persisted yet (first boot before any sector upload): try a
+    // live refresh, then the bundled workbook.
     try {
-      // Try downloading fresh copy — same TLS-chain workaround as
-      // geostatFetch since www.geostat.ge shares the broken cert chain.
-      const xlsxRes = await geostatHttp(FDI_URL, {
-        headers: { 'User-Agent': 'VectorPortal/1.0' },
-        timeout: 15_000,
-        followRedirects: true,
-      });
-      if (!xlsxRes.ok) throw new Error(`HTTP ${xlsxRes.status}`);
-      const buffer = xlsxRes.buffer();
-      wb = XLSX.read(buffer, { type: 'buffer' });
-
-      // Save fresh copy locally for future fallback
-      require('fs').writeFileSync(FDI_LOCAL, buffer);
-      console.log('FDI data refreshed from geostat.ge');
+      return res.json(await refreshFdiAnnual());
     } catch (dlErr) {
-      // Fall back to local file
-      console.log('FDI download failed, using local copy:', dlErr.message);
-      wb = XLSX.readFile(FDI_LOCAL);
+      console.log('FDI bootstrap download failed, using local copy:', dlErr.message);
+      const result = parseFdiWorkbook(XLSX.readFile(FDI_LOCAL));
+      fdiCache.data = result;
+      return res.json(result);
     }
-
-    const result = parseFdiWorkbook(wb);
-    fdiCache = { data: result, ts: Date.now() };
-    res.json(result);
   } catch (err) {
     console.error('FDI data error:', err.message);
     res.status(502).json({ error: 'Failed to load FDI data' });
@@ -1511,12 +1546,26 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
     await saveParsedAndRaw('fdi-sectors', parsed, req.file.buffer);
     fdiSectorsCache.data = parsed;
     console.log(`fdi-sectors: uploaded (${countryCount} countries, ${parsed.sectors.length} sectors, years ${parsed.years.join(',')})`);
+
+    // Both FDI series follow the same quarterly Geostat release, so refresh
+    // the annual-by-country snapshot alongside the sector upload. A failed
+    // refresh doesn't fail the upload — the previous snapshot stays.
+    let fdiAnnual;
+    try {
+      const annual = await refreshFdiAnnual();
+      fdiAnnual = { refreshed: true, latestYear: annual.years[annual.years.length - 1] };
+    } catch (annErr) {
+      console.warn('fdi-sectors upload: annual FDI refresh failed:', annErr.message);
+      fdiAnnual = { refreshed: false, error: annErr.message };
+    }
+
     res.json({
       success: true,
       uploadedAt: parsed.uploadedAt,
       yearsCovered: parsed.years,
       countryCount,
       sectorCount: parsed.sectors.length,
+      fdiAnnual,
     });
   } catch (err) {
     console.error('fdi-sectors upload error:', err.message);
