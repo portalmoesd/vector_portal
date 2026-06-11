@@ -332,6 +332,11 @@
       "errNoActive": "No active companies with foreign capital found in the file",
       "fdiAnnualOk": "annual FDI table refreshed through {period}",
       "fdiAnnualFail": "annual FDI refresh failed ({error}) — previous table kept"
+    },
+    "status": {
+      "title": "Data Status",
+      "trade": "Trade data: current through {period} · new month detected {detected} · last checked {checked}",
+      "tradeUnknown": "Trade data: publication not checked yet"
     }
   },
   "library": {

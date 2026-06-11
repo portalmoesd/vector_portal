@@ -692,6 +692,32 @@
     return { activeCount, countries: counts };
   }
 
+  // Data-status card: when Geostat's monthly trade release was last
+  // detected by the server (see /api/statistics/trade-status).
+  async function loadDataStatus() {
+    const el = document.getElementById('dataStatusBody');
+    if (!el) return;
+    try {
+      const res = await fetch(`${API_BASE}/api/statistics/trade-status`);
+      const j = await res.json();
+      const s = j && j.state;
+      if (!s) {
+        el.textContent = I18n.tr('admin.status.tradeUnknown');
+        return;
+      }
+      const period = `${s.year}-${String(s.month).padStart(2, '0')}`;
+      const fmt = (iso) => iso ? new Date(iso).toLocaleString() : '—';
+      el.textContent = I18n.tr('admin.status.trade', {
+        period,
+        detected: fmt(s.detectedAt),
+        checked: fmt(s.checkedAt),
+      });
+    } catch (_) {
+      el.textContent = I18n.tr('admin.status.tradeUnknown');
+    }
+  }
+  loadDataStatus();
+
   initUploadPanel({
     panelId: 'panel-fdi-sectors',
     endpoint: '/api/statistics/fdi-sectors',

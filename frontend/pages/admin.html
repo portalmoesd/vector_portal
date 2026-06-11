@@ -76,7 +76,12 @@
 
       <!-- Data Uploads Tab -->
       <div class="admin-panel" id="tab-uploads" style="display:none;">
-        <section class="card admin-upload-panel" id="panel-fdi-sectors">
+        <section class="card admin-upload-panel" id="panel-data-status">
+          <h3 data-i18n="admin.status.title">Data Status</h3>
+          <div id="dataStatusBody" style="font-size:0.9rem;color:var(--text-secondary);" data-i18n="admin.upload.loading">Loading…</div>
+        </section>
+
+        <section class="card admin-upload-panel" id="panel-fdi-sectors" style="margin-top:16px;">
           <h3 data-i18n="admin.upload.fdiTitle">FDI Sectors</h3>
           <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:12px;" data-i18n="admin.upload.fdiDesc">
             Upload the Georgian FDI-by-country-by-sector XLSX file. The file
