@@ -2290,6 +2290,32 @@
         return { year: y, valueMln: val, prevMln: prev, rank: rs.rank, share: rs.share };
       });
 
+      // Quarter rows: Geostat publishes quarters of the year following the
+      // last full annual year (e.g. "Q1 2026*" while the annual series ends
+      // at 2025). Change % compares with the same quarter a year earlier;
+      // rank and share are computed within the quarter.
+      const ROMAN_Q = ['', 'I', 'II', 'III', 'IV'];
+      for (const q of (json.quarters || [])) {
+        const star = q.preliminary ? '*' : '';
+        const label = reportLocale === 'ka'
+          ? `${ROMAN_Q[q.quarter]} კვ. ${q.year}${star}`
+          : `Q${q.quarter} ${q.year}${star}`;
+        const val = (q.countries[countryCode] || 0) / 1000;
+        const prev = ((q.prev && q.prev.countries[countryCode]) || 0) / 1000;
+        let rank = null, share = null;
+        if (val > 0) {
+          const entries = Object.entries(q.countries)
+            .map(([code, v]) => ({ code, v }))
+            .filter(e => e.v > 0)
+            .sort((a, b) => b.v - a.v);
+          const idx = entries.findIndex(e => e.code === String(countryCode));
+          rank = idx >= 0 ? idx + 1 : null;
+          const totalMln = (q.total || 0) / 1000;
+          share = totalMln > 0 ? (val / totalMln) * 100 : null;
+        }
+        tableData.push({ year: label, valueMln: val, prevMln: prev, rank, share });
+      }
+
       // ── Summary data ──────────────────────────────────────────────
       // First year country had positive investment
       let firstYear = null;

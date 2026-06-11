@@ -976,7 +976,69 @@ function parseFdiWorkbook(wb) {
     countries[code] = values;
   }
 
-  return { success: true, years: years.map(y => y.year), countries, totals };
+  const quarters = parseFdiQuarterSheet(wb, years.length ? years[years.length - 1].year : 0);
+  return { success: true, years: years.map(y => y.year), countries, totals, quarters };
+}
+
+// Reads one quarter column of the quarterly sheet into per-country values
+// plus the grand total from the "სულ" row. Same row layout as the annual
+// sheet: col A country code, col B name, values in Thsd. USD.
+function readFdiQuarterColumn(rows, col) {
+  const countries = {};
+  let total = null;
+  for (let r = 4; r < rows.length; r++) {
+    const row = rows[r];
+    if (!row) continue;
+    const raw = row[col];
+    const num = (raw === null || raw === undefined || raw === '-' || raw === '') ? 0 : parseFloat(raw);
+    const val = isNaN(num) ? 0 : num;
+    const code = parseInt(row[0], 10);
+    if (code && !isNaN(code)) { countries[code] = val; continue; }
+    const label = String(row[0] || row[1] || '').trim().toLowerCase();
+    if (total === null && (label.includes('სულ') || label.includes('total') || label.includes('ჯამი'))) {
+      total = val;
+    }
+  }
+  return { countries, total };
+}
+
+// The quarterly sheet ("FDI ") carries per-country values for quarters the
+// annual sheet doesn't have yet (e.g. "I კვ. 2026*" while the annual sheet
+// ends at 2025). Returns quarters newer than the last annual year, each with
+// the same quarter of the previous year attached for change-% comparison.
+function parseFdiQuarterSheet(wb, lastAnnualYear) {
+  const sheetName = wb.SheetNames.find((n) => n.trim() === 'FDI');
+  const ws = sheetName && wb.Sheets[sheetName];
+  if (!ws) return [];
+  const rows = XLSX.utils.sheet_to_json(ws, { header: 1, defval: null });
+  const headerRow = rows[3];
+  if (!headerRow) return [];
+
+  const ROMAN = { I: 1, II: 2, III: 3, IV: 4 };
+  const cols = [];
+  for (let c = 2; c < headerRow.length; c++) {
+    const raw = String(headerRow[c] || '').trim();
+    const m = /^(IV|III|II|I)\s*კვ\.?\s*(\d{4})(\*?)$/.exec(raw);
+    if (!m) continue;
+    cols.push({ col: c, quarter: ROMAN[m[1]], year: parseInt(m[2], 10), preliminary: m[3] === '*' });
+  }
+
+  return cols
+    .filter((q) => q.year > lastAnnualYear)
+    .sort((a, b) => a.quarter - b.quarter)
+    .map((q) => {
+      const cur = readFdiQuarterColumn(rows, q.col);
+      const prevCol = cols.find((p) => p.year === q.year - 1 && p.quarter === q.quarter);
+      const prev = prevCol ? readFdiQuarterColumn(rows, prevCol.col) : null;
+      return {
+        year: q.year,
+        quarter: q.quarter,
+        preliminary: q.preliminary,
+        countries: cur.countries, // Thsd. USD
+        total: cur.total,         // Thsd. USD ("სულ" row)
+        prev,                     // same quarter, previous year (or null)
+      };
+    });
 }
 
 router.get('/fdi', async (req, res) => {
