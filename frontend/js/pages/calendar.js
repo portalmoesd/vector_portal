@@ -206,7 +206,7 @@
   // with a mailto: link; the portal never sends email itself.
 
   function buildMailtoUrl(draft) {
-    const to = draft.recipients.map((r) => r.email).join(',');
+    const to = draft.recipients.map((r) => r.email).join('; ');
     return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(draft.body || '')}`;
   }
 
