@@ -200,6 +200,104 @@
   modalCancel.addEventListener('click', hideModal);
   modalSave.addEventListener('click', () => { if (onModalSave) onModalSave(); });
 
+  // ── Event email draft ──────────────────────────────────────────────────────
+  // After an event is created the server resolves the workflow participants and
+  // returns a subject/body/recipient list. We open the user's default mail app
+  // with a mailto: link; the portal never sends email itself.
+
+  function buildMailtoUrl(draft) {
+    const to = draft.recipients.map((r) => r.email).join(',');
+    return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(draft.body || '')}`;
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.left = '-9999px';
+    document.body.appendChild(textarea);
+    textarea.focus();
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+  }
+
+  function warnAboutMissingEmails(missingEmails) {
+    if (!missingEmails || missingEmails.length === 0) return;
+    const names = missingEmails
+      .slice(0, 5)
+      .map((u) => u.fullName)
+      .join(', ');
+    const suffix = missingEmails.length > 5 ? ` and ${missingEmails.length - 5} more` : '';
+    toast.warn(
+      `Email draft created, but ${missingEmails.length} participant(s) have no email address: ${names}${suffix}.`
+    );
+  }
+
+  function showEmailDraftFallback(draft) {
+    const to = draft.recipients.map((r) => r.email).join('; ');
+    const copyPayload = [`To: ${to}`, `Subject: ${draft.subject || ''}`, '', draft.body || ''].join('\n');
+
+    showModal(
+      'Email draft details',
+      `
+      <div style="font-size:14px;line-height:1.55;">
+        <p>The recipient list is too long to open reliably in a mail app. Copy the details below into a new email draft.</p>
+        <label class="form-label">To</label>
+        <textarea class="form-input" readonly style="min-height:90px;margin-bottom:12px;">${escapeHtml(to)}</textarea>
+        <label class="form-label">Subject</label>
+        <input class="form-input" readonly value="${escapeHtml(draft.subject || '')}" style="margin-bottom:12px;" />
+        <label class="form-label">Body</label>
+        <textarea class="form-input" readonly style="min-height:220px;">${escapeHtml(draft.body || '')}</textarea>
+      </div>
+    `,
+      'Copy details',
+      async () => {
+        try {
+          await copyText(copyPayload);
+          toast.success('Email draft details copied.');
+          hideModal();
+        } catch (err) {
+          toast.error('Could not copy email draft details.');
+        }
+      }
+    );
+  }
+
+  async function openCreatedEventNotificationDraft(eventId) {
+    if (!eventId) return;
+
+    try {
+      const draft = await Api.get(`/api/events/${eventId}/notification-draft`);
+      if (!draft.recipients || draft.recipients.length === 0) {
+        toast.warn('Event created, but no participants with email addresses were found.');
+        warnAboutMissingEmails(draft.missingEmails);
+        return;
+      }
+
+      const mailtoUrl = buildMailtoUrl(draft);
+      if (mailtoUrl.length > (draft.mailtoUrlLimit || 1800)) {
+        showEmailDraftFallback(draft);
+        warnAboutMissingEmails(draft.missingEmails);
+        return;
+      }
+
+      const link = document.createElement('a');
+      link.href = mailtoUrl;
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      warnAboutMissingEmails(draft.missingEmails);
+    } catch (err) {
+      toast.warn(`Event created, but the email draft could not be prepared: ${err.message}`);
+    }
+  }
+
   // ── View Event ───────────────────────────────────────────────────────────
 
   window.viewEvent = async function(id) {
@@ -525,7 +623,7 @@
       }
 
       try {
-        await Api.post('/api/events', {
+        const created = await Api.post('/api/events', {
           title, countryId,
           documentSubmitterRole: dsRole,
           documentSubmitterId,
@@ -537,6 +635,7 @@
           sections,
         });
         hideModal();
+        await openCreatedEventNotificationDraft(created.id);
         events = await Api.get('/api/events');
         render();
       } catch (err) { toast.error(err.message); }
