@@ -210,22 +210,6 @@
     return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(draft.body || '')}`;
   }
 
-  async function copyText(text) {
-    if (navigator.clipboard && window.isSecureContext) {
-      await navigator.clipboard.writeText(text);
-      return;
-    }
-    const textarea = document.createElement('textarea');
-    textarea.value = text;
-    textarea.style.position = 'fixed';
-    textarea.style.left = '-9999px';
-    document.body.appendChild(textarea);
-    textarea.focus();
-    textarea.select();
-    document.execCommand('copy');
-    textarea.remove();
-  }
-
   function warnAboutMissingEmails(missingEmails) {
     if (!missingEmails || missingEmails.length === 0) return;
     const names = missingEmails
@@ -235,36 +219,6 @@
     const suffix = missingEmails.length > 5 ? ` and ${missingEmails.length - 5} more` : '';
     toast.warn(
       `Email draft created, but ${missingEmails.length} participant(s) have no email address: ${names}${suffix}.`
-    );
-  }
-
-  function showEmailDraftFallback(draft) {
-    const to = draft.recipients.map((r) => r.email).join('; ');
-    const copyPayload = [`To: ${to}`, `Subject: ${draft.subject || ''}`, '', draft.body || ''].join('\n');
-
-    showModal(
-      'Email draft details',
-      `
-      <div style="font-size:14px;line-height:1.55;">
-        <p>The recipient list is too long to open reliably in a mail app. Copy the details below into a new email draft.</p>
-        <label class="form-label">To</label>
-        <textarea class="form-input" readonly style="min-height:90px;margin-bottom:12px;">${escapeHtml(to)}</textarea>
-        <label class="form-label">Subject</label>
-        <input class="form-input" readonly value="${escapeHtml(draft.subject || '')}" style="margin-bottom:12px;" />
-        <label class="form-label">Body</label>
-        <textarea class="form-input" readonly style="min-height:220px;">${escapeHtml(draft.body || '')}</textarea>
-      </div>
-    `,
-      'Copy details',
-      async () => {
-        try {
-          await copyText(copyPayload);
-          toast.success('Email draft details copied.');
-          hideModal();
-        } catch (err) {
-          toast.error('Could not copy email draft details.');
-        }
-      }
     );
   }
 
@@ -279,19 +233,22 @@
         return;
       }
 
+      // Always hand the draft off to the device's default mail app via mailto:.
       const mailtoUrl = buildMailtoUrl(draft);
-      if (mailtoUrl.length > (draft.mailtoUrlLimit || 1800)) {
-        showEmailDraftFallback(draft);
-        warnAboutMissingEmails(draft.missingEmails);
-        return;
-      }
-
       const link = document.createElement('a');
       link.href = mailtoUrl;
       link.style.display = 'none';
       document.body.appendChild(link);
       link.click();
       link.remove();
+
+      // Some mail clients truncate very long mailto: URLs. Surface a
+      // non-blocking warning rather than interrupting with a modal.
+      if (mailtoUrl.length > (draft.mailtoUrlLimit || 1800)) {
+        toast.warn(
+          'The recipient list is long; if your mail app opened with missing recipients, add them manually.'
+        );
+      }
       warnAboutMissingEmails(draft.missingEmails);
     } catch (err) {
       toast.warn(`Event created, but the email draft could not be prepared: ${err.message}`);
