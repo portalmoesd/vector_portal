@@ -2,6 +2,7 @@ const express = require('express');
 const db = require('../db');
 const { requireAuth, denyAnalyst } = require('../middleware/auth');
 const { canCreateEvent, canEndEvent, ROLES } = require('../helpers/roles');
+const { resolveEventNotificationDraft } = require('../helpers/event-notification-draft');
 
 const router = express.Router();
 
@@ -258,6 +259,24 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
     }
   } catch (err) {
     console.error('Create event error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// GET /api/events/:id/notification-draft — email recipients and draft content
+router.get('/:id/notification-draft', requireAuth, denyAnalyst, async (req, res) => {
+  try {
+    const eventId = parseInt(req.params.id, 10);
+    if (!Number.isInteger(eventId) || eventId <= 0) {
+      return res.status(400).json({ error: 'Invalid event id' });
+    }
+
+    const draft = await resolveEventNotificationDraft(db, eventId);
+    if (!draft) return res.status(404).json({ error: 'Event not found' });
+
+    res.json(draft);
+  } catch (err) {
+    console.error('Notification draft error:', err);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
