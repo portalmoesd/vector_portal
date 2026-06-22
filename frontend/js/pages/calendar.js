@@ -217,10 +217,10 @@
     return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(body)}`;
   }
 
-  // Upload an event attachment using the stored JWT (Api only speaks JSON).
-  async function uploadEventAttachment(eventId, file) {
+  // Upload event attachment(s) using the stored JWT (Api only speaks JSON).
+  async function uploadEventAttachments(eventId, files) {
     const fd = new FormData();
-    fd.append('files', file);
+    for (const file of files) fd.append('files', file);
     const res = await fetch(`/api/events/${eventId}/files`, {
       method: 'POST',
       headers: { Authorization: `Bearer ${Api.getToken()}` },
@@ -583,7 +583,7 @@
         </div>
         <div class="form-group" style="grid-column:1/-1;">
           <label class="form-label" data-i18n="calendar.form.attachment">Attachment</label>
-          <input class="form-input" type="file" id="newAttachment" />
+          <input class="form-input" type="file" id="newAttachment" multiple />
         </div>
         <div class="form-group" style="grid-column:1/-1;">
           <label class="form-label" data-i18n="calendar.form.template">Template</label>
@@ -654,13 +654,13 @@
           language, deadlineDate, occasion,
           sections,
         });
-        // Upload the attachment (if any) before preparing the email draft so
-        // the draft can reference it and we can auto-download it for the user.
+        // Upload the attachment(s) (if any) before preparing the email draft
+        // so the draft can reference them and we can auto-download them.
         const fileInput = document.getElementById('newAttachment');
-        const attachedFile = fileInput && fileInput.files && fileInput.files[0];
-        if (attachedFile) {
+        const attachedFiles = fileInput && fileInput.files ? Array.from(fileInput.files) : [];
+        if (attachedFiles.length > 0) {
           try {
-            await uploadEventAttachment(created.id, attachedFile);
+            await uploadEventAttachments(created.id, attachedFiles);
           } catch (e) {
             toast.warn(I18n.tr('calendar.warn.attachmentFailed') + ' ' + e.message);
           }
