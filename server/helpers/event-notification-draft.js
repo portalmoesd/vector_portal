@@ -109,6 +109,14 @@ async function getEventSections(db, eventId) {
   }));
 }
 
+async function getEventFiles(db, eventId) {
+  const { rows } = await db.query(
+    `SELECT id, original_name FROM event_files WHERE event_id = $1 ORDER BY created_at`,
+    [eventId]
+  );
+  return rows.map((r) => ({ id: r.id, originalName: r.original_name }));
+}
+
 async function getUserById(db, userId) {
   if (!userId) return null;
   const {
@@ -305,6 +313,7 @@ async function resolveEventNotificationDraft(db, eventId) {
   }
 
   const { recipients, missingEmails } = splitRecipients(participants);
+  const files = await getEventFiles(db, eventId);
   const subject = `ახალი ღონისძიება: ${event.title}`;
   const body = buildEmailBody(event, sections, recipients, missingEmails);
 
@@ -321,6 +330,7 @@ async function resolveEventNotificationDraft(db, eventId) {
     },
     recipients,
     missingEmails,
+    files,
     subject,
     body,
     mailtoUrlLimit: MAILTO_URL_LIMIT,

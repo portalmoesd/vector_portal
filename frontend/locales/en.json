@@ -203,6 +203,7 @@
       "deadline": "Deadline",
       "curatorRequired": "Curator Required",
       "task": "Task",
+      "attachment": "Attachment",
       "template": "Template",
       "sections": "Sections",
       "addSection": "+ Add Section",
@@ -216,7 +217,12 @@
     "warn": {
       "missingRequired": "Title, Country, and DS Role are required",
       "missingSection": "Add at least one section",
-      "missingDeputy": "Select a deputy or the minister"
+      "missingDeputy": "Select a deputy or the minister",
+      "attachmentFailed": "Event created, but the attachment could not be uploaded:"
+    },
+    "email": {
+      "attachmentLine": "Attached file (open in the portal to download):",
+      "attachmentDownloaded": "The attachment was downloaded — drag it into your email as an attachment."
     },
     "action": {
       "view": "View",

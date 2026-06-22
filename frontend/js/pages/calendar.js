@@ -207,7 +207,28 @@
 
   function buildMailtoUrl(draft) {
     const to = draft.recipients.map((r) => r.email).join('; ');
-    return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(draft.body || '')}`;
+    let body = draft.body || '';
+    // mailto: links can't carry attachments, so when the event has files we
+    // add a portal link recipients can open (after logging in) to download them.
+    if (draft.files && draft.files.length > 0 && draft.event && draft.event.id) {
+      const link = `${window.location.origin}/pages/calendar.html?event=${draft.event.id}`;
+      body += `\n\n${I18n.tr('calendar.email.attachmentLine')} ${link}`;
+    }
+    return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(body)}`;
+  }
+
+  // Upload an event attachment using the stored JWT (Api only speaks JSON).
+  async function uploadEventAttachment(eventId, file) {
+    const fd = new FormData();
+    fd.append('files', file);
+    const res = await fetch(`/api/events/${eventId}/files`, {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${Api.getToken()}` },
+      body: fd,
+    });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || 'Upload failed');
+    return data.files || [];
   }
 
   function warnAboutMissingEmails(missingEmails) {
@@ -250,6 +271,15 @@
         );
       }
       warnAboutMissingEmails(draft.missingEmails);
+
+      // mailto: can't attach files, so download them locally — the user can
+      // then drag them into the draft as real attachments.
+      if (draft.files && draft.files.length > 0) {
+        for (const f of draft.files) {
+          downloadEventFileAuth(eventId, f.id, f.originalName);
+        }
+        toast.info(I18n.tr('calendar.email.attachmentDownloaded'));
+      }
     } catch (err) {
       toast.warn(`Event created, but the email draft could not be prepared: ${err.message}`);
     }
@@ -257,10 +287,28 @@
 
   // ── View Event ───────────────────────────────────────────────────────────
 
+  // Filenames for attachments shown in the details modal, keyed by file id,
+  // so the inline download handler only carries integers.
+  const viewedFileNames = {};
+  window.downloadViewedEventFile = function(eventId, fileId) {
+    downloadEventFileAuth(eventId, fileId, viewedFileNames[fileId] || 'attachment');
+  };
+
   window.viewEvent = async function(id) {
     try {
       const e = await Api.get(`/api/events/${id}`);
+      let files = [];
+      try { files = await Api.get(`/api/events/${id}/files`); } catch (_) { /* non-fatal */ }
+      // Remember names so the download handler only needs integer ids in the
+      // inline onclick (filenames may contain quotes that break the markup).
+      files.forEach(f => { viewedFileNames[f.id] = f.original_name; });
       const sectionsHtml = e.sections.map(s => `<li>${escapeHtml(s.title)}</li>`).join('');
+      const filesHtml = files.length
+        ? `<p><strong>${escapeHtml(I18n.tr('calendar.form.attachment'))}:</strong></p>
+           <ul style="margin:0 0 0 20px;list-style:none;padding:0;">${files.map(f =>
+             `<li style="margin-bottom:4px;"><a href="#" onclick="event.preventDefault();downloadViewedEventFile(${id},${f.id})">📎 ${escapeHtml(f.original_name)}</a></li>`
+           ).join('')}</ul>`
+        : '';
       showModal(I18n.tr('calendar.modal.detailsTitle'), `
         <div style="font-size:14px;line-height:1.8;">
           <p><strong>Title:</strong> ${escapeHtml(e.title)}</p>
@@ -275,6 +323,7 @@
           <p><strong>Status:</strong> ${e.status}</p>
           <p><strong>Sections:</strong></p>
           <ol style="margin:0 0 0 20px;">${sectionsHtml || '<li>None</li>'}</ol>
+          ${filesHtml}
         </div>
       `, null, null);
     } catch (e) { toast.error(e.message); }
@@ -524,13 +573,17 @@
         <div class="form-group">
           <label class="form-label" data-i18n="calendar.form.curatorRequired">Curator Required</label>
           <select class="form-select" id="newCurator">
-            <option value="no" selected data-i18n="common.no">No</option>
-            <option value="yes" data-i18n="common.yes">Yes</option>
+            <option value="yes" selected data-i18n="common.yes">Yes</option>
+            <option value="no" data-i18n="common.no">No</option>
           </select>
         </div>
         <div class="form-group" style="grid-column:1/-1;">
           <label class="form-label" data-i18n="calendar.form.task">Task</label>
           <div id="newOccasionWrap"></div>
+        </div>
+        <div class="form-group" style="grid-column:1/-1;">
+          <label class="form-label" data-i18n="calendar.form.attachment">Attachment</label>
+          <input class="form-input" type="file" id="newAttachment" />
         </div>
         <div class="form-group" style="grid-column:1/-1;">
           <label class="form-label" data-i18n="calendar.form.template">Template</label>
@@ -601,6 +654,17 @@
           language, deadlineDate, occasion,
           sections,
         });
+        // Upload the attachment (if any) before preparing the email draft so
+        // the draft can reference it and we can auto-download it for the user.
+        const fileInput = document.getElementById('newAttachment');
+        const attachedFile = fileInput && fileInput.files && fileInput.files[0];
+        if (attachedFile) {
+          try {
+            await uploadEventAttachment(created.id, attachedFile);
+          } catch (e) {
+            toast.warn(I18n.tr('calendar.warn.attachmentFailed') + ' ' + e.message);
+          }
+        }
         hideModal();
         await openCreatedEventNotificationDraft(created.id);
         events = await Api.get('/api/events');
@@ -747,4 +811,11 @@
 
   // ── Initial render ───────────────────────────────────────────────────────
   render();
+
+  // Deep link from the event notification email: ?event=<id> opens the event
+  // details (where its attachment can be downloaded) once the user is logged in.
+  const deepLinkEventId = parseInt(new URLSearchParams(window.location.search).get('event'), 10);
+  if (Number.isInteger(deepLinkEventId) && deepLinkEventId > 0) {
+    window.viewEvent(deepLinkEventId);
+  }
 })();

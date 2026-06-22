@@ -54,23 +54,28 @@ const Api = {
   delete(path) { return this.request('DELETE', path); },
 };
 
-function downloadFileAuth(fileId, fileName) {
-  fetch('/api/workflow/files/download?id=' + fileId, {
-    headers: { 'Authorization': 'Bearer ' + Api.getToken() }
-  })
+function blobDownload(url, fileName) {
+  return fetch(url, { headers: { 'Authorization': 'Bearer ' + Api.getToken() } })
     .then(r => {
       if (!r.ok) return r.json().then(d => { throw new Error(d.error || 'Download failed'); });
       return r.blob();
     })
     .then(blob => {
-      const url = URL.createObjectURL(blob);
+      const objectUrl = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url;
+      a.href = objectUrl;
       a.download = fileName;
       document.body.appendChild(a);
       a.click();
       a.remove();
-      URL.revokeObjectURL(url);
-    })
-    .catch(err => alert(err.message));
+      URL.revokeObjectURL(objectUrl);
+    });
+}
+
+function downloadFileAuth(fileId, fileName) {
+  blobDownload('/api/workflow/files/download?id=' + fileId, fileName).catch(err => alert(err.message));
+}
+
+function downloadEventFileAuth(eventId, fileId, fileName) {
+  blobDownload(`/api/events/${eventId}/files/${fileId}/download`, fileName).catch(err => alert(err.message));
 }
