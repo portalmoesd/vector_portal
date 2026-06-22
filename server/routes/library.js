@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('../db');
-const { requireAuth, denyAnalyst } = require('../middleware/auth');
+const { requireAuth, requireRole, denyAnalyst } = require('../middleware/auth');
 
 const router = express.Router();
 
@@ -139,6 +139,36 @@ router.post('/:eventId/reopen', requireAuth, denyAnalyst, async (req, res) => {
     res.json({ success: true });
   } catch (err) {
     console.error('Library reopen error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// GET /api/library/clear/preview — admin only. How many events would be erased.
+router.get('/clear/preview', requireAuth, requireRole('ADMIN'), async (req, res) => {
+  try {
+    const { rows: [row] } = await db.query(
+      `SELECT count(*)::int AS count FROM events WHERE status IN ('COMPLETED', 'ARCHIVED')`
+    );
+    res.json({ count: row.count });
+  } catch (err) {
+    console.error('Library clear preview error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// DELETE /api/library/clear — admin only. Permanently erase all published
+// (COMPLETED) and ARCHIVED events. Child rows (sections, content, files,
+// history, comments) are removed via ON DELETE CASCADE. Active/in-progress
+// events and all other data (users, departments, templates…) are untouched.
+router.delete('/clear', requireAuth, requireRole('ADMIN'), async (req, res) => {
+  try {
+    const result = await db.query(
+      `DELETE FROM events WHERE status IN ('COMPLETED', 'ARCHIVED')`
+    );
+    console.log(`[library.clear] adminUser=${req.user.id} deletedEvents=${result.rowCount}`);
+    res.json({ success: true, deleted: result.rowCount });
+  } catch (err) {
+    console.error('Library clear error:', err);
     res.status(500).json({ error: 'Internal server error' });
   }
 });
