@@ -85,7 +85,7 @@
   departments.forEach(d => { deptById[d.id] = d; });
 
   filterCountry.innerHTML = '<option value="">All countries</option>' +
-    countries.map(c => `<option value="${c.id}">${escapeHtml(c.name_en || c.nameEn || c.name)}</option>`).join('');
+    countries.map(c => `<option value="${c.id}">${escapeHtml(localizedCountryName(c))}</option>`).join('');
 
   // ── Render ───────────────────────────────────────────────────────────────
 
@@ -214,6 +214,10 @@
       const link = `${window.location.origin}/pages/calendar.html?event=${draft.event.id}`;
       body += `\n\n${I18n.tr('calendar.email.attachmentLine')} ${link}`;
     }
+    // One-click "add to calendar" link (the .ics is also downloaded locally).
+    if (draft.calendar && draft.calendar.addUrl) {
+      body += `\n\n${I18n.tr('calendar.email.calendarLine')} ${draft.calendar.addUrl}`;
+    }
     return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(body)}`;
   }
 
@@ -279,6 +283,21 @@
           downloadEventFileAuth(eventId, f.id, f.originalName);
         }
         toast.info(I18n.tr('calendar.email.attachmentDownloaded'));
+      }
+
+      // Download the .ics calendar entry so the user can attach it too; opening
+      // it adds the event (all-day, on the deadline) to a recipient's calendar.
+      if (draft.calendar && draft.calendar.ics) {
+        const blob = new Blob([draft.calendar.ics], { type: 'text/calendar;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = draft.calendar.filename || 'event.ics';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+        toast.info(I18n.tr('calendar.email.calendarDownloaded'));
       }
     } catch (err) {
       toast.warn(`Event created, but the email draft could not be prepared: ${err.message}`);
@@ -498,7 +517,7 @@
     } catch (e) { deputies = []; templates = []; }
 
     const countryOpts = countries.map(c =>
-      `<option value="${c.id}">${escapeHtml(c.name_en || c.nameEn || c.name)}</option>`
+      `<option value="${c.id}">${escapeHtml(localizedCountryName(c))}</option>`
     ).join('');
 
     const deputyOpts = deputies.map(d =>

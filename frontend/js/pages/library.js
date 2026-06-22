@@ -35,7 +35,7 @@
 
   // Populate country filter
   filterCountry.innerHTML = `<option value="">${escapeHtml(I18n.tr('common.all'))}</option>` +
-    countries.map(c => `<option value="${c.name_en || c.nameEn || c.name}">${escapeHtml(c.name_en || c.nameEn || c.name)}</option>`).join('');
+    countries.map(c => `<option value="${escapeHtml(c.name_en || c.nameEn || c.name)}">${escapeHtml(localizedCountryName(c))}</option>`).join('');
 
   // Filters
   [filterKeyword, filterCountry, filterDateFrom, filterDateTo].forEach(el => {

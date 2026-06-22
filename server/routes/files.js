@@ -22,11 +22,14 @@ router.post('/upload', requireAuth, denyAnalyst, upload.array('files', 10), asyn
 
     const uploaded = [];
     for (const f of (req.files || [])) {
-      const storedName = Date.now() + '-' + Math.round(Math.random() * 1e9) + '-' + f.originalname;
+      // Multipart filenames arrive latin1-decoded; re-decode as UTF-8 so
+      // non-ASCII names (e.g. Georgian) are stored correctly.
+      const originalName = Buffer.from(f.originalname, 'latin1').toString('utf8');
+      const storedName = Date.now() + '-' + Math.round(Math.random() * 1e9) + '-' + originalName;
       const row = await db.query(
         `INSERT INTO section_files (event_id, section_id, original_name, stored_name, mime_type, size, uploaded_by_id, uploaded_by_name, file_data)
          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id, original_name, stored_name, mime_type, size, uploaded_by_id, created_at`,
-        [eventId, sectionId, f.originalname, storedName, f.mimetype, f.size, req.user.id, uploaderName, f.buffer]
+        [eventId, sectionId, originalName, storedName, f.mimetype, f.size, req.user.id, uploaderName, f.buffer]
       );
       uploaded.push(row.rows[0]);
     }
@@ -79,7 +82,10 @@ router.get('/download', requireAuth, async (req, res) => {
     }
 
     res.set('Content-Type', file.mime_type || 'application/octet-stream');
-    res.set('Content-Disposition', `attachment; filename="${encodeURIComponent(file.original_name)}"`);
+    // RFC 5987: filename* carries the UTF-8 name; the ASCII filename is a fallback.
+    const asciiName = file.original_name.replace(/[^\x20-\x7e]/g, '_').replace(/"/g, '');
+    res.set('Content-Disposition',
+      `attachment; filename="${asciiName}"; filename*=UTF-8''${encodeURIComponent(file.original_name)}`);
     res.send(file.file_data);
   } catch (err) {
     console.error('Download error:', err);
