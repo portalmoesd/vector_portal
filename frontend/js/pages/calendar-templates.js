@@ -268,9 +268,10 @@
         ? '<span class="pill pill-green" style="margin-left:8px;font-size:11px;">Default</span>'
         : '';
 
-      const deleteBtn = t.isDefault
+      const actionBtns = t.isDefault
         ? ''
-        : `<button class="btn btn-danger" style="font-size:12px;padding:5px 14px;" onclick="event.stopPropagation();deleteTemplate(${t.id})">Delete</button>`;
+        : `<button class="btn btn-outline" style="font-size:12px;padding:5px 14px;" onclick="event.stopPropagation();editTemplate(${t.id})">${escapeHtml(I18n.tr('common.edit'))}</button>
+           <button class="btn btn-danger" style="font-size:12px;padding:5px 14px;" onclick="event.stopPropagation();deleteTemplate(${t.id})">${escapeHtml(I18n.tr('common.delete'))}</button>`;
 
       return `
         <div class="tpl-expand-card" style="border:1px solid var(--border,rgba(0,0,0,.10));border-radius:16px;margin-bottom:10px;background:rgba(255,255,255,.62);backdrop-filter:blur(12px);box-shadow:0 2px 8px rgba(0,0,0,.04);transition:box-shadow .2s,border-color .2s;overflow:hidden;">
@@ -285,7 +286,7 @@
                 ${t.sections.length} section(s) &middot; ${totalDepts} department(s)${t.createdByName ? ' &middot; By: ' + escapeHtml(t.createdByName) : ''}
               </div>
             </div>
-            <div onclick="event.stopPropagation()">${deleteBtn}</div>
+            <div style="display:flex;gap:6px;" onclick="event.stopPropagation()">${actionBtns}</div>
           </div>
           <div class="tpl-expand-body" style="display:none;padding:0 18px 16px 42px;border-top:1px solid var(--border,rgba(0,0,0,.06));">
             <ol style="margin:12px 0 0 18px;font-size:13px;line-height:1.5;">${sectionsList || '<li>No sections</li>'}</ol>
@@ -340,10 +341,16 @@
   modalCancel.addEventListener('click', hideTemplateModal);
   modalSave.addEventListener('click', () => { if (onModalSave) onModalSave(); });
 
-  /* ── Create Template ──────────────────────────────────────────────────── */
+  /* ── Create / Edit Template ───────────────────────────────────────────── */
 
-  createBtn.addEventListener('click', () => {
-    showTemplateModal(I18n.tr('calendar.templates.modalCreate'), `
+  // Opens the template modal. Pass an existing template to edit it, or
+  // omit it (null) to create a new one.
+  function openTemplateEditor(existing) {
+    const isEdit = !!existing;
+
+    showTemplateModal(
+      isEdit ? I18n.tr('calendar.templates.modalEdit') : I18n.tr('calendar.templates.modalCreate'),
+      `
       <div class="form-group">
         <label class="form-label">${escapeHtml(I18n.tr('calendar.templates.nameLabel'))}</label>
         <input class="form-input" id="tplName" placeholder="${escapeHtml(I18n.tr('calendar.templates.namePlaceholder'))}" />
@@ -353,32 +360,39 @@
         <div id="tplSectionRows"></div>
         <button class="btn btn-outline" type="button" id="tplAddSection" style="margin-top:8px;">${escapeHtml(I18n.tr('calendar.form.addSection'))}</button>
       </div>
-    `, I18n.tr('common.create'), async () => {
-      const name = document.getElementById('tplName').value.trim();
-      if (!name) { toast.warn(I18n.tr('calendar.templates.warnName')); return; }
+    `,
+      isEdit ? I18n.tr('common.save') : I18n.tr('common.create'),
+      async () => {
+        const name = document.getElementById('tplName').value.trim();
+        if (!name) { toast.warn(I18n.tr('calendar.templates.warnName')); return; }
 
-      const sections = [];
-      document.querySelectorAll('#tplSectionRows .tpl-section-row').forEach((row, i) => {
-        const title = row.querySelector('.tpl-sec-title').value.trim();
-        const deptIds = Array.from(row.querySelectorAll('.tpl-dept-pill'))
-          .map(pill => parseInt(pill.dataset.deptId));
-        if (title) sections.push({ title, sortOrder: i, departmentIds: deptIds });
-      });
+        const sections = [];
+        document.querySelectorAll('#tplSectionRows .tpl-section-row').forEach((row, i) => {
+          const title = row.querySelector('.tpl-sec-title').value.trim();
+          const deptIds = Array.from(row.querySelectorAll('.tpl-dept-pill'))
+            .map(pill => parseInt(pill.dataset.deptId));
+          if (title) sections.push({ title, sortOrder: i, departmentIds: deptIds });
+        });
 
-      if (sections.length === 0) { toast.warn(I18n.tr('calendar.warn.missingSection')); return; }
+        if (sections.length === 0) { toast.warn(I18n.tr('calendar.warn.missingSection')); return; }
 
-      try {
-        await Api.post('/api/templates', { name, sections });
-        hideTemplateModal();
-        templates = await Api.get('/api/templates');
-        renderTemplates();
-      } catch (err) { toast.error(err.message); }
-    });
+        try {
+          if (isEdit) {
+            await Api.put(`/api/templates/${existing.id}`, { name, sections });
+          } else {
+            await Api.post('/api/templates', { name, sections });
+          }
+          hideTemplateModal();
+          templates = await Api.get('/api/templates');
+          renderTemplates();
+        } catch (err) { toast.error(err.message); }
+      }
+    );
 
     const rowsContainer = document.getElementById('tplSectionRows');
     const addBtn = document.getElementById('tplAddSection');
 
-    function addSectionRow() {
+    function addSectionRow(section) {
       const row = document.createElement('div');
       row.className = 'tpl-section-row';
       row.style.cssText = 'border:1px solid var(--border-color,#ddd);border-radius:12px;margin-bottom:10px;';
@@ -410,16 +424,37 @@
         toggle.style.transform = open ? '' : 'rotate(90deg)';
       });
 
-      initSectionRow(row);
+      const ctrl = initSectionRow(row);
+
+      // Prefill when editing an existing section
+      if (section) {
+        row.querySelector('.tpl-sec-title').value = section.title || '';
+        (section.departmentIds || []).forEach(id => ctrl.addDeptPill(id));
+        ctrl.updateCount();
+      }
 
       // Auto-expand new rows
       body.style.display = '';
       toggle.style.transform = 'rotate(90deg)';
     }
 
-    addBtn.addEventListener('click', addSectionRow);
-    addSectionRow();
-  });
+    addBtn.addEventListener('click', () => addSectionRow());
+
+    document.getElementById('tplName').value = isEdit ? (existing.name || '') : '';
+    if (isEdit && existing.sections && existing.sections.length > 0) {
+      existing.sections.forEach(s => addSectionRow(s));
+    } else {
+      addSectionRow();
+    }
+  }
+
+  createBtn.addEventListener('click', () => openTemplateEditor(null));
+
+  window.editTemplate = function(id) {
+    const tpl = templates.find(t => t.id === id);
+    if (!tpl) return;
+    openTemplateEditor(tpl);
+  };
 
   renderTemplates();
 })();
