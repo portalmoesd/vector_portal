@@ -263,10 +263,13 @@ async function migrate() {
     const defaultHashDeputy = await bcrypt.hash('vector2026', 10);
     for (const dep of deputyUsers) {
       const username = dep.email.split('@')[0].toLowerCase().replace(/[^a-z0-9.]/g, '');
+      // is_minister is seeded as an initial default only. Once the user
+      // exists, the admin's choice in the UI is authoritative, so we don't
+      // override it on conflict.
       await db.query(
         `INSERT INTO users (full_name, username, email, password_hash, role, department_id, is_minister, must_change_password)
          VALUES ($1, $2, $3, $4, 'DEPUTY', NULL, $5, true)
-         ON CONFLICT (username) DO UPDATE SET department_id = NULL, is_minister = EXCLUDED.is_minister`,
+         ON CONFLICT (username) DO UPDATE SET department_id = NULL`,
         [dep.fullName, username, dep.email, defaultHashDeputy, dep.isMinister || false]
       );
     }
