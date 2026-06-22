@@ -68,7 +68,7 @@
     "actionAskReturn": "დაბრუნების მოთხოვნა"
   },
   "status": {
-    "draft": "პროექტი",
+    "draft": "დამატების მოლოდინში",
     "submitted_to_super_collaborator": "სუპერ-კოლაბორატორთან",
     "returned_by_super_collaborator": "დაბრუნებული სუპერ-კოლაბორატორის მიერ",
     "approved_by_super_collaborator": "დადასტურებული (სუპერ-კოლაბორატორი)",

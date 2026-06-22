@@ -68,7 +68,7 @@
     "actionAskReturn": "ASK RETURN"
   },
   "status": {
-    "draft": "Draft",
+    "draft": "Awaiting action",
     "submitted_to_super_collaborator": "At Super-Collaborator",
     "returned_by_super_collaborator": "Returned by Super-Collaborator",
     "approved_by_super_collaborator": "Approved (Super-Collaborator)",

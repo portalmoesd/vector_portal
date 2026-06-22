@@ -48,9 +48,9 @@ function _i18n(key, fallback) {
 }
 
 function statusLabel(status) {
-  if (!status) return _i18n('status.draft', 'Draft');
+  if (!status) return _i18n('status.draft', 'Awaiting action');
   const fallback = {
-    draft: 'Draft',
+    draft: 'Awaiting action',
     submitted_to_super_collaborator: 'At Super-Collaborator',
     returned_by_super_collaborator: 'Returned by Super-Collaborator',
     approved_by_super_collaborator: 'Approved (Super-Collaborator)',
