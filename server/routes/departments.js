@@ -39,6 +39,24 @@ router.post('/', requireAuth, requireRole('ADMIN'), async (req, res) => {
   }
 });
 
+// PUT /api/departments/:id (admin only) — update names / type
+router.put('/:id', requireAuth, requireRole('ADMIN'), async (req, res) => {
+  try {
+    const { name, nameEn, isExternal } = req.body;
+    if (!name) return res.status(400).json({ error: 'Name is required' });
+
+    const result = await db.query(
+      'UPDATE departments SET name = $1, name_en = $2, is_external = $3, updated_at = now() WHERE id = $4',
+      [name, nameEn || null, isExternal || false, req.params.id]
+    );
+    if (result.rowCount === 0) return res.status(404).json({ error: 'Department not found' });
+    res.json({ success: true });
+  } catch (err) {
+    console.error('Update department error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // GET /api/departments/grouped — departments grouped by deputy for picker UI
 router.get('/grouped', requireAuth, async (req, res) => {
   try {
