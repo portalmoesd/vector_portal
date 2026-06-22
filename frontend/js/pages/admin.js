@@ -142,9 +142,9 @@
       }
       document.getElementById('deptList').innerHTML = `
         <div class="table-wrap"><table>
-          <thead><tr><th>#</th><th>${escapeHtml(I18n.tr('admin.dept.col.nameKa'))}</th><th>${escapeHtml(I18n.tr('admin.dept.col.nameEn'))}</th><th>${escapeHtml(I18n.tr('admin.dept.col.type'))}</th></tr></thead>
+          <thead><tr><th>#</th><th>${escapeHtml(I18n.tr('admin.dept.col.nameKa'))}</th><th>${escapeHtml(I18n.tr('admin.dept.col.nameEn'))}</th><th>${escapeHtml(I18n.tr('admin.dept.col.type'))}</th><th>${escapeHtml(I18n.tr('admin.dept.col.actions'))}</th></tr></thead>
           <tbody>${depts.map((d, i) => `
-            <tr><td>${i + 1}</td><td>${escapeHtml(d.name)}</td><td>${d.nameEn ? escapeHtml(d.nameEn) : '—'}</td><td><span class="pill ${d.isExternal ? 'pill-yellow' : 'pill-blue'}">${escapeHtml(I18n.tr(d.isExternal ? 'admin.dept.type.agency' : 'admin.dept.type.department'))}</span></td></tr>
+            <tr><td>${i + 1}</td><td>${escapeHtml(d.name)}</td><td>${d.nameEn ? escapeHtml(d.nameEn) : '—'}</td><td><span class="pill ${d.isExternal ? 'pill-yellow' : 'pill-blue'}">${escapeHtml(I18n.tr(d.isExternal ? 'admin.dept.type.agency' : 'admin.dept.type.department'))}</span></td><td><button class="btn btn-outline" style="padding:4px 10px;font-size:12px;" onclick="editDept(${d.id})">${escapeHtml(I18n.tr('common.edit'))}</button></td></tr>
           `).join('')}</tbody>
         </table></div>`;
       return depts;
@@ -178,6 +178,33 @@
       } catch (e) { toast.error(e.message); }
     });
   });
+
+  window.editDept = function(deptId) {
+    const dept = departments.find(d => d.id === deptId);
+    if (!dept) return;
+    showModal(I18n.tr('admin.dept.modal.edit'), `
+      <div class="form-group">
+        <label class="form-label">${escapeHtml(I18n.tr('admin.dept.form.nameKa'))}</label>
+        <input class="form-input" id="deptName" required value="${escapeHtml(dept.name || '')}" />
+      </div>
+      <div class="form-group">
+        <label class="form-label">${escapeHtml(I18n.tr('admin.dept.form.nameEn'))}</label>
+        <input class="form-input" id="deptNameEn" value="${escapeHtml(dept.nameEn || '')}" />
+      </div>
+      <div class="form-group">
+        <label class="form-label"><input type="checkbox" id="deptExternal" ${dept.isExternal ? 'checked' : ''} /> ${escapeHtml(I18n.tr('admin.dept.form.external'))}</label>
+      </div>
+    `, async () => {
+      const name = document.getElementById('deptName').value.trim();
+      const nameEn = document.getElementById('deptNameEn').value.trim();
+      if (!name) return;
+      try {
+        await Api.put(`/api/departments/${deptId}`, { name, nameEn: nameEn || null, isExternal: document.getElementById('deptExternal').checked });
+        hideModal();
+        departments = await loadDepartments();
+      } catch (e) { toast.error(e.message); }
+    });
+  };
 
   // ── Users ──────────────────────────────────────────────────────────────────
   async function loadUsers() {

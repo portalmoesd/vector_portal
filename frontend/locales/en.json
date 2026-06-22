@@ -236,14 +236,16 @@
       "col": {
         "nameKa": "Name (KA)",
         "nameEn": "Name (EN)",
-        "type": "Type"
+        "type": "Type",
+        "actions": "Actions"
       },
       "type": {
         "agency": "Agency",
         "department": "Department"
       },
       "modal": {
-        "add": "Add Department"
+        "add": "Add Department",
+        "edit": "Edit Department"
       },
       "form": {
         "name": "Name",
