@@ -7,6 +7,25 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
+// Country records only store the English name + ISO code. When the site is in
+// Georgian, translate the code via Intl.DisplayNames; fall back to English if
+// the locale isn't Georgian, the code is missing, or no translation exists.
+let _regionDisplayNamesKa;
+function localizedCountryName(country) {
+  if (!country) return '';
+  const en = country.name_en || country.nameEn || country.name || '';
+  const code = (country.code || '').toUpperCase();
+  try {
+    const locale = (typeof I18n !== 'undefined' && I18n.getLocale) ? I18n.getLocale() : 'en';
+    if (locale === 'ka' && code && typeof Intl !== 'undefined' && Intl.DisplayNames) {
+      if (!_regionDisplayNamesKa) _regionDisplayNamesKa = new Intl.DisplayNames(['ka'], { type: 'region' });
+      const ka = _regionDisplayNamesKa.of(code);
+      if (ka && ka !== code) return ka;
+    }
+  } catch (_) { /* fall back to English */ }
+  return en;
+}
+
 // Pick the locale tag for Intl.DateTimeFormat based on the user's
 // current i18n locale. Falls back to en-GB when I18n hasn't loaded
 // (e.g. the login page renders dates before init has finished).

@@ -85,7 +85,7 @@
   departments.forEach(d => { deptById[d.id] = d; });
 
   filterCountry.innerHTML = '<option value="">All countries</option>' +
-    countries.map(c => `<option value="${c.id}">${escapeHtml(c.name_en || c.nameEn || c.name)}</option>`).join('');
+    countries.map(c => `<option value="${c.id}">${escapeHtml(localizedCountryName(c))}</option>`).join('');
 
   // ── Render ───────────────────────────────────────────────────────────────
 
@@ -517,7 +517,7 @@
     } catch (e) { deputies = []; templates = []; }
 
     const countryOpts = countries.map(c =>
-      `<option value="${c.id}">${escapeHtml(c.name_en || c.nameEn || c.name)}</option>`
+      `<option value="${c.id}">${escapeHtml(localizedCountryName(c))}</option>`
     ).join('');
 
     const deputyOpts = deputies.map(d =>
