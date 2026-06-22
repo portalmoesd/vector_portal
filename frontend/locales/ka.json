@@ -94,6 +94,7 @@
     "ADMIN": "ადმინი",
     "PROTOCOL": "პროტოკოლი",
     "DEPUTY": "მოადგილე",
+    "MINISTER": "მინისტრი",
     "SUPERVISOR": "ზედამხედველი",
     "SUPER_COLLABORATOR": "სუპერ-კოლაბორატორი",
     "COLLABORATOR": "კოლაბორატორი",
@@ -214,7 +215,8 @@
     },
     "warn": {
       "missingRequired": "სათაური, ქვეყანა და DS-ის როლი სავალდებულოა",
-      "missingSection": "დაამატეთ მინიმუმ ერთი სექცია"
+      "missingSection": "დაამატეთ მინიმუმ ერთი სექცია",
+      "missingDeputy": "აირჩიეთ მოადგილე ან მინისტრი"
     },
     "action": {
       "view": "ნახვა",

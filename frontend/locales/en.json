@@ -94,6 +94,7 @@
     "ADMIN": "Admin",
     "PROTOCOL": "Protocol",
     "DEPUTY": "Deputy",
+    "MINISTER": "Minister",
     "SUPERVISOR": "Supervisor",
     "SUPER_COLLABORATOR": "Super-Collaborator",
     "COLLABORATOR": "Collaborator",
@@ -214,7 +215,8 @@
     },
     "warn": {
       "missingRequired": "Title, Country, and DS Role are required",
-      "missingSection": "Add at least one section"
+      "missingSection": "Add at least one section",
+      "missingDeputy": "Select a deputy or the minister"
     },
     "action": {
       "view": "View",
