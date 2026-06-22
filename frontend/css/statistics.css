@@ -73,6 +73,22 @@ html { scroll-padding-top: 160px; }
 .stat-tab:hover { color: var(--text-primary); }
 .stat-tab.active { color: var(--accent-blue); border-bottom-color: var(--accent-blue); }
 
+/* On phones the flex-wrap tab strip breaks unevenly because the labels
+   have different widths. Lay the 5 tabs out on a fixed 3-column grid so
+   they form a tidy 3-on-top / 2-on-bottom block. */
+@media (max-width: 600px) {
+  .stat-controls .stat-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 2px;
+  }
+  .stat-tab {
+    padding: 10px 4px;
+    font-size: 0.82rem;
+    text-align: center;
+  }
+}
+
 /* ─── Controls ───────────────────────────────────────────────────────────── */
 
 .stat-controls {
