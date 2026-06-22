@@ -524,8 +524,8 @@
         <div class="form-group">
           <label class="form-label" data-i18n="calendar.form.curatorRequired">Curator Required</label>
           <select class="form-select" id="newCurator">
-            <option value="no" selected data-i18n="common.no">No</option>
-            <option value="yes" data-i18n="common.yes">Yes</option>
+            <option value="yes" selected data-i18n="common.yes">Yes</option>
+            <option value="no" data-i18n="common.no">No</option>
           </select>
         </div>
         <div class="form-group" style="grid-column:1/-1;">
