@@ -85,7 +85,7 @@
         <div class="doc-card-info">
           <h4>${escapeHtml(d.title)}</h4>
           <div class="doc-card-meta">
-            <span>${escapeHtml(d.countryName)}</span>
+            <span>${escapeHtml(localizedCountryName({ code: d.countryCode, name_en: d.countryName }))}</span>
             <span>${lblLanguage} ${languageLabel(d.language)}</span>
             <span>${lblDs} ${escapeHtml(d.documentSubmitterName)}</span>
             ${d.endedAt ? `<span>${lblCompleted} ${formatDate(d.endedAt)}</span>` : ''}
