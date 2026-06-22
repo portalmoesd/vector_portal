@@ -283,6 +283,76 @@ function buildEmailBody(event, sections, recipients, missingEmails) {
     .join('\n');
 }
 
+// Returns {year, monthIndex, day} from a date value, or null if unparseable.
+function dateParts(value) {
+  if (!value) return null;
+  if (value instanceof Date) {
+    if (Number.isNaN(value.getTime())) return null;
+    return { year: value.getUTCFullYear(), monthIndex: value.getUTCMonth(), day: value.getUTCDate() };
+  }
+  const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (!match) return null;
+  return { year: Number(match[1]), monthIndex: Number(match[2]) - 1, day: Number(match[3]) };
+}
+
+// iCalendar text escaping (RFC 5545): backslash, comma, semicolon, newlines.
+function escapeIcsText(value) {
+  return String(value || '')
+    .replace(/\\/g, '\\\\')
+    .replace(/;/g, '\\;')
+    .replace(/,/g, '\\,')
+    .replace(/\r?\n/g, '\\n');
+}
+
+function pad2(n) {
+  return String(n).padStart(2, '0');
+}
+
+// Build an all-day VEVENT (.ics) on the deadline date plus a Google Calendar
+// "add" URL. Returns null when the event has no usable deadline.
+function buildCalendarForEvent(event) {
+  const parts = dateParts(event.deadline_date);
+  if (!parts) return null;
+
+  const startYmd = `${parts.year}${pad2(parts.monthIndex + 1)}${pad2(parts.day)}`;
+  // All-day events use an exclusive DTEND of the next day.
+  const endDate = new Date(Date.UTC(parts.year, parts.monthIndex, parts.day + 1));
+  const endYmd = `${endDate.getUTCFullYear()}${pad2(endDate.getUTCMonth() + 1)}${pad2(endDate.getUTCDate())}`;
+
+  const now = new Date();
+  const dtstamp =
+    `${now.getUTCFullYear()}${pad2(now.getUTCMonth() + 1)}${pad2(now.getUTCDate())}` +
+    `T${pad2(now.getUTCHours())}${pad2(now.getUTCMinutes())}${pad2(now.getUTCSeconds())}Z`;
+
+  const title = event.title || 'ღონისძიება';
+  const description = stripHtml(event.occasion);
+
+  const ics = [
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Vector Portal//Event//EN',
+    'CALSCALE:GREGORIAN',
+    'METHOD:PUBLISH',
+    'BEGIN:VEVENT',
+    `UID:event-${event.id}@vector-portal`,
+    `DTSTAMP:${dtstamp}`,
+    `DTSTART;VALUE=DATE:${startYmd}`,
+    `DTEND;VALUE=DATE:${endYmd}`,
+    `SUMMARY:${escapeIcsText(title)}`,
+    `DESCRIPTION:${escapeIcsText(description)}`,
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n');
+
+  const addUrl =
+    'https://calendar.google.com/calendar/render?action=TEMPLATE' +
+    `&text=${encodeURIComponent(title)}` +
+    `&dates=${startYmd}/${endYmd}` +
+    (description ? `&details=${encodeURIComponent(description)}` : '');
+
+  return { ics, filename: `event-${event.id}.ics`, addUrl };
+}
+
 async function resolveEventNotificationDraft(db, eventId) {
   const event = await getEvent(db, eventId);
   if (!event) return null;
@@ -314,6 +384,7 @@ async function resolveEventNotificationDraft(db, eventId) {
 
   const { recipients, missingEmails } = splitRecipients(participants);
   const files = await getEventFiles(db, eventId);
+  const calendar = buildCalendarForEvent(event);
   const subject = `ახალი ღონისძიება: ${event.title}`;
   const body = buildEmailBody(event, sections, recipients, missingEmails);
 
@@ -331,6 +402,7 @@ async function resolveEventNotificationDraft(db, eventId) {
     recipients,
     missingEmails,
     files,
+    calendar,
     subject,
     body,
     mailtoUrlLimit: MAILTO_URL_LIMIT,

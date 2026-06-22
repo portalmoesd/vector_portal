@@ -222,7 +222,9 @@
     },
     "email": {
       "attachmentLine": "Attached file (open in the portal to download):",
-      "attachmentDownloaded": "The attachment was downloaded — drag it into your email as an attachment."
+      "attachmentDownloaded": "The attachment was downloaded — drag it into your email as an attachment.",
+      "calendarLine": "Add to calendar:",
+      "calendarDownloaded": "A calendar (.ics) file was downloaded — attach it so recipients can add the event to their calendar."
     },
     "action": {
       "view": "View",
