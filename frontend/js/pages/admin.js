@@ -157,17 +157,22 @@
   document.getElementById('addDeptBtn').addEventListener('click', () => {
     showModal(I18n.tr('admin.dept.modal.add'), `
       <div class="form-group">
-        <label class="form-label">${escapeHtml(I18n.tr('admin.dept.form.name'))}</label>
+        <label class="form-label">${escapeHtml(I18n.tr('admin.dept.form.nameKa'))}</label>
         <input class="form-input" id="deptName" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">${escapeHtml(I18n.tr('admin.dept.form.nameEn'))}</label>
+        <input class="form-input" id="deptNameEn" />
       </div>
       <div class="form-group">
         <label class="form-label"><input type="checkbox" id="deptExternal" /> ${escapeHtml(I18n.tr('admin.dept.form.external'))}</label>
       </div>
     `, async () => {
       const name = document.getElementById('deptName').value.trim();
+      const nameEn = document.getElementById('deptNameEn').value.trim();
       if (!name) return;
       try {
-        await Api.post('/api/departments', { name, isExternal: document.getElementById('deptExternal').checked });
+        await Api.post('/api/departments', { name, nameEn: nameEn || null, isExternal: document.getElementById('deptExternal').checked });
         hideModal();
         departments = await loadDepartments();
       } catch (e) { toast.error(e.message); }

@@ -247,6 +247,8 @@
       },
       "form": {
         "name": "Name",
+        "nameKa": "Name (Georgian)",
+        "nameEn": "Name (English)",
         "external": "External organization"
       }
     },
