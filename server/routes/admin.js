@@ -198,13 +198,14 @@ router.get('/department-hierarchy', requireAuth, async (req, res) => {
 router.get('/deputies', requireAuth, async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT id, full_name, department_id
-       FROM users WHERE role = 'DEPUTY' ORDER BY full_name`
+      `SELECT id, full_name, department_id, is_minister
+       FROM users WHERE role = 'DEPUTY' ORDER BY is_minister DESC, full_name`
     );
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
       departmentId: r.department_id,
+      isMinister: r.is_minister,
     })));
   } catch (err) {
     console.error('List deputies error:', err);
@@ -244,31 +245,31 @@ router.get('/linked-deputies', requireAuth, async (req, res) => {
 
     if (role === 'ADMIN' || role === 'PROTOCOL') {
       ({ rows } = await db.query(
-        `SELECT id, full_name, department_id FROM users WHERE role = 'DEPUTY' ORDER BY full_name`
+        `SELECT id, full_name, department_id, is_minister FROM users WHERE role = 'DEPUTY' ORDER BY is_minister DESC, full_name`
       ));
     } else if (role === 'DEPUTY') {
       // Only themselves
       ({ rows } = await db.query(
-        `SELECT id, full_name, department_id FROM users WHERE id = $1`, [id]
+        `SELECT id, full_name, department_id, is_minister FROM users WHERE id = $1`, [id]
       ));
     } else if (role === 'SUPERVISOR') {
       // Deputies linked to this supervisor
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, u.department_id
+        `SELECT u.id, u.full_name, u.department_id, u.is_minister
          FROM deputy_supervisor_links dsl
          JOIN users u ON u.id = dsl.deputy_id
          WHERE dsl.supervisor_id = $1
-         ORDER BY u.full_name`, [id]
+         ORDER BY u.is_minister DESC, u.full_name`, [id]
       ));
     } else if (role === 'SUPER_COLLABORATOR') {
       // Deputies linked to supervisors in the same department
       ({ rows } = await db.query(
-        `SELECT DISTINCT u.id, u.full_name, u.department_id
+        `SELECT DISTINCT u.id, u.full_name, u.department_id, u.is_minister
          FROM deputy_supervisor_links dsl
          JOIN users u ON u.id = dsl.deputy_id
          JOIN users s ON s.id = dsl.supervisor_id
          WHERE s.department_id = $1
-         ORDER BY u.full_name`, [departmentId]
+         ORDER BY u.is_minister DESC, u.full_name`, [departmentId]
       ));
     } else {
       rows = [];
@@ -278,6 +279,7 @@ router.get('/linked-deputies', requireAuth, async (req, res) => {
       id: r.id,
       fullName: r.full_name,
       departmentId: r.department_id,
+      isMinister: r.is_minister,
     })));
   } catch (err) {
     console.error('Linked deputies error:', err);

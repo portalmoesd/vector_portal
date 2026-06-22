@@ -435,6 +435,10 @@
   // ── Create Event ─────────────────────────────────────────────────────────
 
   const isUnrestricted = user.role === 'ADMIN' || user.role === 'PROTOCOL';
+  // Protocol gets a simplified flow: the document submitter is always a
+  // Deputy (or the Minister, who is modelled as a Deputy), so we hide the
+  // Document Submitter Role selector and just let them pick the person.
+  const isProtocol = user.role === 'PROTOCOL';
 
   createBtn.addEventListener('click', async () => {
     try {
@@ -449,7 +453,7 @@
     ).join('');
 
     const deputyOpts = deputies.map(d =>
-      `<option value="${d.id}">${escapeHtml(d.fullName)}</option>`
+      `<option value="${d.id}">${escapeHtml(d.fullName)}${d.isMinister ? ' (' + escapeHtml(I18n.tr('roles.MINISTER')) + ')' : ''}</option>`
     ).join('');
 
     showModal(I18n.tr('calendar.modal.createTitle'), `
@@ -472,7 +476,7 @@
             <option value="advanced" data-i18n="calendar.form.workflowAdvanced">Advanced</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="dsRoleGroup">
           <label class="form-label" data-i18n="calendar.form.dsRole">Document Submitter Role *</label>
           <select class="form-select" id="newDSRole">
             <option value="DEPUTY" data-i18n="roles.DEPUTY">Deputy</option>
@@ -554,6 +558,12 @@
 
       if (!title || !countryId || !dsRole) {
         toast.warn(I18n.tr('calendar.warn.missingRequired'));
+        return;
+      }
+
+      // Protocol must explicitly pick the deputy/minister who submits the document.
+      if (isProtocol && !deputyId) {
+        toast.warn(I18n.tr('calendar.warn.missingDeputy'));
         return;
       }
 
@@ -687,6 +697,16 @@
     }
     document.getElementById('newWorkflowType').addEventListener('change', applyWorkflowTypeVisibility);
     applyWorkflowTypeVisibility();
+
+    // Protocol: lock the document submitter to Deputy/Minister and hide the
+    // role selector. newDSRole stays in the DOM defaulting to 'DEPUTY', so the
+    // rest of the form logic (deputy picker, responsible supervisor) keeps
+    // working unchanged.
+    if (isProtocol) {
+      document.getElementById('newDSRole').value = 'DEPUTY';
+      document.getElementById('dsRoleGroup').style.display = 'none';
+      document.getElementById('deputyGroup').style.display = '';
+    }
 
     // Show/hide groups based on DS role
     document.getElementById('newDSRole').addEventListener('change', async () => {

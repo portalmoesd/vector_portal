@@ -49,12 +49,16 @@ CREATE TABLE IF NOT EXISTS users (
   department_id         INT REFERENCES departments(id) ON DELETE SET NULL,
   is_external           BOOLEAN NOT NULL DEFAULT false,
   entity_name           VARCHAR(200),
+  is_minister           BOOLEAN NOT NULL DEFAULT false,
   must_change_password  BOOLEAN NOT NULL DEFAULT true,
   created_at            TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at            TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 -- Backfill for databases predating the entity_name column.
 ALTER TABLE users ADD COLUMN IF NOT EXISTS entity_name VARCHAR(200);
+-- The Minister is modelled as a DEPUTY (same workflow position) but flagged
+-- so the UI can label her "Minister". Backfill for older databases.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS is_minister BOOLEAN NOT NULL DEFAULT false;
 
 -- ─── Country Assignments ────────────────────────────────────────────────────
 
