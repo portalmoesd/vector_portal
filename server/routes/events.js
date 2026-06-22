@@ -1,10 +1,14 @@
 const express = require('express');
+const multer = require('multer');
 const db = require('../db');
 const { requireAuth, denyAnalyst } = require('../middleware/auth');
 const { canCreateEvent, canEndEvent, ROLES } = require('../helpers/roles');
 const { resolveEventNotificationDraft } = require('../helpers/event-notification-draft');
 
 const router = express.Router();
+
+// Event attachments are stored in the database (BYTEA), like section files.
+const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 50 * 1024 * 1024 } });
 
 // GET /api/events — list events visible to current user
 router.get('/', requireAuth, async (req, res) => {
@@ -277,6 +281,88 @@ router.get('/:id/notification-draft', requireAuth, denyAnalyst, async (req, res)
     res.json(draft);
   } catch (err) {
     console.error('Notification draft error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// ─── Event-level attachments ─────────────────────────────────────────────────
+
+// POST /api/events/:id/files — upload event attachment(s)
+router.post('/:id/files', requireAuth, denyAnalyst, upload.array('files', 10), async (req, res) => {
+  try {
+    const eventId = parseInt(req.params.id, 10);
+    if (!Number.isInteger(eventId) || eventId <= 0) {
+      return res.status(400).json({ error: 'Invalid event id' });
+    }
+
+    const { rows: [event] } = await db.query('SELECT created_by_id FROM events WHERE id = $1', [eventId]);
+    if (!event) return res.status(404).json({ error: 'Event not found' });
+
+    // Only the event creator or an admin/protocol user can attach files.
+    if (event.created_by_id !== req.user.id && !['ADMIN', 'PROTOCOL'].includes(req.user.role)) {
+      return res.status(403).json({ error: 'Not authorized to attach files to this event' });
+    }
+
+    const userRow = await db.query('SELECT full_name FROM users WHERE id = $1', [req.user.id]);
+    const uploaderName = userRow.rows[0]?.full_name || req.user.username;
+
+    const uploaded = [];
+    for (const f of (req.files || [])) {
+      const { rows: [row] } = await db.query(
+        `INSERT INTO event_files (event_id, original_name, mime_type, size, file_data, uploaded_by_id, uploaded_by_name)
+         VALUES ($1, $2, $3, $4, $5, $6, $7)
+         RETURNING id, original_name, mime_type, size, created_at`,
+        [eventId, f.originalname, f.mimetype, f.size, f.buffer, req.user.id, uploaderName]
+      );
+      uploaded.push(row);
+    }
+
+    res.status(201).json({ success: true, files: uploaded });
+  } catch (err) {
+    console.error('Event file upload error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// GET /api/events/:id/files — list event attachment metadata
+router.get('/:id/files', requireAuth, async (req, res) => {
+  try {
+    const eventId = parseInt(req.params.id, 10);
+    if (!Number.isInteger(eventId) || eventId <= 0) {
+      return res.status(400).json({ error: 'Invalid event id' });
+    }
+    const { rows } = await db.query(
+      `SELECT id, original_name, mime_type, size, uploaded_by_id, uploaded_by_name, created_at
+       FROM event_files WHERE event_id = $1 ORDER BY created_at`,
+      [eventId]
+    );
+    res.json(rows);
+  } catch (err) {
+    console.error('List event files error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// GET /api/events/:id/files/:fileId/download — download an event attachment
+router.get('/:id/files/:fileId/download', requireAuth, async (req, res) => {
+  try {
+    const eventId = parseInt(req.params.id, 10);
+    const fileId = parseInt(req.params.fileId, 10);
+    if (!Number.isInteger(eventId) || !Number.isInteger(fileId)) {
+      return res.status(400).json({ error: 'Invalid id' });
+    }
+    const { rows: [file] } = await db.query(
+      `SELECT original_name, mime_type, file_data FROM event_files WHERE id = $1 AND event_id = $2`,
+      [fileId, eventId]
+    );
+    if (!file) return res.status(404).json({ error: 'File not found' });
+    if (!file.file_data) return res.status(404).json({ error: 'File data not available' });
+
+    res.set('Content-Type', file.mime_type || 'application/octet-stream');
+    res.set('Content-Disposition', `attachment; filename="${encodeURIComponent(file.original_name)}"`);
+    res.send(file.file_data);
+  } catch (err) {
+    console.error('Event file download error:', err);
     res.status(500).json({ error: 'Internal server error' });
   }
 });

@@ -181,6 +181,22 @@ CREATE TABLE IF NOT EXISTS section_files (
 
 CREATE INDEX IF NOT EXISTS idx_section_files_lookup ON section_files (event_id, section_id);
 
+-- ─── Event Files ────────────────────────────────────────────────────────────
+-- Event-level attachments (added at creation time), independent of sections.
+CREATE TABLE IF NOT EXISTS event_files (
+  id               SERIAL PRIMARY KEY,
+  event_id         INT NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+  original_name    VARCHAR(500) NOT NULL,
+  mime_type        VARCHAR(200),
+  size             BIGINT NOT NULL DEFAULT 0,
+  file_data        BYTEA,
+  uploaded_by_id   INT REFERENCES users(id),
+  uploaded_by_name VARCHAR(200),
+  created_at       TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_event_files_lookup ON event_files (event_id);
+
 -- ─── Section History ────────────────────────────────────────────────────────
 
 CREATE TABLE IF NOT EXISTS section_history (
