@@ -43,6 +43,29 @@
     el.addEventListener('change', render);
   });
 
+  // Admin-only: permanently erase the whole library (COMPLETED + ARCHIVED
+  // events). This removes those events everywhere, not just the library view.
+  const clearBtn = document.getElementById('clearLibraryBtn');
+  if (clearBtn && user.role === 'ADMIN') {
+    clearBtn.style.display = '';
+    clearBtn.addEventListener('click', async () => {
+      let count = documents.length;
+      try {
+        const preview = await Api.get('/api/library/clear/preview');
+        count = preview.count;
+      } catch (_) { /* fall back to the loaded list length */ }
+
+      if (!confirm(I18n.tr('library.clear.confirm', { count }))) return;
+
+      try {
+        const res = await Api.delete('/api/library/clear');
+        toast.success(I18n.tr('library.clear.done', { count: res.deleted }));
+        documents = await Api.get('/api/library');
+        render();
+      } catch (e) { toast.error(e.message); }
+    });
+  }
+
   function getFiltered() {
     const kw = filterKeyword.value.toLowerCase().trim();
     const country = filterCountry.value;

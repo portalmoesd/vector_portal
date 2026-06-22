@@ -361,6 +361,11 @@
       "searchPlaceholder": "Title...",
       "country": "Country"
     },
+    "clear": {
+      "button": "Clear Library",
+      "confirm": "Permanently delete all {count} published and archived event(s)? They will also disappear from the calendar's Past tab. This cannot be undone.",
+      "done": "Deleted {count} event(s) from the library."
+    },
     "empty": "No documents found",
     "meta": {
       "language": "Language:",
