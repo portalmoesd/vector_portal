@@ -111,6 +111,78 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
   }
 });
 
+// PUT /api/templates/:id — update own template (not default)
+router.put('/:id', requireAuth, denyAnalyst, async (req, res) => {
+  try {
+    const { name, documentSubmitterRole, curatorRequired, sections } = req.body;
+    if (!name) {
+      return res.status(400).json({ error: 'name is required' });
+    }
+
+    const client = await db.pool.connect();
+    try {
+      await client.query('BEGIN');
+
+      // Verify the template exists, belongs to the user and is not a default.
+      const { rows: [existing] } = await client.query(
+        `SELECT id FROM event_templates
+         WHERE id = $1 AND created_by_id = $2 AND is_default = false
+         FOR UPDATE`,
+        [req.params.id, req.user.id]
+      );
+      if (!existing) {
+        await client.query('ROLLBACK');
+        return res.status(404).json({ error: 'Template not found or cannot be edited' });
+      }
+
+      await client.query(
+        `UPDATE event_templates
+         SET name = $1, document_submitter_role = $2, curator_required = $3, updated_at = now()
+         WHERE id = $4`,
+        [name, documentSubmitterRole || 'DEPUTY', curatorRequired || false, existing.id]
+      );
+
+      // Replace sections wholesale (cascade removes section departments).
+      await client.query(
+        'DELETE FROM event_template_sections WHERE template_id = $1',
+        [existing.id]
+      );
+
+      if (sections && sections.length > 0) {
+        for (let i = 0; i < sections.length; i++) {
+          const sec = sections[i];
+          const { rows: [tplSec] } = await client.query(
+            `INSERT INTO event_template_sections (template_id, title, sort_order)
+             VALUES ($1, $2, $3) RETURNING id`,
+            [existing.id, sec.title, sec.sortOrder || i]
+          );
+
+          if (sec.departmentIds && sec.departmentIds.length > 0) {
+            for (const deptId of sec.departmentIds) {
+              await client.query(
+                `INSERT INTO event_template_section_departments (template_section_id, department_id)
+                 VALUES ($1, $2)`,
+                [tplSec.id, deptId]
+              );
+            }
+          }
+        }
+      }
+
+      await client.query('COMMIT');
+      res.json({ id: existing.id, success: true });
+    } catch (err) {
+      await client.query('ROLLBACK');
+      throw err;
+    } finally {
+      client.release();
+    }
+  } catch (err) {
+    console.error('Update template error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // DELETE /api/templates/:id — delete own template (not default)
 router.delete('/:id', requireAuth, denyAnalyst, async (req, res) => {
   try {
