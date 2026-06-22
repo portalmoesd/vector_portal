@@ -173,8 +173,14 @@ const App = {
 
   async setLang(lang) {
     if (!lang || lang === I18n.getLocale()) return;
-    await I18n.setLocale(lang);
-    this._refreshLangSwitch();
+    // Persist the choice, then reload the page. Static [data-i18n] markup
+    // is re-translated in place, but many pages build content dynamically
+    // via I18n.t() at render time (event cards, template lists, tables…),
+    // and that markup carries no [data-i18n] hook to re-translate later.
+    // Reloading re-runs every page through I18n.init() so all content —
+    // static and JS-rendered alike — comes back in the new language.
+    localStorage.setItem('locale', lang);
+    window.location.reload();
   },
 
   logout() {
