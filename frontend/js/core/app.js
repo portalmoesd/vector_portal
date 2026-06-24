@@ -28,12 +28,18 @@ const App = {
       }
     }
 
-    // The MINISTER is a Library-only consumer: she/he never participates in the
-    // workflow. Restrict to the Library (plus change-password); any other path
-    // bounces back to the Library.
+    // The MINISTER is a read-only consumer who never participates in the
+    // workflow. They may view the Library, Calendar and Statistics (plus
+    // change-password); any other path (dashboards, admin) bounces back to
+    // the Library.
     if (user.role === 'MINISTER') {
       const path = window.location.pathname;
-      const allow = ['/pages/library.html', '/pages/change-password.html'];
+      const allow = [
+        '/pages/library.html',
+        '/pages/calendar.html',
+        '/pages/statistics.html',
+        '/pages/change-password.html',
+      ];
       if (!allow.some(p => path.endsWith(p))) {
         window.location.href = '/pages/library.html';
         return;
@@ -83,9 +89,12 @@ const App = {
         { href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' },
       ];
     } else if (user.role === 'MINISTER') {
-      // MINISTER sees only the Library — no dashboard/calendar/statistics/admin.
+      // MINISTER is read-only: Calendar, Library and Statistics — no
+      // dashboard (doesn't participate in the workflow) and no admin.
       navItems = [
+        { href: '/pages/calendar.html', label: 'Calendar', i18n: 'nav.calendar', match: 'calendar' },
         { href: '/pages/library.html', label: 'Library', i18n: 'nav.library', match: 'library' },
+        { href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' },
       ];
     } else {
       navItems = [
