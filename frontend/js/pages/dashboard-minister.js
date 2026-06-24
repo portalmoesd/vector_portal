@@ -101,6 +101,11 @@
     return user.fullName || user.username || '';
   }
 
+  // Greeting uses the first name only.
+  function ministerFirstName() {
+    return ministerName().trim().split(/\s+/)[0] || '';
+  }
+
   const heroIconEl = document.getElementById('mnHeroIcon');
   const clockEl = document.getElementById('mnClock');
 
@@ -109,7 +114,7 @@
     const hourNum = parseInt(t.hour, 10) % 24;
     const pod = partOfDay(hourNum);
     const greeting = I18n.tr('dashboard.greeting' + pod.charAt(0).toUpperCase() + pod.slice(1));
-    const name = ministerName();
+    const name = ministerFirstName();
     const gEl = document.getElementById('mnGreeting');
     if (gEl) gEl.textContent = name ? `${greeting}, ${name}` : greeting;
     const dEl = document.getElementById('mnDate');
