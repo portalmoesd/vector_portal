@@ -30,6 +30,7 @@
     "greetingAfternoon": "Good afternoon",
     "greetingEvening": "Good evening",
     "cardView": "View",
+    "attachments": "Attachments",
     "dueInDays": "Due in {n} days",
     "dueToday": "Due today",
     "overdue": "Overdue",

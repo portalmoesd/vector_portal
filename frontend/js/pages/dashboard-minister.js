@@ -173,13 +173,57 @@
   }
 
   // ── Detail panel (right of the calendar): the expanded chosen event ─────────
-  function detailHeaderHtml(title) {
+  const ICON_CLIP = '<svg class="mn-file__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a5 5 0 0 1-7.07-7.07l9.19-9.19a3 3 0 0 1 4.24 4.24l-9.2 9.19a1 1 0 0 1-1.41-1.41l8.49-8.49"/></svg>';
+  const ICON_DL = '<svg class="mn-file__dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
+
+  function detailHeaderHtml(item, country) {
+    const code = (item.countryCode || '').toLowerCase();
+    const flag = code
+      ? `<span class="mn-detail__flag" title="${escapeHtml(country)}"><img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" onerror="this.closest('.mn-detail__flag').style.display='none'"></span>`
+      : '';
     return `
       <div class="mn-detail__head">
-        <h3 class="mn-detail__title">${escapeHtml(title)}</h3>
+        ${flag}
+        <h3 class="mn-detail__title">${escapeHtml(item.title)}</h3>
         <button class="mn-detail__close" id="mnDetailClose" aria-label="Close">&times;</button>
       </div>
     `;
+  }
+
+  // Load + render attachments inline: creation-time event files plus any
+  // section files. Event files download via /api/events/:id/files/:fid;
+  // section files via the workflow files endpoint (downloadFileAuth).
+  async function loadAttachments(eventId, container) {
+    const [evRes, secRes] = await Promise.allSettled([
+      Api.get(`/api/events/${eventId}/files`),
+      Api.get(`/api/library/${eventId}/files`),
+    ]);
+    if (!container.isConnected || String(selectedId) !== String(eventId)) return;
+    const files = [];
+    if (evRes.status === 'fulfilled') (evRes.value || []).forEach(f =>
+      files.push({ kind: 'event', id: f.id, name: f.original_name, size: f.size }));
+    if (secRes.status === 'fulfilled') (secRes.value || []).forEach(f =>
+      files.push({ kind: 'section', id: f.id, name: f.original_name, size: f.size }));
+    if (files.length === 0) { container.innerHTML = ''; return; }
+    container.innerHTML = `
+      <h4 class="mn-files__title">${escapeHtml(I18n.tr('dashboard.attachments'))}</h4>
+      <ul class="mn-files">
+        ${files.map((f, i) => `
+          <li class="mn-file" data-i="${i}">
+            ${ICON_CLIP}
+            <span class="mn-file__name">${escapeHtml(f.name)}</span>
+            <span class="mn-file__size">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''}</span>
+            ${ICON_DL}
+          </li>`).join('')}
+      </ul>
+    `;
+    container.querySelectorAll('.mn-file').forEach((li, i) => {
+      const f = files[i];
+      li.addEventListener('click', () => {
+        if (f.kind === 'event') downloadEventFileAuth(eventId, f.id, f.name);
+        else downloadFileAuth(f.id, f.name);
+      });
+    });
   }
 
   function renderDetail() {
@@ -194,26 +238,25 @@
     if (mode === 'completed') {
       detailEl.innerHTML = `
         <div class="mn-detail__panel">
-          ${detailHeaderHtml(item.title)}
+          ${detailHeaderHtml(item, country)}
           <div class="mn-detail__meta">
             <span>${escapeHtml(country)}</span>
-            <span>${escapeHtml(I18n.tr('library.meta.language'))} ${languageLabel(item.language || 'EN')}</span>
+            <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
             ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
           </div>
           <div class="mn-card-actions">
             <button class="btn btn-outline" data-act="pdf">${escapeHtml(I18n.tr('library.btn.pdf'))}</button>
             <button class="btn btn-outline" data-act="word">${escapeHtml(I18n.tr('library.btn.word'))}</button>
-            <button class="btn btn-outline" data-act="files">${escapeHtml(I18n.tr('library.btn.files'))}</button>
           </div>
           <div class="mn-paper" id="mnDetailBody">
             <div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.loading'))}</p></div>
           </div>
+          <div class="mn-files-wrap" id="mnFiles"></div>
         </div>
       `;
       detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
       detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
       detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
-      detailEl.querySelector('[data-act="files"]').addEventListener('click', () => LibraryDoc.viewFiles(item.id));
 
       // Load and render the document content inline (accepted view).
       const bodyEl = detailEl.querySelector('#mnDetailBody');
@@ -230,22 +273,26 @@
         if (String(selectedId) !== String(item.id)) return;
         bodyEl.innerHTML = `<div class="msg msg-error">${escapeHtml(I18n.tr('library.preview.failLoad'))} ${escapeHtml(err.message)}</div>`;
       });
+      loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
       return;
     }
 
-    // Upcoming: event info only.
-    const pills = [`<span class="dp-upcoming-event__pill">${escapeHtml(country)}</span>`];
-    if (item.deadlineDate) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.deadline'))}: ${formatDate(item.deadlineDate)}</span>`);
-    pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(item.language || 'EN')}</span>`);
-    if (item.workflowType === 'simple') pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>`);
+    // In progress: brief + attachments (no published document yet).
+    const due = dueInfo(item.deadlineDate);
     detailEl.innerHTML = `
       <div class="mn-detail__panel">
-        ${detailHeaderHtml(item.title)}
-        <div class="dp-upcoming-event__pills" style="margin:8px 0 12px;">${pills.join('')}</div>
-        ${item.occasion ? `<div class="mn-detail__body">${item.occasion}</div>` : ''}
+        ${detailHeaderHtml(item, country)}
+        <div class="mn-detail__meta">
+          <span>${escapeHtml(country)}</span>
+          <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
+          ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
+        </div>
+        ${item.occasion ? `<div class="mn-brief">${item.occasion}</div>` : ''}
+        <div class="mn-files-wrap" id="mnFiles"></div>
       </div>
     `;
     detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
+    loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
   }
 
   // ── Calendar (adapted from dashboard-pipeline.js renderMiniCalendar) ─────────
