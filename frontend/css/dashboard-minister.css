@@ -171,6 +171,21 @@
 @media (min-width: 760px) {
   .mn-dash .mn-list { grid-template-columns: repeat(2, 1fr); }
 }
+/* full-width group divider (label + rule) spanning the grid */
+.mn-dash .mn-list .mn-group {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 12px;
+  margin: 10px 2px 0;
+}
+.mn-dash .mn-list .mn-group:first-child { margin-top: 0; }
+.mn-dash .mn-list .mn-group::after {
+  content: ""; flex: 1; height: 1px; background: var(--border-color);
+}
+.mn-dash .mn-group__label {
+  font-size: 0.72rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--text-muted); white-space: nowrap;
+}
 .mn-dash .mn-list .mn-card {
   display: flex;
   flex-direction: column;
@@ -188,6 +203,14 @@
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
   background: rgba(255,255,255,0.94);
+}
+/* overdue in-progress events: light-yellow card */
+.mn-dash .mn-list .mn-card--overdue {
+  background: rgba(253, 224, 71, 0.22);
+  border-color: rgba(234, 179, 8, 0.40);
+}
+.mn-dash .mn-list .mn-card--overdue:hover {
+  background: rgba(253, 224, 71, 0.32);
 }
 
 /* card header: round country flag + title */

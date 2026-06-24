@@ -147,7 +147,12 @@
     const flag = code
       ? `<img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" loading="lazy" onerror="this.closest('.mn-card__flag').style.display='none'">`
       : '';
-    const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
+    let statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
+    // In-progress events whose deadline has already passed get a light-yellow card.
+    if (mode !== 'completed' && d.deadlineDate
+        && startOfDay(new Date(d.deadlineDate)) < startOfDay(new Date())) {
+      statusClass += ' mn-card--overdue';
+    }
     const lang = languageLabel(d.language || 'EN');
     const owner = d.documentSubmitterName
       ? `<div class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(d.documentSubmitterName)}">${ICON_PERSON}<span>${escapeHtml(d.documentSubmitterName)}</span></div>`
@@ -181,6 +186,81 @@
     `;
   }
 
+  // ── Date-relative grouping for the card list ────────────────────────────────
+  const DAY_MS = 86400000;
+  function startOfDay(d) { const x = new Date(d); x.setHours(0, 0, 0, 0); return x; }
+  function startOfWeek(d) { const x = startOfDay(d); x.setDate(x.getDate() - ((x.getDay() + 6) % 7)); return x; } // Monday
+  function addDays(d, n) { const x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function gMonth(idx, style) {
+    if (isKa()) return KA_MONTHS[idx];
+    return new Date(2021, idx, 1).toLocaleDateString('en-GB', { month: style });
+  }
+  function fmtDay(d) { return `${d.getDate()} ${gMonth(d.getMonth(), 'short')}`; }
+  function fmtMonthYear(d) { return `${gMonth(d.getMonth(), 'long')} ${d.getFullYear()}`; }
+  function fmtWeekRange(ws) {
+    const we = addDays(ws, 6);
+    return ws.getMonth() === we.getMonth()
+      ? `${ws.getDate()}–${we.getDate()} ${gMonth(ws.getMonth(), 'short')}`
+      : `${ws.getDate()} ${gMonth(ws.getMonth(), 'short')} – ${we.getDate()} ${gMonth(we.getMonth(), 'short')}`;
+  }
+  const grp = (k) => I18n.tr('dashboard.' + k);
+
+  // Completed: newest first → Today, Yesterday, This week, Last week, 3 prior
+  // weeks (by range), then by month.
+  function bucketCompleted(date, now) {
+    if (!date) return { order: 9999, key: 'undated', label: '—' };
+    const t0 = startOfDay(now), d0 = startOfDay(date);
+    const diff = Math.round((t0 - d0) / DAY_MS);
+    if (diff === 0) return { order: 0, key: 'today', label: `${grp('grpToday')} · ${fmtDay(d0)}` };
+    if (diff === 1) return { order: 1, key: 'yesterday', label: `${grp('grpYesterday')} · ${fmtDay(d0)}` };
+    const tws = startOfWeek(now), iws = startOfWeek(date);
+    const weeksAgo = Math.round((tws - iws) / (7 * DAY_MS));
+    if (weeksAgo === 0) return { order: 2, key: 'thisweek', label: grp('grpThisWeek') };
+    if (weeksAgo === 1) return { order: 3, key: 'lastweek', label: `${grp('grpLastWeek')} · ${fmtWeekRange(iws)}` };
+    if (weeksAgo >= 2 && weeksAgo <= 4) return { order: 3 + weeksAgo, key: 'w' + iws.getTime(), label: fmtWeekRange(iws) };
+    const my = new Date(date.getFullYear(), date.getMonth(), 1);
+    const monthsAgo = (now.getFullYear() - my.getFullYear()) * 12 + (now.getMonth() - my.getMonth());
+    return { order: 100 + monthsAgo, key: 'm' + my.getFullYear() + '-' + my.getMonth(), label: fmtMonthYear(my) };
+  }
+
+  // In progress: soonest first → Overdue, Today, Tomorrow, This week, This
+  // month, Next month, Later, No deadline.
+  function bucketInProgress(date, now) {
+    if (!date) return { order: 999, key: 'nodue', label: grp('grpNoDeadline') };
+    const t0 = startOfDay(now), d0 = startOfDay(date);
+    const diff = Math.round((d0 - t0) / DAY_MS);
+    if (diff < 0) return { order: -1, key: 'overdue', label: I18n.tr('dashboard.overdue') };
+    if (diff === 0) return { order: 0, key: 'today', label: `${grp('grpToday')} · ${fmtDay(d0)}` };
+    if (diff === 1) return { order: 1, key: 'tomorrow', label: `${grp('grpTomorrow')} · ${fmtDay(d0)}` };
+    if (startOfWeek(date).getTime() === startOfWeek(now).getTime()) return { order: 2, key: 'thisweek', label: grp('grpThisWeek') };
+    if (date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth()) return { order: 3, key: 'thismonth', label: grp('grpThisMonth') };
+    const nm = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    if (date.getFullYear() === nm.getFullYear() && date.getMonth() === nm.getMonth()) return { order: 4, key: 'nextmonth', label: grp('grpNextMonth') };
+    return { order: 5, key: 'later', label: grp('grpLater') };
+  }
+
+  function groupItems(items) {
+    const now = new Date();
+    const map = new Map();
+    for (const it of items) {
+      const date = mode === 'completed'
+        ? (it.endedAt ? new Date(it.endedAt) : null)
+        : (it.deadlineDate ? new Date(it.deadlineDate) : null);
+      const b = mode === 'completed' ? bucketCompleted(date, now) : bucketInProgress(date, now);
+      if (!map.has(b.key)) map.set(b.key, { order: b.order, label: b.label, items: [] });
+      map.get(b.key).items.push(it);
+    }
+    const groups = [...map.values()].sort((a, b) => a.order - b.order);
+    const far = 8640000000000000;
+    for (const g of groups) {
+      g.items.sort((a, b) => {
+        if (mode === 'completed') return new Date(b.endedAt || 0) - new Date(a.endedAt || 0);
+        return new Date(a.deadlineDate || far) - new Date(b.deadlineDate || far);
+      });
+    }
+    return groups;
+  }
+
   function renderList() {
     const items = getFiltered().filter(d => String(d.id) !== selectedId);
     if (items.length === 0) {
@@ -188,7 +268,10 @@
       listEl.innerHTML = `<div class="empty-state"><p>${escapeHtml(I18n.tr(emptyKey))}</p></div>`;
       return;
     }
-    listEl.innerHTML = items.map(listCardHtml).join('');
+    listEl.innerHTML = groupItems(items).map(g => `
+      <div class="mn-group"><span class="mn-group__label">${escapeHtml(g.label)}</span></div>
+      ${g.items.map(listCardHtml).join('')}
+    `).join('');
     listEl.querySelectorAll('.dp-upcoming-event[data-event-id]').forEach(card => {
       card.addEventListener('click', () => select(card.dataset.eventId));
     });
