@@ -15,14 +15,14 @@
   align-items: center;
   gap: 22px;
   flex-wrap: wrap;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: var(--radius-lg);
   padding: 24px 28px;
   margin-bottom: 18px;
-  background: var(--card);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  box-shadow: var(--shadow-sm);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.28));
+  backdrop-filter: blur(22px) saturate(150%);
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  box-shadow: 0 10px 34px rgba(2, 12, 27, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.65);
   animation: mnHeroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 /* Soft drifting azure aurora — palette only, just light & gentle motion */
@@ -45,14 +45,21 @@
   to   { transform: translate(-28px, 18px) scale(1.14); opacity: 1; }
 }
 
-/* Time-of-day icon: large, monochrome line art that gently comes alive */
+/* Time-of-day icon: monochrome line art on a frosted-glass disc */
 .mn-dash .mn-hero__icon {
   position: relative; z-index: 1;
   flex: 0 0 auto;
+  width: 54px; height: 54px;
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  color: var(--text-secondary);
+  color: #475569;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.32));
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 14px rgba(2, 12, 27, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
-.mn-dash .mn-hero__icon svg { width: 34px; height: 34px; display: block; }
+.mn-dash .mn-hero__icon svg { width: 26px; height: 26px; display: block; }
 .mn-dash .mn-hero__icon--morning svg,
 .mn-dash .mn-hero__icon--evening svg { animation: mnFloat 4s ease-in-out infinite; }
 .mn-dash .mn-hero__icon--afternoon svg { animation: mnSpin 30s linear infinite; transform-origin: 50% 50%; }
@@ -64,9 +71,9 @@
 .mn-dash .mn-hero__text { position: relative; z-index: 1; flex: 1 1 auto; min-width: 0; }
 .mn-dash .mn-hero__greeting {
   margin: 0;
-  font-size: 1.55rem; font-weight: 800; letter-spacing: -0.024em;
-  line-height: 1.12;
-  color: var(--text-primary);
+  font-size: 1.24rem; font-weight: 700; letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: #475569;
 }
 .mn-dash .mn-hero__date {
   margin: 6px 0 0;
@@ -83,9 +90,9 @@
   border-left: 1px solid var(--border);
 }
 .mn-dash .mn-hero__time {
-  font-size: 1.85rem; font-weight: 800; line-height: 1;
+  font-size: 1.48rem; font-weight: 700; line-height: 1;
   letter-spacing: -0.01em;
-  color: var(--text-primary); font-variant-numeric: tabular-nums;
+  color: #475569; font-variant-numeric: tabular-nums;
 }
 .mn-dash .mn-hero__colon { animation: mnBlink 1.6s steps(1, end) infinite; }
 @keyframes mnBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.28; } }
