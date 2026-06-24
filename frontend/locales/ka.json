@@ -31,6 +31,7 @@
     "greetingEvening": "საღამო მშვიდობისა",
     "cardView": "ნახვა",
     "attachments": "დანართები",
+    "owner": "დოკუმენტის მფლობელი",
     "dueInDays": "ვადა {n} დღეში",
     "dueToday": "ვადა დღეს",
     "overdue": "ვადაგადაცილებული",
