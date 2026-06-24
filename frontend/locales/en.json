@@ -31,6 +31,7 @@
     "greetingEvening": "Good evening",
     "cardView": "View",
     "attachments": "Attachments",
+    "owner": "Document owner",
     "dueInDays": "Due in {n} days",
     "dueToday": "Due today",
     "overdue": "Overdue",

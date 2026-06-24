@@ -123,6 +123,8 @@
     return { text: `${I18n.tr('dashboard.deadline')}: ${formatDate(deadline)}`, cls: '' };
   }
 
+  const ICON_PERSON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
+
   function listCardHtml(d) {
     const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
     const code = (d.countryCode || '').toLowerCase();
@@ -131,6 +133,9 @@
       : '';
     const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
     const lang = languageLabel(d.language || 'EN');
+    const owner = d.documentSubmitterName
+      ? `<div class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(d.documentSubmitterName)}">${ICON_PERSON}<span>${escapeHtml(d.documentSubmitterName)}</span></div>`
+      : '';
 
     let excerpt = '';
     let meta;
@@ -150,6 +155,7 @@
           <span class="mn-card__flag" title="${escapeHtml(country)}">${flag}</span>
           <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
         </div>
+        ${owner}
         ${excerpt}
         <div class="mn-card__foot">
           <span class="mn-card__meta">${meta}</span>
@@ -234,12 +240,16 @@
     }
 
     const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
+    const ownerChip = item.documentSubmitterName
+      ? `<span class="is-owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}">${ICON_PERSON}${escapeHtml(item.documentSubmitterName)}</span>`
+      : '';
 
     if (mode === 'completed') {
       detailEl.innerHTML = `
         <div class="mn-detail__panel">
           ${detailHeaderHtml(item, country)}
           <div class="mn-detail__meta">
+            ${ownerChip}
             <span>${escapeHtml(country)}</span>
             <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
             ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
@@ -283,6 +293,7 @@
       <div class="mn-detail__panel">
         ${detailHeaderHtml(item, country)}
         <div class="mn-detail__meta">
+          ${ownerChip}
           <span>${escapeHtml(country)}</span>
           <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
           ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
