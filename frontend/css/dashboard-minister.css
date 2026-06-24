@@ -204,6 +204,14 @@
   box-shadow: var(--shadow-lg);
   background: rgba(255,255,255,0.94);
 }
+/* overdue in-progress events: light-yellow card */
+.mn-dash .mn-list .mn-card--overdue {
+  background: rgba(253, 224, 71, 0.22);
+  border-color: rgba(234, 179, 8, 0.40);
+}
+.mn-dash .mn-list .mn-card--overdue:hover {
+  background: rgba(253, 224, 71, 0.32);
+}
 
 /* card header: round country flag + title */
 .mn-dash .mn-card__head { display: flex; align-items: center; gap: 14px; }

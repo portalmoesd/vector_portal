@@ -147,7 +147,12 @@
     const flag = code
       ? `<img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" loading="lazy" onerror="this.closest('.mn-card__flag').style.display='none'">`
       : '';
-    const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
+    let statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
+    // In-progress events whose deadline has already passed get a light-yellow card.
+    if (mode !== 'completed' && d.deadlineDate
+        && startOfDay(new Date(d.deadlineDate)) < startOfDay(new Date())) {
+      statusClass += ' mn-card--overdue';
+    }
     const lang = languageLabel(d.language || 'EN');
     const owner = d.documentSubmitterName
       ? `<div class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(d.documentSubmitterName)}">${ICON_PERSON}<span>${escapeHtml(d.documentSubmitterName)}</span></div>`
