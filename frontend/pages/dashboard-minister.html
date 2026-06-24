@@ -3,29 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Vector Portal — Library</title>
+  <title>Vector Portal — Minister Dashboard</title>
   <link rel="stylesheet" href="/css/variables.css" />
   <link rel="stylesheet" href="/css/base.css" />
   <link rel="stylesheet" href="/css/sidebar.css" />
   <link rel="stylesheet" href="/css/components.css" />
   <link rel="stylesheet" href="/css/georgian-fonts.css" />
   <link rel="stylesheet" href="/css/apple.css" />
+  <link rel="stylesheet" href="/css/dashboard-pipeline.css" />
   <style>
-    .filter-bar {
-      display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; align-items: flex-end;
+    /* Controls row: search + Completed/Upcoming toggle */
+    .mn-controls {
+      display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;
+      margin-bottom: 16px;
     }
-    .filter-bar .form-group { margin-bottom: 0; flex: 1; min-width: 160px; max-width: 250px; }
-    .filter-bar .form-label { font-size: 0.75rem; }
-
-    .doc-card {
-      border: 1px solid var(--border-color); border-radius: var(--radius-lg);
-      padding: 16px 20px; margin-bottom: 12px; background: var(--bg-card);
-      display: flex; justify-content: space-between; align-items: center;
+    .mn-search { flex: 1; min-width: 200px; max-width: 360px; }
+    .mn-search .form-label { font-size: 0.75rem; }
+    .mn-toggle {
+      display: inline-flex; border: 1px solid var(--border-color);
+      border-radius: var(--radius-md); overflow: hidden; background: var(--bg-card);
     }
-    .doc-card-info h4 { margin: 0 0 4px 0; font-size: 1rem; }
-    .doc-card-meta { font-size: 0.8rem; color: var(--text-secondary); display: flex; gap: 16px; }
-    .doc-card-actions { display: flex; gap: 6px; flex-shrink: 0; }
+    .mn-toggle__btn {
+      border: none; background: transparent; cursor: pointer;
+      padding: 8px 18px; font-size: 0.85rem; font-weight: 600;
+      color: var(--text-secondary);
+    }
+    .mn-toggle__btn.is-active { background: var(--accent, #2563eb); color: #fff; }
 
+    /* Completed-card action row (Library actions inside a dashboard card) */
+    .mn-card-actions {
+      display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px;
+    }
+    .mn-card-actions .btn { padding: 4px 10px; font-size: 12px; }
+
+    /* Document preview / files modal (mirrors the Library page styles) */
     .preview-overlay {
       position: fixed; inset: 0; background: rgba(0,0,0,0.6);
       display: flex; align-items: center; justify-content: center; z-index: 300;
@@ -56,30 +67,28 @@
     <aside class="sidebar"></aside>
     <main class="main">
       <div class="topbar">
-        <div class="page-title" data-i18n="nav.library">Library</div>
-        <button class="btn btn-danger" id="clearLibraryBtn" style="display:none;margin-left:auto;" data-i18n="library.clear.button">Clear Library</button>
+        <div class="page-title" data-i18n="dashboard.ministerTitle">Minister Dashboard</div>
       </div>
 
-      <div class="filter-bar">
-        <div class="form-group">
+      <div class="mn-controls">
+        <div class="form-group mn-search">
           <label class="form-label" data-i18n="library.filter.search">Search</label>
-          <input class="form-input" id="filterKeyword" data-i18n-placeholder="library.filter.searchPlaceholder" placeholder="Title..." />
+          <input class="form-input" id="filterKeyword" data-i18n-placeholder="dashboard.searchPlaceholder" placeholder="Search by title or country..." />
         </div>
-        <div class="form-group">
-          <label class="form-label" data-i18n="library.filter.country">Country</label>
-          <select class="form-select" id="filterCountry"><option value="" data-i18n="common.all">All</option></select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" data-i18n="common.from">From</label>
-          <input class="form-input" type="date" id="filterDateFrom" lang="en-GB" />
-        </div>
-        <div class="form-group">
-          <label class="form-label" data-i18n="common.to">To</label>
-          <input class="form-input" type="date" id="filterDateTo" lang="en-GB" />
+        <div class="mn-toggle" role="tablist">
+          <button type="button" class="mn-toggle__btn is-active" id="toggleCompleted" data-mode="completed" data-i18n="dashboard.toggleCompleted">Completed</button>
+          <button type="button" class="mn-toggle__btn" id="toggleUpcoming" data-mode="upcoming" data-i18n="dashboard.toggleUpcoming">Upcoming</button>
         </div>
       </div>
 
-      <div id="libraryList"></div>
+      <div class="card dp-upcoming-card">
+        <div class="dp-upcoming-layout">
+          <div class="dp-calendar" id="miniCalendar"></div>
+          <div class="dp-upcoming-list" id="cardList">
+            <div class="empty-state"><p data-i18n="dashboard.noCompleted">No completed documents</p></div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -90,8 +99,9 @@
   <script src="/js/core/api.js"></script>
   <script src="/js/core/i18n.js"></script>
   <script src="/js/core/utils.js"></script>
+  <script src="/js/core/dialog.js"></script>
   <script src="/js/core/app.js"></script>
   <script src="/js/core/library-doc.js"></script>
-  <script src="/js/pages/library.js"></script>
+  <script src="/js/pages/dashboard-minister.js"></script>
 </body>
 </html>

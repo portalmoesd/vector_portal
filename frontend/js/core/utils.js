@@ -239,7 +239,7 @@ function dashboardUrl(role) {
     ADMIN: '/pages/admin.html',
     PROTOCOL: '/pages/calendar.html',
     ANALYST: '/pages/statistics.html',
-    MINISTER: '/pages/library.html',
+    MINISTER: '/pages/dashboard-minister.html',
   };
   return map[role] || '/pages/dashboard-collab.html';
 }
