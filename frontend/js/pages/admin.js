@@ -221,7 +221,7 @@
             <tr>
               <td>${escapeHtml(u.fullName)}</td>
               <td>${escapeHtml(u.username)}</td>
-              <td><span class="pill pill-blue">${u.isMinister ? escapeHtml(I18n.tr('roles.MINISTER')) : roleLabel(u.role)}</span></td>
+              <td><span class="pill pill-blue">${roleLabel(u.role)}</span></td>
               <td>${u.isExternal ? (u.entityName ? escapeHtml(u.entityName) : '—') : (u.departmentName ? escapeHtml(u.departmentName) : '—')}</td>
               <td>${escapeHtml(I18n.tr(u.isExternal ? 'common.yes' : 'common.no'))}</td>
               <td>
@@ -243,10 +243,6 @@
     // are mutually exclusive — the form toggles between them based on the
     // External checkbox.
     const isExt = !!(isEdit && user.isExternal);
-    // "Minister" only applies to Deputy-role users — she sits at deputy level
-    // in the org chart but is labelled Minister across the app.
-    const isDeputy = isEdit ? user.role === 'DEPUTY' : false;
-    const isMinisterChecked = !!(isEdit && user.isMinister);
 
     return `
       <div class="form-group">
@@ -268,13 +264,10 @@
       <div class="form-group">
         <label class="form-label">${escapeHtml(I18n.tr('admin.user.form.role'))}</label>
         <select class="form-select" id="userRole">
-          ${['COLLABORATOR','SUPER_COLLABORATOR','SUPERVISOR','DEPUTY','PROTOCOL','ADMIN','ANALYST'].map(r =>
+          ${['COLLABORATOR','SUPER_COLLABORATOR','SUPERVISOR','DEPUTY','PROTOCOL','ADMIN','ANALYST','MINISTER'].map(r =>
             `<option value="${r}" ${isEdit && user.role === r ? 'selected' : ''}>${roleLabel(r)}</option>`
           ).join('')}
         </select>
-      </div>
-      <div class="form-group" id="ministerGroup" style="${isDeputy ? '' : 'display:none;'}">
-        <label class="form-label"><input type="checkbox" id="userMinister" ${isMinisterChecked ? 'checked' : ''} /> ${escapeHtml(I18n.tr('admin.user.form.minister'))}</label>
       </div>
       <div class="form-group" id="deptGroup" style="${isExt ? 'display:none;' : ''}">
         <label class="form-label">${escapeHtml(I18n.tr('admin.user.form.dept'))}</label>
@@ -306,8 +299,6 @@
       const password = document.getElementById('userPassword').value;
       const role = document.getElementById('userRole').value;
       const isExternal = document.getElementById('userExternal').checked;
-      // Minister only applies to deputies.
-      const isMinister = role === 'DEPUTY' && document.getElementById('userMinister').checked;
       // Department and entity are mutually exclusive. Send only the one
       // matching the External checkbox; the route also normalises this
       // server-side so the DB never holds both.
@@ -316,7 +307,7 @@
       const countryIds = getSelectedCountryIds(document.getElementById('countryPickerContainer'));
       if (!fullName || !username || !email || !password) return;
       try {
-        await Api.post('/api/users', { fullName, username, email, password, role, departmentId, isExternal, entityName, isMinister, countryIds });
+        await Api.post('/api/users', { fullName, username, email, password, role, departmentId, isExternal, entityName, countryIds });
         hideModal();
         loadUsers();
       } catch (e) { toast.error(e.message); }
@@ -327,14 +318,11 @@
     container.innerHTML = buildCountryPickerHtml([]);
     initCountryPicker(container);
 
-    // Show/hide country picker + Minister checkbox based on role.
+    // Show/hide country picker based on role.
     document.getElementById('userRole').addEventListener('change', () => {
       const role = document.getElementById('userRole').value;
       const showCountries = role === 'COLLABORATOR' || role === 'SUPER_COLLABORATOR';
       document.getElementById('countryAssignmentGroup').style.display = showCountries ? '' : 'none';
-      const isDeputy = role === 'DEPUTY';
-      document.getElementById('ministerGroup').style.display = isDeputy ? '' : 'none';
-      if (!isDeputy) document.getElementById('userMinister').checked = false;
     });
 
     // Toggle department vs. entity based on External checkbox.
@@ -366,13 +354,12 @@
       const password = document.getElementById('userPassword').value;
       const role = document.getElementById('userRole').value;
       const isExternal = document.getElementById('userExternal').checked;
-      const isMinister = role === 'DEPUTY' && document.getElementById('userMinister').checked;
       const departmentId = isExternal ? null : (document.getElementById('userDept').value || null);
       const entityName = isExternal ? (document.getElementById('userEntity').value.trim() || null) : null;
       const countryIds = getSelectedCountryIds(document.getElementById('countryPickerContainer'));
       if (!fullName || !email) return;
 
-      const body = { fullName, email, role, departmentId, isExternal, entityName, isMinister, countryIds };
+      const body = { fullName, email, role, departmentId, isExternal, entityName, countryIds };
       if (password) body.password = password;
 
       try {
@@ -397,9 +384,6 @@
       const role = roleSelect.value;
       const showCountries = role === 'COLLABORATOR' || role === 'SUPER_COLLABORATOR';
       document.getElementById('countryAssignmentGroup').style.display = showCountries ? '' : 'none';
-      const isDeputy = role === 'DEPUTY';
-      document.getElementById('ministerGroup').style.display = isDeputy ? '' : 'none';
-      if (!isDeputy) document.getElementById('userMinister').checked = false;
     });
 
     // Toggle department vs. entity based on External checkbox.

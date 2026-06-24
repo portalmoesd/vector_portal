@@ -54,6 +54,9 @@ async function loadSectionContext(eventId, sectionId, jwtUser) {
   // Determine if section has cross-department assignments.
   // For Deputy DS, the "home department" is the Responsible Supervisor's
   // department, since Deputies oversee multiple departments.
+  // Note: a MINISTER DS falls into the else branch and resolves dsDeptId from
+  // the minister's (likely NULL) department. That's fine — Minister-DS events
+  // always run in simple mode, where buildChain ignores dsRole and dsDeptId.
   let dsDeptId = null;
   if (event.document_submitter_role === 'DEPUTY' && event.supervisor_id) {
     const { rows: [sv] } = await db.query(

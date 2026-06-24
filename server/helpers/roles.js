@@ -9,6 +9,12 @@ const ROLES = {
   // in workflow / events / library / admin. Intentionally absent from
   // PIPELINE_ROLES, EVENT_CREATOR_ROLES, EVENT_ENDER_ROLES below.
   ANALYST: 'ANALYST',
+  // Library-only role: the Minister reads finished documents prepared for
+  // her/him and never participates in the workflow or creates/ends events.
+  // She/he may be named as a Document Submitter (an assigned deputy drives
+  // the document as curator). Like ANALYST, intentionally absent from the
+  // PIPELINE / CREATOR / ENDER lists below.
+  MINISTER: 'MINISTER',
 };
 
 // Roles that participate in the document approval pipeline

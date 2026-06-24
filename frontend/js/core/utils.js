@@ -219,6 +219,7 @@ function roleLabel(role) {
     SUPER_COLLABORATOR: 'Super-Collaborator',
     COLLABORATOR: 'Collaborator',
     ANALYST: 'Analyst',
+    MINISTER: 'Minister',
     CURATOR: 'Curator',
     // Receiving chain roles display the same label — the department name
     // shown underneath distinguishes them from the section dept's roles
@@ -238,6 +239,7 @@ function dashboardUrl(role) {
     ADMIN: '/pages/admin.html',
     PROTOCOL: '/pages/calendar.html',
     ANALYST: '/pages/statistics.html',
+    MINISTER: '/pages/library.html',
   };
   return map[role] || '/pages/dashboard-collab.html';
 }

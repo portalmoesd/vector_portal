@@ -28,6 +28,18 @@ const App = {
       }
     }
 
+    // The MINISTER is a Library-only consumer: she/he never participates in the
+    // workflow. Restrict to the Library (plus change-password); any other path
+    // bounces back to the Library.
+    if (user.role === 'MINISTER') {
+      const path = window.location.pathname;
+      const allow = ['/pages/library.html', '/pages/change-password.html'];
+      if (!allow.some(p => path.endsWith(p))) {
+        window.location.href = '/pages/library.html';
+        return;
+      }
+    }
+
     await I18n.init();
     this.renderSidebar(user);
   },
@@ -69,6 +81,11 @@ const App = {
       // ANALYST sees only Statistics — no dashboard/calendar/library/admin.
       navItems = [
         { href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' },
+      ];
+    } else if (user.role === 'MINISTER') {
+      // MINISTER sees only the Library — no dashboard/calendar/statistics/admin.
+      navItems = [
+        { href: '/pages/library.html', label: 'Library', i18n: 'nav.library', match: 'library' },
       ];
     } else {
       navItems = [
