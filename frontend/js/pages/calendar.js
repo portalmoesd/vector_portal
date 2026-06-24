@@ -509,11 +509,15 @@
   const isProtocol = user.role === 'PROTOCOL';
 
   createBtn.addEventListener('click', async () => {
+    // The Minister (if any) can be named as the Document Submitter; an assigned
+    // deputy then drives the document as curator. Only ADMIN/PROTOCOL may do this.
+    let minister = null;
     try {
       [deputies, templates] = await Promise.all([
         Api.get(isUnrestricted ? '/api/admin/deputies' : '/api/admin/linked-deputies'),
         Api.get('/api/templates'),
       ]);
+      if (isUnrestricted) minister = await Api.get('/api/admin/minister');
     } catch (e) { deputies = []; templates = []; }
 
     const countryOpts = countries.map(c =>
@@ -521,7 +525,7 @@
     ).join('');
 
     const deputyOpts = deputies.map(d =>
-      `<option value="${d.id}">${escapeHtml(d.fullName)}${d.isMinister ? ' (' + escapeHtml(I18n.tr('roles.MINISTER')) + ')' : ''}</option>`
+      `<option value="${d.id}">${escapeHtml(d.fullName)}</option>`
     ).join('');
 
     showModal(I18n.tr('calendar.modal.createTitle'), `
@@ -550,10 +554,11 @@
             <option value="DEPUTY" data-i18n="roles.DEPUTY">Deputy</option>
             <option value="SUPERVISOR" data-i18n="roles.SUPERVISOR">Supervisor</option>
             <option value="SUPER_COLLABORATOR" data-i18n="roles.SUPER_COLLABORATOR">Super-Collaborator</option>
+            ${isUnrestricted ? '<option value="MINISTER" data-i18n="roles.MINISTER">Minister</option>' : ''}
           </select>
         </div>
         <div class="form-group" id="deputyGroup">
-          <label class="form-label" data-i18n="calendar.form.deputy">Deputy *</label>
+          <label class="form-label" id="deputyLabel" data-i18n="calendar.form.deputy">Deputy *</label>
           <select class="form-select" id="newDeputy">
             <option value="" data-i18n="calendar.form.selectDeputy">— Select Deputy —</option>
             ${deputyOpts}
@@ -633,8 +638,14 @@
         return;
       }
 
-      // Protocol must explicitly pick the deputy/minister who submits the document.
-      if (isProtocol && !deputyId) {
+      // Minister as DS: the Minister is the submitter and the picked deputy is
+      // the curator who actually drives/approves the document. Both required.
+      const isMinisterDS = dsRole === 'MINISTER';
+      if (isMinisterDS) {
+        if (!minister) { toast.warn(I18n.tr('calendar.warn.noMinister')); return; }
+        if (!deputyId) { toast.warn(I18n.tr('calendar.warn.missingCurator')); return; }
+      } else if (isProtocol && !deputyId) {
+        // Protocol must explicitly pick the deputy who submits the document.
         toast.warn(I18n.tr('calendar.warn.missingDeputy'));
         return;
       }
@@ -646,7 +657,9 @@
       }
 
       let documentSubmitterId;
-      if (dsRole === 'DEPUTY') {
+      if (isMinisterDS) {
+        documentSubmitterId = minister.id;
+      } else if (dsRole === 'DEPUTY') {
         documentSubmitterId = deputyId || user.id;
       } else if (dsRole === 'SUPERVISOR') {
         documentSubmitterId = document.getElementById('newDSSupervisor').value ? parseInt(document.getElementById('newDSSupervisor').value) : user.id;
@@ -655,6 +668,11 @@
       } else {
         documentSubmitterId = user.id;
       }
+
+      // Minister-DS events always run as simple workflow with a curator (the
+      // assigned deputy is the final approver); the server enforces this too.
+      const effWorkflowType = isMinisterDS ? 'simple' : workflowType;
+      const effCuratorRequired = isMinisterDS ? true : curatorRequired;
 
       // DS=SUPERVISOR: responsible supervisor is the same person as the DS
       if (dsRole === 'SUPERVISOR') {
@@ -668,8 +686,8 @@
           documentSubmitterId,
           deputyId,
           supervisorId,
-          curatorRequired,
-          workflowType,
+          curatorRequired: effCuratorRequired,
+          workflowType: effWorkflowType,
           language, deadlineDate, occasion,
           sections,
         });
@@ -781,13 +799,33 @@
     document.getElementById('newWorkflowType').addEventListener('change', applyWorkflowTypeVisibility);
     applyWorkflowTypeVisibility();
 
-    // Protocol: lock the document submitter to Deputy/Minister and hide the
-    // role selector. newDSRole stays in the DOM defaulting to 'DEPUTY', so the
-    // rest of the form logic (deputy picker, responsible supervisor) keeps
-    // working unchanged.
+    // When the Minister is the Document Submitter, the deputy picker becomes the
+    // Curator picker (the deputy is the chain's final approver) and the workflow
+    // is forced to simple + curator. The server enforces the same constraints.
+    function applyMinisterMode() {
+      const isMin = document.getElementById('newDSRole').value === 'MINISTER';
+      const label = document.getElementById('deputyLabel');
+      if (label) label.textContent = I18n.tr(isMin ? 'calendar.form.curatorDeputy' : 'calendar.form.deputy');
+      const wfEl = document.getElementById('newWorkflowType');
+      const curEl = document.getElementById('newCurator');
+      if (isMin) {
+        if (wfEl) { wfEl.value = 'simple'; wfEl.disabled = true; }
+        if (curEl) { curEl.value = 'yes'; curEl.disabled = true; }
+      } else {
+        if (wfEl) wfEl.disabled = false;
+        if (curEl) curEl.disabled = false;
+      }
+    }
+
+    // Protocol assigns the document to a Deputy or the Minister only — drop the
+    // Supervisor / Super-Collaborator submitter options and keep the selector
+    // visible so they can choose between Deputy and Minister.
     if (isProtocol) {
-      document.getElementById('newDSRole').value = 'DEPUTY';
-      document.getElementById('dsRoleGroup').style.display = 'none';
+      const dsRoleSel = document.getElementById('newDSRole');
+      Array.from(dsRoleSel.options).forEach(o => {
+        if (o.value !== 'DEPUTY' && o.value !== 'MINISTER') o.remove();
+      });
+      dsRoleSel.value = 'DEPUTY';
       document.getElementById('deputyGroup').style.display = '';
     }
 
@@ -795,13 +833,14 @@
     document.getElementById('newDSRole').addEventListener('change', async () => {
       const dsRole = document.getElementById('newDSRole').value;
       document.getElementById('deputyGroup').style.display =
-        dsRole === 'DEPUTY' ? '' : 'none';
+        (dsRole === 'DEPUTY' || dsRole === 'MINISTER') ? '' : 'none';
       // supervisorGroup visibility is set by applyWorkflowTypeVisibility
       // (it depends on both DS role and workflow type).
       document.getElementById('dsSupervisorGroup').style.display =
         dsRole === 'SUPERVISOR' ? '' : 'none';
       document.getElementById('dsSCGroup').style.display =
         dsRole === 'SUPER_COLLABORATOR' ? '' : 'none';
+      applyMinisterMode();
       applyWorkflowTypeVisibility();
 
       if (dsRole !== 'DEPUTY') {

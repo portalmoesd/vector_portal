@@ -248,8 +248,9 @@ async function migrate() {
     }
 
     // ── Ensure Deputy users exist (idempotent) ────────────────────────────────
+    // Note: Mariam Kvrivishvili is the Minister and is seeded separately below
+    // as a first-class MINISTER-role user (not a Deputy).
     const deputyUsers = [
-      { fullName: 'Mariam Kvrivishvili', email: 'mkvrivishvili@moesd.gov.ge', isMinister: true },
       { fullName: 'Nino Enukidze', email: 'nenukidze@moesd.gov.ge' },
       { fullName: 'Genadi Arveladze', email: 'garveladze@moesd.gov.ge' },
       { fullName: 'Inga Pkhaladze', email: 'ipkhaladze@moesd.gov.ge' },
@@ -263,16 +264,37 @@ async function migrate() {
     const defaultHashDeputy = await bcrypt.hash('vector2026', 10);
     for (const dep of deputyUsers) {
       const username = dep.email.split('@')[0].toLowerCase().replace(/[^a-z0-9.]/g, '');
-      // is_minister is seeded as an initial default only. Once the user
-      // exists, the admin's choice in the UI is authoritative, so we don't
-      // override it on conflict.
       await db.query(
-        `INSERT INTO users (full_name, username, email, password_hash, role, department_id, is_minister, must_change_password)
-         VALUES ($1, $2, $3, $4, 'DEPUTY', NULL, $5, true)
+        `INSERT INTO users (full_name, username, email, password_hash, role, department_id, must_change_password)
+         VALUES ($1, $2, $3, $4, 'DEPUTY', NULL, true)
          ON CONFLICT (username) DO UPDATE SET department_id = NULL`,
-        [dep.fullName, username, dep.email, defaultHashDeputy, dep.isMinister || false]
+        [dep.fullName, username, dep.email, defaultHashDeputy]
       );
     }
+
+    // ── Ensure the Minister exists as a first-class MINISTER role (idempotent) ─
+    // The Minister is a read-only Library consumer who never participates in the
+    // workflow. She/he may be named as a Document Submitter while an assigned
+    // deputy drives the document as curator.
+    {
+      const minister = { fullName: 'Mariam Kvrivishvili', email: 'mkvrivishvili@moesd.gov.ge' };
+      const username = minister.email.split('@')[0].toLowerCase().replace(/[^a-z0-9.]/g, '');
+      await db.query(
+        `INSERT INTO users (full_name, username, email, password_hash, role, department_id, must_change_password)
+         VALUES ($1, $2, $3, $4, 'MINISTER', NULL, true)
+         ON CONFLICT (username) DO UPDATE SET role = 'MINISTER', is_minister = false`,
+        [minister.fullName, username, minister.email, defaultHashDeputy]
+      );
+    }
+
+    // ── Migrate any legacy is_minister-flagged Deputy to the MINISTER role ─────
+    // The Minister used to be modelled as a DEPUTY carrying is_minister=true.
+    // Promote any such user to the first-class role and clear the deprecated
+    // flag. (In-flight events where that user was a Deputy approver may need an
+    // admin to resolve, since a Minister no longer participates in the workflow.)
+    await db.query(
+      "UPDATE users SET role = 'MINISTER', is_minister = false, updated_at = now() WHERE is_minister = true AND role <> 'MINISTER'"
+    );
 
     // ── Create Deputy–Supervisor links (idempotent) ───────────────────────────
     // Links define which Deputies/Minister oversee which Supervisors (from org chart)

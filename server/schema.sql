@@ -6,7 +6,12 @@ BEGIN;
 
 DO $$ BEGIN CREATE TYPE user_role AS ENUM ('ADMIN','PROTOCOL','DEPUTY','SUPERVISOR','SUPER_COLLABORATOR','COLLABORATOR','ANALYST'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN ALTER TYPE user_role ADD VALUE IF NOT EXISTS 'ANALYST'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+-- The Minister is a first-class role: a read-only Library consumer who never
+-- participates in the workflow. May be named as a Document Submitter (the doc
+-- is "theirs") while an assigned deputy drives it as curator.
+DO $$ BEGIN ALTER TYPE user_role ADD VALUE IF NOT EXISTS 'MINISTER'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE ds_role AS ENUM ('DEPUTY','SUPERVISOR','SUPER_COLLABORATOR'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+DO $$ BEGIN ALTER TYPE ds_role ADD VALUE IF NOT EXISTS 'MINISTER'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE event_language AS ENUM ('EN','FR','AR','ES','RU','ZH','PT','DE','KA'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN ALTER TYPE event_language ADD VALUE IF NOT EXISTS 'KA'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE event_status AS ENUM ('DRAFT','IN_PROGRESS','COMPLETED','ARCHIVED'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
@@ -56,8 +61,10 @@ CREATE TABLE IF NOT EXISTS users (
 );
 -- Backfill for databases predating the entity_name column.
 ALTER TABLE users ADD COLUMN IF NOT EXISTS entity_name VARCHAR(200);
--- The Minister is modelled as a DEPUTY (same workflow position) but flagged
--- so the UI can label her "Minister". Backfill for older databases.
+-- DEPRECATED: the Minister used to be modelled as a DEPUTY flagged with
+-- is_minister. It is now a first-class 'MINISTER' user_role (see migration in
+-- server/index.js). The column is kept for backward compatibility / backfill
+-- but is no longer read or written by the application.
 ALTER TABLE users ADD COLUMN IF NOT EXISTS is_minister BOOLEAN NOT NULL DEFAULT false;
 
 -- ─── Country Assignments ────────────────────────────────────────────────────

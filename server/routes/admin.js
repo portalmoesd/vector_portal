@@ -213,6 +213,21 @@ router.get('/deputies', requireAuth, async (req, res) => {
   }
 });
 
+// ─── Minister (for the create-event Document Submitter picker) ────────────────
+
+// GET /api/admin/minister — the single MINISTER user, or null if none exists.
+router.get('/minister', requireAuth, async (req, res) => {
+  try {
+    const { rows: [m] } = await db.query(
+      `SELECT id, full_name FROM users WHERE role = 'MINISTER' ORDER BY id LIMIT 1`
+    );
+    res.json(m ? { id: m.id, fullName: m.full_name } : null);
+  } catch (err) {
+    console.error('Get minister error:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // ─── All supervisors list (for dropdowns) ────────────────────────────────────
 
 router.get('/all-supervisors', requireAuth, async (req, res) => {

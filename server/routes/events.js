@@ -133,10 +133,17 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
     // (no Department A vs B), so supervisorId is forced to null. The
     // curator flag, however, is opt-in for both modes — when set in
     // simple mode the chain gets a CURATOR step at the end.
-    const workflowType = rawWorkflowType === 'simple' ? 'simple' : 'advanced';
+    // A Minister DS never acts: the document is driven by an assigned deputy
+    // acting as curator, and the event auto-publishes via checkEventCompletion.
+    // That only works in 'simple' mode (advanced would require the Minister to
+    // click "Send to library"), so force simple + curator for Minister-DS events.
+    const isMinisterDS = documentSubmitterRole === 'MINISTER';
+    const workflowType = isMinisterDS
+      ? 'simple'
+      : (rawWorkflowType === 'simple' ? 'simple' : 'advanced');
     // Accept boolean true OR string 'yes' / 'true' for forgiving
     // intake from any caller that might serialise differently.
-    const effectiveCuratorRequired = curatorRequired === true
+    const effectiveCuratorRequired = isMinisterDS || curatorRequired === true
       || curatorRequired === 'true'
       || curatorRequired === 'yes';
     const effectiveSupervisorId = workflowType === 'simple' ? null : (supervisorId || null);
@@ -144,6 +151,12 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
 
     if (!title || !countryId || !documentSubmitterRole || !documentSubmitterId) {
       return res.status(400).json({ error: 'Missing required fields' });
+    }
+
+    // A Minister-DS event needs an assigned deputy to act as curator (the
+    // chain's final approver). Without it the document could never be approved.
+    if (isMinisterDS && !deputyId) {
+      return res.status(400).json({ error: 'A curator (deputy) is required when the Minister is the Document Submitter' });
     }
 
     // ── Role-based DS assignment validation ──────────────────────────────
