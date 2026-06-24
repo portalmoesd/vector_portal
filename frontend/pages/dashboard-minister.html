@@ -29,12 +29,13 @@
     .mn-toggle__btn.is-active { background: var(--accent, #2563eb); color: #fff; }
 
     /* Top row: calendar (left) + expanded chosen-event detail panel (right) */
-    .mn-top { display: flex; gap: 20px; align-items: flex-start; }
-    .mn-top .dp-calendar { flex: 0 0 320px; }
-    .mn-detail { flex: 1; min-width: 0; }
+    .mn-top {
+      display: grid; grid-template-columns: 320px minmax(0, 1fr);
+      gap: 20px; align-items: start;
+    }
+    .mn-detail { min-width: 0; }
     @media (max-width: 900px) {
-      .mn-top { flex-direction: column; }
-      .mn-top .dp-calendar { flex: none; width: 100%; }
+      .mn-top { grid-template-columns: 1fr; }
     }
 
     /* Detail panel */

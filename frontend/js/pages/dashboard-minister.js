@@ -33,19 +33,19 @@
   let selectedId = null;  // currently expanded event id (within the active mode)
 
   // ── Load data ────────────────────────────────────────────────────────────
+  // Use allSettled so one failing endpoint can't blank the whole dashboard
+  // (the calendar must still render even if a list fails to load).
   let completed = [];
   let upcoming = [];
-  try {
-    const [library, events] = await Promise.all([
-      Api.get('/api/library'),
-      Api.get('/api/events'),
-    ]);
-    completed = library || [];
-    // Events still being prepared (not yet completed/archived).
-    upcoming = (events || []).filter(e => e.isActive);
-  } catch (e) {
-    listEl.innerHTML = `<div class="msg msg-error">${escapeHtml(e.message)}</div>`;
-    return;
+  const [libRes, evRes] = await Promise.allSettled([
+    Api.get('/api/library'),
+    Api.get('/api/events'),
+  ]);
+  if (libRes.status === 'fulfilled') completed = libRes.value || [];
+  // Events still being prepared (not yet completed/archived).
+  if (evRes.status === 'fulfilled') upcoming = (evRes.value || []).filter(e => e.isActive);
+  if (libRes.status === 'rejected' && evRes.status === 'rejected') {
+    listEl.innerHTML = `<div class="msg msg-error">${escapeHtml(libRes.reason?.message || 'Failed to load')}</div>`;
   }
 
   // ── Helpers ────────────────────────────────────────────────────────────────
@@ -253,9 +253,11 @@
   }
 
   function renderAll() {
+    // Render the calendar first so it always appears, even if a list render
+    // hits an unexpected snag.
+    renderCalendar(calendarDate);
     renderList();
     renderDetail();
-    renderCalendar(calendarDate);
   }
 
   // ── Wire controls ────────────────────────────────────────────────────────────
