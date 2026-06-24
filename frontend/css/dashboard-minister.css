@@ -172,13 +172,11 @@
   .mn-dash .mn-list { grid-template-columns: repeat(2, 1fr); }
 }
 .mn-dash .mn-list .mn-card {
-  position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  min-height: 168px;
-  padding: 20px 22px 16px 26px;
+  min-height: 160px;
+  padding: 20px 22px;
   cursor: pointer;
   background: var(--card);
   backdrop-filter: blur(12px);
@@ -186,53 +184,27 @@
   box-shadow: var(--shadow-sm);
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
-/* left status rail */
-.mn-dash .mn-list .mn-card::before {
-  content: "";
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 5px;
-  background: var(--accent-blue, #3b82f6);
-}
-.mn-dash .mn-list .mn-card--completed::before { background: var(--accent-green, #16a34a); }
-.mn-dash .mn-list .mn-card--inprogress::before { background: var(--accent-orange, #f97316); }
 .mn-dash .mn-list .mn-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
   background: rgba(255,255,255,0.94);
 }
 
-/* card header: country medallion + country name + status badge */
-.mn-dash .mn-card__head { display: flex; align-items: center; gap: 12px; }
-.mn-dash .mn-card__flag {
-  flex: 0 0 auto;
-  width: 44px; height: 44px;
-  display: flex; align-items: center; justify-content: center;
-  border-radius: 13px;
-  font-size: 0.92rem; font-weight: 800; letter-spacing: 0.03em;
-  color: #fff;
-  background: linear-gradient(150deg, var(--primary, #0a84ff), var(--primary-2, #0071e3));
-  box-shadow: 0 5px 14px rgba(10,132,255,0.30);
+/* card header: round country flag + title */
+.mn-dash .mn-card__head { display: flex; align-items: center; gap: 14px; }
+.mn-dash .mn-card__flag { flex: 0 0 auto; width: 46px; height: 46px; line-height: 0; }
+.mn-dash .mn-card__flag img {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 0 0 1px var(--border), 0 3px 8px rgba(0,0,0,0.12);
   transition: transform 180ms ease;
 }
-.mn-dash .mn-card__headtext { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-.mn-dash .mn-card__country {
-  font-size: 0.9rem; font-weight: 700; color: var(--text-primary);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-.mn-dash .mn-badge {
-  align-self: flex-start;
-  padding: 2px 10px;
-  border-radius: 999px;
-  font-size: 0.68rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.04em;
-}
-.mn-dash .mn-badge--completed { color: #15803d; background: rgba(22,163,74,0.13); }
-.mn-dash .mn-badge--inprogress { color: #b45309; background: rgba(249,115,22,0.15); }
-
 .mn-dash .mn-card__title {
-  margin: 2px 0 0;
-  font-size: 1.02rem;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 1.04rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--text-primary);
@@ -265,7 +237,7 @@
   color: var(--text-secondary);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
-.mn-dash .mn-card__meta .is-soon { color: var(--accent-orange, #f97316); font-weight: 700; }
+.mn-dash .mn-card__meta .is-soon { color: var(--primary, #0a84ff); font-weight: 700; }
 .mn-dash .mn-card__meta .is-overdue { color: var(--accent-red, #dc2626); font-weight: 700; }
 .mn-dash .mn-card__cta {
   flex: 0 0 auto;
@@ -275,7 +247,7 @@
 }
 .mn-dash .mn-card__arrow { transition: transform 180ms ease; }
 .mn-dash .mn-list .mn-card:hover .mn-card__arrow { transform: translateX(4px); }
-.mn-dash .mn-list .mn-card:hover .mn-card__flag { transform: scale(1.06); }
+.mn-dash .mn-list .mn-card:hover .mn-card__flag img { transform: scale(1.06); }
 
 /* ── Detail panel (chosen, expanded) ───────────────────────────────────────── */
 .mn-dash .mn-detail__placeholder {

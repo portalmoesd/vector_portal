@@ -118,16 +118,18 @@
     const d = new Date(deadline); d.setHours(0, 0, 0, 0);
     const days = Math.round((d - today) / 86400000);
     if (days < 0) return { text: I18n.tr('dashboard.overdue'), cls: 'is-overdue' };
-    if (days === 0) return { text: I18n.tr('dashboard.dueToday'), cls: 'is-soon' };
+    if (days === 0) return { text: I18n.tr('dashboard.dueToday'), cls: 'is-overdue' };
     if (days <= 7) return { text: I18n.tr('dashboard.dueInDays').replace('{n}', days), cls: 'is-soon' };
     return { text: `${I18n.tr('dashboard.deadline')}: ${formatDate(deadline)}`, cls: '' };
   }
 
   function listCardHtml(d) {
     const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
-    const medallion = (d.countryCode || '··').toUpperCase().slice(0, 2);
+    const code = (d.countryCode || '').toLowerCase();
+    const flag = code
+      ? `<img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" loading="lazy" onerror="this.closest('.mn-card__flag').style.display='none'">`
+      : '';
     const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
-    const badge = mode === 'completed' ? I18n.tr('dashboard.toggleCompleted') : I18n.tr('dashboard.toggleUpcoming');
     const lang = languageLabel(d.language || 'EN');
 
     let excerpt = '';
@@ -145,13 +147,9 @@
     return `
       <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}">
         <div class="mn-card__head">
-          <span class="mn-card__flag">${escapeHtml(medallion)}</span>
-          <div class="mn-card__headtext">
-            <span class="mn-card__country">${escapeHtml(country)}</span>
-            <span class="mn-badge ${mode === 'completed' ? 'mn-badge--completed' : 'mn-badge--inprogress'}">${escapeHtml(badge)}</span>
-          </div>
+          <span class="mn-card__flag" title="${escapeHtml(country)}">${flag}</span>
+          <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
         </div>
-        <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
         ${excerpt}
         <div class="mn-card__foot">
           <span class="mn-card__meta">${meta}</span>
