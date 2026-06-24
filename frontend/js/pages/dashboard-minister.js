@@ -101,7 +101,6 @@
     return user.fullName || user.username || '';
   }
 
-  const heroEl = document.getElementById('mnHero');
   const heroIconEl = document.getElementById('mnHeroIcon');
   const clockEl = document.getElementById('mnClock');
 
@@ -115,10 +114,6 @@
     if (gEl) gEl.textContent = name ? `${greeting}, ${name}` : greeting;
     const dEl = document.getElementById('mnDate');
     if (dEl) dEl.textContent = longDate(new Date(parseInt(t.year, 10), parseInt(t.month, 10) - 1, parseInt(t.day, 10)));
-    if (heroEl) {
-      heroEl.classList.remove('mn-hero--morning', 'mn-hero--afternoon', 'mn-hero--evening', 'mn-hero--night');
-      heroEl.classList.add('mn-hero--' + pod);
-    }
     if (heroIconEl) heroIconEl.innerHTML = HERO_ICONS[pod];
     if (clockEl) clockEl.textContent = `${String(hourNum).padStart(2, '0')}:${t.minute}`;
   }
