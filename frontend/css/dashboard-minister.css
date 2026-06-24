@@ -32,12 +32,22 @@
   font-size: 0.9rem;
   color: rgba(255,255,255,0.78);
 }
-/* ── Controls: search (pill) + centered segmented toggle ───────────────────── */
-.mn-dash .mn-controls { margin-bottom: 18px; }
+/* ── Unified workspace: toolbar (toggle + search) above calendar/detail ────── */
+.mn-dash .mn-workspace { padding: 20px 22px; }
+.mn-dash .mn-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
 .mn-dash .mn-search {
   position: relative;
-  max-width: 380px;
-  margin: 0 auto 14px;
+  flex: 0 1 340px;
+  min-width: 220px;
 }
 .mn-dash .mn-search input {
   width: 100%;
@@ -62,7 +72,6 @@
   pointer-events: none;
 }
 
-.mn-dash .mn-toggle-wrap { display: flex; justify-content: center; }
 .mn-dash .mn-toggle {
   position: relative;
   display: inline-flex;
