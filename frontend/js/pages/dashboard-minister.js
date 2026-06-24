@@ -114,8 +114,11 @@
     if (gEl) gEl.textContent = name ? `${greeting}, ${name}` : greeting;
     const dEl = document.getElementById('mnDate');
     if (dEl) dEl.textContent = longDate(new Date(parseInt(t.year, 10), parseInt(t.month, 10) - 1, parseInt(t.day, 10)));
-    if (heroIconEl) heroIconEl.innerHTML = HERO_ICONS[pod];
-    if (clockEl) clockEl.textContent = `${String(hourNum).padStart(2, '0')}:${t.minute}`;
+    if (heroIconEl) {
+      heroIconEl.className = 'mn-hero__icon mn-hero__icon--' + pod;
+      heroIconEl.innerHTML = HERO_ICONS[pod];
+    }
+    if (clockEl) clockEl.innerHTML = `${String(hourNum).padStart(2, '0')}<span class="mn-hero__colon">:</span>${t.minute}`;
   }
   paintHero();
   setInterval(paintHero, 30000);
