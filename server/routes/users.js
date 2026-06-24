@@ -9,7 +9,7 @@ const router = express.Router();
 router.get('/', requireAuth, requireRole('ADMIN'), async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT u.id, u.full_name, u.username, u.email, u.role,
+      `SELECT u.id, u.full_name, u.full_name_ka, u.username, u.email, u.role,
               u.department_id, u.is_external, u.entity_name, u.must_change_password,
               d.name AS department_name
        FROM users u
@@ -19,6 +19,7 @@ router.get('/', requireAuth, requireRole('ADMIN'), async (req, res) => {
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       username: r.username,
       email: r.email,
       role: r.role,
@@ -37,8 +38,12 @@ router.get('/', requireAuth, requireRole('ADMIN'), async (req, res) => {
 // POST /api/users — create user (admin only)
 router.post('/', requireAuth, requireRole('ADMIN'), async (req, res) => {
   try {
-    const { fullName, username, email, password, role, departmentId, isExternal, entityName, countryIds } = req.body;
-    if (!fullName || !username || !email || !password || !role) {
+    const { fullName, fullNameKa, username, email, password, role, departmentId, isExternal, entityName, countryIds } = req.body;
+    if (!fullName || !fullNameKa || !username || !email || !password || !role) {
+      return res.status(400).json({ error: 'Missing required fields' });
+    }
+    const fullNameKaValue = fullNameKa.trim() || null;
+    if (!fullNameKaValue) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -55,10 +60,10 @@ router.post('/', requireAuth, requireRole('ADMIN'), async (req, res) => {
       await client.query('BEGIN');
 
       const { rows } = await client.query(
-        `INSERT INTO users (full_name, username, email, password_hash, role, department_id, is_external, entity_name)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+        `INSERT INTO users (full_name, full_name_ka, username, email, password_hash, role, department_id, is_external, entity_name)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
          RETURNING id`,
-        [fullName, username, email, hash, role, dept, ext, entity]
+        [fullName, fullNameKaValue, username, email, hash, role, dept, ext, entity]
       );
 
       const userId = rows[0].id;
@@ -94,13 +99,20 @@ router.post('/', requireAuth, requireRole('ADMIN'), async (req, res) => {
 router.patch('/:id', requireAuth, requireRole('ADMIN'), async (req, res) => {
   try {
     const userId = parseInt(req.params.id);
-    const { fullName, email, role, departmentId, isExternal, entityName, password, countryIds } = req.body;
+    const { fullName, fullNameKa, email, role, departmentId, isExternal, entityName, password, countryIds } = req.body;
+
+    // Georgian name is required; reject an explicit blank so an edit can't
+    // wipe it, but allow omitting the field entirely (partial update).
+    if (fullNameKa !== undefined && !fullNameKa.trim()) {
+      return res.status(400).json({ error: 'Georgian name is required' });
+    }
 
     const sets = [];
     const params = [];
     let idx = 1;
 
     if (fullName !== undefined) { sets.push(`full_name = $${idx++}`); params.push(fullName); }
+    if (fullNameKa !== undefined) { sets.push(`full_name_ka = $${idx++}`); params.push(fullNameKa.trim()); }
     if (email !== undefined) { sets.push(`email = $${idx++}`); params.push(email); }
     if (role !== undefined) { sets.push(`role = $${idx++}`); params.push(role); }
 

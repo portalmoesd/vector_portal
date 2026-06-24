@@ -132,7 +132,7 @@
     const editor = GCP.RichEditor({
       container: editorContainer,
       initialHtml: content.htmlContent || '',
-      authorName: user.fullName || user.username,
+      authorName: localizedName(user.fullName, user.fullNameKa) || user.username,
       sectionTitle: s.sectionLabel,
       readOnly: !canEdit,
       async onCommentsClick(anchorId) {
@@ -548,7 +548,7 @@
         id: c.id,
         anchor_id: c.anchorId || null,
         parent_id: c.parentId || null,
-        author_name: c.userName || 'User',
+        author_name: localizedName(c.userName, c.userNameKa) || 'User',
         comment_text: c.content || '',
         created_at: c.createdAt || new Date().toISOString(),
         can_delete: c.userId === user.id || user.role === 'admin',

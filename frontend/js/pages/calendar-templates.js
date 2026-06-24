@@ -107,7 +107,7 @@
 
           html += `<div class="tpl-pick-group" style="padding:4px 0;">
             <div style="padding:4px 14px;font-size:11px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:.5px;">
-              ${escapeHtml(deputy.deputyName)}
+              ${escapeHtml(localizedName(deputy.deputyName, deputy.deputyNameKa))}
             </div>`;
           for (const d of deptItems) {
             const isSel = selected.has(d.id);
@@ -283,7 +283,7 @@
                 ${badge}
               </div>
               <div style="font-size:12px;color:var(--muted,#666);margin-top:2px;">
-                ${t.sections.length} section(s) &middot; ${totalDepts} department(s)${t.createdByName ? ' &middot; By: ' + escapeHtml(t.createdByName) : ''}
+                ${t.sections.length} section(s) &middot; ${totalDepts} department(s)${t.createdByName ? ' &middot; By: ' + escapeHtml(localizedName(t.createdByName, t.createdByNameKa)) : ''}
               </div>
             </div>
             <div style="display:flex;gap:6px;" onclick="event.stopPropagation()">${actionBtns}</div>
