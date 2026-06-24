@@ -1,0 +1,291 @@
+/* ───────────────────────────────────────────────────────────────────────────
+   Minister Dashboard — "Executive Glass" skin.
+
+   Everything is scoped under .mn-dash so the shared dashboard-pipeline.css
+   (used by the other dashboards) is never affected. Uses ONLY the existing
+   palette: gov navy (--gp-sidebar-accent), azure (--primary / --accent-blue),
+   and the existing status accents (--accent-green, --accent-orange).
+   ─────────────────────────────────────────────────────────────────────────── */
+
+/* ── Hero ──────────────────────────────────────────────────────────────────── */
+.mn-dash .mn-hero {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  margin-bottom: 18px;
+  background:
+    radial-gradient(900px 360px at 88% -40%, rgba(10,132,255,0.20), transparent 60%),
+    linear-gradient(135deg, var(--gp-sidebar-accent) 0%, #1f3346 60%, #16273a 100%);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+.mn-dash .mn-hero__greeting {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+.mn-dash .mn-hero__date {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.78);
+}
+.mn-dash .mn-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.mn-dash .mn-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.mn-dash .mn-stat__num { font-size: 1.15rem; font-weight: 800; line-height: 1; }
+.mn-dash .mn-stat__label { font-size: 0.78rem; color: rgba(255,255,255,0.82); }
+
+/* ── Controls: search (pill) + centered segmented toggle ───────────────────── */
+.mn-dash .mn-controls { margin-bottom: 18px; }
+.mn-dash .mn-search {
+  position: relative;
+  max-width: 380px;
+  margin: 0 auto 14px;
+}
+.mn-dash .mn-search .form-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.mn-dash .mn-search input {
+  width: 100%;
+  border-radius: 999px;
+  padding: 10px 16px 10px 40px;
+  border: 1px solid var(--border-input);
+  background: rgba(255,255,255,0.82);
+  transition: box-shadow 180ms ease, border-color 180ms ease;
+}
+.mn-dash .mn-search input:focus {
+  outline: none;
+  border-color: rgba(10,132,255,0.45);
+  box-shadow: 0 0 0 4px rgba(10,132,255,0.18);
+}
+.mn-dash .mn-search__icon {
+  position: absolute;
+  left: 14px;
+  bottom: 11px;
+  width: 16px; height: 16px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.mn-dash .mn-toggle-wrap { display: flex; justify-content: center; }
+.mn-dash .mn-toggle {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-sm);
+}
+.mn-dash .mn-toggle__btn {
+  position: relative;
+  z-index: 1;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px 26px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  border-radius: 999px;
+  transition: color 200ms ease;
+}
+.mn-dash .mn-toggle__btn.is-active { color: #fff; }
+/* sliding thumb */
+.mn-dash .mn-toggle__thumb {
+  position: absolute;
+  top: 4px; bottom: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--primary, #0a84ff), var(--primary-2, #0071e3));
+  box-shadow: 0 6px 16px rgba(10,132,255,0.35);
+  transition: left 260ms cubic-bezier(.22,.61,.36,1), width 260ms cubic-bezier(.22,.61,.36,1);
+  z-index: 0;
+}
+
+/* ── Top row: calendar + detail ────────────────────────────────────────────── */
+.mn-dash .mn-top {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.mn-dash .mn-detail { min-width: 0; }
+@media (max-width: 900px) {
+  .mn-dash .mn-top { grid-template-columns: 1fr; }
+}
+
+/* ── Calendar refinements (scoped — does not touch other dashboards) ────────── */
+.mn-dash .dp-calendar {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-sm);
+}
+.mn-dash .dp-cal-grid__day {
+  position: relative;
+  border-radius: 12px;
+  transition: background 160ms ease;
+}
+.mn-dash .dp-cal-grid__day--today {
+  color: var(--primary, #0a84ff);
+}
+.mn-dash .dp-cal-grid__day--today::after {
+  content: "";
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  bottom: 3px;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--primary, #0a84ff);
+}
+/* event days: subtle tint + an accent dot under the numeral (no full fill) */
+.mn-dash .dp-cal-grid__day--has-event {
+  background: rgba(10,132,255,0.08);
+  color: var(--text-primary);
+  font-weight: 700;
+}
+.mn-dash .dp-cal-grid__day--has-event::after {
+  content: "";
+  position: absolute;
+  left: 50%; transform: translateX(-50%);
+  bottom: 3px;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: linear-gradient(180deg, var(--primary, #0a84ff), var(--primary-2, #0071e3));
+}
+.mn-dash .dp-cal-grid__day--has-event:hover {
+  background: rgba(10,132,255,0.18);
+}
+
+/* ── Unchosen event cards (below) ──────────────────────────────────────────── */
+.mn-dash .mn-list { margin-top: 20px; display: grid; gap: 12px; }
+.mn-dash .mn-list .dp-upcoming-event {
+  position: relative;
+  overflow: hidden;
+  padding-left: 22px;
+  background: var(--card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+/* left status rail */
+.mn-dash .mn-list .dp-upcoming-event::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 5px;
+  background: var(--accent-blue, #3b82f6);
+}
+.mn-dash .mn-list .mn-card--completed::before { background: var(--accent-green, #16a34a); }
+.mn-dash .mn-list .mn-card--inprogress::before { background: var(--accent-orange, #f97316); }
+.mn-dash .mn-list .dp-upcoming-event:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: rgba(255,255,255,0.92);
+}
+
+/* ── Detail panel (chosen, expanded) ───────────────────────────────────────── */
+.mn-dash .mn-detail__placeholder {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 240px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  text-align: center;
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+.mn-dash .mn-detail__panel { animation: mnReveal 280ms cubic-bezier(.22,.61,.36,1); }
+@keyframes mnReveal {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.mn-dash .mn-detail__head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+}
+.mn-dash .mn-detail__title {
+  margin: 0; font-size: 1.15rem; font-weight: 800; letter-spacing: -0.02em;
+}
+.mn-dash .mn-detail__close {
+  background: rgba(0,0,0,0.04); border: 1px solid var(--border);
+  width: 30px; height: 30px; border-radius: 50%;
+  font-size: 18px; line-height: 1; cursor: pointer; color: var(--text-secondary);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 160ms ease;
+}
+.mn-dash .mn-detail__close:hover { background: rgba(0,0,0,0.08); }
+.mn-dash .mn-detail__meta {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  font-size: 0.8rem; color: var(--text-secondary); margin: 8px 0 4px;
+}
+
+/* document rendered on a white "paper" sheet */
+.mn-dash .mn-paper {
+  margin-top: 14px;
+  max-height: 60vh; overflow-y: auto;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 28px 32px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), 0 8px 22px rgba(0,0,0,0.06);
+}
+.mn-dash .mn-paper .section-block { margin-bottom: 22px; }
+.mn-dash .mn-paper .section-block h3 {
+  font-size: 0.95rem; font-weight: 700;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px; margin: 0 0 10px;
+}
+.mn-dash .mn-detail__body { margin-top: 12px; }
+
+/* Library action row (PDF / Word / Files) inside the detail panel */
+.mn-dash .mn-card-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+.mn-dash .mn-card-actions .btn { padding: 6px 14px; font-size: 12px; }
+
+/* ── Document preview / files modal (mirrors the Library page styles) ──────── */
+.preview-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  display: flex; align-items: center; justify-content: center; z-index: 300;
+}
+.preview-card {
+  background: var(--bg-card); border-radius: var(--radius-lg);
+  width: 90%; max-width: 900px; max-height: 90vh; overflow-y: auto;
+  padding: 32px; box-shadow: var(--shadow-lg);
+}
+.preview-card .section-block { margin-bottom: 24px; }
+.preview-card .section-block h3 {
+  font-size: 0.95rem; border-bottom: 1px solid var(--border-color);
+  padding-bottom: 8px; margin-bottom: 12px;
+}
+.preview-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 12px;
+}
+.preview-header h2 { margin: 0; font-size: 1.1rem; }
+.preview-close {
+  background: none; border: none; font-size: 24px;
+  cursor: pointer; color: var(--text-secondary); padding: 4px 8px;
+}

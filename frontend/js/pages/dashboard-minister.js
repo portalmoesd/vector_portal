@@ -27,6 +27,7 @@
   const miniCalendarEl = document.getElementById('miniCalendar');
   const keywordEl = document.getElementById('filterKeyword');
   const toggleBtns = Array.from(document.querySelectorAll('.mn-toggle__btn'));
+  const toggleThumb = document.getElementById('mnToggleThumb');
 
   let mode = 'completed'; // 'completed' | 'upcoming'
   let calendarDate = new Date();
@@ -47,6 +48,36 @@
   if (libRes.status === 'rejected' && evRes.status === 'rejected') {
     listEl.innerHTML = `<div class="msg msg-error">${escapeHtml(libRes.reason?.message || 'Failed to load')}</div>`;
   }
+
+  // ── Hero: greeting + date + live counts ─────────────────────────────────────
+  function populateHero() {
+    const h = new Date().getHours();
+    const gKey = h < 12 ? 'greetingMorning' : (h < 18 ? 'greetingAfternoon' : 'greetingEvening');
+    const greeting = I18n.tr('dashboard.' + gKey);
+    const name = user.fullName || user.username || '';
+    const gEl = document.getElementById('mnGreeting');
+    if (gEl) gEl.textContent = name ? `${greeting}, ${name}` : greeting;
+    const dEl = document.getElementById('mnDate');
+    if (dEl) {
+      const loc = (typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB';
+      dEl.textContent = new Date().toLocaleDateString(loc, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+    }
+    const cEl = document.getElementById('mnStatCompleted');
+    const pEl = document.getElementById('mnStatProgress');
+    if (cEl) cEl.textContent = String(completed.length);
+    if (pEl) pEl.textContent = String(upcoming.length);
+  }
+  populateHero();
+
+  // Slide the segmented-toggle thumb under the active option.
+  function positionThumb() {
+    if (!toggleThumb) return;
+    const active = toggleBtns.find(b => b.classList.contains('is-active'));
+    if (!active) return;
+    toggleThumb.style.left = active.offsetLeft + 'px';
+    toggleThumb.style.width = active.offsetWidth + 'px';
+  }
+  window.addEventListener('resize', positionThumb);
 
   // ── Helpers ────────────────────────────────────────────────────────────────
   function activeItems() {
@@ -89,8 +120,9 @@
       pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>`);
       if (d.workflowType === 'simple') pills.push(`<span class="dp-upcoming-event__pill" title="${escapeHtml(I18n.tr('dashboard.workflowSimpleTooltip'))}">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>`);
     }
+    const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
     return `
-      <div class="dp-upcoming-event" data-event-id="${d.id}" style="cursor:pointer;">
+      <div class="dp-upcoming-event ${statusClass}" data-event-id="${d.id}" style="cursor:pointer;">
         <h4 class="dp-upcoming-event__title">${escapeHtml(d.title)}</h4>
         <div class="dp-upcoming-event__pills">${pills.join('')}</div>
       </div>
@@ -131,19 +163,21 @@
 
     if (mode === 'completed') {
       detailEl.innerHTML = `
-        ${detailHeaderHtml(item.title)}
-        <div class="mn-detail__meta">
-          <span>${escapeHtml(country)}</span>
-          <span>${escapeHtml(I18n.tr('library.meta.language'))} ${languageLabel(item.language || 'EN')}</span>
-          ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
-        </div>
-        <div class="mn-card-actions">
-          <button class="btn btn-outline" data-act="pdf">${escapeHtml(I18n.tr('library.btn.pdf'))}</button>
-          <button class="btn btn-outline" data-act="word">${escapeHtml(I18n.tr('library.btn.word'))}</button>
-          <button class="btn btn-outline" data-act="files">${escapeHtml(I18n.tr('library.btn.files'))}</button>
-        </div>
-        <div class="mn-detail__body" id="mnDetailBody">
-          <div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.loading'))}</p></div>
+        <div class="mn-detail__panel">
+          ${detailHeaderHtml(item.title)}
+          <div class="mn-detail__meta">
+            <span>${escapeHtml(country)}</span>
+            <span>${escapeHtml(I18n.tr('library.meta.language'))} ${languageLabel(item.language || 'EN')}</span>
+            ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
+          </div>
+          <div class="mn-card-actions">
+            <button class="btn btn-outline" data-act="pdf">${escapeHtml(I18n.tr('library.btn.pdf'))}</button>
+            <button class="btn btn-outline" data-act="word">${escapeHtml(I18n.tr('library.btn.word'))}</button>
+            <button class="btn btn-outline" data-act="files">${escapeHtml(I18n.tr('library.btn.files'))}</button>
+          </div>
+          <div class="mn-paper" id="mnDetailBody">
+            <div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.loading'))}</p></div>
+          </div>
         </div>
       `;
       detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
@@ -175,9 +209,11 @@
     pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(item.language || 'EN')}</span>`);
     if (item.workflowType === 'simple') pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>`);
     detailEl.innerHTML = `
-      ${detailHeaderHtml(item.title)}
-      <div class="dp-upcoming-event__pills" style="margin-bottom:12px;">${pills.join('')}</div>
-      ${item.occasion ? `<div class="mn-detail__body">${item.occasion}</div>` : ''}
+      <div class="mn-detail__panel">
+        ${detailHeaderHtml(item.title)}
+        <div class="dp-upcoming-event__pills" style="margin:8px 0 12px;">${pills.join('')}</div>
+        ${item.occasion ? `<div class="mn-detail__body">${item.occasion}</div>` : ''}
+      </div>
     `;
     detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
   }
@@ -268,6 +304,7 @@
       mode = next;
       selectedId = null;
       toggleBtns.forEach(b => b.classList.toggle('is-active', b === btn));
+      positionThumb();
       calendarDate = new Date(); // reset to current month on switch
       renderAll();
     });
@@ -280,4 +317,7 @@
   });
 
   renderAll();
+  positionThumb();
+  // Re-position once fonts/layout settle (button widths depend on the label text).
+  requestAnimationFrame(positionThumb);
 })();
