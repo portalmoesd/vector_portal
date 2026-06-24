@@ -25,6 +25,7 @@
     "toggleUpcoming": "Upcoming",
     "searchPlaceholder": "Search by title or country...",
     "noCompleted": "No completed documents",
+    "selectEventHint": "Select an event to view its details",
     "selectEvent": "Select event",
     "selectEventPlaceholder": "Select event...",
     "noEvents": "No events available",
