@@ -62,10 +62,6 @@
       const loc = (typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB';
       dEl.textContent = new Date().toLocaleDateString(loc, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
     }
-    const cEl = document.getElementById('mnStatCompleted');
-    const pEl = document.getElementById('mnStatProgress');
-    if (cEl) cEl.textContent = String(completed.length);
-    if (pEl) pEl.textContent = String(upcoming.length);
   }
   populateHero();
 
@@ -108,10 +104,20 @@
     renderDetail();
   }
 
-  // ── List cards (below the calendar): clickable, info only ───────────────────
+  // ── List cards (below the calendar): clickable ──────────────────────────────
+  const ICON_DOC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>';
+  const ICON_CLOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+
+  function excerptText(html) {
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html || '';
+    return (tmp.textContent || '').trim();
+  }
+
   function listCardHtml(d) {
     const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
     const pills = [`<span class="dp-upcoming-event__pill">${escapeHtml(country)}</span>`];
+    let excerpt = '';
     if (mode === 'completed') {
       pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>`);
       if (d.endedAt) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(d.endedAt)}</span>`);
@@ -119,12 +125,23 @@
       if (d.deadlineDate) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.deadline'))}: ${formatDate(d.deadlineDate)}</span>`);
       pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>`);
       if (d.workflowType === 'simple') pills.push(`<span class="dp-upcoming-event__pill" title="${escapeHtml(I18n.tr('dashboard.workflowSimpleTooltip'))}">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>`);
+      const ex = excerptText(d.occasion);
+      if (ex) excerpt = `<p class="mn-card__excerpt">${escapeHtml(ex)}</p>`;
     }
     const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
+    const icon = mode === 'completed' ? ICON_DOC : ICON_CLOCK;
     return `
-      <div class="dp-upcoming-event ${statusClass}" data-event-id="${d.id}" style="cursor:pointer;">
-        <h4 class="dp-upcoming-event__title">${escapeHtml(d.title)}</h4>
+      <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}">
+        <div class="mn-card__top">
+          <span class="mn-card__icon">${icon}</span>
+          <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
+        </div>
         <div class="dp-upcoming-event__pills">${pills.join('')}</div>
+        ${excerpt}
+        <div class="mn-card__foot">
+          <span>${escapeHtml(I18n.tr('dashboard.cardView'))}</span>
+          <span class="mn-card__arrow" aria-hidden="true">&rarr;</span>
+        </div>
       </div>
     `;
   }
