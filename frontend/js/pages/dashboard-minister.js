@@ -68,18 +68,62 @@
     listEl.innerHTML = `<div class="msg msg-error">${escapeHtml(libRes.reason?.message || 'Failed to load')}</div>`;
   }
 
-  // ── Hero: greeting + date + live counts ─────────────────────────────────────
-  function populateHero() {
-    const h = new Date().getHours();
-    const gKey = h < 12 ? 'greetingMorning' : (h < 18 ? 'greetingAfternoon' : 'greetingEvening');
-    const greeting = I18n.tr('dashboard.' + gKey);
-    const name = localizedName(user.fullName, user.fullNameKa) || user.username || '';
+  // ── Hero: greeting + date + live Tbilisi clock ──────────────────────────────
+  // Tbilisi (UTC+4, no DST) date/time parts.
+  function tbilisiParts() {
+    const p = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Asia/Tbilisi',
+      year: 'numeric', month: 'numeric', day: 'numeric',
+      hour: '2-digit', minute: '2-digit', hour12: false,
+    }).formatToParts(new Date()).forEach(x => { p[x.type] = x.value; });
+    return p;
+  }
+  function partOfDay(hour) {
+    if (hour >= 5 && hour <= 11) return 'morning';
+    if (hour >= 12 && hour <= 16) return 'afternoon';
+    if (hour >= 17 && hour <= 20) return 'evening';
+    return 'night';
+  }
+  const HERO_ICONS = {
+    morning: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"/><line x1="12" y1="2" x2="12" y2="9"/><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"/><line x1="1" y1="18" x2="3" y2="18"/><line x1="21" y1="18" x2="23" y2="18"/><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"/><line x1="23" y1="22" x2="1" y2="22"/><polyline points="8 6 12 2 16 6"/></svg>',
+    afternoon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
+    evening: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 18a5 5 0 0 0-10 0"/><line x1="12" y1="9" x2="12" y2="2"/><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"/><line x1="1" y1="18" x2="3" y2="18"/><line x1="21" y1="18" x2="23" y2="18"/><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"/><line x1="23" y1="22" x2="1" y2="22"/><polyline points="16 5 12 9 8 5"/></svg>',
+    night: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+  };
+
+  // Prefer the Georgian name when the UI is Georgian (defensive across key names).
+  function ministerName() {
+    if (isKa()) {
+      const ka = user.fullNameKa || user.fullNameGe || user.fullNameGeo || user.nameKa || user.full_name_ka;
+      if (ka) return ka;
+    }
+    return user.fullName || user.username || '';
+  }
+
+  const heroEl = document.getElementById('mnHero');
+  const heroIconEl = document.getElementById('mnHeroIcon');
+  const clockEl = document.getElementById('mnClock');
+
+  function paintHero() {
+    const t = tbilisiParts();
+    const hourNum = parseInt(t.hour, 10) % 24;
+    const pod = partOfDay(hourNum);
+    const greeting = I18n.tr('dashboard.greeting' + pod.charAt(0).toUpperCase() + pod.slice(1));
+    const name = ministerName();
     const gEl = document.getElementById('mnGreeting');
     if (gEl) gEl.textContent = name ? `${greeting}, ${name}` : greeting;
     const dEl = document.getElementById('mnDate');
-    if (dEl) dEl.textContent = longDate(new Date());
+    if (dEl) dEl.textContent = longDate(new Date(parseInt(t.year, 10), parseInt(t.month, 10) - 1, parseInt(t.day, 10)));
+    if (heroEl) {
+      heroEl.classList.remove('mn-hero--morning', 'mn-hero--afternoon', 'mn-hero--evening', 'mn-hero--night');
+      heroEl.classList.add('mn-hero--' + pod);
+    }
+    if (heroIconEl) heroIconEl.innerHTML = HERO_ICONS[pod];
+    if (clockEl) clockEl.textContent = `${String(hourNum).padStart(2, '0')}:${t.minute}`;
   }
-  populateHero();
+  paintHero();
+  setInterval(paintHero, 30000);
 
   // Slide the segmented-toggle thumb under the active option.
   function positionThumb() {

@@ -7,30 +7,57 @@
    and the existing status accents (--accent-green, --accent-orange).
    ─────────────────────────────────────────────────────────────────────────── */
 
-/* ── Hero ──────────────────────────────────────────────────────────────────── */
+/* ── Hero (greeting card) ──────────────────────────────────────────────────── */
 .mn-dash .mn-hero {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 24px 28px;
+  padding: 18px 22px;
   margin-bottom: 18px;
-  background:
-    radial-gradient(900px 360px at 88% -40%, rgba(10,132,255,0.20), transparent 60%),
-    linear-gradient(135deg, var(--gp-sidebar-accent) 0%, #1f3346 60%, #16273a 100%);
-  color: #fff;
-  box-shadow: var(--shadow);
+  background: var(--card);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-sm);
 }
+.mn-dash .mn-hero__icon {
+  flex: 0 0 auto;
+  width: 54px; height: 54px;
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+}
+.mn-dash .mn-hero__icon svg { width: 28px; height: 28px; }
+.mn-dash .mn-hero--morning   .mn-hero__icon { background: linear-gradient(135deg, #fbbf24, #fb923c); }
+.mn-dash .mn-hero--afternoon .mn-hero__icon { background: linear-gradient(135deg, #38bdf8, #0a84ff); }
+.mn-dash .mn-hero--evening   .mn-hero__icon { background: linear-gradient(135deg, #fb7185, #f59e0b); }
+.mn-dash .mn-hero--night     .mn-hero__icon { background: linear-gradient(135deg, #818cf8, #4338ca); }
+.mn-dash .mn-hero__text { flex: 1 1 auto; min-width: 0; }
 .mn-dash .mn-hero__greeting {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
   margin: 0;
+  font-size: 1.4rem; font-weight: 800; letter-spacing: -0.02em;
+  color: var(--text-primary);
 }
 .mn-dash .mn-hero__date {
-  margin: 4px 0 0;
-  font-size: 0.9rem;
-  color: rgba(255,255,255,0.78);
+  margin: 3px 0 0;
+  font-size: 0.88rem; color: var(--text-secondary);
+  text-transform: capitalize;
+}
+.mn-dash .mn-hero__clock {
+  flex: 0 0 auto; margin-left: auto;
+  display: flex; flex-direction: column; align-items: flex-end;
+}
+.mn-dash .mn-hero__time {
+  font-size: 1.55rem; font-weight: 800; line-height: 1;
+  color: var(--text-primary); font-variant-numeric: tabular-nums;
+}
+.mn-dash .mn-hero__tz {
+  margin-top: 4px;
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--text-muted);
 }
 /* ── Unified workspace: toolbar (toggle + search) above calendar/detail ────── */
 .mn-dash .mn-workspace { padding: 20px 22px; }

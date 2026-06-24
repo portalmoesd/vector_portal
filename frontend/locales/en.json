@@ -29,6 +29,8 @@
     "greetingMorning": "Good morning",
     "greetingAfternoon": "Good afternoon",
     "greetingEvening": "Good evening",
+    "greetingNight": "Good evening",
+    "tbilisi": "Tbilisi",
     "cardView": "View",
     "attachments": "Attachments",
     "owner": "Document owner",
