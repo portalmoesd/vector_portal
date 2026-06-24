@@ -11,108 +11,38 @@
   <link rel="stylesheet" href="/css/georgian-fonts.css" />
   <link rel="stylesheet" href="/css/apple.css" />
   <link rel="stylesheet" href="/css/dashboard-pipeline.css" />
-  <style>
-    /* Controls: search on top, Completed/Upcoming toggle centered below it */
-    .mn-controls { margin-bottom: 16px; }
-    .mn-search { max-width: 360px; margin-bottom: 12px; }
-    .mn-search .form-label { font-size: 0.75rem; }
-    .mn-toggle-wrap { display: flex; justify-content: center; }
-    .mn-toggle {
-      display: inline-flex; border: 1px solid var(--border-color);
-      border-radius: var(--radius-md); overflow: hidden; background: var(--bg-card);
-    }
-    .mn-toggle__btn {
-      border: none; background: transparent; cursor: pointer;
-      padding: 8px 18px; font-size: 0.85rem; font-weight: 600;
-      color: var(--text-secondary);
-    }
-    .mn-toggle__btn.is-active { background: var(--accent, #2563eb); color: #fff; }
-
-    /* Top row: calendar (left) + expanded chosen-event detail panel (right) */
-    .mn-top {
-      display: grid; grid-template-columns: 320px minmax(0, 1fr);
-      gap: 20px; align-items: start;
-    }
-    .mn-detail { min-width: 0; }
-    @media (max-width: 900px) {
-      .mn-top { grid-template-columns: 1fr; }
-    }
-
-    /* Detail panel */
-    .mn-detail__placeholder {
-      color: var(--text-muted); font-size: 0.9rem; padding: 24px 4px;
-    }
-    .mn-detail__head {
-      display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
-    }
-    .mn-detail__title { margin: 0; font-size: 1.05rem; font-weight: 700; }
-    .mn-detail__close {
-      background: none; border: none; font-size: 22px; line-height: 1;
-      cursor: pointer; color: var(--text-secondary); padding: 0 4px;
-    }
-    .mn-detail__meta {
-      display: flex; gap: 16px; flex-wrap: wrap;
-      font-size: 0.8rem; color: var(--text-secondary); margin: 8px 0 4px;
-    }
-    .mn-detail__body { margin-top: 12px; max-height: 60vh; overflow-y: auto; }
-    .mn-detail__body .section-block { margin-bottom: 20px; }
-    .mn-detail__body .section-block h3 {
-      font-size: 0.92rem; border-bottom: 1px solid var(--border-color);
-      padding-bottom: 6px; margin-bottom: 10px;
-    }
-
-    /* Unchosen events listed below the calendar */
-    .mn-list { margin-top: 20px; display: grid; gap: 12px; }
-
-    /* Library action row (PDF / Word / Files) inside the detail panel */
-    .mn-card-actions {
-      display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px;
-    }
-    .mn-card-actions .btn { padding: 4px 10px; font-size: 12px; }
-
-    /* Document preview / files modal (mirrors the Library page styles) */
-    .preview-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.6);
-      display: flex; align-items: center; justify-content: center; z-index: 300;
-    }
-    .preview-card {
-      background: var(--bg-card); border-radius: var(--radius-lg);
-      width: 90%; max-width: 900px; max-height: 90vh; overflow-y: auto;
-      padding: 32px; box-shadow: var(--shadow-lg);
-    }
-    .preview-card .section-block { margin-bottom: 24px; }
-    .preview-card .section-block h3 {
-      font-size: 0.95rem; border-bottom: 1px solid var(--border-color);
-      padding-bottom: 8px; margin-bottom: 12px;
-    }
-    .preview-header {
-      display: flex; justify-content: space-between; align-items: center;
-      margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 12px;
-    }
-    .preview-header h2 { margin: 0; font-size: 1.1rem; }
-    .preview-close {
-      background: none; border: none; font-size: 24px;
-      cursor: pointer; color: var(--text-secondary); padding: 4px 8px;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/dashboard-minister.css" />
 </head>
 <body>
   <div class="layout">
     <aside class="sidebar"></aside>
-    <main class="main">
-      <div class="topbar">
-        <div class="page-title" data-i18n="dashboard.ministerTitle">Minister Dashboard</div>
+    <main class="main mn-dash">
+      <div class="mn-hero">
+        <h1 class="mn-hero__greeting" id="mnGreeting" data-i18n="dashboard.ministerTitle">Minister Dashboard</h1>
+        <p class="mn-hero__date" id="mnDate"></p>
+        <div class="mn-stats">
+          <div class="mn-stat">
+            <span class="mn-stat__num" id="mnStatCompleted">0</span>
+            <span class="mn-stat__label" data-i18n="dashboard.statCompleted">Completed</span>
+          </div>
+          <div class="mn-stat">
+            <span class="mn-stat__num" id="mnStatProgress">0</span>
+            <span class="mn-stat__label" data-i18n="dashboard.statInProgress">In progress</span>
+          </div>
+        </div>
       </div>
 
       <div class="mn-controls">
         <div class="form-group mn-search">
           <label class="form-label" data-i18n="library.filter.search">Search</label>
+          <svg class="mn-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
           <input class="form-input" id="filterKeyword" data-i18n-placeholder="dashboard.searchPlaceholder" placeholder="Search by title or country..." />
         </div>
         <div class="mn-toggle-wrap">
           <div class="mn-toggle" role="tablist">
+            <span class="mn-toggle__thumb" id="mnToggleThumb"></span>
             <button type="button" class="mn-toggle__btn is-active" id="toggleCompleted" data-mode="completed" data-i18n="dashboard.toggleCompleted">Completed</button>
-            <button type="button" class="mn-toggle__btn" id="toggleUpcoming" data-mode="upcoming" data-i18n="dashboard.toggleUpcoming">Upcoming</button>
+            <button type="button" class="mn-toggle__btn" id="toggleUpcoming" data-mode="upcoming" data-i18n="dashboard.toggleUpcoming">In Progress</button>
           </div>
         </div>
       </div>
