@@ -105,42 +105,57 @@
   }
 
   // ── List cards (below the calendar): clickable ──────────────────────────────
-  const ICON_DOC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h8"/></svg>';
-  const ICON_CLOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
-
   function excerptText(html) {
     const tmp = document.createElement('div');
     tmp.innerHTML = html || '';
     return (tmp.textContent || '').trim();
   }
 
+  // Urgency-aware deadline label for in-progress events.
+  function dueInfo(deadline) {
+    if (!deadline) return null;
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const d = new Date(deadline); d.setHours(0, 0, 0, 0);
+    const days = Math.round((d - today) / 86400000);
+    if (days < 0) return { text: I18n.tr('dashboard.overdue'), cls: 'is-overdue' };
+    if (days === 0) return { text: I18n.tr('dashboard.dueToday'), cls: 'is-soon' };
+    if (days <= 7) return { text: I18n.tr('dashboard.dueInDays').replace('{n}', days), cls: 'is-soon' };
+    return { text: `${I18n.tr('dashboard.deadline')}: ${formatDate(deadline)}`, cls: '' };
+  }
+
   function listCardHtml(d) {
     const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
-    const pills = [`<span class="dp-upcoming-event__pill">${escapeHtml(country)}</span>`];
+    const medallion = (d.countryCode || '··').toUpperCase().slice(0, 2);
+    const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
+    const badge = mode === 'completed' ? I18n.tr('dashboard.toggleCompleted') : I18n.tr('dashboard.toggleUpcoming');
+    const lang = languageLabel(d.language || 'EN');
+
     let excerpt = '';
+    let meta;
     if (mode === 'completed') {
-      pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>`);
-      if (d.endedAt) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(d.endedAt)}</span>`);
+      meta = `${d.endedAt ? formatDate(d.endedAt) + ' · ' : ''}${escapeHtml(lang)}`;
     } else {
-      if (d.deadlineDate) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.deadline'))}: ${formatDate(d.deadlineDate)}</span>`);
-      pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>`);
-      if (d.workflowType === 'simple') pills.push(`<span class="dp-upcoming-event__pill" title="${escapeHtml(I18n.tr('dashboard.workflowSimpleTooltip'))}">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>`);
       const ex = excerptText(d.occasion);
       if (ex) excerpt = `<p class="mn-card__excerpt">${escapeHtml(ex)}</p>`;
+      const due = dueInfo(d.deadlineDate);
+      const dueHtml = due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span> · ` : '';
+      meta = `${dueHtml}${escapeHtml(lang)}`;
     }
-    const statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
-    const icon = mode === 'completed' ? ICON_DOC : ICON_CLOCK;
+
     return `
       <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}">
-        <div class="mn-card__top">
-          <span class="mn-card__icon">${icon}</span>
-          <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
+        <div class="mn-card__head">
+          <span class="mn-card__flag">${escapeHtml(medallion)}</span>
+          <div class="mn-card__headtext">
+            <span class="mn-card__country">${escapeHtml(country)}</span>
+            <span class="mn-badge ${mode === 'completed' ? 'mn-badge--completed' : 'mn-badge--inprogress'}">${escapeHtml(badge)}</span>
+          </div>
         </div>
-        <div class="dp-upcoming-event__pills">${pills.join('')}</div>
+        <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
         ${excerpt}
         <div class="mn-card__foot">
-          <span>${escapeHtml(I18n.tr('dashboard.cardView'))}</span>
-          <span class="mn-card__arrow" aria-hidden="true">&rarr;</span>
+          <span class="mn-card__meta">${meta}</span>
+          <span class="mn-card__cta">${escapeHtml(I18n.tr('dashboard.cardView'))} <span class="mn-card__arrow" aria-hidden="true">&rarr;</span></span>
         </div>
       </div>
     `;
