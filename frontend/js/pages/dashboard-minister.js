@@ -1,20 +1,20 @@
 /**
  * Minister Dashboard.
  *
- * A read-only consumer view with two modes, switched by a toggle:
+ * A read-only consumer view with two modes, switched by a centered toggle:
  *   - Completed (default): the Minister's finished documents (GET /api/library,
- *     already scoped to events where they are the Document Submitter), shown as
- *     dashboard-style cards with the Library actions (Preview / PDF / Word /
- *     Files) via the shared LibraryDoc module.
+ *     already scoped to events where they are the Document Submitter).
  *   - Upcoming: events currently being prepared for the Minister (GET /api/events,
- *     isActive), shown as info-only cards (no document content).
+ *     isActive) — info only.
  *
- * An interactive calendar beside the list marks completion dates (Completed) or
- * deadlines (Upcoming); clicking a marked day highlights the matching cards. A
- * search box filters the active list by title / country.
+ * Layout: a calendar on the left and an expanded detail panel on its right;
+ * the unchosen events are listed below. Selecting a card (or a marked calendar
+ * day) "chooses" that event — it expands into the right panel (for a completed
+ * event, the document is previewed inline with PDF/Word/Files actions) and is
+ * removed from the list below. A search box filters the active list.
  *
  * Reuses the calendar + card styles from dashboard-pipeline.css and the
- * mini-calendar logic pattern from dashboard-pipeline.js.
+ * shared document helpers in LibraryDoc (/js/core/library-doc.js).
  */
 (async function () {
   await App.init();
@@ -23,12 +23,14 @@
   if (!user) return;
 
   const listEl = document.getElementById('cardList');
+  const detailEl = document.getElementById('eventDetail');
   const miniCalendarEl = document.getElementById('miniCalendar');
   const keywordEl = document.getElementById('filterKeyword');
   const toggleBtns = Array.from(document.querySelectorAll('.mn-toggle__btn'));
 
   let mode = 'completed'; // 'completed' | 'upcoming'
   let calendarDate = new Date();
+  let selectedId = null;  // currently expanded event id (within the active mode)
 
   // ── Load data ────────────────────────────────────────────────────────────
   let completed = [];
@@ -51,9 +53,13 @@
     return mode === 'completed' ? completed : upcoming;
   }
 
-  // The date a calendar marker / highlight keys off, per mode.
+  // The date a calendar marker keys off, per mode.
   function itemDate(item) {
     return mode === 'completed' ? item.endedAt : item.deadlineDate;
+  }
+
+  function itemById(id) {
+    return activeItems().find(d => String(d.id) === String(id)) || null;
   }
 
   function getFiltered() {
@@ -65,67 +71,115 @@
     );
   }
 
-  // ── Card rendering ──────────────────────────────────────────────────────────
-  function completedCardHtml(d) {
-    const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
-    const lblCompleted = escapeHtml(I18n.tr('library.meta.completed'));
-    return `
-      <div class="dp-upcoming-event" data-event-id="${d.id}">
-        <h4 class="dp-upcoming-event__title">${escapeHtml(d.title)}</h4>
-        <div class="dp-upcoming-event__pills">
-          <span class="dp-upcoming-event__pill">${escapeHtml(country)}</span>
-          <span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>
-          ${d.endedAt ? `<span class="dp-upcoming-event__pill">${lblCompleted} ${formatDate(d.endedAt)}</span>` : ''}
-        </div>
-        <div class="mn-card-actions">
-          <button class="btn btn-outline" data-act="preview" data-id="${d.id}">${escapeHtml(I18n.tr('library.btn.preview'))}</button>
-          <button class="btn btn-outline" data-act="pdf" data-id="${d.id}">${escapeHtml(I18n.tr('library.btn.pdf'))}</button>
-          <button class="btn btn-outline" data-act="word" data-id="${d.id}">${escapeHtml(I18n.tr('library.btn.word'))}</button>
-          <button class="btn btn-outline" data-act="files" data-id="${d.id}">${escapeHtml(I18n.tr('library.btn.files'))}</button>
-        </div>
-      </div>
-    `;
+  function select(id) {
+    selectedId = id == null ? null : String(id);
+    renderList();
+    renderDetail();
   }
 
-  function upcomingCardHtml(e) {
-    const country = localizedCountryName({ code: e.countryCode, name_en: e.countryName });
+  // ── List cards (below the calendar): clickable, info only ───────────────────
+  function listCardHtml(d) {
+    const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
+    const pills = [`<span class="dp-upcoming-event__pill">${escapeHtml(country)}</span>`];
+    if (mode === 'completed') {
+      pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>`);
+      if (d.endedAt) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(d.endedAt)}</span>`);
+    } else {
+      if (d.deadlineDate) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.deadline'))}: ${formatDate(d.deadlineDate)}</span>`);
+      pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(d.language || 'EN')}</span>`);
+      if (d.workflowType === 'simple') pills.push(`<span class="dp-upcoming-event__pill" title="${escapeHtml(I18n.tr('dashboard.workflowSimpleTooltip'))}">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>`);
+    }
     return `
-      <div class="dp-upcoming-event" data-event-id="${e.id}">
-        <h4 class="dp-upcoming-event__title">${escapeHtml(e.title)}</h4>
-        <div class="dp-upcoming-event__pills">
-          <span class="dp-upcoming-event__pill">${escapeHtml(country)}</span>
-          ${e.deadlineDate ? `<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.deadline'))}: ${formatDate(e.deadlineDate)}</span>` : ''}
-          <span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(e.language || 'EN')}</span>
-          ${e.workflowType === 'simple' ? `<span class="dp-upcoming-event__pill" title="${escapeHtml(I18n.tr('dashboard.workflowSimpleTooltip'))}">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>` : ''}
-        </div>
-        ${e.occasion ? `<div class="dp-upcoming-event__desc">${e.occasion}</div>` : ''}
+      <div class="dp-upcoming-event" data-event-id="${d.id}" style="cursor:pointer;">
+        <h4 class="dp-upcoming-event__title">${escapeHtml(d.title)}</h4>
+        <div class="dp-upcoming-event__pills">${pills.join('')}</div>
       </div>
     `;
   }
 
   function renderList() {
-    const items = getFiltered();
+    const items = getFiltered().filter(d => String(d.id) !== selectedId);
     if (items.length === 0) {
       const emptyKey = mode === 'completed' ? 'dashboard.noCompleted' : 'dashboard.noUpcoming';
       listEl.innerHTML = `<div class="empty-state"><p>${escapeHtml(I18n.tr(emptyKey))}</p></div>`;
       return;
     }
-    listEl.innerHTML = items
-      .map(d => (mode === 'completed' ? completedCardHtml(d) : upcomingCardHtml(d)))
-      .join('');
+    listEl.innerHTML = items.map(listCardHtml).join('');
+    listEl.querySelectorAll('.dp-upcoming-event[data-event-id]').forEach(card => {
+      card.addEventListener('click', () => select(card.dataset.eventId));
+    });
+  }
+
+  // ── Detail panel (right of the calendar): the expanded chosen event ─────────
+  function detailHeaderHtml(title) {
+    return `
+      <div class="mn-detail__head">
+        <h3 class="mn-detail__title">${escapeHtml(title)}</h3>
+        <button class="mn-detail__close" id="mnDetailClose" aria-label="Close">&times;</button>
+      </div>
+    `;
+  }
+
+  function renderDetail() {
+    const item = selectedId ? itemById(selectedId) : null;
+    if (!item) {
+      detailEl.innerHTML = `<div class="mn-detail__placeholder">${escapeHtml(I18n.tr('dashboard.selectEventHint'))}</div>`;
+      return;
+    }
+
+    const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
 
     if (mode === 'completed') {
-      listEl.querySelectorAll('.mn-card-actions [data-act]').forEach(btn => {
-        btn.addEventListener('click', () => {
-          const id = parseInt(btn.dataset.id, 10);
-          const act = btn.dataset.act;
-          if (act === 'preview') LibraryDoc.preview(id);
-          else if (act === 'pdf') LibraryDoc.exportPdf(id);
-          else if (act === 'word') LibraryDoc.exportWord(id);
-          else if (act === 'files') LibraryDoc.viewFiles(id);
-        });
+      detailEl.innerHTML = `
+        ${detailHeaderHtml(item.title)}
+        <div class="mn-detail__meta">
+          <span>${escapeHtml(country)}</span>
+          <span>${escapeHtml(I18n.tr('library.meta.language'))} ${languageLabel(item.language || 'EN')}</span>
+          ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
+        </div>
+        <div class="mn-card-actions">
+          <button class="btn btn-outline" data-act="pdf">${escapeHtml(I18n.tr('library.btn.pdf'))}</button>
+          <button class="btn btn-outline" data-act="word">${escapeHtml(I18n.tr('library.btn.word'))}</button>
+          <button class="btn btn-outline" data-act="files">${escapeHtml(I18n.tr('library.btn.files'))}</button>
+        </div>
+        <div class="mn-detail__body" id="mnDetailBody">
+          <div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.loading'))}</p></div>
+        </div>
+      `;
+      detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
+      detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
+      detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
+      detailEl.querySelector('[data-act="files"]').addEventListener('click', () => LibraryDoc.viewFiles(item.id));
+
+      // Load and render the document content inline (accepted view).
+      const bodyEl = detailEl.querySelector('#mnDetailBody');
+      Api.get(`/api/library/${item.id}/document`).then(doc => {
+        // Guard against a newer selection finishing first.
+        if (String(selectedId) !== String(item.id)) return;
+        bodyEl.innerHTML = (doc.sections || []).map(s => `
+          <div class="section-block">
+            <h3>${escapeHtml(s.title)}</h3>
+            <div class="section-content-preview">${LibraryDoc.stripTrackChanges(s.htmlContent || '<em>No content</em>')}</div>
+          </div>
+        `).join('') || `<div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.noSections'))}</p></div>`;
+      }).catch(err => {
+        if (String(selectedId) !== String(item.id)) return;
+        bodyEl.innerHTML = `<div class="msg msg-error">${escapeHtml(I18n.tr('library.preview.failLoad'))} ${escapeHtml(err.message)}</div>`;
       });
+      return;
     }
+
+    // Upcoming: event info only.
+    const pills = [`<span class="dp-upcoming-event__pill">${escapeHtml(country)}</span>`];
+    if (item.deadlineDate) pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.deadline'))}: ${formatDate(item.deadlineDate)}</span>`);
+    pills.push(`<span class="dp-upcoming-event__pill dp-upcoming-event__pill--lang">${languageLabel(item.language || 'EN')}</span>`);
+    if (item.workflowType === 'simple') pills.push(`<span class="dp-upcoming-event__pill">${escapeHtml(I18n.tr('dashboard.workflowSimple'))}</span>`);
+    detailEl.innerHTML = `
+      ${detailHeaderHtml(item.title)}
+      <div class="dp-upcoming-event__pills" style="margin-bottom:12px;">${pills.join('')}</div>
+      ${item.occasion ? `<div class="mn-detail__body">${item.occasion}</div>` : ''}
+    `;
+    detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
   }
 
   // ── Calendar (adapted from dashboard-pipeline.js renderMiniCalendar) ─────────
@@ -182,33 +236,25 @@
     document.getElementById('calPrev')?.addEventListener('click', () => renderCalendar(new Date(year, month - 1, 1)));
     document.getElementById('calNext')?.addEventListener('click', () => renderCalendar(new Date(year, month + 1, 1)));
 
-    // Click a marked date → highlight matching cards in the list.
+    // Click a marked date → select (expand) the first matching event.
     miniCalendarEl.querySelectorAll('[data-cal-date]').forEach(day => {
       day.addEventListener('click', () => {
         const clicked = day.dataset.calDate; // YYYY-MM-DD
-        const matchingIds = activeItems()
-          .filter(item => {
-            const ds = itemDate(item);
-            if (!ds) return false;
-            const d = new Date(ds);
-            const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-            return key === clicked;
-          })
-          .map(item => String(item.id));
-        if (!matchingIds.length) return;
-        listEl.querySelectorAll('.dp-upcoming-event[data-event-id]').forEach(card => {
-          if (matchingIds.includes(card.dataset.eventId)) {
-            card.classList.add('dp-upcoming-event--highlight');
-            card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            setTimeout(() => card.classList.remove('dp-upcoming-event--highlight'), 1000);
-          }
+        const match = activeItems().find(item => {
+          const ds = itemDate(item);
+          if (!ds) return false;
+          const d = new Date(ds);
+          const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+          return key === clicked;
         });
+        if (match) select(match.id);
       });
     });
   }
 
   function renderAll() {
     renderList();
+    renderDetail();
     renderCalendar(calendarDate);
   }
 
@@ -218,13 +264,18 @@
       const next = btn.dataset.mode;
       if (next === mode) return;
       mode = next;
+      selectedId = null;
       toggleBtns.forEach(b => b.classList.toggle('is-active', b === btn));
       calendarDate = new Date(); // reset to current month on switch
       renderAll();
     });
   });
 
-  keywordEl.addEventListener('input', renderList);
+  keywordEl.addEventListener('input', () => {
+    selectedId = null;
+    renderList();
+    renderDetail();
+  });
 
   renderAll();
 })();

@@ -12,13 +12,11 @@
   <link rel="stylesheet" href="/css/apple.css" />
   <link rel="stylesheet" href="/css/dashboard-pipeline.css" />
   <style>
-    /* Controls row: search + Completed/Upcoming toggle */
-    .mn-controls {
-      display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap;
-      margin-bottom: 16px;
-    }
-    .mn-search { flex: 1; min-width: 200px; max-width: 360px; }
+    /* Controls: search on top, Completed/Upcoming toggle centered below it */
+    .mn-controls { margin-bottom: 16px; }
+    .mn-search { max-width: 360px; margin-bottom: 12px; }
     .mn-search .form-label { font-size: 0.75rem; }
+    .mn-toggle-wrap { display: flex; justify-content: center; }
     .mn-toggle {
       display: inline-flex; border: 1px solid var(--border-color);
       border-radius: var(--radius-md); overflow: hidden; background: var(--bg-card);
@@ -30,7 +28,42 @@
     }
     .mn-toggle__btn.is-active { background: var(--accent, #2563eb); color: #fff; }
 
-    /* Completed-card action row (Library actions inside a dashboard card) */
+    /* Top row: calendar (left) + expanded chosen-event detail panel (right) */
+    .mn-top { display: flex; gap: 20px; align-items: flex-start; }
+    .mn-top .dp-calendar { flex: 0 0 320px; }
+    .mn-detail { flex: 1; min-width: 0; }
+    @media (max-width: 900px) {
+      .mn-top { flex-direction: column; }
+      .mn-top .dp-calendar { flex: none; width: 100%; }
+    }
+
+    /* Detail panel */
+    .mn-detail__placeholder {
+      color: var(--text-muted); font-size: 0.9rem; padding: 24px 4px;
+    }
+    .mn-detail__head {
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 12px;
+    }
+    .mn-detail__title { margin: 0; font-size: 1.05rem; font-weight: 700; }
+    .mn-detail__close {
+      background: none; border: none; font-size: 22px; line-height: 1;
+      cursor: pointer; color: var(--text-secondary); padding: 0 4px;
+    }
+    .mn-detail__meta {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      font-size: 0.8rem; color: var(--text-secondary); margin: 8px 0 4px;
+    }
+    .mn-detail__body { margin-top: 12px; max-height: 60vh; overflow-y: auto; }
+    .mn-detail__body .section-block { margin-bottom: 20px; }
+    .mn-detail__body .section-block h3 {
+      font-size: 0.92rem; border-bottom: 1px solid var(--border-color);
+      padding-bottom: 6px; margin-bottom: 10px;
+    }
+
+    /* Unchosen events listed below the calendar */
+    .mn-list { margin-top: 20px; display: grid; gap: 12px; }
+
+    /* Library action row (PDF / Word / Files) inside the detail panel */
     .mn-card-actions {
       display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px;
     }
@@ -75,19 +108,25 @@
           <label class="form-label" data-i18n="library.filter.search">Search</label>
           <input class="form-input" id="filterKeyword" data-i18n-placeholder="dashboard.searchPlaceholder" placeholder="Search by title or country..." />
         </div>
-        <div class="mn-toggle" role="tablist">
-          <button type="button" class="mn-toggle__btn is-active" id="toggleCompleted" data-mode="completed" data-i18n="dashboard.toggleCompleted">Completed</button>
-          <button type="button" class="mn-toggle__btn" id="toggleUpcoming" data-mode="upcoming" data-i18n="dashboard.toggleUpcoming">Upcoming</button>
+        <div class="mn-toggle-wrap">
+          <div class="mn-toggle" role="tablist">
+            <button type="button" class="mn-toggle__btn is-active" id="toggleCompleted" data-mode="completed" data-i18n="dashboard.toggleCompleted">Completed</button>
+            <button type="button" class="mn-toggle__btn" id="toggleUpcoming" data-mode="upcoming" data-i18n="dashboard.toggleUpcoming">Upcoming</button>
+          </div>
         </div>
       </div>
 
       <div class="card dp-upcoming-card">
-        <div class="dp-upcoming-layout">
+        <div class="mn-top">
           <div class="dp-calendar" id="miniCalendar"></div>
-          <div class="dp-upcoming-list" id="cardList">
-            <div class="empty-state"><p data-i18n="dashboard.noCompleted">No completed documents</p></div>
+          <div class="mn-detail" id="eventDetail">
+            <div class="mn-detail__placeholder" data-i18n="dashboard.selectEventHint">Select an event to view its details</div>
           </div>
         </div>
+      </div>
+
+      <div class="mn-list" id="cardList">
+        <div class="empty-state"><p data-i18n="dashboard.noCompleted">No completed documents</p></div>
       </div>
     </main>
   </div>
