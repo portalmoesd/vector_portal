@@ -11,7 +11,8 @@ router.get('/', requireAuth, async (req, res) => {
     const { rows: templates } = await db.query(
       `SELECT et.id, et.name, et.document_submitter_role, et.curator_required,
               et.is_default, et.created_at, et.created_by_id,
-              COALESCE(u.full_name, 'System') AS created_by_name
+              COALESCE(u.full_name, 'System') AS created_by_name,
+              u.full_name_ka AS created_by_name_ka
        FROM event_templates et
        LEFT JOIN users u ON u.id = et.created_by_id
        WHERE et.is_default = true OR et.created_by_id = $1
@@ -42,6 +43,7 @@ router.get('/', requireAuth, async (req, res) => {
         createdAt: t.created_at,
         createdById: t.created_by_id,
         createdByName: t.created_by_name,
+        createdByNameKa: t.created_by_name_ka,
         sections: sections.map(s => ({
           id: s.id,
           title: s.title,

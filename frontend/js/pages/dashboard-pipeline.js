@@ -302,7 +302,7 @@
     const returnReq = section.returnRequest;
     const returnInfo = section.returnInfo;
     const lastUpdated = section.lastUpdatedAt ? formatDateTime(section.lastUpdatedAt) : '';
-    const lastUpdatedBy = section.lastUpdatedBy ? escapeHtml(section.lastUpdatedBy) : '';
+    const lastUpdatedBy = section.lastUpdatedBy ? escapeHtml(localizedName(section.lastUpdatedBy, section.lastUpdatedByKa)) : '';
 
     const deptInfo = (section.departmentNames && section.departmentNames.length > 0)
       ? section.departmentNames.map(n => escapeHtml(n)).join('<br>')
@@ -358,7 +358,7 @@
     const stepsHtml = steps.map((step, i) => {
       const state = stepStates[i];
       const skipped = state === 'done' && !step.acted;
-      const name = step.actorName || roleLabel(step.role);
+      const name = localizedName(step.actorName, step.actorNameKa) || roleLabel(step.role);
       const subtitle = step.departmentName || (step.role === 'CURATOR' || step.role === 'DEPUTY' ? roleLabel(step.role) : '');
       return `
         <div class="dp-pipeline__step dp-pipeline__step--${state}${skipped ? ' dp-pipeline__step--skipped' : ''}">
@@ -507,7 +507,7 @@
     const label = roleLabel(data.role);
     const rows = data.users.map(u => `
       <div class="dp-popover__user">
-        <span class="dp-popover__user-name">${escapeHtml(u.fullName)}</span>
+        <span class="dp-popover__user-name">${escapeHtml(localizedName(u.fullName, u.fullNameKa))}</span>
         ${u.departmentName ? `<span class="dp-popover__user-dept">${escapeHtml(u.departmentName)}</span>` : ''}
       </div>
     `).join('');

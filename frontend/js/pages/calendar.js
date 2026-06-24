@@ -142,7 +142,7 @@
             <div class="event-card-meta">
               <span>${escapeHtml(localizedCountryName({ code: e.countryCode, name_en: e.countryName }))}</span>
               <span>Language: ${languageLabel(e.language)}</span>
-              <span>DS: ${escapeHtml(e.documentSubmitterName)}</span>
+              <span>DS: ${escapeHtml(localizedName(e.documentSubmitterName, e.documentSubmitterNameKa))}</span>
               ${e.deadlineDate ? `<span>Deadline: ${formatDate(e.deadlineDate)}</span>` : ''}
               <span>Created: ${formatDate(e.createdAt)}</span>
             </div>
@@ -239,7 +239,7 @@
     if (!missingEmails || missingEmails.length === 0) return;
     const names = missingEmails
       .slice(0, 5)
-      .map((u) => u.fullName)
+      .map((u) => localizedName(u.fullName, u.fullNameKa))
       .join(', ');
     const suffix = missingEmails.length > 5 ? ` and ${missingEmails.length - 5} more` : '';
     toast.warn(
@@ -333,9 +333,9 @@
           <p><strong>Title:</strong> ${escapeHtml(e.title)}</p>
           <p><strong>Country:</strong> ${escapeHtml(localizedCountryName({ code: e.countryCode, name_en: e.countryName }))}</p>
           <p><strong>Language:</strong> ${languageLabel(e.language)}</p>
-          <p><strong>Document Submitter:</strong> ${escapeHtml(e.documentSubmitterName)} (${roleLabel(e.documentSubmitterRole)})</p>
-          ${e.deputyName ? `<p><strong>Deputy:</strong> ${escapeHtml(e.deputyName)}</p>` : ''}
-          ${e.supervisorName ? `<p><strong>Responsible Supervisor:</strong> ${escapeHtml(e.supervisorName)}</p>` : ''}
+          <p><strong>Document Submitter:</strong> ${escapeHtml(localizedName(e.documentSubmitterName, e.documentSubmitterNameKa))} (${roleLabel(e.documentSubmitterRole)})</p>
+          ${e.deputyName ? `<p><strong>Deputy:</strong> ${escapeHtml(localizedName(e.deputyName, e.deputyNameKa))}</p>` : ''}
+          ${e.supervisorName ? `<p><strong>Responsible Supervisor:</strong> ${escapeHtml(localizedName(e.supervisorName, e.supervisorNameKa))}</p>` : ''}
           <p><strong>Curator Required:</strong> ${e.curatorRequired ? 'Yes' : 'No'}</p>
           ${e.occasion ? `<div><strong>Task:</strong> ${e.occasion}</div>` : ''}
           ${e.deadlineDate ? `<p><strong>Deadline:</strong> ${formatDate(e.deadlineDate)}</p>` : ''}
@@ -525,7 +525,7 @@
     ).join('');
 
     const deputyOpts = deputies.map(d =>
-      `<option value="${d.id}">${escapeHtml(d.fullName)}</option>`
+      `<option value="${d.id}">${escapeHtml(localizedName(d.fullName, d.fullNameKa))}</option>`
     ).join('');
 
     showModal(I18n.tr('calendar.modal.createTitle'), `
@@ -776,7 +776,7 @@
       try {
         const supervisors = await Api.get(`/api/admin/supervisors?deputy_id=${deputyId}`);
         supervisorSelect.innerHTML = '<option value="">— Select Supervisor —</option>' +
-          supervisors.map(s => `<option value="${s.id}">${escapeHtml(s.fullName)}${s.departmentName ? ' — ' + escapeHtml(s.departmentName) : ''}</option>`).join('');
+          supervisors.map(s => `<option value="${s.id}">${escapeHtml(localizedName(s.fullName, s.fullNameKa))}${s.departmentName ? ' — ' + escapeHtml(s.departmentName) : ''}</option>`).join('');
       } catch (e) {
         supervisorSelect.innerHTML = '<option value="">— No supervisors found —</option>';
       }
@@ -857,7 +857,7 @@
         try {
           const list = await Api.get(isUnrestricted ? '/api/admin/all-supervisors' : '/api/admin/linked-supervisors');
           document.getElementById('newDSSupervisor').innerHTML = '<option value="">— Select Supervisor —</option>' +
-            list.map(s => `<option value="${s.id}">${escapeHtml(s.fullName)}${s.departmentName ? ' — ' + escapeHtml(s.departmentName) : ''}</option>`).join('');
+            list.map(s => `<option value="${s.id}">${escapeHtml(localizedName(s.fullName, s.fullNameKa))}${s.departmentName ? ' — ' + escapeHtml(s.departmentName) : ''}</option>`).join('');
         } catch (e) {
           document.getElementById('newDSSupervisor').innerHTML = '<option value="">— No supervisors found —</option>';
         }
@@ -866,7 +866,7 @@
         try {
           const list = await Api.get(isUnrestricted ? '/api/admin/all-super-collaborators' : '/api/admin/linked-super-collaborators');
           document.getElementById('newDSSC').innerHTML = '<option value="">— Select Super-Collaborator —</option>' +
-            list.map(s => `<option value="${s.id}">${escapeHtml(s.fullName)}${s.departmentName ? ' — ' + escapeHtml(s.departmentName) : ''}</option>`).join('');
+            list.map(s => `<option value="${s.id}">${escapeHtml(localizedName(s.fullName, s.fullNameKa))}${s.departmentName ? ' — ' + escapeHtml(s.departmentName) : ''}</option>`).join('');
         } catch (e) {
           document.getElementById('newDSSC').innerHTML = '<option value="">— No super-collaborators found —</option>';
         }

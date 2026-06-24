@@ -10,7 +10,7 @@ router.get('/', requireAuth, async (req, res) => {
     const { event_id, section_id } = req.query;
     const { rows } = await db.query(
       `SELECT sc.id, sc.anchor_id, sc.parent_id, sc.content, sc.created_at,
-              sc.user_id, u.full_name, u.username
+              sc.user_id, u.full_name, u.full_name_ka, u.username
        FROM section_comments sc
        JOIN users u ON u.id = sc.user_id
        WHERE sc.event_id = $1 AND sc.section_id = $2
@@ -25,6 +25,7 @@ router.get('/', requireAuth, async (req, res) => {
       createdAt: r.created_at,
       userId: r.user_id,
       userName: r.full_name,
+      userNameKa: r.full_name_ka,
       username: r.username,
     })));
   } catch (err) {

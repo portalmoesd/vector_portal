@@ -860,7 +860,7 @@ router.get('/status-grid', requireAuth, async (req, res) => {
               sc.status, sc.status_comment, sc.last_updated_at,
               sc.original_submitter_role, sc.return_target_role,
               sc.last_updated_by_user_id,
-              u.full_name AS last_updated_by,
+              u.full_name AS last_updated_by, u.full_name_ka AS last_updated_by_ka,
               sc.last_content_edited_by_user_id
        FROM sections s
        LEFT JOIN section_content sc ON sc.section_id = s.id AND sc.event_id = s.event_id
@@ -912,6 +912,7 @@ router.get('/status-grid', requireAuth, async (req, res) => {
       const steps = [];
       for (const step of chain) {
         let actorName = null;
+        let actorNameKa = null;
         let actorId = null;
         let deptName = null;
 
@@ -925,37 +926,38 @@ router.get('/status-grid', requireAuth, async (req, res) => {
           const isSimpleWf = event.workflow_type === 'simple';
           const { rows: [dep] } = await db.query(
             isSimpleWf
-              ? `SELECT u.id, u.full_name
+              ? `SELECT u.id, u.full_name, u.full_name_ka
                  FROM deputy_department_links ddl
                  JOIN users u ON u.id = ddl.deputy_id
                  WHERE ddl.department_id = ANY($1)
                  ORDER BY (u.id = $2) DESC, u.id LIMIT 1`
-              : `SELECT u.id, u.full_name
+              : `SELECT u.id, u.full_name, u.full_name_ka
                  FROM deputy_department_links ddl
                  JOIN users u ON u.id = ddl.deputy_id
                  WHERE ddl.department_id = ANY($1) AND u.id != $2
                  ORDER BY u.id LIMIT 1`,
             [sectionDeptIds, event.document_submitter_id]);
-          if (dep) { actorName = dep.full_name; actorId = dep.id; deptName = null; }
+          if (dep) { actorName = dep.full_name; actorNameKa = dep.full_name_ka; actorId = dep.id; deptName = null; }
         } else if (step === ROLES.DEPUTY && event.document_submitter_role === 'DEPUTY') {
           // Deputy step = the Document Submitter themselves.
           // Deputies oversee multiple departments, so don't show a single department name.
           const { rows: [dep] } = await db.query(
-            `SELECT id, full_name FROM users WHERE id = $1`, [event.document_submitter_id]);
-          if (dep) { actorName = dep.full_name; actorId = dep.id; deptName = null; }
+            `SELECT id, full_name, full_name_ka FROM users WHERE id = $1`, [event.document_submitter_id]);
+          if (dep) { actorName = dep.full_name; actorNameKa = dep.full_name_ka; actorId = dep.id; deptName = null; }
         } else {
           // Multi-user roles (Collaborator, SC, Supervisor, Receiving_*):
           // Only show name after someone actually acted — use history lookup.
           const hist = (historyActors[s.section_id] || {})[step];
           if (hist) {
             actorName = hist.actorName;
+            actorNameKa = hist.actorNameKa;
             actorId = hist.actorId;
             deptName = hist.departmentName;
           }
         }
 
         const acted = !!(historyActors[s.section_id] || {})[step];
-        steps.push({ role: step, actorName, actorId, departmentName: deptName, acted });
+        steps.push({ role: step, actorName, actorNameKa, actorId, departmentName: deptName, acted });
       }
 
       const status = s.status || 'draft';
@@ -1016,6 +1018,7 @@ router.get('/status-grid', requireAuth, async (req, res) => {
         statusComment: s.status_comment,
         lastUpdatedAt: s.last_updated_at,
         lastUpdatedBy: s.last_updated_by,
+        lastUpdatedByKa: s.last_updated_by_ka,
         originalSubmitterRole: s.original_submitter_role,
         returnTargetRole: s.return_target_role,
         currentHolderRole: holderRole,
@@ -1102,7 +1105,7 @@ router.get('/stage-users', requireAuth, async (req, res) => {
 
     if (role === 'CURATOR') {
       const { rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM deputy_department_links ddl
          JOIN users u ON u.id = ddl.deputy_id
          LEFT JOIN departments d ON d.id = u.department_id
@@ -1113,7 +1116,7 @@ router.get('/stage-users', requireAuth, async (req, res) => {
       users = rows;
     } else if (role === 'DEPUTY') {
       const { rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.id = $1`,
@@ -1124,7 +1127,7 @@ router.get('/stage-users', requireAuth, async (req, res) => {
       const dbRole = baseRole(role);
       if (dsDeptId) {
         const { rows } = await db.query(
-          `SELECT u.id, u.full_name, d.name_en AS department_name
+          `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
            FROM users u
            LEFT JOIN departments d ON d.id = u.department_id
            LEFT JOIN country_assignments ca ON ca.user_id = u.id AND ca.country_id = $3
@@ -1139,7 +1142,7 @@ router.get('/stage-users', requireAuth, async (req, res) => {
     } else {
       if (sectionDeptIds.length > 0 && sectionDeptIds[0]) {
         const { rows } = await db.query(
-          `SELECT u.id, u.full_name, d.name_en AS department_name
+          `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
            FROM users u
            LEFT JOIN departments d ON d.id = u.department_id
            LEFT JOIN country_assignments ca ON ca.user_id = u.id AND ca.country_id = $3
@@ -1158,6 +1161,7 @@ router.get('/stage-users', requireAuth, async (req, res) => {
       users: users.map(u => ({
         id: u.id,
         fullName: u.full_name,
+        fullNameKa: u.full_name_ka,
         departmentName: u.department_name,
       })),
     });
@@ -1178,7 +1182,7 @@ router.get('/section-content', requireAuth, async (req, res) => {
 
     const { rows: [content] } = await db.query(
       `SELECT sc.html_content, sc.status, sc.last_content_edited_at,
-              u.full_name AS last_edited_by
+              u.full_name AS last_edited_by, u.full_name_ka AS last_edited_by_ka
        FROM section_content sc
        LEFT JOIN users u ON u.id = sc.last_content_edited_by_user_id
        WHERE sc.event_id = $1 AND sc.section_id = $2`,
@@ -1192,6 +1196,7 @@ router.get('/section-content', requireAuth, async (req, res) => {
       status: content.status,
       lastEditedAt: content.last_content_edited_at,
       lastEditedBy: content.last_edited_by,
+      lastEditedByKa: content.last_edited_by_ka,
     });
   } catch (err) {
     console.error('Section content error:', err);

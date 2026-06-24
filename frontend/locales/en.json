@@ -307,7 +307,9 @@
         "edit": "Edit User —"
       },
       "form": {
-        "fullName": "Full Name",
+        "fullName": "Full Name (Latin)",
+        "fullNameKa": "Full Name (Georgian)",
+        "fullNameKaRequired": "Please enter the name in Georgian",
         "username": "Username",
         "email": "Email",
         "password": "Password",

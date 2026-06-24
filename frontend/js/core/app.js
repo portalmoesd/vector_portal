@@ -59,7 +59,7 @@ const App = {
 
     const currentPath = window.location.pathname;
     const dashUrl = dashboardUrl(user.role);
-    const displayName = user.fullName || user.username || 'User';
+    const displayName = localizedName(user.fullName, user.fullNameKa) || user.username || 'User';
     const initials = displayName.trim().split(/\s+/).slice(0, 2).map(s => s[0]?.toUpperCase() || '').join('') || 'U';
 
     const ICO = {

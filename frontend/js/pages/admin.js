@@ -219,7 +219,7 @@
           <thead><tr><th>${escapeHtml(I18n.tr('admin.user.col.name'))}</th><th>${escapeHtml(I18n.tr('admin.user.col.username'))}</th><th>${escapeHtml(I18n.tr('admin.user.col.role'))}</th><th>${escapeHtml(I18n.tr('admin.user.col.dept'))}</th><th>${escapeHtml(I18n.tr('admin.user.col.external'))}</th><th>${escapeHtml(I18n.tr('admin.user.col.actions'))}</th></tr></thead>
           <tbody>${users.map(u => `
             <tr>
-              <td>${escapeHtml(u.fullName)}</td>
+              <td>${escapeHtml(localizedName(u.fullName, u.fullNameKa))}</td>
               <td>${escapeHtml(u.username)}</td>
               <td><span class="pill pill-blue">${roleLabel(u.role)}</span></td>
               <td>${u.isExternal ? (u.entityName ? escapeHtml(u.entityName) : '—') : (u.departmentName ? escapeHtml(u.departmentName) : '—')}</td>
@@ -248,6 +248,10 @@
       <div class="form-group">
         <label class="form-label">${escapeHtml(I18n.tr('admin.user.form.fullName'))}</label>
         <input class="form-input" id="userFullName" value="${isEdit ? escapeHtml(user.fullName) : ''}" required />
+      </div>
+      <div class="form-group">
+        <label class="form-label">${escapeHtml(I18n.tr('admin.user.form.fullNameKa'))}</label>
+        <input class="form-input" id="userFullNameKa" value="${isEdit && user.fullNameKa ? escapeHtml(user.fullNameKa) : ''}" required />
       </div>
       ${!isEdit ? `<div class="form-group">
         <label class="form-label">${escapeHtml(I18n.tr('admin.user.form.username'))}</label>
@@ -294,6 +298,7 @@
     const deptOptions = departments.map(d => `<option value="${d.id}">${escapeHtml(d.name)}</option>`).join('');
     showModal(I18n.tr('admin.user.modal.add'), userFormHtml(deptOptions, null), async () => {
       const fullName = document.getElementById('userFullName').value.trim();
+      const fullNameKa = document.getElementById('userFullNameKa').value.trim();
       const username = document.getElementById('userUsername').value.trim();
       const email = document.getElementById('userEmail').value.trim();
       const password = document.getElementById('userPassword').value;
@@ -306,8 +311,9 @@
       const entityName = isExternal ? (document.getElementById('userEntity').value.trim() || null) : null;
       const countryIds = getSelectedCountryIds(document.getElementById('countryPickerContainer'));
       if (!fullName || !username || !email || !password) return;
+      if (!fullNameKa) { toast.warn(I18n.tr('admin.user.form.fullNameKaRequired')); return; }
       try {
-        await Api.post('/api/users', { fullName, username, email, password, role, departmentId, isExternal, entityName, countryIds });
+        await Api.post('/api/users', { fullName, fullNameKa, username, email, password, role, departmentId, isExternal, entityName, countryIds });
         hideModal();
         loadUsers();
       } catch (e) { toast.error(e.message); }
@@ -348,8 +354,9 @@
       `<option value="${d.id}" ${user.departmentId === d.id ? 'selected' : ''}>${escapeHtml(d.name)}</option>`
     ).join('');
 
-    showModal(I18n.tr('admin.user.modal.edit') + ' ' + user.fullName, userFormHtml(deptOptions, user), async () => {
+    showModal(I18n.tr('admin.user.modal.edit') + ' ' + localizedName(user.fullName, user.fullNameKa), userFormHtml(deptOptions, user), async () => {
       const fullName = document.getElementById('userFullName').value.trim();
+      const fullNameKa = document.getElementById('userFullNameKa').value.trim();
       const email = document.getElementById('userEmail').value.trim();
       const password = document.getElementById('userPassword').value;
       const role = document.getElementById('userRole').value;
@@ -358,8 +365,9 @@
       const entityName = isExternal ? (document.getElementById('userEntity').value.trim() || null) : null;
       const countryIds = getSelectedCountryIds(document.getElementById('countryPickerContainer'));
       if (!fullName || !email) return;
+      if (!fullNameKa) { toast.warn(I18n.tr('admin.user.form.fullNameKaRequired')); return; }
 
-      const body = { fullName, email, role, departmentId, isExternal, entityName, countryIds };
+      const body = { fullName, fullNameKa, email, role, departmentId, isExternal, entityName, countryIds };
       if (password) body.password = password;
 
       try {
@@ -410,8 +418,8 @@
           <tbody>${links.map((l, i) => `
             <tr>
               <td>${i + 1}</td>
-              <td>${escapeHtml(l.deputyName)}</td>
-              <td>${escapeHtml(l.supervisorName)}</td>
+              <td>${escapeHtml(localizedName(l.deputyName, l.deputyNameKa))}</td>
+              <td>${escapeHtml(localizedName(l.supervisorName, l.supervisorNameKa))}</td>
               <td>${l.supervisorDepartment ? escapeHtml(l.supervisorDepartment) : '—'}</td>
               <td>
                 <button class="btn btn-danger" style="padding:4px 10px;font-size:12px;" onclick="deleteLink(${l.id})">${escapeHtml(I18n.tr('common.delete'))}</button>
@@ -441,8 +449,8 @@
     const deputies = allUsers.filter(u => u.role === 'DEPUTY');
     const supervisors = allUsers.filter(u => u.role === 'SUPERVISOR');
 
-    const deputyOptions = deputies.map(d => `<option value="${d.id}">${escapeHtml(d.fullName)}</option>`).join('');
-    const supervisorOptions = supervisors.map(s => `<option value="${s.id}">${escapeHtml(s.fullName)} (${s.departmentName || '—'})</option>`).join('');
+    const deputyOptions = deputies.map(d => `<option value="${d.id}">${escapeHtml(localizedName(d.fullName, d.fullNameKa))}</option>`).join('');
+    const supervisorOptions = supervisors.map(s => `<option value="${s.id}">${escapeHtml(localizedName(s.fullName, s.fullNameKa))} (${s.departmentName || '—'})</option>`).join('');
 
     showModal(I18n.tr('admin.link.modal.add'), `
       <div class="form-group">
@@ -494,7 +502,7 @@
 
         const renderUsers = (users, pillClass) => users.length > 0
           ? users.map(u => `<div style="display:flex;align-items:center;gap:8px;padding:3px 0;">
-              <span class="pill ${pillClass}" style="font-size:11px;">${escapeHtml(u.fullName)}</span>
+              <span class="pill ${pillClass}" style="font-size:11px;">${escapeHtml(localizedName(u.fullName, u.fullNameKa))}</span>
               <span style="font-size:11px;color:var(--text-muted);">${escapeHtml(u.email)}</span>
             </div>`).join('')
           : `<span style="color:var(--text-muted);font-size:12px;padding-left:4px;">${lblNone}</span>`;

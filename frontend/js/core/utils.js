@@ -26,6 +26,27 @@ function localizedCountryName(country) {
   return en;
 }
 
+// Users have a Latin name (full_name / fullName) and an optional Georgian-
+// script name (full_name_ka / fullNameKa). Show the Georgian spelling when the
+// UI is in Georgian and one exists; otherwise fall back to the Latin name so
+// legacy/external users without a Georgian name still render.
+//
+// Accepts either a user-like object ({ fullName, fullNameKa } or snake_case
+// { full_name, full_name_ka }) or the two name strings directly:
+//   localizedName(user)            localizedName(user.fullName, user.fullNameKa)
+function localizedName(latinOrUser, ka) {
+  let latin = latinOrUser;
+  if (latinOrUser && typeof latinOrUser === 'object') {
+    latin = latinOrUser.fullName ?? latinOrUser.full_name ?? '';
+    ka = latinOrUser.fullNameKa ?? latinOrUser.full_name_ka ?? '';
+  }
+  try {
+    const locale = (typeof I18n !== 'undefined' && I18n.getLocale) ? I18n.getLocale() : 'en';
+    if (locale === 'ka' && ka && String(ka).trim()) return ka;
+  } catch (_) { /* fall back to Latin */ }
+  return latin || ka || '';
+}
+
 // Pick the locale tag for Intl.DateTimeFormat based on the user's
 // current i18n locale. Falls back to en-GB when I18n hasn't loaded
 // (e.g. the login page renders dates before init has finished).
