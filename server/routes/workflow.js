@@ -120,8 +120,14 @@ async function loadSectionContext(eventId, sectionId, jwtUser) {
 async function effectiveRole(user, event, sectionDeptIds, chain) {
   // Normalize department_id (JWT uses camelCase, resolveUser uses snake_case)
   const userDeptId = parseInt(user.department_id || user.departmentId) || null;
-  // Deputy as Curator
-  if (user.role === ROLES.DEPUTY && event.document_submitter_id !== user.id && sectionDeptIds) {
+  // Deputy as Curator. In advanced mode the document submitter (a deputy) is
+  // the final approver, not a mid-chain curator, so they're excluded here. In
+  // simple mode there's no single submitter — there's a Document Owner — and a
+  // Deputy owner *also* curates the sections in departments they oversee, so we
+  // don't exclude them.
+  const curatorEligible = event.workflow_type === 'simple'
+    || event.document_submitter_id !== user.id;
+  if (user.role === ROLES.DEPUTY && curatorEligible && sectionDeptIds) {
     const { rows } = await db.query(
       `SELECT 1 FROM deputy_department_links
        WHERE deputy_id = $1 AND department_id = ANY($2) LIMIT 1`,
@@ -910,14 +916,25 @@ router.get('/status-grid', requireAuth, async (req, res) => {
         let deptName = null;
 
         if (step === 'CURATOR') {
-          // Find the deputy who oversees the section's department(s), excluding the DS.
+          // Find the deputy who oversees the section's department(s). In advanced
+          // mode the document submitter is excluded (a deputy DS is the final
+          // approver, not a curator). In simple mode there's a Document Owner, and
+          // a Deputy owner curates their own-department sections — so include them
+          // and prefer them when they oversee the section's department.
           // Deputies oversee multiple departments, so don't show a single department name.
+          const isSimpleWf = event.workflow_type === 'simple';
           const { rows: [dep] } = await db.query(
-            `SELECT u.id, u.full_name
-             FROM deputy_department_links ddl
-             JOIN users u ON u.id = ddl.deputy_id
-             WHERE ddl.department_id = ANY($1) AND u.id != $2
-             ORDER BY u.id LIMIT 1`,
+            isSimpleWf
+              ? `SELECT u.id, u.full_name
+                 FROM deputy_department_links ddl
+                 JOIN users u ON u.id = ddl.deputy_id
+                 WHERE ddl.department_id = ANY($1)
+                 ORDER BY (u.id = $2) DESC, u.id LIMIT 1`
+              : `SELECT u.id, u.full_name
+                 FROM deputy_department_links ddl
+                 JOIN users u ON u.id = ddl.deputy_id
+                 WHERE ddl.department_id = ANY($1) AND u.id != $2
+                 ORDER BY u.id LIMIT 1`,
             [sectionDeptIds, event.document_submitter_id]);
           if (dep) { actorName = dep.full_name; actorId = dep.id; deptName = null; }
         } else if (step === ROLES.DEPUTY && event.document_submitter_role === 'DEPUTY') {
