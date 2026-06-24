@@ -78,7 +78,9 @@ router.get('/', requireAuth, async (req, res) => {
               e.ended_at, e.status, e.created_at,
               c.name_en AS country_name, c.code AS country_code,
               ds.full_name AS document_submitter_name,
-              sv.full_name AS supervisor_name
+              ds.full_name_ka AS document_submitter_name_ka,
+              sv.full_name AS supervisor_name,
+              sv.full_name_ka AS supervisor_name_ka
        FROM events e
        JOIN countries c ON c.id = e.country_id
        JOIN users ds ON ds.id = e.document_submitter_id
@@ -96,9 +98,11 @@ router.get('/', requireAuth, async (req, res) => {
       documentSubmitterRole: r.document_submitter_role,
       documentSubmitterId: r.document_submitter_id,
       documentSubmitterName: r.document_submitter_name,
+      documentSubmitterNameKa: r.document_submitter_name_ka,
       deputyId: r.deputy_id,
       supervisorId: r.supervisor_id,
       supervisorName: r.supervisor_name,
+      supervisorNameKa: r.supervisor_name_ka,
       curatorRequired: r.curator_required,
       workflowType: r.workflow_type,
       language: r.language,
@@ -399,8 +403,11 @@ router.get('/:id', requireAuth, async (req, res) => {
               e.ended_at, e.status, e.created_at,
               c.name_en AS country_name, c.code AS country_code,
               ds.full_name AS document_submitter_name,
+              ds.full_name_ka AS document_submitter_name_ka,
               dep.full_name AS deputy_name,
-              sv.full_name AS supervisor_name
+              dep.full_name_ka AS deputy_name_ka,
+              sv.full_name AS supervisor_name,
+              sv.full_name_ka AS supervisor_name_ka
        FROM events e
        JOIN countries c ON c.id = e.country_id
        JOIN users ds ON ds.id = e.document_submitter_id
@@ -432,10 +439,13 @@ router.get('/:id', requireAuth, async (req, res) => {
       documentSubmitterRole: event.document_submitter_role,
       documentSubmitterId: event.document_submitter_id,
       documentSubmitterName: event.document_submitter_name,
+      documentSubmitterNameKa: event.document_submitter_name_ka,
       deputyId: event.deputy_id,
       deputyName: event.deputy_name,
+      deputyNameKa: event.deputy_name_ka,
       supervisorId: event.supervisor_id,
       supervisorName: event.supervisor_name,
+      supervisorNameKa: event.supervisor_name_ka,
       curatorRequired: event.curator_required,
       workflowType: event.workflow_type,
       language: event.language,

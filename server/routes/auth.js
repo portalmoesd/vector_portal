@@ -16,7 +16,7 @@ router.post('/login', async (req, res) => {
     }
 
     const { rows } = await db.query(
-      `SELECT u.id, u.full_name, u.username, u.email, u.password_hash, u.role,
+      `SELECT u.id, u.full_name, u.full_name_ka, u.username, u.email, u.password_hash, u.role,
               u.department_id, u.is_external, u.entity_name, u.must_change_password,
               d.name AS department_name
        FROM users u
@@ -51,6 +51,7 @@ router.post('/login', async (req, res) => {
       user: {
         id: user.id,
         fullName: user.full_name,
+        fullNameKa: user.full_name_ka,
         username: user.username,
         email: user.email,
         role: user.role,
@@ -105,7 +106,7 @@ router.post('/change-password', requireAuth, async (req, res) => {
 router.get('/me', requireAuth, async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT u.id, u.full_name, u.username, u.email, u.role,
+      `SELECT u.id, u.full_name, u.full_name_ka, u.username, u.email, u.role,
               u.department_id, u.is_external, u.entity_name, u.must_change_password,
               d.name AS department_name
        FROM users u
@@ -122,6 +123,7 @@ router.get('/me', requireAuth, async (req, res) => {
     res.json({
       id: user.id,
       fullName: user.full_name,
+      fullNameKa: user.full_name_ka,
       username: user.username,
       email: user.email,
       role: user.role,

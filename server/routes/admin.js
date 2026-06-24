@@ -11,7 +11,8 @@ router.get('/deputy-supervisor-links', requireAuth, requireRole('ADMIN'), async 
   try {
     const { rows } = await db.query(
       `SELECT dsl.id, dsl.deputy_id, dsl.supervisor_id,
-              d.full_name AS deputy_name, s.full_name AS supervisor_name,
+              d.full_name AS deputy_name, d.full_name_ka AS deputy_name_ka,
+              s.full_name AS supervisor_name, s.full_name_ka AS supervisor_name_ka,
               dept.name_en AS supervisor_department
        FROM deputy_supervisor_links dsl
        JOIN users d ON d.id = dsl.deputy_id
@@ -23,8 +24,10 @@ router.get('/deputy-supervisor-links', requireAuth, requireRole('ADMIN'), async 
       id: r.id,
       deputyId: r.deputy_id,
       deputyName: r.deputy_name,
+      deputyNameKa: r.deputy_name_ka,
       supervisorId: r.supervisor_id,
       supervisorName: r.supervisor_name,
+      supervisorNameKa: r.supervisor_name_ka,
       supervisorDepartment: r.supervisor_department,
     })));
   } catch (err) {
@@ -95,7 +98,7 @@ router.get('/supervisors', requireAuth, async (req, res) => {
 
     let query, params;
     if (isUnrestricted) {
-      query = `SELECT u.id, u.full_name, u.department_id, d.name_en AS department_name
+      query = `SELECT u.id, u.full_name, u.full_name_ka, u.department_id, d.name_en AS department_name
                FROM deputy_supervisor_links dsl
                JOIN users u ON u.id = dsl.supervisor_id
                LEFT JOIN departments d ON d.id = u.department_id
@@ -104,7 +107,7 @@ router.get('/supervisors', requireAuth, async (req, res) => {
       params = [deputy_id];
     } else {
       // Non-admin users can only select themselves as responsible supervisor
-      query = `SELECT u.id, u.full_name, u.department_id, d.name_en AS department_name
+      query = `SELECT u.id, u.full_name, u.full_name_ka, u.department_id, d.name_en AS department_name
                FROM deputy_supervisor_links dsl
                JOIN users u ON u.id = dsl.supervisor_id
                LEFT JOIN departments d ON d.id = u.department_id
@@ -117,6 +120,7 @@ router.get('/supervisors', requireAuth, async (req, res) => {
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       departmentId: r.department_id,
       departmentName: r.department_name,
     })));
@@ -135,7 +139,7 @@ router.get('/department-hierarchy', requireAuth, async (req, res) => {
       `SELECT id, name, name_en, is_external FROM departments ORDER BY name_en`
     );
     const { rows: users } = await db.query(
-      `SELECT id, full_name, email, role, department_id
+      `SELECT id, full_name, full_name_ka, email, role, department_id
        FROM users
        WHERE department_id IS NOT NULL
          AND role IN ('SUPERVISOR', 'SUPER_COLLABORATOR', 'COLLABORATOR')
@@ -149,6 +153,7 @@ router.get('/department-hierarchy', requireAuth, async (req, res) => {
       byDept[u.department_id].push({
         id: u.id,
         fullName: u.full_name,
+        fullNameKa: u.full_name_ka,
         email: u.email,
         role: u.role,
       });
@@ -198,12 +203,13 @@ router.get('/department-hierarchy', requireAuth, async (req, res) => {
 router.get('/deputies', requireAuth, async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT id, full_name, department_id, is_minister
+      `SELECT id, full_name, full_name_ka, department_id, is_minister
        FROM users WHERE role = 'DEPUTY' ORDER BY is_minister DESC, full_name`
     );
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       departmentId: r.department_id,
       isMinister: r.is_minister,
     })));
@@ -219,9 +225,9 @@ router.get('/deputies', requireAuth, async (req, res) => {
 router.get('/minister', requireAuth, async (req, res) => {
   try {
     const { rows: [m] } = await db.query(
-      `SELECT id, full_name FROM users WHERE role = 'MINISTER' ORDER BY id LIMIT 1`
+      `SELECT id, full_name, full_name_ka FROM users WHERE role = 'MINISTER' ORDER BY id LIMIT 1`
     );
-    res.json(m ? { id: m.id, fullName: m.full_name } : null);
+    res.json(m ? { id: m.id, fullName: m.full_name, fullNameKa: m.full_name_ka } : null);
   } catch (err) {
     console.error('Get minister error:', err);
     res.status(500).json({ error: 'Internal server error' });
@@ -233,7 +239,7 @@ router.get('/minister', requireAuth, async (req, res) => {
 router.get('/all-supervisors', requireAuth, async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT u.id, u.full_name, d.name_en AS department_name
+      `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
        FROM users u
        LEFT JOIN departments d ON d.id = u.department_id
        WHERE u.role = 'SUPERVISOR'
@@ -242,6 +248,7 @@ router.get('/all-supervisors', requireAuth, async (req, res) => {
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       departmentName: r.department_name,
     })));
   } catch (err) {
@@ -260,17 +267,17 @@ router.get('/linked-deputies', requireAuth, async (req, res) => {
 
     if (role === 'ADMIN' || role === 'PROTOCOL') {
       ({ rows } = await db.query(
-        `SELECT id, full_name, department_id, is_minister FROM users WHERE role = 'DEPUTY' ORDER BY is_minister DESC, full_name`
+        `SELECT id, full_name, full_name_ka, department_id, is_minister FROM users WHERE role = 'DEPUTY' ORDER BY is_minister DESC, full_name`
       ));
     } else if (role === 'DEPUTY') {
       // Only themselves
       ({ rows } = await db.query(
-        `SELECT id, full_name, department_id, is_minister FROM users WHERE id = $1`, [id]
+        `SELECT id, full_name, full_name_ka, department_id, is_minister FROM users WHERE id = $1`, [id]
       ));
     } else if (role === 'SUPERVISOR') {
       // Deputies linked to this supervisor
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, u.department_id, u.is_minister
+        `SELECT u.id, u.full_name, u.full_name_ka, u.department_id, u.is_minister
          FROM deputy_supervisor_links dsl
          JOIN users u ON u.id = dsl.deputy_id
          WHERE dsl.supervisor_id = $1
@@ -293,6 +300,7 @@ router.get('/linked-deputies', requireAuth, async (req, res) => {
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       departmentId: r.department_id,
       isMinister: r.is_minister,
     })));
@@ -310,7 +318,7 @@ router.get('/linked-supervisors', requireAuth, async (req, res) => {
 
     if (role === 'ADMIN' || role === 'PROTOCOL') {
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.role = 'SUPERVISOR'
@@ -319,7 +327,7 @@ router.get('/linked-supervisors', requireAuth, async (req, res) => {
     } else if (role === 'DEPUTY') {
       // Supervisors linked to this deputy
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM deputy_supervisor_links dsl
          JOIN users u ON u.id = dsl.supervisor_id
          LEFT JOIN departments d ON d.id = u.department_id
@@ -329,7 +337,7 @@ router.get('/linked-supervisors', requireAuth, async (req, res) => {
     } else if (role === 'SUPERVISOR') {
       // Only themselves
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.id = $1`, [id]
@@ -337,7 +345,7 @@ router.get('/linked-supervisors', requireAuth, async (req, res) => {
     } else if (role === 'SUPER_COLLABORATOR') {
       // Supervisors in the same department
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.role = 'SUPERVISOR' AND u.department_id = $1
@@ -350,6 +358,7 @@ router.get('/linked-supervisors', requireAuth, async (req, res) => {
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       departmentName: r.department_name,
     })));
   } catch (err) {
@@ -366,7 +375,7 @@ router.get('/linked-super-collaborators', requireAuth, async (req, res) => {
 
     if (role === 'ADMIN' || role === 'PROTOCOL') {
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.role = 'SUPER_COLLABORATOR'
@@ -375,7 +384,7 @@ router.get('/linked-super-collaborators', requireAuth, async (req, res) => {
     } else if (role === 'DEPUTY') {
       // SCs in departments of linked supervisors
       ({ rows } = await db.query(
-        `SELECT DISTINCT u.id, u.full_name, d.name_en AS department_name
+        `SELECT DISTINCT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.role = 'SUPER_COLLABORATOR'
@@ -389,7 +398,7 @@ router.get('/linked-super-collaborators', requireAuth, async (req, res) => {
     } else if (role === 'SUPERVISOR') {
       // SCs in the same department
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.role = 'SUPER_COLLABORATOR' AND u.department_id = $1
@@ -398,7 +407,7 @@ router.get('/linked-super-collaborators', requireAuth, async (req, res) => {
     } else if (role === 'SUPER_COLLABORATOR') {
       // Only themselves
       ({ rows } = await db.query(
-        `SELECT u.id, u.full_name, d.name_en AS department_name
+        `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
          FROM users u
          LEFT JOIN departments d ON d.id = u.department_id
          WHERE u.id = $1`, [id]
@@ -410,6 +419,7 @@ router.get('/linked-super-collaborators', requireAuth, async (req, res) => {
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       departmentName: r.department_name,
     })));
   } catch (err) {
@@ -423,7 +433,7 @@ router.get('/linked-super-collaborators', requireAuth, async (req, res) => {
 router.get('/all-super-collaborators', requireAuth, async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT u.id, u.full_name, d.name_en AS department_name
+      `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
        FROM users u
        LEFT JOIN departments d ON d.id = u.department_id
        WHERE u.role = 'SUPER_COLLABORATOR'
@@ -432,6 +442,7 @@ router.get('/all-super-collaborators', requireAuth, async (req, res) => {
     res.json(rows.map(r => ({
       id: r.id,
       fullName: r.full_name,
+      fullNameKa: r.full_name_ka,
       departmentName: r.department_name,
     })));
   } catch (err) {

@@ -47,6 +47,10 @@ CREATE TABLE IF NOT EXISTS departments (
 CREATE TABLE IF NOT EXISTS users (
   id                    SERIAL PRIMARY KEY,
   full_name             VARCHAR(200) NOT NULL,
+  -- Georgian-script spelling of full_name. full_name itself holds the Latin
+  -- transliteration; this is shown instead when the UI is in Georgian (with
+  -- full_name as the fallback when it is empty — e.g. legacy/external users).
+  full_name_ka          VARCHAR(200),
   username              VARCHAR(100) NOT NULL UNIQUE,
   email                 VARCHAR(200) NOT NULL,
   password_hash         TEXT NOT NULL,
@@ -61,6 +65,8 @@ CREATE TABLE IF NOT EXISTS users (
 );
 -- Backfill for databases predating the entity_name column.
 ALTER TABLE users ADD COLUMN IF NOT EXISTS entity_name VARCHAR(200);
+-- Backfill for databases predating the full_name_ka column.
+ALTER TABLE users ADD COLUMN IF NOT EXISTS full_name_ka VARCHAR(200);
 -- DEPRECATED: the Minister used to be modelled as a DEPUTY flagged with
 -- is_minister. It is now a first-class 'MINISTER' user_role (see migration in
 -- server/index.js). The column is kept for backward compatibility / backfill

@@ -52,6 +52,7 @@ function addParticipant(participants, user, sourceRole) {
   participants.set(Number(user.id), {
     id: Number(user.id),
     fullName: user.full_name,
+    fullNameKa: user.full_name_ka,
     email: user.email,
     role: user.role || sourceRole,
     departmentName: user.department_name || null,
@@ -122,7 +123,7 @@ async function getUserById(db, userId) {
   const {
     rows: [user],
   } = await db.query(
-    `SELECT u.id, u.full_name, u.email, u.role, d.name_en AS department_name, u.department_id
+    `SELECT u.id, u.full_name, u.full_name_ka, u.email, u.role, d.name_en AS department_name, u.department_id
      FROM users u
      LEFT JOIN departments d ON d.id = u.department_id
      WHERE u.id = $1`,
@@ -144,7 +145,7 @@ async function getHomeDepartmentId(db, event) {
 async function getUsersForStep(db, event, sectionDeptIds, homeDepartmentId, step) {
   if (step === 'CURATOR') {
     const { rows } = await db.query(
-      `SELECT u.id, u.full_name, u.email, u.role, d.name_en AS department_name
+      `SELECT u.id, u.full_name, u.full_name_ka, u.email, u.role, d.name_en AS department_name
        FROM deputy_department_links ddl
        JOIN users u ON u.id = ddl.deputy_id
        LEFT JOIN departments d ON d.id = u.department_id
@@ -163,7 +164,7 @@ async function getUsersForStep(db, event, sectionDeptIds, homeDepartmentId, step
   if (step.startsWith('RECEIVING_')) {
     if (!homeDepartmentId) return [];
     const { rows } = await db.query(
-      `SELECT u.id, u.full_name, u.email, u.role, d.name_en AS department_name
+      `SELECT u.id, u.full_name, u.full_name_ka, u.email, u.role, d.name_en AS department_name
        FROM users u
        LEFT JOIN departments d ON d.id = u.department_id
        LEFT JOIN country_assignments ca ON ca.user_id = u.id AND ca.country_id = $3
@@ -180,7 +181,7 @@ async function getUsersForStep(db, event, sectionDeptIds, homeDepartmentId, step
 
   if (!sectionDeptIds.length) return [];
   const { rows } = await db.query(
-    `SELECT u.id, u.full_name, u.email, u.role, d.name_en AS department_name
+    `SELECT u.id, u.full_name, u.full_name_ka, u.email, u.role, d.name_en AS department_name
      FROM users u
      LEFT JOIN departments d ON d.id = u.department_id
      LEFT JOIN country_assignments ca ON ca.user_id = u.id AND ca.country_id = $3
@@ -205,6 +206,7 @@ function splitRecipients(participants) {
     const payload = {
       id: participant.id,
       fullName: participant.fullName,
+      fullNameKa: participant.fullNameKa,
       role: participant.role,
       roleLabels: participant.sourceRoles,
       departmentName: participant.departmentName,

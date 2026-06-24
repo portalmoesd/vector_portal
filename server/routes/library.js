@@ -12,6 +12,7 @@ router.get('/', requireAuth, async (req, res) => {
       `SELECT DISTINCT e.id, e.title, e.language, e.ended_at,
               c.name_en AS country_name, c.code AS country_code,
               ds.full_name AS document_submitter_name,
+              ds.full_name_ka AS document_submitter_name_ka,
               e.document_submitter_id
        FROM events e
        JOIN countries c ON c.id = e.country_id
@@ -36,6 +37,7 @@ router.get('/', requireAuth, async (req, res) => {
       countryName: r.country_name,
       countryCode: r.country_code,
       documentSubmitterName: r.document_submitter_name,
+      documentSubmitterNameKa: r.document_submitter_name_ka,
       documentSubmitterId: r.document_submitter_id,
     })));
   } catch (err) {

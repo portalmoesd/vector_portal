@@ -73,7 +73,7 @@
     const h = new Date().getHours();
     const gKey = h < 12 ? 'greetingMorning' : (h < 18 ? 'greetingAfternoon' : 'greetingEvening');
     const greeting = I18n.tr('dashboard.' + gKey);
-    const name = user.fullName || user.username || '';
+    const name = localizedName(user.fullName, user.fullNameKa) || user.username || '';
     const gEl = document.getElementById('mnGreeting');
     if (gEl) gEl.textContent = name ? `${greeting}, ${name}` : greeting;
     const dEl = document.getElementById('mnDate');
@@ -154,8 +154,9 @@
       statusClass += ' mn-card--overdue';
     }
     const lang = languageLabel(d.language || 'EN');
-    const owner = d.documentSubmitterName
-      ? `<div class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(d.documentSubmitterName)}">${ICON_PERSON}<span>${escapeHtml(d.documentSubmitterName)}</span></div>`
+    const ownerName = localizedName(d.documentSubmitterName, d.documentSubmitterNameKa);
+    const owner = ownerName
+      ? `<div class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(ownerName)}">${ICON_PERSON}<span>${escapeHtml(ownerName)}</span></div>`
       : '';
 
     let excerpt = '';
@@ -339,8 +340,9 @@
     }
 
     const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
-    const ownerChip = item.documentSubmitterName
-      ? `<span class="is-owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}">${ICON_PERSON}${escapeHtml(item.documentSubmitterName)}</span>`
+    const ownerChipName = localizedName(item.documentSubmitterName, item.documentSubmitterNameKa);
+    const ownerChip = ownerChipName
+      ? `<span class="is-owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}">${ICON_PERSON}${escapeHtml(ownerChipName)}</span>`
       : '';
 
     if (mode === 'completed') {

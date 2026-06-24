@@ -66,7 +66,7 @@ router.get('/grouped', requireAuth, async (req, res) => {
 
     // Get deputy → department mapping through direct deputy-department links
     const { rows: links } = await db.query(
-      `SELECT ddl.deputy_id, u.full_name AS deputy_name,
+      `SELECT ddl.deputy_id, u.full_name AS deputy_name, u.full_name_ka AS deputy_name_ka,
               ddl.department_id
        FROM deputy_department_links ddl
        JOIN users u ON u.id = ddl.deputy_id
@@ -78,7 +78,7 @@ router.get('/grouped', requireAuth, async (req, res) => {
     const assignedDeptIds = new Set();
     for (const l of links) {
       if (!deputyMap.has(l.deputy_id)) {
-        deputyMap.set(l.deputy_id, { deputyName: l.deputy_name, departmentIds: [] });
+        deputyMap.set(l.deputy_id, { deputyName: l.deputy_name, deputyNameKa: l.deputy_name_ka, departmentIds: [] });
       }
       deputyMap.get(l.deputy_id).departmentIds.push(l.department_id);
       assignedDeptIds.add(l.department_id);
