@@ -130,33 +130,35 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
     // Normalise workflow type. Default 'advanced' preserves the existing
     // role-chain behaviour for clients that don't send the field. In
     // 'simple' mode the responsible-supervisor concept doesn't apply
-    // (no Department A vs B), so supervisorId is forced to null. The
-    // curator flag, however, is opt-in for both modes — when set in
-    // simple mode the chain gets a CURATOR step at the end.
-    // A Minister DS never acts: the document is driven by an assigned deputy
-    // acting as curator, and the event auto-publishes via checkEventCompletion.
-    // That only works in 'simple' mode (advanced would require the Minister to
-    // click "Send to library"), so force simple + curator for Minister-DS events.
+    // (no Department A vs B), so supervisorId is forced to null.
+    //
+    // Simple workflow has no single final approver — it has a "Document Owner".
+    // A Minister owner never acts (curators drive it), so a Minister forces
+    // simple mode. For Minister and Deputy owners in simple mode the curator
+    // step is mandatory (Minister relies on org-chart curators; a Deputy owner
+    // also curates their own-department sections), so the curator flag is
+    // forced on. Supervisor / Super-Collaborator owners keep the caller's
+    // optional curator choice. In advanced mode the curator flag stays opt-in.
     const isMinisterDS = documentSubmitterRole === 'MINISTER';
     const workflowType = isMinisterDS
       ? 'simple'
       : (rawWorkflowType === 'simple' ? 'simple' : 'advanced');
     // Accept boolean true OR string 'yes' / 'true' for forgiving
     // intake from any caller that might serialise differently.
-    const effectiveCuratorRequired = isMinisterDS || curatorRequired === true
+    const forceCurator = workflowType === 'simple'
+      && (documentSubmitterRole === 'MINISTER' || documentSubmitterRole === 'DEPUTY');
+    const effectiveCuratorRequired = forceCurator || curatorRequired === true
       || curatorRequired === 'true'
       || curatorRequired === 'yes';
+    // The Document Owner sits outside the simple chain — curators are resolved
+    // per-section from deputy_department_links, so no event-level deputy is
+    // needed. (In advanced mode deputyId is the responsible/curator deputy.)
+    const effectiveDeputyId = workflowType === 'simple' ? null : (deputyId || null);
     const effectiveSupervisorId = workflowType === 'simple' ? null : (supervisorId || null);
-    console.log(`[events.create] workflow=${workflowType} curator_required=${effectiveCuratorRequired} (raw=${JSON.stringify(curatorRequired)})`);
+    console.log(`[events.create] workflow=${workflowType} owner=${documentSubmitterRole} curator_required=${effectiveCuratorRequired} (raw=${JSON.stringify(curatorRequired)})`);
 
     if (!title || !countryId || !documentSubmitterRole || !documentSubmitterId) {
       return res.status(400).json({ error: 'Missing required fields' });
-    }
-
-    // A Minister-DS event needs an assigned deputy to act as curator (the
-    // chain's final approver). Without it the document could never be approved.
-    if (isMinisterDS && !deputyId) {
-      return res.status(400).json({ error: 'A curator (deputy) is required when the Minister is the Document Submitter' });
     }
 
     // ── Role-based DS assignment validation ──────────────────────────────
@@ -237,7 +239,7 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
          VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
          RETURNING id`,
         [title, countryId, documentSubmitterRole, documentSubmitterId,
-         deputyId || null, effectiveSupervisorId, effectiveCuratorRequired, workflowType,
+         effectiveDeputyId, effectiveSupervisorId, effectiveCuratorRequired, workflowType,
          language || 'EN', deadlineDate || null, occasion || null, req.user.id]
       );
 

@@ -200,8 +200,8 @@
       "workflowSimple": "Simple",
       "workflowAdvanced": "Advanced",
       "dsRole": "Document Submitter Role *",
+      "ownerRole": "Document Owner Role *",
       "deputy": "Deputy *",
-      "curatorDeputy": "Curator (Deputy) *",
       "responsibleSupervisor": "Responsible Supervisor *",
       "supervisor": "Supervisor *",
       "superCollaborator": "Super-Collaborator *",
@@ -224,7 +224,6 @@
       "missingRequired": "Title, Country, and DS Role are required",
       "missingSection": "Add at least one section",
       "missingDeputy": "Select a deputy or the minister",
-      "missingCurator": "Select a curator (deputy) to drive the Minister's document",
       "noMinister": "No Minister is configured — create a Minister user first",
       "attachmentFailed": "Event created, but the attachment could not be uploaded:"
     },

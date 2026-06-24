@@ -558,7 +558,7 @@
           </select>
         </div>
         <div class="form-group" id="deputyGroup">
-          <label class="form-label" id="deputyLabel" data-i18n="calendar.form.deputy">Deputy *</label>
+          <label class="form-label" data-i18n="calendar.form.deputy">Deputy *</label>
           <select class="form-select" id="newDeputy">
             <option value="" data-i18n="calendar.form.selectDeputy">— Select Deputy —</option>
             ${deputyOpts}
@@ -638,14 +638,14 @@
         return;
       }
 
-      // Minister as DS: the Minister is the submitter and the picked deputy is
-      // the curator who actually drives/approves the document. Both required.
+      // Owner/Submitter validation. In simple workflow the chosen role is the
+      // Document Owner; in advanced it's the Document Submitter. A Minister owner
+      // needs no deputy (curators come from the org chart); a Deputy owner/DS
+      // must be picked.
       const isMinisterDS = dsRole === 'MINISTER';
       if (isMinisterDS) {
         if (!minister) { toast.warn(I18n.tr('calendar.warn.noMinister')); return; }
-        if (!deputyId) { toast.warn(I18n.tr('calendar.warn.missingCurator')); return; }
-      } else if (isProtocol && !deputyId) {
-        // Protocol must explicitly pick the deputy who submits the document.
+      } else if (dsRole === 'DEPUTY' && !deputyId) {
         toast.warn(I18n.tr('calendar.warn.missingDeputy'));
         return;
       }
@@ -669,10 +669,15 @@
         documentSubmitterId = user.id;
       }
 
-      // Minister-DS events always run as simple workflow with a curator (the
-      // assigned deputy is the final approver); the server enforces this too.
+      // A Minister forces simple workflow. Curator is mandatory for Minister and
+      // Deputy owners in simple mode (the server enforces the same rules).
       const effWorkflowType = isMinisterDS ? 'simple' : workflowType;
-      const effCuratorRequired = isMinisterDS ? true : curatorRequired;
+      const effCuratorRequired = (effWorkflowType === 'simple' && (dsRole === 'MINISTER' || dsRole === 'DEPUTY'))
+        ? true
+        : curatorRequired;
+      // The deputy is only an event-level field for a Deputy owner/DS; for other
+      // owners it's resolved per-section (curators) and left null.
+      const effDeputyId = dsRole === 'DEPUTY' ? deputyId : null;
 
       // DS=SUPERVISOR: responsible supervisor is the same person as the DS
       if (dsRole === 'SUPERVISOR') {
@@ -684,7 +689,7 @@
           title, countryId,
           documentSubmitterRole: dsRole,
           documentSubmitterId,
-          deputyId,
+          deputyId: effDeputyId,
           supervisorId,
           curatorRequired: effCuratorRequired,
           workflowType: effWorkflowType,
@@ -783,65 +788,67 @@
       loadSupervisors(deputyId);
     });
 
-    // Hide the responsible-supervisor field in simple mode — the
-    // Department A vs B distinction doesn't apply there. Curator
-    // stays available in both modes; when checked in simple mode the
-    // chain ends at CURATOR instead of SUPERVISOR.
+    const roleSel = document.getElementById('newDSRole');
+    const wfSel = document.getElementById('newWorkflowType');
+
+    // Which roles can be the Document Owner (simple) / Document Submitter
+    // (advanced), by creator + workflow. The Minister is a simple-only owner and
+    // only ADMIN/PROTOCOL may name one; Protocol is limited to Minister/Deputy.
+    function availableRoles() {
+      const simple = wfSel.value === 'simple';
+      if (isProtocol) return simple ? ['MINISTER', 'DEPUTY'] : ['DEPUTY'];
+      if (user.role === 'ADMIN') {
+        const base = ['DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
+        return simple ? ['MINISTER', ...base] : base;
+      }
+      // Pipeline creators (Deputy / Supervisor / Super-Collaborator).
+      return ['DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
+    }
+
+    function populateRoleOptions() {
+      const roles = availableRoles();
+      const prev = roleSel.value;
+      roleSel.innerHTML = roles
+        .map(r => `<option value="${r}">${escapeHtml(I18n.tr('roles.' + r))}</option>`)
+        .join('');
+      roleSel.value = roles.includes(prev) ? prev : roles[0];
+    }
+
+    // Simple workflow has a "Document Owner"; advanced has a "Document Submitter".
+    function applyRoleGroupLabel() {
+      const lbl = document.querySelector('#dsRoleGroup .form-label');
+      if (lbl) lbl.textContent = I18n.tr(wfSel.value === 'simple' ? 'calendar.form.ownerRole' : 'calendar.form.dsRole');
+    }
+
+    // Curator is mandatory for Minister and Deputy owners in simple workflow
+    // (Minister relies on org-chart curators; a Deputy owner curates their own
+    // sections). Otherwise the curator toggle is free.
+    function applyCuratorRule() {
+      const force = wfSel.value === 'simple' && (roleSel.value === 'MINISTER' || roleSel.value === 'DEPUTY');
+      const curEl = document.getElementById('newCurator');
+      if (!curEl) return;
+      if (force) { curEl.value = 'yes'; curEl.disabled = true; } else { curEl.disabled = false; }
+    }
+
+    // Responsible-supervisor field only applies to an advanced Deputy DS (the
+    // Department A vs B distinction). Hidden in simple mode and for other roles.
     function applyWorkflowTypeVisibility() {
-      const wfEl = document.getElementById('newWorkflowType');
-      const isSimple = wfEl && wfEl.value === 'simple';
-      const dsRole = document.getElementById('newDSRole').value;
       const supGroup = document.getElementById('supervisorGroup');
       if (supGroup) {
-        supGroup.style.display = (!isSimple && dsRole === 'DEPUTY') ? '' : 'none';
-      }
-    }
-    document.getElementById('newWorkflowType').addEventListener('change', applyWorkflowTypeVisibility);
-    applyWorkflowTypeVisibility();
-
-    // When the Minister is the Document Submitter, the deputy picker becomes the
-    // Curator picker (the deputy is the chain's final approver) and the workflow
-    // is forced to simple + curator. The server enforces the same constraints.
-    function applyMinisterMode() {
-      const isMin = document.getElementById('newDSRole').value === 'MINISTER';
-      const label = document.getElementById('deputyLabel');
-      if (label) label.textContent = I18n.tr(isMin ? 'calendar.form.curatorDeputy' : 'calendar.form.deputy');
-      const wfEl = document.getElementById('newWorkflowType');
-      const curEl = document.getElementById('newCurator');
-      if (isMin) {
-        if (wfEl) { wfEl.value = 'simple'; wfEl.disabled = true; }
-        if (curEl) { curEl.value = 'yes'; curEl.disabled = true; }
-      } else {
-        if (wfEl) wfEl.disabled = false;
-        if (curEl) curEl.disabled = false;
+        supGroup.style.display = (wfSel.value !== 'simple' && roleSel.value === 'DEPUTY') ? '' : 'none';
       }
     }
 
-    // Protocol assigns the document to a Deputy or the Minister only — drop the
-    // Supervisor / Super-Collaborator submitter options and keep the selector
-    // visible so they can choose between Deputy and Minister.
-    if (isProtocol) {
-      const dsRoleSel = document.getElementById('newDSRole');
-      Array.from(dsRoleSel.options).forEach(o => {
-        if (o.value !== 'DEPUTY' && o.value !== 'MINISTER') o.remove();
-      });
-      dsRoleSel.value = 'DEPUTY';
-      document.getElementById('deputyGroup').style.display = '';
-    }
-
-    // Show/hide groups based on DS role
-    document.getElementById('newDSRole').addEventListener('change', async () => {
-      const dsRole = document.getElementById('newDSRole').value;
-      document.getElementById('deputyGroup').style.display =
-        (dsRole === 'DEPUTY' || dsRole === 'MINISTER') ? '' : 'none';
-      // supervisorGroup visibility is set by applyWorkflowTypeVisibility
-      // (it depends on both DS role and workflow type).
-      document.getElementById('dsSupervisorGroup').style.display =
-        dsRole === 'SUPERVISOR' ? '' : 'none';
-      document.getElementById('dsSCGroup').style.display =
-        dsRole === 'SUPER_COLLABORATOR' ? '' : 'none';
-      applyMinisterMode();
+    // Show the person-picker for the chosen role: Deputy → deputy picker,
+    // Supervisor → supervisor picker, Super-Collaborator → SC picker, Minister →
+    // none (curators come from the org chart).
+    async function applyRoleVisibility() {
+      const dsRole = roleSel.value;
+      document.getElementById('deputyGroup').style.display = dsRole === 'DEPUTY' ? '' : 'none';
+      document.getElementById('dsSupervisorGroup').style.display = dsRole === 'SUPERVISOR' ? '' : 'none';
+      document.getElementById('dsSCGroup').style.display = dsRole === 'SUPER_COLLABORATOR' ? '' : 'none';
       applyWorkflowTypeVisibility();
+      applyCuratorRule();
 
       if (dsRole !== 'DEPUTY') {
         document.getElementById('newSupervisor').innerHTML = '<option value="">— Select Supervisor —</option>';
@@ -864,7 +871,21 @@
           document.getElementById('newDSSC').innerHTML = '<option value="">— No super-collaborators found —</option>';
         }
       }
+    }
+
+    // Switching workflow rebuilds the role options (e.g. Minister disappears in
+    // advanced) and relabels Owner ⇄ Submitter.
+    wfSel.addEventListener('change', () => {
+      populateRoleOptions();
+      applyRoleGroupLabel();
+      applyRoleVisibility();
     });
+    roleSel.addEventListener('change', applyRoleVisibility);
+
+    // Initial paint.
+    populateRoleOptions();
+    applyRoleGroupLabel();
+    applyRoleVisibility();
   });
 
   // ── Initial render ───────────────────────────────────────────────────────
