@@ -33,6 +33,25 @@
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
 
+  // ── Georgian date names ─────────────────────────────────────────────────────
+  // Browser Intl 'ka' data is inconsistent across environments, so localize
+  // month / weekday names ourselves to guarantee Georgian output.
+  const KA_MONTHS = ['იანვარი', 'თებერვალი', 'მარტი', 'აპრილი', 'მაისი', 'ივნისი',
+    'ივლისი', 'აგვისტო', 'სექტემბერი', 'ოქტომბერი', 'ნოემბერი', 'დეკემბერი'];
+  const KA_WEEK_SHORT = ['ორშ', 'სამ', 'ოთხ', 'ხუთ', 'პარ', 'შაბ', 'კვ']; // Mon..Sun
+  const KA_WEEK_LONG = ['ორშაბათი', 'სამშაბათი', 'ოთხშაბათი', 'ხუთშაბათი', 'პარასკევი', 'შაბათი', 'კვირა'];
+  function isKa() { return typeof I18n !== 'undefined' && I18n.getLocale && I18n.getLocale() === 'ka'; }
+  function monIndex(jsDay) { return (jsDay + 6) % 7; } // JS Sun=0 → Mon-first index
+
+  // Long "weekday, D Month YYYY" date for the hero.
+  function longDate(date) {
+    if (isKa()) {
+      return `${KA_WEEK_LONG[monIndex(date.getDay())]}, ${date.getDate()} ${KA_MONTHS[date.getMonth()]} ${date.getFullYear()}`;
+    }
+    const loc = (typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB';
+    return date.toLocaleDateString(loc, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  }
+
   // ── Load data ────────────────────────────────────────────────────────────
   // Use allSettled so one failing endpoint can't blank the whole dashboard
   // (the calendar must still render even if a list fails to load).
@@ -58,10 +77,7 @@
     const gEl = document.getElementById('mnGreeting');
     if (gEl) gEl.textContent = name ? `${greeting}, ${name}` : greeting;
     const dEl = document.getElementById('mnDate');
-    if (dEl) {
-      const loc = (typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB';
-      dEl.textContent = new Date().toLocaleDateString(loc, { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-    }
+    if (dEl) dEl.textContent = longDate(new Date());
   }
   populateHero();
 
@@ -321,12 +337,18 @@
       if (d.getFullYear() === year && d.getMonth() === month) eventDates.add(d.getDate());
     });
 
-    const calLocale = (typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB';
-    const monthLabel = new Date(year, month, 1).toLocaleDateString(calLocale, { month: 'long', year: 'numeric' });
-    const weekdayFmt = new Intl.DateTimeFormat(calLocale, { weekday: 'short' });
-    const dayNames = [];
-    for (let i = 0; i < 7; i++) {
-      dayNames.push(weekdayFmt.format(new Date(2024, 0, 1 + i)).toUpperCase());
+    let monthLabel, dayNames;
+    if (isKa()) {
+      monthLabel = `${KA_MONTHS[month]} ${year}`;
+      dayNames = KA_WEEK_SHORT.slice();
+    } else {
+      const calLocale = (typeof _dateLocale === 'function') ? _dateLocale() : 'en-GB';
+      monthLabel = new Date(year, month, 1).toLocaleDateString(calLocale, { month: 'long', year: 'numeric' });
+      const weekdayFmt = new Intl.DateTimeFormat(calLocale, { weekday: 'short' });
+      dayNames = [];
+      for (let i = 0; i < 7; i++) {
+        dayNames.push(weekdayFmt.format(new Date(2024, 0, 1 + i)).toUpperCase());
+      }
     }
 
     const firstDay = new Date(year, month, 1);
