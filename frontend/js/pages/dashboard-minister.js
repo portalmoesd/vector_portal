@@ -85,11 +85,12 @@
     if (hour >= 17 && hour <= 20) return 'evening';
     return 'night';
   }
+  // Time-of-day icons drawn as asset files (drop your SVGs in /frontend/assets/).
   const HERO_ICONS = {
-    morning: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15a5 5 0 0 1 10 0z" stroke="none"/><g fill="none"><line x1="2.8" y1="15" x2="4.6" y2="15"/><line x1="19.4" y1="15" x2="21.2" y2="15"/><line x1="5" y1="9.2" x2="6.3" y2="10.5"/><line x1="19" y1="9.2" x2="17.7" y2="10.5"/><line x1="2.8" y1="18.8" x2="21.2" y2="18.8"/><polyline points="9.5 6 12 3.5 14.5 6"/></g></svg>',
-    afternoon: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.4" stroke="none"/><g fill="none"><line x1="12" y1="1.6" x2="12" y2="3.8"/><line x1="12" y1="20.2" x2="12" y2="22.4"/><line x1="1.6" y1="12" x2="3.8" y2="12"/><line x1="20.2" y1="12" x2="22.4" y2="12"/><line x1="4.4" y1="4.4" x2="6" y2="6"/><line x1="18" y1="18" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6" y2="18"/><line x1="18" y1="6" x2="19.6" y2="4.4"/></g></svg>',
-    evening: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15a5 5 0 0 1 10 0z" stroke="none"/><g fill="none"><line x1="2.8" y1="15" x2="4.6" y2="15"/><line x1="19.4" y1="15" x2="21.2" y2="15"/><line x1="5" y1="9.2" x2="6.3" y2="10.5"/><line x1="19" y1="9.2" x2="17.7" y2="10.5"/><line x1="2.8" y1="18.8" x2="21.2" y2="18.8"/><polyline points="9.5 3.5 12 6 14.5 3.5"/></g></svg>',
-    night: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-linejoin="round"><path d="M13.5 2.5 A 9.5 9.5 0 0 0 13.5 21.5 A 13 13 0 0 1 13.5 2.5 Z" stroke-width="0.6"/><path d="M18.3 4 L19.18 5.79 L21.15 6.07 L19.73 7.46 L20.06 9.43 L18.3 8.5 L16.54 9.43 L16.87 7.46 L15.45 6.07 L17.42 5.79 Z" stroke-width="1"/><path d="M16.5 11.7 L17.62 13.96 L20.11 14.33 L18.31 16.09 L18.73 18.57 L16.5 17.4 L14.27 18.57 L14.69 16.09 L12.89 14.33 L15.38 13.96 Z" stroke-width="1.1"/></svg>',
+    morning: '/assets/morning-icon.svg',
+    afternoon: '/assets/afternoon-icon.svg',
+    evening: '/assets/evening-icon.svg',
+    night: '/assets/night-icon.svg',
   };
 
   // Prefer the Georgian name when the UI is Georgian (defensive across key names).
@@ -121,7 +122,7 @@
     if (dEl) dEl.textContent = longDate(new Date(parseInt(t.year, 10), parseInt(t.month, 10) - 1, parseInt(t.day, 10)));
     if (heroIconEl) {
       heroIconEl.className = 'mn-hero__icon mn-hero__icon--' + pod;
-      heroIconEl.innerHTML = HERO_ICONS[pod];
+      heroIconEl.innerHTML = `<img src="${HERO_ICONS[pod]}" alt="" />`;
     }
     if (clockEl) clockEl.innerHTML = `${String(hourNum).padStart(2, '0')}<span class="mn-hero__colon">:</span>${t.minute}`;
   }
