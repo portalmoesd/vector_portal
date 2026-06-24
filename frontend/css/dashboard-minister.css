@@ -10,7 +10,6 @@
 /* ── Hero (greeting card) ──────────────────────────────────────────────────── */
 .mn-dash .mn-hero {
   position: relative;
-  overflow: hidden;
   display: flex;
   align-items: center;
   gap: 22px;
@@ -25,24 +24,9 @@
   box-shadow: 0 10px 34px rgba(2, 12, 27, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.65);
   animation: mnHeroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-/* Soft drifting azure aurora — palette only, just light & gentle motion */
-.mn-dash .mn-hero::before {
-  content: '';
-  position: absolute;
-  top: -45%; right: -8%;
-  width: 360px; height: 360px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 70% 35%, rgba(10,132,255,0.16), transparent 62%);
-  pointer-events: none;
-  animation: mnGlowDrift 16s ease-in-out infinite alternate;
-}
 @keyframes mnHeroIn {
   from { opacity: 0; transform: translateY(10px); }
   to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes mnGlowDrift {
-  from { transform: translate(0, 0) scale(1);        opacity: 0.8; }
-  to   { transform: translate(-28px, 18px) scale(1.14); opacity: 1; }
 }
 
 /* Time-of-day icon: monochrome line art on a frosted-glass disc */
@@ -56,17 +40,13 @@
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.32));
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 4px 14px rgba(2, 12, 27, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  animation: mnIconIn 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.18s both;
 }
 .mn-dash .mn-hero__icon svg { width: 26px; height: 26px; display: block; }
-.mn-dash .mn-hero__icon--morning svg,
-.mn-dash .mn-hero__icon--evening svg { animation: mnFloat 4s ease-in-out infinite; }
-.mn-dash .mn-hero__icon--afternoon svg { animation: mnSpin 30s linear infinite; transform-origin: 50% 50%; }
-.mn-dash .mn-hero__icon--night svg { animation: mnTwinkle 3.6s ease-in-out infinite; }
-@keyframes mnFloat   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-@keyframes mnSpin    { to { transform: rotate(360deg); } }
-@keyframes mnTwinkle { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+@keyframes mnIconIn {
+  from { opacity: 0; transform: scale(0.6) rotate(-12deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0); }
+}
 
 .mn-dash .mn-hero__text { position: relative; z-index: 1; flex: 1 1 auto; min-width: 0; }
 .mn-dash .mn-hero__greeting {
@@ -81,7 +61,7 @@
   text-transform: capitalize;
 }
 
-/* Live clock: hairline divider keeps it distinct; the colon softly blinks */
+/* Live Tbilisi clock, set off by a hairline divider */
 .mn-dash .mn-hero__clock {
   position: relative; z-index: 1;
   flex: 0 0 auto; margin-left: auto;
@@ -94,8 +74,6 @@
   letter-spacing: -0.01em;
   color: #475569; font-variant-numeric: tabular-nums;
 }
-.mn-dash .mn-hero__colon { animation: mnBlink 1.6s steps(1, end) infinite; }
-@keyframes mnBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.28; } }
 .mn-dash .mn-hero__tz {
   margin-top: 6px;
   font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
@@ -110,9 +88,7 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .mn-dash .mn-hero,
-  .mn-dash .mn-hero::before,
-  .mn-dash .mn-hero__icon svg,
-  .mn-dash .mn-hero__colon { animation: none; }
+  .mn-dash .mn-hero__icon { animation: none; }
 }
 /* ── Unified workspace: toolbar (toggle + search) above calendar/detail ────── */
 .mn-dash .mn-workspace { padding: 20px 22px; }
