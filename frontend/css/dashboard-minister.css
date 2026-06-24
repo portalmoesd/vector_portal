@@ -9,64 +9,103 @@
 
 /* ── Hero (greeting card) ──────────────────────────────────────────────────── */
 .mn-dash .mn-hero {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 22px;
   flex-wrap: wrap;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 22px 26px;
+  padding: 24px 28px;
   margin-bottom: 18px;
   background: var(--card);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
   box-shadow: var(--shadow-sm);
+  animation: mnHeroIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-.mn-dash .mn-hero__text { flex: 1 1 auto; min-width: 0; }
+/* Soft drifting azure aurora — palette only, just light & gentle motion */
+.mn-dash .mn-hero::before {
+  content: '';
+  position: absolute;
+  top: -45%; right: -8%;
+  width: 360px; height: 360px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 35%, rgba(10,132,255,0.16), transparent 62%);
+  pointer-events: none;
+  animation: mnGlowDrift 16s ease-in-out infinite alternate;
+}
+@keyframes mnHeroIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes mnGlowDrift {
+  from { transform: translate(0, 0) scale(1);        opacity: 0.8; }
+  to   { transform: translate(-28px, 18px) scale(1.14); opacity: 1; }
+}
+
+/* Time-of-day icon: large, monochrome line art that gently comes alive */
+.mn-dash .mn-hero__icon {
+  position: relative; z-index: 1;
+  flex: 0 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--text-secondary);
+}
+.mn-dash .mn-hero__icon svg { width: 34px; height: 34px; display: block; }
+.mn-dash .mn-hero__icon--morning svg,
+.mn-dash .mn-hero__icon--evening svg { animation: mnFloat 4s ease-in-out infinite; }
+.mn-dash .mn-hero__icon--afternoon svg { animation: mnSpin 30s linear infinite; transform-origin: 50% 50%; }
+.mn-dash .mn-hero__icon--night svg { animation: mnTwinkle 3.6s ease-in-out infinite; }
+@keyframes mnFloat   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+@keyframes mnSpin    { to { transform: rotate(360deg); } }
+@keyframes mnTwinkle { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+.mn-dash .mn-hero__text { position: relative; z-index: 1; flex: 1 1 auto; min-width: 0; }
 .mn-dash .mn-hero__greeting {
   margin: 0;
-  font-size: 1.5rem; font-weight: 800; letter-spacing: -0.022em;
-  line-height: 1.15;
+  font-size: 1.55rem; font-weight: 800; letter-spacing: -0.024em;
+  line-height: 1.12;
   color: var(--text-primary);
 }
 .mn-dash .mn-hero__date {
-  margin: 5px 0 0;
-  font-size: 0.9rem; color: var(--text-secondary);
+  margin: 6px 0 0;
+  font-size: 0.92rem; color: var(--text-secondary);
   text-transform: capitalize;
 }
-/* Clock block: hairline divider on the left keeps it visually distinct */
+
+/* Live clock: hairline divider keeps it distinct; the colon softly blinks */
 .mn-dash .mn-hero__clock {
+  position: relative; z-index: 1;
   flex: 0 0 auto; margin-left: auto;
   display: flex; flex-direction: column; align-items: flex-end;
-  padding-left: 24px;
+  padding-left: 26px;
   border-left: 1px solid var(--border);
 }
-.mn-dash .mn-hero__time-row {
-  display: flex; align-items: center; gap: 9px;
-  color: var(--text-primary);
-}
-.mn-dash .mn-hero__icon {
-  flex: 0 0 auto;
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-muted);
-}
-.mn-dash .mn-hero__icon svg { width: 19px; height: 19px; display: block; }
 .mn-dash .mn-hero__time {
-  font-size: 1.65rem; font-weight: 800; line-height: 1;
+  font-size: 1.85rem; font-weight: 800; line-height: 1;
   letter-spacing: -0.01em;
   color: var(--text-primary); font-variant-numeric: tabular-nums;
 }
+.mn-dash .mn-hero__colon { animation: mnBlink 1.6s steps(1, end) infinite; }
+@keyframes mnBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.28; } }
 .mn-dash .mn-hero__tz {
-  margin-top: 5px;
-  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  margin-top: 6px;
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--text-muted);
 }
 @media (max-width: 560px) {
-  .mn-dash .mn-hero { gap: 14px; }
+  .mn-dash .mn-hero { gap: 16px; padding: 20px; }
   .mn-dash .mn-hero__clock {
     margin-left: 0; padding-left: 0; border-left: none;
     align-items: flex-start;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mn-dash .mn-hero,
+  .mn-dash .mn-hero::before,
+  .mn-dash .mn-hero__icon svg,
+  .mn-dash .mn-hero__colon { animation: none; }
 }
 /* ── Unified workspace: toolbar (toggle + search) above calendar/detail ────── */
 .mn-dash .mn-workspace { padding: 20px 22px; }
