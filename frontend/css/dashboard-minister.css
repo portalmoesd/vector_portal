@@ -390,6 +390,20 @@
   background: rgba(10,132,255,0.10); color: var(--text-primary);
 }
 .mn-dash .mn-detail__meta .is-owner svg { width: 13px; height: 13px; color: var(--primary, #0a84ff); }
+/* Preview button sits at the right end of the meta pill row */
+.mn-dash .mn-detail__preview {
+  margin-left: auto;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.74rem; font-weight: 700;
+  padding: 4px 12px; border-radius: 999px;
+  color: var(--primary, #0a84ff);
+  background: rgba(10,132,255,0.10);
+  border: 1px solid rgba(10,132,255,0.22);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.mn-dash .mn-detail__preview:hover { background: rgba(10,132,255,0.18); }
+.mn-dash .mn-detail__preview svg { width: 14px; height: 14px; flex: 0 0 auto; }
 
 /* in-progress task brief card */
 .mn-dash .mn-brief {
