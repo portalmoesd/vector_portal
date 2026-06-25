@@ -340,6 +340,7 @@
   const ICON_CLIP = '<svg class="mn-file__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a5 5 0 0 1-7.07-7.07l9.19-9.19a3 3 0 0 1 4.24 4.24l-9.2 9.19a1 1 0 0 1-1.41-1.41l8.49-8.49"/></svg>';
   const ICON_DL = '<svg class="mn-file__dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
   const ICON_CHEVRON = '<svg class="mn-prog__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  const ICON_EYE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
 
   function detailHeaderHtml(item, country) {
     const code = (item.countryCode || '').toLowerCase();
@@ -459,9 +460,7 @@
           <span>${escapeHtml(country)}</span>
           <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
           ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
-        </div>
-        <div class="mn-card-actions">
-          <button class="btn btn-outline" data-act="preview">${escapeHtml(I18n.tr('library.btn.preview'))}</button>
+          <button class="mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
         </div>
         <div class="mn-progress" id="mnProgress"></div>
         ${item.occasion ? `<div class="mn-brief">${item.occasion}</div>` : ''}
