@@ -405,6 +405,7 @@
             ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
           </div>
           <div class="mn-card-actions">
+            <button class="btn btn-outline" data-act="preview">${escapeHtml(I18n.tr('library.btn.preview'))}</button>
             <button class="btn btn-outline" data-act="pdf">${escapeHtml(I18n.tr('library.btn.pdf'))}</button>
             <button class="btn btn-outline" data-act="word">${escapeHtml(I18n.tr('library.btn.word'))}</button>
           </div>
@@ -415,6 +416,7 @@
         </div>
       `;
       detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
+      detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => LibraryDoc.preview(item.id));
       detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
       detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
 
