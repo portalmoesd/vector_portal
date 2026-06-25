@@ -424,6 +424,7 @@
             <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
             ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
           </div>
+          <h4 class="mn-files__title">${escapeHtml(I18n.tr('dashboard.mainDocument'))}</h4>
           <div class="mn-card-actions">
             <button class="mn-pillbtn" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
             <button class="mn-pillbtn" data-act="pdf"><span>${escapeHtml(I18n.tr('library.btn.pdf'))}</span></button>

@@ -495,6 +495,9 @@
   text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);
 }
 .mn-dash .mn-files { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+/* "Main Document" heading above the action buttons */
+.mn-dash .mn-detail__meta + .mn-files__title { margin-top: 16px; }
+.mn-dash .mn-files__title + .mn-card-actions { margin-top: 0; }
 .mn-dash .mn-file {
   display: flex; align-items: center; gap: 10px;
   padding: 10px 14px; cursor: pointer;
