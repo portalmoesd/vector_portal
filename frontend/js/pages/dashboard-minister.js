@@ -92,6 +92,13 @@
     evening: '/assets/evening-icon.svg',
     night: '/assets/night-icon.svg',
   };
+  // Inline fallback shown until the asset files exist (uses currentColor).
+  const FALLBACK_ICONS = {
+    morning: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15a5 5 0 0 1 10 0z" stroke="none"/><g fill="none"><line x1="2.8" y1="15" x2="4.6" y2="15"/><line x1="19.4" y1="15" x2="21.2" y2="15"/><line x1="5" y1="9.2" x2="6.3" y2="10.5"/><line x1="19" y1="9.2" x2="17.7" y2="10.5"/><line x1="2.8" y1="18.8" x2="21.2" y2="18.8"/><polyline points="9.5 6 12 3.5 14.5 6"/></g></svg>',
+    afternoon: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.4" stroke="none"/><g fill="none"><line x1="12" y1="1.6" x2="12" y2="3.8"/><line x1="12" y1="20.2" x2="12" y2="22.4"/><line x1="1.6" y1="12" x2="3.8" y2="12"/><line x1="20.2" y1="12" x2="22.4" y2="12"/><line x1="4.4" y1="4.4" x2="6" y2="6"/><line x1="18" y1="18" x2="19.6" y2="19.6"/><line x1="4.4" y1="19.6" x2="6" y2="18"/><line x1="18" y1="6" x2="19.6" y2="4.4"/></g></svg>',
+    evening: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 15a5 5 0 0 1 10 0z" stroke="none"/><g fill="none"><line x1="2.8" y1="15" x2="4.6" y2="15"/><line x1="19.4" y1="15" x2="21.2" y2="15"/><line x1="5" y1="9.2" x2="6.3" y2="10.5"/><line x1="19" y1="9.2" x2="17.7" y2="10.5"/><line x1="2.8" y1="18.8" x2="21.2" y2="18.8"/><polyline points="9.5 3.5 12 6 14.5 3.5"/></g></svg>',
+    night: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-linejoin="round"><path d="M13.5 2.5 A 9.5 9.5 0 0 0 13.5 21.5 A 13 13 0 0 1 13.5 2.5 Z" stroke-width="0.6"/><path d="M18.3 4 L19.18 5.79 L21.15 6.07 L19.73 7.46 L20.06 9.43 L18.3 8.5 L16.54 9.43 L16.87 7.46 L15.45 6.07 L17.42 5.79 Z" stroke-width="1"/><path d="M16.5 11.7 L17.62 13.96 L20.11 14.33 L18.31 16.09 L18.73 18.57 L16.5 17.4 L14.27 18.57 L14.69 16.09 L12.89 14.33 L15.38 13.96 Z" stroke-width="1.1"/></svg>',
+  };
 
   // Prefer the Georgian name when the UI is Georgian (defensive across key names).
   function ministerName() {
@@ -123,6 +130,9 @@
     if (heroIconEl) {
       heroIconEl.className = 'mn-hero__icon mn-hero__icon--' + pod;
       heroIconEl.innerHTML = `<img src="${HERO_ICONS[pod]}" alt="" />`;
+      const img = heroIconEl.querySelector('img');
+      // Fall back to the inline glyph if the asset file isn't there yet.
+      img.addEventListener('error', () => { heroIconEl.innerHTML = FALLBACK_ICONS[pod]; });
     }
     if (clockEl) clockEl.innerHTML = `${String(hourNum).padStart(2, '0')}<span class="mn-hero__colon">:</span>${t.minute}`;
   }
@@ -450,14 +460,65 @@
           <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
           ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
         </div>
+        <div class="mn-card-actions">
+          <button class="btn btn-outline" data-act="preview">${escapeHtml(I18n.tr('library.btn.preview'))}</button>
+        </div>
         <div class="mn-progress" id="mnProgress"></div>
         ${item.occasion ? `<div class="mn-brief">${item.occasion}</div>` : ''}
         <div class="mn-files-wrap" id="mnFiles"></div>
       </div>
     `;
     detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
+    detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => previewInProgress(item));
     loadProgress(item.id, detailEl.querySelector('#mnProgress'));
     loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
+  }
+
+  // Build the all-sections preview for an in-progress event from live workflow
+  // content (the library /document endpoint only serves published events).
+  async function previewInProgress(item) {
+    try {
+      const grid = await Api.get(`/api/workflow/status-grid?event_id=${item.id}`);
+      const secs = (grid && grid.sections) || [];
+      const sections = await Promise.all(secs.map(s =>
+        Api.get(`/api/workflow/section-content?event_id=${item.id}&section_id=${s.sectionId}`)
+          .then(c => ({ title: s.sectionLabel, html: c.htmlContent }))
+          .catch(() => ({ title: s.sectionLabel, html: '' }))
+      ));
+      const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
+      openPreviewOverlay(item.title, country, sections);
+    } catch (e) {
+      toast.error(I18n.tr('library.preview.failLoad') + ' ' + e.message);
+    }
+  }
+
+  // Render a full-screen all-sections preview overlay (accepted/clean view),
+  // mirroring LibraryDoc.preview's markup so it looks identical.
+  function openPreviewOverlay(title, subtitle, sections) {
+    const overlay = document.createElement('div');
+    overlay.className = 'preview-overlay';
+    overlay.innerHTML = `
+      <div class="preview-card">
+        <div class="preview-header">
+          <h2>${escapeHtml(title)}</h2>
+          <button class="preview-close">&times;</button>
+        </div>
+        ${subtitle ? `<div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;">${escapeHtml(subtitle)}</div>` : ''}
+        ${sections.map(s => `
+          <div class="section-block">
+            <h3>${escapeHtml(s.title)}</h3>
+            <div class="section-content-preview">${LibraryDoc.stripTrackChanges(s.html || '<em>No content</em>')}</div>
+          </div>`).join('')}
+      </div>
+    `;
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) overlay.remove(); });
+    overlay.querySelector('.preview-close').addEventListener('click', () => overlay.remove());
+    document.body.appendChild(overlay);
+    // Accepted view: hide deletions, neutralize insertions.
+    overlay.querySelectorAll('.section-content-preview del').forEach(el => el.style.display = 'none');
+    overlay.querySelectorAll('.section-content-preview ins').forEach(el => {
+      el.style.textDecoration = 'none'; el.style.backgroundColor = 'transparent'; el.style.color = 'inherit';
+    });
   }
 
   // Show how far the document has moved through the approval chain. Per section,
