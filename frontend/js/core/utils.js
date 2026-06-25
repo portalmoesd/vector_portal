@@ -62,13 +62,16 @@ function _dateLocale() {
 function formatDate(dateStr) {
   if (!dateStr) return '—';
   const d = new Date(dateStr);
-  return d.toLocaleDateString(_dateLocale(), { day: '2-digit', month: '2-digit', year: 'numeric' });
+  // Numeric dates use day-first DD/MM/YYYY in both languages. The 'ka-GE'
+  // numeric ordering is unreliable across browsers (renders MM/DD/YYYY), and a
+  // bare numeric date looks identical in any language, so format it as en-GB.
+  return d.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' });
 }
 
 function formatDateTime(dateStr) {
   if (!dateStr) return '—';
   const d = new Date(dateStr);
-  return d.toLocaleString(_dateLocale(), {
+  return d.toLocaleString('en-GB', {
     day: '2-digit', month: '2-digit', year: 'numeric',
     hour: '2-digit', minute: '2-digit',
   });
