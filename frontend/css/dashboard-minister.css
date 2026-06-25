@@ -376,7 +376,7 @@
 }
 .mn-dash .mn-detail__close:hover { background: rgba(0,0,0,0.08); }
 .mn-dash .mn-detail__meta {
-  display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 4px;
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 12px 0 4px;
 }
 .mn-dash .mn-detail__meta span {
   font-size: 0.74rem; font-weight: 600;
@@ -390,20 +390,22 @@
   background: rgba(10,132,255,0.10); color: var(--text-primary);
 }
 .mn-dash .mn-detail__meta .is-owner svg { width: 13px; height: 13px; color: var(--primary, #0a84ff); }
-/* Preview button sits at the right end of the meta pill row */
+/* Preview button sits at the right end of the meta pill row, styled like the
+   active Completed/In-Progress toggle (solid azure pill, white label). */
 .mn-dash .mn-detail__preview {
   margin-left: auto;
-  display: inline-flex; align-items: center; gap: 6px;
-  font-size: 0.74rem; font-weight: 700;
-  padding: 4px 12px; border-radius: 999px;
-  color: var(--primary, #0a84ff);
-  background: rgba(10,132,255,0.10);
-  border: 1px solid rgba(10,132,255,0.22);
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: 0.78rem; font-weight: 700;
+  padding: 7px 16px; border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(180deg, var(--primary, #0a84ff), var(--primary-2, #0071e3));
+  border: none;
+  box-shadow: 0 6px 16px rgba(10,132,255,0.35);
   cursor: pointer;
-  transition: background 0.15s ease;
+  transition: filter 0.15s ease, box-shadow 0.15s ease;
 }
-.mn-dash .mn-detail__preview:hover { background: rgba(10,132,255,0.18); }
-.mn-dash .mn-detail__preview svg { width: 14px; height: 14px; flex: 0 0 auto; }
+.mn-dash .mn-detail__preview:hover { filter: brightness(1.05); box-shadow: 0 8px 20px rgba(10,132,255,0.45); }
+.mn-dash .mn-detail__preview svg { width: 15px; height: 15px; flex: 0 0 auto; }
 
 /* in-progress task brief card */
 .mn-dash .mn-brief {
