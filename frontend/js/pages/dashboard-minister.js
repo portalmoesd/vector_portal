@@ -341,6 +341,7 @@
   const ICON_DL = '<svg class="mn-file__dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
   const ICON_CHEVRON = '<svg class="mn-prog__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
   const ICON_EYE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
+  const ICON_DOWNLOAD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
 
   function detailHeaderHtml(item, country) {
     const code = (item.countryCode || '').toLowerCase();
@@ -427,8 +428,8 @@
           <h4 class="mn-files__title">${escapeHtml(I18n.tr('dashboard.mainDocument'))}</h4>
           <div class="mn-card-actions">
             <button class="mn-pillbtn" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
-            <button class="mn-pillbtn" data-act="pdf"><span>${escapeHtml(I18n.tr('library.btn.pdf'))}</span></button>
-            <button class="mn-pillbtn" data-act="word"><span>${escapeHtml(I18n.tr('library.btn.word'))}</span></button>
+            <button class="mn-pillbtn" data-act="pdf">${ICON_DOWNLOAD}<span>${escapeHtml(I18n.tr('library.btn.pdf'))}</span></button>
+            <button class="mn-pillbtn" data-act="word">${ICON_DOWNLOAD}<span>${escapeHtml(I18n.tr('library.btn.word'))}</span></button>
           </div>
           <div class="mn-files-wrap" id="mnFiles"></div>
         </div>
