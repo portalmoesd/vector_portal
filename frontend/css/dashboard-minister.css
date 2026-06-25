@@ -504,7 +504,9 @@
 }
 .mn-dash .mn-file:hover { background: rgba(10,132,255,0.06); border-color: rgba(10,132,255,0.30); transform: translateY(-1px); }
 .mn-dash .mn-file__icon { flex: 0 0 auto; width: 18px; height: 18px; color: var(--text-muted); }
-.mn-dash .mn-file__name { flex: 1; min-width: 0; font-size: 0.85rem; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mn-dash .mn-file__info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.mn-dash .mn-file__name { min-width: 0; font-size: 0.85rem; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mn-dash .mn-file__src { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .mn-dash .mn-file__size { flex: 0 0 auto; font-size: 0.74rem; color: var(--text-muted); }
 .mn-dash .mn-file__dl { flex: 0 0 auto; width: 16px; height: 16px; color: var(--primary, #0a84ff); }
 

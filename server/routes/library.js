@@ -93,9 +93,12 @@ router.get('/:eventId/files', requireAuth, async (req, res) => {
     const result = await db.query(
       `SELECT sf.id, sf.section_id, sf.original_name, sf.mime_type, sf.size,
               sf.uploaded_by_name, sf.created_at,
-              s.title AS section_title
+              s.title AS section_title,
+              dep.name AS uploader_dept, dep.name_en AS uploader_dept_en
        FROM section_files sf
        LEFT JOIN sections s ON s.id = sf.section_id
+       LEFT JOIN users u ON u.id = sf.uploaded_by_id
+       LEFT JOIN departments dep ON dep.id = u.department_id
        WHERE sf.event_id = $1
        ORDER BY sf.created_at DESC`,
       [req.params.eventId]
