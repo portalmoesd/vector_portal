@@ -406,6 +406,8 @@
 }
 .mn-dash .mn-detail__preview:hover { filter: brightness(1.05); box-shadow: 0 8px 20px rgba(10,132,255,0.45); }
 .mn-dash .mn-detail__preview svg { width: 15px; height: 15px; flex: 0 0 auto; }
+/* The inner label must not pick up the generic meta-pill background */
+.mn-dash .mn-detail__preview span { background: none; color: #fff; padding: 0; border-radius: 0; font-weight: 700; }
 
 /* in-progress task brief card */
 .mn-dash .mn-brief {
