@@ -75,6 +75,7 @@ router.get('/', requireAuth, async (req, res) => {
               e.document_submitter_id, e.deputy_id, e.supervisor_id, e.curator_required,
               e.workflow_type,
               e.language, e.deadline_date, e.occasion, e.is_active,
+              e.event_datetime,
               e.ended_at, e.status, e.created_at,
               c.name_en AS country_name, c.code AS country_code,
               ds.full_name AS document_submitter_name,
@@ -107,6 +108,7 @@ router.get('/', requireAuth, async (req, res) => {
       workflowType: r.workflow_type,
       language: r.language,
       deadlineDate: r.deadline_date,
+      eventDateTime: r.event_datetime,
       occasion: r.occasion,
       isActive: r.is_active,
       endedAt: r.ended_at,
@@ -129,7 +131,7 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
     const {
       title, countryId, documentSubmitterRole, documentSubmitterId,
       deputyId, supervisorId, curatorRequired, language, deadlineDate, occasion, sections,
-      workflowType: rawWorkflowType,
+      workflowType: rawWorkflowType, eventDateTime,
     } = req.body;
     // Normalise workflow type. Default 'advanced' preserves the existing
     // role-chain behaviour for clients that don't send the field. In
@@ -239,12 +241,12 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
       const { rows: [event] } = await client.query(
         `INSERT INTO events (title, country_id, document_submitter_role, document_submitter_id,
                              deputy_id, supervisor_id, curator_required, workflow_type, language,
-                             deadline_date, occasion, created_by_id)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)
+                             deadline_date, occasion, created_by_id, event_datetime)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
          RETURNING id`,
         [title, countryId, documentSubmitterRole, documentSubmitterId,
          effectiveDeputyId, effectiveSupervisorId, effectiveCuratorRequired, workflowType,
-         language || 'EN', deadlineDate || null, occasion || null, req.user.id]
+         language || 'EN', deadlineDate || null, occasion || null, req.user.id, eventDateTime || null]
       );
 
       if (sections && sections.length > 0) {
@@ -400,6 +402,7 @@ router.get('/:id', requireAuth, async (req, res) => {
               e.document_submitter_id, e.deputy_id, e.supervisor_id, e.curator_required,
               e.workflow_type,
               e.language, e.deadline_date, e.occasion, e.is_active,
+              e.event_datetime,
               e.ended_at, e.status, e.created_at,
               c.name_en AS country_name, c.code AS country_code,
               ds.full_name AS document_submitter_name,
@@ -450,6 +453,7 @@ router.get('/:id', requireAuth, async (req, res) => {
       workflowType: event.workflow_type,
       language: event.language,
       deadlineDate: event.deadline_date,
+      eventDateTime: event.event_datetime,
       occasion: event.occasion,
       isActive: event.is_active,
       endedAt: event.ended_at,
@@ -475,7 +479,7 @@ router.patch('/:id', requireAuth, denyAnalyst, async (req, res) => {
       return res.status(403).json({ error: 'Not authorized to edit events' });
     }
 
-    const { title, language, deadlineDate, occasion } = req.body;
+    const { title, language, deadlineDate, occasion, eventDateTime } = req.body;
     const sets = [];
     const params = [];
     let idx = 1;
@@ -483,6 +487,7 @@ router.patch('/:id', requireAuth, denyAnalyst, async (req, res) => {
     if (title !== undefined) { sets.push(`title = $${idx++}`); params.push(title); }
     if (language !== undefined) { sets.push(`language = $${idx++}`); params.push(language); }
     if (deadlineDate !== undefined) { sets.push(`deadline_date = $${idx++}`); params.push(deadlineDate || null); }
+    if (eventDateTime !== undefined) { sets.push(`event_datetime = $${idx++}`); params.push(eventDateTime || null); }
     if (occasion !== undefined) { sets.push(`occasion = $${idx++}`); params.push(occasion || null); }
 
     if (sets.length === 0) return res.status(400).json({ error: 'No fields to update' });

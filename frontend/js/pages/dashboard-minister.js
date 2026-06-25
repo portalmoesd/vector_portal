@@ -213,9 +213,15 @@
     }
     const lang = languageLabel(d.language || 'EN');
     const ownerName = localizedName(d.documentSubmitterName, d.documentSubmitterNameKa);
-    const owner = ownerName
-      ? `<div class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(ownerName)}">${ICON_PERSON}<span>${escapeHtml(ownerName)}</span></div>`
+    const ownerInline = ownerName
+      ? `<span class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(ownerName)}">${ICON_PERSON}<span>${escapeHtml(ownerName)}</span></span>`
       : '';
+    // Country first, then the document owner beside it.
+    const sub = `
+      <div class="mn-card__sub">
+        <span class="mn-card__country">${escapeHtml(country)}</span>
+        ${ownerInline}
+      </div>`;
 
     let excerpt = '';
     let meta;
@@ -235,7 +241,7 @@
           <span class="mn-card__flag" title="${escapeHtml(country)}">${flag}</span>
           <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
         </div>
-        ${owner}
+        ${sub}
         ${excerpt}
         <div class="mn-card__foot">
           <span class="mn-card__meta">${meta}</span>

@@ -339,6 +339,7 @@
           <p><strong>Curator Required:</strong> ${e.curatorRequired ? 'Yes' : 'No'}</p>
           ${e.occasion ? `<div><strong>Task:</strong> ${e.occasion}</div>` : ''}
           ${e.deadlineDate ? `<p><strong>Deadline:</strong> ${formatDate(e.deadlineDate)}</p>` : ''}
+          ${e.eventDateTime ? `<p><strong>${escapeHtml(I18n.tr('calendar.form.eventDateTime'))}:</strong> ${formatTbilisiDateTime(e.eventDateTime)} (Tbilisi)</p>` : ''}
           <p><strong>Status:</strong> ${e.status}</p>
           <p><strong>Sections:</strong></p>
           <ol style="margin:0 0 0 20px;">${sectionsHtml || '<li>None</li>'}</ol>
@@ -594,6 +595,10 @@
           <label class="form-label" data-i18n="calendar.form.deadline">Deadline</label>
           <input class="form-input" type="text" id="newDeadline" placeholder="dd/mm/yyyy" />
         </div>
+        <div class="form-group" id="eventDateTimeGroup" style="display:none;">
+          <label class="form-label" data-i18n="calendar.form.eventDateTime">Event date &amp; time</label>
+          <input class="form-input" type="text" id="newEventDateTime" placeholder="dd/mm/yyyy, hh:mm" />
+        </div>
         <div class="form-group">
           <label class="form-label" data-i18n="calendar.form.curatorRequired">Curator Required</label>
           <select class="form-select" id="newCurator">
@@ -630,6 +635,7 @@
       let supervisorId = document.getElementById('newSupervisor').value ? parseInt(document.getElementById('newSupervisor').value) : null;
       const language = document.getElementById('newLanguage').value;
       const deadlineDate = document.getElementById('newDeadline').value || null;
+      const eventDateTimeRaw = document.getElementById('newEventDateTime').value || null;
       const occasion = newOccasionEditor.getHtml() || null;
       const curatorRequired = document.getElementById('newCurator').value === 'yes';
 
@@ -694,6 +700,12 @@
           curatorRequired: effCuratorRequired,
           workflowType: effWorkflowType,
           language, deadlineDate, occasion,
+          // Optional — only relevant for Minister / Deputy owners. The picker
+          // value is Tbilisi wall-clock (UTC+4, no DST); send it as an explicit
+          // +04:00 instant so it's stored unambiguously.
+          eventDateTime: (dsRole === 'MINISTER' || dsRole === 'DEPUTY') && eventDateTimeRaw
+            ? eventDateTimeRaw.trim().replace(' ', 'T') + ':00+04:00'
+            : null,
           sections,
         });
         // Upload the attachment(s) (if any) before preparing the email draft
@@ -717,6 +729,7 @@
     const newOccasionEditor = window.GCP.createSimpleEditor(document.getElementById('newOccasionWrap'), { placeholder: 'Enter task description...' });
 
     flatpickr('#newDeadline', { dateFormat: 'Y-m-d', altInput: true, altFormat: 'd/m/Y', locale: { firstDayOfWeek: 1 } });
+    flatpickr('#newEventDateTime', { enableTime: true, time_24hr: true, dateFormat: 'Y-m-d H:i', altInput: true, altFormat: 'd/m/Y H:i', locale: { firstDayOfWeek: 1 } });
 
     const sectionRowsContainer = document.getElementById('sectionRows');
     const addSectionRowBtn = document.getElementById('addSectionRow');
@@ -847,6 +860,8 @@
       document.getElementById('deputyGroup').style.display = dsRole === 'DEPUTY' ? '' : 'none';
       document.getElementById('dsSupervisorGroup').style.display = dsRole === 'SUPERVISOR' ? '' : 'none';
       document.getElementById('dsSCGroup').style.display = dsRole === 'SUPER_COLLABORATOR' ? '' : 'none';
+      // Optional event date/time only applies to Minister / Deputy owners.
+      document.getElementById('eventDateTimeGroup').style.display = (dsRole === 'MINISTER' || dsRole === 'DEPUTY') ? '' : 'none';
       applyWorkflowTypeVisibility();
       applyCuratorRule();
 

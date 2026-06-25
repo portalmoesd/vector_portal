@@ -77,6 +77,18 @@ function formatDateTime(dateStr) {
   });
 }
 
+// Format a stored instant as Tbilisi (UTC+4, no DST) wall-clock — used for the
+// event date/time, which the creator enters in Tbilisi time.
+function formatTbilisiDateTime(dateStr) {
+  if (!dateStr) return '—';
+  const d = new Date(dateStr);
+  return d.toLocaleString('en-GB', {
+    timeZone: 'Asia/Tbilisi',
+    day: '2-digit', month: '2-digit', year: 'numeric',
+    hour: '2-digit', minute: '2-digit',
+  });
+}
+
 // Look up an i18n key, returning a fallback when the key is missing
 // or I18n isn't initialised yet (e.g. early in the login flow before
 // I18n.init() has resolved).
