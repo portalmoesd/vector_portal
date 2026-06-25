@@ -47,7 +47,22 @@ const App = {
     }
 
     await I18n.init();
-    this.renderSidebar(user);
+
+    // The cached `user` in localStorage is whatever the login response held at
+    // sign-in time, so a session that predates a new user field (e.g. the
+    // Georgian name `fullNameKa`) keeps showing stale data until the user logs
+    // out and back in. Refresh it from /me so newly-added fields appear right
+    // away. Best-effort: fall back to the cached copy if the request fails.
+    let currentUser = user;
+    try {
+      const fresh = await Api.get('/api/auth/me');
+      if (fresh && fresh.id) {
+        currentUser = { ...user, ...fresh };
+        Api.setUser(currentUser);
+      }
+    } catch (_) { /* keep cached user */ }
+
+    this.renderSidebar(currentUser);
   },
 
   renderSidebar(user) {
