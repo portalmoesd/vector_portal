@@ -329,6 +329,7 @@
   // ── Detail panel (right of the calendar): the expanded chosen event ─────────
   const ICON_CLIP = '<svg class="mn-file__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a5 5 0 0 1-7.07-7.07l9.19-9.19a3 3 0 0 1 4.24 4.24l-9.2 9.19a1 1 0 0 1-1.41-1.41l8.49-8.49"/></svg>';
   const ICON_DL = '<svg class="mn-file__dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
+  const ICON_CHEVRON = '<svg class="mn-prog__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
 
   function detailHeaderHtml(item, country) {
     const code = (item.countryCode || '').toLowerCase();
@@ -483,9 +484,7 @@
         title: s.sectionLabel || '',
         chain, passed, total, done,
         pct: Math.round((passed / total) * 100),
-        label: done
-          ? I18n.tr('dashboard.stageApproved')
-          : I18n.tr('dashboard.stageWith').replace('{role}', roleLabel(holder)),
+        label: done ? I18n.tr('dashboard.stageApproved') : stageWithLabel(holder),
       };
     });
     const overall = Math.round(rows.reduce((a, r) => a + r.pct, 0) / rows.length);
@@ -501,7 +500,11 @@
         </div>
         <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
         <div class="mn-prog__summary">${escapeHtml(summary)}</div>
-        <ul class="mn-prog__list">
+        <button type="button" class="mn-prog__toggle" id="mnProgToggle" aria-expanded="false">
+          <span>${escapeHtml(I18n.tr('dashboard.sections'))} (${rows.length})</span>
+          ${ICON_CHEVRON}
+        </button>
+        <ul class="mn-prog__list" id="mnProgList" hidden>
           ${rows.map(r => `
             <li class="mn-prog__item ${r.done ? 'is-done' : ''}">
               <div class="mn-prog__row">
@@ -518,6 +521,33 @@
         </ul>
       </div>
     `;
+    const toggle = container.querySelector('#mnProgToggle');
+    const list = container.querySelector('#mnProgList');
+    toggle.addEventListener('click', () => {
+      const open = list.hasAttribute('hidden');
+      if (open) list.removeAttribute('hidden'); else list.setAttribute('hidden', '');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
+  // Georgian "with <role>" needs the adessive (-თან) form, not a hyphen suffix.
+  function stageWithLabel(role) {
+    if (isKa()) {
+      const map = {
+        COLLABORATOR: 'კოლაბორატორთან',
+        SUPER_COLLABORATOR: 'სუპერ-კოლაბორატორთან',
+        RECEIVING_SUPER_COLLABORATOR: 'სუპერ-კოლაბორატორთან',
+        SUPERVISOR: 'ზედამხედველთან',
+        RECEIVING_SUPERVISOR: 'ზედამხედველთან',
+        CURATOR: 'კურატორთან',
+        DEPUTY: 'მოადგილესთან',
+        MINISTER: 'მინისტრთან',
+      };
+      if (map[role]) return map[role];
+      const lbl = roleLabel(role);
+      return (lbl.endsWith('ი') ? lbl.slice(0, -1) : lbl) + 'თან';
+    }
+    return I18n.tr('dashboard.stageWith').replace('{role}', roleLabel(role));
   }
 
   // ── Calendar (adapted from dashboard-pipeline.js renderMiniCalendar) ─────────

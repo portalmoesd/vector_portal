@@ -82,6 +82,7 @@
     "sectionsApproved": "{done} of {total} sections approved",
     "stageApproved": "Approved",
     "stageWith": "With {role}",
+    "sections": "Sections",
     "historyToggle": "History",
     "noHistory": "No history yet",
     "loading": "Loading…",
