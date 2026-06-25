@@ -390,10 +390,9 @@
   background: rgba(10,132,255,0.10); color: var(--text-primary);
 }
 .mn-dash .mn-detail__meta .is-owner svg { width: 13px; height: 13px; color: var(--primary, #0a84ff); }
-/* Preview button sits at the right end of the meta pill row, styled like the
-   active Completed/In-Progress toggle (solid azure pill, white label). */
-.mn-dash .mn-detail__preview {
-  margin-left: auto;
+/* Azure pill action button (Preview / PDF / Word, and the in-progress Preview),
+   styled like the active Completed/In-Progress toggle. */
+.mn-dash .mn-pillbtn {
   display: inline-flex; align-items: center; gap: 7px;
   font-size: 0.78rem; font-weight: 700;
   padding: 7px 16px; border-radius: 999px;
@@ -404,10 +403,12 @@
   cursor: pointer;
   transition: filter 0.15s ease, box-shadow 0.15s ease;
 }
-.mn-dash .mn-detail__preview:hover { filter: brightness(1.05); box-shadow: 0 8px 20px rgba(10,132,255,0.45); }
-.mn-dash .mn-detail__preview svg { width: 15px; height: 15px; flex: 0 0 auto; }
+.mn-dash .mn-pillbtn:hover { filter: brightness(1.05); box-shadow: 0 8px 20px rgba(10,132,255,0.45); }
+.mn-dash .mn-pillbtn svg { width: 15px; height: 15px; flex: 0 0 auto; }
 /* The inner label must not pick up the generic meta-pill background */
-.mn-dash .mn-detail__preview span { background: none; color: #fff; padding: 0; border-radius: 0; font-weight: 700; }
+.mn-dash .mn-pillbtn span { background: none; color: #fff; padding: 0; border-radius: 0; font-weight: 700; }
+/* In-progress Preview sits at the right end of the meta pill row */
+.mn-dash .mn-detail__preview { margin-left: auto; }
 
 /* in-progress task brief card */
 .mn-dash .mn-brief {

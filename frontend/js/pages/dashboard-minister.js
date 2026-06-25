@@ -416,12 +416,9 @@
             ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
           </div>
           <div class="mn-card-actions">
-            <button class="btn btn-outline" data-act="preview">${escapeHtml(I18n.tr('library.btn.preview'))}</button>
-            <button class="btn btn-outline" data-act="pdf">${escapeHtml(I18n.tr('library.btn.pdf'))}</button>
-            <button class="btn btn-outline" data-act="word">${escapeHtml(I18n.tr('library.btn.word'))}</button>
-          </div>
-          <div class="mn-paper" id="mnDetailBody">
-            <div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.loading'))}</p></div>
+            <button class="mn-pillbtn" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
+            <button class="mn-pillbtn" data-act="pdf"><span>${escapeHtml(I18n.tr('library.btn.pdf'))}</span></button>
+            <button class="mn-pillbtn" data-act="word"><span>${escapeHtml(I18n.tr('library.btn.word'))}</span></button>
           </div>
           <div class="mn-files-wrap" id="mnFiles"></div>
         </div>
@@ -430,22 +427,6 @@
       detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => LibraryDoc.preview(item.id));
       detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
       detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
-
-      // Load and render the document content inline (accepted view).
-      const bodyEl = detailEl.querySelector('#mnDetailBody');
-      Api.get(`/api/library/${item.id}/document`).then(doc => {
-        // Guard against a newer selection finishing first.
-        if (String(selectedId) !== String(item.id)) return;
-        bodyEl.innerHTML = (doc.sections || []).map(s => `
-          <div class="section-block">
-            <h3>${escapeHtml(s.title)}</h3>
-            <div class="section-content-preview">${LibraryDoc.stripTrackChanges(s.htmlContent || '<em>No content</em>')}</div>
-          </div>
-        `).join('') || `<div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.noSections'))}</p></div>`;
-      }).catch(err => {
-        if (String(selectedId) !== String(item.id)) return;
-        bodyEl.innerHTML = `<div class="msg msg-error">${escapeHtml(I18n.tr('library.preview.failLoad'))} ${escapeHtml(err.message)}</div>`;
-      });
       loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
       return;
     }
@@ -460,7 +441,7 @@
           <span>${escapeHtml(country)}</span>
           <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
           ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
-          <button class="mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
+          <button class="mn-pillbtn mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
         </div>
         <div class="mn-progress" id="mnProgress"></div>
         ${item.occasion ? `<div class="mn-brief">${item.occasion}</div>` : ''}
