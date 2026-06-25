@@ -436,7 +436,7 @@
       return;
     }
 
-    // In progress: brief + attachments (no published document yet).
+    // In progress: progress + brief + attachments (no published document yet).
     const due = dueInfo(item.deadlineDate);
     detailEl.innerHTML = `
       <div class="mn-detail__panel">
@@ -447,12 +447,77 @@
           <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
           ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
         </div>
+        <div class="mn-progress" id="mnProgress"></div>
         ${item.occasion ? `<div class="mn-brief">${item.occasion}</div>` : ''}
         <div class="mn-files-wrap" id="mnFiles"></div>
       </div>
     `;
     detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
+    loadProgress(item.id, detailEl.querySelector('#mnProgress'));
     loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
+  }
+
+  // Show how far the document has moved through the approval chain. Per section,
+  // currentHolderRole === null means fully approved; otherwise its index in the
+  // section's chain is how many stages have been passed.
+  async function loadProgress(eventId, container) {
+    let grid;
+    try {
+      grid = await Api.get(`/api/workflow/status-grid?event_id=${eventId}`);
+    } catch (e) {
+      if (container.isConnected && String(selectedId) === String(eventId)) container.innerHTML = '';
+      return;
+    }
+    if (!container.isConnected || String(selectedId) !== String(eventId)) return;
+    const sections = (grid && grid.sections) || [];
+    if (!sections.length) { container.innerHTML = ''; return; }
+
+    const rows = sections.map(s => {
+      const chain = Array.isArray(s.chain) ? s.chain : [];
+      const total = chain.length || 1;
+      const holder = s.currentHolderRole;
+      const done = !holder;
+      const idx = done ? total : chain.indexOf(holder);
+      const passed = Math.min(Math.max(idx, 0), total);
+      return {
+        title: s.sectionLabel || '',
+        chain, passed, total, done,
+        pct: Math.round((passed / total) * 100),
+        label: done
+          ? I18n.tr('dashboard.stageApproved')
+          : I18n.tr('dashboard.stageWith').replace('{role}', roleLabel(holder)),
+      };
+    });
+    const overall = Math.round(rows.reduce((a, r) => a + r.pct, 0) / rows.length);
+    const approved = rows.filter(r => r.done).length;
+    const summary = I18n.tr('dashboard.sectionsApproved')
+      .replace('{done}', approved).replace('{total}', rows.length);
+
+    container.innerHTML = `
+      <div class="mn-prog">
+        <div class="mn-prog__top">
+          <span class="mn-prog__label">${escapeHtml(I18n.tr('dashboard.progress'))}</span>
+          <span class="mn-prog__pct">${overall}%</span>
+        </div>
+        <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
+        <div class="mn-prog__summary">${escapeHtml(summary)}</div>
+        <ul class="mn-prog__list">
+          ${rows.map(r => `
+            <li class="mn-prog__item ${r.done ? 'is-done' : ''}">
+              <div class="mn-prog__row">
+                <span class="mn-prog__title">${escapeHtml(r.title)}</span>
+                <span class="mn-prog__pill ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
+              </div>
+              <div class="mn-prog__steps">
+                ${r.chain.map((role, i) => {
+                  const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
+                  return `<span class="mn-prog__dot ${st}" title="${escapeHtml(roleLabel(role))}"></span>`;
+                }).join('')}
+              </div>
+            </li>`).join('')}
+        </ul>
+      </div>
+    `;
   }
 
   // ── Calendar (adapted from dashboard-pipeline.js renderMiniCalendar) ─────────
