@@ -366,10 +366,16 @@
     ]);
     if (!container.isConnected || String(selectedId) !== String(eventId)) return;
     const files = [];
+    // Event files are added by the event creator (or admin/protocol).
     if (evRes.status === 'fulfilled') (evRes.value || []).forEach(f =>
-      files.push({ kind: 'event', id: f.id, name: f.original_name, size: f.size }));
-    if (secRes.status === 'fulfilled') (secRes.value || []).forEach(f =>
-      files.push({ kind: 'section', id: f.id, name: f.original_name, size: f.size }));
+      files.push({ kind: 'event', id: f.id, name: f.original_name, size: f.size,
+        source: I18n.tr('dashboard.addedByCreator') }));
+    // Section files are added during the workflow — credit the uploader's department.
+    if (secRes.status === 'fulfilled') (secRes.value || []).forEach(f => {
+      const dept = localizedName(f.uploader_dept_en, f.uploader_dept);
+      files.push({ kind: 'section', id: f.id, name: f.original_name, size: f.size,
+        source: dept || f.uploaded_by_name || '' });
+    });
     if (files.length === 0) { container.innerHTML = ''; return; }
     container.innerHTML = `
       <h4 class="mn-files__title">${escapeHtml(I18n.tr('dashboard.attachments'))}</h4>
@@ -377,7 +383,10 @@
         ${files.map((f, i) => `
           <li class="mn-file" data-i="${i}">
             ${ICON_CLIP}
-            <span class="mn-file__name">${escapeHtml(f.name)}</span>
+            <span class="mn-file__info">
+              <span class="mn-file__name">${escapeHtml(f.name)}</span>
+              ${f.source ? `<span class="mn-file__src">${escapeHtml(f.source)}</span>` : ''}
+            </span>
             <span class="mn-file__size">${f.size ? (f.size / 1024).toFixed(1) + ' KB' : ''}</span>
             ${ICON_DL}
           </li>`).join('')}
