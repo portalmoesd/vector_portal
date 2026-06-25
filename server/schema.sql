@@ -124,6 +124,8 @@ CREATE TABLE IF NOT EXISTS events (
 -- Backfill for databases predating the workflow_type column. Idempotent:
 -- ADD COLUMN IF NOT EXISTS is a no-op once the column has been added.
 ALTER TABLE events ADD COLUMN IF NOT EXISTS workflow_type event_workflow_type NOT NULL DEFAULT 'advanced';
+-- Optional date/time of the actual event (used for Minister/Deputy owners).
+ALTER TABLE events ADD COLUMN IF NOT EXISTS event_datetime TIMESTAMPTZ;
 
 -- ─── Sections ───────────────────────────────────────────────────────────────
 

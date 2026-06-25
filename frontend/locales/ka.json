@@ -235,6 +235,7 @@
       "superCollaborator": "სუპერ-კოლაბორატორი *",
       "language": "ენა",
       "deadline": "ვადა",
+      "eventDateTime": "ღონისძიების თარიღი და დრო",
       "curatorRequired": "საჭიროა კურატორი",
       "task": "დავალება",
       "attachment": "დანართი",

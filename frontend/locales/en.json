@@ -235,6 +235,7 @@
       "superCollaborator": "Super-Collaborator *",
       "language": "Language",
       "deadline": "Deadline",
+      "eventDateTime": "Event Date & Time",
       "curatorRequired": "Curator Required",
       "task": "Task",
       "attachment": "Attachment",
