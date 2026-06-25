@@ -339,7 +339,7 @@
           <p><strong>Curator Required:</strong> ${e.curatorRequired ? 'Yes' : 'No'}</p>
           ${e.occasion ? `<div><strong>Task:</strong> ${e.occasion}</div>` : ''}
           ${e.deadlineDate ? `<p><strong>Deadline:</strong> ${formatDate(e.deadlineDate)}</p>` : ''}
-          ${e.eventDateTime ? `<p><strong>${escapeHtml(I18n.tr('calendar.form.eventDateTime'))}:</strong> ${formatDateTime(e.eventDateTime)}</p>` : ''}
+          ${e.eventDateTime ? `<p><strong>${escapeHtml(I18n.tr('calendar.form.eventDateTime'))}:</strong> ${formatTbilisiDateTime(e.eventDateTime)} (Tbilisi)</p>` : ''}
           <p><strong>Status:</strong> ${e.status}</p>
           <p><strong>Sections:</strong></p>
           <ol style="margin:0 0 0 20px;">${sectionsHtml || '<li>None</li>'}</ol>
@@ -700,8 +700,12 @@
           curatorRequired: effCuratorRequired,
           workflowType: effWorkflowType,
           language, deadlineDate, occasion,
-          // Optional — only relevant for Minister / Deputy owners.
-          eventDateTime: (dsRole === 'MINISTER' || dsRole === 'DEPUTY') ? eventDateTimeRaw : null,
+          // Optional — only relevant for Minister / Deputy owners. The picker
+          // value is Tbilisi wall-clock (UTC+4, no DST); send it as an explicit
+          // +04:00 instant so it's stored unambiguously.
+          eventDateTime: (dsRole === 'MINISTER' || dsRole === 'DEPUTY') && eventDateTimeRaw
+            ? eventDateTimeRaw.trim().replace(' ', 'T') + ':00+04:00'
+            : null,
           sections,
         });
         // Upload the attachment(s) (if any) before preparing the email draft
