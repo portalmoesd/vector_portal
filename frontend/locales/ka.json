@@ -81,6 +81,7 @@
     "openAllSections": "ყველა სექციის გახსნა",
     "noSections": "ამ ღონისძიებისთვის სექციები არ არის",
     "progress": "პროგრესი",
+    "openInEditor": "რედაქტორში გახსნა",
     "sectionsApproved": "{total}-დან {done} სექცია დასრულებულია",
     "stageApproved": "დასრულებულია",
     "stageWith": "{role}-თან",

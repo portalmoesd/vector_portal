@@ -22,6 +22,11 @@
   const user = Api.getUser();
   if (!user) return;
 
+  // This dashboard also serves Collaborator / Super-Collaborator / Supervisor.
+  // They (unlike the read-only Minister) can act on documents, so expose links
+  // into the section editor for in-progress events.
+  const canEdit = user.role !== 'MINISTER';
+
   const listEl = document.getElementById('cardList');
   const detailEl = document.getElementById('eventDetail');
   const miniCalendarEl = document.getElementById('miniCalendar');
@@ -348,6 +353,7 @@
   const ICON_CHEVRON = '<svg class="mn-prog__chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
   const ICON_EYE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg>';
   const ICON_DOWNLOAD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
+  const ICON_EDIT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>';
 
   function detailHeaderHtml(item, country) {
     const code = (item.countryCode || '').toLowerCase();
@@ -459,6 +465,7 @@
           <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
           ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
           <button class="mn-pillbtn mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
+          ${canEdit ? `<button class="mn-pillbtn" data-act="editor">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.openInEditor'))}</span></button>` : ''}
         </div>
         <div class="mn-progress" id="mnProgress"></div>
         ${item.occasion ? `<div class="mn-brief">${item.occasion}</div>` : ''}
@@ -467,6 +474,9 @@
     `;
     detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
     detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => previewInProgress(item));
+    if (canEdit) detailEl.querySelector('[data-act="editor"]').addEventListener('click', () => {
+      window.location.href = `editor-all.html?event_id=${item.id}`;
+    });
     loadProgress(item.id, detailEl.querySelector('#mnProgress'));
     loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
   }
@@ -541,6 +551,7 @@
       const idx = done ? total : chain.indexOf(holder);
       const passed = Math.min(Math.max(idx, 0), total);
       return {
+        sectionId: s.sectionId,
         title: s.sectionLabel || '',
         chain, passed, total, done,
         pct: Math.round((passed / total) * 100),
@@ -568,7 +579,9 @@
           ${rows.map(r => `
             <li class="mn-prog__item ${r.done ? 'is-done' : ''}">
               <div class="mn-prog__row">
-                <span class="mn-prog__title">${escapeHtml(r.title)}</span>
+                ${canEdit
+                  ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
+                  : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
                 <span class="mn-prog__pill ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
               </div>
               <div class="mn-prog__steps">
