@@ -219,9 +219,14 @@ function canPushSection(userRole, chain, isCrossDept, holderRole, isLastActor, w
   if (workflowType === 'simple') {
     if (!chain || chain.length < 2) return false;
     if (!holderRole || !chain.includes(holderRole)) return false;
-    if (userRole !== holderRole) return false;
-    if (userRole === ROLES.SUPER_COLLABORATOR) return true;
-    if (userRole === ROLES.SUPERVISOR) return chain.includes('CURATOR');
+    if (userRole === holderRole) {
+      if (userRole === ROLES.SUPER_COLLABORATOR) return true;
+      if (userRole === ROLES.SUPERVISOR) return chain.includes('CURATOR');
+      return false;
+    }
+    // Supervisor may push a section sitting at the curator straight to
+    // completion — the curator-unresponsive escape hatch.
+    if (userRole === ROLES.SUPERVISOR && holderRole === 'CURATOR') return true;
     return false;
   }
 

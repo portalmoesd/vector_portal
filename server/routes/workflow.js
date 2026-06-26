@@ -703,8 +703,11 @@ router.post('/push-section', requireAuth, denyAnalyst, async (req, res) => {
     const isSimplePush = ctx.workflowType === 'simple';
     const hasCurator = ctx.chain.includes('CURATOR');
     const finalChainRole = ctx.chain[ctx.chain.length - 1];
+    // Simple push hands the section to the curator for approval, unless it is
+    // already at the curator (a Supervisor pushing it past an unresponsive
+    // curator) or there is no curator — in which case the push completes it.
     const toStatus = isSimplePush
-      ? (hasCurator ? submittedToStatus('CURATOR') : approvedByStatus(finalChainRole))
+      ? ((hasCurator && holder !== 'CURATOR') ? submittedToStatus('CURATOR') : approvedByStatus(finalChainRole))
       : submittedToStatus('RECEIVING_SUPER_COLLABORATOR');
     const origRole = ctx.originalSubmitterRole || userRole;
 
