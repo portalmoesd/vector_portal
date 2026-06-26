@@ -579,6 +579,7 @@
         chain, passed, total, done,
         pct: Math.round((passed / total) * 100),
         label: done ? I18n.tr('dashboard.stageApproved') : stageWithLabel(holder),
+        raw: s,
       };
     });
     const overall = Math.round(rows.reduce((a, r) => a + r.pct, 0) / rows.length);
@@ -613,6 +614,7 @@
                   return `<span class="mn-prog__dot ${st}" title="${escapeHtml(roleLabel(role))}"></span>`;
                 }).join('')}
               </div>
+              ${canEdit ? renderSectionActions(r.raw, eventId) : ''}
             </li>`).join('')}
         </ul>
       </div>
@@ -623,6 +625,98 @@
       const open = list.hasAttribute('hidden');
       if (open) list.removeAttribute('hidden'); else list.setAttribute('hidden', '');
       toggle.setAttribute('aria-expanded', String(open));
+    });
+    if (canEdit) bindSectionActions(container, eventId);
+  }
+
+  // ── Quick section actions (ported from dashboard-pipeline.js) ───────────────
+  const ACT_ICONS = {
+    submit: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>',
+    approve: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>',
+    return: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>',
+    push: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>',
+    pull: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>',
+  };
+  function actBtn(action, labelKey, icon, cls) {
+    return `<button type="button" class="mn-actbtn ${cls}" data-action="${action}">${icon}<span>${escapeHtml(I18n.tr(labelKey))}</span></button>`;
+  }
+
+  // Which quick buttons a section offers the current user — same per-status logic
+  // as the old pipeline dashboard. The server re-enforces every action.
+  function renderSectionActions(s, eventId) {
+    const effRole = s.userEffectiveRole || user.role;
+    const holder = s.currentHolderRole;
+    const isHolder = effRole === holder;
+    const status = s.status || 'draft';
+    const btns = [];
+    if (isHolder) {
+      if (status === 'draft' || status.startsWith('returned_')) {
+        btns.push(actBtn('submit', 'dashboard.actionSubmit', ACT_ICONS.submit, 'is-submit'));
+      }
+      if (status === `submitted_to_${effRole.toLowerCase()}`) {
+        btns.push(actBtn('approve', 'dashboard.actionApprove', ACT_ICONS.approve, 'is-approve'));
+        if (status !== 'submitted_to_amending_ds') {
+          btns.push(actBtn('return', 'dashboard.actionReturn', ACT_ICONS.return, 'is-return'));
+        }
+      }
+    } else if (status !== 'draft' && status) {
+      const chain = s.chain || [];
+      const userIdx = chain.indexOf(effRole);
+      const holderIdx = chain.indexOf(holder);
+      if (userIdx !== -1 && holderIdx > userIdx) {
+        btns.push(actBtn('ask-to-return', 'dashboard.actionAskReturn', ACT_ICONS.return, 'is-ask'));
+      }
+    }
+    if (s.canPush) btns.push(actBtn('push-section', 'editor.pushSection', ACT_ICONS.push, 'is-push'));
+    if (s.canPull) btns.push(actBtn('pull-section', 'editor.pullSection', ACT_ICONS.pull, 'is-pull'));
+    if (!btns.length) return '';
+    return `<div class="mn-prog__actions" data-section="${s.sectionId}" data-event="${eventId}">${btns.join('')}</div>`;
+  }
+
+  function bindSectionActions(container, eventId) {
+    container.querySelectorAll('.mn-prog__actions [data-action]').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        e.preventDefault();
+        const wrap = btn.closest('.mn-prog__actions');
+        const sectionId = parseInt(wrap.dataset.section, 10);
+        const evId = parseInt(wrap.dataset.event, 10);
+        const action = btn.dataset.action;
+        try {
+          if (action === 'submit') {
+            if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmSubmit'), { confirmLabel: I18n.tr('common.submit'), confirmColor: '#3b82f6' })) return;
+            await Api.post('/api/workflow/submit', { eventId: evId, sectionId });
+          } else if (action === 'approve') {
+            if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmApprove'), { confirmLabel: I18n.tr('common.approve'), confirmColor: '#16a34a' })) return;
+            await Api.post('/api/workflow/approve', { eventId: evId, sectionId });
+          } else if (action === 'return') {
+            const comment = await GCP.ActionDialog.popoverPrompt(btn, I18n.tr('editor.returnTitle'), { placeholder: I18n.tr('editor.returnPlaceholderOptional'), confirmLabel: I18n.tr('common.return'), confirmColor: '#6d28d9' });
+            if (comment === null) return;
+            await Api.post('/api/workflow/return', { eventId: evId, sectionId, comment: comment || undefined });
+          } else if (action === 'ask-to-return') {
+            const note = await GCP.ActionDialog.popoverPrompt(btn, I18n.tr('editor.askReturnTitle'), { placeholder: I18n.tr('editor.askReturnPlaceholder'), confirmLabel: I18n.tr('editor.sendRequest'), confirmColor: '#a16207' });
+            if (note === null) return;
+            await Api.post('/api/workflow/ask-to-return', { eventId: evId, sectionId, note: note || undefined });
+          } else if (action === 'push-section') {
+            if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmPush'), { confirmLabel: I18n.tr('editor.pushSection'), confirmColor: '#6d28d9' })) return;
+            await Api.post('/api/workflow/push-section', { eventId: evId, sectionId });
+          } else if (action === 'pull-section') {
+            if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmPull'), { confirmLabel: I18n.tr('editor.pullSection'), confirmColor: '#7c3aed' })) return;
+            await Api.post('/api/workflow/pull-section', { eventId: evId, sectionId });
+          }
+          // Refresh the progress block in place (the section list expands again).
+          const list = container.querySelector('#mnProgList');
+          const wasOpen = list && !list.hasAttribute('hidden');
+          await loadProgress(evId, container);
+          if (wasOpen) {
+            const newList = container.querySelector('#mnProgList');
+            const newToggle = container.querySelector('#mnProgToggle');
+            if (newList) newList.removeAttribute('hidden');
+            if (newToggle) newToggle.setAttribute('aria-expanded', 'true');
+          }
+        } catch (err) {
+          toast.error(err.message);
+        }
+      });
     });
   }
 
