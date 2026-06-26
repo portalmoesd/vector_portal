@@ -476,14 +476,29 @@ router.post('/return', requireAuth, denyAnalyst, async (req, res) => {
     const userRole = ctx.userRole;
     const holder = currentHolderRole(ctx.sectionStatus, ctx.originalSubmitterRole, ctx.returnTargetRole, ctx.chain);
 
-    if (userRole !== holder) {
+    // Return goes back to the original editor level (§5.2 rule 6)
+    const returnTarget = firstEditorRole(ctx.chain);
+    const chain = ctx.chain || [];
+    const effIdx = chain.indexOf(userRole);
+    const holderIdx = chain.indexOf(holder);
+    const targetIdx = chain.indexOf(returnTarget);
+    const isHolder = userRole === holder;
+    // A role AHEAD of the holder may return a section held below them — it goes
+    // back to the first editor (collaborator). Only when the holder is past the
+    // first editor, so it never applies at the collaborator stage.
+    const isAheadReturn = !isHolder
+      && effIdx !== -1 && holderIdx !== -1
+      && effIdx > holderIdx && holderIdx > targetIdx;
+
+    if (!isHolder && !isAheadReturn) {
       return res.status(403).json({
         error: `Section is held by ${holder}, not ${userRole}`,
       });
     }
 
-    // Section must be submitted_to this role
-    const expectedStatus = submittedToStatus(userRole);
+    // Section must currently be submitted to its holder (actively in review),
+    // whether the holder themselves or a role ahead of them is returning it.
+    const expectedStatus = submittedToStatus(holder);
     if (ctx.sectionStatus !== expectedStatus) {
       return res.status(400).json({
         error: `Cannot return — section status is ${ctx.sectionStatus}, expected ${expectedStatus}`,
@@ -492,9 +507,6 @@ router.post('/return', requireAuth, denyAnalyst, async (req, res) => {
 
     const fromStatus = ctx.sectionStatus;
     const toStatus = returnedByStatus(userRole);
-
-    // Return goes back to the original editor level (§5.2 rule 6)
-    const returnTarget = firstEditorRole(ctx.chain);
 
     await db.query(
       `UPDATE section_content
@@ -685,12 +697,14 @@ router.post('/push-section', requireAuth, denyAnalyst, async (req, res) => {
 
     const fromStatus = ctx.sectionStatus;
     // Advanced mode pushes to RECEIVING_SUPER_COLLABORATOR (cross-dept
-    // expedite); simple mode pushes straight to the final approval state
-    // for the chain (since there's no Department A receiving chain).
+    // expedite). Simple mode hands the section to the curator for approval
+    // (submitted_to_curator); only when there's no curator does push complete
+    // the section outright (approved_by_<last chain role>).
     const isSimplePush = ctx.workflowType === 'simple';
+    const hasCurator = ctx.chain.includes('CURATOR');
     const finalChainRole = ctx.chain[ctx.chain.length - 1];
     const toStatus = isSimplePush
-      ? approvedByStatus(finalChainRole)
+      ? (hasCurator ? submittedToStatus('CURATOR') : approvedByStatus(finalChainRole))
       : submittedToStatus('RECEIVING_SUPER_COLLABORATOR');
     const origRole = ctx.originalSubmitterRole || userRole;
 
@@ -721,9 +735,10 @@ router.post('/push-section', requireAuth, denyAnalyst, async (req, res) => {
       [eventId, sectionId]
     );
 
-    // Simple-mode push lands on approved_by_*, so trigger the same
-    // auto-completion check as a final approval.
-    if (isSimplePush) {
+    // A simple-mode push that completes the section (no curator) lands on
+    // approved_by_*, so trigger the same auto-completion check as a final
+    // approval. A push to the curator is not completion.
+    if (toStatus.startsWith('approved_by_')) {
       await checkEventCompletion(eventId);
     }
 

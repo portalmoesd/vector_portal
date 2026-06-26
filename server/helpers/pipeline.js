@@ -211,17 +211,18 @@ function firstEditorRole(chain) {
  * @returns {boolean}
  */
 function canPushSection(userRole, chain, isCrossDept, holderRole, isLastActor, workflowType) {
-  // Simple-mode push: every chain member except the last can push the
-  // section to its final approved state, as long as the section is
-  // currently in the normal chain flow (i.e. the holder is one of the
-  // chain roles — a section the DS has pulled is held by the DS, not
-  // by a chain role, and shouldn't be pushable from underneath).
+  // Simple-mode push is a holder-only expedite to the curator:
+  //  - the Super-Collaborator holder can always push (→ curator, or completes
+  //    the section when no curator is in the chain);
+  //  - the Supervisor holder can push only when a curator is participating;
+  //  - the Collaborator and the Curator never push.
   if (workflowType === 'simple') {
     if (!chain || chain.length < 2) return false;
-    const userIdx = chain.indexOf(userRole);
-    if (userIdx === -1 || userIdx >= chain.length - 1) return false;
     if (!holderRole || !chain.includes(holderRole)) return false;
-    return true;
+    if (userRole !== holderRole) return false;
+    if (userRole === ROLES.SUPER_COLLABORATOR) return true;
+    if (userRole === ROLES.SUPERVISOR) return chain.includes('CURATOR');
+    return false;
   }
 
   if (!isCrossDept || !chain || !chain.includes('RECEIVING_SUPER_COLLABORATOR')) return false;

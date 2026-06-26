@@ -663,8 +663,15 @@
       const chain = s.chain || [];
       const userIdx = chain.indexOf(effRole);
       const holderIdx = chain.indexOf(holder);
-      if (userIdx !== -1 && holderIdx > userIdx) {
-        btns.push(actBtn('ask-to-return', 'dashboard.actionAskReturn', ACT_ICONS.return, 'is-ask'));
+      if (userIdx !== -1 && holderIdx !== -1) {
+        if (holderIdx > userIdx) {
+          // Behind the holder → ask the holder to return it.
+          btns.push(actBtn('ask-to-return', 'dashboard.actionAskReturn', ACT_ICONS.return, 'is-ask'));
+        } else if (userIdx > holderIdx && holderIdx >= 1
+                   && status === `submitted_to_${(holder || '').toLowerCase()}`) {
+          // Ahead of the holder → return the section down to the collaborator.
+          btns.push(actBtn('return', 'dashboard.actionReturn', ACT_ICONS.return, 'is-return'));
+        }
       }
     }
     if (s.canPush) btns.push(actBtn('push-section', 'editor.pushSection', ACT_ICONS.push, 'is-push'));
