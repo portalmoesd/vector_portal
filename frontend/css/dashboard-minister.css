@@ -499,6 +499,24 @@
   background: var(--accent-orange, #f97316);
   box-shadow: 0 0 0 3px rgba(249,115,22,0.18);
 }
+/* Quick per-section action buttons */
+.mn-dash .mn-prog__actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+.mn-dash .mn-actbtn {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.02em;
+  padding: 5px 11px; border-radius: 99px;
+  border: 1px solid transparent; cursor: pointer;
+  background: rgba(2,12,27,0.04); color: var(--text-secondary);
+  transition: filter 0.15s ease, background 0.15s ease;
+}
+.mn-dash .mn-actbtn svg { width: 13px; height: 13px; flex: 0 0 auto; }
+.mn-dash .mn-actbtn:hover { filter: brightness(0.97); }
+.mn-dash .mn-actbtn.is-approve { color: #fff; background: var(--accent-green, #16a34a); }
+.mn-dash .mn-actbtn.is-submit  { color: #fff; background: var(--accent-blue, #3b82f6); }
+.mn-dash .mn-actbtn.is-return  { color: #fff; background: #6d28d9; }
+.mn-dash .mn-actbtn.is-ask     { color: #fff; background: #a16207; }
+.mn-dash .mn-actbtn.is-push,
+.mn-dash .mn-actbtn.is-pull    { color: #7c3aed; background: rgba(124,58,237,0.12); border-color: rgba(124,58,237,0.22); }
 
 /* attachments list */
 .mn-dash .mn-files-wrap { margin-top: 18px; }
