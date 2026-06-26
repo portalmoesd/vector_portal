@@ -839,6 +839,19 @@ router.get('/status-grid', requireAuth, async (req, res) => {
     if (!event) return res.status(404).json({ error: 'Event not found' });
     const eventWorkflowType = event.workflow_type || 'advanced';
 
+    // When a Deputy owns the document, a supervisor explicitly linked to that
+    // deputy (deputy_supervisor_links) is allowed to see the whole document's
+    // progress — but only if they also participate in it (the frontend checks
+    // that they have at least one of their own sections).
+    let viewerLinkedToOwnerDeputy = false;
+    if (event.document_submitter_role === 'DEPUTY' && req.user.role === 'SUPERVISOR') {
+      const { rows: [link] } = await db.query(
+        `SELECT 1 FROM deputy_supervisor_links
+         WHERE deputy_id = $1 AND supervisor_id = $2 LIMIT 1`,
+        [event.document_submitter_id, req.user.id]);
+      viewerLinkedToOwnerDeputy = !!link;
+    }
+
     // Get "home department" for the receiving chain.
     // For Deputy DS, use the Responsible Supervisor's department since
     // Deputies oversee multiple departments.
@@ -1048,6 +1061,7 @@ router.get('/status-grid', requireAuth, async (req, res) => {
       curatorRequired: event.curator_required,
       workflowType: eventWorkflowType,
       homeDepartmentId: dsDeptId,
+      viewerLinkedToOwnerDeputy,
       sections: enrichedSections,
     });
   } catch (err) {

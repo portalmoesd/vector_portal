@@ -491,13 +491,17 @@
     const isDS = grid && grid.documentSubmitterId === user.id;
     const isResponsibleDeputy = grid && grid.deputyId && grid.deputyId === user.id;
     if (isDS || isResponsibleDeputy) return all;
-    return all.filter(s => {
+    const own = all.filter(s => {
       if (s.departmentIds && s.departmentIds.includes(user.departmentId)) return true;
       if (s.userEffectiveRole && s.userEffectiveRole.startsWith('RECEIVING_')
           && s.chain && s.chain.includes(s.userEffectiveRole)) return true;
       if (s.userEffectiveRole === 'CURATOR') return true;
       return false;
     });
+    // A supervisor linked to the owner deputy who also participates in this
+    // document (has at least one own section) sees the whole document.
+    if (grid && grid.viewerLinkedToOwnerDeputy && own.length > 0) return all;
+    return own;
   }
 
   // Build the all-sections preview for an in-progress event from live workflow
