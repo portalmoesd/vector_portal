@@ -481,12 +481,31 @@
     loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
   }
 
+  // Limit an event's sections to the ones this user is involved in — mirrors the
+  // previous dashboard (dashboard-pipeline.js): the document owner / responsible
+  // deputy see all; everyone else sees only sections their department is assigned
+  // to, their RECEIVING_* chain step, or sections they curate. The Minister is
+  // always the document submitter on their events, so they see the whole document.
+  function visibleSectionsFor(grid) {
+    const all = (grid && grid.sections) || [];
+    const isDS = grid && grid.documentSubmitterId === user.id;
+    const isResponsibleDeputy = grid && grid.deputyId && grid.deputyId === user.id;
+    if (isDS || isResponsibleDeputy) return all;
+    return all.filter(s => {
+      if (s.departmentIds && s.departmentIds.includes(user.departmentId)) return true;
+      if (s.userEffectiveRole && s.userEffectiveRole.startsWith('RECEIVING_')
+          && s.chain && s.chain.includes(s.userEffectiveRole)) return true;
+      if (s.userEffectiveRole === 'CURATOR') return true;
+      return false;
+    });
+  }
+
   // Build the all-sections preview for an in-progress event from live workflow
   // content (the library /document endpoint only serves published events).
   async function previewInProgress(item) {
     try {
       const grid = await Api.get(`/api/workflow/status-grid?event_id=${item.id}`);
-      const secs = (grid && grid.sections) || [];
+      const secs = visibleSectionsFor(grid);
       const sections = await Promise.all(secs.map(s =>
         Api.get(`/api/workflow/section-content?event_id=${item.id}&section_id=${s.sectionId}`)
           .then(c => ({ title: s.sectionLabel, html: c.htmlContent }))
@@ -540,7 +559,7 @@
       return;
     }
     if (!container.isConnected || String(selectedId) !== String(eventId)) return;
-    const sections = (grid && grid.sections) || [];
+    const sections = visibleSectionsFor(grid);
     if (!sections.length) { container.innerHTML = ''; return; }
 
     const rows = sections.map(s => {
