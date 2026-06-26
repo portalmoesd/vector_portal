@@ -703,12 +703,18 @@ router.post('/push-section', requireAuth, denyAnalyst, async (req, res) => {
     const isSimplePush = ctx.workflowType === 'simple';
     const hasCurator = ctx.chain.includes('CURATOR');
     const finalChainRole = ctx.chain[ctx.chain.length - 1];
-    // Simple push hands the section to the curator for approval, unless it is
-    // already at the curator (a Supervisor pushing it past an unresponsive
-    // curator) or there is no curator — in which case the push completes it.
-    const toStatus = isSimplePush
-      ? ((hasCurator && holder !== 'CURATOR') ? submittedToStatus('CURATOR') : approvedByStatus(finalChainRole))
-      : submittedToStatus('RECEIVING_SUPER_COLLABORATOR');
+    // Simple push semantics depend on who pushes:
+    //  - Super-Collaborator skips the supervisor → hands to the curator (or
+    //    completes the section when there is no curator);
+    //  - Supervisor skips the curator → completes the section outright.
+    let toStatus;
+    if (!isSimplePush) {
+      toStatus = submittedToStatus('RECEIVING_SUPER_COLLABORATOR');
+    } else if (userRole === ROLES.SUPER_COLLABORATOR) {
+      toStatus = hasCurator ? submittedToStatus('CURATOR') : approvedByStatus(finalChainRole);
+    } else {
+      toStatus = approvedByStatus(finalChainRole);
+    }
     const origRole = ctx.originalSubmitterRole || userRole;
 
     await db.query(
