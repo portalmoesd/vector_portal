@@ -481,6 +481,8 @@
   font-size: 0.9rem; font-weight: 600; color: var(--text-primary);
   min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
 }
+.mn-dash .mn-prog__title--link { color: var(--primary, #0a84ff); text-decoration: none; cursor: pointer; }
+.mn-dash .mn-prog__title--link:hover { text-decoration: underline; }
 .mn-dash .mn-prog__pill {
   flex: 0 0 auto; font-size: 0.7rem; font-weight: 700;
   padding: 3px 10px; border-radius: 99px; white-space: nowrap;

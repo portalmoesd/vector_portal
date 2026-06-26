@@ -81,6 +81,7 @@
     "openAllSections": "Open all Sections",
     "noSections": "No sections for this event",
     "progress": "Progress",
+    "openInEditor": "Open in editor",
     "sectionsApproved": "{done} of {total} sections approved",
     "stageApproved": "Approved",
     "stageWith": "With {role}",
