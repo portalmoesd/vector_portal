@@ -82,6 +82,8 @@
     "noSections": "ამ ღონისძიებისთვის სექციები არ არის",
     "progress": "პროგრესი",
     "openInEditor": "რედაქტორში გახსნა",
+    "pushToCurator": "ზედამხედველის გამოტოვება",
+    "pushToCompletion": "კურატორის გამოტოვება",
     "sectionsApproved": "{total}-დან {done} სექცია დასრულებულია",
     "stageApproved": "დასრულებულია",
     "stageWith": "{role}-თან",

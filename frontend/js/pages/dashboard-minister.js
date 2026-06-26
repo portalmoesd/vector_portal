@@ -674,7 +674,11 @@
         }
       }
     }
-    if (s.canPush) btns.push(actBtn('push-section', 'editor.pushSection', ACT_ICONS.push, 'is-push'));
+    if (s.canPush) {
+      // Super-Collaborator push hands to the curator; Supervisor push completes.
+      const pushKey = effRole === 'SUPERVISOR' ? 'dashboard.pushToCompletion' : 'dashboard.pushToCurator';
+      btns.push(actBtn('push-section', pushKey, ACT_ICONS.push, 'is-push'));
+    }
     if (s.canPull) btns.push(actBtn('pull-section', 'editor.pullSection', ACT_ICONS.pull, 'is-pull'));
     if (!btns.length) return '';
     return `<div class="mn-prog__actions" data-section="${s.sectionId}" data-event="${eventId}">${btns.join('')}</div>`;
