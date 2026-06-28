@@ -4,7 +4,7 @@
     "markAllRead": "ყველას წაკითხულად მონიშვნა",
     "now": "ახლა",
     "eventCreated": "შეიქმნა ახალი ღონისძიება: {event}",
-    "yourTurn": "თქვენი ჯერია — {section} · {event}",
+    "yourTurn": "ელოდება თქვენს დადასტურებას — {section} · {event}",
     "returned": "{section} დაგიბრუნდათ · {event}"
   },
   "nav": {

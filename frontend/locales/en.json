@@ -4,7 +4,7 @@
     "markAllRead": "Mark all read",
     "now": "now",
     "eventCreated": "New event created: {event}",
-    "yourTurn": "It's your turn — {section} · {event}",
+    "yourTurn": "Awaiting your action — {section} · {event}",
     "returned": "{section} returned to you · {event}"
   },
   "nav": {
