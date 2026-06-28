@@ -263,6 +263,7 @@
     // conveys the country); other modes show country + owner.
     const sub = isMeetings
       ? `<div class="mn-card__sub">
+          <span class="mn-card__country">${escapeHtml(country)}</span>
           <span class="mn-card__when">${ICON_CAL}<span>${escapeHtml(d.eventDateTime ? formatTbilisiDateTime(d.eventDateTime) : I18n.tr('dashboard.notScheduled'))}</span></span>
         </div>`
       : `<div class="mn-card__sub">
