@@ -309,6 +309,11 @@
   font-size: 0.8rem; color: var(--text-secondary); min-width: 0;
 }
 .mn-dash .mn-card__country { font-weight: 700; color: var(--text-primary); }
+.mn-dash .mn-card__when {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-weight: 700; color: var(--text-primary);
+}
+.mn-dash .mn-card__when svg { flex: 0 0 auto; width: 15px; height: 15px; color: var(--text-muted); }
 .mn-dash .mn-card__country + .mn-card__owner::before {
   content: ""; flex: 0 0 auto;
   width: 3px; height: 3px; border-radius: 50%;
