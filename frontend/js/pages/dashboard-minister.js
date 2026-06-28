@@ -236,6 +236,7 @@
   }
 
   const ICON_PERSON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
+  const ICON_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>';
 
   function listCardHtml(d) {
     const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
@@ -258,11 +259,16 @@
     const ownerInline = (!isMeetings && ownerName)
       ? `<span class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(ownerName)}">${ICON_PERSON}<span>${escapeHtml(ownerName)}</span></span>`
       : '';
-    const sub = `
-      <div class="mn-card__sub">
-        <span class="mn-card__country">${escapeHtml(country)}</span>
-        ${ownerInline}
-      </div>`;
+    // My Calendar puts the event date/time on the prominent line (the flag already
+    // conveys the country); other modes show country + owner.
+    const sub = isMeetings
+      ? `<div class="mn-card__sub">
+          <span class="mn-card__when">${ICON_CAL}<span>${escapeHtml(d.eventDateTime ? formatTbilisiDateTime(d.eventDateTime) : I18n.tr('dashboard.notScheduled'))}</span></span>
+        </div>`
+      : `<div class="mn-card__sub">
+          <span class="mn-card__country">${escapeHtml(country)}</span>
+          ${ownerInline}
+        </div>`;
 
     // Readiness chip (meetings only).
     const chip = isMeetings
@@ -271,16 +277,11 @@
           : `<span class="mn-chip mn-chip--prep">${escapeHtml(I18n.tr('dashboard.inPreparation'))}</span>`)
       : '';
 
+    // Meta line: Ready → completed date; in preparation → deadline info. (Same for
+    // meetings and worker modes — only the sub line differs by mode.)
     let excerpt = '';
     let meta;
-    if (isMeetings) {
-      const when = d.eventDateTime
-        ? formatTbilisiDateTime(d.eventDateTime)
-        : I18n.tr('dashboard.notScheduled');
-      meta = `${escapeHtml(when)} · ${escapeHtml(lang)}`;
-      const ex = excerptText(d.occasion);
-      if (!ready && ex) excerpt = `<p class="mn-card__excerpt">${escapeHtml(ex)}</p>`;
-    } else if (ready) {
+    if (ready) {
       meta = `${d.endedAt ? formatDate(d.endedAt) + ' · ' : ''}${escapeHtml(lang)}`;
     } else {
       const ex = excerptText(d.occasion);
