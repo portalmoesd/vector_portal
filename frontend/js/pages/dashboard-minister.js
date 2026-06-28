@@ -367,10 +367,11 @@
     if (diff === 0) return { order: 0, key: 'today', label: `${grp('grpToday')} · ${fmtDay(d0)}` };
     if (diff === 1) return { order: 1, key: 'tomorrow', label: `${grp('grpTomorrow')} · ${fmtDay(d0)}` };
     if (startOfWeek(date).getTime() === startOfWeek(now).getTime()) return { order: 2, key: 'thisweek', label: grp('grpThisWeek') };
-    if (date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth()) return { order: 3, key: 'thismonth', label: grp('grpThisMonth') };
+    if (startOfWeek(date).getTime() === addDays(startOfWeek(now), 7).getTime()) return { order: 3, key: 'nextweek', label: grp('grpNextWeek') };
+    if (date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth()) return { order: 4, key: 'thismonth', label: grp('grpThisMonth') };
     const nm = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-    if (date.getFullYear() === nm.getFullYear() && date.getMonth() === nm.getMonth()) return { order: 4, key: 'nextmonth', label: grp('grpNextMonth') };
-    return { order: 5, key: 'later', label: grp('grpLater') };
+    if (date.getFullYear() === nm.getFullYear() && date.getMonth() === nm.getMonth()) return { order: 5, key: 'nextmonth', label: grp('grpNextMonth') };
+    return { order: 6, key: 'later', label: grp('grpLater') };
   }
 
   // Meetings: soonest first → Today, Tomorrow, This week, This month, Next month,
@@ -383,10 +384,11 @@
     if (diff === 0) return { order: 0, key: 'today', label: `${grp('grpToday')} · ${fmtDay(d0)}` };
     if (diff === 1) return { order: 1, key: 'tomorrow', label: `${grp('grpTomorrow')} · ${fmtDay(d0)}` };
     if (startOfWeek(date).getTime() === startOfWeek(now).getTime()) return { order: 2, key: 'thisweek', label: grp('grpThisWeek') };
-    if (date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth()) return { order: 3, key: 'thismonth', label: grp('grpThisMonth') };
+    if (startOfWeek(date).getTime() === addDays(startOfWeek(now), 7).getTime()) return { order: 3, key: 'nextweek', label: grp('grpNextWeek') };
+    if (date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth()) return { order: 4, key: 'thismonth', label: grp('grpThisMonth') };
     const nm = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-    if (date.getFullYear() === nm.getFullYear() && date.getMonth() === nm.getMonth()) return { order: 4, key: 'nextmonth', label: grp('grpNextMonth') };
-    return { order: 5, key: 'later', label: grp('grpLater') };
+    if (date.getFullYear() === nm.getFullYear() && date.getMonth() === nm.getMonth()) return { order: 5, key: 'nextmonth', label: grp('grpNextMonth') };
+    return { order: 6, key: 'later', label: grp('grpLater') };
   }
 
   function groupItems(items) {
