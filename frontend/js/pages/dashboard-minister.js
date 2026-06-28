@@ -264,7 +264,7 @@
     const sub = isMeetings
       ? `<div class="mn-card__sub">
           <span class="mn-card__country">${escapeHtml(country)}</span>
-          <span class="mn-card__when">${ICON_CAL}<span>${escapeHtml(d.eventDateTime ? formatTbilisiDateTime(d.eventDateTime) : I18n.tr('dashboard.notScheduled'))}</span></span>
+          <span class="mn-card__when">${ICON_CAL}<span>${escapeHtml(fmtEventWhen(d.eventDateTime))}</span></span>
         </div>`
       : `<div class="mn-card__sub">
           <span class="mn-card__country">${escapeHtml(country)}</span>
@@ -319,6 +319,17 @@
     return new Date(2021, idx, 1).toLocaleDateString('en-GB', { month: style });
   }
   function fmtDay(d) { return `${d.getDate()} ${gMonth(d.getMonth(), 'short')}`; }
+  // Event date/time as "DD Month, HH:MM" in Tbilisi time (localized month name).
+  function fmtEventWhen(iso) {
+    if (!iso) return I18n.tr('dashboard.notScheduled');
+    const p = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Asia/Tbilisi',
+      day: '2-digit', month: 'numeric', hour: '2-digit', minute: '2-digit', hour12: false,
+    }).formatToParts(new Date(iso)).forEach(x => { p[x.type] = x.value; });
+    const hh = String(parseInt(p.hour, 10) % 24).padStart(2, '0');
+    return `${parseInt(p.day, 10)} ${gMonth(parseInt(p.month, 10) - 1, 'long')}, ${hh}:${p.minute}`;
+  }
   function fmtMonthYear(d) { return `${gMonth(d.getMonth(), 'long')} ${d.getFullYear()}`; }
   function fmtWeekRange(ws) {
     const we = addDays(ws, 6);
@@ -505,7 +516,7 @@
       ? `<span class="is-owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}">${ICON_PERSON}${escapeHtml(ownerChipName)}</span>`
       : '';
     const whenChip = item.eventDateTime
-      ? `<span>${escapeHtml(formatTbilisiDateTime(item.eventDateTime))}</span>`
+      ? `<span>${escapeHtml(fmtEventWhen(item.eventDateTime))}</span>`
       : '';
 
     if (item._ready) {
