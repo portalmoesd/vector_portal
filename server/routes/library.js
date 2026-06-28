@@ -29,12 +29,15 @@ router.get('/', requireAuth, async (req, res) => {
        ORDER BY e.ended_at DESC`,
       [req.user.id, req.user.role]
     );
+    // Event date/time is restricted to the document owner, Protocol and Admin.
+    const canSeeWhen = (ownerId) =>
+      req.user.role === 'ADMIN' || req.user.role === 'PROTOCOL' || ownerId === req.user.id;
     res.json(rows.map(r => ({
       id: r.id,
       title: r.title,
       language: r.language,
       endedAt: r.ended_at,
-      eventDateTime: r.event_datetime,
+      eventDateTime: canSeeWhen(r.document_submitter_id) ? r.event_datetime : null,
       countryName: r.country_name,
       countryCode: r.country_code,
       documentSubmitterName: r.document_submitter_name,
