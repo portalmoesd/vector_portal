@@ -63,6 +63,7 @@
     "noMeetings": "No events",
     "noTasks": "No other events",
     "dueInDays": "Due in {n} days",
+    "dueDate": "Due: {date}",
     "dueToday": "Due today",
     "overdue": "Overdue",
     "selectEvent": "Select event",

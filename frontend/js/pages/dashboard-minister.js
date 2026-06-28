@@ -224,6 +224,12 @@
   }
 
   // Urgency-aware deadline label for in-progress events.
+  // Localized "Month day" (EN) / "day Month" (KA), e.g. "July 5" / "5 ივლისი".
+  function fmtDueDate(d) {
+    const day = d.getDate();
+    const month = gMonth(d.getMonth(), 'long');
+    return isKa() ? `${day} ${month}` : `${month} ${day}`;
+  }
   function dueInfo(deadline) {
     if (!deadline) return null;
     const today = new Date(); today.setHours(0, 0, 0, 0);
@@ -231,8 +237,11 @@
     const days = Math.round((d - today) / 86400000);
     if (days < 0) return { text: I18n.tr('dashboard.overdue'), cls: 'is-overdue' };
     if (days === 0) return { text: I18n.tr('dashboard.dueToday'), cls: 'is-overdue' };
-    if (days <= 7) return { text: I18n.tr('dashboard.dueInDays').replace('{n}', days), cls: 'is-soon' };
-    return { text: `${I18n.tr('dashboard.deadline')}: ${formatDate(deadline)}`, cls: '' };
+    // Explicit date instead of "Due in N days"; near deadlines stay highlighted.
+    return {
+      text: I18n.tr('dashboard.dueDate').replace('{date}', fmtDueDate(d)),
+      cls: days <= 7 ? 'is-soon' : '',
+    };
   }
 
   const ICON_PERSON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
