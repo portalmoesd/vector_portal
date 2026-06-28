@@ -932,18 +932,37 @@
   }
 
   // ── Wire controls ────────────────────────────────────────────────────────────
-  toggleBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const next = btn.dataset.mode;
-      if (next === mode) return;
-      mode = next;
-      selectedId = null;
-      toggleBtns.forEach(b => b.classList.toggle('is-active', b === btn));
-      positionThumb();
-      calendarDate = new Date(); // reset to current month on switch
-      renderAll();
-    });
-  });
+  function setMode(next) {
+    if (!next || next === mode) return;
+    mode = next;
+    selectedId = null;
+    toggleBtns.forEach(b => b.classList.toggle('is-active', b.dataset.mode === next));
+    positionThumb();
+    calendarDate = new Date(); // reset to current month on switch
+    renderAll();
+  }
+  toggleBtns.forEach(btn => btn.addEventListener('click', () => setMode(btn.dataset.mode)));
+
+  // Switch to the tab that holds the given event and expand it. Used by the
+  // notifications panel so clicking a notification lands on the right event.
+  function revealEvent(eventId) {
+    const idStr = String(eventId);
+    const inCompleted = completed.find(d => String(d.id) === idStr);
+    const item = inCompleted || upcoming.find(d => String(d.id) === idStr);
+    if (!item) return false;
+    let targetMode;
+    if (isOwner) {
+      if (isOwned(item)) targetMode = 'meetings';          // owned (ready or in prep)
+      else if (!inCompleted) targetMode = 'tasks';         // active, contributing
+      else return false; // completed event they don't own isn't on their dashboard
+    } else {
+      targetMode = inCompleted ? 'completed' : 'upcoming';
+    }
+    setMode(targetMode);
+    select(eventId);
+    if (detailEl && detailEl.scrollIntoView) detailEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return true;
+  }
 
   keywordEl.addEventListener('input', () => {
     selectedId = null;
@@ -1016,11 +1035,8 @@
     notifListEl.querySelectorAll('.mn-notif').forEach(li => {
       li.addEventListener('click', async () => {
         try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
-        const { type, event: ev, section: sec } = li.dataset;
-        if ((type === 'your_turn' || type === 'returned') && ev && sec) {
-          window.location.href = `editor.html?event_id=${ev}&section_id=${sec}`;
-          return;
-        }
+        // Switch to the tab holding the event and select it (no jump to editor).
+        if (li.dataset.event) revealEvent(parseInt(li.dataset.event, 10));
         loadNotifications();
       });
     });
