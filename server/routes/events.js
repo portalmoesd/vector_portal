@@ -91,6 +91,10 @@ router.get('/', requireAuth, async (req, res) => {
        ORDER BY e.created_at DESC`,
       params
     );
+    // Event date/time is restricted: only the document owner, Protocol and Admin
+    // may see it; everyone else sees only the deadline.
+    const canSeeWhen = (ownerId) =>
+      req.user.role === 'ADMIN' || req.user.role === 'PROTOCOL' || ownerId === req.user.id;
     res.json(rows.map(r => ({
       id: r.id,
       title: r.title,
@@ -109,7 +113,7 @@ router.get('/', requireAuth, async (req, res) => {
       workflowType: r.workflow_type,
       language: r.language,
       deadlineDate: r.deadline_date,
-      eventDateTime: r.event_datetime,
+      eventDateTime: canSeeWhen(r.document_submitter_id) ? r.event_datetime : null,
       occasion: r.occasion,
       isActive: r.is_active,
       endedAt: r.ended_at,
@@ -435,6 +439,10 @@ router.get('/:id', requireAuth, async (req, res) => {
       [req.params.id]
     );
 
+    // Event date/time is restricted to the document owner, Protocol and Admin.
+    const canSeeWhen = req.user.role === 'ADMIN' || req.user.role === 'PROTOCOL'
+      || event.document_submitter_id === req.user.id;
+
     res.json({
       id: event.id,
       title: event.title,
@@ -456,7 +464,7 @@ router.get('/:id', requireAuth, async (req, res) => {
       workflowType: event.workflow_type,
       language: event.language,
       deadlineDate: event.deadline_date,
-      eventDateTime: event.event_datetime,
+      eventDateTime: canSeeWhen ? event.event_datetime : null,
       occasion: event.occasion,
       isActive: event.is_active,
       endedAt: event.ended_at,
