@@ -703,7 +703,7 @@
           // Optional — only relevant for Minister / Deputy owners. The picker
           // value is Tbilisi wall-clock (UTC+4, no DST); send it as an explicit
           // +04:00 instant so it's stored unambiguously.
-          eventDateTime: (dsRole === 'MINISTER' || dsRole === 'DEPUTY') && eventDateTimeRaw
+          eventDateTime: (dsRole === 'MINISTER' || dsRole === 'DEPUTY' || dsRole === 'SUPERVISOR') && eventDateTimeRaw
             ? eventDateTimeRaw.trim().replace(' ', 'T') + ':00+04:00'
             : null,
           sections,
@@ -860,8 +860,8 @@
       document.getElementById('deputyGroup').style.display = dsRole === 'DEPUTY' ? '' : 'none';
       document.getElementById('dsSupervisorGroup').style.display = dsRole === 'SUPERVISOR' ? '' : 'none';
       document.getElementById('dsSCGroup').style.display = dsRole === 'SUPER_COLLABORATOR' ? '' : 'none';
-      // Optional event date/time only applies to Minister / Deputy owners.
-      document.getElementById('eventDateTimeGroup').style.display = (dsRole === 'MINISTER' || dsRole === 'DEPUTY') ? '' : 'none';
+      // Optional event date/time only applies to owner roles that hold meetings.
+      document.getElementById('eventDateTimeGroup').style.display = (dsRole === 'MINISTER' || dsRole === 'DEPUTY' || dsRole === 'SUPERVISOR') ? '' : 'none';
       applyWorkflowTypeVisibility();
       applyCuratorRule();
 
