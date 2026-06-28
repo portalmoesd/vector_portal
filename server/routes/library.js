@@ -9,7 +9,7 @@ router.get('/', requireAuth, async (req, res) => {
   try {
     // Participation-scoped: user must have touched at least one section
     const { rows } = await db.query(
-      `SELECT DISTINCT e.id, e.title, e.language, e.ended_at,
+      `SELECT DISTINCT e.id, e.title, e.language, e.ended_at, e.event_datetime,
               c.name_en AS country_name, c.code AS country_code,
               ds.full_name AS document_submitter_name,
               ds.full_name_ka AS document_submitter_name_ka,
@@ -34,6 +34,7 @@ router.get('/', requireAuth, async (req, res) => {
       title: r.title,
       language: r.language,
       endedAt: r.ended_at,
+      eventDateTime: r.event_datetime,
       countryName: r.country_name,
       countryCode: r.country_code,
       documentSubmitterName: r.document_submitter_name,

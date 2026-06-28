@@ -274,6 +274,14 @@
 
 /* card header: round country flag + title */
 .mn-dash .mn-card__head { display: flex; align-items: center; gap: 14px; }
+/* Readiness chip on meeting cards */
+.mn-dash .mn-chip {
+  flex: 0 0 auto; margin-left: auto;
+  font-size: 0.66rem; font-weight: 800; letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 4px 11px; border-radius: 99px; white-space: nowrap;
+}
+.mn-dash .mn-chip--ready { color: var(--accent-green, #16a34a); background: rgba(22,163,74,0.12); }
+.mn-dash .mn-chip--prep { color: var(--accent-orange, #f97316); background: rgba(249,115,22,0.12); }
 .mn-dash .mn-card__flag { flex: 0 0 auto; width: 46px; height: 46px; line-height: 0; }
 .mn-dash .mn-card__flag img {
   width: 46px; height: 46px;

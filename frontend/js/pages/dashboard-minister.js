@@ -22,10 +22,13 @@
   const user = Api.getUser();
   if (!user) return;
 
-  // This dashboard also serves Collaborator / Super-Collaborator / Supervisor.
-  // They (unlike the read-only Minister) can act on documents, so expose links
-  // into the section editor for in-progress events.
+  // This dashboard serves several roles. Owner roles (Minister/Deputy/Supervisor)
+  // get a meeting-centric view; everyone else gets the worker view. Only the
+  // read-only Minister can't act on documents.
   const canEdit = user.role !== 'MINISTER';
+  const OWNER_ROLES = ['MINISTER', 'DEPUTY', 'SUPERVISOR'];
+  const isOwner = OWNER_ROLES.includes(user.role);
+  const isMinister = user.role === 'MINISTER';
 
   const listEl = document.getElementById('cardList');
   const detailEl = document.getElementById('eventDetail');
@@ -34,7 +37,23 @@
   const toggleBtns = Array.from(document.querySelectorAll('.mn-toggle__btn'));
   const toggleThumb = document.getElementById('mnToggleThumb');
 
-  let mode = 'completed'; // 'completed' | 'upcoming'
+  // Mode set per role:
+  //  - owner roles: 'meetings' (events they own, keyed by meeting date/time, with
+  //    a readiness chip) and 'tasks' (events they only contribute to);
+  //  - worker roles: 'completed' | 'upcoming' (unchanged).
+  let mode = isOwner ? 'meetings' : 'completed';
+
+  // Relabel the segmented toggle for owner roles; the Minister has only meetings.
+  if (isOwner) {
+    const tc = document.getElementById('toggleCompleted');
+    const tu = document.getElementById('toggleUpcoming');
+    if (tc) { tc.dataset.mode = 'meetings'; tc.setAttribute('data-i18n', 'dashboard.tabMeetings'); tc.textContent = I18n.tr('dashboard.tabMeetings'); }
+    if (tu) { tu.dataset.mode = 'tasks'; tu.setAttribute('data-i18n', 'dashboard.tabTasks'); tu.textContent = I18n.tr('dashboard.tabTasks'); }
+    if (isMinister) {
+      const wrap = document.querySelector('.mn-toggle');
+      if (wrap) wrap.style.display = 'none'; // meetings only — no toggle
+    }
+  }
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
 
@@ -66,9 +85,11 @@
     Api.get('/api/library'),
     Api.get('/api/events'),
   ]);
-  if (libRes.status === 'fulfilled') completed = libRes.value || [];
+  // Tag each item with readiness so cards/detail can render per-item (the
+  // meeting list mixes ready + in-preparation events).
+  if (libRes.status === 'fulfilled') completed = (libRes.value || []).map(d => ({ ...d, _ready: true }));
   // Events still being prepared (not yet completed/archived).
-  if (evRes.status === 'fulfilled') upcoming = (evRes.value || []).filter(e => e.isActive);
+  if (evRes.status === 'fulfilled') upcoming = (evRes.value || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
   if (libRes.status === 'rejected' && evRes.status === 'rejected') {
     listEl.innerHTML = `<div class="msg msg-error">${escapeHtml(libRes.reason?.message || 'Failed to load')}</div>`;
   }
@@ -155,13 +176,25 @@
   window.addEventListener('resize', positionThumb);
 
   // ── Helpers ────────────────────────────────────────────────────────────────
+  function isOwned(item) { return item.documentSubmitterId === user.id; }
+
   function activeItems() {
-    return mode === 'completed' ? completed : upcoming;
+    switch (mode) {
+      case 'completed': return completed;
+      case 'upcoming': return upcoming;
+      // Meetings = events they own (ready + in-preparation), unified.
+      case 'meetings': return completed.filter(isOwned).concat(upcoming.filter(isOwned));
+      // Tasks = in-progress events they contribute to but don't own.
+      case 'tasks': return upcoming.filter(i => !isOwned(i));
+      default: return [];
+    }
   }
 
-  // The date a calendar marker keys off, per mode.
+  // The date a calendar marker / grouping keys off, per mode.
   function itemDate(item) {
-    return mode === 'completed' ? item.endedAt : item.deadlineDate;
+    if (mode === 'meetings') return item.eventDateTime;
+    if (mode === 'completed') return item.endedAt;
+    return item.deadlineDate; // upcoming | tasks
   }
 
   function itemById(id) {
@@ -210,27 +243,44 @@
     const flag = code
       ? `<img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" loading="lazy" onerror="this.closest('.mn-card__flag').style.display='none'">`
       : '';
-    let statusClass = mode === 'completed' ? 'mn-card--completed' : 'mn-card--inprogress';
-    // In-progress events whose deadline has already passed get a light-yellow card.
-    if (mode !== 'completed' && d.deadlineDate
-        && startOfDay(new Date(d.deadlineDate)) < startOfDay(new Date())) {
+    const ready = d._ready;
+    const isMeetings = mode === 'meetings';
+    let statusClass = ready ? 'mn-card--completed' : 'mn-card--inprogress';
+    // Not-ready items whose key date (meeting time / deadline) has passed get a
+    // light-yellow "overdue" card.
+    const keyDate = isMeetings ? d.eventDateTime : d.deadlineDate;
+    if (!ready && keyDate && startOfDay(new Date(keyDate)) < startOfDay(new Date())) {
       statusClass += ' mn-card--overdue';
     }
     const lang = languageLabel(d.language || 'EN');
+    // In meetings the owner is the viewer themselves, so the owner chip is noise.
     const ownerName = localizedName(d.documentSubmitterName, d.documentSubmitterNameKa);
-    const ownerInline = ownerName
+    const ownerInline = (!isMeetings && ownerName)
       ? `<span class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(ownerName)}">${ICON_PERSON}<span>${escapeHtml(ownerName)}</span></span>`
       : '';
-    // Country first, then the document owner beside it.
     const sub = `
       <div class="mn-card__sub">
         <span class="mn-card__country">${escapeHtml(country)}</span>
         ${ownerInline}
       </div>`;
 
+    // Readiness chip (meetings only).
+    const chip = isMeetings
+      ? (ready
+          ? `<span class="mn-chip mn-chip--ready">${escapeHtml(I18n.tr('dashboard.ready'))}</span>`
+          : `<span class="mn-chip mn-chip--prep">${escapeHtml(I18n.tr('dashboard.inPreparation'))}</span>`)
+      : '';
+
     let excerpt = '';
     let meta;
-    if (mode === 'completed') {
+    if (isMeetings) {
+      const when = d.eventDateTime
+        ? formatTbilisiDateTime(d.eventDateTime)
+        : I18n.tr('dashboard.notScheduled');
+      meta = `${escapeHtml(when)} · ${escapeHtml(lang)}`;
+      const ex = excerptText(d.occasion);
+      if (!ready && ex) excerpt = `<p class="mn-card__excerpt">${escapeHtml(ex)}</p>`;
+    } else if (ready) {
       meta = `${d.endedAt ? formatDate(d.endedAt) + ' · ' : ''}${escapeHtml(lang)}`;
     } else {
       const ex = excerptText(d.occasion);
@@ -245,6 +295,7 @@
         <div class="mn-card__head">
           <span class="mn-card__flag" title="${escapeHtml(country)}">${flag}</span>
           <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
+          ${chip}
         </div>
         ${sub}
         ${excerpt}
@@ -309,14 +360,31 @@
     return { order: 5, key: 'later', label: grp('grpLater') };
   }
 
+  // Meetings: soonest first → Today, Tomorrow, This week, This month, Next month,
+  // Later, then Past, then Not scheduled.
+  function bucketMeetings(date, now) {
+    if (!date) return { order: 9000, key: 'unscheduled', label: I18n.tr('dashboard.notScheduled') };
+    const t0 = startOfDay(now), d0 = startOfDay(date);
+    const diff = Math.round((d0 - t0) / DAY_MS);
+    if (diff < 0) return { order: 8000, key: 'past', label: grp('grpPast') };
+    if (diff === 0) return { order: 0, key: 'today', label: `${grp('grpToday')} · ${fmtDay(d0)}` };
+    if (diff === 1) return { order: 1, key: 'tomorrow', label: `${grp('grpTomorrow')} · ${fmtDay(d0)}` };
+    if (startOfWeek(date).getTime() === startOfWeek(now).getTime()) return { order: 2, key: 'thisweek', label: grp('grpThisWeek') };
+    if (date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth()) return { order: 3, key: 'thismonth', label: grp('grpThisMonth') };
+    const nm = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+    if (date.getFullYear() === nm.getFullYear() && date.getMonth() === nm.getMonth()) return { order: 4, key: 'nextmonth', label: grp('grpNextMonth') };
+    return { order: 5, key: 'later', label: grp('grpLater') };
+  }
+
   function groupItems(items) {
     const now = new Date();
     const map = new Map();
     for (const it of items) {
-      const date = mode === 'completed'
-        ? (it.endedAt ? new Date(it.endedAt) : null)
-        : (it.deadlineDate ? new Date(it.deadlineDate) : null);
-      const b = mode === 'completed' ? bucketCompleted(date, now) : bucketInProgress(date, now);
+      const ds = itemDate(it);
+      const date = ds ? new Date(ds) : null;
+      const b = mode === 'completed' ? bucketCompleted(date, now)
+        : mode === 'meetings' ? bucketMeetings(date, now)
+        : bucketInProgress(date, now); // upcoming | tasks
       if (!map.has(b.key)) map.set(b.key, { order: b.order, label: b.label, items: [] });
       map.get(b.key).items.push(it);
     }
@@ -325,6 +393,12 @@
     for (const g of groups) {
       g.items.sort((a, b) => {
         if (mode === 'completed') return new Date(b.endedAt || 0) - new Date(a.endedAt || 0);
+        if (mode === 'meetings') {
+          // Past meetings most-recent-first; everything else soonest-first.
+          const av = a.eventDateTime ? new Date(a.eventDateTime).getTime() : far;
+          const bv = b.eventDateTime ? new Date(b.eventDateTime).getTime() : far;
+          return g.key === 'past' ? bv - av : av - bv;
+        }
         return new Date(a.deadlineDate || far) - new Date(b.deadlineDate || far);
       });
     }
@@ -334,7 +408,8 @@
   function renderList() {
     const items = getFiltered().filter(d => String(d.id) !== selectedId);
     if (items.length === 0) {
-      const emptyKey = mode === 'completed' ? 'dashboard.noCompleted' : 'dashboard.noUpcoming';
+      const emptyKey = { completed: 'dashboard.noCompleted', upcoming: 'dashboard.noUpcoming',
+        meetings: 'dashboard.noMeetings', tasks: 'dashboard.noTasks' }[mode] || 'dashboard.noUpcoming';
       listEl.innerHTML = `<div class="empty-state"><p>${escapeHtml(I18n.tr(emptyKey))}</p></div>`;
       return;
     }
@@ -422,12 +497,16 @@
     }
 
     const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
+    // In meetings the owner is the viewer themselves, so drop the owner chip.
     const ownerChipName = localizedName(item.documentSubmitterName, item.documentSubmitterNameKa);
-    const ownerChip = ownerChipName
+    const ownerChip = (mode !== 'meetings' && ownerChipName)
       ? `<span class="is-owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}">${ICON_PERSON}${escapeHtml(ownerChipName)}</span>`
       : '';
+    const whenChip = item.eventDateTime
+      ? `<span>${escapeHtml(formatTbilisiDateTime(item.eventDateTime))}</span>`
+      : '';
 
-    if (mode === 'completed') {
+    if (item._ready) {
       detailEl.innerHTML = `
         <div class="mn-detail__panel">
           ${detailHeaderHtml(item, country)}
@@ -435,6 +514,7 @@
             ${ownerChip}
             <span>${escapeHtml(country)}</span>
             <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
+            ${whenChip}
             ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
           </div>
           <h4 class="mn-files__title">${escapeHtml(I18n.tr('dashboard.mainDocument'))}</h4>
@@ -463,6 +543,7 @@
           ${ownerChip}
           <span>${escapeHtml(country)}</span>
           <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
+          ${whenChip}
           ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
           <button class="mn-pillbtn mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
           ${canEdit ? `<button class="mn-pillbtn" data-act="editor">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.openInEditor'))}</span></button>` : ''}
