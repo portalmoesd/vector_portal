@@ -16,6 +16,7 @@ const {
   canPushSection,
   canPullSection,
 } = require('../helpers/pipeline');
+const { notifySectionTurn } = require('../helpers/notifications');
 
 const router = express.Router();
 
@@ -312,6 +313,12 @@ router.post('/submit', requireAuth, denyAnalyst, async (req, res) => {
       await checkEventCompletion(eventId);
     }
 
+    // Notify whoever now holds the section (no-op if it just auto-completed).
+    await notifySectionTurn(db, {
+      eventId, sectionId, actorUserId: req.user.id,
+      holderRole: currentHolderRole(toStatus, origRole, null, ctx.chain),
+    });
+
     res.json({ success: true, newStatus: toStatus });
   } catch (err) {
     console.error('Submit error:', err);
@@ -441,6 +448,12 @@ router.post('/approve', requireAuth, denyAnalyst, async (req, res) => {
       await checkEventCompletion(eventId);
     }
 
+    // Notify the next holder (no-op when this was the final approval).
+    await notifySectionTurn(db, {
+      eventId, sectionId, actorUserId: req.user.id,
+      holderRole: currentHolderRole(toStatus, ctx.originalSubmitterRole, null, ctx.chain),
+    });
+
     res.json({ success: true, newStatus: toStatus });
   } catch (err) {
     console.error('Approve error:', err);
@@ -530,6 +543,12 @@ router.post('/return', requireAuth, denyAnalyst, async (req, res) => {
       'DELETE FROM section_return_requests WHERE event_id = $1 AND section_id = $2',
       [eventId, sectionId]
     );
+
+    // Notify whoever the section was returned to (the first editor).
+    await notifySectionTurn(db, {
+      eventId, sectionId, actorUserId: req.user.id,
+      holderRole: returnTarget, type: 'returned',
+    });
 
     res.json({ success: true, newStatus: toStatus, returnTargetRole: returnTarget });
   } catch (err) {
@@ -750,6 +769,13 @@ router.post('/push-section', requireAuth, denyAnalyst, async (req, res) => {
     if (toStatus.startsWith('approved_by_')) {
       await checkEventCompletion(eventId);
     }
+
+    // A push to the curator hands them the section — notify them. (A completing
+    // push lands on approved_by_*, so currentHolderRole is null → no-op.)
+    await notifySectionTurn(db, {
+      eventId, sectionId, actorUserId: req.user.id,
+      holderRole: currentHolderRole(toStatus, origRole, null, ctx.chain),
+    });
 
     res.json({ success: true, newStatus: toStatus });
   } catch (err) {

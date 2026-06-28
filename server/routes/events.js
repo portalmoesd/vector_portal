@@ -4,6 +4,7 @@ const db = require('../db');
 const { requireAuth, denyAnalyst } = require('../middleware/auth');
 const { canCreateEvent, canEndEvent, ROLES } = require('../helpers/roles');
 const { resolveEventNotificationDraft } = require('../helpers/event-notification-draft');
+const { notifyEventCreated } = require('../helpers/notifications');
 
 const router = express.Router();
 
@@ -275,6 +276,8 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
       }
 
       await client.query('COMMIT');
+      // Notify every participant of the new event (best effort; never blocks).
+      await notifyEventCreated(db, event.id, req.user.id);
       res.status(201).json({ id: event.id, success: true });
     } catch (err) {
       await client.query('ROLLBACK');

@@ -1,4 +1,12 @@
 {
+  "notif": {
+    "title": "შეტყობინებები",
+    "markAllRead": "ყველას წაკითხულად მონიშვნა",
+    "now": "ახლა",
+    "eventCreated": "შეიქმნა ახალი ღონისძიება: {event}",
+    "yourTurn": "თქვენი ჯერია — {section} · {event}",
+    "returned": "{section} დაგიბრუნდათ · {event}"
+  },
   "nav": {
     "dashboard": "მთავარი",
     "calendar": "კალენდარი",
