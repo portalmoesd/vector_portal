@@ -282,6 +282,39 @@
 }
 .mn-dash .mn-chip--ready { color: var(--accent-green, #16a34a); background: rgba(22,163,74,0.12); }
 .mn-dash .mn-chip--prep { color: var(--accent-orange, #f97316); background: rgba(249,115,22,0.12); }
+
+/* ── Notifications panel (injected below the hero) ───────────────────────── */
+.mn-dash .mn-notifs {
+  background: var(--card, #fff); border: 1px solid var(--border, rgba(2,12,27,0.08));
+  border-radius: 16px; box-shadow: var(--shadow, 0 6px 20px rgba(2,12,27,0.06));
+  padding: 14px 18px; margin: 0 0 18px;
+}
+.mn-dash .mn-notifs__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.mn-dash .mn-notifs__title { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; color: var(--text-primary); }
+.mn-dash .mn-notifs__badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 20px; height: 20px; padding: 0 6px; border-radius: 99px;
+  font-size: 0.72rem; font-weight: 800; color: #fff; background: var(--primary, #0a84ff);
+}
+.mn-dash .mn-notifs__readall {
+  border: none; background: none; cursor: pointer; padding: 4px 6px;
+  font-size: 0.8rem; font-weight: 700; color: var(--primary, #0a84ff);
+}
+.mn-dash .mn-notifs__readall:hover { text-decoration: underline; }
+.mn-dash .mn-notifs__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.mn-dash .mn-notif {
+  display: flex; align-items: center; gap: 12px; padding: 10px 8px; cursor: pointer;
+  border-radius: 10px; border-top: 1px solid var(--border, rgba(2,12,27,0.06));
+}
+.mn-dash .mn-notif:first-child { border-top: none; }
+.mn-dash .mn-notif:hover { background: rgba(10,132,255,0.05); }
+.mn-dash .mn-notif__icon { flex: 0 0 auto; width: 18px; height: 18px; color: var(--text-muted); }
+.mn-dash .mn-notif__icon svg { width: 18px; height: 18px; }
+.mn-dash .mn-notif__msg { flex: 1; min-width: 0; font-size: 0.88rem; color: var(--text-secondary); }
+.mn-dash .mn-notif__time { flex: 0 0 auto; font-size: 0.72rem; color: var(--text-muted); }
+.mn-dash .mn-notif.is-unread { background: rgba(10,132,255,0.06); }
+.mn-dash .mn-notif.is-unread .mn-notif__msg { color: var(--text-primary); font-weight: 700; }
+.mn-dash .mn-notif.is-unread .mn-notif__icon { color: var(--primary, #0a84ff); }
 .mn-dash .mn-card__flag { flex: 0 0 auto; width: 46px; height: 46px; line-height: 0; }
 .mn-dash .mn-card__flag img {
   width: 46px; height: 46px;

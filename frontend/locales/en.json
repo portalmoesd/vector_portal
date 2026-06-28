@@ -1,4 +1,12 @@
 {
+  "notif": {
+    "title": "Notifications",
+    "markAllRead": "Mark all read",
+    "now": "now",
+    "eventCreated": "New event created: {event}",
+    "yourTurn": "It's your turn — {section} · {event}",
+    "returned": "{section} returned to you · {event}"
+  },
   "nav": {
     "dashboard": "Dashboard",
     "calendar": "Calendar",

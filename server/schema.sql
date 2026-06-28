@@ -257,6 +257,23 @@ CREATE TABLE IF NOT EXISTS section_return_requests (
   created_at              TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- ─── Notifications ──────────────────────────────────────────────────────────
+-- In-app, per-user notifications surfaced on the dashboard. `meta` carries the
+-- denormalised display strings (eventTitle, sectionTitle, role) so the UI can
+-- render without extra joins and survive title changes/deletions.
+CREATE TABLE IF NOT EXISTS notifications (
+  id          SERIAL PRIMARY KEY,
+  user_id     INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  type        VARCHAR(40) NOT NULL,   -- 'event_created' | 'your_turn' | 'returned'
+  event_id    INT REFERENCES events(id) ON DELETE CASCADE,
+  section_id  INT REFERENCES sections(id) ON DELETE CASCADE,
+  meta        JSONB NOT NULL DEFAULT '{}'::jsonb,
+  is_read     BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS idx_notifications_user
+  ON notifications(user_id, is_read, created_at DESC);
+
 -- ─── Event Templates ────────────────────────────────────────────────────────
 
 CREATE TABLE IF NOT EXISTS event_templates (

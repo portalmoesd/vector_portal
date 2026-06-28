@@ -355,13 +355,10 @@ function buildCalendarForEvent(event) {
   return { ics, filename: `event-${event.id}.ics`, addUrl };
 }
 
-async function resolveEventNotificationDraft(db, eventId) {
-  const event = await getEvent(db, eventId);
-  if (!event) return null;
-
+// Walk the named users + every section × chain step into a participant Map.
+// Shared by the email draft and the in-app notification recipient resolver.
+async function collectParticipants(db, event, sections, homeDepartmentId) {
   const participants = new Map();
-  const sections = await getEventSections(db, eventId);
-  const homeDepartmentId = await getHomeDepartmentId(db, event);
 
   for (const userId of [event.document_submitter_id, event.deputy_id, event.supervisor_id]) {
     const user = await getUserById(db, userId);
@@ -383,6 +380,43 @@ async function resolveEventNotificationDraft(db, eventId) {
       for (const user of users) addParticipant(participants, user, step);
     }
   }
+
+  return participants;
+}
+
+// Every participant of an event, as a deduped array of user ids. In-app
+// notifications don't need email, so unlike the draft this keeps everyone.
+async function resolveEventParticipantIds(db, eventId) {
+  const event = await getEvent(db, eventId);
+  if (!event) return [];
+  const sections = await getEventSections(db, eventId);
+  const homeDepartmentId = await getHomeDepartmentId(db, event);
+  const participants = await collectParticipants(db, event, sections, homeDepartmentId);
+  return [...participants.keys()];
+}
+
+// The user ids who can act on a given section at a given chain step (role) —
+// used to resolve "whose turn is it now" for turn notifications.
+async function resolveStepUserIds(db, eventId, sectionId, role) {
+  const event = await getEvent(db, eventId);
+  if (!event) return [];
+  const { rows } = await db.query(
+    'SELECT department_id FROM section_departments WHERE section_id = $1',
+    [sectionId]
+  );
+  const sectionDeptIds = rows.map((r) => r.department_id).filter(Boolean);
+  const homeDepartmentId = await getHomeDepartmentId(db, event);
+  const users = await getUsersForStep(db, event, sectionDeptIds, homeDepartmentId, role);
+  return users.map((u) => u.id);
+}
+
+async function resolveEventNotificationDraft(db, eventId) {
+  const event = await getEvent(db, eventId);
+  if (!event) return null;
+
+  const sections = await getEventSections(db, eventId);
+  const homeDepartmentId = await getHomeDepartmentId(db, event);
+  const participants = await collectParticipants(db, event, sections, homeDepartmentId);
 
   const { recipients, missingEmails } = splitRecipients(participants);
   const files = await getEventFiles(db, eventId);
@@ -418,4 +452,6 @@ module.exports = {
   splitRecipients,
   buildEmailBody,
   resolveEventNotificationDraft,
+  resolveEventParticipantIds,
+  resolveStepUserIds,
 };

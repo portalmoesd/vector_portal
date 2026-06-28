@@ -955,4 +955,82 @@
   positionThumb();
   // Re-position once fonts/layout settle (button widths depend on the label text).
   requestAnimationFrame(positionThumb);
+
+  // ── Notifications panel (injected below the hero) ───────────────────────────
+  const NOTIF_ICON = {
+    event_created: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
+    your_turn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>',
+    returned: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>',
+  };
+
+  function notifMessage(n) {
+    const m = n.meta || {};
+    if (n.type === 'event_created') return I18n.tr('notif.eventCreated').replace('{event}', m.eventTitle || '');
+    if (n.type === 'returned') return I18n.tr('notif.returned').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
+    return I18n.tr('notif.yourTurn').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
+  }
+  function notifTimeAgo(iso) {
+    const s = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 1000));
+    if (s < 60) return I18n.tr('notif.now');
+    const mi = Math.floor(s / 60); if (mi < 60) return `${mi}m`;
+    const h = Math.floor(mi / 60); if (h < 24) return `${h}h`;
+    return `${Math.floor(h / 24)}d`;
+  }
+
+  let notifPanel, notifListEl, notifBadgeEl;
+  function buildNotifPanel() {
+    const hero = document.getElementById('mnHero');
+    if (!hero) return;
+    notifPanel = document.createElement('div');
+    notifPanel.className = 'mn-notifs';
+    notifPanel.hidden = true;
+    notifPanel.innerHTML = `
+      <div class="mn-notifs__head">
+        <span class="mn-notifs__title">${escapeHtml(I18n.tr('notif.title'))}<span class="mn-notifs__badge" hidden></span></span>
+        <button type="button" class="mn-notifs__readall">${escapeHtml(I18n.tr('notif.markAllRead'))}</button>
+      </div>
+      <ul class="mn-notifs__list"></ul>`;
+    hero.insertAdjacentElement('afterend', notifPanel);
+    notifListEl = notifPanel.querySelector('.mn-notifs__list');
+    notifBadgeEl = notifPanel.querySelector('.mn-notifs__badge');
+    notifPanel.querySelector('.mn-notifs__readall').addEventListener('click', async () => {
+      try { await Api.post('/api/notifications/read', {}); } catch (_) { /* ignore */ }
+      loadNotifications();
+    });
+  }
+
+  function renderNotifications(data) {
+    if (!notifPanel) return;
+    const list = (data && data.notifications) || [];
+    if (!list.length) { notifPanel.hidden = true; return; }
+    notifPanel.hidden = false;
+    const unread = (data && data.unreadCount) || 0;
+    notifBadgeEl.textContent = unread ? String(unread) : '';
+    notifBadgeEl.hidden = !unread;
+    notifListEl.innerHTML = list.map(n => `
+      <li class="mn-notif ${n.isRead ? '' : 'is-unread'}" data-id="${n.id}" data-type="${n.type}" data-event="${n.eventId || ''}" data-section="${n.sectionId || ''}">
+        <span class="mn-notif__icon">${NOTIF_ICON[n.type] || NOTIF_ICON.your_turn}</span>
+        <span class="mn-notif__msg">${escapeHtml(notifMessage(n))}</span>
+        <span class="mn-notif__time">${escapeHtml(notifTimeAgo(n.createdAt))}</span>
+      </li>`).join('');
+    notifListEl.querySelectorAll('.mn-notif').forEach(li => {
+      li.addEventListener('click', async () => {
+        try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
+        const { type, event: ev, section: sec } = li.dataset;
+        if ((type === 'your_turn' || type === 'returned') && ev && sec) {
+          window.location.href = `editor.html?event_id=${ev}&section_id=${sec}`;
+          return;
+        }
+        loadNotifications();
+      });
+    });
+  }
+
+  async function loadNotifications() {
+    try { renderNotifications(await Api.get('/api/notifications')); } catch (_) { /* keep silent */ }
+  }
+
+  buildNotifPanel();
+  loadNotifications();
+  setInterval(loadNotifications, 45000);
 })();
