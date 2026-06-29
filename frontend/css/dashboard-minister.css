@@ -544,44 +544,82 @@
 /* Buttons (left) + chain dots (right) share one line under the title. */
 .mn-dash .mn-prog__actionrow { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
 .mn-dash .mn-prog__steps { display: flex; align-items: center; gap: 7px; margin-top: 0; margin-left: auto; }
+/* Each chain step is a button wrapping a dot + (expanded) a role label. */
+.mn-dash .mn-prog__step {
+  border: 0; padding: 0; background: none; appearance: none; cursor: pointer;
+  display: inline-flex; align-items: center; flex: 0 0 auto;
+}
 .mn-dash .mn-prog__dot {
   width: 12px; height: 12px; border-radius: 50%; flex: 0 0 auto;
-  border: 0; padding: 0; appearance: none; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
   background: rgba(2,12,27,0.13);
   transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
-.mn-dash .mn-prog__dot:hover { transform: scale(1.25); }
+.mn-dash .mn-prog__step:hover .mn-prog__dot { transform: scale(1.25); }
 .mn-dash .mn-prog__dot.is-passed { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-prog__dot.is-current {
   background: var(--accent-orange, #f97316);
   box-shadow: 0 0 0 3px rgba(249,115,22,0.18);
 }
-.mn-dash .mn-prog__dot.is-open { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
+.mn-dash .mn-prog__step.is-open .mn-prog__dot { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
+.mn-dash .mn-prog__steplabel { display: none; }
 
-/* When a dot is pressed, the dots drop to their own full-width row below the
-   buttons (the static right-aligned position is restored on collapse). */
+/* Pressing a step turns the dots row into a centered, labeled stepper below the
+   buttons (the static right-aligned dots are restored on collapse). */
 .mn-dash .mn-prog__item.is-expanded .mn-prog__steps {
   flex-basis: 100%; width: 100%;
-  margin-left: 0; margin-top: 12px;
-  justify-content: center; gap: 12px;
+  margin-left: 0; margin-top: 14px;
+  justify-content: center; align-items: flex-start; gap: 22px; flex-wrap: wrap;
 }
-.mn-dash .mn-prog__item.is-expanded .mn-prog__dot { width: 16px; height: 16px; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step { flex-direction: column; gap: 7px; text-align: center; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__dot { width: 18px; height: 18px; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__dot.is-passed::after {
+  content: "✓"; color: #fff; font-size: 10px; font-weight: 900; line-height: 1;
+}
+.mn-dash .mn-prog__item.is-expanded .mn-prog__steplabel {
+  display: block; max-width: 96px; font-size: 0.7rem; font-weight: 600;
+  color: var(--text-secondary); line-height: 1.2;
+}
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-open .mn-prog__steplabel {
+  color: var(--primary, #0a84ff); font-weight: 800;
+}
 
-/* Inline stage detail (expands under the dots when one is clicked) */
-.mn-dash .mn-stage-detail { margin-top: 10px; }
+/* Inline stage detail (expands under the stepper when a step is clicked) */
+.mn-dash .mn-stage-detail { margin-top: 12px; }
+@keyframes mnStageIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 .mn-dash .mn-stage {
-  background: rgba(2,12,27,0.03); border: 1px solid var(--border-color);
-  border-radius: 10px; padding: 10px 12px;
+  background: var(--card, #fff); border: 1px solid var(--border-color);
+  border-radius: 14px; padding: 14px 16px;
+  box-shadow: 0 4px 16px rgba(2,12,27,0.05);
+  animation: mnStageIn 0.18s ease;
 }
-.mn-dash .mn-stage__role {
-  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
-  color: var(--text-muted); margin-bottom: 8px;
+.mn-dash .mn-stage__head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.mn-dash .mn-stage__status {
+  flex: 0 0 auto; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.03em;
+  text-transform: uppercase; padding: 4px 10px; border-radius: 99px;
 }
-.mn-dash .mn-stage__user { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 0.85rem; }
-.mn-dash .mn-stage__name { font-weight: 600; color: var(--text-primary); }
+.mn-dash .mn-stage__status.is-passed { color: var(--accent-green, #16a34a); background: rgba(22,163,74,0.12); }
+.mn-dash .mn-stage__status.is-current { color: var(--accent-orange, #f97316); background: rgba(249,115,22,0.12); }
+.mn-dash .mn-stage__status.is-pending { color: var(--text-muted); background: rgba(2,12,27,0.06); }
+.mn-dash .mn-stage__role { font-weight: 800; color: var(--text-primary); }
+.mn-dash .mn-stage__subhead {
+  font-size: 0.66rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 6px;
+}
+.mn-dash .mn-stage__person { display: flex; align-items: center; gap: 10px; padding: 6px 0; }
+.mn-dash .mn-stage__avatar {
+  flex: 0 0 auto; width: 34px; height: 34px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.78rem; font-weight: 800;
+}
+.mn-dash .mn-stage__pinfo { display: flex; flex-direction: column; min-width: 0; }
+.mn-dash .mn-stage__name { font-weight: 700; color: var(--text-primary); }
 .mn-dash .mn-stage__dept { font-size: 0.75rem; color: var(--text-secondary); }
-.mn-dash .mn-stage__check { margin-left: auto; color: var(--accent-green, #16a34a); font-weight: 800; }
-.mn-dash .mn-stage__user.is-acted .mn-stage__name { color: var(--accent-green, #16a34a); }
+.mn-dash .mn-stage__acted {
+  margin-left: auto; flex: 0 0 auto; font-size: 0.7rem; font-weight: 800;
+  color: var(--accent-green, #16a34a); background: rgba(22,163,74,0.12);
+  padding: 3px 9px; border-radius: 99px; white-space: nowrap;
+}
 .mn-dash .mn-stage__empty, .mn-dash .mn-stage__loading { font-size: 0.82rem; color: var(--text-muted); }
 
 /* Quick per-section action buttons */
