@@ -558,19 +558,14 @@
 }
 .mn-dash .mn-prog__dot.is-open { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
 
-/* When a dot is pressed, the dots drop to their own full-width track below the
+/* When a dot is pressed, the dots drop to their own full-width row below the
    buttons (the static right-aligned position is restored on collapse). */
 .mn-dash .mn-prog__item.is-expanded .mn-prog__steps {
   flex-basis: 100%; width: 100%;
   margin-left: 0; margin-top: 12px;
-  justify-content: space-between; position: relative;
+  justify-content: center; gap: 12px;
 }
-.mn-dash .mn-prog__item.is-expanded .mn-prog__steps::before {
-  content: ""; position: absolute; left: 6px; right: 6px; top: 50%;
-  height: 2px; transform: translateY(-50%);
-  background: var(--border-color); z-index: 0;
-}
-.mn-dash .mn-prog__item.is-expanded .mn-prog__dot { position: relative; z-index: 1; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__dot { width: 16px; height: 16px; }
 
 /* Inline stage detail (expands under the dots when one is clicked) */
 .mn-dash .mn-stage-detail { margin-top: 10px; }
