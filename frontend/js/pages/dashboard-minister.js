@@ -769,11 +769,13 @@
           e.stopPropagation();
           if (dot.classList.contains('is-open')) {
             dot.classList.remove('is-open');
+            item.classList.remove('is-expanded');
             detail.hidden = true; detail.innerHTML = '';
             return;
           }
           item.querySelectorAll('.mn-prog__dot.is-open').forEach(d => d.classList.remove('is-open'));
           dot.classList.add('is-open');
+          item.classList.add('is-expanded');
           const role = dot.dataset.stageRole;
           const idx = parseInt(dot.dataset.stageIdx, 10);
           const step = row && Array.isArray(row.raw.steps) ? row.raw.steps[idx] : null;
