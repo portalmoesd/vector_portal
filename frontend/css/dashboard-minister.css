@@ -620,7 +620,6 @@
 /* The chain stepper is moved into the top of the card while expanded. */
 .mn-dash .mn-stage__stepper {
   padding: 2px 28px 12px; margin-bottom: 12px;
-  border-bottom: 1px solid var(--border-color);
 }
 .mn-dash .mn-stage__stepper .mn-prog__steps { margin-top: 0; }
 .mn-dash .mn-stage__head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
