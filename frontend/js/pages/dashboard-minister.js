@@ -697,28 +697,26 @@
     const summary = I18n.tr('dashboard.sectionsApproved')
       .replace('{done}', approved).replace('{total}', rows.length);
 
-    const progRowHtml = (r) => {
-      const actionsHtml = canEdit ? renderSectionActions(r.raw, eventId) : '';
-      const dots = r.chain.map((role, i) => {
-        const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
-        return `<button type="button" class="mn-prog__step" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
-      }).join('');
-      return `
-        <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
-          <div class="mn-prog__row">
-            ${canEdit
-              ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
-              : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
-            <div class="mn-prog__steps">
-              <span class="mn-prog__now ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
-              ${dots}
-              <span class="mn-prog__expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
-            </div>
+    const progRowHtml = (r) => `
+      <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
+        <div class="mn-prog__row">
+          ${canEdit
+            ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
+            : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
+          <span class="mn-prog__pill ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
+        </div>
+        <div class="mn-prog__actionrow">
+          ${canEdit ? renderSectionActions(r.raw, eventId) : ''}
+          <div class="mn-prog__steps">
+            ${r.chain.map((role, i) => {
+              const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
+              return `<button type="button" class="mn-prog__step" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
+            }).join('')}
+            <span class="mn-prog__expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
           </div>
-          ${actionsHtml ? `<div class="mn-prog__actionrow">${actionsHtml}</div>` : ''}
-          <div class="mn-stage-detail" hidden></div>
-        </li>`;
-    };
+        </div>
+        <div class="mn-stage-detail" hidden></div>
+      </li>`;
 
     // Sections the user is responsible for show directly; the rest stay behind
     // the dropdown.
@@ -768,14 +766,14 @@
     container.querySelectorAll('.mn-prog__item').forEach(item => {
       const sectionId = item.dataset.sectionId;
       const detail = item.querySelector('.mn-stage-detail');
-      const homeRow = item.querySelector('.mn-prog__row');   // the unified pill lives here
+      const actionrow = item.querySelector('.mn-prog__actionrow');
       const steps = item.querySelector('.mn-prog__steps');
-      const dataRow = rowsBySection.get(String(sectionId));
+      const row = rowsBySection.get(String(sectionId));
 
       const collapse = () => {
         item.classList.remove('is-expanded');
         item.querySelectorAll('.mn-prog__step.is-open').forEach(d => d.classList.remove('is-open'));
-        if (steps.parentElement !== homeRow) homeRow.appendChild(steps); // pill back beside the title
+        if (steps.parentElement !== actionrow) actionrow.appendChild(steps); // dots back to the right
         detail.hidden = true; detail.innerHTML = '';
       };
 
@@ -796,9 +794,9 @@
         }
         const role = stepBtn.dataset.stageRole;
         const idx = parseInt(stepBtn.dataset.stageIdx, 10);
-        const step = dataRow && Array.isArray(dataRow.raw.steps) ? dataRow.raw.steps[idx] : null;
-        const state = dataRow
-          ? (idx < dataRow.passed ? 'passed' : (idx === dataRow.passed && !dataRow.done ? 'current' : 'pending'))
+        const step = row && Array.isArray(row.raw.steps) ? row.raw.steps[idx] : null;
+        const state = row
+          ? (idx < row.passed ? 'passed' : (idx === row.passed && !row.done ? 'current' : 'pending'))
           : 'pending';
         const body = detail.querySelector('.mn-stage__body');
         body.innerHTML = `<div class="mn-stage__loading">${escapeHtml(I18n.tr('dashboard.loading'))}</div>`;
