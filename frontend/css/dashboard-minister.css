@@ -541,6 +541,11 @@
 }
 .mn-dash .mn-prog__pill.is-done { color: var(--accent-green, #16a34a); background: rgba(22,163,74,0.12); }
 .mn-dash .mn-prog__pill.is-active { color: var(--accent-orange, #f97316); background: rgba(249,115,22,0.12); }
+/* Leading status label inside the unified collapsed pill (plain colored text). */
+.mn-dash .mn-prog__now { font-size: 0.72rem; font-weight: 800; white-space: nowrap; }
+.mn-dash .mn-prog__now.is-done { color: var(--accent-green, #16a34a); }
+.mn-dash .mn-prog__now.is-active { color: var(--accent-orange, #f97316); }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__now { display: none; }
 /* Buttons (left) + chain dots (right) share one line under the title. */
 .mn-dash .mn-prog__actionrow { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
 .mn-dash .mn-prog__steps { display: flex; align-items: center; gap: 7px; margin-top: 0; margin-left: auto; }
