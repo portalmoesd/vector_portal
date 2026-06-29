@@ -564,6 +564,20 @@
 .mn-dash .mn-prog__step.is-open .mn-prog__dot { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
 .mn-dash .mn-prog__steplabel { display: none; }
 
+/* Collapsed: make the dot cluster read as one tappable control (pill + chevron). */
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__steps {
+  cursor: pointer; padding: 5px 10px; border-radius: 99px;
+  border: 1px solid var(--border-color); background: rgba(2,12,27,0.02);
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__steps:hover {
+  background: rgba(10,132,255,0.08); border-color: rgba(10,132,255,0.3);
+}
+.mn-dash .mn-prog__expand { display: inline-flex; align-items: center; margin-left: 3px; color: var(--text-muted); }
+.mn-dash .mn-prog__expand svg { width: 12px; height: 12px; }
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__steps:hover .mn-prog__expand { color: var(--primary, #0a84ff); }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__expand { display: none; }
+
 /* Pressing a step turns the dots row into a centered, labeled stepper below the
    buttons (the static right-aligned dots are restored on collapse). */
 .mn-dash .mn-prog__item.is-expanded .mn-prog__steps {
