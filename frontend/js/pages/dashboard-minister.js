@@ -697,26 +697,32 @@
     const summary = I18n.tr('dashboard.sectionsApproved')
       .replace('{done}', approved).replace('{total}', rows.length);
 
-    const progRowHtml = (r) => `
-      <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
-        <div class="mn-prog__row">
-          ${canEdit
-            ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
-            : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
-          <span class="mn-prog__pill ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
-        </div>
-        <div class="mn-prog__actionrow">
-          ${canEdit ? renderSectionActions(r.raw, eventId) : ''}
-          <div class="mn-prog__steps">
-            ${r.chain.map((role, i) => {
-              const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
-              return `<button type="button" class="mn-prog__step" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
-            }).join('')}
-            <span class="mn-prog__expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+    const progRowHtml = (r) => {
+      const actionsHtml = canEdit ? renderSectionActions(r.raw, eventId) : '';
+      const dots = r.chain.map((role, i) => {
+        const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
+        return `<button type="button" class="mn-prog__step" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
+      }).join('');
+      return `
+        <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
+          <div class="mn-prog__row">
+            <div class="mn-prog__rowmain">
+              ${canEdit
+                ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
+                : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
+              ${actionsHtml ? `<div class="mn-prog__actionrow">${actionsHtml}</div>` : ''}
+            </div>
+            <div class="mn-prog__status">
+              <span class="mn-prog__now ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
+              <div class="mn-prog__steps">
+                ${dots}
+                <span class="mn-prog__expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="mn-stage-detail" hidden></div>
-      </li>`;
+          <div class="mn-stage-detail" hidden></div>
+        </li>`;
+    };
 
     // Sections the user is responsible for show directly; the rest stay behind
     // the dropdown.
@@ -766,14 +772,14 @@
     container.querySelectorAll('.mn-prog__item').forEach(item => {
       const sectionId = item.dataset.sectionId;
       const detail = item.querySelector('.mn-stage-detail');
-      const actionrow = item.querySelector('.mn-prog__actionrow');
+      const statusBox = item.querySelector('.mn-prog__status');  // label + dots container
       const steps = item.querySelector('.mn-prog__steps');
       const row = rowsBySection.get(String(sectionId));
 
       const collapse = () => {
         item.classList.remove('is-expanded');
         item.querySelectorAll('.mn-prog__step.is-open').forEach(d => d.classList.remove('is-open'));
-        if (steps.parentElement !== actionrow) actionrow.appendChild(steps); // dots back to the right
+        if (steps.parentElement !== statusBox) statusBox.appendChild(steps); // dots back into the pill
         detail.hidden = true; detail.innerHTML = '';
       };
 
@@ -816,9 +822,9 @@
         });
       });
 
-      // Clicking the collapsed pill / chevron (not a specific dot) opens the
-      // current stage — makes the whole cluster read as one expandable control.
-      steps.addEventListener('click', (e) => {
+      // Clicking the collapsed pill (label / empty area / chevron, but not a
+      // specific dot) opens the current stage — the whole container is one control.
+      statusBox.addEventListener('click', (e) => {
         if (e.target.closest('.mn-prog__step')) return;   // a dot handles itself
         if (item.classList.contains('is-expanded')) return;
         const all = [...steps.querySelectorAll('.mn-prog__step')];

@@ -528,7 +528,8 @@
 .mn-dash .mn-prog__list[hidden] { display: none; }
 .mn-dash .mn-prog__item { border-top: 1px solid var(--border-color); padding-top: 11px; }
 .mn-dash .mn-prog__item:first-child { border-top: none; padding-top: 0; }
-.mn-dash .mn-prog__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mn-dash .mn-prog__row { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.mn-dash .mn-prog__rowmain { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
 .mn-dash .mn-prog__title {
   font-size: 0.9rem; font-weight: 600; color: var(--text-primary);
   min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
@@ -541,9 +542,14 @@
 }
 .mn-dash .mn-prog__pill.is-done { color: var(--accent-green, #16a34a); background: rgba(22,163,74,0.12); }
 .mn-dash .mn-prog__pill.is-active { color: var(--accent-orange, #f97316); background: rgba(249,115,22,0.12); }
-/* Buttons (left) + chain dots (right) share one line under the title. */
-.mn-dash .mn-prog__actionrow { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
-.mn-dash .mn-prog__steps { display: flex; align-items: center; gap: 7px; margin-top: 0; margin-left: auto; }
+/* Quick-action buttons sit on their own line under the title (left column). */
+.mn-dash .mn-prog__actionrow { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 0; }
+/* Status container (right column): label on top, chain dots below — one box. */
+.mn-dash .mn-prog__status { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.mn-dash .mn-prog__now { font-size: 0.7rem; font-weight: 800; white-space: nowrap; }
+.mn-dash .mn-prog__now.is-done { color: var(--accent-green, #16a34a); }
+.mn-dash .mn-prog__now.is-active { color: var(--accent-orange, #f97316); }
+.mn-dash .mn-prog__steps { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 0; }
 /* Each chain step is a button wrapping a dot + (expanded) a role label. */
 .mn-dash .mn-prog__step {
   border: 0; padding: 0; background: none; appearance: none; cursor: pointer;
@@ -564,18 +570,19 @@
 .mn-dash .mn-prog__step.is-open .mn-prog__dot { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
 .mn-dash .mn-prog__steplabel { display: none; }
 
-/* Collapsed: make the dot cluster read as one tappable control (pill + chevron). */
-.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__steps {
-  cursor: pointer; padding: 5px 10px; border-radius: 99px;
+/* Collapsed: make the label + dot cluster read as one tappable control (pill + chevron). */
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__status {
+  cursor: pointer; padding: 6px 12px; border-radius: 14px;
   border: 1px solid var(--border-color); background: rgba(2,12,27,0.02);
   transition: background 0.15s ease, border-color 0.15s ease;
 }
-.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__steps:hover {
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__status:hover {
   background: rgba(10,132,255,0.08); border-color: rgba(10,132,255,0.3);
 }
 .mn-dash .mn-prog__expand { display: inline-flex; align-items: center; margin-left: 3px; color: var(--text-muted); }
 .mn-dash .mn-prog__expand svg { width: 12px; height: 12px; }
-.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__steps:hover .mn-prog__expand { color: var(--primary, #0a84ff); }
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__status:hover .mn-prog__expand { color: var(--primary, #0a84ff); }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__status { display: none; }
 .mn-dash .mn-prog__item.is-expanded .mn-prog__expand { display: none; }
 
 /* Pressing a step turns the dots row into a centered, labeled stepper below the
