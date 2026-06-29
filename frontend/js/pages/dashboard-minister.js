@@ -712,6 +712,7 @@
               const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
               return `<button type="button" class="mn-prog__step" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
             }).join('')}
+            <span class="mn-prog__expand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span>
           </div>
         </div>
         <div class="mn-stage-detail" hidden></div>
@@ -813,6 +814,18 @@
           if (stepBtn.classList.contains('is-open')) collapse();
           else openStep(stepBtn);
         });
+      });
+
+      // Clicking the collapsed pill / chevron (not a specific dot) opens the
+      // current stage — makes the whole cluster read as one expandable control.
+      steps.addEventListener('click', (e) => {
+        if (e.target.closest('.mn-prog__step')) return;   // a dot handles itself
+        if (item.classList.contains('is-expanded')) return;
+        const all = [...steps.querySelectorAll('.mn-prog__step')];
+        const cur = all.find(s => s.querySelector('.mn-prog__dot.is-current'))
+          || [...all].reverse().find(s => s.querySelector('.mn-prog__dot.is-passed'))
+          || all[0];
+        if (cur) openStep(cur);
       });
     });
   }
