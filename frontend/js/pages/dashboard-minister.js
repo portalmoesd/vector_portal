@@ -757,40 +757,61 @@
     bindStageDots(container, eventId, new Map(rows.map(r => [String(r.sectionId), r])));
   }
 
-  // Clicking a chain dot expands an inline panel below the row showing that
-  // stage's role + who's responsible (and who acted).
+  const ICON_X = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>';
+
+  // Clicking a chain step expands a card showing the stepper (moved inside) plus
+  // that stage's role + who's responsible (and who acted). A × button collapses.
   function bindStageDots(container, eventId, rowsBySection) {
     container.querySelectorAll('.mn-prog__item').forEach(item => {
       const sectionId = item.dataset.sectionId;
       const detail = item.querySelector('.mn-stage-detail');
+      const actionrow = item.querySelector('.mn-prog__actionrow');
+      const steps = item.querySelector('.mn-prog__steps');
       const row = rowsBySection.get(String(sectionId));
-      item.querySelectorAll('.mn-prog__step').forEach(stepBtn => {
-        stepBtn.addEventListener('click', async (e) => {
-          e.stopPropagation();
-          if (stepBtn.classList.contains('is-open')) {
-            stepBtn.classList.remove('is-open');
-            item.classList.remove('is-expanded');
-            detail.hidden = true; detail.innerHTML = '';
-            return;
-          }
-          item.querySelectorAll('.mn-prog__step.is-open').forEach(d => d.classList.remove('is-open'));
-          stepBtn.classList.add('is-open');
+
+      const collapse = () => {
+        item.classList.remove('is-expanded');
+        item.querySelectorAll('.mn-prog__step.is-open').forEach(d => d.classList.remove('is-open'));
+        if (steps.parentElement !== actionrow) actionrow.appendChild(steps); // dots back to the right
+        detail.hidden = true; detail.innerHTML = '';
+      };
+
+      const openStep = async (stepBtn) => {
+        item.querySelectorAll('.mn-prog__step.is-open').forEach(d => d.classList.remove('is-open'));
+        stepBtn.classList.add('is-open');
+        if (!item.classList.contains('is-expanded')) {
           item.classList.add('is-expanded');
-          const role = stepBtn.dataset.stageRole;
-          const idx = parseInt(stepBtn.dataset.stageIdx, 10);
-          const step = row && Array.isArray(row.raw.steps) ? row.raw.steps[idx] : null;
-          const state = row
-            ? (idx < row.passed ? 'passed' : (idx === row.passed && !row.done ? 'current' : 'pending'))
-            : 'pending';
           detail.hidden = false;
-          detail.innerHTML = `<div class="mn-stage"><div class="mn-stage__loading">${escapeHtml(I18n.tr('dashboard.loading'))}</div></div>`;
-          try {
-            const data = await stageUsers(eventId, sectionId, role);
-            // Guard against a re-render / different step opened meanwhile.
-            if (stepBtn.classList.contains('is-open')) detail.innerHTML = renderStageDetail(role, data, step, state);
-          } catch (err) {
-            detail.innerHTML = `<div class="mn-stage"><div class="mn-stage__empty">${escapeHtml(err.message)}</div></div>`;
-          }
+          detail.innerHTML = `
+            <div class="mn-stage">
+              <button type="button" class="mn-stage__close" aria-label="${escapeHtml(I18n.tr('common.close'))}">${ICON_X}</button>
+              <div class="mn-stage__stepper"></div>
+              <div class="mn-stage__body"></div>
+            </div>`;
+          detail.querySelector('.mn-stage__stepper').appendChild(steps); // move dots into the card
+          detail.querySelector('.mn-stage__close').addEventListener('click', collapse);
+        }
+        const role = stepBtn.dataset.stageRole;
+        const idx = parseInt(stepBtn.dataset.stageIdx, 10);
+        const step = row && Array.isArray(row.raw.steps) ? row.raw.steps[idx] : null;
+        const state = row
+          ? (idx < row.passed ? 'passed' : (idx === row.passed && !row.done ? 'current' : 'pending'))
+          : 'pending';
+        const body = detail.querySelector('.mn-stage__body');
+        body.innerHTML = `<div class="mn-stage__loading">${escapeHtml(I18n.tr('dashboard.loading'))}</div>`;
+        try {
+          const data = await stageUsers(eventId, sectionId, role);
+          if (stepBtn.classList.contains('is-open')) body.innerHTML = renderStageBody(role, data, step, state);
+        } catch (err) {
+          body.innerHTML = `<div class="mn-stage__empty">${escapeHtml(err.message)}</div>`;
+        }
+      };
+
+      item.querySelectorAll('.mn-prog__step').forEach(stepBtn => {
+        stepBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (stepBtn.classList.contains('is-open')) collapse();
+          else openStep(stepBtn);
         });
       });
     });
@@ -820,7 +841,9 @@
     return `background:hsl(${h},62%,90%);color:hsl(${h},48%,34%);`;
   }
 
-  function renderStageDetail(role, data, step, state) {
+  // Inner content of the expanded card's body (the card shell + stepper live in
+  // bindStageDots). Returns the status header + the stage's people.
+  function renderStageBody(role, data, step, state) {
     const users = (data && data.users) || [];
     const actedId = step && step.acted ? step.actorId : null;
     const statusKey = state === 'passed' ? 'dashboard.stageApproved'
@@ -850,7 +873,7 @@
       body = label + users.map(u =>
         personRow(localizedName(u.fullName, u.fullNameKa), u.departmentName, actedId === u.id)).join('');
     }
-    return `<div class="mn-stage">${head}${body}</div>`;
+    return head + body;
   }
 
   // ── Quick section actions (ported from dashboard-pipeline.js) ───────────────
