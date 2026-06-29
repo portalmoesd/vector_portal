@@ -698,7 +698,7 @@
       .replace('{done}', approved).replace('{total}', rows.length);
 
     const progRowHtml = (r) => `
-      <li class="mn-prog__item ${r.done ? 'is-done' : ''}">
+      <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
         <div class="mn-prog__row">
           ${canEdit
             ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
@@ -710,10 +710,11 @@
           <div class="mn-prog__steps">
             ${r.chain.map((role, i) => {
               const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
-              return `<span class="mn-prog__dot ${st}" title="${escapeHtml(roleLabel(role))}"></span>`;
+              return `<button type="button" class="mn-prog__dot ${st}" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"></button>`;
             }).join('')}
           </div>
         </div>
+        <div class="mn-stage-detail" hidden></div>
       </li>`;
 
     // Sections the user is responsible for show directly; the rest stay behind
@@ -753,6 +754,73 @@
       });
     }
     if (canEdit) bindSectionActions(container, eventId);
+    bindStageDots(container, eventId, new Map(rows.map(r => [String(r.sectionId), r])));
+  }
+
+  // Clicking a chain dot expands an inline panel below the row showing that
+  // stage's role + who's responsible (and who acted).
+  function bindStageDots(container, eventId, rowsBySection) {
+    container.querySelectorAll('.mn-prog__item').forEach(item => {
+      const sectionId = item.dataset.sectionId;
+      const detail = item.querySelector('.mn-stage-detail');
+      const row = rowsBySection.get(String(sectionId));
+      item.querySelectorAll('.mn-prog__dot').forEach(dot => {
+        dot.addEventListener('click', async (e) => {
+          e.stopPropagation();
+          if (dot.classList.contains('is-open')) {
+            dot.classList.remove('is-open');
+            detail.hidden = true; detail.innerHTML = '';
+            return;
+          }
+          item.querySelectorAll('.mn-prog__dot.is-open').forEach(d => d.classList.remove('is-open'));
+          dot.classList.add('is-open');
+          const role = dot.dataset.stageRole;
+          const idx = parseInt(dot.dataset.stageIdx, 10);
+          const step = row && Array.isArray(row.raw.steps) ? row.raw.steps[idx] : null;
+          detail.hidden = false;
+          detail.innerHTML = `<div class="mn-stage"><div class="mn-stage__loading">${escapeHtml(I18n.tr('dashboard.loading'))}</div></div>`;
+          try {
+            const data = await stageUsers(eventId, sectionId, role);
+            // Guard against a re-render / different dot opened meanwhile.
+            if (dot.classList.contains('is-open')) detail.innerHTML = renderStageDetail(role, data, step);
+          } catch (err) {
+            detail.innerHTML = `<div class="mn-stage"><div class="mn-stage__empty">${escapeHtml(err.message)}</div></div>`;
+          }
+        });
+      });
+    });
+  }
+
+  // Eligible users for (event, section, role) — cached; role membership is static.
+  const _stageUsersCache = new Map();
+  async function stageUsers(eventId, sectionId, role) {
+    const key = `${eventId}:${sectionId}:${role}`;
+    if (!_stageUsersCache.has(key)) {
+      _stageUsersCache.set(key, Api.get(
+        `/api/workflow/stage-users?event_id=${eventId}&section_id=${sectionId}&role=${encodeURIComponent(role)}`
+      ).catch(err => { _stageUsersCache.delete(key); throw err; }));
+    }
+    return _stageUsersCache.get(key);
+  }
+
+  function renderStageDetail(role, data, step) {
+    const users = (data && data.users) || [];
+    const actedId = step && step.acted ? step.actorId : null;
+    const head = `<div class="mn-stage__role">${escapeHtml(roleLabel(role))}</div>`;
+    const userRow = (name, dept, acted) => `
+      <div class="mn-stage__user ${acted ? 'is-acted' : ''}">
+        <span class="mn-stage__name">${escapeHtml(name)}</span>
+        ${dept ? `<span class="mn-stage__dept">${escapeHtml(dept)}</span>` : ''}
+        ${acted ? `<span class="mn-stage__check" title="${escapeHtml(I18n.tr('dashboard.acted'))}">✓</span>` : ''}
+      </div>`;
+    if (!users.length) {
+      if (step && step.acted && step.actorName) {
+        return `<div class="mn-stage">${head}${userRow(localizedName(step.actorName, step.actorNameKa), step.departmentName, true)}</div>`;
+      }
+      return `<div class="mn-stage">${head}<div class="mn-stage__empty">${escapeHtml(I18n.tr('dashboard.noEligibleUsers'))}</div></div>`;
+    }
+    const list = users.map(u => userRow(localizedName(u.fullName, u.fullNameKa), u.departmentName, actedId === u.id)).join('');
+    return `<div class="mn-stage">${head}${list}</div>`;
   }
 
   // ── Quick section actions (ported from dashboard-pipeline.js) ───────────────

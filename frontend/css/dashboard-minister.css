@@ -545,14 +545,36 @@
 .mn-dash .mn-prog__actionrow { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 10px; }
 .mn-dash .mn-prog__steps { display: flex; align-items: center; gap: 7px; margin-top: 0; margin-left: auto; }
 .mn-dash .mn-prog__dot {
-  width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto;
+  width: 12px; height: 12px; border-radius: 50%; flex: 0 0 auto;
+  border: 0; padding: 0; appearance: none; cursor: pointer;
   background: rgba(2,12,27,0.13);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
+.mn-dash .mn-prog__dot:hover { transform: scale(1.25); }
 .mn-dash .mn-prog__dot.is-passed { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-prog__dot.is-current {
   background: var(--accent-orange, #f97316);
   box-shadow: 0 0 0 3px rgba(249,115,22,0.18);
 }
+.mn-dash .mn-prog__dot.is-open { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
+
+/* Inline stage detail (expands under the dots when one is clicked) */
+.mn-dash .mn-stage-detail { margin-top: 10px; }
+.mn-dash .mn-stage {
+  background: rgba(2,12,27,0.03); border: 1px solid var(--border-color);
+  border-radius: 10px; padding: 10px 12px;
+}
+.mn-dash .mn-stage__role {
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+  color: var(--text-muted); margin-bottom: 8px;
+}
+.mn-dash .mn-stage__user { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 0.85rem; }
+.mn-dash .mn-stage__name { font-weight: 600; color: var(--text-primary); }
+.mn-dash .mn-stage__dept { font-size: 0.75rem; color: var(--text-secondary); }
+.mn-dash .mn-stage__check { margin-left: auto; color: var(--accent-green, #16a34a); font-weight: 800; }
+.mn-dash .mn-stage__user.is-acted .mn-stage__name { color: var(--accent-green, #16a34a); }
+.mn-dash .mn-stage__empty, .mn-dash .mn-stage__loading { font-size: 0.82rem; color: var(--text-muted); }
+
 /* Quick per-section action buttons */
 .mn-dash .mn-prog__actions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 0; }
 .mn-dash .mn-actbtn {

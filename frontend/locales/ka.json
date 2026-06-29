@@ -113,6 +113,7 @@
     "loading": "იტვირთება…",
     "eligibleUsers": "უფლებამოსილი მომხმარებლები",
     "noEligibleUsers": "უფლებამოსილი მომხმარებლები არ არის",
+    "acted": "დადასტურდა",
     "returnedBy": "დააბრუნა {who}",
     "returnRequestedBy": "დაბრუნება მოითხოვა {who}",
     "amendmentInProgress": "მიმდინარეობს შესწორება",
