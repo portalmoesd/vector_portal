@@ -588,11 +588,27 @@
 .mn-dash .mn-stage-detail { margin-top: 12px; }
 @keyframes mnStageIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 .mn-dash .mn-stage {
+  position: relative;
   background: var(--card, #fff); border: 1px solid var(--border-color);
   border-radius: 14px; padding: 14px 16px;
   box-shadow: 0 4px 16px rgba(2,12,27,0.05);
   animation: mnStageIn 0.18s ease;
 }
+.mn-dash .mn-stage__close {
+  position: absolute; top: 10px; right: 10px;
+  width: 26px; height: 26px; padding: 0; border: 0; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(2,12,27,0.05); color: var(--text-secondary); cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.mn-dash .mn-stage__close svg { width: 14px; height: 14px; }
+.mn-dash .mn-stage__close:hover { background: rgba(2,12,27,0.1); color: var(--text-primary); }
+/* The chain stepper is moved into the top of the card while expanded. */
+.mn-dash .mn-stage__stepper {
+  padding: 2px 28px 12px; margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+.mn-dash .mn-stage__stepper .mn-prog__steps { margin-top: 0; }
 .mn-dash .mn-stage__head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .mn-dash .mn-stage__status {
   flex: 0 0 auto; font-size: 0.66rem; font-weight: 800; letter-spacing: 0.03em;
