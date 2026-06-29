@@ -705,13 +705,13 @@
             : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
           <span class="mn-prog__pill ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
         </div>
+        ${canEdit ? renderSectionActions(r.raw, eventId) : ''}
         <div class="mn-prog__steps">
           ${r.chain.map((role, i) => {
             const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
             return `<span class="mn-prog__dot ${st}" title="${escapeHtml(roleLabel(role))}"></span>`;
           }).join('')}
         </div>
-        ${canEdit ? renderSectionActions(r.raw, eventId) : ''}
       </li>`;
 
     // Sections the user is responsible for show directly; the rest stay behind
