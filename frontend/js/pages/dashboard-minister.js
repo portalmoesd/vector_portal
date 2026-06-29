@@ -591,18 +591,23 @@
   // deputy see all; everyone else sees only sections their department is assigned
   // to, their RECEIVING_* chain step, or sections they curate. The Minister is
   // always the document submitter on their events, so they see the whole document.
+  // A section the user is directly responsible for: their department is on it, a
+  // RECEIVING_* step they hold, or they curate it.
+  function isOwnSection(s) {
+    if (!s) return false;
+    if (s.departmentIds && s.departmentIds.includes(user.departmentId)) return true;
+    if (s.userEffectiveRole && s.userEffectiveRole.startsWith('RECEIVING_')
+        && s.chain && s.chain.includes(s.userEffectiveRole)) return true;
+    if (s.userEffectiveRole === 'CURATOR') return true;
+    return false;
+  }
+
   function visibleSectionsFor(grid) {
     const all = (grid && grid.sections) || [];
     const isDS = grid && grid.documentSubmitterId === user.id;
     const isResponsibleDeputy = grid && grid.deputyId && grid.deputyId === user.id;
     if (isDS || isResponsibleDeputy) return all;
-    const own = all.filter(s => {
-      if (s.departmentIds && s.departmentIds.includes(user.departmentId)) return true;
-      if (s.userEffectiveRole && s.userEffectiveRole.startsWith('RECEIVING_')
-          && s.chain && s.chain.includes(s.userEffectiveRole)) return true;
-      if (s.userEffectiveRole === 'CURATOR') return true;
-      return false;
-    });
+    const own = all.filter(isOwnSection);
     // A supervisor linked to the owner deputy who also participates in this
     // document (has at least one own section) sees the whole document.
     if (grid && grid.viewerLinkedToOwnerDeputy && own.length > 0) return all;
@@ -692,6 +697,29 @@
     const summary = I18n.tr('dashboard.sectionsApproved')
       .replace('{done}', approved).replace('{total}', rows.length);
 
+    const progRowHtml = (r) => `
+      <li class="mn-prog__item ${r.done ? 'is-done' : ''}">
+        <div class="mn-prog__row">
+          ${canEdit
+            ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
+            : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
+          <span class="mn-prog__pill ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
+        </div>
+        <div class="mn-prog__steps">
+          ${r.chain.map((role, i) => {
+            const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
+            return `<span class="mn-prog__dot ${st}" title="${escapeHtml(roleLabel(role))}"></span>`;
+          }).join('')}
+        </div>
+        ${canEdit ? renderSectionActions(r.raw, eventId) : ''}
+      </li>`;
+
+    // Sections the user is responsible for show directly; the rest stay behind
+    // the dropdown.
+    const ownRows = rows.filter(r => isOwnSection(r.raw));
+    const otherRows = rows.filter(r => !isOwnSection(r.raw));
+    const otherLabel = ownRows.length ? 'dashboard.otherSections' : 'dashboard.sections';
+
     container.innerHTML = `
       <div class="mn-prog">
         <div class="mn-prog__top">
@@ -700,37 +728,28 @@
         </div>
         <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
         <div class="mn-prog__summary">${escapeHtml(summary)}</div>
-        <button type="button" class="mn-prog__toggle" id="mnProgToggle" aria-expanded="false">
-          <span>${escapeHtml(I18n.tr('dashboard.sections'))} (${rows.length})</span>
-          ${ICON_CHEVRON}
-        </button>
-        <ul class="mn-prog__list" id="mnProgList" hidden>
-          ${rows.map(r => `
-            <li class="mn-prog__item ${r.done ? 'is-done' : ''}">
-              <div class="mn-prog__row">
-                ${canEdit
-                  ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
-                  : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
-                <span class="mn-prog__pill ${r.done ? 'is-done' : 'is-active'}">${escapeHtml(r.label)}</span>
-              </div>
-              <div class="mn-prog__steps">
-                ${r.chain.map((role, i) => {
-                  const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
-                  return `<span class="mn-prog__dot ${st}" title="${escapeHtml(roleLabel(role))}"></span>`;
-                }).join('')}
-              </div>
-              ${canEdit ? renderSectionActions(r.raw, eventId) : ''}
-            </li>`).join('')}
-        </ul>
+        ${ownRows.length ? `
+          ${otherRows.length ? `<div class="mn-prog__grouplabel">${escapeHtml(I18n.tr('dashboard.yourSections'))}</div>` : ''}
+          <ul class="mn-prog__list mn-prog__list--own">${ownRows.map(progRowHtml).join('')}</ul>
+        ` : ''}
+        ${otherRows.length ? `
+          <button type="button" class="mn-prog__toggle" id="mnProgToggle" aria-expanded="false">
+            <span>${escapeHtml(I18n.tr(otherLabel))} (${otherRows.length})</span>
+            ${ICON_CHEVRON}
+          </button>
+          <ul class="mn-prog__list" id="mnProgList" hidden>${otherRows.map(progRowHtml).join('')}</ul>
+        ` : ''}
       </div>
     `;
     const toggle = container.querySelector('#mnProgToggle');
     const list = container.querySelector('#mnProgList');
-    toggle.addEventListener('click', () => {
-      const open = list.hasAttribute('hidden');
-      if (open) list.removeAttribute('hidden'); else list.setAttribute('hidden', '');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
+    if (toggle && list) {
+      toggle.addEventListener('click', () => {
+        const open = list.hasAttribute('hidden');
+        if (open) list.removeAttribute('hidden'); else list.setAttribute('hidden', '');
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    }
     if (canEdit) bindSectionActions(container, eventId);
   }
 

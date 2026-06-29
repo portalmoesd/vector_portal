@@ -504,6 +504,11 @@
   transition: width 0.45s ease;
 }
 .mn-dash .mn-prog__summary { font-size: 0.82rem; color: var(--text-secondary); }
+.mn-dash .mn-prog__grouplabel {
+  margin-top: 12px; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.mn-dash .mn-prog__list--own { margin-top: 10px; }
 .mn-dash .mn-prog__toggle {
   margin-top: 12px;
   width: 100%;

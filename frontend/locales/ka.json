@@ -106,6 +106,8 @@
     "stageApproved": "დასრულებულია",
     "stageWith": "{role}-თან",
     "sections": "სექციები",
+    "yourSections": "თქვენი სექციები",
+    "otherSections": "სხვა სექციები",
     "historyToggle": "ისტორია",
     "noHistory": "ისტორია ჯერ არ არის",
     "loading": "იტვირთება…",

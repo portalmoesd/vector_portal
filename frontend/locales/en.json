@@ -106,6 +106,8 @@
     "stageApproved": "Approved",
     "stageWith": "With {role}",
     "sections": "Sections",
+    "yourSections": "Your sections",
+    "otherSections": "Other sections",
     "historyToggle": "History",
     "noHistory": "No history yet",
     "loading": "Loading…",
