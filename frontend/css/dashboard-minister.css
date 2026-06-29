@@ -583,19 +583,12 @@
 .mn-dash .mn-prog__item.is-expanded .mn-prog__steps {
   flex-basis: 100%; width: 100%;
   margin-left: 0; margin-top: 14px;
-  justify-content: center; align-items: flex-start; gap: 22px; flex-wrap: wrap;
+  justify-content: center; align-items: flex-start; gap: 16px; flex-wrap: wrap;
 }
 .mn-dash .mn-prog__item.is-expanded .mn-prog__step { flex-direction: column; gap: 7px; text-align: center; }
 .mn-dash .mn-prog__item.is-expanded .mn-prog__dot { width: 18px; height: 18px; }
 .mn-dash .mn-prog__item.is-expanded .mn-prog__dot.is-passed::after {
   content: "✓"; color: #fff; font-size: 10px; font-weight: 900; line-height: 1;
-}
-.mn-dash .mn-prog__item.is-expanded .mn-prog__steplabel {
-  display: block; max-width: 96px; font-size: 0.7rem; font-weight: 600;
-  color: var(--text-secondary); line-height: 1.2;
-}
-.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-open .mn-prog__steplabel {
-  color: var(--primary, #0a84ff); font-weight: 800;
 }
 
 /* Inline stage detail (expands under the stepper when a step is clicked) */
