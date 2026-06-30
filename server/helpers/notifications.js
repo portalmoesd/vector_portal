@@ -68,4 +68,20 @@ async function notifySectionTurn(db, { eventId, sectionId, holderRole, actorUser
   }
 }
 
-module.exports = { insertNotifications, notifyEventCreated, notifySectionTurn };
+// The user just acted on a section → clear their own "your turn" / "returned"
+// notification for it (so the attention dot disappears on any action path).
+async function markActorTurnRead(db, userId, eventId, sectionId) {
+  try {
+    if (!userId || !eventId || !sectionId) return;
+    await db.query(
+      `UPDATE notifications SET is_read = TRUE
+       WHERE user_id = $1 AND event_id = $2 AND section_id = $3
+         AND type IN ('your_turn', 'returned') AND is_read = FALSE`,
+      [userId, eventId, sectionId]
+    );
+  } catch (err) {
+    console.error('markActorTurnRead error:', err.message);
+  }
+}
+
+module.exports = { insertNotifications, notifyEventCreated, notifySectionTurn, markActorTurnRead };

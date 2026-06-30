@@ -37,14 +37,23 @@ router.get('/', requireAuth, async (req, res) => {
   }
 });
 
-// POST /api/notifications/read — mark one ({ id }) or, with no id, all as read.
+// POST /api/notifications/read — mark one ({ id }), all of an event's of a type
+// ({ eventId, type }), or, with no body, all as read.
 router.post('/read', requireAuth, async (req, res) => {
   try {
     const id = req.body && req.body.id;
+    const eventId = req.body && req.body.eventId;
+    const type = req.body && req.body.type;
     if (id) {
       await db.query(
         'UPDATE notifications SET is_read = TRUE WHERE id = $1 AND user_id = $2',
         [id, req.user.id]
+      );
+    } else if (eventId && type) {
+      await db.query(
+        `UPDATE notifications SET is_read = TRUE
+         WHERE user_id = $1 AND event_id = $2 AND type = $3 AND is_read = FALSE`,
+        [req.user.id, eventId, type]
       );
     } else {
       await db.query(

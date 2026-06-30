@@ -16,7 +16,7 @@ const {
   canPushSection,
   canPullSection,
 } = require('../helpers/pipeline');
-const { notifySectionTurn } = require('../helpers/notifications');
+const { notifySectionTurn, markActorTurnRead } = require('../helpers/notifications');
 
 const router = express.Router();
 
@@ -318,6 +318,7 @@ router.post('/submit', requireAuth, denyAnalyst, async (req, res) => {
       eventId, sectionId, actorUserId: req.user.id,
       holderRole: currentHolderRole(toStatus, origRole, null, ctx.chain),
     });
+    await markActorTurnRead(db, req.user.id, eventId, sectionId);
 
     res.json({ success: true, newStatus: toStatus });
   } catch (err) {
@@ -453,6 +454,7 @@ router.post('/approve', requireAuth, denyAnalyst, async (req, res) => {
       eventId, sectionId, actorUserId: req.user.id,
       holderRole: currentHolderRole(toStatus, ctx.originalSubmitterRole, null, ctx.chain),
     });
+    await markActorTurnRead(db, req.user.id, eventId, sectionId);
 
     res.json({ success: true, newStatus: toStatus });
   } catch (err) {
@@ -549,6 +551,7 @@ router.post('/return', requireAuth, denyAnalyst, async (req, res) => {
       eventId, sectionId, actorUserId: req.user.id,
       holderRole: returnTarget, type: 'returned',
     });
+    await markActorTurnRead(db, req.user.id, eventId, sectionId);
 
     res.json({ success: true, newStatus: toStatus, returnTargetRole: returnTarget });
   } catch (err) {
@@ -776,6 +779,7 @@ router.post('/push-section', requireAuth, denyAnalyst, async (req, res) => {
       eventId, sectionId, actorUserId: req.user.id,
       holderRole: currentHolderRole(toStatus, origRole, null, ctx.chain),
     });
+    await markActorTurnRead(db, req.user.id, eventId, sectionId);
 
     res.json({ success: true, newStatus: toStatus });
   } catch (err) {
