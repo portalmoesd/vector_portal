@@ -447,18 +447,26 @@
     // inside an already-expanded card's detail don't collapse it.
     listEl.querySelectorAll('.mn-card[data-event-id]').forEach(card => {
       card.addEventListener('click', (e) => {
-        if (e.target.closest('.mn-card__detail')) return;
+        if (e.target.closest('.mn-card__detail') || e.target.closest('.mn-card__close')) return;
         const id = card.dataset.eventId;
         select(String(id) === selectedId ? null : id);
       });
     });
 
-    // Expand the selected card in place: mark it, append a detail host, fill it.
+    // Expand the selected card in place: mark it, add a close button (top-right)
+    // and a detail host, then fill it.
     if (selectedId) {
       const card = listEl.querySelector(`.mn-card[data-event-id="${selectedId}"]`);
       const item = itemById(selectedId);
       if (card && item) {
         card.classList.add('is-expanded');
+        const closeBtn = document.createElement('button');
+        closeBtn.type = 'button';
+        closeBtn.className = 'mn-card__close';
+        closeBtn.setAttribute('aria-label', I18n.tr('common.close') || 'Close');
+        closeBtn.innerHTML = '&times;';
+        closeBtn.addEventListener('click', (e) => { e.stopPropagation(); select(null); });
+        card.appendChild(closeBtn);
         const host = document.createElement('div');
         host.className = 'mn-card__detail';
         card.appendChild(host);
@@ -527,26 +535,9 @@
   function fillCardDetail(item, detailEl) {
     if (!item || !detailEl) return;
 
-    const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
-    // In meetings the owner is the viewer themselves, so drop the owner chip.
-    const ownerChipName = localizedName(item.documentSubmitterName, item.documentSubmitterNameKa);
-    const ownerChip = (mode !== 'meetings' && ownerChipName)
-      ? `<span class="is-owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}">${ICON_PERSON}${escapeHtml(ownerChipName)}</span>`
-      : '';
-    const whenChip = item.eventDateTime
-      ? `<span>${escapeHtml(fmtEventWhen(item.eventDateTime))}</span>`
-      : '';
-
     if (item._ready) {
       detailEl.innerHTML = `
         <div class="mn-detail__panel">
-          <div class="mn-detail__meta">
-            ${ownerChip}
-            <span>${escapeHtml(country)}</span>
-            <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
-            ${whenChip}
-            ${item.endedAt ? `<span>${escapeHtml(I18n.tr('library.meta.completed'))} ${formatDate(item.endedAt)}</span>` : ''}
-          </div>
           <h4 class="mn-files__title">${escapeHtml(I18n.tr('dashboard.mainDocument'))}</h4>
           <div class="mn-card-actions">
             <button class="mn-pillbtn" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
@@ -564,15 +555,9 @@
     }
 
     // In progress: progress + brief + attachments (no published document yet).
-    const due = dueInfo(item.deadlineDate);
     detailEl.innerHTML = `
       <div class="mn-detail__panel">
-        <div class="mn-detail__meta">
-          ${ownerChip}
-          <span>${escapeHtml(country)}</span>
-          <span>${escapeHtml(languageLabel(item.language || 'EN'))}</span>
-          ${whenChip}
-          ${due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : ''}
+        <div class="mn-card-actions">
           <button class="mn-pillbtn mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
           ${canEdit ? `<button class="mn-pillbtn" data-act="editor">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.openInEditor'))}</span></button>` : ''}
         </div>
