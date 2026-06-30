@@ -564,7 +564,10 @@
 .mn-dash .mn-prog__barwrap { display: flex; align-items: center; gap: 10px; }
 .mn-dash .mn-prog__barwrap .mn-prog__bar { flex: 1 1 auto; margin: 0; }
 .mn-dash .mn-prog__barwrap .mn-prog__label { white-space: nowrap; }
-.mn-dash .mn-detail__progslot .mn-prog__summary { margin-top: 5px; }
+/* Summary sits on its own line below the bar/buttons row (so the buttons centre
+   on the bar, not on bar+summary). */
+.mn-dash .mn-detail__panel > .mn-prog__summary { margin-top: 8px; }
+.mn-dash .mn-detail__panel > .mn-prog__summary:empty { display: none; }
 
 .mn-dash .mn-prog {
   border: 1px solid var(--border-color);
@@ -591,7 +594,7 @@
 }
 .mn-dash .mn-prog__summary { font-size: 0.82rem; color: var(--text-secondary); }
 .mn-dash .mn-prog__grouplabel {
-  margin-top: 12px; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.04em;
+  margin-top: 12px; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.04em;
   text-transform: uppercase; color: var(--text-muted);
 }
 .mn-dash .mn-prog__list--own { margin-top: 10px; }
