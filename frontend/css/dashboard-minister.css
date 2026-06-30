@@ -552,6 +552,19 @@
 /* ── Progress (in-progress events) ─────────────────────────────────────────── */
 .mn-dash .mn-progress:empty { display: none; }
 .mn-dash .mn-progress { margin-top: 14px; }
+
+/* Top row of the expanded detail: document progress bar (left) + the Preview /
+   Open-in-editor buttons (right) share one line. */
+.mn-dash .mn-detail__topbar {
+  display: flex; align-items: center; justify-content: flex-end;
+  gap: 16px; flex-wrap: wrap;
+}
+.mn-dash .mn-detail__progslot { flex: 1 1 240px; min-width: 0; }
+.mn-dash .mn-detail__topbar .mn-card-actions { margin-top: 0; flex: 0 0 auto; }
+.mn-dash .mn-prog__barwrap { display: flex; align-items: center; gap: 10px; }
+.mn-dash .mn-prog__barwrap .mn-prog__bar { flex: 1 1 auto; margin: 0; }
+.mn-dash .mn-prog__barwrap .mn-prog__label { white-space: nowrap; }
+
 .mn-dash .mn-prog {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);

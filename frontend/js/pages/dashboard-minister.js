@@ -564,12 +564,16 @@
       return;
     }
 
-    // In progress: progress + brief + attachments (no published document yet).
+    // In progress: a top row with the document progress bar (left) + actions
+    // (right) on one line, then the sections list and attachments below.
     detailEl.innerHTML = `
       <div class="mn-detail__panel">
-        <div class="mn-card-actions">
-          <button class="mn-pillbtn mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
-          ${canEdit ? `<button class="mn-pillbtn" data-act="editor">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.openInEditor'))}</span></button>` : ''}
+        <div class="mn-detail__topbar">
+          <div class="mn-detail__progslot" id="mnProgBar"></div>
+          <div class="mn-card-actions">
+            <button class="mn-pillbtn mn-detail__preview" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
+            ${canEdit ? `<button class="mn-pillbtn" data-act="editor">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.openInEditor'))}</span></button>` : ''}
+          </div>
         </div>
         <div class="mn-progress" id="mnProgress"></div>
         <div class="mn-files-wrap" id="mnFiles"></div>
@@ -740,20 +744,25 @@
     const seesAll = seesAllSections(grid);
     // Likewise, "Open in editor" opens the whole-document editor — only offer it
     // to viewers who see all sections (others use the per-section edit links).
+    const panel = container.closest('.mn-detail__panel');
     if (!seesAll) {
-      const editBtn = container.closest('.mn-detail__panel')?.querySelector('[data-act="editor"]');
+      const editBtn = panel?.querySelector('[data-act="editor"]');
       if (editBtn) editBtn.remove();
+    }
+    // The total document progress bar sits in the top row (beside the action
+    // buttons); the sections list goes in this container below it.
+    const barSlot = panel?.querySelector('#mnProgBar');
+    if (barSlot) {
+      barSlot.innerHTML = seesAll ? `
+        <div class="mn-prog__barwrap">
+          <span class="mn-prog__label">${escapeHtml(I18n.tr('dashboard.progress'))}</span>
+          <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
+          <span class="mn-prog__pct">${overall}%</span>
+        </div>` : '';
     }
     container.innerHTML = `
       <div class="mn-prog">
-        ${seesAll ? `
-          <div class="mn-prog__top">
-            <span class="mn-prog__label">${escapeHtml(I18n.tr('dashboard.progress'))}</span>
-            <span class="mn-prog__pct">${overall}%</span>
-          </div>
-          <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
-          <div class="mn-prog__summary">${escapeHtml(summary)}</div>
-        ` : ''}
+        ${seesAll ? `<div class="mn-prog__summary">${escapeHtml(summary)}</div>` : ''}
         ${ownRows.length ? `
           ${otherRows.length ? `<div class="mn-prog__grouplabel">${escapeHtml(I18n.tr('dashboard.yourSections'))}</div>` : ''}
           <ul class="mn-prog__list mn-prog__list--own">${ownRows.map(progRowHtml).join('')}</ul>
