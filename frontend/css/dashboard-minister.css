@@ -783,6 +783,7 @@
 .mn-dash .mn-actbtn.is-ask     { color: #fff; background: var(--accent-red, #dc2626); }
 .mn-dash .mn-actbtn.is-push,
 .mn-dash .mn-actbtn.is-pull    { color: #7c3aed; background: rgba(124,58,237,0.12); border-color: rgba(124,58,237,0.22); }
+.mn-dash .mn-actbtn.is-open    { color: var(--text-primary); background: rgba(2,12,27,0.05); border-color: var(--border-color); text-decoration: none; }
 
 /* attachments list */
 .mn-dash .mn-files-wrap { margin-top: 18px; }
