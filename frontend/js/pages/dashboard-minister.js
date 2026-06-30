@@ -894,10 +894,11 @@
     const actedId = step && step.acted ? step.actorId : null;
     const statusKey = state === 'passed' ? 'dashboard.stageApproved'
       : state === 'current' ? 'dashboard.stageAwaiting' : 'dashboard.stagePending';
+    // Header: stage role title (left) + a colour-coded status pill (right).
     const head = `
       <div class="mn-stage__head">
-        <span class="mn-stage__status is-${state}">${escapeHtml(I18n.tr(statusKey))}</span>
         <span class="mn-stage__role">${escapeHtml(roleLabel(role))}</span>
+        <span class="mn-stage__status is-${state}"><span class="mn-stage__statusdot"></span>${escapeHtml(I18n.tr(statusKey))}</span>
       </div>`;
     const personRow = (name, dept, acted) => `
       <div class="mn-stage__person ${acted ? 'is-acted' : ''}">
@@ -909,17 +910,17 @@
         ${acted ? `<span class="mn-stage__acted">✓ ${escapeHtml(I18n.tr('dashboard.acted'))}</span>` : ''}
       </div>`;
 
-    let body;
+    let people;
     if (!users.length) {
-      body = (step && step.acted && step.actorName)
-        ? personRow(localizedName(step.actorName, step.actorNameKa), step.departmentName, true)
+      people = (step && step.acted && step.actorName)
+        ? `<div class="mn-stage__people">${personRow(localizedName(step.actorName, step.actorNameKa), step.departmentName, true)}</div>`
         : `<div class="mn-stage__empty">${escapeHtml(I18n.tr('dashboard.noEligibleUsers'))}</div>`;
     } else {
-      const label = `<div class="mn-stage__subhead">${escapeHtml(I18n.tr('dashboard.responsible'))}</div>`;
-      body = label + users.map(u =>
-        personRow(localizedName(u.fullName, u.fullNameKa), u.departmentName, actedId === u.id)).join('');
+      const subhead = `<div class="mn-stage__subhead">${escapeHtml(I18n.tr('dashboard.responsible'))} · ${users.length}</div>`;
+      people = `<div class="mn-stage__people">${subhead}${users.map(u =>
+        personRow(localizedName(u.fullName, u.fullNameKa), u.departmentName, actedId === u.id)).join('')}</div>`;
     }
-    return head + body;
+    return head + people;
   }
 
   // ── Quick section actions (ported from dashboard-pipeline.js) ───────────────
