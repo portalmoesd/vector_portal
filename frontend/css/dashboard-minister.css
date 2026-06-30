@@ -648,6 +648,7 @@
 }
 .mn-dash .mn-prog__step.is-open .mn-prog__dot { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
 .mn-dash .mn-prog__steplabel { display: none; }
+.mn-dash .mn-prog__num { display: none; }
 
 /* Collapsed: make the label + dot cluster read as one tappable control (pill + chevron). */
 .mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__status {
@@ -664,17 +665,51 @@
 .mn-dash .mn-prog__item.is-expanded .mn-prog__status { display: none; }
 .mn-dash .mn-prog__item.is-expanded .mn-prog__expand { display: none; }
 
-/* Pressing a step turns the dots row into a centered, labeled stepper below the
-   buttons (the static right-aligned dots are restored on collapse). */
+/* Pressing a step turns the dots row into a numbered stepper (circles + labels)
+   with a progress bar underneath — restored to static dots on collapse. */
 .mn-dash .mn-prog__item.is-expanded .mn-prog__steps {
   flex-basis: 100%; width: 100%;
-  margin-left: 0; margin-top: 14px;
-  justify-content: center; align-items: flex-start; gap: 16px; flex-wrap: wrap;
+  margin-left: 0; margin-top: 2px;
+  justify-content: space-between; align-items: flex-start; gap: 6px; flex-wrap: nowrap;
 }
-.mn-dash .mn-prog__item.is-expanded .mn-prog__step { flex-direction: column; gap: 7px; text-align: center; }
-.mn-dash .mn-prog__item.is-expanded .mn-prog__dot { width: 18px; height: 18px; }
-.mn-dash .mn-prog__item.is-expanded .mn-prog__dot.is-passed::after {
-  content: "✓"; color: #fff; font-size: 10px; font-weight: 900; line-height: 1;
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step {
+  flex: 1 1 0; min-width: 0;
+  flex-direction: column; align-items: center; gap: 9px; text-align: center;
+}
+/* Numbered circle. Upcoming = outlined; done/current = filled accent. */
+.mn-dash .mn-prog__item.is-expanded .mn-prog__dot {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--card, #fff); border: 2px solid var(--border-color);
+  color: var(--text-muted); font-size: 0.8rem; font-weight: 800; line-height: 1;
+}
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step:hover .mn-prog__dot { transform: none; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__num { display: inline; color: inherit; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__dot.is-passed,
+.mn-dash .mn-prog__item.is-expanded .mn-prog__dot.is-current {
+  background: var(--primary, #0a84ff); border-color: var(--primary, #0a84ff); color: #fff;
+}
+/* Selected (viewed) step gets a ring separated by a white gap. */
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-open .mn-prog__dot {
+  box-shadow: 0 0 0 2px var(--card, #fff), 0 0 0 4px var(--primary, #0a84ff);
+}
+/* Labels under each circle; active (done/current) ones read darker. */
+.mn-dash .mn-prog__item.is-expanded .mn-prog__steplabel {
+  display: block; font-size: 0.72rem; font-weight: 600; line-height: 1.2;
+  color: var(--text-muted); overflow-wrap: break-word; word-break: break-word;
+}
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-passed .mn-prog__steplabel,
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-current .mn-prog__steplabel {
+  color: var(--text-primary); font-weight: 700;
+}
+/* Progress bar under the stepper. */
+.mn-dash .mn-prog__track {
+  position: relative; width: 100%; height: 5px; margin-top: 14px;
+  border-radius: 99px; background: var(--border-color); overflow: hidden;
+}
+.mn-dash .mn-prog__track > span {
+  position: absolute; left: 0; top: 0; height: 100%;
+  background: var(--primary, #0a84ff); border-radius: 99px;
+  transition: width 0.3s ease;
 }
 
 /* Inline stage detail (expands under the stepper when a step is clicked) */

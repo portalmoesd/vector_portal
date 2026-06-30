@@ -692,7 +692,7 @@
       const actionsHtml = canEdit ? renderSectionActions(r.raw, eventId) : '';
       const dots = r.chain.map((role, i) => {
         const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
-        return `<button type="button" class="mn-prog__step" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
+        return `<button type="button" class="mn-prog__step ${st}" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"><span class="mn-prog__num">${i + 1}</span></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
       }).join('');
       return `
         <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
@@ -798,7 +798,17 @@
               <div class="mn-stage__stepper"></div>
               <div class="mn-stage__body"></div>
             </div>`;
-          detail.querySelector('.mn-stage__stepper').appendChild(steps); // move dots into the card
+          const stepperEl = detail.querySelector('.mn-stage__stepper');
+          stepperEl.appendChild(steps); // move the numbered steps into the card
+          // A progress bar under the steps, filled up to (and including) the
+          // section's current stage — mirrors the reference stepper design.
+          const total = row ? row.total : 0;
+          const fill = row && row.done ? 100
+            : (total > 0 ? Math.min(100, Math.round(((row.passed + 1) / total) * 100)) : 0);
+          const track = document.createElement('div');
+          track.className = 'mn-prog__track';
+          track.innerHTML = `<span style="width:${fill}%"></span>`;
+          stepperEl.appendChild(track);
           detail.querySelector('.mn-stage__close').addEventListener('click', collapse);
         }
         const role = stepBtn.dataset.stageRole;
