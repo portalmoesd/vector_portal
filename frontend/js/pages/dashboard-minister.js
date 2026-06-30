@@ -34,7 +34,6 @@
   const canCreateEvent = CAN_CREATE_EVENT.includes(user.role);
 
   const listEl = document.getElementById('cardList');
-  const detailEl = document.getElementById('eventDetail');
   const miniCalendarEl = document.getElementById('miniCalendar');
   const keywordEl = document.getElementById('filterKeyword');
   const toggleBtns = Array.from(document.querySelectorAll('.mn-toggle__btn'));
@@ -216,7 +215,6 @@
   function select(id) {
     selectedId = id == null ? null : String(id);
     renderList();
-    renderDetail();
   }
 
   // ── List cards (below the calendar): clickable ──────────────────────────────
@@ -433,7 +431,7 @@
   }
 
   function renderList() {
-    const items = getFiltered().filter(d => String(d.id) !== selectedId);
+    const items = getFiltered();
     if (items.length === 0) {
       const emptyKey = { completed: 'dashboard.noCompleted', upcoming: 'dashboard.noUpcoming',
         meetings: 'dashboard.noMeetings', tasks: 'dashboard.noTasks' }[mode] || 'dashboard.noUpcoming';
@@ -444,9 +442,29 @@
       <div class="mn-group"><span class="mn-group__label">${escapeHtml(g.label)}</span></div>
       ${g.items.map(listCardHtml).join('')}
     `).join('');
-    listEl.querySelectorAll('.dp-upcoming-event[data-event-id]').forEach(card => {
-      card.addEventListener('click', () => select(card.dataset.eventId));
+
+    // Clicking a card toggles its inline-expanded detail (accordion). Clicks
+    // inside an already-expanded card's detail don't collapse it.
+    listEl.querySelectorAll('.mn-card[data-event-id]').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('.mn-card__detail')) return;
+        const id = card.dataset.eventId;
+        select(String(id) === selectedId ? null : id);
+      });
     });
+
+    // Expand the selected card in place: mark it, append a detail host, fill it.
+    if (selectedId) {
+      const card = listEl.querySelector(`.mn-card[data-event-id="${selectedId}"]`);
+      const item = itemById(selectedId);
+      if (card && item) {
+        card.classList.add('is-expanded');
+        const host = document.createElement('div');
+        host.className = 'mn-card__detail';
+        card.appendChild(host);
+        fillCardDetail(item, host);
+      }
+    }
   }
 
   // ── Detail panel (right of the calendar): the expanded chosen event ─────────
@@ -457,19 +475,6 @@
   const ICON_DOWNLOAD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>';
   const ICON_EDIT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>';
 
-  function detailHeaderHtml(item, country) {
-    const code = (item.countryCode || '').toLowerCase();
-    const flag = code
-      ? `<span class="mn-detail__flag" title="${escapeHtml(country)}"><img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" onerror="this.closest('.mn-detail__flag').style.display='none'"></span>`
-      : '';
-    return `
-      <div class="mn-detail__head">
-        ${flag}
-        <h3 class="mn-detail__title">${escapeHtml(item.title)}</h3>
-        <button class="mn-detail__close" id="mnDetailClose" aria-label="Close">&times;</button>
-      </div>
-    `;
-  }
 
   // Load + render attachments inline: creation-time event files plus any
   // section files. Event files download via /api/events/:id/files/:fid;
@@ -516,12 +521,11 @@
     });
   }
 
-  function renderDetail() {
-    const item = selectedId ? itemById(selectedId) : null;
-    if (!item) {
-      detailEl.innerHTML = `<div class="mn-detail__placeholder">${escapeHtml(I18n.tr('dashboard.selectEventHint'))}</div>`;
-      return;
-    }
+  // Fill an expanded card's inline detail host with the chosen event's body
+  // (meta, actions, progress/brief, attachments). No title/flag header — the
+  // card summary above it already shows those; the card itself collapses on click.
+  function fillCardDetail(item, detailEl) {
+    if (!item || !detailEl) return;
 
     const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
     // In meetings the owner is the viewer themselves, so drop the owner chip.
@@ -536,7 +540,6 @@
     if (item._ready) {
       detailEl.innerHTML = `
         <div class="mn-detail__panel">
-          ${detailHeaderHtml(item, country)}
           <div class="mn-detail__meta">
             ${ownerChip}
             <span>${escapeHtml(country)}</span>
@@ -553,7 +556,6 @@
           <div class="mn-files-wrap" id="mnFiles"></div>
         </div>
       `;
-      detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
       detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => LibraryDoc.preview(item.id));
       detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
       detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
@@ -565,7 +567,6 @@
     const due = dueInfo(item.deadlineDate);
     detailEl.innerHTML = `
       <div class="mn-detail__panel">
-        ${detailHeaderHtml(item, country)}
         <div class="mn-detail__meta">
           ${ownerChip}
           <span>${escapeHtml(country)}</span>
@@ -580,7 +581,6 @@
         <div class="mn-files-wrap" id="mnFiles"></div>
       </div>
     `;
-    detailEl.querySelector('#mnDetailClose').addEventListener('click', () => select(null));
     detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => previewInProgress(item));
     if (canEdit) detailEl.querySelector('[data-act="editor"]').addEventListener('click', () => {
       window.location.href = `editor-all.html?event_id=${item.id}`;
@@ -1101,7 +1101,6 @@
     // hits an unexpected snag.
     renderCalendar(calendarDate);
     renderList();
-    renderDetail();
   }
 
   // ── Wire controls ────────────────────────────────────────────────────────────
@@ -1133,14 +1132,14 @@
     }
     setMode(targetMode);
     select(eventId);
-    if (detailEl && detailEl.scrollIntoView) detailEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const card = listEl.querySelector('.mn-card.is-expanded');
+    if (card && card.scrollIntoView) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return true;
   }
 
   keywordEl.addEventListener('input', () => {
     selectedId = null;
     renderList();
-    renderDetail();
   });
 
   renderAll();
@@ -1169,24 +1168,12 @@
     return `${Math.floor(h / 24)}d`;
   }
 
-  // The notification center and the create panel share a flex row below the hero.
-  function ensureTopRow() {
-    const hero = document.getElementById('mnHero');
-    if (!hero) return null;
-    let row = document.getElementById('mnTopRow');
-    if (!row) {
-      row = document.createElement('div');
-      row.id = 'mnTopRow';
-      row.className = 'mn-toprow';
-      hero.insertAdjacentElement('afterend', row);
-    }
-    return row;
-  }
-
+  // The create button and the notification center live in the overview side
+  // column (#mnSide), to the right of the calendar.
   let notifPanel, notifListEl, notifBadgeEl;
   function buildNotifPanel() {
-    const row = ensureTopRow();
-    if (!row) return;
+    const side = document.getElementById('mnSide');
+    if (!side) return;
     notifPanel = document.createElement('div');
     notifPanel.className = 'mn-notifs';
     notifPanel.hidden = true;
@@ -1196,7 +1183,7 @@
         <button type="button" class="mn-notifs__readall">${escapeHtml(I18n.tr('notif.markAllRead'))}</button>
       </div>
       <ul class="mn-notifs__list"></ul>`;
-    row.appendChild(notifPanel);
+    side.appendChild(notifPanel);
     notifListEl = notifPanel.querySelector('.mn-notifs__list');
     notifBadgeEl = notifPanel.querySelector('.mn-notifs__badge');
     notifPanel.querySelector('.mn-notifs__readall').addEventListener('click', async () => {
@@ -1233,54 +1220,32 @@
     try { renderNotifications(await Api.get('/api/notifications')); } catch (_) { /* keep silent */ }
   }
 
-  // ── Create-event panel (collapsible, right of the notification center) ──────
-  const ICON_CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
-  function buildCreatePanel() {
+  // ── Create-event button (top of the side column) → opens the create popup ───
+  function buildCreateButton() {
     if (!canCreateEvent || !window.EventCreate) return;
-    const row = ensureTopRow();
-    if (!row) return;
-    const panel = document.createElement('div');
-    panel.className = 'mn-create';
-    panel.innerHTML = `
-      <button type="button" class="mn-create__head">
-        <span class="mn-create__title">＋ ${escapeHtml(I18n.tr('dashboard.createEvent'))}</span>
-        <span class="mn-create__chev">${ICON_CHEV}</span>
-      </button>
-      <div class="mn-create__body" hidden></div>`;
-    row.appendChild(panel);
-
-    const head = panel.querySelector('.mn-create__head');
-    const body = panel.querySelector('.mn-create__body');
-    let mounted = false;
-    head.addEventListener('click', async () => {
-      const opening = panel.classList.toggle('is-open');
-      body.hidden = !opening;
-      if (opening && !mounted) {
-        mounted = true;
-        try {
-          await window.EventCreate.mount(body, {
-            onCreated: async () => {
-              // Refresh the in-preparation list and re-render, then collapse.
-              try {
-                const ev = await Api.get('/api/events');
-                upcoming = (ev || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
-              } catch (_) { /* keep old list */ }
-              renderAll();
-              panel.classList.remove('is-open');
-              body.hidden = true;
-            },
-            onClose: () => { /* keep the panel state; onCreated handles collapse */ },
-          });
-        } catch (err) {
-          mounted = false;
-          body.innerHTML = `<div class="mn-create__err">${escapeHtml(err.message || 'Failed to load form')}</div>`;
-        }
-      }
+    const side = document.getElementById('mnSide');
+    if (!side) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'mn-createbtn';
+    btn.innerHTML = `<span class="mn-createbtn__plus">＋</span><span>${escapeHtml(I18n.tr('dashboard.createEvent'))}</span>`;
+    side.insertBefore(btn, side.firstChild);
+    btn.addEventListener('click', () => {
+      window.EventCreate.open({
+        onCreated: async () => {
+          // Refresh the in-preparation list and re-render.
+          try {
+            const ev = await Api.get('/api/events');
+            upcoming = (ev || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
+          } catch (_) { /* keep old list */ }
+          renderAll();
+        },
+      });
     });
   }
 
+  buildCreateButton();
   buildNotifPanel();
-  buildCreatePanel();
   loadNotifications();
   setInterval(loadNotifications, 45000);
 })();
