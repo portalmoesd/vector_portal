@@ -809,7 +809,13 @@
           track.className = 'mn-prog__track';
           track.innerHTML = `<span style="width:${fill}%"></span>`;
           stepperEl.appendChild(track);
-          detail.querySelector('.mn-stage__close').addEventListener('click', collapse);
+          detail.querySelector('.mn-stage__close').addEventListener('click', (e) => {
+            // Stop the click reaching the event-card toggle: collapse() clears this
+            // detail node, detaching the ×, which would otherwise defeat the card's
+            // .mn-card__detail guard and collapse the whole card.
+            e.stopPropagation();
+            collapse();
+          });
         }
         const role = stepBtn.dataset.stageRole;
         const idx = parseInt(stepBtn.dataset.stageIdx, 10);
