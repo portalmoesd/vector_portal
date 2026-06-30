@@ -29,6 +29,9 @@
   const OWNER_ROLES = ['MINISTER', 'DEPUTY', 'SUPERVISOR'];
   const isOwner = OWNER_ROLES.includes(user.role);
   const isMinister = user.role === 'MINISTER';
+  // Roles that may create events from the dashboard (the collapsible create panel).
+  const CAN_CREATE_EVENT = ['DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
+  const canCreateEvent = CAN_CREATE_EVENT.includes(user.role);
 
   const listEl = document.getElementById('cardList');
   const detailEl = document.getElementById('eventDetail');
@@ -1166,10 +1169,24 @@
     return `${Math.floor(h / 24)}d`;
   }
 
+  // The notification center and the create panel share a flex row below the hero.
+  function ensureTopRow() {
+    const hero = document.getElementById('mnHero');
+    if (!hero) return null;
+    let row = document.getElementById('mnTopRow');
+    if (!row) {
+      row = document.createElement('div');
+      row.id = 'mnTopRow';
+      row.className = 'mn-toprow';
+      hero.insertAdjacentElement('afterend', row);
+    }
+    return row;
+  }
+
   let notifPanel, notifListEl, notifBadgeEl;
   function buildNotifPanel() {
-    const hero = document.getElementById('mnHero');
-    if (!hero) return;
+    const row = ensureTopRow();
+    if (!row) return;
     notifPanel = document.createElement('div');
     notifPanel.className = 'mn-notifs';
     notifPanel.hidden = true;
@@ -1179,7 +1196,7 @@
         <button type="button" class="mn-notifs__readall">${escapeHtml(I18n.tr('notif.markAllRead'))}</button>
       </div>
       <ul class="mn-notifs__list"></ul>`;
-    hero.insertAdjacentElement('afterend', notifPanel);
+    row.appendChild(notifPanel);
     notifListEl = notifPanel.querySelector('.mn-notifs__list');
     notifBadgeEl = notifPanel.querySelector('.mn-notifs__badge');
     notifPanel.querySelector('.mn-notifs__readall').addEventListener('click', async () => {
@@ -1216,7 +1233,54 @@
     try { renderNotifications(await Api.get('/api/notifications')); } catch (_) { /* keep silent */ }
   }
 
+  // ── Create-event panel (collapsible, right of the notification center) ──────
+  const ICON_CHEV = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>';
+  function buildCreatePanel() {
+    if (!canCreateEvent || !window.EventCreate) return;
+    const row = ensureTopRow();
+    if (!row) return;
+    const panel = document.createElement('div');
+    panel.className = 'mn-create';
+    panel.innerHTML = `
+      <button type="button" class="mn-create__head">
+        <span class="mn-create__title">＋ ${escapeHtml(I18n.tr('dashboard.createEvent'))}</span>
+        <span class="mn-create__chev">${ICON_CHEV}</span>
+      </button>
+      <div class="mn-create__body" hidden></div>`;
+    row.appendChild(panel);
+
+    const head = panel.querySelector('.mn-create__head');
+    const body = panel.querySelector('.mn-create__body');
+    let mounted = false;
+    head.addEventListener('click', async () => {
+      const opening = panel.classList.toggle('is-open');
+      body.hidden = !opening;
+      if (opening && !mounted) {
+        mounted = true;
+        try {
+          await window.EventCreate.mount(body, {
+            onCreated: async () => {
+              // Refresh the in-preparation list and re-render, then collapse.
+              try {
+                const ev = await Api.get('/api/events');
+                upcoming = (ev || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
+              } catch (_) { /* keep old list */ }
+              renderAll();
+              panel.classList.remove('is-open');
+              body.hidden = true;
+            },
+            onClose: () => { /* keep the panel state; onCreated handles collapse */ },
+          });
+        } catch (err) {
+          mounted = false;
+          body.innerHTML = `<div class="mn-create__err">${escapeHtml(err.message || 'Failed to load form')}</div>`;
+        }
+      }
+    });
+  }
+
   buildNotifPanel();
+  buildCreatePanel();
   loadNotifications();
   setInterval(loadNotifications, 45000);
 })();

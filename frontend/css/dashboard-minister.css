@@ -283,6 +283,39 @@
 .mn-dash .mn-chip--ready { color: var(--accent-green, #16a34a); background: rgba(22,163,74,0.12); }
 .mn-dash .mn-chip--prep { color: var(--accent-orange, #f97316); background: rgba(249,115,22,0.12); }
 
+/* ── Top row: notification center (left) + create panel (right) ─────────── */
+.mn-dash .mn-toprow {
+  display: flex; align-items: flex-start; gap: 18px; margin: 0 0 18px;
+}
+.mn-dash .mn-toprow .mn-notifs { flex: 1 1 auto; min-width: 0; margin: 0; }
+
+/* ── Create-event panel (collapsible) ───────────────────────────────────── */
+.mn-dash .mn-create {
+  flex: 0 0 420px; align-self: flex-start; margin-left: auto;
+  background: var(--card, #fff); border: 1px solid var(--border, rgba(2,12,27,0.08));
+  border-radius: 16px; box-shadow: var(--shadow, 0 6px 20px rgba(2,12,27,0.06));
+  overflow: hidden;
+}
+.mn-dash .mn-create__head {
+  width: 100%; display: flex; align-items: center; justify-content: space-between;
+  gap: 10px; padding: 14px 18px; border: 0; background: none; cursor: pointer;
+  font-weight: 800; color: var(--text-primary); text-align: left;
+}
+.mn-dash .mn-create__head:hover { background: rgba(10,132,255,0.05); }
+.mn-dash .mn-create__title { display: inline-flex; align-items: center; gap: 6px; }
+.mn-dash .mn-create__chev { display: inline-flex; color: var(--text-muted); transition: transform 0.2s ease; }
+.mn-dash .mn-create__chev svg { width: 18px; height: 18px; }
+.mn-dash .mn-create.is-open .mn-create__chev { transform: rotate(180deg); }
+.mn-dash .mn-create__body { padding: 4px 18px 18px; border-top: 1px solid var(--border-color); }
+/* The panel is narrow — render the form single-column. */
+.mn-dash .mn-create .ec-form-grid { grid-template-columns: 1fr !important; }
+.mn-dash .mn-create__err { padding: 10px; color: var(--accent-orange, #f97316); font-size: 0.85rem; }
+
+@media (max-width: 900px) {
+  .mn-dash .mn-toprow { flex-direction: column; }
+  .mn-dash .mn-create { flex: 1 1 auto; width: 100%; margin-left: 0; }
+}
+
 /* ── Notifications panel (injected below the hero) ───────────────────────── */
 .mn-dash .mn-notifs {
   background: var(--card, #fff); border: 1px solid var(--border, rgba(2,12,27,0.08));
