@@ -698,9 +698,7 @@
         <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
           <div class="mn-prog__row">
             <div class="mn-prog__rowmain">
-              ${canEdit
-                ? `<a class="mn-prog__title mn-prog__title--link" href="editor.html?event_id=${eventId}&section_id=${r.sectionId}">${escapeHtml(r.title)}</a>`
-                : `<span class="mn-prog__title">${escapeHtml(r.title)}</span>`}
+              <span class="mn-prog__title">${escapeHtml(r.title)}</span>
               ${actionsHtml ? `<div class="mn-prog__actionrow">${actionsHtml}</div>` : ''}
             </div>
             <div class="mn-prog__status">
@@ -934,6 +932,9 @@
     const isHolder = effRole === holder;
     const status = s.status || 'draft';
     const btns = [];
+    // Always offer Open — navigates to the single-section editor (which
+    // re-enforces edit/read permissions per role).
+    btns.push(`<a class="mn-actbtn is-open" href="editor.html?event_id=${eventId}&section_id=${s.sectionId}">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.actionOpen'))}</span></a>`);
     if (isHolder) {
       if (status === 'draft' || status.startsWith('returned_')) {
         btns.push(actBtn('submit', 'dashboard.actionSubmit', ACT_ICONS.submit, 'is-submit'));
