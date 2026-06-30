@@ -647,6 +647,8 @@
   box-shadow: 0 0 0 3px rgba(249,115,22,0.18);
 }
 .mn-dash .mn-prog__step.is-open .mn-prog__dot { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
+/* Skipped (bypassed) stages read faded (collapsed dots). */
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__dot.is-skipped { opacity: 0.4; }
 .mn-dash .mn-prog__steplabel { display: none; }
 .mn-dash .mn-prog__num { display: none; }
 
@@ -689,11 +691,14 @@
   background: var(--accent-green, #16a34a); border-color: var(--accent-green, #16a34a); color: #fff;
 }
 .mn-dash .mn-prog__item.is-expanded .mn-prog__dot.is-current {
-  background: var(--primary, #0a84ff); border-color: var(--primary, #0a84ff); color: #fff;
+  background: var(--accent-orange, #f97316); border-color: var(--accent-orange, #f97316); color: #fff;
 }
+/* Skipped (bypassed) stages read faded — the outlined circle + label together. */
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-skipped { opacity: 0.45; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-skipped.is-open { opacity: 1; }
 /* Selected (viewed) step gets a ring separated by a white gap. */
 .mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-open .mn-prog__dot {
-  box-shadow: 0 0 0 3px var(--card, #fff), 0 0 0 5px var(--primary, #0a84ff);
+  box-shadow: 0 0 0 3px var(--card, #fff), 0 0 0 5px var(--accent-orange, #f97316);
 }
 /* Labels under each circle (clamped to 2 lines); active ones read darker. */
 .mn-dash .mn-prog__item.is-expanded .mn-prog__steplabel {
@@ -705,16 +710,17 @@
 .mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-current .mn-prog__steplabel {
   color: var(--text-primary); font-weight: 700;
 }
-/* Progress bar under the stepper. */
+/* Progress bar under the stepper — one segment per stage, coloured to match the
+   dot above it (green = passed, orange = current, faded = skipped, grey = pending). */
 .mn-dash .mn-prog__track {
-  position: relative; width: 100%; height: 4px; margin-top: 12px;
+  display: flex; width: 100%; height: 4px; margin-top: 12px;
   border-radius: 99px; background: var(--border-color); overflow: hidden;
 }
-.mn-dash .mn-prog__track > span {
-  position: absolute; left: 0; top: 0; height: 100%;
-  background: var(--accent-green, #16a34a); border-radius: 99px;
-  transition: width 0.3s ease;
-}
+.mn-dash .mn-prog__seg { flex: 1 1 0; height: 100%; transition: background 0.3s ease; }
+.mn-dash .mn-prog__seg.is-passed { background: var(--accent-green, #16a34a); }
+.mn-dash .mn-prog__seg.is-current { background: var(--accent-orange, #f97316); }
+.mn-dash .mn-prog__seg.is-skipped { background: rgba(2,12,27,0.15); }
+.mn-dash .mn-prog__seg.is-pending { background: transparent; }
 
 /* Inline stage detail (expands under the stepper when a step is clicked) */
 .mn-dash .mn-stage-detail { margin-top: 12px; }
