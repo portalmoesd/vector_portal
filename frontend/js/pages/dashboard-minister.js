@@ -725,6 +725,12 @@
     // section; for users limited to their own sections it would report a
     // misleading partial total, so hide it for them.
     const seesAll = seesAllSections(grid);
+    // Likewise, "Open in editor" opens the whole-document editor — only offer it
+    // to viewers who see all sections (others use the per-section edit links).
+    if (!seesAll) {
+      const editBtn = container.closest('.mn-detail__panel')?.querySelector('[data-act="editor"]');
+      if (editBtn) editBtn.remove();
+    }
     container.innerHTML = `
       <div class="mn-prog">
         ${seesAll ? `
