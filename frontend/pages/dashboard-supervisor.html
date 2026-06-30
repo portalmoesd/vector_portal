@@ -30,6 +30,11 @@
         </div>
       </div>
 
+      <div class="mn-overview">
+        <div class="dp-calendar mn-overview__cal" id="miniCalendar"></div>
+        <div class="mn-overview__side" id="mnSide"></div>
+      </div>
+
       <div class="card mn-workspace">
         <div class="mn-toolbar">
           <div class="mn-toggle" role="tablist">
@@ -42,16 +47,9 @@
             <input class="form-input" id="filterKeyword" data-i18n-placeholder="dashboard.searchPlaceholder" placeholder="Search by title or country..." />
           </div>
         </div>
-        <div class="mn-top">
-          <div class="dp-calendar" id="miniCalendar"></div>
-          <div class="mn-detail" id="eventDetail">
-            <div class="mn-detail__placeholder" data-i18n="dashboard.selectEventHint">Select an event to view its details</div>
-          </div>
+        <div class="mn-list" id="cardList">
+          <div class="empty-state"><p data-i18n="dashboard.noCompleted">No completed documents</p></div>
         </div>
-      </div>
-
-      <div class="mn-list" id="cardList">
-        <div class="empty-state"><p data-i18n="dashboard.noCompleted">No completed documents</p></div>
       </div>
     </main>
   </div>
