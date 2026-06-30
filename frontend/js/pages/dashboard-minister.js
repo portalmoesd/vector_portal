@@ -813,14 +813,19 @@
             </div>`;
           const stepperEl = detail.querySelector('.mn-stage__stepper');
           stepperEl.appendChild(steps); // move the numbered steps into the card
-          // A progress bar under the steps, filled up to (and including) the
-          // section's current stage — mirrors the reference stepper design.
-          const total = row ? row.total : 0;
-          const fill = row && row.done ? 100
-            : (total > 0 ? Math.min(100, Math.round(((row.passed + 1) / total) * 100)) : 0);
+          // Progress bar: one segment per stage, coloured to match the dot above it
+          // (green = passed, orange = current, faded = skipped, grey = pending).
+          const trackChain = row && Array.isArray(row.chain) ? row.chain : [];
+          const trackSteps = row && Array.isArray(row.raw.steps) ? row.raw.steps : [];
+          const segs = trackChain.map((role, i) => {
+            const cls = i < row.passed
+              ? ((trackSteps[i] && trackSteps[i].acted) ? 'is-passed' : 'is-skipped')
+              : (i === row.passed && !row.done ? 'is-current' : 'is-pending');
+            return `<span class="mn-prog__seg ${cls}"></span>`;
+          }).join('');
           const track = document.createElement('div');
           track.className = 'mn-prog__track';
-          track.innerHTML = `<span style="width:${fill}%"></span>`;
+          track.innerHTML = segs;
           stepperEl.appendChild(track);
           detail.querySelector('.mn-stage__close').addEventListener('click', (e) => {
             // Stop the click reaching the event-card toggle: collapse() clears this
