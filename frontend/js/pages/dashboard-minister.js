@@ -575,6 +575,7 @@
             ${canEdit ? `<button class="mn-pillbtn" data-act="editor">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.openInEditor'))}</span></button>` : ''}
           </div>
         </div>
+        <div class="mn-prog__summary" id="mnProgSummary"></div>
         <div class="mn-progress" id="mnProgress"></div>
         <div class="mn-files-wrap" id="mnFiles"></div>
       </div>
@@ -758,9 +759,10 @@
           <span class="mn-prog__label">${escapeHtml(I18n.tr('dashboard.progress'))}</span>
           <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
           <span class="mn-prog__pct">${overall}%</span>
-        </div>
-        <div class="mn-prog__summary">${escapeHtml(summary)}</div>` : '';
+        </div>` : '';
     }
+    const summarySlot = panel?.querySelector('#mnProgSummary');
+    if (summarySlot) summarySlot.textContent = seesAll ? summary : '';
     container.innerHTML = `
       <div class="mn-prog">
         ${ownRows.length ? `
@@ -935,7 +937,8 @@
         ? `<div class="mn-stage__people">${personRow(localizedName(step.actorName, step.actorNameKa), step.departmentName, true)}</div>`
         : `<div class="mn-stage__empty">${escapeHtml(I18n.tr('dashboard.noEligibleUsers'))}</div>`;
     } else {
-      const subhead = `<div class="mn-stage__subhead">${escapeHtml(I18n.tr('dashboard.responsible'))} · ${users.length}</div>`;
+      // Only show a count when there are multiple (a curator stage is always one).
+      const subhead = `<div class="mn-stage__subhead">${escapeHtml(I18n.tr('dashboard.responsible'))}${users.length > 1 ? ` · ${users.length}` : ''}</div>`;
       people = `<div class="mn-stage__people">${subhead}${users.map(u =>
         personRow(localizedName(u.fullName, u.fullNameKa), u.departmentName, actedId === u.id)).join('')}</div>`;
     }
