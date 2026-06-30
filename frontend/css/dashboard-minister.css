@@ -258,6 +258,7 @@
   color: var(--text-muted); white-space: nowrap;
 }
 .mn-dash .mn-list .mn-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -269,6 +270,13 @@
   -webkit-backdrop-filter: blur(12px);
   box-shadow: var(--shadow-sm);
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+/* iOS-style red attention dot, top-right of a card. */
+.mn-dash .mn-card__attn {
+  position: absolute; top: 12px; right: 14px; z-index: 2;
+  width: 11px; height: 11px; border-radius: 50%;
+  background: var(--accent-red, #dc2626);
+  box-shadow: 0 0 0 2px var(--card, #fff), 0 1px 3px rgba(220,38,38,0.5);
 }
 .mn-dash .mn-list .mn-card:hover {
   transform: translateY(-3px);
@@ -619,6 +627,13 @@
 .mn-dash .mn-prog__item:first-child { border-top: none; padding-top: 0; }
 .mn-dash .mn-prog__row { display: flex; align-items: stretch; justify-content: space-between; gap: 14px; }
 .mn-dash .mn-prog__rowmain { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 10px; }
+.mn-dash .mn-prog__titlerow { display: flex; align-items: center; gap: 8px; min-width: 0; }
+/* Red attention dot: it's the user's turn on this section. */
+.mn-dash .mn-prog__attn {
+  flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%;
+  background: var(--accent-red, #dc2626);
+  box-shadow: 0 0 0 2px rgba(220,38,38,0.18);
+}
 .mn-dash .mn-prog__title {
   font-size: 0.9rem; font-weight: 600; color: var(--text-primary);
   min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;

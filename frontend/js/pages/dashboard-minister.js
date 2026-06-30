@@ -68,6 +68,10 @@
   }
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
+  // Attention dots (iOS-style): events that are new or your-turn → card dot; the
+  // new-event subset clears when the card is opened. Derived from notifications.
+  let attnEvents = new Set();
+  let newEventIds = new Set();
 
   // ── Georgian date names ─────────────────────────────────────────────────────
   // Browser Intl 'ka' data is inconsistent across environments, so localize
@@ -224,6 +228,13 @@
 
   function select(id) {
     selectedId = id == null ? null : String(id);
+    // Opening a card clears its "new event" dot (the your-turn dot persists until
+    // the action is done). Mark read server-side, then refresh dots — the reload
+    // keeps the dot only if an unread your_turn/returned remains for the event.
+    if (selectedId && newEventIds.has(selectedId)) {
+      Api.post('/api/notifications/read', { eventId: parseInt(selectedId, 10), type: 'event_created' })
+        .then(loadNotifications).catch(() => {});
+    }
     renderList();
   }
 
@@ -312,8 +323,10 @@
       meta = `${dueHtml}${escapeHtml(lang)}`;
     }
 
+    const attn = attnEvents.has(String(d.id)) ? '<span class="mn-card__attn" aria-label="Needs your attention"></span>' : '';
     return `
       <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}">
+        ${attn}
         <div class="mn-card__head">
           <span class="mn-card__flag" title="${escapeHtml(country)}">${flag}</span>
           <h4 class="mn-card__title">${escapeHtml(d.title)}</h4>
@@ -718,7 +731,10 @@
         <li class="mn-prog__item ${r.done ? 'is-done' : ''}" data-section-id="${r.sectionId}">
           <div class="mn-prog__row">
             <div class="mn-prog__rowmain">
-              <span class="mn-prog__title">${escapeHtml(r.title)}</span>
+              <div class="mn-prog__titlerow">
+                ${sectionIsMyTurn(r.raw) ? '<span class="mn-prog__attn" aria-label="Your turn"></span>' : ''}
+                <span class="mn-prog__title">${escapeHtml(r.title)}</span>
+              </div>
               ${actionsHtml ? `<div class="mn-prog__actionrow">${actionsHtml}</div>` : ''}
             </div>
             <div class="mn-prog__status">
@@ -957,6 +973,17 @@
     return `<button type="button" class="mn-actbtn ${cls}" data-action="${action}">${icon}<span>${escapeHtml(I18n.tr(labelKey))}</span></button>`;
   }
 
+  // It's the user's turn on a section when they hold it with a pending action
+  // (Submit a draft/returned section, or Approve one submitted to them) — the same
+  // condition that surfaces the Submit/Approve buttons. Drives the section red dot.
+  function sectionIsMyTurn(s) {
+    if (!canEdit || !s) return false;
+    const effRole = s.userEffectiveRole || user.role;
+    if (effRole !== s.currentHolderRole) return false;
+    const status = s.status || 'draft';
+    return status === 'draft' || status.startsWith('returned_') || status === `submitted_to_${effRole.toLowerCase()}`;
+  }
+
   // Which quick buttons a section offers the current user — same per-status logic
   // as the old pipeline dashboard. The server re-enforces every action.
   function renderSectionActions(s, eventId) {
@@ -1043,6 +1070,9 @@
             if (newList) newList.removeAttribute('hidden');
             if (newToggle) newToggle.setAttribute('aria-expanded', 'true');
           }
+          // The backend cleared the actor's turn notification — refresh the card
+          // dot (re-renders the list only if the attention set actually changed).
+          loadNotifications();
         } catch (err) {
           toast.error(err.message);
         }
@@ -1263,6 +1293,17 @@
   function renderNotifications(data) {
     if (!notifPanel) return;
     const list = (data && data.notifications) || [];
+    // Recompute the card attention dots (event needs the user's attention).
+    // Only re-render the card list when the set actually changes, so the ~45s
+    // poll doesn't disrupt an expanded card.
+    const ATTN = ['event_created', 'your_turn', 'returned'];
+    const unreadList = list.filter(n => !n.isRead && n.eventId);
+    const nextAttn = new Set(unreadList.filter(n => ATTN.includes(n.type)).map(n => String(n.eventId)));
+    const setKey = (s) => [...s].sort().join(',');
+    const changed = setKey(nextAttn) !== setKey(attnEvents);
+    attnEvents = nextAttn;
+    newEventIds = new Set(unreadList.filter(n => n.type === 'event_created').map(n => String(n.eventId)));
+    if (changed) renderList();
     if (!list.length) { notifPanel.hidden = true; return; }
     notifPanel.hidden = false;
     const unread = (data && data.unreadCount) || 0;
