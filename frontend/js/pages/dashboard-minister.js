@@ -758,11 +758,11 @@
           <span class="mn-prog__label">${escapeHtml(I18n.tr('dashboard.progress'))}</span>
           <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
           <span class="mn-prog__pct">${overall}%</span>
-        </div>` : '';
+        </div>
+        <div class="mn-prog__summary">${escapeHtml(summary)}</div>` : '';
     }
     container.innerHTML = `
       <div class="mn-prog">
-        ${seesAll ? `<div class="mn-prog__summary">${escapeHtml(summary)}</div>` : ''}
         ${ownRows.length ? `
           ${otherRows.length ? `<div class="mn-prog__grouplabel">${escapeHtml(I18n.tr('dashboard.yourSections'))}</div>` : ''}
           <ul class="mn-prog__list mn-prog__list--own">${ownRows.map(progRowHtml).join('')}</ul>

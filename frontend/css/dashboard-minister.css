@@ -564,6 +564,7 @@
 .mn-dash .mn-prog__barwrap { display: flex; align-items: center; gap: 10px; }
 .mn-dash .mn-prog__barwrap .mn-prog__bar { flex: 1 1 auto; margin: 0; }
 .mn-dash .mn-prog__barwrap .mn-prog__label { white-space: nowrap; }
+.mn-dash .mn-detail__progslot .mn-prog__summary { margin-top: 5px; }
 
 .mn-dash .mn-prog {
   border: 1px solid var(--border-color);
