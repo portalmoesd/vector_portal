@@ -346,13 +346,6 @@
   margin-top: 14px;
   cursor: default;
 }
-/* Wrap the buttons + the info below them into one grouped container. */
-.mn-dash .mn-card__detail .mn-detail__panel {
-  background: rgba(2,12,27,0.02);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 14px 16px;
-}
 .mn-dash .mn-card__detail .mn-detail__panel > :first-child { margin-top: 0; }
 /* Close (collapse) button, top-right of the expanded card. */
 .mn-dash .mn-card__close {
