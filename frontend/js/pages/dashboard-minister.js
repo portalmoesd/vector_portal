@@ -43,7 +43,8 @@
   //  - owner roles: 'meetings' (events they own, keyed by meeting date/time, with
   //    a readiness chip) and 'tasks' (events they only contribute to);
   //  - worker roles: 'completed' | 'upcoming' (unchanged).
-  let mode = isOwner ? 'meetings' : 'completed';
+  // Worker roles land on the In-Progress view first; owners default to meetings.
+  let mode = isOwner ? 'meetings' : 'upcoming';
 
   // Relabel the segmented toggle for owner roles; the Minister has only meetings.
   if (isOwner) {
@@ -54,6 +55,15 @@
     if (isMinister) {
       const wrap = document.querySelector('.mn-toggle');
       if (wrap) wrap.style.display = 'none'; // meetings only — no toggle
+    }
+  } else {
+    // Put "In Progress" first and make it the active default tab.
+    const tc = document.getElementById('toggleCompleted');
+    const tu = document.getElementById('toggleUpcoming');
+    if (tc && tu && tu.parentElement) {
+      tu.parentElement.insertBefore(tu, tc); // In Progress before Completed
+      tc.classList.remove('is-active');
+      tu.classList.add('is-active');
     }
   }
   let calendarDate = new Date();
