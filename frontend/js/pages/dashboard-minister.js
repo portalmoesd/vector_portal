@@ -562,7 +562,6 @@
           ${canEdit ? `<button class="mn-pillbtn" data-act="editor">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.openInEditor'))}</span></button>` : ''}
         </div>
         <div class="mn-progress" id="mnProgress"></div>
-        ${item.occasion ? `<div class="mn-brief">${item.occasion}</div>` : ''}
         <div class="mn-files-wrap" id="mnFiles"></div>
       </div>
     `;
