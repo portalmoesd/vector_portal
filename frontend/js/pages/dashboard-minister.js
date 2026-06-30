@@ -589,16 +589,20 @@
     return false;
   }
 
+  // True when the viewer can see the whole document (every section): the document
+  // submitter/owner (incl. Minister, always DS on their events), the responsible
+  // deputy, or a supervisor linked to the owner deputy who also participates here.
+  function seesAllSections(grid) {
+    if (!grid) return false;
+    if (grid.documentSubmitterId === user.id) return true;
+    if (grid.deputyId && grid.deputyId === user.id) return true;
+    const own = (grid.sections || []).filter(isOwnSection);
+    return !!(grid.viewerLinkedToOwnerDeputy && own.length > 0);
+  }
+
   function visibleSectionsFor(grid) {
     const all = (grid && grid.sections) || [];
-    const isDS = grid && grid.documentSubmitterId === user.id;
-    const isResponsibleDeputy = grid && grid.deputyId && grid.deputyId === user.id;
-    if (isDS || isResponsibleDeputy) return all;
-    const own = all.filter(isOwnSection);
-    // A supervisor linked to the owner deputy who also participates in this
-    // document (has at least one own section) sees the whole document.
-    if (grid && grid.viewerLinkedToOwnerDeputy && own.length > 0) return all;
-    return own;
+    return seesAllSections(grid) ? all : all.filter(isOwnSection);
   }
 
   // Build the all-sections preview for an in-progress event from live workflow
@@ -717,14 +721,20 @@
     const otherRows = rows.filter(r => !isOwnSection(r.raw));
     const otherLabel = ownRows.length ? 'dashboard.otherSections' : 'dashboard.sections';
 
+    // The total document progress only makes sense to viewers who see every
+    // section; for users limited to their own sections it would report a
+    // misleading partial total, so hide it for them.
+    const seesAll = seesAllSections(grid);
     container.innerHTML = `
       <div class="mn-prog">
-        <div class="mn-prog__top">
-          <span class="mn-prog__label">${escapeHtml(I18n.tr('dashboard.progress'))}</span>
-          <span class="mn-prog__pct">${overall}%</span>
-        </div>
-        <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
-        <div class="mn-prog__summary">${escapeHtml(summary)}</div>
+        ${seesAll ? `
+          <div class="mn-prog__top">
+            <span class="mn-prog__label">${escapeHtml(I18n.tr('dashboard.progress'))}</span>
+            <span class="mn-prog__pct">${overall}%</span>
+          </div>
+          <div class="mn-prog__bar"><span style="width:${overall}%"></span></div>
+          <div class="mn-prog__summary">${escapeHtml(summary)}</div>
+        ` : ''}
         ${ownRows.length ? `
           ${otherRows.length ? `<div class="mn-prog__grouplabel">${escapeHtml(I18n.tr('dashboard.yourSections'))}</div>` : ''}
           <ul class="mn-prog__list mn-prog__list--own">${ownRows.map(progRowHtml).join('')}</ul>
