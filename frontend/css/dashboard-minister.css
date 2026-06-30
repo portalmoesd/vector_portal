@@ -287,9 +287,9 @@
 .mn-dash .mn-overview {
   display: flex; align-items: flex-start; gap: 20px; margin: 0 0 18px;
 }
-.mn-dash .mn-overview__cal { flex: 0 0 320px; align-self: flex-start; }
+.mn-dash .mn-overview__cal { flex: 1 1 0; min-width: 0; align-self: flex-start; }
 .mn-dash .mn-overview__side {
-  flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 14px;
+  flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 14px;
 }
 .mn-dash .mn-overview__side .mn-notifs { margin: 0; }
 
