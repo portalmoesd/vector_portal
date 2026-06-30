@@ -647,6 +647,8 @@
   box-shadow: 0 0 0 3px rgba(249,115,22,0.18);
 }
 .mn-dash .mn-prog__step.is-open .mn-prog__dot { box-shadow: 0 0 0 3px rgba(10,132,255,0.35); }
+/* Skipped (bypassed) stages read faded (collapsed dots). */
+.mn-dash .mn-prog__item:not(.is-expanded) .mn-prog__dot.is-skipped { opacity: 0.4; }
 .mn-dash .mn-prog__steplabel { display: none; }
 .mn-dash .mn-prog__num { display: none; }
 
@@ -691,6 +693,9 @@
 .mn-dash .mn-prog__item.is-expanded .mn-prog__dot.is-current {
   background: var(--primary, #0a84ff); border-color: var(--primary, #0a84ff); color: #fff;
 }
+/* Skipped (bypassed) stages read faded — the outlined circle + label together. */
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-skipped { opacity: 0.45; }
+.mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-skipped.is-open { opacity: 1; }
 /* Selected (viewed) step gets a ring separated by a white gap. */
 .mn-dash .mn-prog__item.is-expanded .mn-prog__step.is-open .mn-prog__dot {
   box-shadow: 0 0 0 3px var(--card, #fff), 0 0 0 5px var(--primary, #0a84ff);

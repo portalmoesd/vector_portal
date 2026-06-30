@@ -700,8 +700,13 @@
 
     const progRowHtml = (r) => {
       const actionsHtml = canEdit ? renderSectionActions(r.raw, eventId) : '';
+      const steps = Array.isArray(r.raw.steps) ? r.raw.steps : [];
       const dots = r.chain.map((role, i) => {
-        const st = i < r.passed ? 'is-passed' : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
+        // A stage behind the holder that nobody acted on was skipped (bypassed
+        // via a push) → faded; otherwise passed (green) / current (blue) / pending.
+        const st = i < r.passed
+          ? ((steps[i] && steps[i].acted) ? 'is-passed' : 'is-skipped')
+          : (i === r.passed && !r.done ? 'is-current' : 'is-pending');
         return `<button type="button" class="mn-prog__step ${st}" data-stage-role="${escapeHtml(role)}" data-stage-idx="${i}" title="${escapeHtml(roleLabel(role))}" aria-label="${escapeHtml(roleLabel(role))}"><span class="mn-prog__dot ${st}"><span class="mn-prog__num">${i + 1}</span></span><span class="mn-prog__steplabel">${escapeHtml(roleLabel(role))}</span></button>`;
       }).join('');
       return `
