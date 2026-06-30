@@ -1180,16 +1180,11 @@
     notifPanel.innerHTML = `
       <div class="mn-notifs__head">
         <span class="mn-notifs__title">${escapeHtml(I18n.tr('notif.title'))}<span class="mn-notifs__badge" hidden></span></span>
-        <button type="button" class="mn-notifs__readall">${escapeHtml(I18n.tr('notif.markAllRead'))}</button>
       </div>
       <ul class="mn-notifs__list"></ul>`;
     side.appendChild(notifPanel);
     notifListEl = notifPanel.querySelector('.mn-notifs__list');
     notifBadgeEl = notifPanel.querySelector('.mn-notifs__badge');
-    notifPanel.querySelector('.mn-notifs__readall').addEventListener('click', async () => {
-      try { await Api.post('/api/notifications/read', {}); } catch (_) { /* ignore */ }
-      loadNotifications();
-    });
   }
 
   function renderNotifications(data) {

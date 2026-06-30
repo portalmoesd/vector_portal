@@ -7,6 +7,18 @@
    and the existing status accents (--accent-green, --accent-orange).
    ─────────────────────────────────────────────────────────────────────────── */
 
+/* Unify the Georgian font across the dashboard. Form controls (button/input/
+   select/textarea) don't inherit font-family by default, so their Georgian text
+   fell back to the browser default — different from the calendar's FiraGO. Force
+   the same primary font (the one the calendar uses) on every control. */
+.mn-dash,
+.mn-dash button,
+.mn-dash input,
+.mn-dash select,
+.mn-dash textarea {
+  font-family: var(--font-primary);
+}
+
 /* ── Hero (greeting card) ──────────────────────────────────────────────────── */
 .mn-dash .mn-hero {
   position: relative;
@@ -346,11 +358,6 @@
   min-width: 20px; height: 20px; padding: 0 6px; border-radius: 99px;
   font-size: 0.72rem; font-weight: 800; color: #fff; background: var(--primary, #0a84ff);
 }
-.mn-dash .mn-notifs__readall {
-  border: none; background: none; cursor: pointer; padding: 4px 6px;
-  font-size: 0.8rem; font-weight: 700; color: var(--primary, #0a84ff);
-}
-.mn-dash .mn-notifs__readall:hover { text-decoration: underline; }
 .mn-dash .mn-notifs__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .mn-dash .mn-notif {
   display: flex; align-items: center; gap: 12px; padding: 10px 8px; cursor: pointer;
