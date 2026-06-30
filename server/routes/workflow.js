@@ -1172,22 +1172,25 @@ router.get('/stage-users', requireAuth, async (req, res) => {
       // own-department sections, so include them. In advanced mode the deputy DS is
       // the final approver (not a mid-chain curator), so keep excluding them.
       const isSimpleWf = stageWorkflowType === 'simple';
-      const { rows } = await db.query(
-        isSimpleWf
-          ? `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
+      const { rows } = isSimpleWf
+        ? await db.query(
+            `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
              FROM deputy_department_links ddl
              JOIN users u ON u.id = ddl.deputy_id
              LEFT JOIN departments d ON d.id = u.department_id
              WHERE ddl.department_id = ANY($1)
-             ORDER BY u.full_name`
-          : `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
+             ORDER BY u.full_name`,
+            [sectionDeptIds]
+          )
+        : await db.query(
+            `SELECT u.id, u.full_name, u.full_name_ka, d.name_en AS department_name
              FROM deputy_department_links ddl
              JOIN users u ON u.id = ddl.deputy_id
              LEFT JOIN departments d ON d.id = u.department_id
              WHERE ddl.department_id = ANY($1) AND u.id != $2
              ORDER BY u.full_name`,
-        [sectionDeptIds, event.document_submitter_id]
-      );
+            [sectionDeptIds, event.document_submitter_id]
+          );
       users = rows;
     } else if (role === 'DEPUTY') {
       const { rows } = await db.query(
