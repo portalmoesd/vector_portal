@@ -1117,16 +1117,39 @@
 
   // Switch to the tab that holds the given event and expand it. Used by the
   // notifications panel so clicking a notification lands on the right event.
-  function revealEvent(eventId) {
+  // Re-fetch the completed (library) + active (events) lists. Called when a
+  // notification points at an event that wasn't in the lists loaded at page open
+  // (e.g. an older, already-read notification whose event has since changed).
+  async function reloadData() {
+    const [lib, ev] = await Promise.allSettled([Api.get('/api/library'), Api.get('/api/events')]);
+    if (lib.status === 'fulfilled') completed = (lib.value || []).map(d => ({ ...d, _ready: true }));
+    if (ev.status === 'fulfilled') upcoming = (ev.value || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
+  }
+
+  async function revealEvent(eventId) {
     const idStr = String(eventId);
-    const inCompleted = completed.find(d => String(d.id) === idStr);
-    const item = inCompleted || upcoming.find(d => String(d.id) === idStr);
+    const find = () => {
+      const inCompleted = completed.find(d => String(d.id) === idStr);
+      return { inCompleted, item: inCompleted || upcoming.find(d => String(d.id) === idStr) };
+    };
+    let { inCompleted, item } = find();
+    // Older (often already-read) notifications can reference events that aren't in
+    // the lists loaded at page open — refresh once and retry before giving up.
+    if (!item) {
+      await reloadData();
+      ({ inCompleted, item } = find());
+    }
     if (!item) return false;
     let targetMode;
     if (isOwner) {
       if (isOwned(item)) targetMode = 'meetings';          // owned (ready or in prep)
       else if (!inCompleted) targetMode = 'tasks';         // active, contributing
-      else return false; // completed event they don't own isn't on their dashboard
+      else {
+        // A completed event they only contributed to isn't on the owner dashboard
+        // lists — open its published document instead of doing nothing.
+        if (typeof LibraryDoc !== 'undefined' && LibraryDoc.preview) LibraryDoc.preview(eventId);
+        return true;
+      }
     } else {
       targetMode = inCompleted ? 'completed' : 'upcoming';
     }
@@ -1205,7 +1228,9 @@
       li.addEventListener('click', async () => {
         try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
         // Switch to the tab holding the event and select it (no jump to editor).
-        if (li.dataset.event) revealEvent(parseInt(li.dataset.event, 10));
+        // Works for read and unread alike; revealEvent refreshes + retries so an
+        // older read notification still opens its event.
+        if (li.dataset.event) await revealEvent(parseInt(li.dataset.event, 10));
         loadNotifications();
       });
     });
