@@ -257,7 +257,9 @@
     if (act > 0) return { color: 'red', count: act };
     const isNew = items.filter(d => !d._ready && newEventIds.has(String(d.id)) && !isActEvent(d.id)).length;
     if (isNew > 0) return { color: 'orange', count: isNew };
-    const green = items.filter(d => d._ready && readyEvents.has(String(d.id))).length;
+    // Green = finished documents. Owner roles show every finished doc (a persistent
+    // "done" status); workers keep the unopened-only (readyEvents) attention cue.
+    const green = items.filter(d => d._ready && (isOwner || readyEvents.has(String(d.id)))).length;
     if (green > 0) return { color: 'green', count: green };
     return null;
   }
@@ -1236,17 +1238,18 @@
     const month = date.getMonth();
     const todayT = tbilisiParts(); // today's date in Tbilisi (for the "today" cue)
 
-    // Owned event days are light blue; every other (contributed) day is orange. The
-    // calendar deliberately carries NO red — "your turn to act" shows on the cards/tabs,
-    // not here.
-    const ownedDates = new Set();
+    // Owned event days: light blue while in preparation, GREEN once the document is
+    // finished (owner roles). Every other (contributed) day is orange. The calendar
+    // carries NO red — "your turn to act" shows on the cards/tabs, not here.
+    const ownedPrep = new Set();  // owned, in-progress  → blue
+    const ownedReady = new Set(); // owned, finished doc → green
     const otherLevel = new Map(); // day -> 'other'
     calendarItems().forEach(item => {
       const ds = calItemDate(item);
       if (!ds) return;
       const t = tbYmd(ds);
       if (t.y !== year || t.m !== month + 1) return;
-      if (isOwned(item)) ownedDates.add(t.d);
+      if (isOwned(item)) (item._ready ? ownedReady : ownedPrep).add(t.d);
       else otherLevel.set(t.d, 'other');
     });
 
@@ -1275,13 +1278,17 @@
     }
     for (let d = 1; d <= daysInMonth; d++) {
       const isToday = +todayT.year === year && +todayT.month === month + 1 && +todayT.day === d;
-      const owned = ownedDates.has(d);
+      const owned = ownedPrep.has(d) || ownedReady.has(d);
+      // Green only when the owned event(s) that day are all finished; an in-progress owned
+      // meeting keeps the day blue (blue precedence).
+      const ownedGreen = ownedReady.has(d) && !ownedPrep.has(d);
       const lvl = otherLevel.get(d);      // 'other' | undefined
       const other = !!lvl;
       const hasEvent = owned || other;
       let cls = 'dp-cal-grid__day';
       if (isToday) cls += ' dp-cal-grid__day--today';
       if (hasEvent) cls += ' dp-cal-grid__day--has-event';
+      if (ownedGreen) cls += ' dp-cal-grid__day--owned-ready';
       // Hybrid calendar (Deputy/Supervisor): a day with both an owned meeting and an
       // other-event → two dots. Gated to hybrid roles so worker calendars, where a day
       // can also mix owned + non-owned upcoming items, keep their existing blue marker.

@@ -42,9 +42,14 @@ async function notifyEventCreated(db, eventId, exceptUserId) {
 // Event published (COMPLETED) → tell participants the document is ready to read.
 async function notifyEventCompleted(db, eventId, exceptUserId) {
   try {
-    const { rows: [ev] } = await db.query('SELECT title FROM events WHERE id = $1', [eventId]);
+    const { rows: [ev] } = await db.query('SELECT title, document_submitter_id FROM events WHERE id = $1', [eventId]);
     const ids = (await resolveEventParticipantIds(db, eventId))
       .filter((id) => id !== exceptUserId);
+    // The document owner is always told their document is finished — even when they
+    // finalized it themselves (in which case they'd be the excluded actor above).
+    if (ev && ev.document_submitter_id && !ids.includes(ev.document_submitter_id)) {
+      ids.push(ev.document_submitter_id);
+    }
     await insertNotifications(db, ids, {
       type: 'completed',
       eventId,
