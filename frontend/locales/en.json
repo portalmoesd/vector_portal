@@ -4,6 +4,7 @@
     "markAllRead": "Mark all read",
     "now": "now",
     "eventCreated": "New event created: {event}",
+    "completed": "Document ready: {event}",
     "yourTurn": "Awaiting your action — {section} · {event}",
     "returned": "{section} returned to you · {event}"
   },

@@ -16,7 +16,7 @@ const {
   canPushSection,
   canPullSection,
 } = require('../helpers/pipeline');
-const { notifySectionTurn, markActorTurnRead } = require('../helpers/notifications');
+const { notifySectionTurn, markActorTurnRead, notifyEventCompleted } = require('../helpers/notifications');
 
 const router = express.Router();
 
@@ -310,7 +310,7 @@ router.post('/submit', requireAuth, denyAnalyst, async (req, res) => {
     // Auto-complete the event if the simple-mode short-circuit just
     // fired and every section is now approved.
     if (didFinalApprove) {
-      await checkEventCompletion(eventId);
+      await checkEventCompletion(eventId, req.user.id);
     }
 
     // Notify whoever now holds the section (no-op if it just auto-completed).
@@ -385,7 +385,7 @@ router.post('/approve', requireAuth, denyAnalyst, async (req, res) => {
         'DELETE FROM section_return_requests WHERE event_id = $1 AND section_id = $2',
         [eventId, sectionId]
       );
-      await checkEventCompletion(eventId);
+      await checkEventCompletion(eventId, req.user.id);
       return res.json({ success: true, newStatus: toStatus });
     }
 
@@ -446,7 +446,7 @@ router.post('/approve', requireAuth, denyAnalyst, async (req, res) => {
 
     // If this was the final approval, check if all sections are approved → complete event
     if (isFinal) {
-      await checkEventCompletion(eventId);
+      await checkEventCompletion(eventId, req.user.id);
     }
 
     // Notify the next holder (no-op when this was the final approval).
@@ -686,6 +686,8 @@ router.post('/send-to-library', requireAuth, denyAnalyst, async (req, res) => {
       "UPDATE events SET status = 'COMPLETED', is_active = false, ended_at = now(), updated_at = now() WHERE id = $1",
       [eventId]
     );
+    // Published → tell participants the document is ready to read.
+    await notifyEventCompleted(db, eventId, req.user.id);
 
     res.json({ success: true });
   } catch (err) {
@@ -770,7 +772,7 @@ router.post('/push-section', requireAuth, denyAnalyst, async (req, res) => {
     // approved_by_*, so trigger the same auto-completion check as a final
     // approval. A push to the curator is not completion.
     if (toStatus.startsWith('approved_by_')) {
-      await checkEventCompletion(eventId);
+      await checkEventCompletion(eventId, req.user.id);
     }
 
     // A push to the curator hands them the section — notify them. (A completing
@@ -1288,7 +1290,7 @@ router.get('/section-content', requireAuth, async (req, res) => {
 
 // ─── Helper: check event completion ───────────────────────────────────────────
 
-async function checkEventCompletion(eventId) {
+async function checkEventCompletion(eventId, actorId) {
   // Auto-completion is only enabled in 'simple' workflow mode. Advanced
   // mode keeps the manual "Send to library" gate (the DS clicks it once
   // they're satisfied with the final approved sections).
@@ -1307,12 +1309,14 @@ async function checkEventCompletion(eventId) {
   const allApproved = sections.every(s => s.status && s.status.startsWith('approved_by_'));
   if (!allApproved) return;
 
-  await db.query(
+  const result = await db.query(
     `UPDATE events
      SET status = 'COMPLETED', is_active = false, ended_at = now(), updated_at = now()
      WHERE id = $1 AND status <> 'COMPLETED'`,
     [eventId]
   );
+  // Just published → tell participants the document is ready to read.
+  if (result.rowCount > 0) await notifyEventCompleted(db, eventId, actorId);
 }
 
 module.exports = router;

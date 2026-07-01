@@ -280,6 +280,8 @@
   background: var(--accent-red, #dc2626);
   box-shadow: 0 0 0 1.5px #fff;
 }
+/* Green variant: a ready document the user hasn't opened yet. */
+.mn-dash .mn-card__attn--ready { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-list .mn-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);

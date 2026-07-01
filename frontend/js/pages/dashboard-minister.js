@@ -72,6 +72,8 @@
   // new-event subset clears when the card is opened. Derived from notifications.
   let attnEvents = new Set();
   let newEventIds = new Set();
+  // Completed documents the user hasn't opened yet → green "ready" badge.
+  let readyEvents = new Set();
 
   // ── Georgian date names ─────────────────────────────────────────────────────
   // Browser Intl 'ka' data is inconsistent across environments, so localize
@@ -228,11 +230,12 @@
 
   function select(id) {
     selectedId = id == null ? null : String(id);
-    // Opening a card clears its "new event" dot (the your-turn dot persists until
-    // the action is done). Mark read server-side, then refresh dots — the reload
-    // keeps the dot only if an unread your_turn/returned remains for the event.
-    if (selectedId && newEventIds.has(selectedId)) {
-      Api.post('/api/notifications/read', { eventId: parseInt(selectedId, 10), type: 'event_created' })
+    // Opening a card clears its "new event" (red) or "ready" (green) dot — both
+    // clear on open. (The your-turn red dot persists until the action is done.)
+    const clearType = selectedId && newEventIds.has(selectedId) ? 'event_created'
+      : (selectedId && readyEvents.has(selectedId) ? 'completed' : null);
+    if (clearType) {
+      Api.post('/api/notifications/read', { eventId: parseInt(selectedId, 10), type: clearType })
         .then(loadNotifications).catch(() => {});
     }
     renderList();
@@ -323,7 +326,14 @@
       meta = `${dueHtml}${escapeHtml(lang)}`;
     }
 
-    const attn = attnEvents.has(String(d.id)) ? '<span class="mn-card__attn" aria-label="Needs your attention"></span>' : '';
+    // Green badge: a ready document the user hasn't opened yet. Red badge: an
+    // in-progress event needing their attention (new / their turn). Never both.
+    let attn = '';
+    if (d._ready && readyEvents.has(String(d.id))) {
+      attn = '<span class="mn-card__attn mn-card__attn--ready" aria-label="Document ready"></span>';
+    } else if (!d._ready && attnEvents.has(String(d.id))) {
+      attn = '<span class="mn-card__attn" aria-label="Needs your attention"></span>';
+    }
     return `
       <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}">
         ${attn}
@@ -1255,11 +1265,13 @@
     event_created: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>',
     your_turn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>',
     returned: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>',
+    completed: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>',
   };
 
   function notifMessage(n) {
     const m = n.meta || {};
     if (n.type === 'event_created') return I18n.tr('notif.eventCreated').replace('{event}', m.eventTitle || '');
+    if (n.type === 'completed') return I18n.tr('notif.completed').replace('{event}', m.eventTitle || '');
     if (n.type === 'returned') return I18n.tr('notif.returned').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
     return I18n.tr('notif.yourTurn').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
   }
@@ -1299,9 +1311,11 @@
     const ATTN = ['event_created', 'your_turn', 'returned'];
     const unreadList = list.filter(n => !n.isRead && n.eventId);
     const nextAttn = new Set(unreadList.filter(n => ATTN.includes(n.type)).map(n => String(n.eventId)));
+    const nextReady = new Set(unreadList.filter(n => n.type === 'completed').map(n => String(n.eventId)));
     const setKey = (s) => [...s].sort().join(',');
-    const changed = setKey(nextAttn) !== setKey(attnEvents);
+    const changed = setKey(nextAttn) !== setKey(attnEvents) || setKey(nextReady) !== setKey(readyEvents);
     attnEvents = nextAttn;
+    readyEvents = nextReady;
     newEventIds = new Set(unreadList.filter(n => n.type === 'event_created').map(n => String(n.eventId)));
     if (changed) renderList();
     if (!list.length) { notifPanel.hidden = true; return; }

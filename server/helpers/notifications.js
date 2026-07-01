@@ -39,6 +39,22 @@ async function notifyEventCreated(db, eventId, exceptUserId) {
   }
 }
 
+// Event published (COMPLETED) → tell participants the document is ready to read.
+async function notifyEventCompleted(db, eventId, exceptUserId) {
+  try {
+    const { rows: [ev] } = await db.query('SELECT title FROM events WHERE id = $1', [eventId]);
+    const ids = (await resolveEventParticipantIds(db, eventId))
+      .filter((id) => id !== exceptUserId);
+    await insertNotifications(db, ids, {
+      type: 'completed',
+      eventId,
+      meta: { eventTitle: ev ? ev.title : '' },
+    });
+  } catch (err) {
+    console.error('notifyEventCompleted error:', err.message);
+  }
+}
+
 // A section's baton moved to `holderRole` → notify whoever can act there now
 // (except the user who triggered it). type: 'your_turn' | 'returned'.
 async function notifySectionTurn(db, { eventId, sectionId, holderRole, actorUserId, type = 'your_turn' }) {
@@ -84,4 +100,4 @@ async function markActorTurnRead(db, userId, eventId, sectionId) {
   }
 }
 
-module.exports = { insertNotifications, notifyEventCreated, notifySectionTurn, markActorTurnRead };
+module.exports = { insertNotifications, notifyEventCreated, notifyEventCompleted, notifySectionTurn, markActorTurnRead };
