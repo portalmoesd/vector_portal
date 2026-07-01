@@ -168,28 +168,22 @@
   transition: color 200ms ease, background 200ms ease, box-shadow 200ms ease;
 }
 .mn-dash .mn-toggle__btn.is-active { color: #fff; }
-/* When a tab holds badged cards it becomes part of the switch: an inactive
-   attention tab shows a resting colour segment styled like the sliding thumb
-   (below); an active attention tab colours the thumb itself instead (further
-   below) — so the two never overlap. A white count badge sits before the label. */
-.mn-dash .mn-toggle__btn[data-dot] { border-radius: 999px; color: #fff; }
-.mn-dash .mn-toggle__btn[data-dot="red"]:not(.is-active) {
-  background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
-  box-shadow: 0 2px 8px rgba(220,38,38,0.22);
-}
-.mn-dash .mn-toggle__btn[data-dot="green"]:not(.is-active) {
-  background: linear-gradient(180deg, var(--accent-green, #16a34a), #15803d);
-  box-shadow: 0 2px 8px rgba(22,163,74,0.22);
-}
+/* A tab that holds badged cards shows a count badge before its label. While the
+   tab is inactive it stays a normal tab with a filled red/green dot (white
+   number). When it becomes the active tab the sliding thumb turns red/green
+   (further below) and the badge inverts to a white dot with a coloured number
+   for contrast on the thumb. */
 .mn-dash .mn-toggle__btn[data-dot]::before {
   content: attr(data-count);
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 18px; height: 18px; padding: 0 5px; margin-right: 7px;
   border-radius: 99px; vertical-align: middle;
-  font-size: 0.68rem; font-weight: 800; line-height: 1; background: #fff;
+  font-size: 0.68rem; font-weight: 800; line-height: 1; color: #fff;
 }
-.mn-dash .mn-toggle__btn[data-dot="red"]::before { color: var(--accent-red, #dc2626); }
-.mn-dash .mn-toggle__btn[data-dot="green"]::before { color: var(--accent-green, #16a34a); }
+.mn-dash .mn-toggle__btn[data-dot="red"]::before { background: var(--accent-red, #dc2626); }
+.mn-dash .mn-toggle__btn[data-dot="green"]::before { background: var(--accent-green, #16a34a); }
+.mn-dash .mn-toggle__btn[data-dot="red"].is-active::before { background: #fff; color: var(--accent-red, #dc2626); }
+.mn-dash .mn-toggle__btn[data-dot="green"].is-active::before { background: #fff; color: var(--accent-green, #16a34a); }
 /* sliding thumb */
 .mn-dash .mn-toggle__thumb {
   position: absolute;
