@@ -255,14 +255,9 @@
 .mn-dash .dp-cal-grid__day--has-event:hover {
   background: rgba(10,132,255,0.18);
 }
-/* Non-owned ("other") event days are coloured by attention, not ownership: red when it's
-   the user's turn to act, orange otherwise. The level class sets --mn-other (dot) and
-   --mn-other-tint (day background). */
-.mn-dash .dp-cal-grid__day--lvl-act {
-  --mn-other: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
-  --mn-other-tint: rgba(220,38,38,0.09);
-  --mn-other-tint-h: rgba(220,38,38,0.18);
-}
+/* Non-owned ("other") event days are orange (the calendar carries no red — "your turn"
+   shows on the cards/tabs). The level class sets --mn-other (dot) and --mn-other-tint
+   (day background). */
 .mn-dash .dp-cal-grid__day--lvl-other {
   --mn-other: linear-gradient(180deg, var(--accent-orange, #f97316), #ea580c);
   --mn-other-tint: rgba(249,115,22,0.10);

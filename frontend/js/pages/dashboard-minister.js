@@ -93,8 +93,19 @@
   // opened; the act dot persists until the user acts.
   let actEvents = new Set();
   let newEventIds = new Set();
+  // Events where a section currently awaits THIS user's action (live workflow state,
+  // from GET /api/workflow/my-turn). This — not just unread notifications — is the
+  // authoritative "your turn" (red) signal for the cards and tabs.
+  let myTurnEvents = new Set();
   // Completed documents the user hasn't opened yet → green "ready" badge.
   let readyEvents = new Set();
+
+  // An in-progress event needs the user to act (RED) when it's their turn per live
+  // workflow status, or (belt-and-suspenders) an unread your_turn/returned notification.
+  function isActEvent(id) {
+    const s = String(id);
+    return myTurnEvents.has(s) || actEvents.has(s);
+  }
 
   // ── Georgian date names ─────────────────────────────────────────────────────
   // Browser Intl 'ka' data is inconsistent across environments, so localize
@@ -242,9 +253,9 @@
   // document). The count is how many cards of the shown category the tab holds.
   function tabBadge(m) {
     const items = itemsForMode(m);
-    const act = items.filter(d => !d._ready && actEvents.has(String(d.id))).length;
+    const act = items.filter(d => !d._ready && isActEvent(d.id)).length;
     if (act > 0) return { color: 'red', count: act };
-    const isNew = items.filter(d => !d._ready && newEventIds.has(String(d.id)) && !actEvents.has(String(d.id))).length;
+    const isNew = items.filter(d => !d._ready && newEventIds.has(String(d.id)) && !isActEvent(d.id)).length;
     if (isNew > 0) return { color: 'orange', count: isNew };
     const green = items.filter(d => d._ready && readyEvents.has(String(d.id))).length;
     if (green > 0) return { color: 'green', count: green };
@@ -406,7 +417,7 @@
     let attn = '';
     if (d._ready && readyEvents.has(String(d.id))) {
       attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}"></span>`;
-    } else if (!d._ready && actEvents.has(String(d.id))) {
+    } else if (!d._ready && isActEvent(d.id)) {
       attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}"></span>`; // red: your turn
     } else if (!d._ready && newEventIds.has(String(d.id))) {
       attn = `<span class="mn-card__attn mn-card__attn--new" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeNew'))}"></span>`; // orange: new event
@@ -1174,9 +1185,10 @@
             if (newList) newList.removeAttribute('hidden');
             if (newToggle) newToggle.setAttribute('aria-expanded', 'true');
           }
-          // The backend cleared the actor's turn notification — refresh the card
-          // dot (re-renders the list only if the attention set actually changed).
+          // Acting changed the turn state — refresh the card dot (re-renders the list
+          // only if the my-turn / attention set actually changed).
           loadNotifications();
+          loadMyTurn();
         } catch (err) {
           toast.error(err.message);
         }
@@ -1223,21 +1235,18 @@
     const month = date.getMonth();
     const todayT = tbilisiParts(); // today's date in Tbilisi (for the "today" cue)
 
-    // Owned event days are always light blue. Other (contributed) days are orange by
-    // default, and red only when it's the user's turn to act on one of that day's events.
+    // Owned event days are light blue; every other (contributed) day is orange. The
+    // calendar deliberately carries NO red — "your turn to act" shows on the cards/tabs,
+    // not here.
     const ownedDates = new Set();
-    const otherLevel = new Map(); // day -> 'act' | 'other'
-    const RANK = { act: 2, other: 1 };
+    const otherLevel = new Map(); // day -> 'other'
     calendarItems().forEach(item => {
       const ds = calItemDate(item);
       if (!ds) return;
       const t = tbYmd(ds);
       if (t.y !== year || t.m !== month + 1) return;
-      if (isOwned(item)) { ownedDates.add(t.d); return; }
-      const id = String(item.id);
-      const lvl = actEvents.has(id) ? 'act' : 'other';
-      // Set on first sight of the day, then only upgrade ('other' → 'act').
-      if (!otherLevel.has(t.d) || RANK[lvl] > RANK[otherLevel.get(t.d)]) otherLevel.set(t.d, lvl);
+      if (isOwned(item)) ownedDates.add(t.d);
+      else otherLevel.set(t.d, 'other');
     });
 
     let monthLabel, dayNames;
@@ -1266,7 +1275,7 @@
     for (let d = 1; d <= daysInMonth; d++) {
       const isToday = +todayT.year === year && +todayT.month === month + 1 && +todayT.day === d;
       const owned = ownedDates.has(d);
-      const lvl = otherLevel.get(d);      // 'act' | 'other' | undefined
+      const lvl = otherLevel.get(d);      // 'other' | undefined
       const other = !!lvl;
       const hasEvent = owned || other;
       let cls = 'dp-cal-grid__day';
@@ -1280,7 +1289,7 @@
       // A day with only non-owned events (user isn't the document owner).
       else if (!owned && other) otherMarker = 'has-event-other';
       if (otherMarker) {
-        // The other dot/tint is coloured by attention: red (act) or orange (otherwise).
+        // Non-owned days are orange (no red on the calendar).
         cls += ' dp-cal-grid__day--' + otherMarker + ' dp-cal-grid__day--lvl-' + lvl;
       }
       // Marked days are interactive (select the event): expose them as buttons so
@@ -1509,7 +1518,7 @@
     // Colour the count by the most urgent pending category: red (act) → orange (new) →
     // green (ready) → base blue.
     notifBadgeEl.classList.remove('is-alert', 'is-new', 'is-ready');
-    if (actEvents.size) notifBadgeEl.classList.add('is-alert');
+    if (myTurnEvents.size || actEvents.size) notifBadgeEl.classList.add('is-alert');
     else if (newEventIds.size) notifBadgeEl.classList.add('is-new');
     else if (readyEvents.size) notifBadgeEl.classList.add('is-ready');
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
@@ -1557,6 +1566,17 @@
     try { renderNotifications(await Api.get('/api/notifications')); } catch (_) { /* keep silent */ }
   }
 
+  // Live "your turn" set — the authoritative red signal for cards/tabs. Re-render only
+  // when it actually changes so the poll doesn't disturb an expanded card.
+  async function loadMyTurn() {
+    try {
+      const data = await Api.get('/api/workflow/my-turn');
+      const next = new Set((data && data.eventIds || []).map(String));
+      const key = (s) => [...s].sort().join(',');
+      if (key(next) !== key(myTurnEvents)) { myTurnEvents = next; renderAll(); }
+    } catch (_) { /* keep silent */ }
+  }
+
   // ── Create-event button (top of the side column) → opens the create popup ───
   function buildCreateButton() {
     if (!canCreateEvent || !window.EventCreate) return;
@@ -1584,5 +1604,6 @@
   buildCreateButton();
   buildNotifPanel();
   loadNotifications();
-  setInterval(loadNotifications, 45000);
+  loadMyTurn();
+  setInterval(() => { loadNotifications(); loadMyTurn(); }, 45000);
 })();

@@ -175,6 +175,100 @@ async function effectiveRole(user, event, sectionDeptIds, chain) {
   return user.role;
 }
 
+// True when a section currently awaits action from a user whose effective role is
+// `effRole` and whose section holder is `holderRole`. Mirrors the frontend
+// `sectionIsMyTurn()` predicate so the dashboard's red "your turn" signal matches
+// the expanded progress view.
+function sectionAwaitsRole(status, holderRole, effRole) {
+  if (!holderRole || !effRole || effRole !== holderRole) return false;
+  return status === 'draft'
+    || status.startsWith('returned_')
+    || status === `submitted_to_${String(effRole).toLowerCase()}`;
+}
+
+// ─── GET /api/workflow/my-turn ────────────────────────────────────────────────
+// Event ids where at least one section currently awaits THIS user's action. Drives
+// the dashboard's red "your turn" dots from live workflow state (not just unread
+// notifications), reusing the same chain / holder / effective-role logic as the
+// status grid. Ministers/analysts never hold a section → always empty.
+router.get('/my-turn', requireAuth, async (req, res) => {
+  try {
+    if (req.user.role === ROLES.MINISTER || req.user.role === ROLES.ANALYST) {
+      return res.json({ eventIds: [] });
+    }
+    const user = await resolveUser(req.user);
+    const userId = user.id;
+
+    // Active events where the user could possibly have a turn: their department has a
+    // section, they curate a section's department, or they're DS / deputy / supervisor.
+    const { rows: events } = await db.query(
+      `SELECT e.id, e.document_submitter_role, e.document_submitter_id, e.supervisor_id,
+              e.curator_required, e.workflow_type
+       FROM events e
+       WHERE e.is_active = TRUE AND (
+         e.document_submitter_id = $1 OR e.deputy_id = $1 OR e.supervisor_id = $1
+         OR EXISTS (
+           SELECT 1 FROM sections s JOIN section_departments sd ON sd.section_id = s.id
+           WHERE s.event_id = e.id
+             AND sd.department_id = (SELECT department_id FROM users WHERE id = $1)
+         )
+         OR EXISTS (
+           SELECT 1 FROM sections s JOIN section_departments sd ON sd.section_id = s.id
+           JOIN deputy_department_links ddl ON ddl.department_id = sd.department_id
+           WHERE s.event_id = e.id AND ddl.deputy_id = $1
+         )
+       )`,
+      [userId]
+    );
+
+    const eventIds = [];
+    for (const event of events) {
+      const wf = event.workflow_type || 'advanced';
+      // Home department for the receiving chain (DS dept, or the Responsible
+      // Supervisor's department when the DS is a Deputy).
+      let dsDeptId = null;
+      if (event.document_submitter_role === 'DEPUTY' && event.supervisor_id) {
+        const { rows: [sv] } = await db.query('SELECT department_id FROM users WHERE id = $1', [event.supervisor_id]);
+        dsDeptId = sv ? sv.department_id : null;
+      } else {
+        const { rows: [dsUser] } = await db.query('SELECT department_id FROM users WHERE id = $1', [event.document_submitter_id]);
+        dsDeptId = dsUser ? dsUser.department_id : null;
+      }
+
+      const { rows: sections } = await db.query(
+        `SELECT s.id AS section_id, sc.status, sc.original_submitter_role, sc.return_target_role,
+                COALESCE(array_agg(sd.department_id) FILTER (WHERE sd.department_id IS NOT NULL), ARRAY[]::int[]) AS dept_ids
+         FROM sections s
+         LEFT JOIN section_content sc ON sc.section_id = s.id AND sc.event_id = s.event_id
+         LEFT JOIN section_departments sd ON sd.section_id = s.id
+         WHERE s.event_id = $1
+         GROUP BY s.id, sc.status, sc.original_submitter_role, sc.return_target_role
+         ORDER BY s.sort_order`,
+        [event.id]
+      );
+
+      for (const s of sections) {
+        const status = s.status || 'draft';
+        const sectionDeptIds = (s.dept_ids || []).filter((d) => d != null);
+        const isCrossDept = sectionDeptIds.some((d) => d !== dsDeptId);
+        const chain = buildChain(event.document_submitter_role, event.curator_required, isCrossDept, wf);
+        const holderRole = currentHolderRole(status, s.original_submitter_role, s.return_target_role, chain);
+        if (!holderRole) continue;
+        const isAmendmentDS = status === 'submitted_to_amending_ds' && userId === event.document_submitter_id;
+        const effRole = isAmendmentDS ? 'AMENDING_DS' : await effectiveRole(user, event, sectionDeptIds, chain);
+        if (sectionAwaitsRole(status, holderRole, effRole)) {
+          eventIds.push(event.id);
+          break; // one matching section is enough for this event
+        }
+      }
+    }
+    res.json({ eventIds });
+  } catch (err) {
+    console.error('GET /api/workflow/my-turn error:', err.message);
+    res.status(500).json({ error: 'Failed to compute my-turn' });
+  }
+});
+
 // ─── POST /api/workflow/save ──────────────────────────────────────────────────
 
 router.post('/save', requireAuth, denyAnalyst, async (req, res) => {
