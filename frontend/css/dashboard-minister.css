@@ -255,6 +255,17 @@
 .mn-dash .dp-cal-grid__day--has-event:hover {
   background: rgba(10,132,255,0.18);
 }
+/* Owned day whose document is finished → green (overrides the blue tint + dot). Only the
+   ::after background is set, so it composes with the hybrid --has-event-both::after nudge. */
+.mn-dash .dp-cal-grid__day--owned-ready {
+  background: rgba(22,163,74,0.10);
+}
+.mn-dash .dp-cal-grid__day--owned-ready::after {
+  background: linear-gradient(180deg, var(--accent-green, #16a34a), #15803d);
+}
+.mn-dash .dp-cal-grid__day--owned-ready:hover {
+  background: rgba(22,163,74,0.20);
+}
 /* Non-owned ("other") event days are orange (the calendar carries no red — "your turn"
    shows on the cards/tabs). The level class sets --mn-other (dot) and --mn-other-tint
    (day background). */
