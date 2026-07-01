@@ -1150,12 +1150,15 @@
     const month = date.getMonth();
     const today = new Date();
 
-    const eventDates = new Set();
+    const ownedDates = new Set();
+    const otherDates = new Set();
     activeItems().forEach(item => {
       const ds = itemDate(item);
       if (!ds) return;
       const d = new Date(ds);
-      if (d.getFullYear() === year && d.getMonth() === month) eventDates.add(d.getDate());
+      if (d.getFullYear() === year && d.getMonth() === month) {
+        (isOwned(item) ? ownedDates : otherDates).add(d.getDate());
+      }
     });
 
     let monthLabel, dayNames;
@@ -1183,10 +1186,14 @@
     }
     for (let d = 1; d <= daysInMonth; d++) {
       const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === d;
-      const hasEvent = eventDates.has(d);
+      const owned = ownedDates.has(d);
+      const other = otherDates.has(d);
+      const hasEvent = owned || other;
       let cls = 'dp-cal-grid__day';
       if (isToday) cls += ' dp-cal-grid__day--today';
       if (hasEvent) cls += ' dp-cal-grid__day--has-event';
+      // A day with only non-owned events (user isn't the document owner) → red.
+      if (!owned && other) cls += ' dp-cal-grid__day--has-event-other';
       const dateAttr = hasEvent ? ` data-cal-date="${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}"` : '';
       daysHtml += `<span class="${cls}"${dateAttr}>${d}</span>`;
     }

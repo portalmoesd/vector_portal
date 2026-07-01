@@ -231,15 +231,8 @@
 .mn-dash .dp-cal-grid__day--today {
   color: var(--primary, #0a84ff);
 }
-.mn-dash .dp-cal-grid__day--today::after {
-  content: "";
-  position: absolute;
-  left: 50%; transform: translateX(-50%);
-  bottom: 3px;
-  width: 4px; height: 4px; border-radius: 50%;
-  background: var(--primary, #0a84ff);
-}
-/* event days: subtle tint + an accent dot under the numeral (no full fill) */
+/* event days: subtle tint + an accent dot under the numeral (no full fill).
+   Blue when the user owns the event; faded red when they don't (--has-event-other). */
 .mn-dash .dp-cal-grid__day--has-event {
   background: rgba(10,132,255,0.08);
   color: var(--text-primary);
@@ -255,6 +248,16 @@
 }
 .mn-dash .dp-cal-grid__day--has-event:hover {
   background: rgba(10,132,255,0.18);
+}
+/* Non-owned event days → faded red (overrides the blue tint + dot above). */
+.mn-dash .dp-cal-grid__day--has-event-other {
+  background: rgba(220,38,38,0.09);
+}
+.mn-dash .dp-cal-grid__day--has-event-other::after {
+  background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
+}
+.mn-dash .dp-cal-grid__day--has-event-other:hover {
+  background: rgba(220,38,38,0.18);
 }
 
 /* ── Event cards (below) — two per row on desktop, tall card layout ─────────── */
