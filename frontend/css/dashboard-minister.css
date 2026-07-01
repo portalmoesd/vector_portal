@@ -410,6 +410,8 @@
   min-width: 20px; height: 20px; padding: 0 6px; border-radius: 99px;
   font-size: 0.72rem; font-weight: 800; color: #fff; background: var(--primary, #0a84ff);
 }
+/* Red while there are unread notifications; falls back to the blue base otherwise. */
+.mn-dash .mn-notifs__badge.is-alert { background: var(--accent-red, #dc2626); }
 .mn-dash .mn-notifs__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .mn-dash .mn-notif {
   display: flex; align-items: center; gap: 12px; padding: 10px 8px; cursor: pointer;
@@ -421,17 +423,18 @@
 .mn-dash .mn-notif__icon svg { width: 18px; height: 18px; }
 .mn-dash .mn-notif__msg { flex: 1; min-width: 0; font-size: 0.88rem; color: var(--text-secondary); }
 .mn-dash .mn-notif__time { flex: 0 0 auto; font-size: 0.72rem; color: var(--text-muted); }
-.mn-dash .mn-notif.is-unread { background: rgba(10,132,255,0.06); }
+/* A new (unread) notification gets a faded-red background + red icon. */
+.mn-dash .mn-notif.is-unread { background: rgba(220,38,38,0.07); }
 .mn-dash .mn-notif.is-unread .mn-notif__msg { color: var(--text-primary); font-weight: 700; }
-.mn-dash .mn-notif.is-unread .mn-notif__icon { color: var(--primary, #0a84ff); }
-/* "Show all" footer button → opens the full-list popup. */
+.mn-dash .mn-notif.is-unread .mn-notif__icon { color: var(--accent-red, #dc2626); }
+/* "Show all" → a small text button in the header, top-right across from the title. */
 .mn-dash .mn-notifs__showall {
-  flex: 0 0 auto; width: 100%; margin-top: 6px; padding: 9px 10px;
-  border: 0; border-top: 1px solid var(--border-color); background: transparent;
-  color: var(--primary, #0a84ff); font-size: 0.82rem; font-weight: 800;
-  cursor: pointer; border-radius: 0 0 12px 12px; transition: background 0.12s ease;
+  flex: 0 0 auto; margin: 0; padding: 2px 6px;
+  border: 0; background: transparent;
+  color: var(--primary, #0a84ff); font-size: 0.78rem; font-weight: 800;
+  cursor: pointer; border-radius: 8px; transition: background 0.12s ease;
 }
-.mn-dash .mn-notifs__showall:hover { background: rgba(10,132,255,0.06); }
+.mn-dash .mn-notifs__showall:hover { background: rgba(10,132,255,0.08); }
 /* The popup reuses the .mn-notif row styles (its card carries .mn-dash); scroll a
    long list inside the modal. */
 .modal-card .mn-notifs__list { max-height: 60vh; overflow-y: auto; }

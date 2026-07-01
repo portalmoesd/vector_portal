@@ -1330,9 +1330,9 @@
     notifPanel.innerHTML = `
       <div class="mn-notifs__head">
         <span class="mn-notifs__title">${escapeHtml(I18n.tr('notif.title'))}<span class="mn-notifs__badge" hidden></span></span>
+        <button type="button" class="mn-notifs__showall" hidden></button>
       </div>
-      <ul class="mn-notifs__list"></ul>
-      <button type="button" class="mn-notifs__showall" hidden></button>`;
+      <ul class="mn-notifs__list"></ul>`;
     side.appendChild(notifPanel);
     notifListEl = notifPanel.querySelector('.mn-notifs__list');
     notifBadgeEl = notifPanel.querySelector('.mn-notifs__badge');
@@ -1384,6 +1384,7 @@
     const unread = (data && data.unreadCount) || 0;
     notifBadgeEl.textContent = unread ? String(unread) : '';
     notifBadgeEl.hidden = !unread;
+    notifBadgeEl.classList.toggle('is-alert', unread > 0);
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
     const more = list.length > 0;
     notifShowAllEl.hidden = !more;
