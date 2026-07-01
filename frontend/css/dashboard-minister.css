@@ -271,12 +271,13 @@
   box-shadow: var(--shadow-sm);
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
-/* iOS-style red attention badge, overhanging the card's top-right corner. */
+/* iOS app-badge: centred on the card's top-right corner, the outer border line
+   running through the middle of the dot (half on the card, half off). */
 .mn-dash .mn-card__attn {
-  position: absolute; top: -6px; right: -6px; z-index: 2;
+  position: absolute; top: -8px; right: -8px; z-index: 2;
   width: 16px; height: 16px; border-radius: 50%;
   background: var(--accent-red, #dc2626);
-  box-shadow: 0 0 0 2.5px var(--card, #fff), 0 1px 3px rgba(220,38,38,0.45);
+  box-shadow: 0 0 0 1.5px #fff;
 }
 .mn-dash .mn-list .mn-card:hover {
   transform: translateY(-3px);
