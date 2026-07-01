@@ -412,14 +412,15 @@
       meta = `${dueHtml}${escapeHtml(lang)}`;
     }
 
-    // Green badge: a ready document the user hasn't opened yet. Red badge: an
-    // in-progress event needing their attention (new / their turn). Never both.
+    // Card dot: green = the document is finished; red = an in-progress event
+    // needing the user's action (their turn); orange = a new in-progress event.
+    // Finished documents are never in the in-progress sets, so these are exclusive.
     let attn = '';
-    if (d._ready && readyEvents.has(String(d.id))) {
+    if (d._ready) {
       attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}"></span>`;
-    } else if (!d._ready && isActEvent(d.id)) {
+    } else if (isActEvent(d.id)) {
       attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}"></span>`; // red: your turn
-    } else if (!d._ready && newEventIds.has(String(d.id))) {
+    } else if (newEventIds.has(String(d.id))) {
       attn = `<span class="mn-card__attn mn-card__attn--new" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeNew'))}"></span>`; // orange: new event
     }
     return `
