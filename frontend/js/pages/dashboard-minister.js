@@ -1381,7 +1381,7 @@
     notifBadgeEl.textContent = unread ? String(unread) : '';
     notifBadgeEl.hidden = !unread;
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
-    const more = list.length > NOTIF_INLINE_LIMIT;
+    const more = list.length > 0;
     notifShowAllEl.hidden = !more;
     if (more) notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
     // Keep an open modal in sync with the freshly polled list.
