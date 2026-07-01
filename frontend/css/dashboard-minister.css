@@ -413,6 +413,17 @@
 .mn-dash .mn-notif.is-unread { background: rgba(10,132,255,0.06); }
 .mn-dash .mn-notif.is-unread .mn-notif__msg { color: var(--text-primary); font-weight: 700; }
 .mn-dash .mn-notif.is-unread .mn-notif__icon { color: var(--primary, #0a84ff); }
+/* "Show all" footer button → opens the full-list popup. */
+.mn-dash .mn-notifs__showall {
+  flex: 0 0 auto; width: 100%; margin-top: 6px; padding: 9px 10px;
+  border: 0; border-top: 1px solid var(--border-color); background: transparent;
+  color: var(--primary, #0a84ff); font-size: 0.82rem; font-weight: 800;
+  cursor: pointer; border-radius: 0 0 12px 12px; transition: background 0.12s ease;
+}
+.mn-dash .mn-notifs__showall:hover { background: rgba(10,132,255,0.06); }
+/* The popup reuses the .mn-notif row styles (its card carries .mn-dash); scroll a
+   long list inside the modal. */
+.modal-card .mn-notifs__list { max-height: 60vh; overflow-y: auto; }
 .mn-dash .mn-card__flag { flex: 0 0 auto; width: 46px; height: 46px; line-height: 0; }
 .mn-dash .mn-card__flag img {
   width: 46px; height: 46px;
