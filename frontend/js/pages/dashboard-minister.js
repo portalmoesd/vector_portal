@@ -209,25 +209,31 @@
   }
   function activeItems() { return itemsForMode(mode); }
 
-  // A tab shows a dot when its list holds a badged card: red (attention on an
-  // in-progress event) takes precedence, else green (a ready, unopened document).
-  function tabDotColor(m) {
+  // A tab shows a count badge before its label when its list holds badged cards:
+  // red (attention on in-progress events) takes precedence, else green (ready,
+  // unopened documents). The count is how many such cards the tab holds.
+  function tabBadge(m) {
     const items = itemsForMode(m);
-    if (items.some(d => !d._ready && attnEvents.has(String(d.id)))) return 'red';
-    if (items.some(d => d._ready && readyEvents.has(String(d.id)))) return 'green';
+    const red = items.filter(d => !d._ready && attnEvents.has(String(d.id))).length;
+    if (red > 0) return { color: 'red', count: red };
+    const green = items.filter(d => d._ready && readyEvents.has(String(d.id))).length;
+    if (green > 0) return { color: 'green', count: green };
     return null;
   }
   function updateTabDots() {
+    // Driven via data-* + a ::before pseudo so the badge survives the label's
+    // textContent/i18n relabels.
     toggleBtns.forEach(btn => {
-      const old = btn.querySelector('.mn-toggle__dot');
-      if (old) old.remove();
-      const color = tabDotColor(btn.dataset.mode);
-      if (color) {
-        const dot = document.createElement('span');
-        dot.className = `mn-toggle__dot mn-toggle__dot--${color}`;
-        btn.appendChild(dot);
+      const b = tabBadge(btn.dataset.mode);
+      if (b) {
+        btn.dataset.dot = b.color;
+        btn.dataset.count = b.count > 9 ? '9+' : String(b.count);
+      } else {
+        btn.removeAttribute('data-dot');
+        btn.removeAttribute('data-count');
       }
     });
+    positionThumb(); // badge widths change the button size — realign the thumb
   }
 
   // The date a calendar marker / grouping keys off, per mode.
