@@ -1180,21 +1180,33 @@
     return I18n.tr('dashboard.stageWith').replace('{role}', roleLabel(role));
   }
 
+  // Year/Month/Day of an instant in Tbilisi time — the same zone the event cards
+  // display (fmtEventWhen). Keying the calendar off this (not the browser-local
+  // date) keeps a marker on the same day its card shows for viewers outside
+  // UTC+4; for Tbilisi browsers it is identical to the local date.
+  function tbYmd(iso) {
+    const p = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Asia/Tbilisi', year: 'numeric', month: '2-digit', day: '2-digit',
+    }).formatToParts(new Date(iso)).forEach(x => { p[x.type] = x.value; });
+    return { y: +p.year, m: +p.month, d: +p.day, key: `${p.year}-${p.month}-${p.day}` };
+  }
+
   // ── Calendar (adapted from dashboard-pipeline.js renderMiniCalendar) ─────────
   function renderCalendar(date) {
     calendarDate = date;
     const year = date.getFullYear();
     const month = date.getMonth();
-    const today = new Date();
+    const todayT = tbilisiParts(); // today's date in Tbilisi (for the "today" cue)
 
     const ownedDates = new Set();
     const otherDates = new Set();
     activeItems().forEach(item => {
       const ds = itemDate(item);
       if (!ds) return;
-      const d = new Date(ds);
-      if (d.getFullYear() === year && d.getMonth() === month) {
-        (isOwned(item) ? ownedDates : otherDates).add(d.getDate());
+      const t = tbYmd(ds);
+      if (t.y === year && t.m === month + 1) {
+        (isOwned(item) ? ownedDates : otherDates).add(t.d);
       }
     });
 
@@ -1222,7 +1234,7 @@
       daysHtml += '<span class="dp-cal-grid__day dp-cal-grid__day--empty"></span>';
     }
     for (let d = 1; d <= daysInMonth; d++) {
-      const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === d;
+      const isToday = +todayT.year === year && +todayT.month === month + 1 && +todayT.day === d;
       const owned = ownedDates.has(d);
       const other = otherDates.has(d);
       const hasEvent = owned || other;
@@ -1259,9 +1271,7 @@
       const match = activeItems().find(item => {
         const ds = itemDate(item);
         if (!ds) return false;
-        const d = new Date(ds);
-        const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-        return key === clicked;
+        return tbYmd(ds).key === clicked; // Tbilisi day, matching how days are marked
       });
       if (match) select(match.id);
     };
