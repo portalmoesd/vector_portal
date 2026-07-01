@@ -1223,12 +1223,11 @@
     const month = date.getMonth();
     const todayT = tbilisiParts(); // today's date in Tbilisi (for the "today" cue)
 
-    // Owned event days are always light blue. Other (contributed) days are coloured by
-    // attention: red (your turn) > orange (new) > grey (nothing pending) — take the highest
-    // priority among that day's non-owned events.
+    // Owned event days are always light blue. Other (contributed) days are orange by
+    // default, and red only when it's the user's turn to act on one of that day's events.
     const ownedDates = new Set();
-    const otherLevel = new Map(); // day -> 'act' | 'new' | 'none'
-    const RANK = { act: 3, new: 2, none: 1 };
+    const otherLevel = new Map(); // day -> 'act' | 'other'
+    const RANK = { act: 2, other: 1 };
     calendarItems().forEach(item => {
       const ds = calItemDate(item);
       if (!ds) return;
@@ -1236,9 +1235,8 @@
       if (t.y !== year || t.m !== month + 1) return;
       if (isOwned(item)) { ownedDates.add(t.d); return; }
       const id = String(item.id);
-      const lvl = actEvents.has(id) ? 'act' : newEventIds.has(id) ? 'new' : 'none';
-      // Set on first sight of the day (even 'none' so the day still gets a marker), then
-      // only upgrade to a higher priority.
+      const lvl = actEvents.has(id) ? 'act' : 'other';
+      // Set on first sight of the day, then only upgrade ('other' → 'act').
       if (!otherLevel.has(t.d) || RANK[lvl] > RANK[otherLevel.get(t.d)]) otherLevel.set(t.d, lvl);
     });
 
@@ -1268,7 +1266,7 @@
     for (let d = 1; d <= daysInMonth; d++) {
       const isToday = +todayT.year === year && +todayT.month === month + 1 && +todayT.day === d;
       const owned = ownedDates.has(d);
-      const lvl = otherLevel.get(d);      // 'act' | 'new' | 'none' | undefined
+      const lvl = otherLevel.get(d);      // 'act' | 'other' | undefined
       const other = !!lvl;
       const hasEvent = owned || other;
       let cls = 'dp-cal-grid__day';
@@ -1282,7 +1280,7 @@
       // A day with only non-owned events (user isn't the document owner).
       else if (!owned && other) otherMarker = 'has-event-other';
       if (otherMarker) {
-        // The other dot/tint is coloured by attention: red (act) / orange (new) / grey (none).
+        // The other dot/tint is coloured by attention: red (act) or orange (otherwise).
         cls += ' dp-cal-grid__day--' + otherMarker + ' dp-cal-grid__day--lvl-' + lvl;
       }
       // Marked days are interactive (select the event): expose them as buttons so
