@@ -956,3 +956,57 @@
   background: none; border: none; font-size: 24px;
   cursor: pointer; color: var(--text-secondary); padding: 4px 8px;
 }
+
+/* ── Polish pass: keyboard focus, responsive, small-state fixes ─────────────── */
+
+/* A single, consistent keyboard focus ring for every custom interactive control.
+   :focus-visible keeps it to keyboard use (no ring on mouse click). The ring
+   follows each element's border-radius, so it reads well on pills and cards. */
+.mn-dash .mn-toggle__btn:focus-visible,
+.mn-dash .mn-list .mn-card:focus-visible,
+.mn-dash .mn-createbtn:focus-visible,
+.mn-dash .mn-pillbtn:focus-visible,
+.mn-dash .mn-actbtn:focus-visible,
+.mn-dash .mn-notif:focus-visible,
+.mn-dash .mn-file:focus-visible,
+.mn-dash .mn-prog__step:focus-visible,
+.mn-dash .mn-prog__toggle:focus-visible,
+.mn-dash .mn-card__close:focus-visible,
+.mn-dash .mn-detail__close:focus-visible,
+.mn-dash .mn-stage__close:focus-visible,
+.mn-dash .mn-notifs__showall:focus-visible,
+.mn-dash .dp-cal-nav:focus-visible,
+.mn-dash .dp-cal-grid__day[role="button"]:focus-visible {
+  outline: 2px solid var(--primary, #0a84ff);
+  outline-offset: 2px;
+}
+
+/* Below the hero-clock breakpoint the toolbar wraps; let the search take the
+   full row instead of forcing horizontal overflow on ~320px screens. */
+@media (max-width: 560px) {
+  .mn-dash .mn-search { flex: 1 1 100%; min-width: 0; }
+}
+
+/* The expanded chain stepper packs 4–6 steps across a card that can be a single
+   column on mobile. Tighten the circles/labels so the (often long, Georgian)
+   role names stay legible instead of clipping. Keeps steps flex:1 so the track
+   segments below stay aligned with their dots. */
+@media (max-width: 600px) {
+  .mn-dash .mn-prog__item.is-expanded .mn-prog__steps { gap: 4px; }
+  .mn-dash .mn-prog__item.is-expanded .mn-prog__dot {
+    width: 22px; height: 22px; font-size: 0.7rem;
+  }
+  .mn-dash .mn-prog__item.is-expanded .mn-prog__steplabel { font-size: 0.66rem; }
+}
+
+/* When a viewer can't see every section the progress bar is emptied — don't let
+   the empty slot reserve space and shove the action buttons to a lonely corner. */
+.mn-dash .mn-detail__progslot:empty { display: none; }
+
+/* The corner attention dot is meaningful only on the collapsed summary; once the
+   card is expanded it collides with the close button, so hide it. */
+.mn-dash .mn-list .mn-card.is-expanded .mn-card__attn { display: none; }
+
+/* Completed cards carry no excerpt, so the tall min-height left a dead gap above
+   the footer; a gentler floor keeps rows tidy without cramping richer cards. */
+.mn-dash .mn-list .mn-card { min-height: 140px; }
