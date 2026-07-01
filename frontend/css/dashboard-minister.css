@@ -168,14 +168,16 @@
   transition: color 200ms ease;
 }
 .mn-dash .mn-toggle__btn.is-active { color: #fff; }
-/* Attention dot on a tab when its list holds a badged card. */
-.mn-dash .mn-toggle__dot {
-  position: absolute; top: 3px; right: 9px; z-index: 2;
-  width: 7px; height: 7px; border-radius: 50%;
-  box-shadow: 0 0 0 1.5px rgba(255,255,255,0.55);
+/* Count badge before the tab label when its list holds badged cards. */
+.mn-dash .mn-toggle__btn[data-dot]::before {
+  content: attr(data-count);
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 5px; margin-right: 7px;
+  border-radius: 99px; vertical-align: middle;
+  font-size: 0.68rem; font-weight: 800; line-height: 1; color: #fff;
 }
-.mn-dash .mn-toggle__dot--red { background: var(--accent-red, #dc2626); }
-.mn-dash .mn-toggle__dot--green { background: var(--accent-green, #16a34a); }
+.mn-dash .mn-toggle__btn[data-dot="red"]::before { background: var(--accent-red, #dc2626); }
+.mn-dash .mn-toggle__btn[data-dot="green"]::before { background: var(--accent-green, #16a34a); }
 /* sliding thumb */
 .mn-dash .mn-toggle__thumb {
   position: absolute;
