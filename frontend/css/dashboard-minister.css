@@ -168,16 +168,20 @@
   transition: color 200ms ease;
 }
 .mn-dash .mn-toggle__btn.is-active { color: #fff; }
-/* Count badge before the tab label when its list holds badged cards. */
+/* When a tab holds badged cards, colour the whole tab and show a white count badge
+   (with a coloured number) before the label. */
+.mn-dash .mn-toggle__btn[data-dot] { border-radius: 999px; color: #fff; }
+.mn-dash .mn-toggle__btn[data-dot="red"] { background: var(--accent-red, #dc2626); }
+.mn-dash .mn-toggle__btn[data-dot="green"] { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-toggle__btn[data-dot]::before {
   content: attr(data-count);
   display: inline-flex; align-items: center; justify-content: center;
   min-width: 18px; height: 18px; padding: 0 5px; margin-right: 7px;
   border-radius: 99px; vertical-align: middle;
-  font-size: 0.68rem; font-weight: 800; line-height: 1; color: #fff;
+  font-size: 0.68rem; font-weight: 800; line-height: 1; background: #fff;
 }
-.mn-dash .mn-toggle__btn[data-dot="red"]::before { background: var(--accent-red, #dc2626); }
-.mn-dash .mn-toggle__btn[data-dot="green"]::before { background: var(--accent-green, #16a34a); }
+.mn-dash .mn-toggle__btn[data-dot="red"]::before { color: var(--accent-red, #dc2626); }
+.mn-dash .mn-toggle__btn[data-dot="green"]::before { color: var(--accent-green, #16a34a); }
 /* sliding thumb */
 .mn-dash .mn-toggle__thumb {
   position: absolute;
