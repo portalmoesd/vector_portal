@@ -412,14 +412,15 @@
       meta = `${dueHtml}${escapeHtml(lang)}`;
     }
 
-    // Green badge: a ready document the user hasn't opened yet. Red badge: an
-    // in-progress event needing their attention (new / their turn). Never both.
+    // Card dot: green = the document is finished; red = an in-progress event
+    // needing the user's action (their turn); orange = a new in-progress event.
+    // Finished documents are never in the in-progress sets, so these are exclusive.
     let attn = '';
-    if (d._ready && readyEvents.has(String(d.id))) {
+    if (d._ready) {
       attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}"></span>`;
-    } else if (!d._ready && isActEvent(d.id)) {
+    } else if (isActEvent(d.id)) {
       attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}"></span>`; // red: your turn
-    } else if (!d._ready && newEventIds.has(String(d.id))) {
+    } else if (newEventIds.has(String(d.id))) {
       attn = `<span class="mn-card__attn mn-card__attn--new" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeNew'))}"></span>`; // orange: new event
     }
     return `
@@ -1522,10 +1523,10 @@
     else if (newEventIds.size) notifBadgeEl.classList.add('is-new');
     else if (readyEvents.size) notifBadgeEl.classList.add('is-ready');
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
-    // "Show all" only makes sense when there are more than the inline preview shows.
-    const more = list.length > NOTIF_INLINE_LIMIT;
-    notifShowAllEl.hidden = !more;
-    if (more) notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
+    // "Show all" opens the full list in a modal — always offer it while any
+    // notifications exist (the panel itself is hidden when the list is empty).
+    notifShowAllEl.hidden = false;
+    notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
     // Keep an open modal in sync with the freshly polled list.
     if (notifModal && notifModal.style.display !== 'none') {
       renderNotifRows(notifModal.querySelector('.mn-notifs__list'), notifAll, hideNotifModal);
