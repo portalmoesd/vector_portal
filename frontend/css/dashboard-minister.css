@@ -165,14 +165,22 @@
   font-weight: 700;
   color: var(--text-secondary);
   border-radius: 999px;
-  transition: color 200ms ease;
+  transition: color 200ms ease, background 200ms ease, box-shadow 200ms ease;
 }
 .mn-dash .mn-toggle__btn.is-active { color: #fff; }
-/* When a tab holds badged cards, colour the whole tab and show a white count badge
-   (with a coloured number) before the label. */
+/* When a tab holds badged cards it becomes part of the switch: an inactive
+   attention tab shows a resting colour segment styled like the sliding thumb
+   (below); an active attention tab colours the thumb itself instead (further
+   below) — so the two never overlap. A white count badge sits before the label. */
 .mn-dash .mn-toggle__btn[data-dot] { border-radius: 999px; color: #fff; }
-.mn-dash .mn-toggle__btn[data-dot="red"] { background: var(--accent-red, #dc2626); }
-.mn-dash .mn-toggle__btn[data-dot="green"] { background: var(--accent-green, #16a34a); }
+.mn-dash .mn-toggle__btn[data-dot="red"]:not(.is-active) {
+  background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
+  box-shadow: 0 2px 8px rgba(220,38,38,0.22);
+}
+.mn-dash .mn-toggle__btn[data-dot="green"]:not(.is-active) {
+  background: linear-gradient(180deg, var(--accent-green, #16a34a), #15803d);
+  box-shadow: 0 2px 8px rgba(22,163,74,0.22);
+}
 .mn-dash .mn-toggle__btn[data-dot]::before {
   content: attr(data-count);
   display: inline-flex; align-items: center; justify-content: center;
@@ -191,6 +199,15 @@
   box-shadow: 0 6px 16px rgba(10,132,255,0.35);
   transition: left 260ms cubic-bezier(.22,.61,.36,1), width 260ms cubic-bezier(.22,.61,.36,1);
   z-index: 0;
+}
+/* Active attention tab → the thumb carries the colour (not azure). */
+.mn-dash .mn-toggle__thumb[data-dot="red"] {
+  background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
+  box-shadow: 0 6px 16px rgba(220,38,38,0.35);
+}
+.mn-dash .mn-toggle__thumb[data-dot="green"] {
+  background: linear-gradient(180deg, var(--accent-green, #16a34a), #15803d);
+  box-shadow: 0 6px 16px rgba(22,163,74,0.32);
 }
 
 /* ── Top row: calendar + detail ────────────────────────────────────────────── */

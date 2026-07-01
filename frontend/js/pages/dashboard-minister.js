@@ -190,6 +190,10 @@
     if (!active) return;
     toggleThumb.style.left = active.offsetLeft + 'px';
     toggleThumb.style.width = active.offsetWidth + 'px';
+    // When the active tab needs attention, the thumb carries its colour.
+    const dot = active.getAttribute('data-dot');
+    if (dot) toggleThumb.setAttribute('data-dot', dot);
+    else toggleThumb.removeAttribute('data-dot');
   }
   window.addEventListener('resize', positionThumb);
 
