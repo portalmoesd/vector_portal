@@ -4,6 +4,7 @@
     "markAllRead": "ყველას წაკითხულად მონიშვნა",
     "now": "ახლა",
     "eventCreated": "შეიქმნა ახალი ღონისძიება: {event}",
+    "completed": "დოკუმენტი მზადაა: {event}",
     "yourTurn": "ელოდება თქვენს დადასტურებას — {section} · {event}",
     "returned": "{section} დაგიბრუნდათ · {event}"
   },
