@@ -2,6 +2,7 @@
   "notif": {
     "title": "Notifications",
     "markAllRead": "Mark all read",
+    "showAll": "Show all ({n})",
     "now": "now",
     "eventCreated": "New event created: {event}",
     "completed": "Document ready: {event}",

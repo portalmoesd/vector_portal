@@ -1314,7 +1314,9 @@
 
   // The create button and the notification center live in the overview side
   // column (#mnSide), to the right of the calendar.
-  let notifPanel, notifListEl, notifBadgeEl;
+  const NOTIF_INLINE_LIMIT = 5;
+  let notifPanel, notifListEl, notifBadgeEl, notifShowAllEl;
+  let notifAll = [];
   function buildNotifPanel() {
     const side = document.getElementById('mnSide');
     if (!side) return;
@@ -1325,15 +1327,41 @@
       <div class="mn-notifs__head">
         <span class="mn-notifs__title">${escapeHtml(I18n.tr('notif.title'))}<span class="mn-notifs__badge" hidden></span></span>
       </div>
-      <ul class="mn-notifs__list"></ul>`;
+      <ul class="mn-notifs__list"></ul>
+      <button type="button" class="mn-notifs__showall" hidden></button>`;
     side.appendChild(notifPanel);
     notifListEl = notifPanel.querySelector('.mn-notifs__list');
     notifBadgeEl = notifPanel.querySelector('.mn-notifs__badge');
+    notifShowAllEl = notifPanel.querySelector('.mn-notifs__showall');
+    notifShowAllEl.addEventListener('click', openNotifModal);
+  }
+
+  // Render notification rows into a <ul>, wiring the click behaviour (mark read →
+  // reveal the event → refresh). `onAfterClick` lets the modal close itself.
+  function renderNotifRows(ulEl, list, onAfterClick) {
+    ulEl.innerHTML = list.map(n => `
+      <li class="mn-notif ${n.isRead ? '' : 'is-unread'}" data-id="${n.id}" data-type="${n.type}" data-event="${n.eventId || ''}" data-section="${n.sectionId || ''}">
+        <span class="mn-notif__icon">${NOTIF_ICON[n.type] || NOTIF_ICON.your_turn}</span>
+        <span class="mn-notif__msg">${escapeHtml(notifMessage(n))}</span>
+        <span class="mn-notif__time">${escapeHtml(notifTimeAgo(n.createdAt))}</span>
+      </li>`).join('');
+    ulEl.querySelectorAll('.mn-notif').forEach(li => {
+      li.addEventListener('click', async () => {
+        try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
+        if (onAfterClick) onAfterClick();
+        // Switch to the tab holding the event and select it (no jump to editor).
+        // Works for read and unread alike; revealEvent refreshes + retries so an
+        // older read notification still opens its event.
+        if (li.dataset.event) await revealEvent(parseInt(li.dataset.event, 10));
+        loadNotifications();
+      });
+    });
   }
 
   function renderNotifications(data) {
     if (!notifPanel) return;
     const list = (data && data.notifications) || [];
+    notifAll = list;
     // Recompute the card attention dots (event needs the user's attention).
     // Only re-render the card list when the set actually changes, so the ~45s
     // poll doesn't disrupt an expanded card.
@@ -1352,22 +1380,44 @@
     const unread = (data && data.unreadCount) || 0;
     notifBadgeEl.textContent = unread ? String(unread) : '';
     notifBadgeEl.hidden = !unread;
-    notifListEl.innerHTML = list.map(n => `
-      <li class="mn-notif ${n.isRead ? '' : 'is-unread'}" data-id="${n.id}" data-type="${n.type}" data-event="${n.eventId || ''}" data-section="${n.sectionId || ''}">
-        <span class="mn-notif__icon">${NOTIF_ICON[n.type] || NOTIF_ICON.your_turn}</span>
-        <span class="mn-notif__msg">${escapeHtml(notifMessage(n))}</span>
-        <span class="mn-notif__time">${escapeHtml(notifTimeAgo(n.createdAt))}</span>
-      </li>`).join('');
-    notifListEl.querySelectorAll('.mn-notif').forEach(li => {
-      li.addEventListener('click', async () => {
-        try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
-        // Switch to the tab holding the event and select it (no jump to editor).
-        // Works for read and unread alike; revealEvent refreshes + retries so an
-        // older read notification still opens its event.
-        if (li.dataset.event) await revealEvent(parseInt(li.dataset.event, 10));
-        loadNotifications();
-      });
-    });
+    renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
+    const more = list.length > NOTIF_INLINE_LIMIT;
+    notifShowAllEl.hidden = !more;
+    if (more) notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
+    // Keep an open modal in sync with the freshly polled list.
+    if (notifModal && notifModal.style.display !== 'none') {
+      renderNotifRows(notifModal.querySelector('.mn-notifs__list'), notifAll, hideNotifModal);
+    }
+  }
+
+  // ── "Show all" popup listing every notification ─────────────────────────────
+  let notifModal = null;
+  function getNotifModal() {
+    if (notifModal) return notifModal;
+    const overlay = document.createElement('div');
+    overlay.className = 'modal-overlay';
+    overlay.style.display = 'none';
+    overlay.innerHTML = `
+      <div class="modal-card mn-dash" style="max-width:520px;max-height:80vh;display:flex;flex-direction:column;">
+        <div class="mn-notifs__head" style="margin-bottom:12px;">
+          <h3 style="margin:0;">${escapeHtml(I18n.tr('notif.title'))}</h3>
+        </div>
+        <ul class="mn-notifs__list" style="flex:1;"></ul>
+        <div style="margin-top:14px;display:flex;justify-content:flex-end;">
+          <button class="btn btn-outline" data-i18n="common.close">${escapeHtml(I18n.tr('common.close'))}</button>
+        </div>
+      </div>`;
+    document.body.appendChild(overlay);
+    overlay.querySelector('.btn-outline').addEventListener('click', hideNotifModal);
+    overlay.addEventListener('click', (e) => { if (e.target === overlay) hideNotifModal(); });
+    notifModal = overlay;
+    return overlay;
+  }
+  function hideNotifModal() { if (notifModal) notifModal.style.display = 'none'; }
+  function openNotifModal() {
+    const overlay = getNotifModal();
+    renderNotifRows(overlay.querySelector('.mn-notifs__list'), notifAll, hideNotifModal);
+    overlay.style.display = 'flex';
   }
 
   async function loadNotifications() {
