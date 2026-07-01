@@ -196,8 +196,8 @@
   // ── Helpers ────────────────────────────────────────────────────────────────
   function isOwned(item) { return item.documentSubmitterId === user.id; }
 
-  function activeItems() {
-    switch (mode) {
+  function itemsForMode(m) {
+    switch (m) {
       case 'completed': return completed;
       case 'upcoming': return upcoming;
       // Meetings = events they own (ready + in-preparation), unified.
@@ -206,6 +206,28 @@
       case 'tasks': return upcoming.filter(i => !isOwned(i));
       default: return [];
     }
+  }
+  function activeItems() { return itemsForMode(mode); }
+
+  // A tab shows a dot when its list holds a badged card: red (attention on an
+  // in-progress event) takes precedence, else green (a ready, unopened document).
+  function tabDotColor(m) {
+    const items = itemsForMode(m);
+    if (items.some(d => !d._ready && attnEvents.has(String(d.id)))) return 'red';
+    if (items.some(d => d._ready && readyEvents.has(String(d.id)))) return 'green';
+    return null;
+  }
+  function updateTabDots() {
+    toggleBtns.forEach(btn => {
+      const old = btn.querySelector('.mn-toggle__dot');
+      if (old) old.remove();
+      const color = tabDotColor(btn.dataset.mode);
+      if (color) {
+        const dot = document.createElement('span');
+        dot.className = `mn-toggle__dot mn-toggle__dot--${color}`;
+        btn.appendChild(dot);
+      }
+    });
   }
 
   // The date a calendar marker / grouping keys off, per mode.
@@ -464,6 +486,7 @@
   }
 
   function renderList() {
+    updateTabDots();
     const items = getFiltered();
     if (items.length === 0) {
       const emptyKey = { completed: 'dashboard.noCompleted', upcoming: 'dashboard.noUpcoming',
