@@ -256,22 +256,17 @@
   background: rgba(10,132,255,0.18);
 }
 /* Non-owned ("other") event days are coloured by attention, not ownership: red when it's
-   the user's turn to act, orange when it's a newly-added event, grey when nothing is
-   pending. The level class sets --mn-other (dot) and --mn-other-tint (day background). */
+   the user's turn to act, orange otherwise. The level class sets --mn-other (dot) and
+   --mn-other-tint (day background). */
 .mn-dash .dp-cal-grid__day--lvl-act {
   --mn-other: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
   --mn-other-tint: rgba(220,38,38,0.09);
   --mn-other-tint-h: rgba(220,38,38,0.18);
 }
-.mn-dash .dp-cal-grid__day--lvl-new {
+.mn-dash .dp-cal-grid__day--lvl-other {
   --mn-other: linear-gradient(180deg, var(--accent-orange, #f97316), #ea580c);
   --mn-other-tint: rgba(249,115,22,0.10);
   --mn-other-tint-h: rgba(249,115,22,0.20);
-}
-.mn-dash .dp-cal-grid__day--lvl-none {
-  --mn-other: linear-gradient(180deg, #94a3b8, #64748b);
-  --mn-other-tint: rgba(148,163,184,0.14);
-  --mn-other-tint-h: rgba(148,163,184,0.26);
 }
 .mn-dash .dp-cal-grid__day--has-event-other {
   background: var(--mn-other-tint);
