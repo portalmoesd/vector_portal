@@ -259,6 +259,18 @@
 .mn-dash .dp-cal-grid__day--has-event-other:hover {
   background: rgba(220,38,38,0.18);
 }
+/* Hybrid (Deputy/Supervisor) calendar: a day carrying BOTH an owned meeting and an
+   other-event shows two dots — blue (meeting) + red (other). The base --has-event
+   blue ::after is nudged left; a red ::before is added to its right. */
+.mn-dash .dp-cal-grid__day--has-event-both::after { left: calc(50% - 4px); }
+.mn-dash .dp-cal-grid__day--has-event-both::before {
+  content: "";
+  position: absolute;
+  left: calc(50% + 4px); transform: translateX(-50%);
+  bottom: 3px;
+  width: 5px; height: 5px; border-radius: 50%;
+  background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
+}
 
 /* ── Event cards (below) — two per row on desktop, tall card layout ─────────── */
 .mn-dash .mn-list {
