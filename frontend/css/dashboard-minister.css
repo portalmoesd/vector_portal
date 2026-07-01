@@ -275,8 +275,8 @@
    the visible curve sits ~6px inside the sharp corner — offset accordingly so the
    dot straddles the curved outer edge instead of floating in the corner void). */
 .mn-dash .mn-card__attn {
-  position: absolute; top: -2px; right: -2px; z-index: 2;
-  width: 16px; height: 16px; border-radius: 50%;
+  position: absolute; top: -5px; right: -5px; z-index: 2;
+  width: 22px; height: 22px; border-radius: 50%;
   background: var(--accent-red, #dc2626);
   box-shadow: 0 0 0 1.5px #fff;
 }
