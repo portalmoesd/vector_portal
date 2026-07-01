@@ -1522,10 +1522,10 @@
     else if (newEventIds.size) notifBadgeEl.classList.add('is-new');
     else if (readyEvents.size) notifBadgeEl.classList.add('is-ready');
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
-    // "Show all" only makes sense when there are more than the inline preview shows.
-    const more = list.length > NOTIF_INLINE_LIMIT;
-    notifShowAllEl.hidden = !more;
-    if (more) notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
+    // "Show all" opens the full list in a modal — always offer it while any
+    // notifications exist (the panel itself is hidden when the list is empty).
+    notifShowAllEl.hidden = false;
+    notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
     // Keep an open modal in sync with the freshly polled list.
     if (notifModal && notifModal.style.display !== 'none') {
       renderNotifRows(notifModal.querySelector('.mn-notifs__list'), notifAll, hideNotifModal);
