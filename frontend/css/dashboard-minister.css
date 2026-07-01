@@ -181,8 +181,10 @@
   font-size: 0.68rem; font-weight: 800; line-height: 1; color: #fff;
 }
 .mn-dash .mn-toggle__btn[data-dot="red"]::before { background: var(--accent-red, #dc2626); }
+.mn-dash .mn-toggle__btn[data-dot="orange"]::before { background: var(--accent-orange, #f97316); }
 .mn-dash .mn-toggle__btn[data-dot="green"]::before { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-toggle__btn[data-dot="red"].is-active::before { background: #fff; color: var(--accent-red, #dc2626); }
+.mn-dash .mn-toggle__btn[data-dot="orange"].is-active::before { background: #fff; color: var(--accent-orange, #f97316); }
 .mn-dash .mn-toggle__btn[data-dot="green"].is-active::before { background: #fff; color: var(--accent-green, #16a34a); }
 /* sliding thumb */
 .mn-dash .mn-toggle__thumb {
@@ -198,6 +200,10 @@
 .mn-dash .mn-toggle__thumb[data-dot="red"] {
   background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
   box-shadow: 0 6px 16px rgba(220,38,38,0.35);
+}
+.mn-dash .mn-toggle__thumb[data-dot="orange"] {
+  background: linear-gradient(180deg, var(--accent-orange, #f97316), #ea580c);
+  box-shadow: 0 6px 16px rgba(249,115,22,0.35);
 }
 .mn-dash .mn-toggle__thumb[data-dot="green"] {
   background: linear-gradient(180deg, var(--accent-green, #16a34a), #15803d);
@@ -249,19 +255,36 @@
 .mn-dash .dp-cal-grid__day--has-event:hover {
   background: rgba(10,132,255,0.18);
 }
-/* Non-owned event days → faded red (overrides the blue tint + dot above). */
+/* Non-owned ("other") event days are coloured by attention, not ownership: red when it's
+   the user's turn to act, orange when it's a newly-added event, grey when nothing is
+   pending. The level class sets --mn-other (dot) and --mn-other-tint (day background). */
+.mn-dash .dp-cal-grid__day--lvl-act {
+  --mn-other: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
+  --mn-other-tint: rgba(220,38,38,0.09);
+  --mn-other-tint-h: rgba(220,38,38,0.18);
+}
+.mn-dash .dp-cal-grid__day--lvl-new {
+  --mn-other: linear-gradient(180deg, var(--accent-orange, #f97316), #ea580c);
+  --mn-other-tint: rgba(249,115,22,0.10);
+  --mn-other-tint-h: rgba(249,115,22,0.20);
+}
+.mn-dash .dp-cal-grid__day--lvl-none {
+  --mn-other: linear-gradient(180deg, #94a3b8, #64748b);
+  --mn-other-tint: rgba(148,163,184,0.14);
+  --mn-other-tint-h: rgba(148,163,184,0.26);
+}
 .mn-dash .dp-cal-grid__day--has-event-other {
-  background: rgba(220,38,38,0.09);
+  background: var(--mn-other-tint);
 }
 .mn-dash .dp-cal-grid__day--has-event-other::after {
-  background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
+  background: var(--mn-other);
 }
 .mn-dash .dp-cal-grid__day--has-event-other:hover {
-  background: rgba(220,38,38,0.18);
+  background: var(--mn-other-tint-h);
 }
 /* Hybrid (Deputy/Supervisor) calendar: a day carrying BOTH an owned meeting and an
-   other-event shows two dots — blue (meeting) + red (other). The base --has-event
-   blue ::after is nudged left; a red ::before is added to its right. */
+   other-event shows two dots — blue (meeting) + the attention-coloured other dot. The
+   base --has-event blue ::after is nudged left; the other dot ::before is added right. */
 .mn-dash .dp-cal-grid__day--has-event-both::after { left: calc(50% - 4px); }
 .mn-dash .dp-cal-grid__day--has-event-both::before {
   content: "";
@@ -269,7 +292,7 @@
   left: calc(50% + 4px); transform: translateX(-50%);
   bottom: 3px;
   width: 5px; height: 5px; border-radius: 50%;
-  background: linear-gradient(180deg, var(--accent-red, #dc2626), #b91c1c);
+  background: var(--mn-other);
 }
 
 /* ── Event cards (below) — two per row on desktop, tall card layout ─────────── */
@@ -322,6 +345,9 @@
 }
 /* Green variant: a ready document the user hasn't opened yet. */
 .mn-dash .mn-card__attn--ready { background: var(--accent-green, #16a34a); }
+/* Orange variant: a newly-added event the user hasn't opened yet. (Base .mn-card__attn is
+   red = your turn to act.) */
+.mn-dash .mn-card__attn--new { background: var(--accent-orange, #f97316); }
 .mn-dash .mn-list .mn-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
@@ -425,8 +451,11 @@
   min-width: 20px; height: 20px; padding: 0 6px; border-radius: 99px;
   font-size: 0.72rem; font-weight: 800; color: #fff; background: var(--primary, #0a84ff);
 }
-/* Red while there are unread notifications; falls back to the blue base otherwise. */
+/* Count badge coloured by the most urgent pending category: red (act) → orange (new) →
+   green (ready) → blue base. */
 .mn-dash .mn-notifs__badge.is-alert { background: var(--accent-red, #dc2626); }
+.mn-dash .mn-notifs__badge.is-new { background: var(--accent-orange, #f97316); }
+.mn-dash .mn-notifs__badge.is-ready { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-notifs__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .mn-dash .mn-notif {
   display: flex; align-items: center; gap: 12px; padding: 10px 8px; cursor: pointer;
@@ -438,10 +467,15 @@
 .mn-dash .mn-notif__icon svg { width: 18px; height: 18px; }
 .mn-dash .mn-notif__msg { flex: 1; min-width: 0; font-size: 0.88rem; color: var(--text-secondary); }
 .mn-dash .mn-notif__time { flex: 0 0 auto; font-size: 0.72rem; color: var(--text-muted); }
-/* A new (unread) notification gets a faded-red background + red icon. */
+/* An unread notification is tinted by kind: red = your turn to act (your_turn / returned,
+   the default below), orange = a new event was added, green = a document is ready. */
 .mn-dash .mn-notif.is-unread { background: rgba(220,38,38,0.07); }
 .mn-dash .mn-notif.is-unread .mn-notif__msg { color: var(--text-primary); font-weight: 700; }
 .mn-dash .mn-notif.is-unread .mn-notif__icon { color: var(--accent-red, #dc2626); }
+.mn-dash .mn-notif.is-unread[data-type="event_created"] { background: rgba(249,115,22,0.08); }
+.mn-dash .mn-notif.is-unread[data-type="event_created"] .mn-notif__icon { color: var(--accent-orange, #f97316); }
+.mn-dash .mn-notif.is-unread[data-type="completed"] { background: rgba(22,163,74,0.08); }
+.mn-dash .mn-notif.is-unread[data-type="completed"] .mn-notif__icon { color: var(--accent-green, #16a34a); }
 /* "Show all" → a small text button in the header, top-right across from the title. */
 .mn-dash .mn-notifs__showall {
   flex: 0 0 auto; margin: 0; padding: 2px 6px;

@@ -86,9 +86,12 @@
   }
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
-  // Attention dots (iOS-style): events that are new or your-turn → card dot; the
-  // new-event subset clears when the card is opened. Derived from notifications.
-  let attnEvents = new Set();
+  // Attention dots (iOS-style), derived from notifications. Split by urgency:
+  //   actEvents   → it's the user's turn to act (your_turn / returned) → RED
+  //   newEventIds → a new event was added (event_created)              → ORANGE
+  // When an event is both, RED wins. The new-event (orange) subset clears when the card is
+  // opened; the act dot persists until the user acts.
+  let actEvents = new Set();
   let newEventIds = new Set();
   // Completed documents the user hasn't opened yet → green "ready" badge.
   let readyEvents = new Set();
@@ -234,13 +237,15 @@
   }
   function activeItems() { return itemsForMode(mode); }
 
-  // A tab shows a count badge before its label when its list holds badged cards:
-  // red (attention on in-progress events) takes precedence, else green (ready,
-  // unopened documents). The count is how many such cards the tab holds.
+  // A tab shows a count badge before its label when its list holds badged cards.
+  // Precedence: red (your turn to act) → orange (new event) → green (ready, unopened
+  // document). The count is how many cards of the shown category the tab holds.
   function tabBadge(m) {
     const items = itemsForMode(m);
-    const red = items.filter(d => !d._ready && attnEvents.has(String(d.id))).length;
-    if (red > 0) return { color: 'red', count: red };
+    const act = items.filter(d => !d._ready && actEvents.has(String(d.id))).length;
+    if (act > 0) return { color: 'red', count: act };
+    const isNew = items.filter(d => !d._ready && newEventIds.has(String(d.id)) && !actEvents.has(String(d.id))).length;
+    if (isNew > 0) return { color: 'orange', count: isNew };
     const green = items.filter(d => d._ready && readyEvents.has(String(d.id))).length;
     if (green > 0) return { color: 'green', count: green };
     return null;
@@ -401,8 +406,10 @@
     let attn = '';
     if (d._ready && readyEvents.has(String(d.id))) {
       attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}"></span>`;
-    } else if (!d._ready && attnEvents.has(String(d.id))) {
-      attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}"></span>`;
+    } else if (!d._ready && actEvents.has(String(d.id))) {
+      attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}"></span>`; // red: your turn
+    } else if (!d._ready && newEventIds.has(String(d.id))) {
+      attn = `<span class="mn-card__attn mn-card__attn--new" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeNew'))}"></span>`; // orange: new event
     }
     return `
       <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}" role="button" tabindex="0" aria-expanded="false">
@@ -1216,15 +1223,23 @@
     const month = date.getMonth();
     const todayT = tbilisiParts(); // today's date in Tbilisi (for the "today" cue)
 
+    // Owned event days are always light blue. Other (contributed) days are coloured by
+    // attention: red (your turn) > orange (new) > grey (nothing pending) — take the highest
+    // priority among that day's non-owned events.
     const ownedDates = new Set();
-    const otherDates = new Set();
+    const otherLevel = new Map(); // day -> 'act' | 'new' | 'none'
+    const RANK = { act: 3, new: 2, none: 1 };
     calendarItems().forEach(item => {
       const ds = calItemDate(item);
       if (!ds) return;
       const t = tbYmd(ds);
-      if (t.y === year && t.m === month + 1) {
-        (isOwned(item) ? ownedDates : otherDates).add(t.d);
-      }
+      if (t.y !== year || t.m !== month + 1) return;
+      if (isOwned(item)) { ownedDates.add(t.d); return; }
+      const id = String(item.id);
+      const lvl = actEvents.has(id) ? 'act' : newEventIds.has(id) ? 'new' : 'none';
+      // Set on first sight of the day (even 'none' so the day still gets a marker), then
+      // only upgrade to a higher priority.
+      if (!otherLevel.has(t.d) || RANK[lvl] > RANK[otherLevel.get(t.d)]) otherLevel.set(t.d, lvl);
     });
 
     let monthLabel, dayNames;
@@ -1253,7 +1268,8 @@
     for (let d = 1; d <= daysInMonth; d++) {
       const isToday = +todayT.year === year && +todayT.month === month + 1 && +todayT.day === d;
       const owned = ownedDates.has(d);
-      const other = otherDates.has(d);
+      const lvl = otherLevel.get(d);      // 'act' | 'new' | 'none' | undefined
+      const other = !!lvl;
       const hasEvent = owned || other;
       let cls = 'dp-cal-grid__day';
       if (isToday) cls += ' dp-cal-grid__day--today';
@@ -1261,9 +1277,14 @@
       // Hybrid calendar (Deputy/Supervisor): a day with both an owned meeting and an
       // other-event → two dots. Gated to hybrid roles so worker calendars, where a day
       // can also mix owned + non-owned upcoming items, keep their existing blue marker.
-      if (HYBRID_CAL && owned && other) cls += ' dp-cal-grid__day--has-event-both';
-      // A day with only non-owned events (user isn't the document owner) → red.
-      else if (!owned && other) cls += ' dp-cal-grid__day--has-event-other';
+      let otherMarker = '';
+      if (HYBRID_CAL && owned && other) otherMarker = 'has-event-both';
+      // A day with only non-owned events (user isn't the document owner).
+      else if (!owned && other) otherMarker = 'has-event-other';
+      if (otherMarker) {
+        // The other dot/tint is coloured by attention: red (act) / orange (new) / grey (none).
+        cls += ' dp-cal-grid__day--' + otherMarker + ' dp-cal-grid__day--lvl-' + lvl;
+      }
       // Marked days are interactive (select the event): expose them as buttons so
       // keyboard/screen-reader users can reach them, with the full date as the name.
       let dayAttrs = '';
@@ -1466,22 +1487,33 @@
     // Recompute the card attention dots (event needs the user's attention).
     // Only re-render the card list when the set actually changes, so the ~45s
     // poll doesn't disrupt an expanded card.
-    const ATTN = ['event_created', 'your_turn', 'returned'];
     const unreadList = list.filter(n => !n.isRead && n.eventId);
-    const nextAttn = new Set(unreadList.filter(n => ATTN.includes(n.type)).map(n => String(n.eventId)));
+    const nextAct = new Set(unreadList.filter(n => n.type === 'your_turn' || n.type === 'returned').map(n => String(n.eventId)));
+    const nextNew = new Set(unreadList.filter(n => n.type === 'event_created').map(n => String(n.eventId)));
     const nextReady = new Set(unreadList.filter(n => n.type === 'completed').map(n => String(n.eventId)));
     const setKey = (s) => [...s].sort().join(',');
-    const changed = setKey(nextAttn) !== setKey(attnEvents) || setKey(nextReady) !== setKey(readyEvents);
-    attnEvents = nextAttn;
+    // Re-render when any category changes (a new→act transition keeps the union but flips
+    // colours), so the tab/card/calendar signals stay in sync.
+    const changed = setKey(nextAct) !== setKey(actEvents)
+      || setKey(nextNew) !== setKey(newEventIds)
+      || setKey(nextReady) !== setKey(readyEvents);
+    actEvents = nextAct;
+    newEventIds = nextNew;
     readyEvents = nextReady;
-    newEventIds = new Set(unreadList.filter(n => n.type === 'event_created').map(n => String(n.eventId)));
-    if (changed) renderList();
+    // The calendar now colours other-event days by attention, so re-render it too (not just
+    // the list). Calendar re-render doesn't disturb an expanded card (that lives in the list).
+    if (changed) renderAll();
     if (!list.length) { notifPanel.hidden = true; return; }
     notifPanel.hidden = false;
     const unread = (data && data.unreadCount) || 0;
     notifBadgeEl.textContent = unread ? String(unread) : '';
     notifBadgeEl.hidden = !unread;
-    notifBadgeEl.classList.toggle('is-alert', unread > 0);
+    // Colour the count by the most urgent pending category: red (act) → orange (new) →
+    // green (ready) → base blue.
+    notifBadgeEl.classList.remove('is-alert', 'is-new', 'is-ready');
+    if (actEvents.size) notifBadgeEl.classList.add('is-alert');
+    else if (newEventIds.size) notifBadgeEl.classList.add('is-new');
+    else if (readyEvents.size) notifBadgeEl.classList.add('is-ready');
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
     // "Show all" only makes sense when there are more than the inline preview shows.
     const more = list.length > NOTIF_INLINE_LIMIT;
