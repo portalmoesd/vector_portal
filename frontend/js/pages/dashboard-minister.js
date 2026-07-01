@@ -37,6 +37,24 @@
   const miniCalendarEl = document.getElementById('miniCalendar');
   const keywordEl = document.getElementById('filterKeyword');
   const toggleBtns = Array.from(document.querySelectorAll('.mn-toggle__btn'));
+
+  // ── Accessibility wiring for the static markup shared by all role pages ──────
+  // Reflect the active locale on <html> so screen readers pronounce the runtime
+  // Georgian/English content correctly (the pages ship as lang="en-GB").
+  if (typeof I18n !== 'undefined' && I18n.getLocale) {
+    document.documentElement.lang = I18n.getLocale() === 'ka' ? 'ka' : 'en';
+  }
+  // The segmented control is a toggle, not an ARIA tablist (there's no tabpanel
+  // wiring); expose it as a labelled group of pressed-state buttons instead.
+  const toggleWrap = document.querySelector('.mn-toggle');
+  if (toggleWrap) {
+    toggleWrap.setAttribute('role', 'group');
+    toggleWrap.setAttribute('aria-label', I18n.tr('nav.dashboard') || 'Dashboard');
+  }
+  // Label the search field (placeholder alone is not an accessible name) and hide
+  // its decorative magnifier icon from assistive tech.
+  if (keywordEl) keywordEl.setAttribute('aria-label', I18n.tr('dashboard.searchLabel'));
+  document.querySelector('.mn-search__icon')?.setAttribute('aria-hidden', 'true');
   const toggleThumb = document.getElementById('mnToggleThumb');
 
   // Mode set per role:
@@ -185,6 +203,9 @@
 
   // Slide the segmented-toggle thumb under the active option.
   function positionThumb() {
+    // Keep the toggle's pressed state in sync for assistive tech (this runs on
+    // init, mode switch, and badge updates — the single place is-active changes).
+    toggleBtns.forEach(b => b.setAttribute('aria-pressed', b.classList.contains('is-active') ? 'true' : 'false'));
     if (!toggleThumb) return;
     const active = toggleBtns.find(b => b.classList.contains('is-active'));
     if (!active) return;
@@ -362,12 +383,12 @@
     // in-progress event needing their attention (new / their turn). Never both.
     let attn = '';
     if (d._ready && readyEvents.has(String(d.id))) {
-      attn = '<span class="mn-card__attn mn-card__attn--ready" aria-label="Document ready"></span>';
+      attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}"></span>`;
     } else if (!d._ready && attnEvents.has(String(d.id))) {
-      attn = '<span class="mn-card__attn" aria-label="Needs your attention"></span>';
+      attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}"></span>`;
     }
     return `
-      <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}">
+      <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}" role="button" tabindex="0" aria-expanded="false">
         ${attn}
         <div class="mn-card__head">
           <span class="mn-card__flag" title="${escapeHtml(country)}">${flag}</span>
@@ -512,10 +533,16 @@
     // Clicking a card toggles its inline-expanded detail (accordion). Clicks
     // inside an already-expanded card's detail don't collapse it.
     listEl.querySelectorAll('.mn-card[data-event-id]').forEach(card => {
-      card.addEventListener('click', (e) => {
+      const toggle = (e) => {
         if (e.target.closest('.mn-card__detail') || e.target.closest('.mn-card__close')) return;
         const id = card.dataset.eventId;
         select(String(id) === selectedId ? null : id);
+      };
+      card.addEventListener('click', toggle);
+      card.addEventListener('keydown', (e) => {
+        // Only act on the card itself, not on controls inside an expanded card.
+        if (e.target !== card) return;
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(e); }
       });
     });
 
@@ -526,6 +553,12 @@
       const item = itemById(selectedId);
       if (card && item) {
         card.classList.add('is-expanded');
+        // Expanded, the card is a container holding real buttons — drop the
+        // button role/tabindex (an interactive element must not nest buttons)
+        // and let the close button + inner controls carry the interaction.
+        card.setAttribute('aria-expanded', 'true');
+        card.removeAttribute('role');
+        card.removeAttribute('tabindex');
         const closeBtn = document.createElement('button');
         closeBtn.type = 'button';
         closeBtn.className = 'mn-card__close';
@@ -575,7 +608,7 @@
       <h4 class="mn-files__title">${escapeHtml(I18n.tr('dashboard.attachments'))}</h4>
       <ul class="mn-files">
         ${files.map((f, i) => `
-          <li class="mn-file" data-i="${i}">
+          <li class="mn-file" data-i="${i}" role="button" tabindex="0" aria-label="${escapeHtml(f.name)}">
             ${ICON_CLIP}
             <span class="mn-file__info">
               <span class="mn-file__name">${escapeHtml(f.name)}</span>
@@ -588,9 +621,13 @@
     `;
     container.querySelectorAll('.mn-file').forEach((li, i) => {
       const f = files[i];
-      li.addEventListener('click', () => {
+      const download = () => {
         if (f.kind === 'event') downloadEventFileAuth(eventId, f.id, f.name);
         else downloadFileAuth(f.id, f.name);
+      };
+      li.addEventListener('click', download);
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); download(); }
       });
     });
   }
@@ -775,7 +812,7 @@
           <div class="mn-prog__row">
             <div class="mn-prog__rowmain">
               <div class="mn-prog__titlerow">
-                ${sectionIsMyTurn(r.raw) ? '<span class="mn-prog__attn" aria-label="Your turn"></span>' : ''}
+                ${sectionIsMyTurn(r.raw) ? `<span class="mn-prog__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.yourTurn'))}"></span>` : ''}
                 <span class="mn-prog__title">${escapeHtml(r.title)}</span>
               </div>
               ${actionsHtml ? `<div class="mn-prog__actionrow">${actionsHtml}</div>` : ''}
@@ -1143,21 +1180,33 @@
     return I18n.tr('dashboard.stageWith').replace('{role}', roleLabel(role));
   }
 
+  // Year/Month/Day of an instant in Tbilisi time — the same zone the event cards
+  // display (fmtEventWhen). Keying the calendar off this (not the browser-local
+  // date) keeps a marker on the same day its card shows for viewers outside
+  // UTC+4; for Tbilisi browsers it is identical to the local date.
+  function tbYmd(iso) {
+    const p = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Asia/Tbilisi', year: 'numeric', month: '2-digit', day: '2-digit',
+    }).formatToParts(new Date(iso)).forEach(x => { p[x.type] = x.value; });
+    return { y: +p.year, m: +p.month, d: +p.day, key: `${p.year}-${p.month}-${p.day}` };
+  }
+
   // ── Calendar (adapted from dashboard-pipeline.js renderMiniCalendar) ─────────
   function renderCalendar(date) {
     calendarDate = date;
     const year = date.getFullYear();
     const month = date.getMonth();
-    const today = new Date();
+    const todayT = tbilisiParts(); // today's date in Tbilisi (for the "today" cue)
 
     const ownedDates = new Set();
     const otherDates = new Set();
     activeItems().forEach(item => {
       const ds = itemDate(item);
       if (!ds) return;
-      const d = new Date(ds);
-      if (d.getFullYear() === year && d.getMonth() === month) {
-        (isOwned(item) ? ownedDates : otherDates).add(d.getDate());
+      const t = tbYmd(ds);
+      if (t.y === year && t.m === month + 1) {
+        (isOwned(item) ? ownedDates : otherDates).add(t.d);
       }
     });
 
@@ -1185,7 +1234,7 @@
       daysHtml += '<span class="dp-cal-grid__day dp-cal-grid__day--empty"></span>';
     }
     for (let d = 1; d <= daysInMonth; d++) {
-      const isToday = today.getFullYear() === year && today.getMonth() === month && today.getDate() === d;
+      const isToday = +todayT.year === year && +todayT.month === month + 1 && +todayT.day === d;
       const owned = ownedDates.has(d);
       const other = otherDates.has(d);
       const hasEvent = owned || other;
@@ -1194,15 +1243,22 @@
       if (hasEvent) cls += ' dp-cal-grid__day--has-event';
       // A day with only non-owned events (user isn't the document owner) → red.
       if (!owned && other) cls += ' dp-cal-grid__day--has-event-other';
-      const dateAttr = hasEvent ? ` data-cal-date="${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}"` : '';
-      daysHtml += `<span class="${cls}"${dateAttr}>${d}</span>`;
+      // Marked days are interactive (select the event): expose them as buttons so
+      // keyboard/screen-reader users can reach them, with the full date as the name.
+      let dayAttrs = '';
+      if (hasEvent) {
+        const label = longDate(new Date(year, month, d));
+        dayAttrs = ` data-cal-date="${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}"`
+          + ` role="button" tabindex="0" aria-label="${escapeHtml(label)}"`;
+      }
+      daysHtml += `<span class="${cls}"${dayAttrs}>${d}</span>`;
     }
 
     miniCalendarEl.innerHTML = `
       <div class="dp-cal-header">
-        <button class="dp-cal-nav" id="calPrev">&lsaquo;</button>
+        <button class="dp-cal-nav" id="calPrev" aria-label="${escapeHtml(I18n.tr('dashboard.prevMonth'))}"><span aria-hidden="true">&lsaquo;</span></button>
         <span class="dp-cal-header__title">${escapeHtml(monthLabel)}</span>
-        <button class="dp-cal-nav" id="calNext">&rsaquo;</button>
+        <button class="dp-cal-nav" id="calNext" aria-label="${escapeHtml(I18n.tr('dashboard.nextMonth'))}"><span aria-hidden="true">&rsaquo;</span></button>
       </div>
       <div class="dp-cal-grid">${daysHtml}</div>
     `;
@@ -1210,18 +1266,19 @@
     document.getElementById('calPrev')?.addEventListener('click', () => renderCalendar(new Date(year, month - 1, 1)));
     document.getElementById('calNext')?.addEventListener('click', () => renderCalendar(new Date(year, month + 1, 1)));
 
-    // Click a marked date → select (expand) the first matching event.
+    // Click (or Enter/Space) a marked date → select (expand) the first matching event.
+    const selectByCalDate = (clicked) => {
+      const match = activeItems().find(item => {
+        const ds = itemDate(item);
+        if (!ds) return false;
+        return tbYmd(ds).key === clicked; // Tbilisi day, matching how days are marked
+      });
+      if (match) select(match.id);
+    };
     miniCalendarEl.querySelectorAll('[data-cal-date]').forEach(day => {
-      day.addEventListener('click', () => {
-        const clicked = day.dataset.calDate; // YYYY-MM-DD
-        const match = activeItems().find(item => {
-          const ds = itemDate(item);
-          if (!ds) return false;
-          const d = new Date(ds);
-          const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-          return key === clicked;
-        });
-        if (match) select(match.id);
+      day.addEventListener('click', () => selectByCalDate(day.dataset.calDate));
+      day.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectByCalDate(day.dataset.calDate); }
       });
     });
   }
@@ -1351,13 +1408,13 @@
   // reveal the event → refresh). `onAfterClick` lets the modal close itself.
   function renderNotifRows(ulEl, list, onAfterClick) {
     ulEl.innerHTML = list.map(n => `
-      <li class="mn-notif ${n.isRead ? '' : 'is-unread'}" data-id="${n.id}" data-type="${n.type}" data-event="${n.eventId || ''}" data-section="${n.sectionId || ''}">
-        <span class="mn-notif__icon">${NOTIF_ICON[n.type] || NOTIF_ICON.your_turn}</span>
+      <li class="mn-notif ${n.isRead ? '' : 'is-unread'}" data-id="${n.id}" data-type="${n.type}" data-event="${n.eventId || ''}" data-section="${n.sectionId || ''}" role="button" tabindex="0">
+        <span class="mn-notif__icon" aria-hidden="true">${NOTIF_ICON[n.type] || NOTIF_ICON.your_turn}</span>
         <span class="mn-notif__msg">${escapeHtml(notifMessage(n))}</span>
         <span class="mn-notif__time">${escapeHtml(notifTimeAgo(n.createdAt))}</span>
       </li>`).join('');
     ulEl.querySelectorAll('.mn-notif').forEach(li => {
-      li.addEventListener('click', async () => {
+      const open = async () => {
         try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
         if (onAfterClick) onAfterClick();
         // Switch to the tab holding the event and select it (no jump to editor).
@@ -1365,6 +1422,10 @@
         // older read notification still opens its event.
         if (li.dataset.event) await revealEvent(parseInt(li.dataset.event, 10));
         loadNotifications();
+      };
+      li.addEventListener('click', open);
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
       });
     });
   }
@@ -1393,7 +1454,8 @@
     notifBadgeEl.hidden = !unread;
     notifBadgeEl.classList.toggle('is-alert', unread > 0);
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
-    const more = list.length > 0;
+    // "Show all" only makes sense when there are more than the inline preview shows.
+    const more = list.length > NOTIF_INLINE_LIMIT;
     notifShowAllEl.hidden = !more;
     if (more) notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
     // Keep an open modal in sync with the freshly polled list.
