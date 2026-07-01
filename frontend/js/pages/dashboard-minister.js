@@ -268,6 +268,23 @@
     return item.deadlineDate; // upcoming | tasks
   }
 
+  // Deputy/Supervisor get a hybrid calendar: their meetings AND the events they
+  // contribute to, shown together regardless of the active list tab. (Minister has
+  // no 'tasks'; worker roles use completed/upcoming — both keep the tab-scoped calendar.)
+  const HYBRID_CAL = isOwner && !isMinister;
+
+  // Items whose day-markers the calendar shows for the current view.
+  function calendarItems() {
+    return HYBRID_CAL ? itemsForMode('meetings').concat(itemsForMode('tasks')) : activeItems();
+  }
+
+  // Marker day for an item, independent of the active tab in the hybrid case:
+  // owned events key off the meeting time, others off their deadline.
+  function calItemDate(item) {
+    if (HYBRID_CAL) return isOwned(item) ? item.eventDateTime : item.deadlineDate;
+    return itemDate(item);
+  }
+
   function itemById(id) {
     return activeItems().find(d => String(d.id) === String(id)) || null;
   }
@@ -1201,8 +1218,8 @@
 
     const ownedDates = new Set();
     const otherDates = new Set();
-    activeItems().forEach(item => {
-      const ds = itemDate(item);
+    calendarItems().forEach(item => {
+      const ds = calItemDate(item);
       if (!ds) return;
       const t = tbYmd(ds);
       if (t.y === year && t.m === month + 1) {
@@ -1241,8 +1258,12 @@
       let cls = 'dp-cal-grid__day';
       if (isToday) cls += ' dp-cal-grid__day--today';
       if (hasEvent) cls += ' dp-cal-grid__day--has-event';
+      // Hybrid calendar (Deputy/Supervisor): a day with both an owned meeting and an
+      // other-event → two dots. Gated to hybrid roles so worker calendars, where a day
+      // can also mix owned + non-owned upcoming items, keep their existing blue marker.
+      if (HYBRID_CAL && owned && other) cls += ' dp-cal-grid__day--has-event-both';
       // A day with only non-owned events (user isn't the document owner) → red.
-      if (!owned && other) cls += ' dp-cal-grid__day--has-event-other';
+      else if (!owned && other) cls += ' dp-cal-grid__day--has-event-other';
       // Marked days are interactive (select the event): expose them as buttons so
       // keyboard/screen-reader users can reach them, with the full date as the name.
       let dayAttrs = '';
@@ -1268,12 +1289,20 @@
 
     // Click (or Enter/Space) a marked date → select (expand) the first matching event.
     const selectByCalDate = (clicked) => {
-      const match = activeItems().find(item => {
-        const ds = itemDate(item);
-        if (!ds) return false;
-        return tbYmd(ds).key === clicked; // Tbilisi day, matching how days are marked
+      const match = calendarItems().find(item => {
+        const ds = calItemDate(item);
+        return ds && tbYmd(ds).key === clicked; // Tbilisi day, matching how days are marked
       });
-      if (match) select(match.id);
+      if (!match) return;
+      if (HYBRID_CAL) {
+        // The event may live on the other tab — revealEvent switches to it, opens the
+        // card and scrolls to it. Keep the calendar on the month the user is viewing
+        // (setMode otherwise resets it to the current month).
+        const viewed = calendarDate;
+        Promise.resolve(revealEvent(match.id)).then(() => renderCalendar(viewed));
+      } else {
+        select(match.id);
+      }
     };
     miniCalendarEl.querySelectorAll('[data-cal-date]').forEach(day => {
       day.addEventListener('click', () => selectByCalDate(day.dataset.calDate));
