@@ -271,10 +271,11 @@
   box-shadow: var(--shadow-sm);
   transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
-/* iOS app-badge: centred on the card's top-right corner, the outer border line
-   running through the middle of the dot (half on the card, half off). */
+/* iOS app-badge: centred on the card's ROUNDED top-right corner (radius 22px, so
+   the visible curve sits ~6px inside the sharp corner — offset accordingly so the
+   dot straddles the curved outer edge instead of floating in the corner void). */
 .mn-dash .mn-card__attn {
-  position: absolute; top: -8px; right: -8px; z-index: 2;
+  position: absolute; top: -2px; right: -2px; z-index: 2;
   width: 16px; height: 16px; border-radius: 50%;
   background: var(--accent-red, #dc2626);
   box-shadow: 0 0 0 1.5px #fff;
