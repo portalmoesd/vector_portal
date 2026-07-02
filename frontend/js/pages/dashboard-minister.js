@@ -1178,7 +1178,15 @@
             if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmPull'), { confirmLabel: I18n.tr('editor.pullSection'), confirmColor: '#7c3aed' })) return;
             await Api.post('/api/workflow/pull-section', { eventId: evId, sectionId });
           }
-          // Refresh the progress block in place (the section list expands again).
+          // Approve / push / pull change document-wide state (and can complete the
+          // document) — a full reload guarantees the whole dashboard reflects the new
+          // state (this also covers "refresh when the document is ready").
+          if (action === 'approve' || action === 'push-section' || action === 'pull-section') {
+            location.reload();
+            return;
+          }
+          // Other actions (submit / return / ask-to-return): refresh the progress block
+          // in place (the section list expands again).
           const list = container.querySelector('#mnProgList');
           const wasOpen = list && !list.hasAttribute('hidden');
           await loadProgress(evId, container);
