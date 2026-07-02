@@ -2531,6 +2531,9 @@
       // stack — the browser's history knows nothing about tracked markup.
       if (e.inputType === 'historyUndo') { e.preventDefault(); performUndo(); return; }
       if (e.inputType === 'historyRedo') { e.preventDefault(); performRedo(); return; }
+      // During IME composition the events are non-cancelable and the browser
+      // owns the DOM — let it work natively; compositionend wraps the result.
+      if (e.isComposing || composing) return;
       if (!TC_INPUT_TYPES.has(e.inputType)) return;
 
       const type = e.inputType;
@@ -2685,6 +2688,56 @@
 
       if (isDeleteOp) ensureBodyHasParagraph();
       updateTcBar();
+    });
+
+    // ── IME / composition input (autocorrect, dead keys, mobile keyboards) ──
+    // insertCompositionText is not cancelable, so composed text cannot be
+    // intercepted in beforeinput like normal typing. Instead the browser
+    // inserts it natively and compositionend wraps the final composed text in
+    // a tracked <ins>. Known limitation: if a composition *replaces* a
+    // non-collapsed selection, the replaced text is not recorded as a tracked
+    // deletion (mutating the DOM at compositionstart aborts composition in
+    // some browsers).
+    let composing = null;
+
+    body.addEventListener('compositionstart', () => {
+      if (!body.isContentEditable) return;
+      pushUndo();
+      composing = {};
+    });
+
+    body.addEventListener('compositionend', e => {
+      const wasComposing = composing;
+      composing = null;
+      if (!wasComposing || !e.data) { updateTcBar(); return; }
+      try {
+        const sel = window.getSelection();
+        if (!sel || !sel.rangeCount) return;
+        const caret = sel.getRangeAt(0);
+        if (!caret.collapsed || caret.startContainer.nodeType !== Node.TEXT_NODE) return;
+        const node = caret.startContainer;
+        const end = caret.startOffset;
+        const start = end - e.data.length;
+        // Only wrap when the composed text sits exactly before the caret —
+        // anything else means the browser did something we can't attribute.
+        if (start < 0 || node.textContent.slice(start, end) !== e.data) return;
+        // Already inside one of our own insertions — nothing to mark.
+        if (getSelfIns(node)) return;
+        const range = document.createRange();
+        range.setStart(node, start);
+        range.setEnd(node, end);
+        const ins = document.createElement('ins');
+        ins.setAttribute('data-tc-id', newTcId());
+        applyAuthorAttrs(ins);
+        ins.appendChild(range.extractContents());
+        range.insertNode(ins);
+        const r = document.createRange();
+        r.setStart(ins.firstChild, ins.firstChild.length);
+        r.collapse(true);
+        sel.removeAllRanges(); sel.addRange(r);
+        mergeAdjacentIns();
+      } catch (_) { /* fall back to untracked rather than corrupt the DOM */ }
+      finally { updateTcBar(); }
     });
 
     // ── Active state update ──────────────────────────────────────────────────

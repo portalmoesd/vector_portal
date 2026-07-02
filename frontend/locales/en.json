@@ -504,6 +504,8 @@
     "pullSection": "Pull Section",
     "saved": "Saved successfully",
     "saveFailed": "Save failed:",
+    "conflict": "Could not save — {name} modified this section after you opened it. Reload the page to see the latest version.",
+    "conflictSomeone": "another user",
     "submitted": "Submitted successfully",
     "submitFailed": "Submit failed:",
     "approved": "Approved successfully",

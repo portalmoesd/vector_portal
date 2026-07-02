@@ -274,7 +274,7 @@ router.get('/my-turn', requireAuth, async (req, res) => {
 
 router.post('/save', requireAuth, denyAnalyst, async (req, res) => {
   try {
-    const { eventId, sectionId, htmlContent } = req.body;
+    const { eventId, sectionId, htmlContent, baseEditedAt } = req.body;
     if (!eventId || !sectionId) {
       return res.status(400).json({ error: 'eventId and sectionId are required' });
     }
@@ -293,16 +293,50 @@ router.post('/save', requireAuth, denyAnalyst, async (req, res) => {
       return res.status(403).json({ error: `Section is held by ${holder}, not ${userRole}` });
     }
 
-    await db.query(
-      `UPDATE section_content
+    // Optimistic concurrency: when the client sends the last_content_edited_at
+    // it loaded (baseEditedAt), the update applies only if the row still
+    // matches. A stale tab, or a section that was pulled/pushed and edited
+    // elsewhere, gets a 409 instead of silently overwriting newer content.
+    // Clients that don't send baseEditedAt keep the old unconditional save.
+    const params = [sanitizeEditorHtml(htmlContent), req.user.id, eventId, sectionId];
+    let guard = '';
+    if (baseEditedAt !== undefined) {
+      // Compare at millisecond precision: the column stores microseconds but
+      // JSON serialization of a JS Date truncates to milliseconds, so the
+      // client can only ever echo back a millisecond-precision value.
+      guard = ` AND date_trunc('milliseconds', sc.last_content_edited_at)
+                 IS NOT DISTINCT FROM date_trunc('milliseconds', $5::timestamptz)`;
+      params.push(baseEditedAt || null);
+    }
+
+    const { rows: [updated] } = await db.query(
+      `UPDATE section_content sc
        SET html_content = $1,
            last_updated_by_user_id = $2,
            last_updated_at = now(),
            last_content_edited_at = now(),
            last_content_edited_by_user_id = $2
-       WHERE event_id = $3 AND section_id = $4`,
-      [sanitizeEditorHtml(htmlContent), req.user.id, eventId, sectionId]
+       WHERE event_id = $3 AND section_id = $4${guard}
+       RETURNING last_content_edited_at`,
+      params
     );
+
+    if (!updated) {
+      const { rows: [cur] } = await db.query(
+        `SELECT sc.last_content_edited_at, u.full_name, u.full_name_ka
+         FROM section_content sc
+         LEFT JOIN users u ON u.id = sc.last_content_edited_by_user_id
+         WHERE sc.event_id = $1 AND sc.section_id = $2`,
+        [eventId, sectionId]
+      );
+      return res.status(409).json({
+        error: 'Section was modified since it was loaded',
+        conflict: true,
+        lastEditedAt: cur ? cur.last_content_edited_at : null,
+        lastEditedBy: cur ? cur.full_name : null,
+        lastEditedByKa: cur ? cur.full_name_ka : null,
+      });
+    }
 
     // Record in history
     await db.query(
@@ -313,7 +347,7 @@ router.post('/save', requireAuth, denyAnalyst, async (req, res) => {
       [eventId, sectionId, req.user.id, req.user.role]
     );
 
-    res.json({ success: true });
+    res.json({ success: true, lastEditedAt: updated.last_content_edited_at });
   } catch (err) {
     console.error('Save error:', err);
     res.status(500).json({ error: 'Internal server error' });

@@ -43,7 +43,12 @@ const Api = {
     }
 
     const data = await res.json();
-    if (!res.ok) throw new Error(data.error || 'Request failed');
+    if (!res.ok) {
+      const err = new Error(data.error || 'Request failed');
+      err.status = res.status;
+      err.data = data;
+      throw err;
+    }
     return data;
   },
 

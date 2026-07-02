@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node server/index.js",
     "seed": "node server/seed.js",
-    "dev": "node --watch server/index.js"
+    "dev": "node --watch server/index.js",
+    "test": "npm run test:server && npm run test:editor",
+    "test:server": "node --test tests/server/*.test.js",
+    "test:editor": "playwright test"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -21,5 +24,8 @@
     "pg": "^8.13.0",
     "sanitize-html": "^2.17.5",
     "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1"
   }
 }

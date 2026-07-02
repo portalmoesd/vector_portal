@@ -157,10 +157,8 @@
           await Api.post('/api/workflow/comments/delete', { commentId });
           if (anchorId) {
             editor.removeCommentAnchor(anchorId);
-            Api.post('/api/workflow/save', {
-              eventId, sectionId: s.sectionId,
-              htmlContent: editor.getHtml(),
-            }).catch(e => console.error('Auto-save after anchor removal failed:', e));
+            saveSectionContent(s.sectionId)
+              .catch(e => console.error('Auto-save after anchor removal failed:', e));
           }
           loadCommentsForSection(s.sectionId);
         } catch (e) { console.error('Delete comment failed:', e); }
@@ -175,7 +173,12 @@
       },
     });
 
-    sections[s.sectionId] = { editor, sectionInfo: s, canEdit, dividerEl: divider, sectionEl, effectiveRole };
+    sections[s.sectionId] = {
+      editor, sectionInfo: s, canEdit, dividerEl: divider, sectionEl, effectiveRole,
+      // Optimistic-lock base: server's last_content_edited_at as of load / last save
+      baseEditedAt: content.lastEditedAt || null,
+      lastSavedHtml: editor.getHtml(),
+    };
 
     // ── Focus tracking ──
     if (editor.el) {
@@ -428,19 +431,72 @@
     loadCommentsForSection(sectionId);
   }
 
+  // ── Saving: optimistic lock + autosave ─────────────────────────────────────
+  // Each section carries baseEditedAt (the server's last_content_edited_at as
+  // of load / last save). The server rejects with 409 if someone else edited
+  // the section in between, instead of overwriting their work.
+  async function saveSectionContent(sectionId) {
+    const sec = sections[sectionId];
+    if (!sec) return;
+    const html = sec.editor.getHtml();
+    const data = await Api.post('/api/workflow/save', {
+      eventId, sectionId,
+      htmlContent: html,
+      baseEditedAt: sec.baseEditedAt,
+    });
+    sec.baseEditedAt = data.lastEditedAt || sec.baseEditedAt;
+    sec.lastSavedHtml = html;
+  }
+
+  function conflictMessage(e) {
+    const name = (e.data && localizedName(e.data.lastEditedBy, e.data.lastEditedByKa)) ||
+      I18n.tr('editor.conflictSomeone');
+    return I18n.tr('editor.conflict').replace('{name}', name);
+  }
+
+  const AUTOSAVE_MS = 20000;
+  let autosaveConflictNotified = false;
+  const editableSectionIds = Object.keys(sections).filter(sid => sections[sid].canEdit);
+  if (editableSectionIds.length) {
+    setInterval(async () => {
+      for (const sid of editableSectionIds) {
+        const sec = sections[sid];
+        if (sec.editor.getHtml() === sec.lastSavedHtml) continue;
+        try {
+          // Content only — orphaned-comment cleanup stays on explicit save so
+          // undo can still restore an anchor before anything is deleted.
+          await saveSectionContent(parseInt(sid));
+          autosaveConflictNotified = false;
+        } catch (e) {
+          if (e.status === 409 && !autosaveConflictNotified) {
+            autosaveConflictNotified = true;
+            toast.error(conflictMessage(e));
+          }
+          // Network errors: stay silent, next tick retries.
+        }
+      }
+    }, AUTOSAVE_MS);
+
+    window.addEventListener('beforeunload', e => {
+      const dirty = editableSectionIds.some(sid =>
+        sections[sid].editor.getHtml() !== sections[sid].lastSavedHtml);
+      if (dirty) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    });
+  }
+
   async function handleSaveSection(sectionId) {
     const sec = sections[sectionId];
     if (!sec) return;
     try {
-      await Api.post('/api/workflow/save', {
-        eventId, sectionId,
-        htmlContent: sec.editor.getHtml(),
-      });
+      await saveSectionContent(sectionId);
       await reconcileOrphanedComments(sectionId);
       showNotification(I18n.tr('editor.saved'));
       document.getElementById('statusSaved').textContent = I18n.tr('editor.status.saved');
     } catch (e) {
-      toast.error(I18n.tr('editor.saveFailed') + ' ' + e.message);
+      toast.error(e.status === 409 ? conflictMessage(e) : I18n.tr('editor.saveFailed') + ' ' + e.message);
     }
   }
 
@@ -449,13 +505,13 @@
     if (!sec) return;
     if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmSubmit'), { confirmLabel: I18n.tr('common.submit'), confirmColor: '#3b82f6' })) return;
     try {
-      await Api.post('/api/workflow/save', { eventId, sectionId, htmlContent: sec.editor.getHtml() });
+      await saveSectionContent(sectionId);
       await reconcileOrphanedComments(sectionId);
       await Api.post('/api/workflow/submit', { eventId, sectionId });
       showNotification(I18n.tr('editor.submitted'));
       setTimeout(() => window.location.reload(), 800);
     } catch (e) {
-      toast.error(I18n.tr('editor.submitFailed') + ' ' + e.message);
+      toast.error(e.status === 409 ? conflictMessage(e) : I18n.tr('editor.submitFailed') + ' ' + e.message);
     }
   }
 
@@ -539,16 +595,13 @@
     const btn = document.getElementById('btnSaveAll');
     btn.disabled = true; btn.textContent = I18n.tr('editor.saveAll.inProgress');
     try {
-      await Promise.all(editable.map(([sid, s]) =>
-        Api.post('/api/workflow/save', {
-          eventId, sectionId: parseInt(sid),
-          htmlContent: s.editor.getHtml(),
-        }).then(() => reconcileOrphanedComments(parseInt(sid)))
+      await Promise.all(editable.map(([sid]) =>
+        saveSectionContent(parseInt(sid)).then(() => reconcileOrphanedComments(parseInt(sid)))
       ));
       showNotification(I18n.tr('editor.saveAll.allSaved'));
       document.getElementById('statusSaved').textContent = I18n.tr('editor.status.saved');
     } catch (e) {
-      toast.error(I18n.tr('editor.saveFailed') + ' ' + e.message);
+      toast.error(e.status === 409 ? conflictMessage(e) : I18n.tr('editor.saveFailed') + ' ' + e.message);
     } finally {
       btn.disabled = false; btn.textContent = I18n.tr('editor.saveAll');
     }
