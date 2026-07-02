@@ -359,6 +359,8 @@
 
   const ICON_PERSON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>';
   const ICON_CAL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>';
+  // Rounded checkmark for the green "finished" card dot.
+  const ICON_TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>';
 
   function listCardHtml(d) {
     const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
@@ -419,11 +421,11 @@
     // Finished documents are never in the in-progress sets, so these are exclusive.
     let attn = '';
     if (d._ready) {
-      attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}"></span>`;
+      attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}">${ICON_TICK}</span>`; // green: finished (tick)
     } else if (isActEvent(d.id)) {
-      attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}"></span>`; // red: your turn
+      attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}">!</span>`; // red: your turn (!)
     } else if (newEventIds.has(String(d.id))) {
-      attn = `<span class="mn-card__attn mn-card__attn--new" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeNew'))}"></span>`; // orange: new event
+      attn = `<span class="mn-card__attn mn-card__attn--new" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeNew'))}">${escapeHtml(I18n.tr('dashboard.badgeNewShort'))}</span>`; // orange: new event (NEW)
     }
     return `
       <div class="dp-upcoming-event mn-card ${statusClass}" data-event-id="${d.id}" role="button" tabindex="0" aria-expanded="false">
@@ -1178,7 +1180,15 @@
             if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmPull'), { confirmLabel: I18n.tr('editor.pullSection'), confirmColor: '#7c3aed' })) return;
             await Api.post('/api/workflow/pull-section', { eventId: evId, sectionId });
           }
-          // Refresh the progress block in place (the section list expands again).
+          // Approve / push / pull change document-wide state (and can complete the
+          // document) — a full reload guarantees the whole dashboard reflects the new
+          // state (this also covers "refresh when the document is ready").
+          if (action === 'approve' || action === 'push-section' || action === 'pull-section') {
+            location.reload();
+            return;
+          }
+          // Other actions (submit / return / ask-to-return): refresh the progress block
+          // in place (the section list expands again).
           const list = container.querySelector('#mnProgList');
           const wasOpen = list && !list.hasAttribute('hidden');
           await loadProgress(evId, container);
