@@ -411,7 +411,10 @@
 @media (max-width: 900px) {
   .mn-dash .mn-overview { flex-direction: column; }
   .mn-dash .mn-overview__cal { flex: 1 1 auto; width: 100%; }
-  /* Stacked: let the notification center show its full height (page scrolls). */
+  /* Stacked: the side column takes its natural content height (flex-basis:0 would
+     collapse it in a column with no fixed height, letting the events overlap it). */
+  .mn-dash .mn-overview__side { flex: none; }
+  /* And let the notification center show its full height (page scrolls). */
   .mn-dash .mn-overview__side .mn-notifs { flex: 0 1 auto; overflow: visible; }
   .mn-dash .mn-overview__side .mn-notifs .mn-notifs__list { flex: 0 1 auto; overflow-y: visible; }
 }
@@ -446,8 +449,10 @@
 
 /* ── Notifications panel (injected below the hero) ───────────────────────── */
 .mn-dash .mn-notifs {
-  background: var(--card, #fff); border: 1px solid var(--border, rgba(2,12,27,0.08));
-  border-radius: 16px; box-shadow: var(--shadow, 0 6px 20px rgba(2,12,27,0.06));
+  /* Match the calendar card exactly (same tint, border, radius, subtle shadow, blur). */
+  background: var(--card, #fff); border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   padding: 14px 18px; margin: 0 0 18px;
 }
 .mn-dash .mn-notifs__head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
