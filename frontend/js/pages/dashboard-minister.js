@@ -379,6 +379,7 @@
       statusClass += ' mn-card--overdue';
     }
     const lang = languageLabel(d.language || 'EN');
+    const langMeta = `${escapeHtml(I18n.tr('library.meta.language'))} ${escapeHtml(lang)}`;
     // In meetings the owner is the viewer themselves, so the owner chip is noise.
     const ownerName = localizedName(d.documentSubmitterName, d.documentSubmitterNameKa);
     const ownerInline = (!isMeetings && ownerName)
@@ -408,13 +409,13 @@
     let excerpt = '';
     let meta;
     if (ready) {
-      meta = `${d.endedAt ? formatDate(d.endedAt) + ' · ' : ''}${escapeHtml(lang)}`;
+      meta = `${d.endedAt ? formatDate(d.endedAt) + ' · ' : ''}${langMeta}`;
     } else {
       const ex = excerptText(d.occasion);
       if (ex) excerpt = `<p class="mn-card__excerpt">${escapeHtml(ex)}</p>`;
       const due = dueInfo(d.deadlineDate);
       const dueHtml = due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span> · ` : '';
-      meta = `${dueHtml}${escapeHtml(lang)}`;
+      meta = `${dueHtml}${langMeta}`;
     }
 
     // Card dot: green = the document is finished; red = an in-progress event
