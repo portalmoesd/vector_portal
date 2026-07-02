@@ -492,43 +492,6 @@
 
   // ─── History ─────────────────────────────────────────────────────────────────
 
-  const HISTORY_STAGES = [
-    { role: 'COLLABORATOR' },
-    { role: 'SUPER_COLLABORATOR' },
-    { role: 'CURATOR' },
-    { role: 'SUPERVISOR' },
-    { role: 'DEPUTY' },
-    { role: 'RECEIVING_SUPER_COLLABORATOR', labelKey: 'editor.history.stage.scReview' },
-    { role: 'RECEIVING_SUPERVISOR', labelKey: 'editor.history.stage.svReview' },
-  ];
-
-  function stageLabel(stage) {
-    if (stage.labelKey) return I18n.tr(stage.labelKey);
-    return roleLabel(stage.role);
-  }
-
-  function formatHistoryDate(dateStr) {
-    if (!dateStr) return '—';
-    const d = new Date(dateStr);
-    const locale = (typeof I18n !== 'undefined' && I18n.getLocale && I18n.getLocale() === 'ka') ? 'ka-GE' : 'en-GB';
-    return d.toLocaleString(locale, {
-      day: '2-digit', month: 'short', year: 'numeric',
-      hour: '2-digit', minute: '2-digit',
-    });
-  }
-
-  function actionColors() {
-    return {
-      saved:           { bg: '#ede9fe', color: '#5b21b6', label: I18n.tr('editor.history.action.saved') },
-      submitted:       { bg: '#dbeafe', color: '#1d4ed8', label: I18n.tr('editor.history.action.submitted') },
-      approved:        { bg: '#dcfce7', color: '#15803d', label: I18n.tr('editor.history.action.approved') },
-      returned:        { bg: '#fee2e2', color: '#b91c1c', label: I18n.tr('editor.history.action.returned') },
-      asked_to_return: { bg: '#fef3c7', color: '#92400e', label: I18n.tr('editor.history.action.askedToReturn') },
-      pushed:          { bg: '#e0e7ff', color: '#4338ca', label: I18n.tr('editor.history.action.pushed') },
-      pulled:          { bg: '#e0e7ff', color: '#4338ca', label: I18n.tr('editor.history.action.pulled') },
-    };
-  }
-
   async function loadHistory() {
     try {
       const result = await Api.get(`/api/workflow/section-history?event_id=${eventId}&section_id=${sectionId}`);
@@ -538,81 +501,9 @@
         list.innerHTML = `<p style="color: var(--text-muted); font-size: 13px;">${escapeHtml(I18n.tr('editor.history.empty'))}</p>`;
         return;
       }
-      const ACTION_COLORS = actionColors();
-
-      // Group by role
-      const byRole = {};
-      for (const h of history) {
-        const r = h.userRole || 'UNKNOWN';
-        if (!byRole[r]) byRole[r] = [];
-        byRole[r].push(h);
-      }
-
-      // Collapse consecutive saves by same user
-      function collapseEntries(entries) {
-        const collapsed = [];
-        for (const ev of entries) {
-          const last = collapsed[collapsed.length - 1];
-          if (last && last.action === 'saved' && ev.action === 'saved' && last.userName === ev.userName) {
-            last.actedAt = ev.actedAt;
-            last._count = (last._count || 1) + 1;
-          } else {
-            collapsed.push({ ...ev });
-          }
-        }
-        return collapsed;
-      }
-
-      // Build ordered stages — only show stages that have entries
-      const stageOrder = HISTORY_STAGES.map(s => s.role);
-      const orderedRoles = [];
-      for (const stage of HISTORY_STAGES) {
-        if (byRole[stage.role]) orderedRoles.push(stage);
-      }
-      for (const role of Object.keys(byRole)) {
-        if (!stageOrder.includes(role)) {
-          orderedRoles.push({ role });
-        }
-      }
-
-      list.innerHTML = '<div class="sh-timeline">' + orderedRoles.map(stage => {
-        const entries = collapseEntries(byRole[stage.role]);
-        const eventsHtml = entries.map(h => {
-          const ac = ACTION_COLORS[h.action] || { bg: '#f1f5f9', color: '#475569', label: h.action };
-          const actor = escapeHtml(h.userName || I18n.tr('editor.history.unknownUser'));
-          const date = formatHistoryDate(h.actedAt);
-          const label = h.action === 'saved' && h._count > 1
-            ? `${ac.label} (\u00d7${h._count})` : ac.label;
-
-          if (h.action === 'returned' || h.action === 'asked_to_return') {
-            const noteHtml = h.note
-              ? escapeHtml(h.note)
-              : `<span class="sh-return-note__empty">${escapeHtml(I18n.tr('editor.history.noComment'))}</span>`;
-            return `<div class="sh-event">
-              <span class="sh-actor">${actor}</span>
-              <details class="sh-return-details${h.action === 'asked_to_return' ? ' sh-return-details--ask' : ''}">
-                <summary>${escapeHtml(label)}</summary>
-                <div class="sh-return-note">${noteHtml}</div>
-              </details>
-              <span class="sh-date">${date}</span>
-            </div>`;
-          }
-
-          return `<div class="sh-event">
-            <span class="sh-actor">${actor}</span>
-            <span class="sh-action-tag" style="background:${ac.bg};color:${ac.color}">${escapeHtml(label)}</span>
-            <span class="sh-date">${date}</span>
-          </div>`;
-        }).join('');
-
-        return `<div class="sh-stage">
-          <div class="sh-dot"></div>
-          <div class="sh-body">
-            <div class="sh-stage-label">${escapeHtml(stageLabel(stage).toUpperCase())}</div>
-            <div class="sh-events">${eventsHtml}</div>
-          </div>
-        </div>`;
-      }).join('') + '</div>';
+      // Shared role-grouped timeline (section-history-view.js) — also used by the
+      // ready-document preview so both stay identical.
+      list.innerHTML = SectionHistory.renderTimeline(history);
     } catch (e) {
       console.error('Load history error:', e);
     }

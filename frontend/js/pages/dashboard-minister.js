@@ -733,36 +733,12 @@
   // deputy see all; everyone else sees only sections their department is assigned
   // to, their RECEIVING_* chain step, or sections they curate. The Minister is
   // always the document submitter on their events, so they see the whole document.
-  // A section the user is directly responsible for: their department is on it, a
-  // RECEIVING_* step they hold, or they curate it.
-  function isOwnSection(s) {
-    if (!s) return false;
-    if (s.departmentIds && s.departmentIds.includes(user.departmentId)) return true;
-    if (s.userEffectiveRole && s.userEffectiveRole.startsWith('RECEIVING_')
-        && s.chain && s.chain.includes(s.userEffectiveRole)) return true;
-    if (s.userEffectiveRole === 'CURATOR') return true;
-    return false;
-  }
-
-  // True when the viewer can see the whole document (every section): the document
-  // submitter/owner (incl. Minister, always DS on their events), the responsible
-  // deputy, or a supervisor linked to the owner deputy who also participates here.
-  function seesAllSections(grid) {
-    if (!grid) return false;
-    if (grid.documentSubmitterId === user.id) return true;
-    if (grid.deputyId && grid.deputyId === user.id) return true;
-    // Deputies see the whole document, like the editor (editor-all.js canViewAll). In the
-    // simple workflow there is no responsible deputy (deputy_id is null), so without this a
-    // non-owner deputy would only see the sections they curate.
-    if (user.role === 'DEPUTY') return true;
-    const own = (grid.sections || []).filter(isOwnSection);
-    return !!(grid.viewerLinkedToOwnerDeputy && own.length > 0);
-  }
-
-  function visibleSectionsFor(grid) {
-    const all = (grid && grid.sections) || [];
-    return seesAllSections(grid) ? all : all.filter(isOwnSection);
-  }
+  // Section visibility is shared with the ready-document preview — the single
+  // source of truth lives in section-history-view.js (SectionVisibility). These
+  // thin wrappers bind it to this page's `user` so all call sites stay unchanged.
+  function isOwnSection(s) { return SectionVisibility.isOwnSection(user, s); }
+  function seesAllSections(grid) { return SectionVisibility.seesAllSections(user, grid); }
+  function visibleSectionsFor(grid) { return SectionVisibility.visibleSectionsFor(user, grid); }
 
   // Build the all-sections preview for an in-progress event from live workflow
   // content (the library /document endpoint only serves published events).
