@@ -744,6 +744,10 @@
     if (!grid) return false;
     if (grid.documentSubmitterId === user.id) return true;
     if (grid.deputyId && grid.deputyId === user.id) return true;
+    // Deputies see the whole document, like the editor (editor-all.js canViewAll). In the
+    // simple workflow there is no responsible deputy (deputy_id is null), so without this a
+    // non-owner deputy would only see the sections they curate.
+    if (user.role === 'DEPUTY') return true;
     const own = (grid.sections || []).filter(isOwnSection);
     return !!(grid.viewerLinkedToOwnerDeputy && own.length > 0);
   }
