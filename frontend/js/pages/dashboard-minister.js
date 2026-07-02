@@ -696,11 +696,13 @@
           </div>
           <div class="mn-files-wrap" id="mnFiles"></div>
         </div>
+        <div class="mn-hist-wrap" id="mnHistory"></div>
       `;
       detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => LibraryDoc.preview(item.id));
       detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
       detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
       loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
+      loadReadyHistory(item.id, detailEl.querySelector('#mnHistory'));
       return;
     }
 
@@ -784,6 +786,46 @@
     overlay.querySelectorAll('.section-content-preview del').forEach(el => el.style.display = 'none');
     overlay.querySelectorAll('.section-content-preview ins').forEach(el => {
       el.style.textDecoration = 'none'; el.style.backgroundColor = 'transparent'; el.style.color = 'inherit';
+    });
+  }
+
+  // Ready-card "who acted" history: one collapsible per section the viewer may
+  // see (same visibility rule as everywhere else — collaborators get their own
+  // sections, deputies/owner/linked-supervisors get all). Each section's timeline
+  // lazy-loads the first time its dropdown is opened.
+  async function loadReadyHistory(eventId, host) {
+    if (!host) return;
+    let grid;
+    try {
+      grid = await Api.get(`/api/workflow/status-grid?event_id=${eventId}`);
+    } catch (_) { return; } // best-effort — no history panel if the grid can't load
+    const sections = visibleSectionsFor(grid);
+    if (!sections.length) return;
+    host.innerHTML = `
+      <div class="mn-detail__panel">
+        <h4 class="mn-files__title">${escapeHtml(I18n.tr('library.history.title'))}</h4>
+        ${sections.map(s => `
+          <details class="mn-shist" data-section-id="${s.sectionId}">
+            <summary>${escapeHtml(s.sectionLabel)}</summary>
+            <div class="mn-shist__body"></div>
+          </details>`).join('')}
+      </div>
+    `;
+    const emptyHtml = `<p style="color: var(--text-muted); font-size: 13px;">${escapeHtml(I18n.tr('editor.history.empty'))}</p>`;
+    host.querySelectorAll('details.mn-shist').forEach(det => {
+      det.addEventListener('toggle', async () => {
+        if (!det.open || det.dataset.loaded) return;
+        det.dataset.loaded = '1';
+        const body = det.querySelector('.mn-shist__body');
+        try {
+          const res = await Api.get(`/api/workflow/section-history?event_id=${eventId}&section_id=${det.dataset.sectionId}`);
+          const history = res.history || res;
+          body.innerHTML = (history && history.length) ? SectionHistory.renderTimeline(history) : emptyHtml;
+        } catch (e) {
+          det.dataset.loaded = ''; // allow a retry on next open
+          body.innerHTML = emptyHtml;
+        }
+      });
     });
   }
 
