@@ -1026,6 +1026,22 @@
 .preview-card .lib-history[open] > summary { color: var(--text-primary); }
 .preview-card .lib-history[open] > summary::before { transform: rotate(90deg); }
 .preview-card .lib-history__body { margin-top: 10px; }
+
+/* Per-section "who acted" history on the expanded completed card. */
+.mn-hist-wrap:empty { display: none; }
+.mn-hist-wrap .mn-shist { border-top: 1px solid var(--border-color); }
+.mn-hist-wrap .mn-shist:first-of-type { border-top: none; }
+.mn-hist-wrap .mn-shist > summary {
+  cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px;
+  font-size: 0.82rem; font-weight: 600; color: var(--text-primary);
+  padding: 10px 2px; user-select: none;
+}
+.mn-hist-wrap .mn-shist > summary::-webkit-details-marker { display: none; }
+.mn-hist-wrap .mn-shist > summary::before {
+  content: '\25B8'; font-size: 0.7rem; color: var(--text-secondary); transition: transform 0.15s ease;
+}
+.mn-hist-wrap .mn-shist[open] > summary::before { transform: rotate(90deg); }
+.mn-hist-wrap .mn-shist__body { padding: 0 2px 12px; }
 .preview-header {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 12px;
