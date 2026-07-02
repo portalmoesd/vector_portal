@@ -1116,9 +1116,13 @@
     const isHolder = effRole === holder;
     const status = s.status || 'draft';
     const btns = [];
-    // Always offer Open — navigates to the single-section editor (which
-    // re-enforces edit/read permissions per role).
-    btns.push(`<a class="mn-actbtn is-open" href="editor.html?event_id=${eventId}&section_id=${s.sectionId}">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.actionOpen'))}</span></a>`);
+    // Open — navigates to the single-section editor. Deputies can view every section
+    // (seesAllSections) but must not edit ones that aren't theirs, so they only get Open
+    // on their own/curated sections or one that's currently their turn; they preview the
+    // rest. Other roles keep the always-on Open.
+    if (user.role !== 'DEPUTY' || isOwnSection(s) || isHolder) {
+      btns.push(`<a class="mn-actbtn is-open" href="editor.html?event_id=${eventId}&section_id=${s.sectionId}">${ICON_EDIT}<span>${escapeHtml(I18n.tr('dashboard.actionOpen'))}</span></a>`);
+    }
     if (isHolder) {
       if (status === 'draft' || status.startsWith('returned_')) {
         btns.push(actBtn('submit', 'dashboard.actionSubmit', ACT_ICONS.submit, 'is-submit'));
