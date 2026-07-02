@@ -300,11 +300,13 @@
 .mn-dash .mn-list {
   margin-top: 20px;
   display: grid;
-  grid-template-columns: 1fr;
+  /* minmax(0,1fr) (not 1fr = minmax(auto,1fr)) so a wide expanded card can't blow the
+     track out and push every card past the container on narrow screens. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
 }
 @media (min-width: 760px) {
-  .mn-dash .mn-list { grid-template-columns: repeat(2, 1fr); }
+  .mn-dash .mn-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 /* full-width group divider (label + rule) spanning the grid */
 .mn-dash .mn-list .mn-group {
@@ -326,6 +328,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  min-width: 0; /* allow the grid item to shrink below its content instead of overflowing */
   min-height: 160px;
   padding: 20px 22px;
   cursor: pointer;

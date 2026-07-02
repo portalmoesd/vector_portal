@@ -1431,6 +1431,14 @@
   positionThumb();
   // Re-position once fonts/layout settle (button widths depend on the label text).
   requestAnimationFrame(positionThumb);
+  // rAF fires before the async Georgian web font finishes downloading, which changes the
+  // button widths — re-measure when fonts are ready, and whenever a button resizes
+  // (font load, i18n relabel, badge width) so the thumb always covers the active tab.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionThumb);
+  if (window.ResizeObserver) {
+    const thumbRO = new ResizeObserver(() => positionThumb());
+    toggleBtns.forEach(b => thumbRO.observe(b));
+  }
 
   // ── Notifications panel (injected below the hero) ───────────────────────────
   const NOTIF_ICON = {
