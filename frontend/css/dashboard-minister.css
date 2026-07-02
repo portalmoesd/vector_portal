@@ -689,6 +689,10 @@
   padding: 16px 18px;
   background: rgba(255,255,255,0.6);
 }
+/* The first child (e.g. the "Your Sections" label) carries a top margin meant to
+   separate it from preceding content; at the top of the box it just doubles the
+   padding, leaving a gap. */
+.mn-dash .mn-prog > :first-child { margin-top: 0; }
 .mn-dash .mn-prog__top { display: flex; align-items: baseline; justify-content: space-between; }
 .mn-dash .mn-prog__label {
   font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
