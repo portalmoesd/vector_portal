@@ -1198,6 +1198,8 @@
           // document) — a full reload guarantees the whole dashboard reflects the new
           // state (this also covers "refresh when the document is ready").
           if (action === 'approve' || action === 'push-section' || action === 'pull-section') {
+            // Remember the open card so it re-expands after the reload.
+            try { sessionStorage.setItem('mnReopenEvent', String(evId)); } catch (_) {}
             location.reload();
             return;
           }
@@ -1443,6 +1445,15 @@
 
   renderAll();
   positionThumb();
+  // After a section action (approve / push / pull) triggers a full reload, re-open the
+  // card that was expanded so the user lands back where they were.
+  try {
+    const reopenId = sessionStorage.getItem('mnReopenEvent');
+    if (reopenId) {
+      sessionStorage.removeItem('mnReopenEvent');
+      revealEvent(parseInt(reopenId, 10));
+    }
+  } catch (_) { /* ignore */ }
   // Re-position once fonts/layout settle (button widths depend on the label text).
   requestAnimationFrame(positionThumb);
   // rAF fires before the async Georgian web font finishes downloading, which changes the
