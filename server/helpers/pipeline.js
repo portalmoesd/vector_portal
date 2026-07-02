@@ -310,7 +310,10 @@ function canPullSection(userRole, chain, holderRole, opts) {
       // there's nothing to pull.
       return o.eventStatus === 'IN_PROGRESS';
     }
-    return true;
+    // The DS sits outside the simple-mode chain and must NOT intervene in
+    // sections others are actively working (draft / submitted_to_* /
+    // returned_*). The only DS pull is the reopened-document amendment above.
+    return false;
   }
 
   if (!chain || chain.length < 2 || !holderRole) return false;
