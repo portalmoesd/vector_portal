@@ -11,7 +11,7 @@
 const sanitizeHtml = require('sanitize-html');
 
 const TC_DATA_ATTRS = [
-  'data-tc-id', 'data-tc-para',
+  'data-tc-id', 'data-tc-para', 'data-tc-tbl',
   'data-tc-fmt-id', 'data-tc-fmt-cmd', 'data-tc-fmt-old', 'data-tc-fmt-val',
   'data-tc-author', 'data-tc-initials', 'data-tc-color', 'data-tc-time',
   'data-cmt-anchor-id',

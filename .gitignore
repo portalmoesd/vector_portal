@@ -27,3 +27,4 @@ server/scripts/.migration-backup-*/
 # Playwright test output
 test-results/
 playwright-report/
+tests/fixtures/.cache/

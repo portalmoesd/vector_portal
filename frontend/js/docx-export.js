@@ -26,7 +26,15 @@
     InsertedTextRun, DeletedTextRun,
     AlignmentType, UnderlineType,
     convertInchesToTwip,
+    Table, TableRow, TableCell, WidthType,
+    CommentRangeStart, CommentRangeEnd, CommentReference,
   } = window.docx;
+
+  // Word comment support requires docx >= 8 (CommentRangeStart et al.)
+  const COMMENTS_SUPPORTED = !!(CommentRangeStart && CommentRangeEnd && CommentReference);
+
+  // anchorId → numeric Word comment id, rebuilt per export
+  let _commentAnchorMap = {};
 
   // ── Helpers ────────────────────────────────────────────────────────────────
 
@@ -134,6 +142,18 @@
     // Skip hidden del elements that have no tc-id (shouldn't happen, but safe)
     if (tag === 'DEL' && !node.hasAttribute('data-tc-id')) return;
 
+    // Comment anchors → Word comment range + reference mark
+    if (tag === 'SPAN' && node.classList && node.classList.contains('gcp-cmt-anchor')) {
+      const cid = _commentAnchorMap[node.getAttribute('data-cmt-anchor-id')];
+      if (cid !== undefined && COMMENTS_SUPPORTED) {
+        runs.push(new CommentRangeStart(cid));
+        for (const child of node.childNodes) walkInline(child, runs);
+        runs.push(new CommentRangeEnd(cid));
+        runs.push(new TextRun({ children: [new CommentReference(cid)] }));
+        return;
+      }
+    }
+
     // For ins/del with tc-id, we still walk children (the text nodes inside)
     // For all other elements, just recurse
     for (const child of node.childNodes) {
@@ -226,8 +246,44 @@
       return paragraphs;
     }
 
-    // Table — flatten to paragraphs (Word tables require more complex setup)
+    // Table → native Word table (fallback: flatten to tab-separated paragraphs
+    // if the bundled docx build has no Table support)
     if (tag === 'TABLE') {
+      if (Table && TableRow && TableCell) {
+        const rows = [];
+        for (const row of el.querySelectorAll('tr')) {
+          const cells = [];
+          for (const cell of row.querySelectorAll('td, th')) {
+            const cellParas = [];
+            const hasBlockChildren = Array.from(cell.children).some(c =>
+              /^(P|DIV|H[1-6]|UL|OL|TABLE|BLOCKQUOTE)$/.test(c.tagName));
+            if (hasBlockChildren) {
+              for (const child of cell.childNodes) {
+                if (child.nodeType === Node.TEXT_NODE) {
+                  const text = child.textContent.trim();
+                  if (text) cellParas.push(new Paragraph({ children: [new TextRun({ text })] }));
+                } else if (child.nodeType === Node.ELEMENT_NODE) {
+                  cellParas.push(...parseBlock(child, listLevel));
+                }
+              }
+            } else {
+              const runs = [];
+              walkInline(cell, runs);
+              cellParas.push(new Paragraph({ children: runs }));
+            }
+            cells.push(new TableCell({
+              children: cellParas.length ? cellParas : [new Paragraph({ children: [] })],
+              columnSpan: cell.colSpan > 1 ? cell.colSpan : undefined,
+              rowSpan: cell.rowSpan > 1 ? cell.rowSpan : undefined,
+            }));
+          }
+          if (cells.length) rows.push(new TableRow({ children: cells }));
+        }
+        if (rows.length) {
+          paragraphs.push(new Table({ rows, width: { size: 100, type: WidthType.PERCENTAGE } }));
+        }
+        return paragraphs;
+      }
       for (const row of el.querySelectorAll('tr')) {
         const runs = [];
         const cells = row.querySelectorAll('td, th');
@@ -295,14 +351,46 @@
   // ── Main export function ───────────────────────────────────────────────────
 
   /**
+   * Build the docx Document without triggering a download.
+   *
    * @param {string} title Document title
-   * @param {Array<{sectionLabel:string, htmlContent:string}>} sections
+   * @param {Array<{sectionLabel:string, htmlContent:string, comments?:Array}>} sections
+   *   Optional per-section `comments`: [{ id, anchorId, parentId, authorName,
+   *   text, createdAt }] — anchored root comments become native Word comments
+   *   (replies are appended inside the parent comment's body).
    * @param {object} [meta] Optional metadata: { countryName, endedAt }
    */
-  async function exportDocx(title, sections, meta) {
-    // Reset revision counter for each export
+  function buildDocx(title, sections, meta) {
+    // Reset revision counter and comment registry for each export
     _revCounter = 0;
     for (const k in _revMap) delete _revMap[k];
+    _commentAnchorMap = {};
+
+    // Register anchored root comments so walkInline can mark their ranges
+    const docComments = [];
+    if (COMMENTS_SUPPORTED) {
+      for (const sec of sections) {
+        const list = sec.comments || [];
+        for (const c of list) {
+          if (c.parentId || !c.anchorId) continue;
+          const cid = docComments.length;
+          _commentAnchorMap[c.anchorId] = cid;
+          const body = [new Paragraph({ children: [new TextRun({ text: c.text || '' })] })];
+          for (const r of list) {
+            if (r.parentId !== c.id) continue;
+            body.push(new Paragraph({
+              children: [new TextRun({ text: `↩ ${r.authorName || 'Unknown'}: ${r.text || ''}`, italics: true })],
+            }));
+          }
+          docComments.push({
+            id: cid,
+            author: c.authorName || 'Unknown',
+            date: c.createdAt ? new Date(c.createdAt) : new Date(),
+            children: body,
+          });
+        }
+      }
+    }
 
     const children = [];
 
@@ -348,6 +436,7 @@
     }
 
     const doc = new Document({
+      ...(docComments.length ? { comments: { children: docComments } } : {}),
       numbering: {
         config: [{
           reference: 'default-numbering',
@@ -375,6 +464,11 @@
       }],
     });
 
+    return doc;
+  }
+
+  async function exportDocx(title, sections, meta) {
+    const doc = buildDocx(title, sections, meta);
     const blob = await Packer.toBlob(doc);
 
     // Trigger download
@@ -392,5 +486,6 @@
   // Expose
   window.GCP = window.GCP || {};
   window.GCP.exportDocx = exportDocx;
+  window.GCP.buildDocx = buildDocx;
 
 })();

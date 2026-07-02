@@ -30,7 +30,7 @@ test.describe('editor UI and document operations', () => {
     await expect(ps).toHaveText('firstsecond');
   });
 
-  test('table context menu opens and row/column operations work', async ({ page }) => {
+  test('table context menu opens and row/column operations are tracked', async ({ page }) => {
     // Regression: the menu referenced an undeclared variable and never opened
     await bootEditor(page, {
       initialHtml: '<table><tbody><tr><td>a</td><td>b</td></tr><tr><td>c</td><td>d</td></tr></tbody></table><p>x</p>',
@@ -39,13 +39,40 @@ test.describe('editor UI and document operations', () => {
     const menu = page.locator('.gcp-re-ctx');
     await expect(menu).toBeVisible();
 
+    // Insert is tracked as a pending row addition
     await menu.locator('.gcp-re-ctx-item', { hasText: 'Insert row below' }).click();
     await expect(page.locator('.gcp-re-body tr')).toHaveCount(3);
+    await expect(page.locator('.gcp-re-body tr[data-tc-tbl="row-add"]')).toHaveCount(1);
 
+    // Delete column marks the cells as pending deletion — nothing is removed yet
     await page.locator('.gcp-re-body td').first().click({ button: 'right' });
     await page.locator('.gcp-re-ctx .gcp-re-ctx-item', { hasText: 'Delete column' }).click();
+    await expect(page.locator('.gcp-re-body [data-tc-tbl="col-del"]')).toHaveCount(3);
+    expect(await page.evaluate(() =>
+      document.querySelector('#host .gcp-re-body tr').cells.length)).toBe(2);
+
+    // Accept-all: added row kept (attrs stripped), deleted column removed
+    await page.evaluate(() => window.ed.acceptAllChanges());
+    await expect(page.locator('.gcp-re-body tr')).toHaveCount(3);
     expect(await page.evaluate(() =>
       document.querySelector('#host .gcp-re-body tr').cells.length)).toBe(1);
+    expect(await page.locator('.gcp-re-body [data-tc-tbl]').count()).toBe(0);
+  });
+
+  test('rejecting tracked table changes restores the original structure', async ({ page }) => {
+    await bootEditor(page, {
+      initialHtml: '<table><tbody><tr><td>a</td><td>b</td></tr><tr><td>c</td><td>d</td></tr></tbody></table><p>x</p>',
+    });
+    await page.locator('.gcp-re-body td').first().click({ button: 'right' });
+    await page.locator('.gcp-re-ctx .gcp-re-ctx-item', { hasText: 'Delete row' }).click();
+    // Pending deletion: row still in the DOM, marked
+    await expect(page.locator('.gcp-re-body tr[data-tc-tbl="row-del"]')).toHaveCount(1);
+    await expect(page.locator('.gcp-re-body tr')).toHaveCount(2);
+
+    await page.evaluate(() => window.ed.rejectAllChanges());
+    await expect(page.locator('.gcp-re-body tr')).toHaveCount(2);
+    expect(await page.locator('.gcp-re-body [data-tc-tbl]').count()).toBe(0);
+    await expect(page.locator('.gcp-re-body td').first()).toHaveText('a');
   });
 
   test('initialHtml is sanitized: scripts and handlers stripped, tracked markup kept', async ({ page }) => {

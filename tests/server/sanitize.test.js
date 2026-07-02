@@ -62,6 +62,17 @@ test('preserves tables with spans and cell styling', () => {
   assert.equal(sanitizeEditorHtml(table), table);
 });
 
+test('preserves tracked table structure changes', () => {
+  const table = '<table><tbody><tr data-tc-id="tc9" data-tc-tbl="row-add" data-tc-author="A"><td>x</td></tr>' +
+    '<tr><td data-tc-id="tc10" data-tc-tbl="col-del" data-tc-author="B">y</td></tr></tbody></table>';
+  assert.equal(sanitizeEditorHtml(table), table);
+});
+
+test('preserves block-level insertions from block paste', () => {
+  const pasted = '<ins data-tc-id="tc11" data-tc-author="A"><p>pasted one</p><h2>heading</h2></ins>';
+  assert.equal(sanitizeEditorHtml(pasted), pasted);
+});
+
 test('handles null/empty input', () => {
   assert.equal(sanitizeEditorHtml(null), '');
   assert.equal(sanitizeEditorHtml(undefined), '');

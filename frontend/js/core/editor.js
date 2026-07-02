@@ -133,6 +133,13 @@
     return tpl.innerHTML;
   }
 
+  // Translate with an explicit fallback for when the key has no entry
+  // (I18n.tr returns the key itself in that case).
+  function trOr(key, fallback) {
+    const t = I18n.tr(key);
+    return t !== key ? t : fallback;
+  }
+
   // ── Backward-compat helpers exposed on window.GCP ─────────────────────────
   function authorColor(name) {
     return TC_PALETTE[authorColorIdx(name)][0];
@@ -351,6 +358,12 @@
     .gcp-re-find-panel .gcp-re-find-count { font-size:11px; color:#64748b; min-width:40px; }
     .gcp-re-find-highlight { background:rgba(250,204,21,.45); border-radius:2px; }
     .gcp-re-find-highlight-current { background:rgba(249,115,22,.50); border-radius:2px; }
+    .gcp-re-body tr[data-tc-tbl="row-del"] { display:none; }
+    .gcp-re-body td[data-tc-tbl="col-del"],.gcp-re-body th[data-tc-tbl="col-del"] { display:none; }
+    .gcp-re-wrap.tc-visible .gcp-re-body tr[data-tc-tbl="row-del"] { display:table-row; }
+    .gcp-re-wrap.tc-visible .gcp-re-body td[data-tc-tbl="col-del"],.gcp-re-wrap.tc-visible .gcp-re-body th[data-tc-tbl="col-del"] { display:table-cell; }
+    .gcp-re-wrap.tc-visible .gcp-re-body [data-tc-tbl$="-del"] { background:rgba(185,28,28,.10) !important; text-decoration:line-through; text-decoration-color:#b91c1c; }
+    .gcp-re-wrap.tc-visible .gcp-re-body [data-tc-tbl$="-add"] { background:rgba(29,78,216,.08) !important; }
   `;
 
   let styleInjected = false;
@@ -405,7 +418,10 @@
     body.contentEditable = readOnly ? 'false' : 'true';
     body.setAttribute('role', 'textbox');
     body.setAttribute('aria-multiline', 'true');
-    body.setAttribute('data-placeholder', placeholder || 'Start typing…');
+    body.setAttribute('data-placeholder', placeholder || trOr('editor.placeholder', 'Start typing…'));
+    try {
+      if (typeof I18n !== 'undefined' && I18n.getLocale) body.lang = I18n.getLocale() === 'ka' ? 'ka' : 'en';
+    } catch (_) {}
     if (initialHtml) body.innerHTML = sanitizeUntrustedHtml(initialHtml);
 
     // ── Track Changes state ──────────────────────────────────────────────────
@@ -496,6 +512,7 @@
       justifyRight:'Align right', justifyFull:'Justify',
       removeFormat:'Clear formatting',
     };
+    const fmtCmdLabel = cmd => trOr('editor.fmt.' + cmd, FMT_CMD_LABELS[cmd] || cmd);
 
     function trackFmtChange(cmd, value) {
       pushUndo();
@@ -1058,8 +1075,17 @@
       tcBar.style.display = show ? '' : 'none';
       if (show) {
         const parts = [];
-        if (n > 0) parts.push(`${n} tracked change${n === 1 ? '' : 's'}`);
-        if (hasCmts) parts.push(`${storedComments.length} comment${storedComments.length === 1 ? '' : 's'}`);
+        if (n > 0) {
+          parts.push((n === 1
+            ? trOr('editor.tc.summaryOne', '1 tracked change')
+            : trOr('editor.tc.summaryMany', '{n} tracked changes')).replace('{n}', n));
+        }
+        if (hasCmts) {
+          const m = storedComments.length;
+          parts.push((m === 1
+            ? trOr('editor.comments.summaryOne', '1 comment')
+            : trOr('editor.comments.summaryMany', '{n} comments')).replace('{n}', m));
+        }
         tcSummary.textContent = parts.join(' · ');
         tcAuthorsRow.textContent = getAuthors().join(' · ');
       }
@@ -1195,9 +1221,11 @@
             b.className = 'gcp-re-balloon gcp-re-balloon--tc-group';
             b.style.top = top + 'px';
             const n = group.ids.length;
-            const fmtLabels = group.entries.filter(e => e.kind === 'fmt' && e.fmtCmd).map(e => FMT_CMD_LABELS[e.fmtCmd] || e.fmtCmd).filter((v, i, a) => a.indexOf(v) === i);
+            const fmtLabels = group.entries.filter(e => e.kind === 'fmt' && e.fmtCmd).map(e => fmtCmdLabel(e.fmtCmd)).filter((v, i, a) => a.indexOf(v) === i);
             const txtCount = group.entries.filter(e => e.kind !== 'fmt').length;
-            let countLabel = `${n} change${n === 1 ? '' : 's'}`;
+            let countLabel = (n === 1
+              ? trOr('editor.balloon.changeOne', '1 change')
+              : I18n.tr('editor.balloon.changesCount')).replace('{n}', n);
             if (fmtLabels.length > 0 && txtCount === 0) countLabel = `${I18n.tr('editor.balloon.formatted')} · ${fmtLabels.join(', ')}`;
             else if (fmtLabels.length > 0) countLabel = `${I18n.tr('editor.balloon.changesCount').replace('{n}', n)} · ${fmtLabels.join(', ')}`;
             const allTextEntries = group.entries.filter(e => e.kind === 'ins' || e.kind === 'del');
@@ -1228,7 +1256,9 @@
                 <button class="gcp-re-balloon-rej" type="button">✗ ${escHtml(I18n.tr('editor.balloon.reject'))}</button>
               </div>`;
             b.querySelector('.gcp-re-balloon-acc').addEventListener('click', () => { group.ids.forEach(id => acceptChange(id)); });
-            b.querySelector('.gcp-re-balloon-rej').addEventListener('click', () => { group.ids.forEach(id => rejectChange(id)); });
+            // Reject in reverse DOM order: pasted block wrappers must be gone
+            // before their ¶-mark reject can merge the split halves back.
+            b.querySelector('.gcp-re-balloon-rej').addEventListener('click', () => { [...group.ids].reverse().forEach(id => rejectChange(id)); });
             if (needsExpand) {
               const groupKey = group.ids[0];
               const expandBtn = b.querySelector('.gcp-re-balloon-expand');
@@ -1302,25 +1332,26 @@
           const b = document.createElement('div');
           b.className = 'gcp-re-balloon gcp-re-balloon--cmt';
           b.style.top = top + 'px';
-          const rootDelHtml = c.can_delete ? '<button class="gcp-re-root-del gcp-re-balloon-del" type="button">✗ Delete</button>' : '';
+          const tDelete = escHtml(trOr('editor.balloon.delete', 'Delete'));
+          const rootDelHtml = c.can_delete ? `<button class="gcp-re-root-del gcp-re-balloon-del" type="button">✗ ${tDelete}</button>` : '';
           const repliesHtml = replies.map((r, ri) =>
             `<div class="gcp-re-cmt-reply" data-ri="${ri}">
               ${cmtEntryHtml(r)}
-              ${r.can_delete ? '<div class="gcp-re-balloon-btns"><button class="gcp-re-reply-del gcp-re-balloon-del" type="button">✗ Delete</button></div>' : ''}
+              ${r.can_delete ? `<div class="gcp-re-balloon-btns"><button class="gcp-re-reply-del gcp-re-balloon-del" type="button">✗ ${tDelete}</button></div>` : ''}
             </div>`
           ).join('');
           b.innerHTML = `
             ${cmtEntryHtml(c)}
             <div class="gcp-re-balloon-btns">
               ${rootDelHtml}
-              <button class="gcp-re-balloon-reply" type="button">↩ Reply</button>
+              <button class="gcp-re-balloon-reply" type="button">↩ ${escHtml(trOr('editor.balloon.reply', 'Reply'))}</button>
             </div>
             ${replies.length ? `<div class="gcp-re-cmt-replies">${repliesHtml}</div>` : ''}
             <div class="gcp-re-cmt-reply-form" style="display:none">
-              <textarea class="gcp-re-cmt-reply-input" rows="2" placeholder="Write a reply…"></textarea>
+              <textarea class="gcp-re-cmt-reply-input" rows="2" placeholder="${escHtml(trOr('editor.balloon.replyPlaceholder', 'Write a reply…'))}"></textarea>
               <div class="gcp-re-balloon-btns" style="margin-top:4px">
-                <button class="gcp-re-cmt-reply-send" type="button">Send</button>
-                <button class="gcp-re-cmt-reply-cancel" type="button">Cancel</button>
+                <button class="gcp-re-cmt-reply-send" type="button">${escHtml(trOr('editor.balloon.send', 'Send'))}</button>
+                <button class="gcp-re-cmt-reply-cancel" type="button">${escHtml(trOr('editor.balloon.cancel', 'Cancel'))}</button>
               </div>
             </div>`;
           if (c.can_delete) {
@@ -1426,6 +1457,7 @@
         if (isBlockEl(el)) { stripTcAttrs(el); }
         else { while (el.firstChild) el.parentNode.insertBefore(el.firstChild, el); el.remove(); }
       });
+      body.querySelectorAll(`[data-tc-tbl][data-tc-id="${CSS.escape(id)}"]`).forEach(el => resolveTblChange(el, true));
       body.normalize(); updateTcBar();
     }
 
@@ -1451,6 +1483,7 @@
         el.remove();
       });
       body.querySelectorAll(`[data-tc-fmt-id="${CSS.escape(id)}"]`).forEach(_unwrapFmtReject);
+      body.querySelectorAll(`[data-tc-tbl][data-tc-id="${CSS.escape(id)}"]`).forEach(el => resolveTblChange(el, false));
       body.normalize(); updateTcBar();
     }
 
@@ -1465,11 +1498,16 @@
         if (isBlockEl(el)) { stripTcAttrs(el); }
         else { while (el.firstChild) el.parentNode.insertBefore(el.firstChild, el); el.remove(); }
       });
+      body.querySelectorAll('[data-tc-tbl]').forEach(el => resolveTblChange(el, true));
       body.normalize(); tc.visible = false; updateTcBar();
     }
 
     function rejectAllChanges() {
-      // Reject paragraph marks first (merge blocks back) before removing other insertions
+      // Remove non-paragraph insertions first: a pasted block sequence sits
+      // between a split paragraph's halves as a block-level <ins>, and the
+      // ¶-mark merge below only works once that wrapper is gone.
+      body.querySelectorAll('ins[data-tc-id]:not([data-tc-para])').forEach(el => el.remove());
+      // Then reject paragraph marks (merge blocks back)
       body.querySelectorAll('ins[data-tc-id][data-tc-para]').forEach(el => {
         const block = el.parentElement;
         el.remove();
@@ -1489,6 +1527,7 @@
         el.remove();
       });
       [...body.querySelectorAll('[data-tc-fmt-id]')].forEach(_unwrapFmtReject);
+      body.querySelectorAll('[data-tc-tbl]').forEach(el => resolveTblChange(el, false));
       body.normalize(); tc.visible = false; updateTcBar();
     }
 
@@ -1508,6 +1547,7 @@
         if (isBlockEl(el)) { stripTcAttrs(el); }
         else { while (el.firstChild) el.parentNode.insertBefore(el.firstChild, el); el.remove(); }
       });
+      clone.querySelectorAll('[data-tc-tbl]').forEach(el => resolveTblChange(el, true));
       clone.querySelectorAll('.gcp-cmt-anchor').forEach(el => {
         while (el.firstChild) el.parentNode.insertBefore(el.firstChild, el);
         el.remove();
@@ -1520,6 +1560,49 @@
       if (!span) return;
       while (span.firstChild) span.parentNode.insertBefore(span.firstChild, span);
       span.remove();
+    }
+
+    // ── Tracked table structure changes ─────────────────────────────────────
+    // Rows/cells can't be wrapped in <ins>/<del> (table content model), so
+    // structural table edits are tracked with data-tc-tbl on the <tr>/<td>
+    // itself: row-add / row-del / col-add / col-del. Pending deletions stay in
+    // the DOM (hidden unless markup is shown) until accepted.
+
+    function trackTblInsert(els) {
+      const id = newTcId();
+      els.forEach(el => {
+        el.setAttribute('data-tc-id', id);
+        el.setAttribute('data-tc-tbl', el.tagName === 'TR' ? 'row-add' : 'col-add');
+        applyAuthorAttrs(el);
+      });
+    }
+
+    function trackTblDelete(els) {
+      const id = newTcId();
+      els.forEach(el => {
+        const addKind = el.tagName === 'TR' ? 'row-add' : 'col-add';
+        // Deleting your own pending insertion cancels it silently
+        if (el.getAttribute('data-tc-tbl') === addKind &&
+            el.getAttribute('data-tc-author') === tc.authorName) {
+          el.remove();
+          return;
+        }
+        el.setAttribute('data-tc-id', id);
+        el.setAttribute('data-tc-tbl', el.tagName === 'TR' ? 'row-del' : 'col-del');
+        applyAuthorAttrs(el);
+      });
+    }
+
+    /** Apply accept (or reject) semantics to a tracked table row/cell. */
+    function resolveTblChange(el, accept) {
+      const isAdd = (el.getAttribute('data-tc-tbl') || '').endsWith('-add');
+      if (accept ? isAdd : !isAdd) {
+        stripTcAttrs(el);
+        el.removeAttribute('data-tc-id');
+        el.removeAttribute('data-tc-tbl');
+      } else {
+        el.remove();
+      }
     }
 
     // ── TC mutation helpers ──────────────────────────────────────────────────
@@ -1946,24 +2029,91 @@
       const range = sel.getRangeAt(0);
       const clean = sanitizeHtml(html);
 
-      // If pasted content has block elements, fall back to plain text
-      // to avoid invalid HTML (block elements inside inline <ins>)
-      if (clean.querySelector('p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,blockquote,table')) {
-        const text = clean.textContent || '';
-        if (text) insertTracked(text);
+      // Inline-only content — wrap in a single <ins> at the caret
+      if (!clean.querySelector('p,div,h1,h2,h3,h4,h5,h6,ul,ol,li,blockquote,table')) {
+        const id = newTcId();
+        const ins = document.createElement('ins');
+        ins.setAttribute('data-tc-id', id);
+        applyAuthorAttrs(ins);
+        while (clean.firstChild) ins.appendChild(clean.firstChild);
+        range.insertNode(ins);
+        const r = document.createRange();
+        r.setStartAfter(ins); r.collapse(true);
+        sel.removeAllRanges(); sel.addRange(r);
+        mergeAdjacentIns();
         return;
       }
 
-      // Inline content only — safe to wrap in single <ins>
-      const id = newTcId();
-      const ins = document.createElement('ins');
-      ins.setAttribute('data-tc-id', id);
-      applyAuthorAttrs(ins);
-      while (clean.firstChild) ins.appendChild(clean.firstChild);
-      range.insertNode(ins);
-      const r = document.createRange();
-      r.setStartAfter(ins); r.collapse(true);
-      sel.removeAllRanges(); sel.addRange(r);
+      // ── Block-aware paste (Word-style) ────────────────────────────────────
+      // Partition the pasted top-level nodes into a leading inline run (which
+      // merges into the current paragraph, as Word does with the first pasted
+      // paragraph's content) and a sequence of blocks. Stray inline runs
+      // between blocks are wrapped into <p>.
+      const PASTE_BLOCK_RE = /^(P|DIV|H[1-6]|UL|OL|BLOCKQUOTE|TABLE|HR)$/;
+      const leading = [];
+      const blocks = [];
+      let sawBlock = false;
+      let inlineRun = [];
+      const flushInlineRun = () => {
+        if (!inlineRun.length) return;
+        const hasContent = inlineRun.some(n =>
+          (n.textContent || '').trim() || (n.nodeType === 1 && n.querySelector && n.querySelector('img,br')));
+        if (hasContent) {
+          const p = document.createElement('p');
+          inlineRun.forEach(n => p.appendChild(n));
+          blocks.push(p);
+        }
+        inlineRun = [];
+      };
+      [...clean.childNodes].forEach(n => {
+        const isBlock = n.nodeType === 1 && PASTE_BLOCK_RE.test(n.tagName);
+        if (!sawBlock && !isBlock) { leading.push(n); return; }
+        if (isBlock) { flushInlineRun(); sawBlock = true; blocks.push(n); }
+        else inlineRun.push(n);
+      });
+      flushInlineRun();
+
+      // 1. Leading inline content becomes a normal tracked insertion at the caret
+      if (leading.some(n => (n.textContent || '').trim())) {
+        const ins = document.createElement('ins');
+        ins.setAttribute('data-tc-id', newTcId());
+        applyAuthorAttrs(ins);
+        leading.forEach(n => ins.appendChild(n));
+        range.insertNode(ins);
+        const after = document.createRange();
+        after.setStartAfter(ins); after.collapse(true);
+        sel.removeAllRanges(); sel.addRange(after);
+      }
+      if (!blocks.length) { mergeAdjacentIns(); return; }
+
+      // 2. Split the current block at the caret (tracked ¶); the caret lands
+      //    at the start of the tail block.
+      insertTrackedParagraph();
+
+      // 3. Insert the pasted blocks between the two halves, wrapped in ONE
+      //    block-level tracked <ins>. <ins> is transparent in the HTML content
+      //    model, and getPrevBlock/getNextBlock already understand blocks
+      //    inside <ins> wrappers. Accept unwraps the blocks in place; reject
+      //    removes the whole pasted sequence.
+      const sel2 = window.getSelection();
+      let tail = sel2 && sel2.rangeCount ? sel2.getRangeAt(0).startContainer : null;
+      if (tail && tail.nodeType !== 1) tail = tail.parentElement;
+      while (tail && tail.parentElement && tail.parentElement !== body) tail = tail.parentElement;
+
+      const wrapIns = document.createElement('ins');
+      wrapIns.setAttribute('data-tc-id', newTcId());
+      applyAuthorAttrs(wrapIns);
+      blocks.forEach(b => wrapIns.appendChild(b));
+      if (tail && tail.parentElement === body) body.insertBefore(wrapIns, tail);
+      else body.appendChild(wrapIns);
+
+      // Caret at the start of the tail block (i.e. end of pasted content)
+      try {
+        const r = document.createRange();
+        r.setStart(tail || body, 0); r.collapse(true);
+        sel2.removeAllRanges(); sel2.addRange(r);
+      } catch (_) {}
+      mergeAdjacentIns();
     }
 
     // ── Button event handlers ────────────────────────────────────────────────
@@ -2009,8 +2159,8 @@
       } else if (kind === 'del') {
         snippetHtml = `<div class="gcp-re-snippet gcp-re-snippet-del">− ${escHtml(text)}</div>`;
       } else if (kind === 'fmt') {
-        const label = FMT_CMD_LABELS[fmtCmd] || fmtCmd || 'Format change';
-        snippetHtml = `<div class="gcp-re-snippet" style="color:#7c3aed;">Formatted: ${escHtml(label)}</div>`;
+        const label = fmtCmdLabel(fmtCmd || '');
+        snippetHtml = `<div class="gcp-re-snippet" style="color:#7c3aed;">${escHtml(I18n.tr('editor.balloon.formatted'))}: ${escHtml(label)}</div>`;
       }
 
       mobileSheet.innerHTML = `
@@ -2022,8 +2172,8 @@
         </div>
         ${snippetHtml}
         <div class="gcp-re-mobile-sheet-btns">
-          <button class="gcp-re-mobile-sheet-btn-accept" type="button">✓ Accept</button>
-          <button class="gcp-re-mobile-sheet-btn-reject" type="button">✗ Reject</button>
+          <button class="gcp-re-mobile-sheet-btn-accept" type="button">✓ ${escHtml(I18n.tr('editor.balloon.accept'))}</button>
+          <button class="gcp-re-mobile-sheet-btn-reject" type="button">✗ ${escHtml(I18n.tr('editor.balloon.reject'))}</button>
         </div>`;
       mobileSheet.querySelector('.gcp-re-mobile-sheet-btn-accept').addEventListener('click', () => { acceptChange(id); closeMobileSheet(); updateTcBar(); });
       mobileSheet.querySelector('.gcp-re-mobile-sheet-btn-reject').addEventListener('click', () => { rejectChange(id); closeMobileSheet(); updateTcBar(); });
@@ -2053,8 +2203,8 @@
         </div>
         <div class="gcp-re-mobile-sheet-cmt-body">${escHtml(comment.comment_text || '')}</div>
         <div class="gcp-re-mobile-sheet-btns">
-          ${comment.can_delete ? '<button class="gcp-re-mobile-sheet-btn-delete" type="button">Delete</button>' : ''}
-          <button class="gcp-re-mobile-sheet-btn-reply" type="button">Reply</button>
+          ${comment.can_delete ? `<button class="gcp-re-mobile-sheet-btn-delete" type="button">${escHtml(trOr('editor.balloon.delete', 'Delete'))}</button>` : ''}
+          <button class="gcp-re-mobile-sheet-btn-reply" type="button">${escHtml(trOr('editor.balloon.reply', 'Reply'))}</button>
         </div>`;
 
       // Replies
@@ -2069,7 +2219,7 @@
               <span class="gcp-re-balloon-time">${escHtml(fmtTime(r.created_at))}</span>
             </div>
             <div class="gcp-re-mobile-sheet-cmt-body">${escHtml(r.comment_text || '')}</div>
-            ${r.can_delete ? `<button class="gcp-re-mobile-sheet-btn-delete gcp-re-reply-del-mobile" data-reply-idx="${ri}" type="button" style="font-size:12px;padding:4px 10px;border-radius:6px;border:none;cursor:pointer;">Delete</button>` : ''}
+            ${r.can_delete ? `<button class="gcp-re-mobile-sheet-btn-delete gcp-re-reply-del-mobile" data-reply-idx="${ri}" type="button" style="font-size:12px;padding:4px 10px;border-radius:6px;border:none;cursor:pointer;">${escHtml(trOr('editor.balloon.delete', 'Delete'))}</button>` : ''}
           </div>`;
         });
         html += '</div>';
@@ -2077,10 +2227,10 @@
 
       // Reply form
       html += `<div class="gcp-re-mobile-sheet-reply-form" style="display:none">
-        <textarea rows="2" placeholder="Write a reply\u2026"></textarea>
+        <textarea rows="2" placeholder="${escHtml(trOr('editor.balloon.replyPlaceholder', 'Write a reply\u2026'))}"></textarea>
         <div class="gcp-re-mobile-sheet-reply-actions">
-          <button class="gcp-re-mobile-sheet-btn-send" type="button">Send</button>
-          <button class="gcp-re-mobile-sheet-btn-cancel" type="button">Cancel</button>
+          <button class="gcp-re-mobile-sheet-btn-send" type="button">${escHtml(trOr('editor.balloon.send', 'Send'))}</button>
+          <button class="gcp-re-mobile-sheet-btn-cancel" type="button">${escHtml(trOr('editor.balloon.cancel', 'Cancel'))}</button>
         </div>
       </div>`;
 
@@ -2219,11 +2369,11 @@
         const allCells  = () => [...table.querySelectorAll('td,th')];
 
         const BORDERS = [
-          { t: 'None',   v: 'none' },
-          { t: 'Thin',   v: '1px solid #d1d5db' },
-          { t: 'Medium', v: '1.5px solid #64748b' },
-          { t: 'Thick',  v: '2px solid #1e293b' },
-          { t: 'Dashed', v: '1px dashed #94a3b8' },
+          { t: trOr('editor.table.borderNone', 'None'),     v: 'none' },
+          { t: trOr('editor.table.borderThin', 'Thin'),     v: '1px solid #d1d5db' },
+          { t: trOr('editor.table.borderMedium', 'Medium'), v: '1.5px solid #64748b' },
+          { t: trOr('editor.table.borderThick', 'Thick'),   v: '2px solid #1e293b' },
+          { t: trOr('editor.table.borderDashed', 'Dashed'), v: '1px dashed #94a3b8' },
         ];
 
         function makeRow(labelText, btns) {
@@ -2244,29 +2394,29 @@
         }
 
         const sep1 = document.createElement('div'); sep1.className = 'gcp-re-ctx-sep'; menu.appendChild(sep1);
-        menu.appendChild(makeRow('Fill:', [
-          { text: 'Cell',   action: () => makePalettePopup(pos, h => { tableCell.style.backgroundColor = h; }) },
-          { text: 'Row',    action: () => makePalettePopup(pos, h => { rowCells().forEach(c => { c.style.backgroundColor = h; }); }) },
-          { text: 'Column', action: () => makePalettePopup(pos, h => { colCells().forEach(c => { c.style.backgroundColor = h; }); }) },
-          { text: 'All',    action: () => makePalettePopup(pos, h => { allCells().forEach(c => { c.style.backgroundColor = h; }); }) },
+        menu.appendChild(makeRow(trOr('editor.table.fill', 'Fill:'), [
+          { text: trOr('editor.table.cell', 'Cell'),     action: () => makePalettePopup(pos, h => { pushUndo(); tableCell.style.backgroundColor = h; }) },
+          { text: trOr('editor.table.row', 'Row'),       action: () => makePalettePopup(pos, h => { pushUndo(); rowCells().forEach(c => { c.style.backgroundColor = h; }); }) },
+          { text: trOr('editor.table.column', 'Column'), action: () => makePalettePopup(pos, h => { pushUndo(); colCells().forEach(c => { c.style.backgroundColor = h; }); }) },
+          { text: trOr('editor.table.all', 'All'),       action: () => makePalettePopup(pos, h => { pushUndo(); allCells().forEach(c => { c.style.backgroundColor = h; }); }) },
         ]));
 
         const sep2 = document.createElement('div'); sep2.className = 'gcp-re-ctx-sep'; menu.appendChild(sep2);
         [
-          { label: 'Row grid:',  getCells: rowCells },
-          { label: 'Col grid:',  getCells: colCells },
-          { label: 'All grid:',  getCells: allCells },
+          { label: trOr('editor.table.rowGrid', 'Row grid:'), getCells: rowCells },
+          { label: trOr('editor.table.colGrid', 'Col grid:'), getCells: colCells },
+          { label: trOr('editor.table.allGrid', 'All grid:'), getCells: allCells },
         ].forEach(({ label, getCells }) => {
           menu.appendChild(makeRow(label, [
             ...BORDERS.map(({ t, v }) => ({
               text: t, title: t,
-              action: () => { getCells().forEach(c => { c.style.border = v; }); },
+              action: () => { pushUndo(); getCells().forEach(c => { c.style.border = v; }); },
             })),
-            { text: '🎨', title: 'Grid colour', action: () => makePalettePopup(pos, h => { getCells().forEach(c => { c.style.borderColor = h; }); }) },
+            { text: '🎨', title: trOr('editor.table.gridColour', 'Grid colour'), action: () => makePalettePopup(pos, h => { pushUndo(); getCells().forEach(c => { c.style.borderColor = h; }); }) },
           ]));
         });
 
-        // #11 — Table row/column add/delete
+        // #11 — Table row/column add/delete (tracked as pending table changes)
         const sep3 = document.createElement('div'); sep3.className = 'gcp-re-ctx-sep'; menu.appendChild(sep3);
         const tableRow = tableCell.closest('tr');
         const cellIdx = [...tableRow.children].indexOf(tableCell);
@@ -2280,37 +2430,71 @@
           menu.appendChild(item);
         }
 
-        addCtxItem('Insert row above', () => {
+        function makeCleanRow() {
           const newRow = tableRow.cloneNode(true);
-          [...newRow.cells].forEach(c => { c.innerHTML = '&nbsp;'; c.style.backgroundColor = ''; });
+          newRow.removeAttribute('data-tc-id');
+          newRow.removeAttribute('data-tc-tbl');
+          stripTcAttrs(newRow);
+          [...newRow.cells].forEach(c => {
+            c.innerHTML = '&nbsp;';
+            c.style.backgroundColor = '';
+            c.removeAttribute('data-tc-id');
+            c.removeAttribute('data-tc-tbl');
+            stripTcAttrs(c);
+          });
+          return newRow;
+        }
+
+        addCtxItem(trOr('editor.table.insertRowAbove', 'Insert row above'), () => {
+          pushUndo();
+          const newRow = makeCleanRow();
           tbody.insertBefore(newRow, tableRow);
+          trackTblInsert([newRow]);
+          updateTcBar();
         });
-        addCtxItem('Insert row below', () => {
-          const newRow = tableRow.cloneNode(true);
-          [...newRow.cells].forEach(c => { c.innerHTML = '&nbsp;'; c.style.backgroundColor = ''; });
+        addCtxItem(trOr('editor.table.insertRowBelow', 'Insert row below'), () => {
+          pushUndo();
+          const newRow = makeCleanRow();
           tableRow.after(newRow);
+          trackTblInsert([newRow]);
+          updateTcBar();
         });
-        addCtxItem('Insert column left', () => {
+        addCtxItem(trOr('editor.table.insertColLeft', 'Insert column left'), () => {
+          pushUndo();
+          const added = [];
           [...tbody.rows].forEach(r => {
             const td = document.createElement('td');
             td.innerHTML = '&nbsp;';
             r.insertBefore(td, r.cells[cellIdx] || null);
+            added.push(td);
           });
+          trackTblInsert(added);
+          updateTcBar();
         });
-        addCtxItem('Insert column right', () => {
+        addCtxItem(trOr('editor.table.insertColRight', 'Insert column right'), () => {
+          pushUndo();
+          const added = [];
           [...tbody.rows].forEach(r => {
             const td = document.createElement('td');
             td.innerHTML = '&nbsp;';
-            const ref = r.cells[cellIdx + 1] || null;
-            r.insertBefore(td, ref);
+            r.insertBefore(td, r.cells[cellIdx + 1] || null);
+            added.push(td);
           });
+          trackTblInsert(added);
+          updateTcBar();
         });
         if (tbody.rows.length > 1) {
-          addCtxItem('Delete row', () => { tableRow.remove(); });
+          addCtxItem(trOr('editor.table.deleteRow', 'Delete row'), () => {
+            pushUndo();
+            trackTblDelete([tableRow]);
+            updateTcBar();
+          });
         }
         if (tableRow.cells.length > 1) {
-          addCtxItem('Delete column', () => {
-            [...tbody.rows].forEach(r => { if (r.cells[cellIdx]) r.cells[cellIdx].remove(); });
+          addCtxItem(trOr('editor.table.deleteColumn', 'Delete column'), () => {
+            pushUndo();
+            trackTblDelete([...tbody.rows].flatMap(r => r.cells[cellIdx] ? [r.cells[cellIdx]] : []));
+            updateTcBar();
           });
         }
       }
@@ -2322,12 +2506,12 @@
         const tcId = tcEl.getAttribute('data-tc-id');
         const accItem = document.createElement('div');
         accItem.className = 'gcp-re-ctx-item';
-        accItem.textContent = '✓ Accept Change';
+        accItem.textContent = '✓ ' + trOr('editor.ctx.acceptChange', 'Accept Change');
         accItem.addEventListener('click', () => { removeCtxMenu(); acceptChange(tcId); });
         menu.appendChild(accItem);
         const rejItem = document.createElement('div');
         rejItem.className = 'gcp-re-ctx-item';
-        rejItem.textContent = '✗ Reject Change';
+        rejItem.textContent = '✗ ' + trOr('editor.ctx.rejectChange', 'Reject Change');
         rejItem.addEventListener('click', () => { removeCtxMenu(); rejectChange(tcId); });
         menu.appendChild(rejItem);
       }
