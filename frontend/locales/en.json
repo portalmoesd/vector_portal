@@ -469,6 +469,9 @@
     "preview": {
       "failLoad": "Failed to load document:"
     },
+    "history": {
+      "title": "History"
+    },
     "files": {
       "title": "Uploaded Files",
       "empty": "No files uploaded for this event.",

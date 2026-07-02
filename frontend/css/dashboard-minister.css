@@ -1011,6 +1011,21 @@
   font-size: 0.95rem; border-bottom: 1px solid var(--border-color);
   padding-bottom: 8px; margin-bottom: 12px;
 }
+/* Per-section "History" disclosure inside the ready-document preview. */
+.preview-card .lib-history { margin-top: 12px; }
+.preview-card .lib-history > summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.78rem; font-weight: 600; color: var(--text-secondary);
+  padding: 4px 10px; border: 1px solid var(--border-color); border-radius: 8px;
+  user-select: none;
+}
+.preview-card .lib-history > summary::-webkit-details-marker { display: none; }
+.preview-card .lib-history > summary::before {
+  content: '\25B8'; font-size: 0.7rem; transition: transform 0.15s ease;
+}
+.preview-card .lib-history[open] > summary { color: var(--text-primary); }
+.preview-card .lib-history[open] > summary::before { transform: rotate(90deg); }
+.preview-card .lib-history__body { margin-top: 10px; }
 .preview-header {
   display: flex; justify-content: space-between; align-items: center;
   margin-bottom: 20px; border-bottom: 2px solid var(--border-color); padding-bottom: 12px;
