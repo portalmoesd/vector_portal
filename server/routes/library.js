@@ -4,10 +4,61 @@ const { requireAuth, requireRole, denyAnalyst } = require('../middleware/auth');
 
 const router = express.Router();
 
-// GET /api/library — list completed/archived events scoped to user participation
+// GET /api/library — list completed events visible to the current user.
+// Visibility mirrors the active-events list (GET /api/events): a user sees a
+// finished document if they were in its creation chain — regardless of whether
+// they personally acted on a section. "In the chain" is role-shaped:
+//   - Collaborator / Super-Collaborator: assigned country AND their department
+//     is on a section of the event.
+//   - Supervisor / Deputy: assigned country, direct assignment, their department
+//     is on a section, or (deputies) they oversee a section's department.
+// The document owner / responsible deputy / creator, anyone who has a
+// section_history row (they acted), and ADMIN always see it.
 router.get('/', requireAuth, async (req, res) => {
   try {
-    // Participation-scoped: user must have touched at least one section
+    const role = req.user.role;
+    const isCollabRole = role === 'COLLABORATOR' || role === 'SUPER_COLLABORATOR';
+
+    // Common to every non-admin role: acted on it, or a named/owner relationship.
+    const baseOr = `
+      sh.user_id = $1
+      OR e.document_submitter_id = $1
+      OR e.deputy_id = $1
+      OR e.supervisor_id = $1
+      OR e.created_by_id = $1`;
+
+    let chainOr;
+    if (isCollabRole) {
+      // Collaborator / SC: country assignment AND department on a section.
+      chainOr = `
+        OR (
+          e.country_id IN (SELECT country_id FROM country_assignments WHERE user_id = $1)
+          AND EXISTS (
+            SELECT 1 FROM sections s
+            JOIN section_departments sd ON sd.section_id = s.id
+            WHERE s.event_id = e.id
+              AND sd.department_id = (SELECT department_id FROM users WHERE id = $1)
+          )
+        )`;
+    } else {
+      // Supervisor / Deputy: country assignment, department on a section, or
+      // (deputies) they oversee a section's department via deputy_department_links.
+      chainOr = `
+        OR e.country_id IN (SELECT country_id FROM country_assignments WHERE user_id = $1)
+        OR EXISTS (
+          SELECT 1 FROM sections s
+          JOIN section_departments sd ON sd.section_id = s.id
+          WHERE s.event_id = e.id
+            AND sd.department_id = (SELECT department_id FROM users WHERE id = $1)
+        )
+        OR EXISTS (
+          SELECT 1 FROM sections s
+          JOIN section_departments sd ON sd.section_id = s.id
+          JOIN deputy_department_links ddl ON ddl.department_id = sd.department_id
+          WHERE s.event_id = e.id AND ddl.deputy_id = $1
+        )`;
+    }
+
     const { rows } = await db.query(
       `SELECT DISTINCT e.id, e.title, e.language, e.ended_at, e.event_datetime,
               c.name_en AS country_name, c.code AS country_code,
@@ -20,10 +71,8 @@ router.get('/', requireAuth, async (req, res) => {
        LEFT JOIN section_history sh ON sh.event_id = e.id
        WHERE e.status = 'COMPLETED'
          AND (
-           sh.user_id = $1
-           OR e.document_submitter_id = $1
-           OR e.deputy_id = $1
-           OR e.created_by_id = $1
+           ${baseOr}
+           ${chainOr}
            OR $2 = 'ADMIN'
          )
        ORDER BY e.ended_at DESC`,

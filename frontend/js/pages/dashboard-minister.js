@@ -241,8 +241,9 @@
       case 'upcoming': return upcoming;
       // Meetings = events they own (ready + in-preparation), unified.
       case 'meetings': return completed.filter(isOwned).concat(upcoming.filter(isOwned));
-      // Tasks = in-progress events they contribute to but don't own.
-      case 'tasks': return upcoming.filter(i => !isOwned(i));
+      // Tasks ("Other Events") = events they contribute to but don't own —
+      // in-progress ones plus finished ones (shown once ready).
+      case 'tasks': return upcoming.filter(i => !isOwned(i)).concat(completed.filter(i => !isOwned(i)));
       default: return [];
     }
   }
@@ -533,7 +534,11 @@
     for (const it of items) {
       const ds = itemDate(it);
       const date = ds ? new Date(ds) : null;
-      const b = mode === 'completed' ? bucketCompleted(date, now)
+      // Finished contributed docs surface in the Tasks tab — group them together
+      // under "Completed" (after the in-progress buckets) rather than "No deadline".
+      const b = (mode === 'tasks' && it._ready)
+        ? { order: 9500, key: 'ready', label: I18n.tr('dashboard.toggleCompleted') }
+        : mode === 'completed' ? bucketCompleted(date, now)
         : mode === 'meetings' ? bucketMeetings(date, now)
         : bucketInProgress(date, now); // upcoming | tasks
       if (!map.has(b.key)) map.set(b.key, { order: b.order, label: b.label, items: [] });
@@ -543,7 +548,9 @@
     const far = 8640000000000000;
     for (const g of groups) {
       g.items.sort((a, b) => {
-        if (mode === 'completed') return new Date(b.endedAt || 0) - new Date(a.endedAt || 0);
+        if (mode === 'completed' || (mode === 'tasks' && g.key === 'ready')) {
+          return new Date(b.endedAt || 0) - new Date(a.endedAt || 0);
+        }
         if (mode === 'meetings') {
           // Past meetings most-recent-first; everything else soonest-first.
           const av = a.eventDateTime ? new Date(a.eventDateTime).getTime() : far;
