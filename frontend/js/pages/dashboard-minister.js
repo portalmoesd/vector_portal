@@ -241,8 +241,9 @@
       case 'upcoming': return upcoming;
       // Meetings = events they own (ready + in-preparation), unified.
       case 'meetings': return completed.filter(isOwned).concat(upcoming.filter(isOwned));
-      // Tasks = in-progress events they contribute to but don't own.
-      case 'tasks': return upcoming.filter(i => !isOwned(i));
+      // Tasks ("Other Events") = events they contribute to but don't own —
+      // in-progress ones plus finished ones (shown once ready).
+      case 'tasks': return upcoming.filter(i => !isOwned(i)).concat(completed.filter(i => !isOwned(i)));
       default: return [];
     }
   }
@@ -533,7 +534,11 @@
     for (const it of items) {
       const ds = itemDate(it);
       const date = ds ? new Date(ds) : null;
-      const b = mode === 'completed' ? bucketCompleted(date, now)
+      // Finished contributed docs surface in the Tasks tab — group them together
+      // under "Completed" (after the in-progress buckets) rather than "No deadline".
+      const b = (mode === 'tasks' && it._ready)
+        ? { order: 9500, key: 'ready', label: I18n.tr('dashboard.toggleCompleted') }
+        : mode === 'completed' ? bucketCompleted(date, now)
         : mode === 'meetings' ? bucketMeetings(date, now)
         : bucketInProgress(date, now); // upcoming | tasks
       if (!map.has(b.key)) map.set(b.key, { order: b.order, label: b.label, items: [] });
@@ -543,7 +548,9 @@
     const far = 8640000000000000;
     for (const g of groups) {
       g.items.sort((a, b) => {
-        if (mode === 'completed') return new Date(b.endedAt || 0) - new Date(a.endedAt || 0);
+        if (mode === 'completed' || (mode === 'tasks' && g.key === 'ready')) {
+          return new Date(b.endedAt || 0) - new Date(a.endedAt || 0);
+        }
         if (mode === 'meetings') {
           // Past meetings most-recent-first; everything else soonest-first.
           const av = a.eventDateTime ? new Date(a.eventDateTime).getTime() : far;
@@ -1115,6 +1122,12 @@
     const holder = s.currentHolderRole;
     const isHolder = effRole === holder;
     const status = s.status || 'draft';
+    // A linked supervisor can view other departments' sections (seesAllSections) but must
+    // not act on them — preview only, same as deputies. A supervisor's real holdings are
+    // always their own section (department match or a RECEIVING_ step); effectiveRole
+    // otherwise falls back to SUPERVISOR for a cross-dept section and would falsely make
+    // them look like the holder, offering Approve/Return/Open. So: no buttons off-section.
+    if (user.role === 'SUPERVISOR' && !isOwnSection(s)) return '';
     const btns = [];
     // Open — navigates to the single-section editor. Deputies can view every section
     // (seesAllSections) but must not edit ones that aren't theirs, so they only get Open
@@ -1192,6 +1205,8 @@
           // document) — a full reload guarantees the whole dashboard reflects the new
           // state (this also covers "refresh when the document is ready").
           if (action === 'approve' || action === 'push-section' || action === 'pull-section') {
+            // Remember the open card so it re-expands after the reload.
+            try { sessionStorage.setItem('mnReopenEvent', String(evId)); } catch (_) {}
             location.reload();
             return;
           }
@@ -1437,6 +1452,15 @@
 
   renderAll();
   positionThumb();
+  // After a section action (approve / push / pull) triggers a full reload, re-open the
+  // card that was expanded so the user lands back where they were.
+  try {
+    const reopenId = sessionStorage.getItem('mnReopenEvent');
+    if (reopenId) {
+      sessionStorage.removeItem('mnReopenEvent');
+      revealEvent(parseInt(reopenId, 10));
+    }
+  } catch (_) { /* ignore */ }
   // Re-position once fonts/layout settle (button widths depend on the label text).
   requestAnimationFrame(positionThumb);
   // rAF fires before the async Georgian web font finishes downloading, which changes the
