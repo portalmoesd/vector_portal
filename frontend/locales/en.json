@@ -79,7 +79,7 @@
     "selectEvent": "Select event",
     "selectEventPlaceholder": "Select event...",
     "noEvents": "No events available",
-    "sections": "Required Sections",
+    "sections": "Sections",
     "status": "Status",
     "lastUpdated": "Last Updated",
     "actions": "Actions",
@@ -119,7 +119,6 @@
     "stagePending": "Pending",
     "responsible": "Responsible",
     "stageWith": "With {role}",
-    "sections": "Sections",
     "yourSections": "Your sections",
     "otherSections": "Other sections",
     "historyToggle": "History",
@@ -493,7 +492,11 @@
   "editor": {
     "pageTitle": "Section Editor",
     "allTitle": "All Sections",
-    "saveAll": "Save All",
+    "saveAll": {
+      "noneEditable": "No editable sections to save",
+      "inProgress": "Saving…",
+      "allSaved": "All sections saved"
+    },
     "backToDashboard": "Back to Dashboard",
     "errMissingIds": "Missing event_id or section_id",
     "errSectionNotFound": "Section not found in event",
@@ -504,6 +507,8 @@
     "pullSection": "Pull Section",
     "saved": "Saved successfully",
     "saveFailed": "Save failed:",
+    "conflict": "Could not save — {name} modified this section after you opened it. Reload the page to see the latest version.",
+    "conflictSomeone": "another user",
     "submitted": "Submitted successfully",
     "submitFailed": "Submit failed:",
     "approved": "Approved successfully",
@@ -566,11 +571,6 @@
         "pulled": "Pulled"
       }
     },
-    "saveAll": {
-      "noneEditable": "No editable sections to save",
-      "inProgress": "Saving…",
-      "allSaved": "All sections saved"
-    },
     "status": {
       "saved": "Saved",
       "sectionOf": "Section {n} of {total}",
@@ -614,18 +614,42 @@
     },
     "table": {
       "insert": "Insert table",
-      "size": "{r} × {c} table"
+      "size": "{r} × {c} table",
+      "insertRowAbove": "Insert row above",
+      "insertRowBelow": "Insert row below",
+      "insertColLeft": "Insert column left",
+      "insertColRight": "Insert column right",
+      "deleteRow": "Delete row",
+      "deleteColumn": "Delete column",
+      "fill": "Fill:",
+      "rowGrid": "Row grid:",
+      "colGrid": "Col grid:",
+      "allGrid": "All grid:",
+      "cell": "Cell",
+      "row": "Row",
+      "column": "Column",
+      "all": "All",
+      "borderNone": "None",
+      "borderThin": "Thin",
+      "borderMedium": "Medium",
+      "borderThick": "Thick",
+      "borderDashed": "Dashed",
+      "gridColour": "Grid colour"
     },
     "tc": {
       "label": "Changes",
       "toggleTitle": "Show / Hide Changes",
       "toggleAria": "Show or hide tracked changes",
       "acceptAll": "Accept All",
-      "rejectAll": "Reject All"
+      "rejectAll": "Reject All",
+      "summaryOne": "1 tracked change",
+      "summaryMany": "{n} tracked changes"
     },
     "comments": {
       "toggleTitle": "Comments",
-      "toggleAria": "Toggle comments panel"
+      "toggleAria": "Toggle comments panel",
+      "summaryOne": "1 comment",
+      "summaryMany": "{n} comments"
     },
     "fullscreen": {
       "title": "Fullscreen (Esc to exit)",
@@ -637,7 +661,13 @@
       "accept": "Accept",
       "reject": "Reject",
       "formatted": "Formatted",
-      "changesCount": "{n} changes"
+      "changesCount": "{n} changes",
+      "changeOne": "1 change",
+      "delete": "Delete",
+      "reply": "Reply",
+      "send": "Send",
+      "cancel": "Cancel",
+      "replyPlaceholder": "Write a reply…"
     },
     "find": {
       "findPlaceholder": "Find...",
@@ -646,6 +676,32 @@
       "replaceAll": "Replace All",
       "prev": "Previous",
       "next": "Next"
+    },
+    "placeholder": "Start typing…",
+    "ctx": {
+      "acceptChange": "Accept Change",
+      "rejectChange": "Reject Change"
+    },
+    "fmt": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strikeThrough": "Strikethrough",
+      "superscript": "Superscript",
+      "subscript": "Subscript",
+      "fontName": "Font",
+      "fontSize": "Font size",
+      "foreColor": "Colour",
+      "backColor": "Highlight",
+      "h2": "Heading 2",
+      "h3": "Heading 3",
+      "insertUnorderedList": "Bullet list",
+      "insertOrderedList": "Numbered list",
+      "justifyLeft": "Align left",
+      "justifyCenter": "Centre",
+      "justifyRight": "Align right",
+      "justifyFull": "Justify",
+      "removeFormat": "Clear formatting"
     }
   }
 }

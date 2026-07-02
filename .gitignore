@@ -23,3 +23,8 @@ server/data/tourism-cache.json
 # immediately before the destructive TRUNCATE. Neither belongs in git.
 server/scripts/.migration.env
 server/scripts/.migration-backup-*/
+
+# Playwright test output
+test-results/
+playwright-report/
+tests/fixtures/.cache/

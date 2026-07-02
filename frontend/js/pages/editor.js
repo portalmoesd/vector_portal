@@ -90,10 +90,7 @@
         if (anchorId) {
           richEditor.removeCommentAnchor(anchorId);
           // Persist the HTML without the anchor so the highlight doesn't return on reload
-          Api.post('/api/workflow/save', {
-            eventId, sectionId,
-            htmlContent: richEditor.getHtml(),
-          }).catch(e => console.error('Auto-save after anchor removal failed:', e));
+          saveContent().catch(e => console.error('Auto-save after anchor removal failed:', e));
         }
         loadComments();
       } catch (e) { console.error('Delete comment failed:', e); }
@@ -233,32 +230,77 @@
     loadComments();
   }
 
+  // ── Saving: optimistic lock + autosave ─────────────────────────────────────
+  // baseEditedAt is the server's last_content_edited_at as of our load (or our
+  // own last save). The server rejects the save with 409 if someone else
+  // edited in between, instead of overwriting their work.
+  let baseEditedAt = content.lastEditedAt || null;
+  let lastSavedHtml = richEditor.getHtml();
+
+  async function saveContent() {
+    const html = richEditor.getHtml();
+    const data = await Api.post('/api/workflow/save', {
+      eventId, sectionId,
+      htmlContent: html,
+      baseEditedAt,
+    });
+    baseEditedAt = data.lastEditedAt || baseEditedAt;
+    lastSavedHtml = html;
+  }
+
+  function conflictMessage(e) {
+    const name = (e.data && localizedName(e.data.lastEditedBy, e.data.lastEditedByKa)) ||
+      I18n.tr('editor.conflictSomeone');
+    return I18n.tr('editor.conflict').replace('{name}', name);
+  }
+
+  const AUTOSAVE_MS = 20000;
+  let autosaveConflictNotified = false;
+  if (canEdit) {
+    setInterval(async () => {
+      if (richEditor.getHtml() === lastSavedHtml) return;
+      try {
+        // Content only — orphaned-comment cleanup stays on explicit save so
+        // undo can still restore an anchor before anything is deleted.
+        await saveContent();
+        autosaveConflictNotified = false;
+      } catch (e) {
+        if (e.status === 409 && !autosaveConflictNotified) {
+          autosaveConflictNotified = true;
+          toast.error(conflictMessage(e));
+        }
+        // Network errors: stay silent, next tick retries.
+      }
+    }, AUTOSAVE_MS);
+
+    window.addEventListener('beforeunload', e => {
+      if (richEditor.getHtml() !== lastSavedHtml) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    });
+  }
+
   async function handleSave() {
     try {
-      await Api.post('/api/workflow/save', {
-        eventId, sectionId,
-        htmlContent: richEditor.getHtml(),
-      });
+      await saveContent();
       await reconcileOrphanedComments();
       showNotification(I18n.tr('editor.saved'));
     } catch (e) {
-      toast.error(I18n.tr('editor.saveFailed') + ' ' + e.message);
+      toast.error(e.status === 409 ? conflictMessage(e) : I18n.tr('editor.saveFailed') + ' ' + e.message);
     }
   }
 
   async function handleSubmit() {
     if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmSubmit'), { confirmLabel: I18n.tr('common.submit'), confirmColor: '#3b82f6' })) return;
     try {
-      await Api.post('/api/workflow/save', {
-        eventId, sectionId,
-        htmlContent: richEditor.getHtml(),
-      });
+      await saveContent();
       await reconcileOrphanedComments();
       await Api.post('/api/workflow/submit', { eventId, sectionId });
       showNotification(I18n.tr('editor.submitted'));
       setTimeout(() => window.location.reload(), 800);
     } catch (e) {
-      toast.error(I18n.tr('editor.submitFailed') + ' ' + e.message);
+      toast.error(e.status === 409 ? conflictMessage(e) : I18n.tr('editor.submitFailed') + ' ' + e.message);
     }
   }
 

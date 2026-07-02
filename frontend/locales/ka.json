@@ -79,7 +79,7 @@
     "selectEvent": "აირჩიეთ ღონისძიება",
     "selectEventPlaceholder": "აირჩიეთ ღონისძიება...",
     "noEvents": "ღონისძიებები არ არის",
-    "sections": "საჭირო სექციები",
+    "sections": "სექციები",
     "status": "სტატუსი",
     "lastUpdated": "ბოლო განახლება",
     "actions": "მოქმედებები",
@@ -119,7 +119,6 @@
     "stagePending": "მოლოდინში",
     "responsible": "პასუხისმგებელი",
     "stageWith": "{role}-თან",
-    "sections": "სექციები",
     "yourSections": "თქვენი სექციები",
     "otherSections": "სხვა სექციები",
     "historyToggle": "ისტორია",
@@ -493,7 +492,11 @@
   "editor": {
     "pageTitle": "სექციის რედაქტორი",
     "allTitle": "ყველა სექცია",
-    "saveAll": "ყველას შენახვა",
+    "saveAll": {
+      "noneEditable": "შესანახი სექციები არ არის",
+      "inProgress": "ინახება…",
+      "allSaved": "ყველა სექცია შეინახა"
+    },
     "backToDashboard": "მთავარზე დაბრუნება",
     "errMissingIds": "event_id ან section_id აკლია",
     "errSectionNotFound": "სექცია ღონისძიებაში ვერ მოიძებნა",
@@ -504,6 +507,8 @@
     "pullSection": "სექციის გადმოტანა",
     "saved": "წარმატებით შეინახა",
     "saveFailed": "შენახვა ვერ მოხერხდა:",
+    "conflict": "შენახვა ვერ მოხერხდა — სექცია თქვენი გახსნის შემდეგ შეიცვალა ({name}). უახლესი ვერსიის სანახავად განაახლეთ გვერდი.",
+    "conflictSomeone": "სხვა მომხმარებელი",
     "submitted": "წარმატებით გაიგზავნა",
     "submitFailed": "გაგზავნა ვერ მოხერხდა:",
     "approved": "წარმატებით დადასტურდა",
@@ -566,11 +571,6 @@
         "pulled": "დაბრუნებული"
       }
     },
-    "saveAll": {
-      "noneEditable": "შესანახი სექციები არ არის",
-      "inProgress": "ინახება…",
-      "allSaved": "ყველა სექცია შეინახა"
-    },
     "status": {
       "saved": "შენახულია",
       "sectionOf": "სექცია {n} / {total}",
@@ -614,18 +614,42 @@
     },
     "table": {
       "insert": "ცხრილის ჩასმა",
-      "size": "{r} × {c} ცხრილი"
+      "size": "{r} × {c} ცხრილი",
+      "insertRowAbove": "მწკრივის ჩასმა ზემოთ",
+      "insertRowBelow": "მწკრივის ჩასმა ქვემოთ",
+      "insertColLeft": "სვეტის ჩასმა მარცხნივ",
+      "insertColRight": "სვეტის ჩასმა მარჯვნივ",
+      "deleteRow": "მწკრივის წაშლა",
+      "deleteColumn": "სვეტის წაშლა",
+      "fill": "შევსება:",
+      "rowGrid": "მწკრივის ბადე:",
+      "colGrid": "სვეტის ბადე:",
+      "allGrid": "მთელი ბადე:",
+      "cell": "უჯრა",
+      "row": "მწკრივი",
+      "column": "სვეტი",
+      "all": "ყველა",
+      "borderNone": "არაფერი",
+      "borderThin": "თხელი",
+      "borderMedium": "საშუალო",
+      "borderThick": "სქელი",
+      "borderDashed": "წყვეტილი",
+      "gridColour": "ბადის ფერი"
     },
     "tc": {
       "label": "ცვლილებები",
       "toggleTitle": "ცვლილებების ჩვენება / დამალვა",
       "toggleAria": "ცვლილებების ჩვენება ან დამალვა",
       "acceptAll": "ყველას მიღება",
-      "rejectAll": "ყველას უარყოფა"
+      "rejectAll": "ყველას უარყოფა",
+      "summaryOne": "1 ცვლილება",
+      "summaryMany": "{n} ცვლილება"
     },
     "comments": {
       "toggleTitle": "კომენტარები",
-      "toggleAria": "კომენტარების პანელი"
+      "toggleAria": "კომენტარების პანელი",
+      "summaryOne": "1 კომენტარი",
+      "summaryMany": "{n} კომენტარი"
     },
     "fullscreen": {
       "title": "სრულ ეკრანზე (Esc — გასვლა)",
@@ -637,7 +661,13 @@
       "accept": "მიღება",
       "reject": "უარყოფა",
       "formatted": "ფორმატირებული",
-      "changesCount": "{n} ცვლილება"
+      "changesCount": "{n} ცვლილება",
+      "changeOne": "1 ცვლილება",
+      "delete": "წაშლა",
+      "reply": "პასუხი",
+      "send": "გაგზავნა",
+      "cancel": "გაუქმება",
+      "replyPlaceholder": "დაწერეთ პასუხი…"
     },
     "find": {
       "findPlaceholder": "ძებნა...",
@@ -646,6 +676,32 @@
       "replaceAll": "ყველას ჩანაცვლება",
       "prev": "წინა",
       "next": "შემდეგი"
+    },
+    "placeholder": "დაიწყეთ ტექსტის შეყვანა…",
+    "ctx": {
+      "acceptChange": "ცვლილების მიღება",
+      "rejectChange": "ცვლილების უარყოფა"
+    },
+    "fmt": {
+      "bold": "მუქი",
+      "italic": "დახრილი",
+      "underline": "ხაზგასმული",
+      "strikeThrough": "გადახაზული",
+      "superscript": "ზედა ინდექსი",
+      "subscript": "ქვედა ინდექსი",
+      "fontName": "შრიფტი",
+      "fontSize": "შრიფტის ზომა",
+      "foreColor": "ფერი",
+      "backColor": "მარკირება",
+      "h2": "სათაური 2",
+      "h3": "სათაური 3",
+      "insertUnorderedList": "მარკირებული სია",
+      "insertOrderedList": "დანომრილი სია",
+      "justifyLeft": "მარცხნივ სწორება",
+      "justifyCenter": "ცენტრში",
+      "justifyRight": "მარჯვნივ სწორება",
+      "justifyFull": "გადასწორება",
+      "removeFormat": "ფორმატის გასუფთავება"
     }
   }
 }
