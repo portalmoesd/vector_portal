@@ -1,6 +1,7 @@
 const express = require('express');
 const db = require('../db');
 const { requireAuth, requireRole, denyAnalyst } = require('../middleware/auth');
+const { sanitizeEditorHtml } = require('../helpers/sanitize');
 
 const router = express.Router();
 
@@ -131,7 +132,7 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
         id: s.id,
         title: s.title,
         sortOrder: s.sort_order,
-        htmlContent: s.html_content,
+        htmlContent: sanitizeEditorHtml(s.html_content),
       })),
     });
   } catch (err) {

@@ -1,6 +1,7 @@
 const express = require('express');
 const db = require('../db');
 const { requireAuth, denyAnalyst } = require('../middleware/auth');
+const { sanitizeEditorHtml } = require('../helpers/sanitize');
 
 const router = express.Router();
 
@@ -51,7 +52,7 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
          SET html_content = $1, last_updated_at = now(),
              last_updated_by_user_id = $2
          WHERE event_id = $3 AND section_id = $4`,
-        [htmlContent, req.user.id, eventId, sectionId]
+        [sanitizeEditorHtml(htmlContent), req.user.id, eventId, sectionId]
       );
     }
 

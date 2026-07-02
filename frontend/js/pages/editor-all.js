@@ -413,6 +413,21 @@
 
   // ── Workflow handlers ────────────────────────────────────────────────────
 
+  // Delete comments whose anchor text was removed from the document. Runs only
+  // on explicit save/submit — never automatically — so undo can still bring an
+  // anchor (and its comments) back before the user commits the change.
+  async function reconcileOrphanedComments(sectionId) {
+    const sec = sections[sectionId];
+    if (!sec) return;
+    const orphanIds = sec.editor.getOrphanedCommentIds();
+    if (!orphanIds.length) return;
+    await Promise.all(orphanIds.map(id =>
+      Api.post('/api/workflow/comments/delete', { commentId: id })
+        .catch(e => console.error('Orphaned comment cleanup failed:', e))
+    ));
+    loadCommentsForSection(sectionId);
+  }
+
   async function handleSaveSection(sectionId) {
     const sec = sections[sectionId];
     if (!sec) return;
@@ -421,6 +436,7 @@
         eventId, sectionId,
         htmlContent: sec.editor.getHtml(),
       });
+      await reconcileOrphanedComments(sectionId);
       showNotification(I18n.tr('editor.saved'));
       document.getElementById('statusSaved').textContent = I18n.tr('editor.status.saved');
     } catch (e) {
@@ -434,6 +450,7 @@
     if (!await GCP.ActionDialog.confirm(I18n.tr('editor.confirmSubmit'), { confirmLabel: I18n.tr('common.submit'), confirmColor: '#3b82f6' })) return;
     try {
       await Api.post('/api/workflow/save', { eventId, sectionId, htmlContent: sec.editor.getHtml() });
+      await reconcileOrphanedComments(sectionId);
       await Api.post('/api/workflow/submit', { eventId, sectionId });
       showNotification(I18n.tr('editor.submitted'));
       setTimeout(() => window.location.reload(), 800);
@@ -526,7 +543,7 @@
         Api.post('/api/workflow/save', {
           eventId, sectionId: parseInt(sid),
           htmlContent: s.editor.getHtml(),
-        })
+        }).then(() => reconcileOrphanedComments(parseInt(sid)))
       ));
       showNotification(I18n.tr('editor.saveAll.allSaved'));
       document.getElementById('statusSaved').textContent = I18n.tr('editor.status.saved');
