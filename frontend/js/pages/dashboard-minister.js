@@ -1115,6 +1115,12 @@
     const holder = s.currentHolderRole;
     const isHolder = effRole === holder;
     const status = s.status || 'draft';
+    // A linked supervisor can view other departments' sections (seesAllSections) but must
+    // not act on them — preview only, same as deputies. A supervisor's real holdings are
+    // always their own section (department match or a RECEIVING_ step); effectiveRole
+    // otherwise falls back to SUPERVISOR for a cross-dept section and would falsely make
+    // them look like the holder, offering Approve/Return/Open. So: no buttons off-section.
+    if (user.role === 'SUPERVISOR' && !isOwnSection(s)) return '';
     const btns = [];
     // Open — navigates to the single-section editor. Deputies can view every section
     // (seesAllSections) but must not edit ones that aren't theirs, so they only get Open
