@@ -17,6 +17,7 @@ const {
   canPullSection,
 } = require('../helpers/pipeline');
 const { notifySectionTurn, markActorTurnRead, notifyEventCompleted } = require('../helpers/notifications');
+const { sanitizeEditorHtml } = require('../helpers/sanitize');
 
 const router = express.Router();
 
@@ -300,7 +301,7 @@ router.post('/save', requireAuth, denyAnalyst, async (req, res) => {
            last_content_edited_at = now(),
            last_content_edited_by_user_id = $2
        WHERE event_id = $3 AND section_id = $4`,
-      [htmlContent || '', req.user.id, eventId, sectionId]
+      [sanitizeEditorHtml(htmlContent), req.user.id, eventId, sectionId]
     );
 
     // Record in history
@@ -1370,7 +1371,9 @@ router.get('/section-content', requireAuth, async (req, res) => {
     if (!content) return res.status(404).json({ error: 'Content not found' });
 
     res.json({
-      htmlContent: content.html_content,
+      // Sanitize on read as well — covers content stored before sanitization
+      // existed and any write path that might bypass /save.
+      htmlContent: sanitizeEditorHtml(content.html_content),
       status: content.status,
       lastEditedAt: content.last_content_edited_at,
       lastEditedBy: content.last_edited_by,

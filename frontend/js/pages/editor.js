@@ -220,12 +220,26 @@
 
   // ── Workflow actions (use richEditor.getHtml() instead of contentEditable) ──
 
+  // Delete comments whose anchor text was removed from the document. Runs only
+  // on explicit save/submit — never automatically — so undo can still bring an
+  // anchor (and its comments) back before the user commits the change.
+  async function reconcileOrphanedComments() {
+    const orphanIds = richEditor.getOrphanedCommentIds();
+    if (!orphanIds.length) return;
+    await Promise.all(orphanIds.map(id =>
+      Api.post('/api/workflow/comments/delete', { commentId: id })
+        .catch(e => console.error('Orphaned comment cleanup failed:', e))
+    ));
+    loadComments();
+  }
+
   async function handleSave() {
     try {
       await Api.post('/api/workflow/save', {
         eventId, sectionId,
         htmlContent: richEditor.getHtml(),
       });
+      await reconcileOrphanedComments();
       showNotification(I18n.tr('editor.saved'));
     } catch (e) {
       toast.error(I18n.tr('editor.saveFailed') + ' ' + e.message);
@@ -239,6 +253,7 @@
         eventId, sectionId,
         htmlContent: richEditor.getHtml(),
       });
+      await reconcileOrphanedComments();
       await Api.post('/api/workflow/submit', { eventId, sectionId });
       showNotification(I18n.tr('editor.submitted'));
       setTimeout(() => window.location.reload(), 800);

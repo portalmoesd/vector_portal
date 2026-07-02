@@ -102,6 +102,37 @@
     catch (_) { return ''; }
   }
 
+  // ── Security-only sanitization for HTML loaded from the server ────────────
+  // Defence in depth: the server sanitizes on write and read, but any HTML
+  // assigned to the editable body must never execute. Unlike the paste-time
+  // sanitizeHtml() below, this preserves formatting (classes, styles,
+  // data-tc-* attributes) and only strips active content. <template> content
+  // is inert — nothing executes or loads while it is parsed and cleaned.
+  const DANGEROUS_TAGS = 'script,style,link,meta,base,iframe,frame,object,embed,form,svg,math';
+  const URL_ATTRS = ['href', 'src', 'xlink:href', 'action'];
+  function sanitizeUntrustedHtml(html) {
+    if (!html) return '';
+    const tpl = document.createElement('template');
+    tpl.innerHTML = html;
+    tpl.content.querySelectorAll(DANGEROUS_TAGS).forEach(el => el.remove());
+    tpl.content.querySelectorAll('*').forEach(el => {
+      for (const attr of [...el.attributes]) {
+        const name = attr.name.toLowerCase();
+        if (name.startsWith('on') || name === 'srcdoc' || name === 'formaction') {
+          el.removeAttribute(attr.name);
+          continue;
+        }
+        if (URL_ATTRS.includes(name)) {
+          const v = attr.value.replace(/[\s\u0000-\u001f]+/g, '').toLowerCase();
+          if (v.startsWith('javascript:') || v.startsWith('vbscript:') || v.startsWith('data:')) {
+            el.removeAttribute(attr.name);
+          }
+        }
+      }
+    });
+    return tpl.innerHTML;
+  }
+
   // ── Backward-compat helpers exposed on window.GCP ─────────────────────────
   function authorColor(name) {
     return TC_PALETTE[authorColorIdx(name)][0];
@@ -375,7 +406,7 @@
     body.setAttribute('role', 'textbox');
     body.setAttribute('aria-multiline', 'true');
     body.setAttribute('data-placeholder', placeholder || 'Start typing…');
-    if (initialHtml) body.innerHTML = initialHtml;
+    if (initialHtml) body.innerHTML = sanitizeUntrustedHtml(initialHtml);
 
     // ── Track Changes state ──────────────────────────────────────────────────
     const tc = { visible: false, authorName: authorName || 'Unknown', counter: 0 };
@@ -1632,6 +1663,7 @@
         sel.removeAllRanges(); sel.addRange(r);
         return true;
       }
+      const lastBr = prev.lastElementChild;
       if (lastBr && lastBr.tagName === 'BR') lastBr.remove();
       // Save cursor at end of prev — walk to deepest text node
       let cursorNode = prev.lastChild;
@@ -2236,8 +2268,8 @@
 
         // #11 — Table row/column add/delete
         const sep3 = document.createElement('div'); sep3.className = 'gcp-re-ctx-sep'; menu.appendChild(sep3);
+        const tableRow = tableCell.closest('tr');
         const cellIdx = [...tableRow.children].indexOf(tableCell);
-        const rowIdx = [...tableRow.parentElement.children].indexOf(tableRow);
         const tbody = tableRow.parentElement;
 
         function addCtxItem(label, action) {
@@ -2489,12 +2521,17 @@
       'deleteWordBackward', 'deleteWordForward',
       'deleteHardLineBackward', 'deleteHardLineForward',
       'deleteSoftLineBackward', 'deleteSoftLineForward',
-      'deleteByCut', 'insertFromPaste', 'insertFromDrop',
+      'deleteByCut', 'deleteByDrag', 'insertFromPaste', 'insertFromDrop',
       'insertParagraph', 'insertLineBreak',
     ]);
 
     body.addEventListener('beforeinput', e => {
-      if (!TC_INPUT_TYPES.has(e.inputType) || !body.isContentEditable) return;
+      if (!body.isContentEditable) return;
+      // Native undo/redo (context menu, some IMEs) must go through our own
+      // stack — the browser's history knows nothing about tracked markup.
+      if (e.inputType === 'historyUndo') { e.preventDefault(); performUndo(); return; }
+      if (e.inputType === 'historyRedo') { e.preventDefault(); performRedo(); return; }
+      if (!TC_INPUT_TYPES.has(e.inputType)) return;
 
       const type = e.inputType;
       const isDeleteOp = type.startsWith('delete');
@@ -2717,7 +2754,12 @@
 
     body.addEventListener('keyup', updateActive);
     body.addEventListener('mouseup', updateActive);
-    body.addEventListener('selectionchange', updateActive);
+    // selectionchange only fires on document — filter to selections inside the body
+    function onDocSelectionChange() {
+      const sel = window.getSelection();
+      if (sel && sel.anchorNode && body.contains(sel.anchorNode)) updateActive();
+    }
+    document.addEventListener('selectionchange', onDocSelectionChange);
 
     body.addEventListener('keydown', e => {
       const mod = e.ctrlKey || e.metaKey;
@@ -2772,15 +2814,14 @@
       return body.innerHTML.replace(/(<br\s*\/?>|\s|&nbsp;)*$/, '').trim();
     }
 
-    function setHtml(html) { body.innerHTML = html || ''; mergeAdjacentIns(); updateTcBar(); }
+    function setHtml(html) { body.innerHTML = sanitizeUntrustedHtml(html); mergeAdjacentIns(); updateTcBar(); }
     function destroy() {
       if (fsActive) {
         document.body.style.overflow = '';
         if (fsOriginalParent) fsOriginalParent.insertBefore(wrap, fsOriginalNextSibling || null);
       }
       document.removeEventListener('keydown', onDocKeydown);
-      _cmtAnchorObserver.disconnect();
-      clearTimeout(_orphanTimer);
+      document.removeEventListener('selectionchange', onDocSelectionChange);
       container.innerHTML = '';
     }
     function focus() { body.focus(); }
@@ -2809,30 +2850,35 @@
     if (initialHtml) mergeAdjacentIns();
     updateTcBar();
 
-    // ── Auto-delete comments whose anchor was removed ───────────────────────
-    let _orphanTimer = null;
-    function checkOrphanedComments() {
-      clearTimeout(_orphanTimer);
-      _orphanTimer = setTimeout(() => {
-        const present = new Set(
-          [...body.querySelectorAll('.gcp-cmt-anchor[data-cmt-anchor-id]')]
-            .map(el => el.getAttribute('data-cmt-anchor-id'))
-        );
-        storedComments.forEach(c => {
-          if (c.anchor_id && !present.has(c.anchor_id)) {
-            if (onDeleteComment) onDeleteComment(c.id, c.anchor_id);
-          }
-        });
-      }, 250);
+    // ── Orphaned comments ────────────────────────────────────────────────────
+    // Comments whose anchor span no longer exists in the document. Computed on
+    // demand (typically at save time) rather than auto-deleted by a
+    // MutationObserver — transient DOM states like undo or reject-all must
+    // never destroy comments on the server. Replies to an orphaned root are
+    // included so no dangling thread survives the root's deletion.
+    function getOrphanedCommentIds() {
+      const present = new Set(
+        [...body.querySelectorAll('.gcp-cmt-anchor[data-cmt-anchor-id]')]
+          .map(el => el.getAttribute('data-cmt-anchor-id'))
+      );
+      const orphanRootIds = new Set(
+        storedComments
+          .filter(c => !c.parent_id && c.anchor_id && !present.has(c.anchor_id))
+          .map(c => c.id)
+      );
+      const ids = [...orphanRootIds];
+      storedComments.forEach(c => {
+        if (c.parent_id && orphanRootIds.has(c.parent_id)) ids.push(c.id);
+      });
+      return ids;
     }
-    const _cmtAnchorObserver = new MutationObserver(checkOrphanedComments);
-    _cmtAnchorObserver.observe(body, { childList: true, subtree: true });
 
     return {
       getHtml, getCleanHtml, setHtml, destroy, focus, el: body,
       toolbarEl: toolbar, wrapEl: wrap,
       acceptAllChanges, rejectAllChanges, hasTrackedChanges,
       setCommentsActive, setCommentsBadge, setComments, removeCommentAnchor,
+      getOrphanedCommentIds,
       toggleFullscreen,
     };
   }
