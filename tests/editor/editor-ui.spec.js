@@ -127,6 +127,40 @@ test.describe('editor UI and document operations', () => {
     expect(await page.evaluate(() => window.ed.getOrphanedCommentIds())).toEqual([2, 3]);
   });
 
+  test('a burst of typing undoes as a single step', async ({ page }) => {
+    await bootEditor(page, { initialHtml: '<p>base</p>' });
+    await setCaret(page, 'p', 4);
+    await page.keyboard.type('hello');
+    await expect(page.locator('.gcp-re-body')).toContainText('basehello');
+    // One undo removes the whole burst, not one character
+    await page.keyboard.press('Control+z');
+    await expect(page.locator('.gcp-re-body p')).toHaveText('base');
+    await page.keyboard.press('Control+y');
+    await expect(page.locator('.gcp-re-body')).toContainText('basehello');
+  });
+
+  test('comment balloons render and survive scroll events', async ({ page }) => {
+    await bootEditor(page, {
+      initialHtml: '<p>text <span class="gcp-cmt-anchor" data-cmt-anchor-id="c1">anchored</span></p>',
+    });
+    await page.evaluate(() => {
+      window.ed.setComments([
+        { id: 1, anchor_id: 'c1', parent_id: null, author_name: 'A', comment_text: 'note', created_at: '' },
+      ]);
+    });
+    await expect(page.locator('.gcp-re-balloon--cmt')).toHaveCount(1);
+    // Scrolling must not tear balloons down mid-scroll (rebuild is deferred
+    // until scrolling settles, and teardown happens in the same frame as the
+    // rebuild)
+    await page.evaluate(() => {
+      const row = document.querySelector('#host .gcp-re-content-row');
+      for (let i = 0; i < 20; i++) row.dispatchEvent(new Event('scroll'));
+    });
+    await expect(page.locator('.gcp-re-balloon--cmt')).toHaveCount(1);
+    await page.waitForTimeout(300);
+    await expect(page.locator('.gcp-re-balloon--cmt')).toHaveCount(1);
+  });
+
   test('ctrl+z / ctrl+y undo and redo tracked typing', async ({ page }) => {
     await bootEditor(page, { initialHtml: '<p>base</p>' });
     await setCaret(page, 'p', 4);

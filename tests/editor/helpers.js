@@ -5,13 +5,16 @@
 const fs = require('fs');
 const path = require('path');
 
-const editorSrc = fs
-  .readFileSync(path.join(__dirname, '../../frontend/js/core/editor.js'), 'utf8')
-  .replace(/<\/script>/g, '<\\/script>');
+const escapeScript = s => s.replace(/<\/script>/g, '<\\/script>');
+const coreSrc = escapeScript(
+  fs.readFileSync(path.join(__dirname, '../../frontend/js/core/editor-core.js'), 'utf8'));
+const editorSrc = escapeScript(
+  fs.readFileSync(path.join(__dirname, '../../frontend/js/core/editor.js'), 'utf8'));
 
 const PAGE = `<!doctype html><html><head><meta charset="utf-8"></head><body>
 <div id="host" style="width:1200px"></div>
 <script>window.I18n = { tr: k => k };</script>
+<script>${coreSrc}</script>
 <script>${editorSrc}</script>
 </body></html>`;
 
