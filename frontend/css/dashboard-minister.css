@@ -340,15 +340,20 @@
    dot straddles the curved outer edge instead of floating in the corner void). */
 .mn-dash .mn-card__attn {
   position: absolute; top: -5px; right: -5px; z-index: 2;
-  width: 22px; height: 22px; border-radius: 50%;
+  min-width: 22px; height: 22px; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 0.82rem; font-weight: 800; line-height: 1;
   background: var(--accent-red, #dc2626);
   box-shadow: 0 0 0 1.5px #fff;
 }
-/* Green variant: a ready document the user hasn't opened yet. */
+.mn-dash .mn-card__attn svg { width: 13px; height: 13px; }
+/* Green variant: the document is finished → rounded tick. */
 .mn-dash .mn-card__attn--ready { background: var(--accent-green, #16a34a); }
-/* Orange variant: a newly-added event the user hasn't opened yet. (Base .mn-card__attn is
-   red = your turn to act.) */
-.mn-dash .mn-card__attn--new { background: var(--accent-orange, #f97316); }
+/* Orange variant: a newly-added event → "NEW" pill (grows past the 22px circle). */
+.mn-dash .mn-card__attn--new {
+  background: var(--accent-orange, #f97316);
+  padding: 0 7px; font-size: 0.6rem; letter-spacing: 0.05em;
+}
 .mn-dash .mn-list .mn-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
