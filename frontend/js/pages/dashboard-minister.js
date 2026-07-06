@@ -28,7 +28,6 @@
   const canEdit = user.role !== 'MINISTER';
   const OWNER_ROLES = ['MINISTER', 'DEPUTY', 'SUPERVISOR'];
   const isOwner = OWNER_ROLES.includes(user.role);
-  const isMinister = user.role === 'MINISTER';
   // Roles that may create events from the dashboard (the collapsible create panel).
   const CAN_CREATE_EVENT = ['DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
   const canCreateEvent = CAN_CREATE_EVENT.includes(user.role);
@@ -64,16 +63,14 @@
   // Worker roles land on the In-Progress view first; owners default to meetings.
   let mode = isOwner ? 'meetings' : 'upcoming';
 
-  // Relabel the segmented toggle for owner roles; the Minister has only meetings.
+  // Relabel the segmented toggle for owner roles (incl. the Minister, whose
+  // "Other Events" tab lists every published document — the library grants
+  // the MINISTER see-all).
   if (isOwner) {
     const tc = document.getElementById('toggleCompleted');
     const tu = document.getElementById('toggleUpcoming');
     if (tc) { tc.dataset.mode = 'meetings'; tc.setAttribute('data-i18n', 'dashboard.tabMeetings'); tc.textContent = I18n.tr('dashboard.tabMeetings'); }
     if (tu) { tu.dataset.mode = 'tasks'; tu.setAttribute('data-i18n', 'dashboard.tabTasks'); tu.textContent = I18n.tr('dashboard.tabTasks'); }
-    if (isMinister) {
-      const wrap = document.querySelector('.mn-toggle');
-      if (wrap) wrap.style.display = 'none'; // meetings only — no toggle
-    }
   } else {
     // Put "In Progress" first and make it the active default tab.
     const tc = document.getElementById('toggleCompleted');
@@ -287,10 +284,12 @@
     return item.deadlineDate; // upcoming | tasks
   }
 
-  // Deputy/Supervisor get a hybrid calendar: their meetings AND the events they
-  // contribute to, shown together regardless of the active list tab. (Minister has
-  // no 'tasks'; worker roles use completed/upcoming — both keep the tab-scoped calendar.)
-  const HYBRID_CAL = isOwner && !isMinister;
+  // Owner roles get a hybrid calendar: their meetings AND the events they
+  // contribute to, shown together regardless of the active list tab. For the
+  // Minister the 'tasks' items (other users' published docs) expose no dates, so
+  // the hybrid calendar simply keeps their meetings visible on both tabs.
+  // (Worker roles use completed/upcoming — both keep the tab-scoped calendar.)
+  const HYBRID_CAL = isOwner;
 
   // Items whose day-markers the calendar shows for the current view.
   function calendarItems() {

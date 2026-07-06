@@ -13,7 +13,8 @@ const router = express.Router();
 //   - Supervisor / Deputy: assigned country, direct assignment, their department
 //     is on a section, or (deputies) they oversee a section's department.
 // The document owner / responsible deputy / creator, anyone who has a
-// section_history row (they acted), and ADMIN always see it.
+// section_history row (they acted), and ADMIN always see it. The MINISTER —
+// the top role of the ministry — sees every published document.
 router.get('/', requireAuth, async (req, res) => {
   try {
     const role = req.user.role;
@@ -73,7 +74,7 @@ router.get('/', requireAuth, async (req, res) => {
          AND (
            ${baseOr}
            ${chainOr}
-           OR $2 = 'ADMIN'
+           OR $2 IN ('ADMIN', 'MINISTER')
          )
        ORDER BY e.ended_at DESC`,
       [req.user.id, req.user.role]

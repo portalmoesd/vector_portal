@@ -26,12 +26,13 @@
   }
 
   // True when the viewer can see the whole document (every section): the document
-  // submitter/owner (incl. Minister, always DS on their events), the responsible
+  // submitter/owner, the Minister (top role — sees every document), the responsible
   // deputy, any deputy (matches the editor), or a supervisor linked to the owner
   // deputy who also participates here.
   function seesAllSections(user, grid) {
     if (!user || !grid) return false;
     if (grid.documentSubmitterId === user.id) return true;
+    if (user.role === 'MINISTER') return true;
     if (grid.deputyId && grid.deputyId === user.id) return true;
     if (user.role === 'DEPUTY') return true;
     const own = (grid.sections || []).filter(s => isOwnSection(user, s));
