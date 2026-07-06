@@ -951,9 +951,8 @@
     const rankHeader = lang === 'ka' ? 'ადგილი' : 'Rank';
     const shareHeader = lang === 'ka' ? 'წილი, %' : 'Share, %';
 
-    // Drop the rank column entirely when no row reaches the top 20.
-    const TOP_RANK_LIMIT = 20;
-    const showRank = rows.some(r => r.rank && r.rank <= TOP_RANK_LIMIT);
+    // Show the rank column whenever any row has rank data.
+    const showRank = rows.some(r => r.rank);
 
     const headerRow = [th(t.period)];
     if (showRank) headerRow.push(thRight(rankHeader));
@@ -1199,9 +1198,8 @@
     const rankHeader = lang === 'ka' ? 'ადგილი' : 'Rank';
     const shareHeader = lang === 'ka' ? 'წილი, %' : 'Share, %';
 
-    // Drop the rank column entirely when no year reaches the top 20.
-    const TOP_RANK_LIMIT = 20;
-    const showRank = data.some(r => r.valueMln > 0 && r.rank && r.rank <= TOP_RANK_LIMIT);
+    // Show the rank column whenever any year has rank data.
+    const showRank = data.some(r => r.valueMln > 0 && r.rank);
 
     const headerRow = [th(t.year)];
     if (showRank) headerRow.push(thRight(rankHeader));
