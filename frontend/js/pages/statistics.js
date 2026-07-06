@@ -2102,10 +2102,8 @@
     const hRank = isKa ? 'ადგილი' : 'Rank';
     const hShare = isKa ? 'წილი, %' : 'Share, %';
 
-    // Drop the rank column entirely when no row reaches the top 20 —
-    // a column of all "-" or all "47" / "53" etc. isn't useful.
-    const TOP_RANK_LIMIT = 20;
-    const showRank = rows.some(r => r.rank && r.rank <= TOP_RANK_LIMIT);
+    // Show the rank column whenever any row has rank data.
+    const showRank = rows.some(r => r.rank);
 
     let html = `<table class="stat-table">
       <thead>
@@ -2696,9 +2694,8 @@
     const hChange = isKa ? 'ცვლილება, %' : 'Change, %';
     const hShare = isKa ? 'წილი, %' : 'Share, %';
 
-    // Drop the rank column entirely when no year reaches the top 20.
-    const TOP_RANK_LIMIT = 20;
-    const showRank = data.some(r => r.valueMln > 0 && r.rank && r.rank <= TOP_RANK_LIMIT);
+    // Show the rank column whenever any year has rank data.
+    const showRank = data.some(r => r.valueMln > 0 && r.rank);
 
     let html = `<table class="stat-table">
       <thead>
