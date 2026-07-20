@@ -2,7 +2,7 @@ const express = require('express');
 const multer = require('multer');
 const db = require('../db');
 const { requireAuth, denyAnalyst } = require('../middleware/auth');
-const { canCreateEvent, canEndEvent, ROLES } = require('../helpers/roles');
+const { canCreateEvent, canEndEvent, canSeeEventDateTime, ROLES } = require('../helpers/roles');
 const { resolveEventNotificationDraft } = require('../helpers/event-notification-draft');
 const { notifyEventCreated } = require('../helpers/notifications');
 
@@ -91,10 +91,9 @@ router.get('/', requireAuth, async (req, res) => {
        ORDER BY e.created_at DESC`,
       params
     );
-    // Event date/time is restricted: only the document owner, Protocol and Admin
-    // may see it; everyone else sees only the deadline.
-    const canSeeWhen = (ownerId) =>
-      req.user.role === 'ADMIN' || req.user.role === 'PROTOCOL' || ownerId === req.user.id;
+    // Event date/time is restricted: the document owner, Protocol, Admin and
+    // deputies may see it; everyone else sees only the deadline.
+    const canSeeWhen = (ownerId) => canSeeEventDateTime(req.user.role, req.user.id, ownerId);
     res.json(rows.map(r => ({
       id: r.id,
       title: r.title,
@@ -439,9 +438,9 @@ router.get('/:id', requireAuth, async (req, res) => {
       [req.params.id]
     );
 
-    // Event date/time is restricted to the document owner, Protocol and Admin.
-    const canSeeWhen = req.user.role === 'ADMIN' || req.user.role === 'PROTOCOL'
-      || event.document_submitter_id === req.user.id;
+    // Event date/time is restricted to the document owner, Protocol, Admin
+    // and deputies.
+    const canSeeWhen = canSeeEventDateTime(req.user.role, req.user.id, event.document_submitter_id);
 
     res.json({
       id: event.id,

@@ -1105,3 +1105,6 @@
 /* Completed cards carry no excerpt, so the tall min-height left a dead gap above
    the footer; a gentler floor keeps rows tidy without cramping richer cards. */
 .mn-dash .mn-list .mn-card { min-height: 140px; }
+
+/* "Show more" control at the foot of the chunk-rendered Ready Documents list. */
+.mn-dash .mn-showmore { display: flex; justify-content: center; padding: 14px 0 4px; }

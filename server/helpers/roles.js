@@ -42,8 +42,31 @@ const EVENT_ENDER_ROLES = [
   ROLES.SUPERVISOR,
 ];
 
+// Roles whose Library ("ready documents") view is ministry-wide: every
+// COMPLETED event, not just the ones they own, acted on or curate.
+const LIBRARY_ALL_COMPLETED_ROLES = [
+  ROLES.ADMIN,
+  ROLES.MINISTER,
+  ROLES.DEPUTY,
+];
+
 function isPipelineRole(role) {
   return PIPELINE_ROLES.includes(role);
+}
+
+function seesAllCompletedDocs(role) {
+  return LIBRARY_ALL_COMPLETED_ROLES.includes(role);
+}
+
+// Who may see an event's meeting date/time (event_datetime): admins/protocol,
+// the document owner, and any Deputy Minister — deputies plan around the
+// meeting itself, so they see real times even on events they only contribute
+// to. Everyone else only ever sees the document deadline.
+function canSeeEventDateTime(role, userId, ownerId) {
+  return role === ROLES.ADMIN
+    || role === ROLES.PROTOCOL
+    || role === ROLES.DEPUTY
+    || ownerId === userId;
 }
 
 function canCreateEvent(role) {
@@ -59,7 +82,10 @@ module.exports = {
   PIPELINE_ROLES,
   EVENT_CREATOR_ROLES,
   EVENT_ENDER_ROLES,
+  LIBRARY_ALL_COMPLETED_ROLES,
   isPipelineRole,
+  seesAllCompletedDocs,
+  canSeeEventDateTime,
   canCreateEvent,
   canEndEvent,
 };

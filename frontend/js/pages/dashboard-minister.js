@@ -29,6 +29,11 @@
   const OWNER_ROLES = ['MINISTER', 'DEPUTY', 'SUPERVISOR'];
   const isOwner = OWNER_ROLES.includes(user.role);
   const isMinister = user.role === 'MINISTER';
+  const isDeputy = user.role === 'DEPUTY';
+  // Minister and Deputies get a "Ready Documents" tab listing every completed
+  // document ministry-wide (the API widens /api/library for these roles);
+  // Supervisor keeps the two-tab view.
+  const HAS_DOCS_TAB = isMinister || isDeputy;
   // Roles that may create events from the dashboard (the collapsible create panel).
   const CAN_CREATE_EVENT = ['DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
   const canCreateEvent = CAN_CREATE_EVENT.includes(user.role);
@@ -64,15 +69,31 @@
   // Worker roles land on the In-Progress view first; owners default to meetings.
   let mode = isOwner ? 'meetings' : 'upcoming';
 
-  // Relabel the segmented toggle for owner roles; the Minister has only meetings.
+  // Relabel the segmented toggle for owner roles. The Minister gets
+  // My Calendar | Ready Documents; the Deputy gets all three segments;
+  // the Supervisor keeps Meetings | Tasks.
   if (isOwner) {
     const tc = document.getElementById('toggleCompleted');
     const tu = document.getElementById('toggleUpcoming');
     if (tc) { tc.dataset.mode = 'meetings'; tc.setAttribute('data-i18n', 'dashboard.tabMeetings'); tc.textContent = I18n.tr('dashboard.tabMeetings'); }
-    if (tu) { tu.dataset.mode = 'tasks'; tu.setAttribute('data-i18n', 'dashboard.tabTasks'); tu.textContent = I18n.tr('dashboard.tabTasks'); }
     if (isMinister) {
-      const wrap = document.querySelector('.mn-toggle');
-      if (wrap) wrap.style.display = 'none'; // meetings only — no toggle
+      // No 'tasks' for the Minister — the second segment is the docs tab.
+      if (tu) { tu.dataset.mode = 'docs'; tu.setAttribute('data-i18n', 'dashboard.tabDocuments'); tu.textContent = I18n.tr('dashboard.tabDocuments'); }
+    } else {
+      if (tu) { tu.dataset.mode = 'tasks'; tu.setAttribute('data-i18n', 'dashboard.tabTasks'); tu.textContent = I18n.tr('dashboard.tabTasks'); }
+      if (isDeputy && tu && tu.parentElement) {
+        // Third segment, injected so the shared HTML shells stay identical.
+        // Pushed into toggleBtns before the click wiring / thumb / badge code
+        // below runs, so it participates in all of them.
+        const td = document.createElement('button');
+        td.type = 'button';
+        td.className = 'mn-toggle__btn';
+        td.dataset.mode = 'docs';
+        td.setAttribute('data-i18n', 'dashboard.tabDocuments');
+        td.textContent = I18n.tr('dashboard.tabDocuments');
+        tu.parentElement.appendChild(td);
+        toggleBtns.push(td);
+      }
     }
   } else {
     // Put "In Progress" first and make it the active default tab.
@@ -86,6 +107,10 @@
   }
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
+  // The ministry-wide docs list can be long — render it in chunks behind a
+  // "Show more" button. Resets on tab switch and on search input.
+  const DOCS_CHUNK = 50;
+  let docsShown = DOCS_CHUNK;
   // Attention dots (iOS-style), derived from notifications. Split by urgency:
   //   actEvents   → it's the user's turn to act (your_turn / returned) → RED
   //   newEventIds → a new event was added (event_created)              → ORANGE
@@ -242,8 +267,15 @@
       // Meetings = events they own (ready + in-preparation), unified.
       case 'meetings': return completed.filter(isOwned).concat(upcoming.filter(isOwned));
       // Tasks ("Other Events") = events they contribute to but don't own —
-      // in-progress ones plus finished ones (shown once ready).
-      case 'tasks': return upcoming.filter(i => !isOwned(i)).concat(completed.filter(i => !isOwned(i)));
+      // in-progress ones plus finished ones (shown once ready). For roles with
+      // a docs tab the completed list is ministry-wide (not participation-
+      // scoped), so finished documents live on the docs tab instead.
+      case 'tasks': return HAS_DOCS_TAB
+        ? upcoming.filter(i => !isOwned(i))
+        : upcoming.filter(i => !isOwned(i)).concat(completed.filter(i => !isOwned(i)));
+      // Ready Documents = every completed document (ministry-wide for the
+      // Minister/Deputy — the API already widens their /api/library).
+      case 'docs': return completed;
       default: return [];
     }
   }
@@ -260,7 +292,9 @@
     if (isNew > 0) return { color: 'orange', count: isNew };
     // Green = finished documents. Owner roles show every finished doc (a persistent
     // "done" status); workers keep the unopened-only (readyEvents) attention cue.
-    const green = items.filter(d => d._ready && (isOwner || readyEvents.has(String(d.id)))).length;
+    // The all-completed docs tab would pin a permanent count — count only fresh
+    // (unread-notification) arrivals there, like the worker rule.
+    const green = items.filter(d => d._ready && ((isOwner && m !== 'docs') || readyEvents.has(String(d.id)))).length;
     if (green > 0) return { color: 'green', count: green };
     return null;
   }
@@ -283,7 +317,7 @@
   // The date a calendar marker / grouping keys off, per mode.
   function itemDate(item) {
     if (mode === 'meetings') return item.eventDateTime;
-    if (mode === 'completed') return item.endedAt;
+    if (mode === 'completed' || mode === 'docs') return item.endedAt;
     return item.deadlineDate; // upcoming | tasks
   }
 
@@ -292,15 +326,21 @@
   // no 'tasks'; worker roles use completed/upcoming — both keep the tab-scoped calendar.)
   const HYBRID_CAL = isOwner && !isMinister;
 
-  // Items whose day-markers the calendar shows for the current view.
+  // Items whose day-markers the calendar shows for the current view. The
+  // Minister's calendar always shows their own meetings — it stays "my
+  // schedule" even while the ministry-wide Ready Documents tab is active.
   function calendarItems() {
-    return HYBRID_CAL ? itemsForMode('meetings').concat(itemsForMode('tasks')) : activeItems();
+    if (HYBRID_CAL) return itemsForMode('meetings').concat(itemsForMode('tasks'));
+    if (isMinister) return itemsForMode('meetings');
+    return activeItems();
   }
 
   // Marker day for an item, independent of the active tab in the hybrid case:
-  // owned events key off the meeting time, others off their deadline.
+  // owned events key off the meeting time; other (contributed) events off the
+  // meeting time when the server shares it (deputies), else their deadline.
   function calItemDate(item) {
-    if (HYBRID_CAL) return isOwned(item) ? item.eventDateTime : item.deadlineDate;
+    if (HYBRID_CAL) return isOwned(item) ? item.eventDateTime : (item.eventDateTime || item.deadlineDate);
+    if (isMinister) return item.eventDateTime;
     return itemDate(item);
   }
 
@@ -386,7 +426,12 @@
       ? `<span class="mn-card__owner" title="${escapeHtml(I18n.tr('dashboard.owner'))}: ${escapeHtml(ownerName)}">${ICON_PERSON}<span>${escapeHtml(ownerName)}</span></span>`
       : '';
     // My Calendar puts the event date/time on the prominent line (the flag already
-    // conveys the country); other modes show country + owner.
+    // conveys the country); other modes show country + owner. Other Events adds
+    // the meeting time when the server shares it (deputies) — the deadline stays
+    // on the meta line, so both are visible.
+    const tasksWhen = (mode === 'tasks' && d.eventDateTime)
+      ? `<span class="mn-card__when">${ICON_CAL}<span>${escapeHtml(fmtEventWhen(d.eventDateTime))}</span></span>`
+      : '';
     const sub = isMeetings
       ? `<div class="mn-card__sub">
           <span class="mn-card__country">${escapeHtml(country)}</span>
@@ -395,6 +440,7 @@
       : `<div class="mn-card__sub">
           <span class="mn-card__country">${escapeHtml(country)}</span>
           ${ownerInline}
+          ${tasksWhen}
         </div>`;
 
     // Readiness chip (meetings only).
@@ -422,7 +468,9 @@
     // needing the user's action (their turn); orange = a new in-progress event.
     // Finished documents are never in the in-progress sets, so these are exclusive.
     let attn = '';
-    if (d._ready) {
+    // The docs tab lists only finished documents — a green tick on every card
+    // would be noise, so it carries no attention dots.
+    if (d._ready && mode !== 'docs') {
       attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}">${ICON_TICK}</span>`; // green: finished (tick)
     } else if (isActEvent(d.id)) {
       attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}">!</span>`; // red: your turn (!)
@@ -539,7 +587,7 @@
       // under "Completed" (after the in-progress buckets) rather than "No deadline".
       const b = (mode === 'tasks' && it._ready)
         ? { order: 9500, key: 'ready', label: I18n.tr('dashboard.toggleCompleted') }
-        : mode === 'completed' ? bucketCompleted(date, now)
+        : (mode === 'completed' || mode === 'docs') ? bucketCompleted(date, now)
         : mode === 'meetings' ? bucketMeetings(date, now)
         : bucketInProgress(date, now); // upcoming | tasks
       if (!map.has(b.key)) map.set(b.key, { order: b.order, label: b.label, items: [] });
@@ -549,7 +597,7 @@
     const far = 8640000000000000;
     for (const g of groups) {
       g.items.sort((a, b) => {
-        if (mode === 'completed' || (mode === 'tasks' && g.key === 'ready')) {
+        if (mode === 'completed' || mode === 'docs' || (mode === 'tasks' && g.key === 'ready')) {
           return new Date(b.endedAt || 0) - new Date(a.endedAt || 0);
         }
         if (mode === 'meetings') {
@@ -569,14 +617,38 @@
     const items = getFiltered();
     if (items.length === 0) {
       const emptyKey = { completed: 'dashboard.noCompleted', upcoming: 'dashboard.noUpcoming',
-        meetings: 'dashboard.noMeetings', tasks: 'dashboard.noTasks' }[mode] || 'dashboard.noUpcoming';
+        meetings: 'dashboard.noMeetings', tasks: 'dashboard.noTasks', docs: 'dashboard.noDocs' }[mode] || 'dashboard.noUpcoming';
       listEl.innerHTML = `<div class="empty-state"><p>${escapeHtml(I18n.tr(emptyKey))}</p></div>`;
       return;
     }
-    listEl.innerHTML = groupItems(items).map(g => `
+    let groups = groupItems(items);
+    // Docs tab: cap the rendered cards at docsShown, keeping whole groups in
+    // order, and offer the remainder behind a "Show more" button.
+    let moreCount = 0;
+    if (mode === 'docs') {
+      let budget = docsShown;
+      const capped = [];
+      for (const g of groups) {
+        if (budget <= 0) { moreCount += g.items.length; continue; }
+        if (g.items.length > budget) {
+          moreCount += g.items.length - budget;
+          g.items = g.items.slice(0, budget);
+        }
+        budget -= g.items.length;
+        capped.push(g);
+      }
+      groups = capped;
+    }
+    listEl.innerHTML = groups.map(g => `
       <div class="mn-group"><span class="mn-group__label">${escapeHtml(g.label)}</span></div>
       ${g.items.map(listCardHtml).join('')}
-    `).join('');
+    `).join('') + (moreCount > 0
+      ? `<div class="mn-showmore"><button type="button" class="btn btn-outline" id="docsShowMore">${escapeHtml(I18n.tr('dashboard.showMoreDocs').replace('{n}', String(moreCount)))}</button></div>`
+      : '');
+    document.getElementById('docsShowMore')?.addEventListener('click', () => {
+      docsShown += DOCS_CHUNK;
+      renderList();
+    });
 
     // Clicking a card toggles its inline-expanded detail (accordion). Clicks
     // inside an already-expanded card's detail don't collapse it.
@@ -1382,10 +1454,11 @@
         return ds && tbYmd(ds).key === clicked; // Tbilisi day, matching how days are marked
       });
       if (!match) return;
-      if (HYBRID_CAL) {
-        // The event may live on the other tab — revealEvent switches to it, opens the
-        // card and scrolls to it. Keep the calendar on the month the user is viewing
-        // (setMode otherwise resets it to the current month).
+      if (isOwner) {
+        // The event may live on another tab (hybrid calendar, or the Minister
+        // clicking while the docs tab is active) — revealEvent switches to it,
+        // opens the card and scrolls to it. Keep the calendar on the month the
+        // user is viewing (setMode otherwise resets it to the current month).
         const viewed = calendarDate;
         Promise.resolve(revealEvent(match.id)).then(() => renderCalendar(viewed));
       } else {
@@ -1412,6 +1485,7 @@
     if (!next || next === mode) return;
     mode = next;
     selectedId = null;
+    docsShown = DOCS_CHUNK;
     toggleBtns.forEach(b => b.classList.toggle('is-active', b.dataset.mode === next));
     positionThumb();
     calendarDate = new Date(); // reset to current month on switch
@@ -1446,13 +1520,16 @@
     if (!item) return false;
     let targetMode;
     if (isOwner) {
-      if (isOwned(item)) targetMode = 'meetings';          // owned (ready or in prep)
-      else if (!inCompleted) targetMode = 'tasks';         // active, contributing
-      else {
-        // A completed event they only contributed to isn't on the owner dashboard
-        // lists — open its published document instead of doing nothing.
+      if (isOwned(item)) targetMode = 'meetings';               // owned (ready or in prep)
+      else if (inCompleted && HAS_DOCS_TAB) targetMode = 'docs'; // completed, not owned → docs tab
+      else if (!inCompleted && !isMinister) targetMode = 'tasks'; // active, contributing
+      else if (inCompleted) {
+        // Supervisor: a completed event they only contributed to isn't on their
+        // dashboard lists — open its published document instead of doing nothing.
         if (typeof LibraryDoc !== 'undefined' && LibraryDoc.preview) LibraryDoc.preview(eventId);
         return true;
+      } else {
+        return false; // Minister: a non-owned active event has no tab to land on
       }
     } else {
       targetMode = inCompleted ? 'completed' : 'upcoming';
@@ -1466,6 +1543,7 @@
 
   keywordEl.addEventListener('input', () => {
     selectedId = null;
+    docsShown = DOCS_CHUNK;
     renderList();
   });
 
