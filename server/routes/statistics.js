@@ -1312,6 +1312,7 @@ router.get('/fdi', async (req, res) => {
 
 const path = require('path');
 const fs = require('fs');
+const { upload, adminOnly, saveParsedAndRaw, loadParsed } = require('./admin-uploads');
 
 const TOURISM_HISTORICAL_URL = 'https://api.gnta.ge/api/v1/web/media/download/10068';
 const TOURISM_HISTORICAL_LOCAL = path.join(__dirname, '../data/gnta-visitors-historical.xlsx');
@@ -1320,8 +1321,14 @@ const TOURISM_QUARTERLY_ID_FILE = path.join(__dirname, '../data/gnta-quarterly-i
 const TOURISM_MEDIA_BASE = 'https://api.gnta.ge/api/v1/web/media/download';
 
 // Starting baseline for scanning when no cached ID exists
-const TOURISM_QUARTERLY_BASE_ID = 10290;
-const TOURISM_QUARTERLY_SCAN_RANGE = 200;
+const TOURISM_QUARTERLY_BASE_ID = 10700;
+// Forward scan tuning: probe in concurrent batches until a long run of
+// nonexistent IDs marks the end of GNTA's media ID space. GNTA assigns IDs
+// across all site media, so a quarterly release can land far above the last
+// checkpoint — the scan must not have a fixed-size window.
+const TOURISM_SCAN_BATCH = 25;
+const TOURISM_SCAN_END_GAP = 150;
+const TOURISM_SCAN_MAX = 5000;
 
 let tourismCache = { data: null, ts: 0 };
 const TOURISM_CACHE_TTL = 24 * 60 * 60 * 1000;
@@ -1448,27 +1455,58 @@ function parseQuarterlyWorkbook(wb) {
   return null;
 }
 
+// HEAD-probe a media ID. Returns { exists, isSpreadsheet }. Network errors
+// and timeouts count as existing-but-not-spreadsheet so a transient failure
+// never fakes the end of the ID space (TOURISM_SCAN_MAX bounds the scan).
+async function probeMediaId(id) {
+  try {
+    const r = await fetch(`${TOURISM_MEDIA_BASE}/${id}`, {
+      method: 'HEAD',
+      headers: { 'User-Agent': 'Mozilla/5.0' },
+      signal: AbortSignal.timeout(5_000),
+    });
+    if (!r.ok) return { exists: false, isSpreadsheet: false };
+    const ct = r.headers.get('content-type') || '';
+    return { exists: true, isSpreadsheet: ct.includes('spreadsheet') };
+  } catch (_) {
+    return { exists: true, isSpreadsheet: false };
+  }
+}
+
 // Scan media IDs to find the latest quarterly XLSX.
-// Returns { id, wb, parsed } for the highest-ID matching file, or null.
+// Returns { id, buffer, parsed } for the highest-ID matching file, or null.
 async function findLatestQuarterlyFile(lastKnownId) {
   const startId = lastKnownId || TOURISM_QUARTERLY_BASE_ID;
-  const endId = startId + TOURISM_QUARTERLY_SCAN_RANGE;
-  let bestMatch = null;
+  const maxId = startId + TOURISM_SCAN_MAX;
 
-  // Scan high-to-low so we can short-circuit once we find the newest
-  for (let id = endId; id >= startId; id--) {
+  // Phase 1: probe forward in concurrent batches, collecting spreadsheet
+  // candidates, until TOURISM_SCAN_END_GAP consecutive IDs don't exist.
+  const candidates = [];
+  let consecutiveMissing = 0;
+  let lastProbedId = startId;
+  outer:
+  for (let base = startId; base <= maxId; base += TOURISM_SCAN_BATCH) {
+    const ids = [];
+    for (let id = base; id < base + TOURISM_SCAN_BATCH && id <= maxId; id++) ids.push(id);
+    const results = await Promise.all(ids.map(probeMediaId));
+    for (let i = 0; i < ids.length; i++) {
+      lastProbedId = ids[i];
+      if (results[i].exists) {
+        consecutiveMissing = 0;
+        if (results[i].isSpreadsheet) candidates.push(ids[i]);
+      } else {
+        consecutiveMissing++;
+        if (consecutiveMissing >= TOURISM_SCAN_END_GAP) break outer;
+      }
+    }
+  }
+  console.log(`tourism: scan probed ids ${startId}-${lastProbedId}, ${candidates.length} spreadsheet candidates`);
+
+  // Phase 2: download + fingerprint candidates highest-first; the newest
+  // workbook that matches the quarterly fingerprint wins.
+  for (let i = candidates.length - 1; i >= 0; i--) {
+    const id = candidates[i];
     try {
-      // HEAD to check content-type first (cheap)
-      const headRes = await fetch(`${TOURISM_MEDIA_BASE}/${id}`, {
-        method: 'HEAD',
-        headers: { 'User-Agent': 'Mozilla/5.0' },
-        signal: AbortSignal.timeout(5_000),
-      });
-      if (!headRes.ok) continue;
-      const ct = headRes.headers.get('content-type') || '';
-      if (!ct.includes('spreadsheet')) continue;
-
-      // Download and try to parse
       const getRes = await fetch(`${TOURISM_MEDIA_BASE}/${id}`, {
         headers: { 'User-Agent': 'Mozilla/5.0' },
         signal: AbortSignal.timeout(10_000),
@@ -1478,12 +1516,11 @@ async function findLatestQuarterlyFile(lastKnownId) {
       const wb = XLSX.read(buffer, { type: 'buffer' });
       const parsed = parseQuarterlyWorkbook(wb);
       if (parsed && Object.keys(parsed.countries).length > 50) {
-        bestMatch = { id, buffer, parsed };
-        break; // highest-ID match found
+        return { id, buffer, parsed };
       }
     } catch (_) { /* skip */ }
   }
-  return bestMatch;
+  return null;
 }
 
 function readCachedQuarterlyId() {
@@ -1501,6 +1538,7 @@ function writeCachedQuarterlyId(id) {
 // ── Refresh tourism data: fetch, parse, merge, save to disk ──────────
 // Called by the daily scheduler and on first request if no cached file.
 let tourismRefreshRunning = false;
+let tourismStatus = { lastRefreshAt: null, lastError: null };
 
 async function refreshTourismData() {
   if (tourismRefreshRunning) return;
@@ -1591,10 +1629,12 @@ async function refreshTourismData() {
     // Save to disk + memory cache
     fs.writeFileSync(TOURISM_DATA_FILE, JSON.stringify(result));
     tourismCache = { data: result, ts: Date.now() };
+    tourismStatus = { lastRefreshAt: new Date().toISOString(), lastError: null };
     console.log(`tourism: refresh completed in ${((Date.now() - t0) / 1000).toFixed(1)}s — ${Object.keys(countries).length} countries`);
     console.log(`tourism: annual totals sample:`, JSON.stringify(historical.totals ? Object.entries(historical.totals).slice(-3) : 'null'));
     console.log(`tourism: quarterly totals:`, JSON.stringify(quarterly?.periodTotals || 'null'));
   } catch (err) {
+    tourismStatus.lastError = err.message;
     console.error('tourism: refresh failed:', err.message);
   } finally {
     tourismRefreshRunning = false;
@@ -1633,14 +1673,22 @@ function scheduleTourismRefresh() {
   }, delay);
 }
 
-// Init: load from disk, schedule daily refresh
+// Init: load from disk, schedule daily refresh. Also refresh shortly after
+// boot so a restarted/redeployed container picks up anything it missed
+// (same approach as the trade boot check).
 loadTourismFromDisk();
 scheduleTourismRefresh();
+setTimeout(() => { refreshTourismData(); }, 20_000);
 
 router.get('/tourism', async (req, res) => {
   try {
     // Serve from memory/disk cache if available
     if (tourismCache.data) {
+      // Staleness backstop: if the daily scheduler somehow stopped firing
+      // (container clock suspension etc.), refresh in the background.
+      if (Date.now() - tourismCache.ts > TOURISM_CACHE_TTL && !tourismRefreshRunning) {
+        refreshTourismData().catch(() => {});
+      }
       return res.json(tourismCache.data);
     }
     // First request ever with no disk cache — do one blocking refresh
@@ -1655,12 +1703,35 @@ router.get('/tourism', async (req, res) => {
   }
 });
 
+// Observability: current checkpoint, period and refresh state.
+router.get('/tourism-status', (req, res) => {
+  res.json({
+    success: true,
+    state: {
+      quarterlyId: readCachedQuarterlyId(),
+      currentPeriod: (tourismCache.data && tourismCache.data.currentPeriod)
+        ? tourismCache.data.currentPeriod.label : null,
+      lastRefreshAt: tourismStatus.lastRefreshAt,
+      lastError: tourismStatus.lastError,
+      refreshRunning: tourismRefreshRunning,
+    },
+  });
+});
+
+// Manual force-refresh (fire-and-forget — a full scan can take a while).
+// Poll /tourism-status to observe completion.
+router.post('/tourism/refresh', ...adminOnly, (req, res) => {
+  if (tourismRefreshRunning) {
+    return res.json({ success: true, started: false, alreadyRunning: true });
+  }
+  refreshTourismData().catch(() => {});
+  res.json({ success: true, started: true });
+});
+
 // ── POST /api/statistics/fdi-sectors(/upload) ───────────────────────────
 // FDI breakdown by country × sector × year. Data comes from an admin-uploaded
 // XLSX file. No initial data is bundled — the endpoint returns {empty:true}
 // until the first upload.
-
-const { upload, adminOnly, saveParsedAndRaw, loadParsed } = require('./admin-uploads');
 
 let fdiSectorsCache = { data: null };
 
