@@ -35,12 +35,18 @@ function geostatHttp(url, opts = {}) {
       reject(new Error(`geostatHttp refused: ${u.hostname} is not a geostat.ge host`));
       return;
     }
+    // Explicit Content-Length: without it Node sends the body chunked,
+    // and Geostat's iisnode rejects chunked requests with an HTML error
+    // page served as HTTP 200 — poisoning every POST from the server
+    // while browser-direct calls (which always set the header) work.
+    const headers = { ...(opts.headers || {}) };
+    if (opts.body) headers['Content-Length'] = Buffer.byteLength(opts.body);
     const req = https.request({
       hostname: u.hostname,
       port: u.port || 443,
       path: u.pathname + u.search,
       method: opts.method || 'GET',
-      headers: opts.headers || {},
+      headers,
       agent: geostatAgent,
     }, (res) => {
       // Optional manual redirect handling (FDI XLSX path).
