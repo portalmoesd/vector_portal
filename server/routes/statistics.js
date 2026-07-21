@@ -1576,6 +1576,14 @@ function lexGreater(a, b) {
   return false;
 }
 
+// Period score for a parsed quarterly workbook: [year, endQ, span].
+// Used to make sure a refresh never replaces the local file with one
+// covering a NARROWER period (e.g. Q2-only over combined I-II).
+function quarterlyPeriodScore(parsed) {
+  const p = parsed && parsePeriodLabel(parsed.currentLabel);
+  return p ? [p.year, p.endQ, p.endQ - p.startQ + 1] : null;
+}
+
 function readCachedQuarterlyId() {
   try {
     const txt = fs.readFileSync(TOURISM_QUARTERLY_ID_FILE, 'utf8').trim();
@@ -1621,25 +1629,33 @@ async function refreshTourismData() {
     let quarterly = null;
     let quarterlyId = readCachedQuarterlyId();
 
+    let localParsed = null;
+    try { localParsed = parseQuarterlyWorkbook(XLSX.readFile(TOURISM_QUARTERLY_LOCAL)); } catch (_) {}
+
     try {
       const scanStart = quarterlyId || TOURISM_QUARTERLY_BASE_ID;
       const match = await findLatestQuarterlyFile(scanStart);
-      if (match) {
+      const matchScore = match ? quarterlyPeriodScore(match.parsed) : null;
+      const localScore = quarterlyPeriodScore(localParsed);
+      // Accept the scanned file only when it covers at least as wide and
+      // recent a period as the bundled local one — GNTA sometimes exposes
+      // only the single-quarter sibling, and that must not overwrite a
+      // local combined (I-II) baseline. Remote wins ties.
+      if (match && matchScore && (!localScore || !lexGreater(localScore, matchScore))) {
         quarterly = match.parsed;
         quarterlyId = match.id;
         fs.writeFileSync(TOURISM_QUARTERLY_LOCAL, match.buffer);
         writeCachedQuarterlyId(match.id);
         console.log(`tourism: quarterly file discovered: ID ${match.id} (${match.parsed.currentLabel})`);
-      } else if (quarterlyId) {
-        const localWb = XLSX.readFile(TOURISM_QUARTERLY_LOCAL);
-        quarterly = parseQuarterlyWorkbook(localWb);
+      } else {
+        if (match && localParsed) {
+          console.log(`tourism: scan best (${match.parsed.currentLabel}) narrower than local (${localParsed.currentLabel}) — keeping local`);
+        }
+        quarterly = localParsed;
       }
     } catch (err) {
-      console.log('tourism: quarterly discovery failed, trying local:', err.message);
-      try {
-        const localWb = XLSX.readFile(TOURISM_QUARTERLY_LOCAL);
-        quarterly = parseQuarterlyWorkbook(localWb);
-      } catch (_) { /* no local either */ }
+      console.log('tourism: quarterly discovery failed, using local:', err.message);
+      quarterly = localParsed;
     }
 
     // 3. Merge
