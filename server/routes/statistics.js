@@ -1338,6 +1338,11 @@ const TOURISM_QUARTERLY_BASE_ID = 10700;
 const TOURISM_SCAN_BATCH = 25;
 const TOURISM_SCAN_END_GAP = 150;
 const TOURISM_SCAN_MAX = 5000;
+// Rewind the scan start below the checkpoint: GNTA uploads each release as
+// a cluster of adjacent IDs (single-quarter, combined YTD, EN/KA variants),
+// and the preferred combined file can sit a few IDs BELOW the one the
+// checkpoint recorded. Without the rewind it would never be rescanned.
+const TOURISM_SCAN_REWIND = 25;
 
 let tourismCache = { data: null, ts: 0 };
 const TOURISM_CACHE_TTL = 24 * 60 * 60 * 1000;
@@ -1499,7 +1504,10 @@ async function probeMediaId(id) {
 // Scan media IDs to find the latest quarterly XLSX.
 // Returns { id, buffer, parsed } for the highest-ID matching file, or null.
 async function findLatestQuarterlyFile(lastKnownId) {
-  const startId = lastKnownId || TOURISM_QUARTERLY_BASE_ID;
+  const startId = Math.max(
+    TOURISM_QUARTERLY_BASE_ID - TOURISM_SCAN_REWIND,
+    (lastKnownId || TOURISM_QUARTERLY_BASE_ID) - TOURISM_SCAN_REWIND
+  );
   const maxId = startId + TOURISM_SCAN_MAX;
 
   // Phase 1: probe forward in concurrent batches, collecting spreadsheet
