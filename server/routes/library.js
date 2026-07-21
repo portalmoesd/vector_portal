@@ -2,23 +2,32 @@ const express = require('express');
 const db = require('../db');
 const { requireAuth, requireRole, denyAnalyst } = require('../middleware/auth');
 const { sanitizeEditorHtml } = require('../helpers/sanitize');
+const { seesAllCompletedDocs, canSeeEventDateTime } = require('../helpers/roles');
 
 const router = express.Router();
 
 // GET /api/library — list completed events visible to the current user.
-// Visibility mirrors the active-events list (GET /api/events): a user sees a
-// finished document if they were in its creation chain — regardless of whether
-// they personally acted on a section. "In the chain" is role-shaped:
+// ADMIN, MINISTER and DEPUTY see every completed document ministry-wide
+// (seesAllCompletedDocs). For everyone else visibility mirrors the
+// active-events list (GET /api/events): a user sees a finished document if
+// they were in its creation chain — regardless of whether they personally
+// acted on a section. "In the chain" is role-shaped:
 //   - Collaborator / Super-Collaborator: assigned country AND their department
 //     is on a section of the event.
-//   - Supervisor / Deputy: assigned country, direct assignment, their department
-//     is on a section, or (deputies) they oversee a section's department.
-// The document owner / responsible deputy / creator, anyone who has a
-// section_history row (they acted), and ADMIN always see it.
+//   - Supervisor: assigned country, direct assignment, or their department
+//     is on a section.
+// The document owner / responsible deputy / creator and anyone who has a
+// section_history row (they acted) always see it.
 router.get('/', requireAuth, async (req, res) => {
   try {
     const role = req.user.role;
     const isCollabRole = role === 'COLLABORATOR' || role === 'SUPER_COLLABORATOR';
+
+    const selectCols = `e.id, e.title, e.language, e.ended_at, e.event_datetime,
+              c.name_en AS country_name, c.code AS country_code,
+              ds.full_name AS document_submitter_name,
+              ds.full_name_ka AS document_submitter_name_ka,
+              e.document_submitter_id`;
 
     // Common to every non-admin role: acted on it, or a named/owner relationship.
     const baseOr = `
@@ -60,34 +69,38 @@ router.get('/', requireAuth, async (req, res) => {
         )`;
     }
 
-    const { rows } = await db.query(
-      `SELECT DISTINCT e.id, e.title, e.language, e.ended_at, e.event_datetime,
-              c.name_en AS country_name, c.code AS country_code,
-              ds.full_name AS document_submitter_name,
-              ds.full_name_ka AS document_submitter_name_ka,
-              e.document_submitter_id
-       FROM events e
-       JOIN countries c ON c.id = e.country_id
-       JOIN users ds ON ds.id = e.document_submitter_id
-       LEFT JOIN section_history sh ON sh.event_id = e.id
-       WHERE e.status = 'COMPLETED'
-         AND (
-           ${baseOr}
-           ${chainOr}
-           OR $2 = 'ADMIN'
-         )
-       ORDER BY e.ended_at DESC`,
-      [req.user.id, req.user.role]
-    );
-    // Event date/time is restricted to the document owner, Protocol and Admin.
-    const canSeeWhen = (ownerId) =>
-      req.user.role === 'ADMIN' || req.user.role === 'PROTOCOL' || ownerId === req.user.id;
+    // Ministry-wide roles skip the visibility clause (and with it the
+    // section_history join / DISTINCT): every completed document, newest first.
+    const { rows } = seesAllCompletedDocs(role)
+      ? await db.query(
+          `SELECT ${selectCols}
+           FROM events e
+           JOIN countries c ON c.id = e.country_id
+           JOIN users ds ON ds.id = e.document_submitter_id
+           WHERE e.status = 'COMPLETED'
+           ORDER BY e.ended_at DESC`
+        )
+      : await db.query(
+          `SELECT DISTINCT ${selectCols}
+           FROM events e
+           JOIN countries c ON c.id = e.country_id
+           JOIN users ds ON ds.id = e.document_submitter_id
+           LEFT JOIN section_history sh ON sh.event_id = e.id
+           WHERE e.status = 'COMPLETED'
+             AND (
+               ${baseOr}
+               ${chainOr}
+             )
+           ORDER BY e.ended_at DESC`,
+          [req.user.id]
+        );
     res.json(rows.map(r => ({
       id: r.id,
       title: r.title,
       language: r.language,
       endedAt: r.ended_at,
-      eventDateTime: canSeeWhen(r.document_submitter_id) ? r.event_datetime : null,
+      eventDateTime: canSeeEventDateTime(req.user.role, req.user.id, r.document_submitter_id)
+        ? r.event_datetime : null,
       countryName: r.country_name,
       countryCode: r.country_code,
       documentSubmitterName: r.document_submitter_name,

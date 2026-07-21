@@ -26,14 +26,15 @@
   }
 
   // True when the viewer can see the whole document (every section): the document
-  // submitter/owner (incl. Minister, always DS on their events), the responsible
-  // deputy, any deputy (matches the editor), or a supervisor linked to the owner
-  // deputy who also participates here.
+  // submitter/owner, the responsible deputy, any deputy (matches the editor), the
+  // read-only Minister (their library is ministry-wide, so non-owned finished
+  // documents must render in full), or a supervisor linked to the owner deputy
+  // who also participates here.
   function seesAllSections(user, grid) {
     if (!user || !grid) return false;
     if (grid.documentSubmitterId === user.id) return true;
     if (grid.deputyId && grid.deputyId === user.id) return true;
-    if (user.role === 'DEPUTY') return true;
+    if (user.role === 'DEPUTY' || user.role === 'MINISTER') return true;
     const own = (grid.sections || []).filter(s => isOwnSection(user, s));
     return !!(grid.viewerLinkedToOwnerDeputy && own.length > 0);
   }
