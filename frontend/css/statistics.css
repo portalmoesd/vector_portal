@@ -554,6 +554,13 @@ body.stat-exporting .stat-sections.hidden {
   border-radius: var(--radius-md, 6px);
 }
 
+.stat-appendix-empty {
+  padding: 24px 12px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
 .stat-appendix {
   width: 100%;
   border-collapse: collapse;

@@ -502,6 +502,13 @@ async function getAllCountryIds() {
   if (classCache.en) {
     return (classCache.en.data?.countries || []).map((c) => c.value).filter((v) => v != null);
   }
+  // Cold start: prefer the DB-cached classificatory over a live fetch so a
+  // Geostat outage right after a deploy can't 502 the appendix/ranking.
+  const fromDb = await tradeCacheDbGet('classificatory:en');
+  if (fromDb && fromDb.data?.countries?.length) {
+    classCache.en = fromDb; // keep ts=0 so other paths still refresh live
+    return fromDb.data.countries.map((c) => c.value).filter((v) => v != null);
+  }
   const data = await geostatFetch('/classificatory?lang=en');
   classCache.en = data;
   classCacheTs.en = Date.now();
@@ -1005,7 +1012,9 @@ async function checkTradePublication(trigger) {
     classCacheTs.en = Date.now();
     tradeCacheDbSet('classificatory:en', data);
 
-    const sel = data && data.selected;
+    // Response shape is { success, data: { selected, countries… } } —
+    // the period lives one level down, matching the frontend's enJson.data.
+    const sel = data && data.data && data.data.selected;
     const year = parseInt(sel && sel.year, 10);
     let month = parseInt(sel && sel.month, 10);
     if (!Number.isInteger(year) || !Number.isInteger(month)) {
@@ -1050,7 +1059,7 @@ async function checkTradePublication(trigger) {
 // check when the live response shows a different period than last seen.
 let lastSeenTradePeriod = null;
 function maybeDetectNewTradeMonth(data) {
-  const sel = data && data.selected;
+  const sel = data && data.data && data.data.selected;
   if (!sel) return;
   const period = `${sel.year}-${sel.month}`;
   if (period === lastSeenTradePeriod) return;
