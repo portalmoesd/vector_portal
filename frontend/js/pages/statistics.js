@@ -3093,6 +3093,18 @@
     return `${sign}${formatChangePct(v)}`;
   }
 
+  // Data fetch failed (Geostat unavailable) — say so instead of leaving
+  // the section wordlessly blank.
+  function renderAppendixUnavailable(isKa) {
+    if (appendixHeaderEl) appendixHeaderEl.innerHTML = '';
+    if (!appendixTableEl) return;
+    appendixTableEl.innerHTML = `<div class="stat-appendix-empty">${
+      isKa
+        ? 'დანართის მონაცემები დროებით მიუწვდომელია. სცადეთ მოგვიანებით.'
+        : 'Appendix data is temporarily unavailable. Please try again later.'
+    }</div>`;
+  }
+
   function renderAppendix(state, isKa) {
     if (!appendixTableEl) return;
     if (!state || !state.columns || state.columns.length === 0) {
@@ -3227,12 +3239,15 @@
     try {
       const appendix = await buildAppendix(latestYear, latestMonth, selectedCountry.value);
       pdfState.appendix = appendix;
-      renderAppendix(appendix, reportLocale === 'ka');
+      if (appendix) {
+        renderAppendix(appendix, reportLocale === 'ka');
+      } else {
+        renderAppendixUnavailable(reportLocale === 'ka');
+      }
     } catch (err) {
       console.error('Appendix error:', err);
       pdfState.appendix = null;
-      if (appendixTableEl) appendixTableEl.innerHTML = '';
-      if (appendixHeaderEl) appendixHeaderEl.innerHTML = '';
+      renderAppendixUnavailable(reportLocale === 'ka');
     } finally {
       if (appendixLoadingEl) appendixLoadingEl.classList.add('hidden');
     }
