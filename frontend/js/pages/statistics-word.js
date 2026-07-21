@@ -579,15 +579,16 @@
   // ── Tourism section ────────────────────────────────────────────────────
   // Mirrors statistics-pdf.js buildTourismSection / buildTourismSummary.
   function formatTourismPeriodKa(label) {
-    const m = /^(\d{4})\s+([IVX]+)\s+კვ$/.exec(label || '');
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
     if (!m) return label || '';
     return `${m[1]} წლის ${m[2]} კვარტლის`;
   }
   function formatTourismPeriodEn(label) {
-    const m = /^(\d{4})\s+([IVX]+)\s+კვ$/.exec(label || '');
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
     if (!m) return label || '';
     const roman = { I: 1, II: 2, III: 3, IV: 4 };
-    return `Q${roman[m[2]] || m[2]} ${m[1]}`;
+    const q = m[2].split('-').map(r => `Q${roman[r] || r}`).join('-');
+    return `${q} ${m[1]}`;
   }
 
   function buildTourismSummary(D, tourism, t, country, lang, grammar) {

@@ -1416,7 +1416,9 @@ function parseQuarterlyWorkbook(wb) {
     const colD = String(header[3] || '').trim();
     if (colB !== 'ქვეყანა') continue;
 
-    const isPeriodLabel = s => /^\d{4}(\s+[IVX]+\s+კვ)?$/.test(s);
+    // Accepts bare years ("2025"), single quarters ("2026 II კვ") and
+    // combined ranges ("2026 I-II კვ" — GNTA's year-to-date files).
+    const isPeriodLabel = s => /^\d{4}(\s+[IVX]+(-[IVX]+)?\s+კვ)?$/.test(s);
     if (!isPeriodLabel(colC) || !isPeriodLabel(colD)) continue;
 
     // Matched! Extract data.
@@ -1453,6 +1455,18 @@ function parseQuarterlyWorkbook(wb) {
     return { compareLabel: colC, currentLabel: colD, countries, periodTotals };
   }
   return null;
+}
+
+// Parse a period header label into { year, startQ, endQ }.
+// "2026 I-II კვ" → { year: 2026, startQ: 1, endQ: 2 }; "2026 II კვ" →
+// { year: 2026, startQ: 2, endQ: 2 }; bare "2025" → startQ/endQ 0.
+function parsePeriodLabel(label) {
+  const m = /^(\d{4})(?:\s+([IVX]+)(?:-([IVX]+))?\s+კვ)?$/.exec(label || '');
+  if (!m) return null;
+  const roman = { I: 1, II: 2, III: 3, IV: 4 };
+  const startQ = m[2] ? (roman[m[2]] || 0) : 0;
+  const endQ = m[3] ? (roman[m[3]] || 0) : startQ;
+  return { year: parseInt(m[1], 10), startQ, endQ };
 }
 
 // HEAD-probe a media ID. Returns { exists, isSpreadsheet }. Network errors
@@ -1502,8 +1516,13 @@ async function findLatestQuarterlyFile(lastKnownId) {
   }
   console.log(`tourism: scan probed ids ${startId}-${lastProbedId}, ${candidates.length} spreadsheet candidates`);
 
-  // Phase 2: download + fingerprint candidates highest-first; the newest
-  // workbook that matches the quarterly fingerprint wins.
+  // Phase 2: download + fingerprint every candidate and keep the one
+  // covering the widest, most recent period. GNTA publishes both a
+  // single-quarter file ("2026 II კვ") and a combined year-to-date file
+  // ("2026 I-II კვ") per release — we want the combined one, which may
+  // have a lower media ID than its single-quarter sibling. Score by
+  // (year, ending quarter, quarter span, id), lexicographic.
+  let best = null;
   for (let i = candidates.length - 1; i >= 0; i--) {
     const id = candidates[i];
     try {
@@ -1515,12 +1534,23 @@ async function findLatestQuarterlyFile(lastKnownId) {
       const buffer = Buffer.from(await getRes.arrayBuffer());
       const wb = XLSX.read(buffer, { type: 'buffer' });
       const parsed = parseQuarterlyWorkbook(wb);
-      if (parsed && Object.keys(parsed.countries).length > 50) {
-        return { id, buffer, parsed };
+      if (!parsed || Object.keys(parsed.countries).length <= 50) continue;
+      const p = parsePeriodLabel(parsed.currentLabel);
+      if (!p) continue;
+      const score = [p.year, p.endQ, p.endQ - p.startQ + 1, id];
+      if (!best || lexGreater(score, best.score)) {
+        best = { id, buffer, parsed, score };
       }
     } catch (_) { /* skip */ }
   }
-  return null;
+  return best ? { id: best.id, buffer: best.buffer, parsed: best.parsed } : null;
+}
+
+function lexGreater(a, b) {
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return a[i] > b[i];
+  }
+  return false;
 }
 
 function readCachedQuarterlyId() {
