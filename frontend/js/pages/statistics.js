@@ -2038,16 +2038,16 @@
   // Convert a GNTA period label like "2026 I კვ" to Georgian genitive
   // "2026 წლის I კვარტლის" or English "Q1 2026".
   function formatCurrentPeriodKa(label) {
-    const m = /^(\d{4})\s+([IVX]+)\s+კვ$/.exec(label || '');
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
     if (!m) return label || '';
     return `${m[1]} წლის ${m[2]} კვარტლის`;
   }
   function formatCurrentPeriodEn(label) {
-    const m = /^(\d{4})\s+([IVX]+)\s+კვ$/.exec(label || '');
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
     if (!m) return label || '';
     const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
-    const q = romanToInt[m[2]] || m[2];
-    return `Q${q} ${m[1]}`;
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `${q} ${m[1]}`;
   }
 
   function renderTourismSummary(tourism, selectedCountry, isKa) {
