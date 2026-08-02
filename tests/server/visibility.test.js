@@ -6,12 +6,13 @@ test('seesAllCompletedDocs: ministry-wide roles only', () => {
   assert.equal(seesAllCompletedDocs(ROLES.ADMIN), true);
   assert.equal(seesAllCompletedDocs(ROLES.MINISTER), true);
   assert.equal(seesAllCompletedDocs(ROLES.DEPUTY), true);
+  // PROTOCOL manages the Minister's page, so their view matches the Minister's.
+  assert.equal(seesAllCompletedDocs(ROLES.PROTOCOL), true);
 
   assert.equal(seesAllCompletedDocs(ROLES.SUPERVISOR), false);
   assert.equal(seesAllCompletedDocs(ROLES.SUPER_COLLABORATOR), false);
   assert.equal(seesAllCompletedDocs(ROLES.COLLABORATOR), false);
   assert.equal(seesAllCompletedDocs(ROLES.ANALYST), false);
-  assert.equal(seesAllCompletedDocs(ROLES.PROTOCOL), false);
   assert.equal(seesAllCompletedDocs(undefined), false);
 });
 
