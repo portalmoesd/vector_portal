@@ -61,12 +61,31 @@
 
   // ── Country picker HTML generation ──────────────────────────────────────────
 
+  // Visible heading per REGIONS key; the keys themselves stay as internal
+  // data-region identifiers.
+  const REGION_I18N = {
+    'Neighbors': 'admin.regions.neighbors',
+    'EU': 'admin.regions.eu',
+    'Other Europe': 'admin.regions.otherEurope',
+    'North America': 'admin.regions.northAmerica',
+    'Central America & Caribbean': 'admin.regions.centralAmericaCaribbean',
+    'South America': 'admin.regions.southAmerica',
+    'Africa': 'admin.regions.africa',
+    'Asia': 'admin.regions.asia',
+    'Oceania': 'admin.regions.oceania',
+  };
+  function regionLabel(region) {
+    const key = REGION_I18N[region];
+    const label = key ? I18n.tr(key) : region;
+    return label === key ? region : label;
+  }
+
   function buildCountryPickerHtml(selectedIds) {
     const selected = new Set(selectedIds || []);
     let html = '<div class="country-picker" style="max-height:300px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;padding:12px;margin-top:8px;">';
 
     for (const [region, codes] of Object.entries(REGIONS)) {
-      const countriesInRegion = allCountries.filter(c => codes.includes(c.code));
+      const countriesInRegion = sortedByLocalizedCountryName(allCountries.filter(c => codes.includes(c.code)));
       if (countriesInRegion.length === 0) continue;
 
       const allChecked = countriesInRegion.every(c => selected.has(c.id));
@@ -76,14 +95,14 @@
         <label style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;padding:4px 0;">
           <input type="checkbox" class="region-toggle" data-region="${region}"
             ${allChecked ? 'checked' : ''} ${someChecked && !allChecked ? 'indeterminate' : ''} />
-          ${escapeHtml(region)} (${countriesInRegion.length})
+          ${escapeHtml(regionLabel(region))} (${countriesInRegion.length})
         </label>
         <div class="region-countries" style="display:none;padding-left:20px;columns:2;column-gap:12px;">
           ${countriesInRegion.map(c => `
             <label style="display:flex;align-items:center;gap:4px;padding:1px 0;font-size:13px;break-inside:avoid;cursor:pointer;">
               <input type="checkbox" class="country-cb" data-country-id="${c.id}" data-region="${region}"
                 ${selected.has(c.id) ? 'checked' : ''} />
-              ${escapeHtml(c.name_en || c.nameEn || c.name)}
+              ${escapeHtml(localizedCountryName(c))}
             </label>
           `).join('')}
         </div>

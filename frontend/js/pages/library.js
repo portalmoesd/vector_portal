@@ -35,7 +35,7 @@
 
   // Populate country filter
   filterCountry.innerHTML = `<option value="">${escapeHtml(I18n.tr('common.all'))}</option>` +
-    countries.map(c => `<option value="${escapeHtml(c.name_en || c.nameEn || c.name)}">${escapeHtml(localizedCountryName(c))}</option>`).join('');
+    sortedByLocalizedCountryName(countries).map(c => `<option value="${escapeHtml(c.name_en || c.nameEn || c.name)}">${escapeHtml(localizedCountryName(c))}</option>`).join('');
 
   // Filters
   [filterKeyword, filterCountry, filterDateFrom, filterDateTo].forEach(el => {
@@ -74,7 +74,8 @@
 
     return documents.filter(d => {
       if (kw && !(d.title || '').toLowerCase().includes(kw) &&
-                !(d.countryName || '').toLowerCase().includes(kw)) return false;
+                !(d.countryName || '').toLowerCase().includes(kw) &&
+                !localizedCountryName({ code: d.countryCode, name_en: d.countryName, name_ka: d.countryNameKa }).toLowerCase().includes(kw)) return false;
       if (country && d.countryName !== country) return false;
       if (d.endedAt) {
         const ended = new Date(d.endedAt);
@@ -108,7 +109,7 @@
         <div class="doc-card-info">
           <h4>${escapeHtml(d.title)}</h4>
           <div class="doc-card-meta">
-            <span>${escapeHtml(localizedCountryName({ code: d.countryCode, name_en: d.countryName }))}</span>
+            <span>${escapeHtml(localizedCountryName({ code: d.countryCode, name_en: d.countryName, name_ka: d.countryNameKa }))}</span>
             <span>${lblLanguage} ${languageLabel(d.language)}</span>
             <span>${lblDs} ${escapeHtml(localizedName(d.documentSubmitterName, d.documentSubmitterNameKa))}</span>
             ${d.endedAt ? `<span>${lblCompleted} ${formatDate(d.endedAt)}</span>` : ''}

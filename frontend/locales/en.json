@@ -315,6 +315,17 @@
       "hierarchy": "Department Hierarchy",
       "uploads": "Data Uploads"
     },
+    "regions": {
+      "neighbors": "Neighbors",
+      "eu": "EU",
+      "otherEurope": "Other Europe",
+      "northAmerica": "North America",
+      "centralAmericaCaribbean": "Central America & Caribbean",
+      "southAmerica": "South America",
+      "africa": "Africa",
+      "asia": "Asia",
+      "oceania": "Oceania"
+    },
     "dept": {
       "title": "Departments",
       "add": "+ Add Department",

@@ -7,9 +7,10 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-// Country records only store the English name + ISO code. When the site is in
-// Georgian, translate the code via Intl.DisplayNames; fall back to English if
-// the locale isn't Georgian, the code is missing, or no translation exists.
+// Country records carry the English name + ISO code, and (since the name_ka
+// column) a server-stored Georgian name. When the site is in Georgian, prefer
+// the server name, then Intl.DisplayNames on the code (for stale caches or
+// unnamed rows), then English.
 let _regionDisplayNamesKa;
 function localizedCountryName(country) {
   if (!country) return '';
@@ -17,13 +18,25 @@ function localizedCountryName(country) {
   const code = (country.code || '').toUpperCase();
   try {
     const locale = (typeof I18n !== 'undefined' && I18n.getLocale) ? I18n.getLocale() : 'en';
-    if (locale === 'ka' && code && typeof Intl !== 'undefined' && Intl.DisplayNames) {
-      if (!_regionDisplayNamesKa) _regionDisplayNamesKa = new Intl.DisplayNames(['ka'], { type: 'region' });
-      const ka = _regionDisplayNamesKa.of(code);
-      if (ka && ka !== code) return ka;
+    if (locale === 'ka') {
+      const ka = country.name_ka || country.nameKa || country.countryNameKa || '';
+      if (ka && String(ka).trim()) return String(ka).trim();
+      if (code && typeof Intl !== 'undefined' && Intl.DisplayNames) {
+        if (!_regionDisplayNamesKa) _regionDisplayNamesKa = new Intl.DisplayNames(['ka'], { type: 'region' });
+        const icuKa = _regionDisplayNamesKa.of(code);
+        if (icuKa && icuKa !== code) return icuKa;
+      }
     }
   } catch (_) { /* fall back to English */ }
   return en;
+}
+
+// Sort a copy of a country list alphabetically by the label the user actually
+// sees (Georgian collation in the ka locale, English otherwise).
+function sortedByLocalizedCountryName(list) {
+  const locale = (typeof I18n !== 'undefined' && I18n.getLocale && I18n.getLocale() === 'ka') ? 'ka' : 'en';
+  return [...(list || [])].sort((a, b) =>
+    localizedCountryName(a).localeCompare(localizedCountryName(b), locale));
 }
 
 // Users have a Latin name (full_name / fullName) and an optional Georgian-

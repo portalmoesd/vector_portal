@@ -84,8 +84,8 @@
   const deptById = {};
   departments.forEach(d => { deptById[d.id] = d; });
 
-  filterCountry.innerHTML = '<option value="">All countries</option>' +
-    countries.map(c => `<option value="${c.id}">${escapeHtml(localizedCountryName(c))}</option>`).join('');
+  filterCountry.innerHTML = `<option value="">${escapeHtml(I18n.tr('calendar.filter.allCountries'))}</option>` +
+    sortedByLocalizedCountryName(countries).map(c => `<option value="${c.id}">${escapeHtml(localizedCountryName(c))}</option>`).join('');
 
   // ── Render ───────────────────────────────────────────────────────────────
 
@@ -101,9 +101,11 @@
       if (currentTab === 'archived' && (e.isActive || e.status === 'COMPLETED')) return false;
 
       if (kw) {
+        const localCountry = localizedCountryName({ code: e.countryCode, name_en: e.countryName, name_ka: e.countryNameKa });
         const match = (e.title || '').toLowerCase().includes(kw) ||
                       (e.occasion || '').toLowerCase().includes(kw) ||
-                      (e.countryName || '').toLowerCase().includes(kw);
+                      (e.countryName || '').toLowerCase().includes(kw) ||
+                      localCountry.toLowerCase().includes(kw);
         if (!match) return false;
       }
       if (countryId && e.countryId !== countryId) return false;
@@ -140,7 +142,7 @@
           <div class="event-card-info">
             <h4>${escapeHtml(e.title)} ${statusPill}</h4>
             <div class="event-card-meta">
-              <span>${escapeHtml(localizedCountryName({ code: e.countryCode, name_en: e.countryName }))}</span>
+              <span>${escapeHtml(localizedCountryName({ code: e.countryCode, name_en: e.countryName, name_ka: e.countryNameKa }))}</span>
               <span>Language: ${languageLabel(e.language)}</span>
               <span>DS: ${escapeHtml(localizedName(e.documentSubmitterName, e.documentSubmitterNameKa))}</span>
               ${e.deadlineDate ? `<span>Deadline: ${formatDate(e.deadlineDate)}</span>` : ''}
@@ -331,7 +333,7 @@
       showModal(I18n.tr('calendar.modal.detailsTitle'), `
         <div style="font-size:14px;line-height:1.8;">
           <p><strong>Title:</strong> ${escapeHtml(e.title)}</p>
-          <p><strong>Country:</strong> ${escapeHtml(localizedCountryName({ code: e.countryCode, name_en: e.countryName }))}</p>
+          <p><strong>Country:</strong> ${escapeHtml(localizedCountryName({ code: e.countryCode, name_en: e.countryName, name_ka: e.countryNameKa }))}</p>
           <p><strong>Language:</strong> ${languageLabel(e.language)}</p>
           <p><strong>Document Submitter:</strong> ${escapeHtml(localizedName(e.documentSubmitterName, e.documentSubmitterNameKa))} (${roleLabel(e.documentSubmitterRole)})</p>
           ${e.deputyName ? `<p><strong>Deputy:</strong> ${escapeHtml(localizedName(e.deputyName, e.deputyNameKa))}</p>` : ''}

@@ -16,11 +16,12 @@ async function seed() {
 
   console.log('Seeding countries...');
   const countries = require('./data/countries.json');
+  const { georgianCountryName } = require('./helpers/country-names');
   for (const c of countries) {
     await db.query(
-      `INSERT INTO countries (name_en, code) VALUES ($1, $2)
+      `INSERT INTO countries (name_en, code, name_ka) VALUES ($1, $2, $3)
        ON CONFLICT (code) DO NOTHING`,
-      [c.name, c.code]
+      [c.name, c.code, georgianCountryName(c.code)]
     );
   }
   console.log(`Seeded ${countries.length} countries.`);

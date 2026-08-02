@@ -188,14 +188,14 @@ router.patch('/:id', requireAuth, requireRole('ADMIN'), async (req, res) => {
 router.get('/:id/countries', requireAuth, requireRole('ADMIN'), async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT c.id, c.name_en, c.code
+      `SELECT c.id, c.name_en, c.name_ka, c.code
        FROM country_assignments ca
        JOIN countries c ON c.id = ca.country_id
        WHERE ca.user_id = $1
        ORDER BY c.name_en`,
       [req.params.id]
     );
-    res.json(rows.map(r => ({ id: r.id, nameEn: r.name_en, code: r.code })));
+    res.json(rows.map(r => ({ id: r.id, nameEn: r.name_en, nameKa: r.name_ka, code: r.code })));
   } catch (err) {
     console.error('Get user countries error:', err);
     res.status(500).json({ error: 'Internal server error' });

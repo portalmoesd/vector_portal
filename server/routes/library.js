@@ -24,7 +24,7 @@ router.get('/', requireAuth, async (req, res) => {
     const isCollabRole = role === 'COLLABORATOR' || role === 'SUPER_COLLABORATOR';
 
     const selectCols = `e.id, e.title, e.language, e.ended_at, e.event_datetime,
-              c.name_en AS country_name, c.code AS country_code,
+              c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code,
               ds.full_name AS document_submitter_name,
               ds.full_name_ka AS document_submitter_name_ka,
               e.document_submitter_id`;
@@ -102,6 +102,7 @@ router.get('/', requireAuth, async (req, res) => {
       eventDateTime: canSeeEventDateTime(req.user.role, req.user.id, r.document_submitter_id)
         ? r.event_datetime : null,
       countryName: r.country_name,
+      countryNameKa: r.country_name_ka,
       countryCode: r.country_code,
       documentSubmitterName: r.document_submitter_name,
       documentSubmitterNameKa: r.document_submitter_name_ka,
@@ -119,7 +120,8 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
     const eventId = req.params.eventId;
 
     const { rows: [event] } = await db.query(
-      `SELECT e.title, e.language, e.ended_at, c.name_en AS country_name
+      `SELECT e.title, e.language, e.ended_at,
+              c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code
        FROM events e JOIN countries c ON c.id = e.country_id
        WHERE e.id = $1 AND (e.status = 'COMPLETED' OR e.status = 'ARCHIVED')`,
       [eventId]
@@ -140,6 +142,8 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
       title: event.title,
       language: event.language,
       countryName: event.country_name,
+      countryNameKa: event.country_name_ka,
+      countryCode: event.country_code,
       endedAt: event.ended_at,
       sections: sections.map(s => ({
         id: s.id,
