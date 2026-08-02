@@ -44,10 +44,12 @@ const EVENT_ENDER_ROLES = [
 
 // Roles whose Library ("ready documents") view is ministry-wide: every
 // COMPLETED event, not just the ones they own, acted on or curate.
+// PROTOCOL manages the Minister's page, so their view matches the Minister's.
 const LIBRARY_ALL_COMPLETED_ROLES = [
   ROLES.ADMIN,
   ROLES.MINISTER,
   ROLES.DEPUTY,
+  ROLES.PROTOCOL,
 ];
 
 function isPipelineRole(role) {

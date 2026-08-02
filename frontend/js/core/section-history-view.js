@@ -34,7 +34,7 @@
     if (!user || !grid) return false;
     if (grid.documentSubmitterId === user.id) return true;
     if (grid.deputyId && grid.deputyId === user.id) return true;
-    if (user.role === 'DEPUTY' || user.role === 'MINISTER') return true;
+    if (user.role === 'DEPUTY' || user.role === 'MINISTER' || user.role === 'PROTOCOL') return true;
     const own = (grid.sections || []).filter(s => isOwnSection(user, s));
     return !!(grid.viewerLinkedToOwnerDeputy && own.length > 0);
   }

@@ -24,11 +24,12 @@
 
   // This dashboard serves several roles. Owner roles (Minister/Deputy/Supervisor)
   // get a meeting-centric view; everyone else gets the worker view. Only the
-  // read-only Minister can't act on documents.
-  const canEdit = user.role !== 'MINISTER';
-  const OWNER_ROLES = ['MINISTER', 'DEPUTY', 'SUPERVISOR'];
+  // read-only Minister view can't act on documents. PROTOCOL manages the
+  // Minister's page, so it renders the exact same read-only view.
+  const isMinister = user.role === 'MINISTER' || user.role === 'PROTOCOL';
+  const canEdit = !isMinister;
+  const OWNER_ROLES = ['MINISTER', 'PROTOCOL', 'DEPUTY', 'SUPERVISOR'];
   const isOwner = OWNER_ROLES.includes(user.role);
-  const isMinister = user.role === 'MINISTER';
   const isDeputy = user.role === 'DEPUTY';
   // Minister and Deputies get a "Ready Documents" tab listing every completed
   // document ministry-wide (the API widens /api/library for these roles);

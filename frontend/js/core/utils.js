@@ -292,7 +292,8 @@ function dashboardUrl(role) {
     SUPERVISOR: '/pages/dashboard-supervisor.html',
     DEPUTY: '/pages/dashboard-deputy.html',
     ADMIN: '/pages/admin.html',
-    PROTOCOL: '/pages/calendar.html',
+    // PROTOCOL manages the Minister's page → same dashboard as the Minister.
+    PROTOCOL: '/pages/dashboard-minister.html',
     ANALYST: '/pages/statistics.html',
     MINISTER: '/pages/dashboard-minister.html',
   };

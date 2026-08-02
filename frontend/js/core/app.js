@@ -29,19 +29,29 @@ const App = {
     }
 
     // The MINISTER is a read-only consumer who never participates in the
-    // workflow. They may view their Dashboard, Calendar and Statistics (plus
-    // change-password); any other path (other dashboards, admin, the standalone
-    // Library — now folded into the dashboard) bounces back to the Dashboard.
+    // workflow. They may view their Dashboard and Statistics (plus
+    // change-password); any other path (other dashboards, admin, Calendar,
+    // the standalone Library — folded into the dashboard) bounces back to
+    // the Dashboard.
     if (user.role === 'MINISTER') {
       const path = window.location.pathname;
       const allow = [
         '/pages/dashboard-minister.html',
-        '/pages/calendar.html',
         '/pages/statistics.html',
         '/pages/change-password.html',
       ];
       if (!allow.some(p => path.endsWith(p))) {
         window.location.href = '/pages/dashboard-minister.html';
+        return;
+      }
+    }
+
+    // Calendar and Library are management surfaces reserved for ADMIN and
+    // PROTOCOL; everyone else works from their dashboard and bounces there.
+    if (!['ADMIN', 'PROTOCOL'].includes(user.role)) {
+      const path = window.location.pathname;
+      if (path.endsWith('/pages/calendar.html') || path.endsWith('/pages/library.html')) {
+        window.location.href = dashboardUrl(user.role);
         return;
       }
     }
@@ -105,20 +115,26 @@ const App = {
       ];
     } else if (user.role === 'MINISTER') {
       // MINISTER is read-only: a dedicated Dashboard (with completed documents +
-      // upcoming events), the Calendar and Statistics. No admin; the standalone
-      // Library is folded into the dashboard's Completed view.
+      // upcoming events) and Statistics. No admin; Calendar and the standalone
+      // Library are management surfaces (ADMIN/PROTOCOL only).
       navItems = [
         { href: '/pages/dashboard-minister.html', label: 'Dashboard', i18n: 'nav.dashboard', match: 'dashboard' },
-        { href: '/pages/calendar.html', label: 'Calendar', i18n: 'nav.calendar', match: 'calendar' },
         { href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' },
       ];
     } else {
+      // Calendar and Library are shown only to ADMIN and PROTOCOL; every
+      // other role manages events from their dashboard.
+      const seesManagement = ['ADMIN', 'PROTOCOL'].includes(user.role);
       navItems = [
         { href: dashUrl, label: 'Dashboard', i18n: 'nav.dashboard', match: 'dashboard' },
-        { href: '/pages/calendar.html', label: 'Calendar', i18n: 'nav.calendar', match: 'calendar' },
-        { href: '/pages/library.html', label: 'Library', i18n: 'nav.library', match: 'library' },
-        { href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' },
       ];
+      if (seesManagement) {
+        navItems.push(
+          { href: '/pages/calendar.html', label: 'Calendar', i18n: 'nav.calendar', match: 'calendar' },
+          { href: '/pages/library.html', label: 'Library', i18n: 'nav.library', match: 'library' },
+        );
+      }
+      navItems.push({ href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' });
       if (user.role === 'ADMIN') {
         navItems.push({ href: '/pages/admin.html', label: 'Admin Panel', i18n: 'nav.admin', match: 'admin' });
       }
