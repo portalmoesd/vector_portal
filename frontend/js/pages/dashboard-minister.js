@@ -1733,28 +1733,47 @@
     } catch (_) { /* keep silent */ }
   }
 
-  // ── Create-event button (top of the side column) → opens the create popup ───
+  // ── Create-event + Templates buttons (top of the side column) ──────────────
   function buildCreateButton() {
-    if (!canCreateEvent || !window.EventCreate) return;
     const side = document.getElementById('mnSide');
     if (!side) return;
-    const btn = document.createElement('button');
-    btn.type = 'button';
-    btn.className = 'mn-createbtn';
-    btn.innerHTML = `<span class="mn-createbtn__plus">＋</span><span>${escapeHtml(I18n.tr('dashboard.createEvent'))}</span>`;
-    side.insertBefore(btn, side.firstChild);
-    btn.addEventListener('click', () => {
-      window.EventCreate.open({
-        onCreated: async () => {
-          // Refresh the in-preparation list and re-render.
-          try {
-            const ev = await Api.get('/api/events');
-            upcoming = (ev || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
-          } catch (_) { /* keep old list */ }
-          renderAll();
-        },
+    const canCreate = canCreateEvent && window.EventCreate;
+    const canTemplates = window.TemplatesManager && TemplatesManager.canManage();
+    if (!canCreate && !canTemplates) return;
+
+    const row = document.createElement('div');
+    row.className = 'mn-createrow';
+
+    if (canCreate) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'mn-createbtn';
+      btn.innerHTML = `<span class="mn-createbtn__plus">＋</span><span>${escapeHtml(I18n.tr('dashboard.createEvent'))}</span>`;
+      btn.addEventListener('click', () => {
+        window.EventCreate.open({
+          onCreated: async () => {
+            // Refresh the in-preparation list and re-render.
+            try {
+              const ev = await Api.get('/api/events');
+              upcoming = (ev || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
+            } catch (_) { /* keep old list */ }
+            renderAll();
+          },
+        });
       });
-    });
+      row.appendChild(btn);
+    }
+
+    if (canTemplates) {
+      const tplBtn = document.createElement('button');
+      tplBtn.type = 'button';
+      tplBtn.className = 'mn-tplbtn';
+      tplBtn.textContent = I18n.tr('dashboard.templates');
+      tplBtn.addEventListener('click', () => TemplatesManager.open());
+      row.appendChild(tplBtn);
+    }
+
+    side.insertBefore(row, side.firstChild);
   }
 
   buildCreateButton();
