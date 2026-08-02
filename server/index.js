@@ -95,6 +95,12 @@ async function migrate() {
     // rows still empty afterwards get the ICU-derived name.
     {
       const { georgianCountryName, overrides } = require('./helpers/country-names');
+      // "No country" pseudo-entry (ISO user-assigned code XX) for events not
+      // tied to a specific state. Seeded here so existing databases get it.
+      await db.query(
+        `INSERT INTO countries (name_en, code, name_ka) VALUES ('No country', 'XX', 'ქვეყნის გარეშე')
+         ON CONFLICT (code) DO NOTHING`
+      );
       for (const [code, name] of Object.entries(overrides)) {
         if (!name || !String(name).trim()) continue;
         await db.query(
