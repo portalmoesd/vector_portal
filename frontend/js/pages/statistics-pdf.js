@@ -150,6 +150,9 @@
       noTrade: 'No trade conducted',
       noExports: 'No exports conducted',
       noImports: 'No imports conducted',
+      insigTrade: 'Insignificant turnover',
+      insigExports: 'Insignificant export',
+      insigImports: 'Insignificant import',
       positive: 'positive',
       negative: 'negative',
       increase: 'increase',
@@ -199,6 +202,9 @@
       noTrade: 'ვაჭრობა არ განხორციელდა',
       noExports: 'ექსპორტი არ განხორციელდა',
       noImports: 'იმპორტი არ განხორციელდა',
+      insigTrade: 'უმნიშვნელო ბრუნვა',
+      insigExports: 'უმნიშვნელო ექსპორტი',
+      insigImports: 'უმნიშვნელო იმპორტი',
       positive: 'პოზიტიური',
       negative: 'ნეგატიური',
       increase: 'ზრდა',
@@ -324,6 +330,11 @@
     return val.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 
+  // Values ≥ 0.005 mln round up to "0.01" under toFixed(2) and are shown
+  // normally; positive values below it are labelled insignificant instead —
+  // must match statistics.js so the PDF agrees with the on-page report.
+  const INSIGNIFICANT_MLN = 0.005;
+
   function formatPct(pct) {
     const rounded = Math.round(pct);
     if (rounded === 0 && pct !== 0) return pct.toFixed(1) + '%';
@@ -424,10 +435,16 @@
       export: t.noExports,
       import: t.noImports,
     };
+    const insigMsg = {
+      turnover: t.insigTrade,
+      export: t.insigExports,
+      import: t.insigImports,
+    };
 
     function cell(value, prev, isBalance, key, periodData) {
-      if (isBalance && periodData.turnover === 0) return { text: '-', alignment: 'center' };
+      if (isBalance && periodData.turnover < INSIGNIFICANT_MLN) return { text: '-', alignment: 'center' };
       if (value === 0 && !isBalance && zeroMsg[key]) return { text: zeroMsg[key], alignment: 'center', color: '#94a3b8', fontSize: 8.5 };
+      if (value > 0 && value < INSIGNIFICANT_MLN && !isBalance && insigMsg[key]) return { text: insigMsg[key], alignment: 'center', color: '#94a3b8', fontSize: 8.5 };
       if (isBalance) {
         const sign = value < 0 ? t.negative : t.positive;
         const color = value < 0 ? '#dc2626' : '#16a34a';
@@ -610,7 +627,7 @@
 
     // ── Turnover ─────────────────────────────────────────────────────────
     nodes.push(heading('სავაჭრო ბრუნვა', 'Trade Turnover'));
-    if (curTurn < 0.01) {
+    if (curTurn === 0) {
       // Widen the "no trade" period from the latest period alone to the
       // full 5-year + latest window when there's zero trade everywhere.
       const widen = trade.hasAnyTrade === false && trade.fiveYearStart;
@@ -625,7 +642,9 @@
         : `For ${enLabel}, no trade was conducted.`, ...paraStyle });
       return nodes;
     }
-    if (isKa) {
+    if (curTurn < INSIGNIFICANT_MLN) {
+      nodes.push({ text: isKa ? 'უმნიშვნელო ბრუნვა.' : 'Insignificant turnover.', ...paraStyle });
+    } else if (isKa) {
       nodes.push({ text: [
         `${periodGen} მონაცემებით, სავაჭრო ბრუნვა, წინა წლის ანალოგიურ პერიოდთან შედარებით, `,
         changeVerbParts(curTurn, prevTurn),
@@ -654,8 +673,10 @@
     // ── Export ────────────────────────────────────────────────────────────
     nodes.push(divider());
     nodes.push(heading('ექსპორტი', 'Export'));
-    if (!trade.hasExport || curExp < 0.01) {
+    if (!trade.hasExport || curExp === 0) {
       nodes.push({ text: isKa ? `ექსპორტი ${periodLoc} არ განხორციელდა.` : `No exports were conducted in ${periodEn}.`, ...paraStyle, margin: [0, 6, 0, 4] });
+    } else if (curExp < INSIGNIFICANT_MLN) {
+      nodes.push({ text: isKa ? 'უმნიშვნელო ექსპორტი.' : 'Insignificant export.', ...paraStyle, margin: [0, 6, 0, 4] });
     } else {
       if (isKa) {
         nodes.push({ text: [
@@ -729,8 +750,10 @@
     // ── Import ───────────────────────────────────────────────────────────
     nodes.push(divider());
     nodes.push(heading('იმპორტი', 'Import'));
-    if (!trade.hasImport || curImp < 0.01) {
+    if (!trade.hasImport || curImp === 0) {
       nodes.push({ text: isKa ? `იმპორტი ${periodLoc} არ განხორციელდა.` : `No imports were conducted in ${periodEn}.`, ...paraStyle, margin: [0, 6, 0, 4] });
+    } else if (curImp < INSIGNIFICANT_MLN) {
+      nodes.push({ text: isKa ? 'უმნიშვნელო იმპორტი.' : 'Insignificant import.', ...paraStyle, margin: [0, 6, 0, 4] });
     } else {
       if (isKa) {
         nodes.push({ text: [

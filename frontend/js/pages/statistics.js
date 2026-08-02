@@ -1184,7 +1184,7 @@
 
     // Turnover
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover'}</h4>`);
-    if (curTurn < 0.01) {
+    if (curTurn === 0) {
       // Zero trade in the latest period alone → single-period label.
       // Zero trade across the whole 5-year + latest window → widened
       // label that spans the full lookback.
@@ -1194,7 +1194,9 @@
       tradeSummaryEl.classList.remove('hidden');
       return;
     }
-    if (isKa) {
+    if (curTurn < INSIGNIFICANT_MLN) {
+      lines.push(`<p>${isKa ? 'უმნიშვნელო ბრუნვა.' : 'Insignificant turnover.'}</p>`);
+    } else if (isKa) {
       lines.push(`<p>${periodGen} მონაცემებით, სავაჭრო ბრუნვა, წინა წლის ანალოგიურ პერიოდთან შედარებით, ${chg(curTurn, prevTurn)} და ${b(`${fmln(curTurn)} მლნ. აშშ დოლარი`)} შეადგინა.</p>`);
       if (inTop(rank && rank.turnover)) {
         lines.push(`<p>${escapeHtml(countryName)} აღნიშნულ პერიოდში სავაჭრო ბრუნვის მოცულობის მიხედვით არის ${b(`${geP(rank.turnover.rank)} ადგილზე`)}, წილი ${b(`${pctO(rank.turnover.sharePct)}%`)}.</p>`);
@@ -1209,7 +1211,7 @@
     // Export
     lines.push(`<hr class="stat-summary__divider">`);
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'ექსპორტი' : 'Export'}</h4>`);
-    if (trade.hasExport && curExp >= 0.01) {
+    if (trade.hasExport && curExp >= INSIGNIFICANT_MLN) {
       if (isKa) {
         let exp = `<p>ექსპორტი ${periodLoc} ${chg(curExp, prevExp)} და ${b(`${fmln(curExp)} მლნ. აშშ დოლარი`)} შეადგინა.`;
         if (inTop(rank && rank.export)) exp += ` საქართველოსთვის ექსპორტის მიხედვით ${escapeHtml(countryName)} არის ${b(`${geP(rank.export.rank)} ადგილზე`)} საქართველოს სავაჭრო პარტნიორებს შორის, წილი ${b(`${pctO(rank.export.sharePct)}%`)}.`;
@@ -1243,6 +1245,8 @@
 
       const pl = productListHtml(trade.exportProducts);
       if (pl) lines.push(`<p>${b(isKa ? 'ძირითადი საექსპორტო პროდუქცია:' : 'Main export products:')} ${pl}</p>`);
+    } else if (curExp > 0) {
+      lines.push(`<p>${isKa ? 'უმნიშვნელო ექსპორტი.' : 'Insignificant export.'}</p>`);
     } else {
       lines.push(`<p>${isKa ? 'ექსპორტი არ განხორციელდა.' : 'No exports were conducted.'}</p>`);
     }
@@ -1250,7 +1254,7 @@
     // Import
     lines.push(`<hr class="stat-summary__divider">`);
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'იმპორტი' : 'Import'}</h4>`);
-    if (trade.hasImport && curImp >= 0.01) {
+    if (trade.hasImport && curImp >= INSIGNIFICANT_MLN) {
       if (isKa) {
         let imp = `<p>იმპორტი ${periodLoc} ${chg(curImp, prevImp)} და ${b(`${fmln(curImp)} მლნ. აშშ დოლარი`)} შეადგინა.`;
         if (inTop(rank && rank.import)) imp += ` იმპორტის მიხედვით ${escapeHtml(countryName)} არის ${b(`${geP(rank.import.rank)} ადგილზე`)} საქართველოს სავაჭრო პარტნიორებს შორის, წილი ${b(`${pctO(rank.import.sharePct)}%`)}.`;
@@ -1265,6 +1269,8 @@
 
       const pl = productListHtml(trade.importProducts);
       if (pl) lines.push(`<p>${b(isKa ? 'ძირითადი საიმპორტო პროდუქცია:' : 'Main import products:')} ${pl}</p>`);
+    } else if (curImp > 0) {
+      lines.push(`<p>${isKa ? 'უმნიშვნელო იმპორტი.' : 'Insignificant import.'}</p>`);
     } else {
       lines.push(`<p>${isKa ? 'იმპორტი არ განხორციელდა.' : 'No imports were conducted.'}</p>`);
     }
@@ -1306,12 +1312,19 @@
       export: isKa ? 'ექსპორტი არ განხორციელდა' : 'No exports conducted',
       import: isKa ? 'იმპორტი არ განხორციელდა' : 'No imports conducted',
     };
+    const insignificantMessages = {
+      turnover: isKa ? 'უმნიშვნელო ბრუნვა' : 'Insignificant turnover',
+      export: isKa ? 'უმნიშვნელო ექსპორტი' : 'Insignificant export',
+      import: isKa ? 'უმნიშვნელო იმპორტი' : 'Insignificant import',
+    };
 
     function formatCell(value, prevValue, isBalance, key, periodData) {
-      // If turnover is 0, balance shows "-"
-      if (isBalance && periodData.turnover === 0) return '-';
+      // If turnover rounds to 0.00, balance shows "-"
+      if (isBalance && periodData.turnover < INSIGNIFICANT_MLN) return '-';
       // Zero value messages
       if (value === 0 && !isBalance && zeroMessages[key]) return zeroMessages[key];
+      // Positive but rounds to 0.00 → insignificant, not a formatted value
+      if (value > 0 && value < INSIGNIFICANT_MLN && !isBalance && insignificantMessages[key]) return insignificantMessages[key];
       if (isBalance) {
         const sign = value < 0 ? negativeWord : positiveWord;
         return `${sign} ${formatMln2(value)} ${mln}`;
@@ -1373,6 +1386,12 @@
   function formatMln2(val) {
     return val.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
+
+  // Values ≥ 0.005 mln round up to "0.01" under toFixed(2) and are shown
+  // normally; positive values below it round to "0.00" and are labelled
+  // insignificant instead — in the summary prose and the overview table
+  // alike, so the two can't disagree about what counts as zero.
+  const INSIGNIFICANT_MLN = 0.005;
 
   // ── Build product list ─────────────────────────────────────────────────
 
