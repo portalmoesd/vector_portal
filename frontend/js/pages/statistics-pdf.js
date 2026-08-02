@@ -295,10 +295,12 @@
   }
 
   function gePlace(rank) {
-    if (rank === 1) return 'პირველ';
+    if (rank === 1) return '1-ი';
     if (rank >= 2 && rank <= 20) return `მე-${rank}`;
-    if (rank % 10 === 0) return `მე-${rank}`;
-    if (rank % 100 === 0) return `მე-${rank}`;
+    if (rank >= 100) return `მე-${rank}`;
+    // Vigesimal round tens (ორმოცი/სამოცი/ოთხმოცი) take მე-;
+    // the other 21-99 ranks take the -ე suffix.
+    if (rank === 40 || rank === 60 || rank === 80) return `მე-${rank}`;
     return `${rank}-ე`;
   }
 

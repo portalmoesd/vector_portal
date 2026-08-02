@@ -1155,10 +1155,12 @@
       return b(`${c >= 0 ? 'increased' : 'decreased'} by ${abs}%`);
     }
     function geP(r) {
-      if (r === 1) return 'პირველ';
+      if (r === 1) return '1-ი';
       if (r >= 2 && r <= 20) return `მე-${r}`;
-      if (r % 10 === 0) return `მე-${r}`;
-      if (r % 100 === 0) return `მე-${r}`;
+      if (r >= 100) return `მე-${r}`;
+      // Vigesimal round tens (ორმოცი/სამოცი/ოთხმოცი) take მე-;
+      // the other 21-99 ranks take the -ე suffix.
+      if (r === 40 || r === 60 || r === 80) return `მე-${r}`;
       return `${r}-ე`;
     }
     function enO(r) {
@@ -2090,9 +2092,9 @@
     }
     if (tourism.currentRank && tourism.currentPeriodLabel) {
       const geP = (r) => {
-        if (r === 1) return 'პირველ';
+        if (r === 1) return '1-ი';
         if (r >= 2 && r <= 20) return `მე-${r}`;
-        if (r % 10 === 0 || r % 100 === 0) return `მე-${r}`;
+        if (r >= 100 || r === 40 || r === 60 || r === 80) return `მე-${r}`;
         return `${r}-ე`;
       };
       const enO = (r) => {
@@ -2521,9 +2523,9 @@
     const lines = [];
 
     function geP(r) {
-      if (r === 1) return 'პირველ';
+      if (r === 1) return '1-ი';
       if (r >= 2 && r <= 20) return `მე-${r}`;
-      if (r % 10 === 0 || r % 100 === 0) return `მე-${r}`;
+      if (r >= 100 || r === 40 || r === 60 || r === 80) return `მე-${r}`;
       return `${r}-ე`;
     }
     function enO(r) {
