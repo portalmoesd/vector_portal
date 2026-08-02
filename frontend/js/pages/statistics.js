@@ -2071,6 +2071,18 @@
     return `${q} ${m[1]}`;
   }
 
+  // GNTA period labels arrive in Georgian ("2026 I-II კვ"). Keep them as-is
+  // for the Georgian report; render "2026 Q1-Q2" in the English one. Bare
+  // year labels pass through untouched.
+  function localizePeriodLabel(label, isKa) {
+    if (isKa) return label || '';
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
+    if (!m) return label || '';
+    const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `${m[1]} ${q}`;
+  }
+
   function renderTourismSummary(tourism, selectedCountry, isKa) {
     if (!tourismSummaryEl || !tourism || !tourism.hasData) {
       if (tourismSummaryEl) tourismSummaryEl.classList.add('hidden');
@@ -2155,7 +2167,7 @@
         : '<td class="stat-col-change">-</td>';
       html += `
         <tr>
-          <td>${escapeHtml(r.label)}</td>
+          <td>${escapeHtml(localizePeriodLabel(r.label, isKa))}</td>
           ${rankCell}
           <td class="stat-col-value">${r.visitors.toLocaleString()}</td>
           ${changeCell}
@@ -2176,7 +2188,7 @@
     const colors = annualRows.map(() => '#3b82f6');
 
     if (currentPeriod) {
-      labels.push(currentPeriod.label);
+      labels.push(localizePeriodLabel(currentPeriod.label, isKa));
       values.push(currentPeriod.visitors);
       colors.push('#60a5fa'); // lighter blue for partial period
     }

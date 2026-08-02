@@ -337,6 +337,18 @@
   // must match statistics.js so the PDF agrees with the on-page report.
   const INSIGNIFICANT_MLN = 0.005;
 
+  // GNTA period labels arrive in Georgian ("2026 I-II კვ"). Keep them as-is
+  // for the Georgian report; render "2026 Q1-Q2" in the English one. Bare
+  // year labels pass through untouched.
+  function localizePeriodLabel(label, isKa) {
+    if (isKa) return label || '';
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
+    if (!m) return label || '';
+    const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `${m[1]} ${q}`;
+  }
+
   function formatPct(pct) {
     const rounded = Math.round(pct);
     if (rounded === 0 && pct !== 0) return pct.toFixed(1) + '%';
@@ -997,7 +1009,7 @@
       const shareCell = (r.share != null)
         ? tdNum(`${(Math.round(r.share * 10) / 10).toFixed(1)}%`)
         : tdNum('-');
-      const row = [tdText(r.label, r.isCurrent ? { bold: true } : {})];
+      const row = [tdText(localizePeriodLabel(r.label, lang === 'ka'), r.isCurrent ? { bold: true } : {})];
       if (showRank) row.push(rankCell);
       row.push(
         tdNum(r.visitors.toLocaleString()),

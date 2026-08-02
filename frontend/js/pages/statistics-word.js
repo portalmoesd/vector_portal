@@ -215,6 +215,18 @@
   // normally; positive values below it are labelled insignificant instead —
   // must match statistics.js so the Word export agrees with the on-page report.
   const INSIGNIFICANT_MLN = 0.005;
+
+  // GNTA period labels arrive in Georgian ("2026 I-II კვ"). Keep them as-is
+  // for the Georgian report; render "2026 Q1-Q2" in the English one. Bare
+  // year labels pass through untouched.
+  function localizePeriodLabel(label, isKa) {
+    if (isKa) return label || '';
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
+    if (!m) return label || '';
+    const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `${m[1]} ${q}`;
+  }
   function formatPct(pct) {
     const rounded = Math.round(pct);
     if (rounded === 0 && pct !== 0) return pct.toFixed(1) + '%';
@@ -677,7 +689,7 @@
       }
       const rankText = r.rank ? String(r.rank) : '-';
       const shareText = r.share != null ? `${(Math.round(r.share * 10) / 10).toFixed(1)}%` : '-';
-      const cells = [dataCell(D, r.label, { bold: !!r.isCurrent, rowIdx, isLastRow: isLast, keepWithNext: keep })];
+      const cells = [dataCell(D, localizePeriodLabel(r.label, lang === 'ka'), { bold: !!r.isCurrent, rowIdx, isLastRow: isLast, keepWithNext: keep })];
       if (showRank) cells.push(dataCell(D, rankText, { align: 'right', rowIdx, isLastRow: isLast, keepWithNext: keep }));
       cells.push(
         dataCell(D, r.visitors.toLocaleString(), { align: 'right', rowIdx, isLastRow: isLast, keepWithNext: keep }),
