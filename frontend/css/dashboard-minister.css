@@ -411,6 +411,20 @@
 .mn-dash .mn-createbtn:hover { transform: translateY(-1px); box-shadow: 0 9px 22px rgba(10,132,255,0.34); }
 .mn-dash .mn-createbtn__plus { font-size: 1.1rem; line-height: 1; }
 
+/* Row holding the create-event button + the templates button beside it. */
+.mn-dash .mn-createrow { display: flex; gap: 10px; }
+.mn-dash .mn-createrow .mn-createbtn { flex: 1; }
+
+/* Templates button — same shape as the create button, quieter look. */
+.mn-dash .mn-tplbtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 13px 18px; border-radius: 16px; cursor: pointer;
+  font-size: 0.95rem; font-weight: 800; color: var(--primary, #0a84ff);
+  background: rgba(10,132,255,0.08); border: 1px solid rgba(10,132,255,0.25);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.mn-dash .mn-tplbtn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(10,132,255,0.18); }
+
 @media (max-width: 900px) {
   .mn-dash .mn-overview { flex-direction: column; }
   .mn-dash .mn-overview__cal { flex: 1 1 auto; width: 100%; }
@@ -1060,6 +1074,7 @@
 .mn-dash .mn-toggle__btn:focus-visible,
 .mn-dash .mn-list .mn-card:focus-visible,
 .mn-dash .mn-createbtn:focus-visible,
+.mn-dash .mn-tplbtn:focus-visible,
 .mn-dash .mn-pillbtn:focus-visible,
 .mn-dash .mn-actbtn:focus-visible,
 .mn-dash .mn-notif:focus-visible,
