@@ -295,10 +295,12 @@
   }
 
   function gePlace(rank) {
-    if (rank === 1) return 'პირველ';
+    if (rank === 1) return '1-ი';
     if (rank >= 2 && rank <= 20) return `მე-${rank}`;
-    if (rank % 10 === 0) return `მე-${rank}`;
-    if (rank % 100 === 0) return `მე-${rank}`;
+    if (rank >= 100) return `მე-${rank}`;
+    // Vigesimal round tens (ორმოცი/სამოცი/ოთხმოცი) take მე-;
+    // the other 21-99 ranks take the -ე suffix.
+    if (rank === 40 || rank === 60 || rank === 80) return `მე-${rank}`;
     return `${rank}-ე`;
   }
 
@@ -334,6 +336,18 @@
   // normally; positive values below it are labelled insignificant instead —
   // must match statistics.js so the PDF agrees with the on-page report.
   const INSIGNIFICANT_MLN = 0.005;
+
+  // GNTA period labels arrive in Georgian ("2026 I-II კვ"). Keep them as-is
+  // for the Georgian report; render "2026 Q1-Q2" in the English one. Bare
+  // year labels pass through untouched.
+  function localizePeriodLabel(label, isKa) {
+    if (isKa) return label || '';
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
+    if (!m) return label || '';
+    const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `${m[1]} ${q}`;
+  }
 
   function formatPct(pct) {
     const rounded = Math.round(pct);
@@ -995,7 +1009,7 @@
       const shareCell = (r.share != null)
         ? tdNum(`${(Math.round(r.share * 10) / 10).toFixed(1)}%`)
         : tdNum('-');
-      const row = [tdText(r.label, r.isCurrent ? { bold: true } : {})];
+      const row = [tdText(localizePeriodLabel(r.label, lang === 'ka'), r.isCurrent ? { bold: true } : {})];
       if (showRank) row.push(rankCell);
       row.push(
         tdNum(r.visitors.toLocaleString()),
@@ -1091,43 +1105,41 @@
       }
     }
 
-    // Sentence 3/4: latest + previous year
-    function yearSentence(year, value, rank) {
-      if (!(value > 0) || !year) return null;
+    // Sentences 3/4: current period (quarterly YTD while the annual series
+    // lags, otherwise the latest full year) followed by the previous full
+    // year. Labels come precomputed per locale from statistics.js.
+    function periodSentence(p) {
+      const label = isKa ? p.labelKa : p.labelEn;
+      if (!(p.value > 0)) return noInvestmentSentence(label);
       if (isKa) {
         const parts = [
-          B(`${year} წელს`), ` ${countryFrom} საქართველოში განხორციელდა `,
-          B(`${fmt(value)} მლნ. აშშ დოლარის`), ` პირდაპირი უცხოური ინვესტიცია.`,
+          B(label), ` ${countryFrom} საქართველოში განხორციელდა `,
+          B(`${fmt(p.value)} მლნ. აშშ დოლარის`), ` პირდაპირი უცხოური ინვესტიცია.`,
         ];
-        if (rank) {
+        if (p.rank) {
           parts.push(` ${country} განხორციელებული პირდაპირი უცხოური ინვესტიციის მოცულობით `,
-            `${year} წელს `, B(`${gePlace(rank)} ადგილს`), ` იკავებს.`);
+            `${label} `, B(`${gePlace(p.rank)} ადგილს`), ` იკავებს.`);
         }
         return { text: parts, ...paraStyle };
       }
       const parts = [
-        `In `, B(`${year}`), `, `, B(`${fmt(value)} mln USD`),
+        `In `, B(label), `, `, B(`${fmt(p.value)} mln USD`),
         ` of foreign direct investment came to Georgia from ${country}.`,
       ];
-      if (rank) {
-        parts.push(` ${country} ranked `, B(enOrdinal(rank)), ` by FDI volume in ${year}.`);
+      if (p.rank) {
+        parts.push(` ${country} ranked `, B(enOrdinal(p.rank)), ` by FDI volume in ${label}.`);
       }
       return { text: parts, ...paraStyle };
     }
-    function noInvestmentSentence(year) {
+    function noInvestmentSentence(label) {
       if (isKa) {
-        return { text: [B(`${year} წელს`), ` ${countryFrom} ინვესტიცია არ განხორციელდა.`], ...paraStyle };
+        return { text: [B(label), ` ${countryFrom} ინვესტიცია არ განხორციელდა.`], ...paraStyle };
       }
-      return { text: [`In `, B(`${year}`), `, no investment was conducted from ${country}.`], ...paraStyle };
+      return { text: [`In `, B(label), `, no investment was conducted from ${country}.`], ...paraStyle };
     }
 
-    if (inv.latestYear) {
-      const s3 = yearSentence(inv.latestYear, inv.latestYearValue, inv.latestYearRank);
-      nodes.push(s3 || noInvestmentSentence(inv.latestYear));
-    }
-    if (inv.prevYear) {
-      const s4 = yearSentence(inv.prevYear, inv.prevYearValue, inv.prevYearRank);
-      nodes.push(s4 || noInvestmentSentence(inv.prevYear));
+    for (const p of (inv.summaryPeriods || [])) {
+      nodes.push(periodSentence(p));
     }
 
     return nodes;

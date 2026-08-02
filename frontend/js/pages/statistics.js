@@ -1155,10 +1155,12 @@
       return b(`${c >= 0 ? 'increased' : 'decreased'} by ${abs}%`);
     }
     function geP(r) {
-      if (r === 1) return 'პირველ';
+      if (r === 1) return '1-ი';
       if (r >= 2 && r <= 20) return `მე-${r}`;
-      if (r % 10 === 0) return `მე-${r}`;
-      if (r % 100 === 0) return `მე-${r}`;
+      if (r >= 100) return `მე-${r}`;
+      // Vigesimal round tens (ორმოცი/სამოცი/ოთხმოცი) take მე-;
+      // the other 21-99 ranks take the -ე suffix.
+      if (r === 40 || r === 60 || r === 80) return `მე-${r}`;
       return `${r}-ე`;
     }
     function enO(r) {
@@ -2069,6 +2071,18 @@
     return `${q} ${m[1]}`;
   }
 
+  // GNTA period labels arrive in Georgian ("2026 I-II კვ"). Keep them as-is
+  // for the Georgian report; render "2026 Q1-Q2" in the English one. Bare
+  // year labels pass through untouched.
+  function localizePeriodLabel(label, isKa) {
+    if (isKa) return label || '';
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
+    if (!m) return label || '';
+    const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `${m[1]} ${q}`;
+  }
+
   function renderTourismSummary(tourism, selectedCountry, isKa) {
     if (!tourismSummaryEl || !tourism || !tourism.hasData) {
       if (tourismSummaryEl) tourismSummaryEl.classList.add('hidden');
@@ -2090,9 +2104,9 @@
     }
     if (tourism.currentRank && tourism.currentPeriodLabel) {
       const geP = (r) => {
-        if (r === 1) return 'პირველ';
+        if (r === 1) return '1-ი';
         if (r >= 2 && r <= 20) return `მე-${r}`;
-        if (r % 10 === 0 || r % 100 === 0) return `მე-${r}`;
+        if (r >= 100 || r === 40 || r === 60 || r === 80) return `მე-${r}`;
         return `${r}-ე`;
       };
       const enO = (r) => {
@@ -2153,7 +2167,7 @@
         : '<td class="stat-col-change">-</td>';
       html += `
         <tr>
-          <td>${escapeHtml(r.label)}</td>
+          <td>${escapeHtml(localizePeriodLabel(r.label, isKa))}</td>
           ${rankCell}
           <td class="stat-col-value">${r.visitors.toLocaleString()}</td>
           ${changeCell}
@@ -2174,7 +2188,7 @@
     const colors = annualRows.map(() => '#3b82f6');
 
     if (currentPeriod) {
-      labels.push(currentPeriod.label);
+      labels.push(localizePeriodLabel(currentPeriod.label, isKa));
       values.push(currentPeriod.visitors);
       colors.push('#60a5fa'); // lighter blue for partial period
     }
@@ -2313,6 +2327,7 @@
       // and the change % compares with the same quarters a year earlier;
       // rank and share are computed within the same year-to-date window.
       const ROMAN_Q = ['', 'I', 'II', 'III', 'IV'];
+      let latestQuarter = null;
       for (const q of (json.quarters || [])) {
         const star = q.preliminary ? '*' : '';
         const qs = q.quarters || [q.quarter];
@@ -2337,6 +2352,7 @@
           share = totalMln > 0 ? (val / totalMln) * 100 : null;
         }
         tableData.push({ year: label, valueMln: val, prevMln: prev, rank, share });
+        latestQuarter = { year: q.year, quarters: qs, value: val, rank };
       }
 
       // ── Summary data ──────────────────────────────────────────────
@@ -2365,12 +2381,37 @@
       for (let y = fiveYearStart; y <= fiveYearEnd; y++) {
         fiveYearSum += (countryData[y] || 0) / 1000;
       }
-      // Per-year value + rank for latestYear and previous year (for summary)
-      const latestYearValue = (countryData[latestYear] || 0) / 1000;
-      const latestYearRank = latestYearValue > 0 ? fdiRankAndShare(latestYear).rank : null;
-      const prevYear = latestYear - 1;
-      const prevYearValue = (countryData[prevYear] || 0) / 1000;
-      const prevYearRank = prevYearValue > 0 ? fdiRankAndShare(prevYear).rank : null;
+      // Summary periods: the current period is the quarterly YTD entry when
+      // Geostat publishes quarters beyond the last annual year (e.g.
+      // "2026 Q1" while the annual series ends at 2025); the second
+      // sentence then covers the last full annual year. Once the annual
+      // series catches up, the quarters disappear from the workbook and
+      // both sentences fall back to full years (e.g. 2026 and 2025).
+      function fdiSummaryYearPeriod(year) {
+        const value = (countryData[year] || 0) / 1000;
+        return {
+          labelKa: `${year} წელს`,
+          labelEn: `${year}`,
+          value,
+          rank: value > 0 ? fdiRankAndShare(year).rank : null,
+        };
+      }
+      let currentPeriod;
+      if (latestQuarter) {
+        const qs = latestQuarter.quarters;
+        const roman = qs.length > 1
+          ? `${ROMAN_Q[qs[0]]}-${ROMAN_Q[qs[qs.length - 1]]}`
+          : ROMAN_Q[qs[0]];
+        currentPeriod = {
+          labelKa: `${latestQuarter.year} წლის ${roman} ${qs.length > 1 ? 'კვარტლებში' : 'კვარტალში'}`,
+          labelEn: `${latestQuarter.year} ${qs.length > 1 ? `Q${qs[0]}-Q${qs[qs.length - 1]}` : `Q${qs[0]}`}`,
+          value: latestQuarter.value,
+          rank: latestQuarter.rank,
+        };
+      } else {
+        currentPeriod = fdiSummaryYearPeriod(latestYear);
+      }
+      const prevFullPeriod = fdiSummaryYearPeriod(latestQuarter ? latestYear : latestYear - 1);
 
       const isKa = reportLocale === 'ka';
       // Section heading handles the title; skip inner header to avoid duplication.
@@ -2385,8 +2426,7 @@
         totalSum,
         totalRank,
         fiveYearStart, fiveYearEnd, fiveYearSum,
-        latestYear, latestYearValue, latestYearRank,
-        prevYear, prevYearValue, prevYearRank,
+        summaryPeriods: [currentPeriod, prevFullPeriod],
       };
 
       renderInvestmentsSummary(pdfState.investments, selectedCountry, isKa);
@@ -2495,9 +2535,9 @@
     const lines = [];
 
     function geP(r) {
-      if (r === 1) return 'პირველ';
+      if (r === 1) return '1-ი';
       if (r >= 2 && r <= 20) return `მე-${r}`;
-      if (r % 10 === 0 || r % 100 === 0) return `მე-${r}`;
+      if (r >= 100 || r === 40 || r === 60 || r === 80) return `მე-${r}`;
       return `${r}-ე`;
     }
     function enO(r) {
@@ -2530,42 +2570,26 @@
       }
     }
 
-    // Sentence 3: latest full year + rank
-    // Sentence 3: latest full year + rank (show "no investment" if value ≤ 0)
-    if (inv.latestYear) {
-      if (inv.latestYearValue > 0) {
+    // Sentences 3 & 4: current period (quarterly YTD while the annual
+    // series lags, otherwise the latest full year) followed by the
+    // previous full year — each with value + rank, or a "no investment"
+    // line when the value is ≤ 0.
+    for (const p of (inv.summaryPeriods || [])) {
+      const label = isKa ? p.labelKa : p.labelEn;
+      if (p.value > 0) {
         if (isKa) {
-          let s = `<p>${b(`${inv.latestYear} წელს`)} ${escapeHtml(countryKaFrom)} საქართველოში განხორციელდა ${b(`${fmt(inv.latestYearValue)} მლნ. აშშ დოლარის`)} პირდაპირი უცხოური ინვესტიცია.`;
-          if (inv.latestYearRank) s += ` ${escapeHtml(countryKa)} განხორციელებული პირდაპირი უცხოური ინვესტიციის მოცულობით ${inv.latestYear} წელს ${b(`${geP(inv.latestYearRank)} ადგილს`)} იკავებს.`;
+          let s = `<p>${b(label)} ${escapeHtml(countryKaFrom)} საქართველოში განხორციელდა ${b(`${fmt(p.value)} მლნ. აშშ დოლარის`)} პირდაპირი უცხოური ინვესტიცია.`;
+          if (p.rank) s += ` ${escapeHtml(countryKa)} განხორციელებული პირდაპირი უცხოური ინვესტიციის მოცულობით ${escapeHtml(label)} ${b(`${geP(p.rank)} ადგილს`)} იკავებს.`;
           s += '</p>';
           lines.push(s);
         } else {
-          let s = `<p>In ${b(inv.latestYear)}, ${b(`${fmt(inv.latestYearValue)} mln USD`)} of foreign direct investment came to Georgia from ${escapeHtml(countryEn)}.`;
-          if (inv.latestYearRank) s += ` ${escapeHtml(countryEn)} ranked ${b(enO(inv.latestYearRank))} by FDI volume in ${inv.latestYear}.`;
+          let s = `<p>In ${b(label)}, ${b(`${fmt(p.value)} mln USD`)} of foreign direct investment came to Georgia from ${escapeHtml(countryEn)}.`;
+          if (p.rank) s += ` ${escapeHtml(countryEn)} ranked ${b(enO(p.rank))} by FDI volume in ${escapeHtml(label)}.`;
           s += '</p>';
           lines.push(s);
         }
       } else {
-        lines.push(`<p>${isKa ? `${b(`${inv.latestYear} წელს`)} ${escapeHtml(countryKaFrom)} ინვესტიცია არ განხორციელდა.` : `In ${b(inv.latestYear)}, no investment was conducted from ${escapeHtml(countryEn)}.`}</p>`);
-      }
-    }
-
-    // Sentence 4: previous full year + rank (show "no investment" if value ≤ 0)
-    if (inv.prevYear) {
-      if (inv.prevYearValue > 0) {
-        if (isKa) {
-          let s = `<p>${b(`${inv.prevYear} წელს`)} ${escapeHtml(countryKaFrom)} საქართველოში განხორციელდა ${b(`${fmt(inv.prevYearValue)} მლნ. აშშ დოლარის`)} პირდაპირი უცხოური ინვესტიცია.`;
-          if (inv.prevYearRank) s += ` ${escapeHtml(countryKa)} განხორციელებული პირდაპირი უცხოური ინვესტიციის მოცულობით ${inv.prevYear} წელს ${b(`${geP(inv.prevYearRank)} ადგილს`)} იკავებს.`;
-          s += '</p>';
-          lines.push(s);
-        } else {
-          let s = `<p>In ${b(inv.prevYear)}, ${b(`${fmt(inv.prevYearValue)} mln USD`)} of foreign direct investment came to Georgia from ${escapeHtml(countryEn)}.`;
-          if (inv.prevYearRank) s += ` ${escapeHtml(countryEn)} ranked ${b(enO(inv.prevYearRank))} by FDI volume in ${inv.prevYear}.`;
-          s += '</p>';
-          lines.push(s);
-        }
-      } else {
-        lines.push(`<p>${isKa ? `${b(`${inv.prevYear} წელს`)} ${escapeHtml(countryKaFrom)} ინვესტიცია არ განხორციელდა.` : `In ${b(inv.prevYear)}, no investment was conducted from ${escapeHtml(countryEn)}.`}</p>`);
+        lines.push(`<p>${isKa ? `${b(label)} ${escapeHtml(countryKaFrom)} ინვესტიცია არ განხორციელდა.` : `In ${b(label)}, no investment was conducted from ${escapeHtml(countryEn)}.`}</p>`);
       }
     }
 
