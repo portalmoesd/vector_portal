@@ -45,6 +45,9 @@
       noTrade: 'No trade conducted',
       noExports: 'No exports conducted',
       noImports: 'No imports conducted',
+      insigTrade: 'Insignificant turnover',
+      insigExports: 'Insignificant export',
+      insigImports: 'Insignificant import',
       positive: 'positive',
       negative: 'negative',
       increase: 'increase',
@@ -94,6 +97,9 @@
       noTrade: 'ვაჭრობა არ განხორციელდა',
       noExports: 'ექსპორტი არ განხორციელდა',
       noImports: 'იმპორტი არ განხორციელდა',
+      insigTrade: 'უმნიშვნელო ბრუნვა',
+      insigExports: 'უმნიშვნელო ექსპორტი',
+      insigImports: 'უმნიშვნელო იმპორტი',
       positive: 'პოზიტიური',
       negative: 'ნეგატიური',
       increase: 'ზრდა',
@@ -203,6 +209,10 @@
   function formatMln2(val) {
     return val.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
+  // Values ≥ 0.005 mln round up to "0.01" under toFixed(2) and are shown
+  // normally; positive values below it are labelled insignificant instead —
+  // must match statistics.js so the Word export agrees with the on-page report.
+  const INSIGNIFICANT_MLN = 0.005;
   function formatPct(pct) {
     const rounded = Math.round(pct);
     if (rounded === 0 && pct !== 0) return pct.toFixed(1) + '%';
@@ -1301,15 +1311,20 @@
       { key: 'balance',  label: t.balance  },
     ];
     const zeroMsg = { turnover: t.noTrade, export: t.noExports, import: t.noImports };
+    const insigMsg = { turnover: t.insigTrade, export: t.insigExports, import: t.insigImports };
 
     function buildCell(value, prev, isBalance, key, periodData, rowIdx, isLastRow) {
-      // "-" when balance shown for a no-trade period.
-      if (isBalance && periodData.turnover === 0) {
+      // "-" when balance shown for a period whose turnover rounds to 0.00.
+      if (isBalance && periodData.turnover < INSIGNIFICANT_MLN) {
         return dataCellRuns(D, [{ text: '-' }], { align: 'center', rowIdx, isLastRow });
       }
       // Centered grey sentinel for zero export/import/turnover.
       if (value === 0 && !isBalance && zeroMsg[key]) {
         return dataCellRuns(D, [{ text: zeroMsg[key], color: '94A3B8', size: 8.5 }], { align: 'center', rowIdx, isLastRow });
+      }
+      // Positive but rounds to 0.00 → insignificant, not a formatted value.
+      if (value > 0 && value < INSIGNIFICANT_MLN && !isBalance && insigMsg[key]) {
+        return dataCellRuns(D, [{ text: insigMsg[key], color: '94A3B8', size: 8.5 }], { align: 'center', rowIdx, isLastRow });
       }
       if (isBalance) {
         const sign  = value < 0 ? t.negative : t.positive;
@@ -1464,7 +1479,7 @@
 
     // ── Turnover ──────────────────────────────────────────────────────
     out.push(summaryHeadingParagraph(D, isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover'));
-    if (curTurn < 0.01) {
+    if (curTurn === 0) {
       const widen = trade.hasAnyTrade === false && trade.fiveYearStart;
       const kaLabel = widen
         ? gePeriodGenRange(trade.fiveYearStart, trade.latestYear, trade.latestMonth)
@@ -1479,7 +1494,11 @@
       ]));
       return out;
     }
-    if (isKa) {
+    if (curTurn < INSIGNIFICANT_MLN) {
+      out.push(summaryProseParagraph(D, [
+        isKa ? 'უმნიშვნელო ბრუნვა.' : 'Insignificant turnover.',
+      ]));
+    } else if (isKa) {
       out.push(summaryProseParagraph(D, [
         `${periodGen} მონაცემებით, სავაჭრო ბრუნვა, წინა წლის ანალოგიურ პერიოდთან შედარებით, `,
         changeVerbParts(curTurn, prevTurn),
@@ -1508,9 +1527,13 @@
     // ── Export ────────────────────────────────────────────────────────
     out.push(summaryDividerParagraph(D));
     out.push(summaryHeadingParagraph(D, isKa ? 'ექსპორტი' : 'Export'));
-    if (!trade.hasExport || curExp < 0.01) {
+    if (!trade.hasExport || curExp === 0) {
       out.push(summaryProseParagraph(D, [
         isKa ? `ექსპორტი ${periodLoc} არ განხორციელდა.` : `No exports were conducted in ${periodEn}.`,
+      ]));
+    } else if (curExp < INSIGNIFICANT_MLN) {
+      out.push(summaryProseParagraph(D, [
+        isKa ? 'უმნიშვნელო ექსპორტი.' : 'Insignificant export.',
       ]));
     } else {
       if (isKa) {
@@ -1581,9 +1604,13 @@
     // ── Import ────────────────────────────────────────────────────────
     out.push(summaryDividerParagraph(D));
     out.push(summaryHeadingParagraph(D, isKa ? 'იმპორტი' : 'Import'));
-    if (!trade.hasImport || curImp < 0.01) {
+    if (!trade.hasImport || curImp === 0) {
       out.push(summaryProseParagraph(D, [
         isKa ? `იმპორტი ${periodLoc} არ განხორციელდა.` : `No imports were conducted in ${periodEn}.`,
+      ]));
+    } else if (curImp < INSIGNIFICANT_MLN) {
+      out.push(summaryProseParagraph(D, [
+        isKa ? 'უმნიშვნელო იმპორტი.' : 'Insignificant import.',
       ]));
     } else {
       if (isKa) {
