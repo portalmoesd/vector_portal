@@ -89,6 +89,32 @@ async function migrate() {
       END $$;
     `);
 
+    // ── Georgian country names (idempotent) ─────────────────────────────────
+    // Overrides from server/data/overrides/country-names-ka.json always win,
+    // so a convention fix there propagates to already-backfilled databases;
+    // rows still empty afterwards get the ICU-derived name.
+    {
+      const { georgianCountryName, overrides } = require('./helpers/country-names');
+      for (const [code, name] of Object.entries(overrides)) {
+        if (!name || !String(name).trim()) continue;
+        await db.query(
+          'UPDATE countries SET name_ka = $1, updated_at = now() WHERE code = $2 AND name_ka IS DISTINCT FROM $1',
+          [String(name).trim(), code.toUpperCase()]
+        );
+      }
+      const { rows: unnamed } = await db.query(
+        "SELECT id, code FROM countries WHERE name_ka IS NULL OR name_ka = ''"
+      );
+      let filled = 0;
+      for (const row of unnamed) {
+        const ka = georgianCountryName(row.code);
+        if (!ka) continue;
+        await db.query('UPDATE countries SET name_ka = $1, updated_at = now() WHERE id = $2', [ka, row.id]);
+        filled++;
+      }
+      if (filled > 0) console.log(`Backfilled ${filled} Georgian country names.`);
+    }
+
     // One-shot import of legacy server/data/*.json admin uploads into the
     // new admin_uploads table, so no re-upload is needed after the move.
     try {
@@ -158,10 +184,11 @@ async function migrate() {
     if (countryCount === 0) {
       console.log('Seeding countries...');
       const countries = require('./data/countries.json');
+      const { georgianCountryName } = require('./helpers/country-names');
       for (const c of countries) {
         await db.query(
-          'INSERT INTO countries (name_en, code) VALUES ($1, $2) ON CONFLICT (code) DO NOTHING',
-          [c.name, c.code]
+          'INSERT INTO countries (name_en, code, name_ka) VALUES ($1, $2, $3) ON CONFLICT (code) DO NOTHING',
+          [c.name, c.code, georgianCountryName(c.code)]
         );
       }
       console.log(`Seeded ${countries.length} countries.`);

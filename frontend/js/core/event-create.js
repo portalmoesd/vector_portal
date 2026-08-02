@@ -236,7 +236,7 @@
       if (isUnrestricted) minister = await Api.get('/api/admin/minister');
     } catch (e) { deputies = []; templates = []; }
 
-    const countryOpts = _countries.map(c =>
+    const countryOpts = sortedByLocalizedCountryName(_countries).map(c =>
       `<option value="${c.id}">${escapeHtml(localizedCountryName(c))}</option>`
     ).join('');
     const deputyOpts = deputies.map(d =>

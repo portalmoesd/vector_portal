@@ -26,10 +26,13 @@ DO $$ BEGIN ALTER TYPE history_action ADD VALUE IF NOT EXISTS 'pulled'; EXCEPTIO
 CREATE TABLE IF NOT EXISTS countries (
   id            SERIAL PRIMARY KEY,
   name_en       VARCHAR(120) NOT NULL UNIQUE,
+  name_ka       VARCHAR(160),
   code          CHAR(2) NOT NULL UNIQUE,
   created_at    TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at    TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+-- Backfill for databases predating the name_ka column.
+ALTER TABLE countries ADD COLUMN IF NOT EXISTS name_ka VARCHAR(160);
 
 -- ─── Departments ────────────────────────────────────────────────────────────
 

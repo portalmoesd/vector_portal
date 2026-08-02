@@ -353,7 +353,8 @@
     if (!kw) return activeItems();
     return activeItems().filter(d =>
       (d.title || '').toLowerCase().includes(kw) ||
-      (d.countryName || '').toLowerCase().includes(kw)
+      (d.countryName || '').toLowerCase().includes(kw) ||
+      localizedCountryName({ code: d.countryCode, name_en: d.countryName, name_ka: d.countryNameKa }).toLowerCase().includes(kw)
     );
   }
 
@@ -404,7 +405,7 @@
   const ICON_TICK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg>';
 
   function listCardHtml(d) {
-    const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName });
+    const country = localizedCountryName({ code: d.countryCode, name_en: d.countryName, name_ka: d.countryNameKa });
     const code = (d.countryCode || '').toLowerCase();
     const flag = code
       ? `<img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" loading="lazy" onerror="this.closest('.mn-card__flag').style.display='none'">`
@@ -826,7 +827,7 @@
           .then(c => ({ title: s.sectionLabel, html: c.htmlContent }))
           .catch(() => ({ title: s.sectionLabel, html: '' }))
       ));
-      const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName });
+      const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName, name_ka: item.countryNameKa });
       openPreviewOverlay(item.title, country, sections);
     } catch (e) {
       toast.error(I18n.tr('library.preview.failLoad') + ' ' + e.message);
