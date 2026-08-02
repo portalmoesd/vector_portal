@@ -193,5 +193,6 @@
   {"name":"Vietnam","code":"VN"},
   {"name":"Yemen","code":"YE"},
   {"name":"Zambia","code":"ZM"},
-  {"name":"Zimbabwe","code":"ZW"}
+  {"name":"Zimbabwe","code":"ZW"},
+  {"name":"No country","code":"XX"}
 ]

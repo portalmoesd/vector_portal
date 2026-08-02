@@ -32,11 +32,17 @@ function localizedCountryName(country) {
 }
 
 // Sort a copy of a country list alphabetically by the label the user actually
-// sees (Georgian collation in the ka locale, English otherwise).
+// sees (Georgian collation in the ka locale, English otherwise). The
+// "No country" pseudo-entry (code XX) is pinned to the top instead of being
+// buried at its alphabetical position.
 function sortedByLocalizedCountryName(list) {
   const locale = (typeof I18n !== 'undefined' && I18n.getLocale && I18n.getLocale() === 'ka') ? 'ka' : 'en';
-  return [...(list || [])].sort((a, b) =>
-    localizedCountryName(a).localeCompare(localizedCountryName(b), locale));
+  return [...(list || [])].sort((a, b) => {
+    const aNone = (a.code || '').toUpperCase() === 'XX';
+    const bNone = (b.code || '').toUpperCase() === 'XX';
+    if (aNone !== bNone) return aNone ? -1 : 1;
+    return localizedCountryName(a).localeCompare(localizedCountryName(b), locale);
+  });
 }
 
 // Users have a Latin name (full_name / fullName) and an optional Georgian-

@@ -84,6 +84,17 @@
     const selected = new Set(selectedIds || []);
     let html = '<div class="country-picker" style="max-height:300px;overflow-y:auto;border:1px solid var(--border);border-radius:8px;padding:12px;margin-top:8px;">';
 
+    // "No country" pseudo-entry (code XX) sits outside the region groups so
+    // users handling generic, non-country events can still be assigned them.
+    const noCountry = allCountries.find(c => (c.code || '').toUpperCase() === 'XX');
+    if (noCountry) {
+      html += `<label style="font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;padding:4px 0;margin-bottom:8px;">
+        <input type="checkbox" class="country-cb" data-country-id="${noCountry.id}" data-region="none"
+          ${selected.has(noCountry.id) ? 'checked' : ''} />
+        ${escapeHtml(localizedCountryName(noCountry))}
+      </label>`;
+    }
+
     for (const [region, codes] of Object.entries(REGIONS)) {
       const countriesInRegion = sortedByLocalizedCountryName(allCountries.filter(c => codes.includes(c.code)));
       if (countriesInRegion.length === 0) continue;
@@ -137,8 +148,9 @@
     container.querySelectorAll('.country-cb').forEach(cb => {
       cb.addEventListener('change', () => {
         const region = cb.dataset.region;
-        const cbs = container.querySelectorAll(`.country-cb[data-region="${region}"]`);
         const toggle = container.querySelector(`.region-toggle[data-region="${region}"]`);
+        if (!toggle) return; // standalone entries (e.g. "No country") have no region toggle
+        const cbs = container.querySelectorAll(`.country-cb[data-region="${region}"]`);
         const checkedCount = Array.from(cbs).filter(c => c.checked).length;
         toggle.checked = checkedCount === cbs.length;
         toggle.indeterminate = checkedCount > 0 && checkedCount < cbs.length;
