@@ -765,38 +765,36 @@
       }
     }
 
-    // Per-year sentences (latest + previous)
-    const yearSentence = (year, value, rank) => {
-      if (!(value > 0) || !year) return null;
+    // Per-period sentences: current period (quarterly YTD while the annual
+    // series lags, otherwise the latest full year) followed by the previous
+    // full year. Labels come precomputed per locale from statistics.js.
+    const noInv = (label) => isKa
+      ? summaryProseParagraph(D, [B(label), ` ${countryFrom} ინვესტიცია არ განხორციელდა.`])
+      : summaryProseParagraph(D, [`In `, B(label), `, no investment was conducted from ${country}.`]);
+    const periodSentence = (p) => {
+      const label = isKa ? p.labelKa : p.labelEn;
+      if (!(p.value > 0)) return noInv(label);
       if (isKa) {
         const parts = [
-          B(`${year} წელს`), ` ${countryFrom} საქართველოში განხორციელდა `,
-          B(`${fmt(value)} მლნ. აშშ დოლარის`), ` პირდაპირი უცხოური ინვესტიცია.`,
+          B(label), ` ${countryFrom} საქართველოში განხორციელდა `,
+          B(`${fmt(p.value)} მლნ. აშშ დოლარის`), ` პირდაპირი უცხოური ინვესტიცია.`,
         ];
-        if (rank) {
+        if (p.rank) {
           parts.push(` ${country} განხორციელებული პირდაპირი უცხოური ინვესტიციის მოცულობით `,
-            `${year} წელს `, B(`${gePlace(rank)} ადგილს`), ` იკავებს.`);
+            `${label} `, B(`${gePlace(p.rank)} ადგილს`), ` იკავებს.`);
         }
         return summaryProseParagraph(D, parts);
       }
       const parts = [
-        `In `, B(`${year}`), `, `, B(`${fmt(value)} mln USD`),
+        `In `, B(label), `, `, B(`${fmt(p.value)} mln USD`),
         ` of foreign direct investment came to Georgia from ${country}.`,
       ];
-      if (rank) parts.push(` ${country} ranked `, B(enOrdinal(rank)), ` by FDI volume in ${year}.`);
+      if (p.rank) parts.push(` ${country} ranked `, B(enOrdinal(p.rank)), ` by FDI volume in ${label}.`);
       return summaryProseParagraph(D, parts);
     };
-    const noInv = (year) => isKa
-      ? summaryProseParagraph(D, [B(`${year} წელს`), ` ${countryFrom} ინვესტიცია არ განხორციელდა.`])
-      : summaryProseParagraph(D, [`In `, B(`${year}`), `, no investment was conducted from ${country}.`]);
 
-    if (inv.latestYear) {
-      const s = yearSentence(inv.latestYear, inv.latestYearValue, inv.latestYearRank);
-      out.push(s || noInv(inv.latestYear));
-    }
-    if (inv.prevYear) {
-      const s = yearSentence(inv.prevYear, inv.prevYearValue, inv.prevYearRank);
-      out.push(s || noInv(inv.prevYear));
+    for (const p of (inv.summaryPeriods || [])) {
+      out.push(periodSentence(p));
     }
 
     return out;

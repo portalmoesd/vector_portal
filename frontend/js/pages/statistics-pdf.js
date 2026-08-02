@@ -1091,43 +1091,41 @@
       }
     }
 
-    // Sentence 3/4: latest + previous year
-    function yearSentence(year, value, rank) {
-      if (!(value > 0) || !year) return null;
+    // Sentences 3/4: current period (quarterly YTD while the annual series
+    // lags, otherwise the latest full year) followed by the previous full
+    // year. Labels come precomputed per locale from statistics.js.
+    function periodSentence(p) {
+      const label = isKa ? p.labelKa : p.labelEn;
+      if (!(p.value > 0)) return noInvestmentSentence(label);
       if (isKa) {
         const parts = [
-          B(`${year} წელს`), ` ${countryFrom} საქართველოში განხორციელდა `,
-          B(`${fmt(value)} მლნ. აშშ დოლარის`), ` პირდაპირი უცხოური ინვესტიცია.`,
+          B(label), ` ${countryFrom} საქართველოში განხორციელდა `,
+          B(`${fmt(p.value)} მლნ. აშშ დოლარის`), ` პირდაპირი უცხოური ინვესტიცია.`,
         ];
-        if (rank) {
+        if (p.rank) {
           parts.push(` ${country} განხორციელებული პირდაპირი უცხოური ინვესტიციის მოცულობით `,
-            `${year} წელს `, B(`${gePlace(rank)} ადგილს`), ` იკავებს.`);
+            `${label} `, B(`${gePlace(p.rank)} ადგილს`), ` იკავებს.`);
         }
         return { text: parts, ...paraStyle };
       }
       const parts = [
-        `In `, B(`${year}`), `, `, B(`${fmt(value)} mln USD`),
+        `In `, B(label), `, `, B(`${fmt(p.value)} mln USD`),
         ` of foreign direct investment came to Georgia from ${country}.`,
       ];
-      if (rank) {
-        parts.push(` ${country} ranked `, B(enOrdinal(rank)), ` by FDI volume in ${year}.`);
+      if (p.rank) {
+        parts.push(` ${country} ranked `, B(enOrdinal(p.rank)), ` by FDI volume in ${label}.`);
       }
       return { text: parts, ...paraStyle };
     }
-    function noInvestmentSentence(year) {
+    function noInvestmentSentence(label) {
       if (isKa) {
-        return { text: [B(`${year} წელს`), ` ${countryFrom} ინვესტიცია არ განხორციელდა.`], ...paraStyle };
+        return { text: [B(label), ` ${countryFrom} ინვესტიცია არ განხორციელდა.`], ...paraStyle };
       }
-      return { text: [`In `, B(`${year}`), `, no investment was conducted from ${country}.`], ...paraStyle };
+      return { text: [`In `, B(label), `, no investment was conducted from ${country}.`], ...paraStyle };
     }
 
-    if (inv.latestYear) {
-      const s3 = yearSentence(inv.latestYear, inv.latestYearValue, inv.latestYearRank);
-      nodes.push(s3 || noInvestmentSentence(inv.latestYear));
-    }
-    if (inv.prevYear) {
-      const s4 = yearSentence(inv.prevYear, inv.prevYearValue, inv.prevYearRank);
-      nodes.push(s4 || noInvestmentSentence(inv.prevYear));
+    for (const p of (inv.summaryPeriods || [])) {
+      nodes.push(periodSentence(p));
     }
 
     return nodes;
