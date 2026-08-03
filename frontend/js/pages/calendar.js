@@ -210,15 +210,21 @@
   function buildMailtoUrl(draft) {
     const to = draft.recipients.map((r) => r.email).join('; ');
     let body = draft.body || '';
+    const eventId = draft.event && draft.event.id;
     // mailto: links can't carry attachments, so when the event has files we
     // add a portal link recipients can open (after logging in) to download them.
-    if (draft.files && draft.files.length > 0 && draft.event && draft.event.id) {
-      const link = `${window.location.origin}/pages/calendar.html?event=${draft.event.id}`;
+    if (draft.files && draft.files.length > 0 && eventId) {
+      const link = `${window.location.origin}/pages/calendar.html?event=${eventId}`;
       body += `\n\n${I18n.tr('calendar.email.attachmentLine')} ${link}`;
     }
+    if (eventId) {
+      body += `\n\n${I18n.tr('calendar.email.eventLinkLine')} ${window.location.origin}/pages/calendar.html?event=${eventId}`;
+    }
     // One-click "add to calendar" link (the .ics is also downloaded locally).
-    if (draft.calendar && draft.calendar.addUrl) {
-      body += `\n\n${I18n.tr('calendar.email.calendarLine')} ${draft.calendar.addUrl}`;
+    if (draft.calendar && eventId) {
+      // Short portal link that redirects to the Outlook add-event deeplink —
+      // the full deeplink is far too long to put in a mailto body.
+      body += `\n\n${I18n.tr('calendar.email.calendarLine')} ${window.location.origin}/cal/${eventId}`;
     }
     return `mailto:${encodeURIComponent(to)}?subject=${encodeURIComponent(draft.subject || 'ახალი ღონისძიება')}&body=${encodeURIComponent(body)}`;
   }
