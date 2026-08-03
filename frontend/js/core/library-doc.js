@@ -243,7 +243,10 @@
           html2pdf().from(container).set({
             margin: [12.7, 12.7, 12.7, 12.7],
             filename: `${slug}.pdf`,
-            html2canvas: { scale: 2, useCORS: true },
+            // scrollX/scrollY pinned to 0 — html2canvas otherwise offsets the
+            // capture by the page's scroll position, so exporting from a
+            // scrolled library list pushed the content down (or off) the page.
+            html2canvas: { scale: 2, useCORS: true, scrollX: 0, scrollY: 0 },
             jsPDF: { format: 'a4', orientation: 'portrait' },
             image: { type: 'jpeg', quality: 0.98 },
           }).save();
