@@ -334,11 +334,58 @@
     return paragraphs;
   }
 
+  // ── Whitespace normalization ───────────────────────────────────────────────
+  // Browsers collapse runs of regular whitespace when rendering HTML, but Word
+  // preserves every character (xml:space="preserve") — so newlines and
+  // indentation in the stored markup showed up as a leading gap at the start
+  // of paragraphs. Mirror the browser: collapse whitespace runs inside text
+  // nodes and drop the invisible spaces at block edges. Non-breaking spaces
+  // (&nbsp;, deliberate indentation) are left untouched.
+  const BLOCK_TAGS = /^(P|DIV|BLOCKQUOTE|SECTION|ARTICLE|H[1-6]|LI|TD|TH|UL|OL|TABLE|TR|BR)$/;
+
+  // True when nothing renders between this text node and its block's edge in
+  // the given direction ('previousSibling' | 'nextSibling') — a collapsed
+  // space there would be invisible in HTML.
+  function atBlockEdge(node, dir) {
+    let cur = node;
+    while (cur) {
+      let sib = cur[dir];
+      while (sib) {
+        if (sib.nodeType === Node.TEXT_NODE) {
+          if (sib.textContent.trim() !== '') return false;
+        } else if (sib.nodeType === Node.ELEMENT_NODE) {
+          if (BLOCK_TAGS.test(sib.tagName)) return true;
+          if (sib.tagName === 'IMG' || (sib.textContent || '').trim() !== '') return false;
+        }
+        sib = sib[dir];
+      }
+      cur = cur.parentElement;
+      if (!cur || BLOCK_TAGS.test(cur.tagName)) return true;
+    }
+    return true;
+  }
+
+  function normalizeWhitespace(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    for (const n of nodes) {
+      n.textContent = n.textContent.replace(/[ \t\r\n]+/g, ' ');
+    }
+    for (const n of nodes) {
+      let t = n.textContent;
+      if (t.startsWith(' ') && atBlockEdge(n, 'previousSibling')) t = t.replace(/^ +/, '');
+      if (t.endsWith(' ') && atBlockEdge(n, 'nextSibling')) t = t.replace(/ +$/, '');
+      n.textContent = t;
+    }
+  }
+
   // ── HTML string → docx Paragraphs ─────────────────────────────────────────
 
   function htmlToParagraphs(html) {
     const wrapper = document.createElement('div');
     wrapper.innerHTML = html || '';
+    normalizeWhitespace(wrapper);
     const paras = [];
     for (const child of wrapper.childNodes) {
       if (child.nodeType === Node.TEXT_NODE) {
