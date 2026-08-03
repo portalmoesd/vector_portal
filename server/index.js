@@ -31,6 +31,25 @@ app.use('/api/templates', require('./routes/templates'));
 app.use('/api/statistics', require('./routes/statistics'));
 app.use('/api/notifications', require('./routes/notifications'));
 
+// Short add-to-calendar link used in event emails: /cal/:id redirects to the
+// Outlook web "add event" deeplink. Unauthenticated on purpose — recipients
+// click it straight from their inbox; it exposes only the event title/task
+// text, which the email already contains.
+app.get('/cal/:id', async (req, res) => {
+  try {
+    const { getEvent, buildCalendarForEvent } = require('./helpers/event-notification-draft');
+    const eventId = parseInt(req.params.id, 10);
+    if (!eventId) return res.status(404).send('Not found');
+    const event = await getEvent(require('./db'), eventId);
+    const calendar = event && buildCalendarForEvent(event);
+    if (!calendar) return res.status(404).send('Not found');
+    res.redirect(302, calendar.addUrl);
+  } catch (err) {
+    console.error('Calendar link error:', err.message);
+    res.status(500).send('Internal server error');
+  }
+});
+
 // ── Auto-migrate & seed on startup ──────────────────────────────────────────
 
 const fs = require('fs');

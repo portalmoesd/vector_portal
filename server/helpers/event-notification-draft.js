@@ -40,6 +40,26 @@ function roleLabel(role) {
   );
 }
 
+// Georgian role labels for the email body (mirrors frontend locales roles.*).
+function roleLabelKa(role) {
+  return (
+    {
+      [ROLES.ADMIN]: 'ადმინი',
+      [ROLES.PROTOCOL]: 'პროტოკოლი',
+      [ROLES.DEPUTY]: 'მოადგილე',
+      [ROLES.MINISTER]: 'მინისტრი',
+      [ROLES.SUPERVISOR]: 'ზედამხედველი',
+      [ROLES.SUPER_COLLABORATOR]: 'სუპერ-კოლაბორატორი',
+      [ROLES.COLLABORATOR]: 'კოლაბორატორი',
+      CURATOR: 'კურატორი',
+      RECEIVING_SUPER_COLLABORATOR: 'სუპერ-კოლაბორატორი',
+      RECEIVING_SUPERVISOR: 'ზედამხედველი',
+    }[role] ||
+    role ||
+    'მონაწილე'
+  );
+}
+
 function addParticipant(participants, user, sourceRole) {
   if (!user || !user.id) return;
   const existing = participants.get(Number(user.id));
@@ -70,6 +90,7 @@ async function getEvent(db, eventId) {
             e.occasion, e.created_by_id, e.created_at,
             c.name_en AS country_name,
             ds.full_name AS document_submitter_name,
+            ds.full_name_ka AS document_submitter_name_ka,
             dep.full_name AS deputy_name,
             sv.full_name AS supervisor_name
      FROM events e
@@ -270,7 +291,10 @@ function formatDeadlineDate(value) {
 }
 
 function buildEmailBody(event, sections, recipients, missingEmails) {
-  const creatorLine = `${event.document_submitter_name || 'უცნობი'} (${roleLabel(event.document_submitter_role)})`;
+  // The body is Georgian, so the creator shows their Georgian-script name
+  // (falling back to the Latin one) and a Georgian role label.
+  const creatorName = event.document_submitter_name_ka || event.document_submitter_name || 'უცნობი';
+  const creatorLine = `${creatorName} (${roleLabelKa(event.document_submitter_role)})`;
   const taskText = stripHtml(event.occasion);
   const languageLabel = LANGUAGE_LABELS[event.language] || event.language || 'არ არის მითითებული';
 
@@ -346,11 +370,18 @@ function buildCalendarForEvent(event) {
     'END:VCALENDAR',
   ].join('\r\n');
 
+  // Outlook (Microsoft 365) "add event" deeplink — the ministry's mail is
+  // Outlook, so the email's add-to-calendar link opens Outlook web compose.
+  // startdt/enddt use ISO dates; enddt stays the exclusive next day.
+  const startIso = `${parts.year}-${pad2(parts.monthIndex + 1)}-${pad2(parts.day)}`;
+  const endIso = `${endDate.getUTCFullYear()}-${pad2(endDate.getUTCMonth() + 1)}-${pad2(endDate.getUTCDate())}`;
   const addUrl =
-    'https://calendar.google.com/calendar/render?action=TEMPLATE' +
-    `&text=${encodeURIComponent(title)}` +
-    `&dates=${startYmd}/${endYmd}` +
-    (description ? `&details=${encodeURIComponent(description)}` : '');
+    'https://outlook.office.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent' +
+    '&allday=true' +
+    `&subject=${encodeURIComponent(title)}` +
+    `&startdt=${startIso}` +
+    `&enddt=${endIso}` +
+    (description ? `&body=${encodeURIComponent(description)}` : '');
 
   return { ics, filename: `event-${event.id}.ics`, addUrl };
 }
@@ -451,6 +482,8 @@ module.exports = {
   stripHtml,
   splitRecipients,
   buildEmailBody,
+  buildCalendarForEvent,
+  getEvent,
   resolveEventNotificationDraft,
   resolveEventParticipantIds,
   resolveStepUserIds,
