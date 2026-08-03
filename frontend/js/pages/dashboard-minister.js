@@ -36,7 +36,7 @@
   // Supervisor keeps the two-tab view.
   const HAS_DOCS_TAB = isMinister || isDeputy;
   // Roles that may create events from the dashboard (the collapsible create panel).
-  const CAN_CREATE_EVENT = ['DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
+  const CAN_CREATE_EVENT = ['PROTOCOL', 'DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
   const canCreateEvent = CAN_CREATE_EVENT.includes(user.role);
 
   const listEl = document.getElementById('cardList');
