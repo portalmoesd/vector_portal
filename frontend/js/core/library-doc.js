@@ -171,20 +171,68 @@
     }
   }
 
+  // ── Flag rasterizer ─────────────────────────────────────────────────────────
+  // The event-card flags (/assets/flags/xx.svg, 512×512 circular SVGs) are
+  // reused in the export headers. html2canvas and docx both want raster data,
+  // so render the SVG onto a canvas once and hand back a PNG data URL + bytes.
+  async function flagPng(countryCode, sizePx) {
+    try {
+      const code = (countryCode || '').toLowerCase();
+      if (!code) return null;
+      const res = await fetch(`/assets/flags/${code}.svg`);
+      if (!res.ok) return null;
+      const svgBlob = new Blob([await res.text()], { type: 'image/svg+xml' });
+      const url = URL.createObjectURL(svgBlob);
+      const img = new Image();
+      await new Promise((ok, fail) => { img.onload = ok; img.onerror = fail; img.src = url; });
+      const canvas = document.createElement('canvas');
+      canvas.width = sizePx;
+      canvas.height = sizePx;
+      canvas.getContext('2d').drawImage(img, 0, 0, sizePx, sizePx);
+      URL.revokeObjectURL(url);
+      const dataUrl = canvas.toDataURL('image/png');
+      const binary = atob(dataUrl.split(',')[1]);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      return { dataUrl, bytes };
+    } catch (_) {
+      return null; // header degrades gracefully without a flag
+    }
+  }
+
+  // Shared header pieces for the exports.
+  function docCountryLabel(doc) {
+    return localizedCountryName({ code: doc.countryCode, name_en: doc.countryName, name_ka: doc.countryNameKa });
+  }
+  function docDateLabel(doc) {
+    return doc.endedAt
+      ? new Date(doc.endedAt).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.')
+      : '';
+  }
+
   // ── Export PDF ─────────────────────────────────────────────────────────────
   async function exportPdf(eventId) {
     try {
       const doc = await Api.get(`/api/library/${eventId}/document`);
-      showSectionSelectModal(doc, I18n.tr('library.export.pdfTitle'), (sections) => {
-        const datePart = doc.endedAt ? ' | ' + new Date(doc.endedAt).toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }).replace(/\//g, '.') : '';
+      showSectionSelectModal(doc, I18n.tr('library.export.pdfTitle'), async (sections) => {
+        const flag = await flagPng(doc.countryCode, 128);
+        const dateLabel = docDateLabel(doc);
+        const metaLine = [docCountryLabel(doc), dateLabel].filter(Boolean).join(' · ');
+        // No container padding — the pdf page margin alone positions the
+        // content, so the text starts at the top of the printable area.
         const html = `
-          <div style="font-family: Arial, sans-serif; font-size: 11pt; padding: 20px;">
-            <p style="font-size: 13pt; font-weight: bold; margin-bottom: 4px;">${escapeHtml(doc.title)}</p>
-            <p style="color: #666; font-size: 9pt; margin-bottom: 24px;">${escapeHtml(localizedCountryName({ code: doc.countryCode, name_en: doc.countryName, name_ka: doc.countryNameKa }))}${datePart}</p>
+          <div style="font-family: Arial, sans-serif; font-size: 11pt;">
+            <div style="display:flex; align-items:center; gap:14px; padding-bottom:12px; border-bottom:2px solid #0a84ff; margin-bottom:22px;">
+              ${flag ? `<img src="${flag.dataUrl}" style="width:42px;height:42px;border-radius:50%;flex:0 0 auto;">` : ''}
+              <div>
+                <div style="font-size:15pt; font-weight:bold; line-height:1.25; margin:0;">${escapeHtml(doc.title)}</div>
+                ${metaLine ? `<div style="color:#666; font-size:9.5pt; margin-top:3px;">${escapeHtml(metaLine)}</div>` : ''}
+              </div>
+            </div>
             ${sections.map(s => `
               <p style="font-size: 12pt; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 4px;">${escapeHtml(s.title)}</p>
               <div>${stripTrackChanges(s.htmlContent || '')}</div>
-            `).join('<hr style="margin: 20px 0;">')}
+            `).join('<hr style="border:none;border-top:1px solid #e5e7eb;margin:18px 0;">')}
           </div>
         `;
 
@@ -234,9 +282,11 @@
             } catch (_) { /* comments are optional in the export */ }
             return { sectionLabel: s.title, htmlContent: s.htmlContent, comments };
           }));
+          const flag = await flagPng(doc.countryCode, 128);
           await window.GCP.exportDocx(doc.title, mapped, {
-            countryName: localizedCountryName({ code: doc.countryCode, name_en: doc.countryName, name_ka: doc.countryNameKa }),
+            countryName: docCountryLabel(doc),
             endedAt: doc.endedAt,
+            flagPng: flag ? flag.bytes : null,
           });
         } catch (err) {
           toast.error(I18n.tr('library.export.wordFail') + ' ' + err.message);

@@ -24,10 +24,11 @@
   const {
     Document, Packer, Paragraph, TextRun, HeadingLevel,
     InsertedTextRun, DeletedTextRun,
-    AlignmentType, UnderlineType,
+    AlignmentType, UnderlineType, VerticalAlign,
     convertInchesToTwip,
     Table, TableRow, TableCell, WidthType,
     CommentRangeStart, CommentRangeEnd, CommentReference,
+    BorderStyle, ImageRun,
   } = window.docx;
 
   // Word comment support requires docx >= 8 (CommentRangeStart et al.)
@@ -80,7 +81,9 @@
           fmt.underline = { type: UnderlineType.SINGLE };
         if (style.textDecoration && style.textDecoration.includes('line-through'))
           fmt.strike = true;
-        if (style.fontFamily) fmt.font = { name: style.fontFamily.split(',')[0].replace(/['\"]/g, '').trim() };
+        // Inline font-family from pasted content is deliberately ignored —
+        // the whole exported document renders in Calibri (see the document
+        // default styles in buildDocx).
         if (style.fontSize) {
           const ptMatch = style.fontSize.match(/(\d+\.?\d*)pt/);
           if (ptMatch) fmt.size = ptToHalfPt(ptMatch[1]);
@@ -394,13 +397,7 @@
 
     const children = [];
 
-    // Title — 13pt (1pt larger than section headings)
-    children.push(new Paragraph({
-      children: [new TextRun({ text: title || 'Document', bold: true, size: ptToHalfPt(13) })],
-      spacing: { after: 80 },
-    }));
-
-    // Country and approval date (two sizes smaller than body text)
+    // ── Header: [flag] title + country · date, underlined by an accent rule ──
     const metaParts = [];
     if (meta && meta.countryName) metaParts.push(meta.countryName);
     if (meta && meta.endedAt) {
@@ -410,33 +407,89 @@
       const yyyy = d.getFullYear();
       metaParts.push(dd + '.' + mm + '.' + yyyy);
     }
-    if (metaParts.length) {
-      children.push(new Paragraph({
-        children: metaParts.map((text, i) => {
-          const runs = [];
-          if (i > 0) runs.push(new TextRun({ text: '\n', size: 18 }));
-          runs.push(new TextRun({ text, size: 18 }));
-          return runs;
-        }).flat(),
-        spacing: { after: 300 },
+
+    const titlePara = new Paragraph({
+      children: [new TextRun({ text: title || 'Document', bold: true, size: ptToHalfPt(16) })],
+      spacing: { after: metaParts.length ? 60 : 0 },
+    });
+    const metaPara = metaParts.length
+      ? new Paragraph({
+          children: [new TextRun({ text: metaParts.join(' · '), size: ptToHalfPt(9.5), color: '666666' })],
+        })
+      : null;
+
+    // The country flag (event-card artwork, rasterized client-side) sits in a
+    // borderless two-cell table beside the title — Word's closest match to
+    // the portal's card header layout.
+    const flagBytes = meta && meta.flagPng;
+    if (flagBytes && ImageRun) {
+      const noBorder = { style: BorderStyle.NONE, size: 0, color: 'FFFFFF' };
+      const cellBorders = { top: noBorder, bottom: noBorder, left: noBorder, right: noBorder };
+      children.push(new Table({
+        width: { size: 100, type: WidthType.PERCENTAGE },
+        borders: {
+          top: noBorder, bottom: noBorder, left: noBorder, right: noBorder,
+          insideHorizontal: noBorder, insideVertical: noBorder,
+        },
+        rows: [new TableRow({
+          children: [
+            new TableCell({
+              borders: cellBorders,
+              width: { size: 700, type: WidthType.DXA },
+              verticalAlign: VerticalAlign ? VerticalAlign.CENTER : undefined,
+              children: [new Paragraph({
+                children: [new ImageRun({ data: flagBytes, transformation: { width: 40, height: 40 } })],
+              })],
+            }),
+            new TableCell({
+              borders: cellBorders,
+              verticalAlign: VerticalAlign ? VerticalAlign.CENTER : undefined,
+              children: [titlePara, ...(metaPara ? [metaPara] : [])],
+            }),
+          ],
+        })],
       }));
+    } else {
+      children.push(titlePara);
+      if (metaPara) children.push(metaPara);
     }
 
+    // Accent rule closing the header block.
+    children.push(new Paragraph({
+      spacing: { before: 120, after: 240 },
+      border: { bottom: { style: BorderStyle.SINGLE, size: 12, color: '0A84FF' } },
+    }));
+
     // Sections
-    for (const sec of sections) {
+    sections.forEach((sec, idx) => {
+      // Light grey divider between sections.
+      if (idx > 0) {
+        children.push(new Paragraph({
+          spacing: { before: 240, after: 240 },
+          border: { bottom: { style: BorderStyle.SINGLE, size: 4, color: 'D1D5DB' } },
+        }));
+      }
+
       // Section heading — 12pt (1pt larger than 11pt body text)
       children.push(new Paragraph({
         children: [new TextRun({ text: sec.sectionLabel || 'Section', bold: true, size: ptToHalfPt(12) })],
-        spacing: { before: 400, after: 200 },
+        spacing: { before: idx > 0 ? 0 : 200, after: 200 },
       }));
 
       // Section content
       const paras = htmlToParagraphs(sec.htmlContent);
       children.push(...paras);
-    }
+    });
 
     const doc = new Document({
       ...(docComments.length ? { comments: { children: docComments } } : {}),
+      // Everything renders in Calibri, 11pt body default; explicit run sizes
+      // (title, headings, meta) still apply on top.
+      styles: {
+        default: {
+          document: { run: { font: 'Calibri', size: ptToHalfPt(11) } },
+        },
+      },
       numbering: {
         config: [{
           reference: 'default-numbering',
