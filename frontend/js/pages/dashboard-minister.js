@@ -31,6 +31,11 @@
   const OWNER_ROLES = ['MINISTER', 'PROTOCOL', 'DEPUTY', 'SUPERVISOR'];
   const isOwner = OWNER_ROLES.includes(user.role);
   const isDeputy = user.role === 'DEPUTY';
+  const isProtocol = user.role === 'PROTOCOL';
+  // Whose calendar this dashboard shows. Protocol manages the Minister's page,
+  // so its meetings/calendar mirror the Minister's events, not Protocol's own;
+  // resolved to the Minister's user id during the initial load.
+  let ownerId = user.id;
   // Minister and Deputies get a "Ready Documents" tab listing every completed
   // document ministry-wide (the API widens /api/library for these roles);
   // Supervisor keeps the two-tab view.
@@ -157,15 +162,21 @@
   // (the calendar must still render even if a list fails to load).
   let completed = [];
   let upcoming = [];
-  const [libRes, evRes] = await Promise.allSettled([
+  const [libRes, evRes, ministerRes] = await Promise.allSettled([
     Api.get('/api/library'),
     Api.get('/api/events'),
+    isProtocol ? Api.get('/api/admin/minister') : Promise.resolve(null),
   ]);
   // Tag each item with readiness so cards/detail can render per-item (the
   // meeting list mixes ready + in-preparation events).
   if (libRes.status === 'fulfilled') completed = (libRes.value || []).map(d => ({ ...d, _ready: true }));
   // Events still being prepared (not yet completed/archived).
   if (evRes.status === 'fulfilled') upcoming = (evRes.value || []).filter(e => e.isActive).map(d => ({ ...d, _ready: false }));
+  // Protocol mirrors the Minister's calendar: ownership is judged against the
+  // Minister's id. Falls back to Protocol's own id when no Minister exists.
+  if (ministerRes.status === 'fulfilled' && ministerRes.value && ministerRes.value.id) {
+    ownerId = ministerRes.value.id;
+  }
   if (libRes.status === 'rejected' && evRes.status === 'rejected') {
     listEl.innerHTML = `<div class="msg msg-error">${escapeHtml(libRes.reason?.message || 'Failed to load')}</div>`;
   }
@@ -259,7 +270,7 @@
   window.addEventListener('resize', positionThumb);
 
   // ── Helpers ────────────────────────────────────────────────────────────────
-  function isOwned(item) { return item.documentSubmitterId === user.id; }
+  function isOwned(item) { return item.documentSubmitterId === ownerId; }
 
   function itemsForMode(m) {
     switch (m) {
