@@ -1,0 +1,39 @@
+/* ─── Country Comparison Page ────────────────────────────────────────────── */
+
+/* Period selects sit side by side next to the country pickers. */
+.cmp-period-group {
+  margin-bottom: 0;
+}
+
+.cmp-period-row {
+  display: flex;
+  gap: 8px;
+}
+
+.cmp-select {
+  min-width: 130px;
+  max-width: 180px;
+}
+
+.cmp-select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Full-width line-chart cards: cap the height so the responsive canvas
+   doesn't grow into a huge square on wide screens. */
+.cmp-chart-wrap {
+  position: relative;
+  width: 100%;
+  height: 320px;
+}
+
+.cmp-chart-wrap canvas {
+  max-height: 320px;
+}
+
+@media (max-width: 700px) {
+  .cmp-chart-wrap {
+    height: 240px;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vector Portal — Country Comparison</title>
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/statistics.css" />
+  <link rel="stylesheet" href="/css/country-comparison.css" />
+  <link rel="stylesheet" href="/css/georgian-fonts.css" />
+  <link rel="stylesheet" href="/css/apple.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar"></aside>
+    <main class="main">
+      <div class="topbar">
+        <div class="page-title" data-i18n="nav.countryComparison">Country Comparison</div>
+      </div>
+
+      <!-- Controls: two countries + period + language + generate -->
+      <div class="card stat-controls">
+        <div class="stat-controls__row">
+          <div class="form-group stat-controls__country">
+            <label class="form-label" id="country1Label">Country 1</label>
+            <div class="stat-search-wrap">
+              <input type="text" id="country1Search" class="form-input" placeholder="Search country..." autocomplete="off" />
+              <div id="country1Dropdown" class="stat-dropdown hidden"></div>
+            </div>
+            <input type="hidden" id="country1Value" />
+          </div>
+          <div class="form-group stat-controls__country">
+            <label class="form-label" id="country2Label">Country 2</label>
+            <div class="stat-search-wrap">
+              <input type="text" id="country2Search" class="form-input" placeholder="Search country..." autocomplete="off" />
+              <div id="country2Dropdown" class="stat-dropdown hidden"></div>
+            </div>
+            <input type="hidden" id="country2Value" />
+          </div>
+          <div class="form-group cmp-period-group">
+            <label class="form-label" id="periodLabelEl">Period</label>
+            <div class="cmp-period-row">
+              <select id="cmpPeriodMode" class="form-input cmp-select"></select>
+              <select id="cmpMonth" class="form-input cmp-select" disabled></select>
+            </div>
+          </div>
+          <div class="form-group stat-controls__btn-wrap">
+            <label class="form-label">&nbsp;</label>
+            <div class="stat-controls__buttons">
+              <div class="stat-lang-toggle" id="reportLangToggle" role="radiogroup" aria-label="Report language">
+                <button type="button" class="stat-lang-toggle__btn" data-report-lang="ka">ქართ</button>
+                <button type="button" class="stat-lang-toggle__btn" data-report-lang="en">EN</button>
+              </div>
+              <button class="btn btn-primary" id="generateBtn" disabled data-i18n="statistics.generate">Generate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="cmpLoading" class="stat-report__loading hidden">
+        <div class="stat-spinner"></div>
+        <span class="stat-loading-label">Loading...</span>
+      </div>
+
+      <div id="cmpSections" class="hidden">
+
+        <!-- Summary overview -->
+        <div id="cmpSummary" class="card stat-summary hidden"></div>
+
+        <!-- Turnover line chart (full width) -->
+        <div class="card cmp-chart-card">
+          <div id="turnoverChartHeader" class="stat-report__header"></div>
+          <div class="cmp-chart-wrap"><canvas id="cmpTurnoverChart"></canvas></div>
+        </div>
+
+        <!-- Export section -->
+        <div class="card cmp-chart-card">
+          <div id="exportChartHeader" class="stat-report__header"></div>
+          <div class="cmp-chart-wrap"><canvas id="cmpExportChart"></canvas></div>
+        </div>
+        <div class="stat-charts-row">
+          <div class="card stat-chart-card">
+            <div id="exportHeader1" class="stat-report__header"></div>
+            <div id="exportTable1" class="table-wrap"></div>
+          </div>
+          <div class="card stat-chart-card">
+            <div id="exportHeader2" class="stat-report__header"></div>
+            <div id="exportTable2" class="table-wrap"></div>
+          </div>
+        </div>
+
+        <!-- Import section -->
+        <div class="card cmp-chart-card">
+          <div id="importChartHeader" class="stat-report__header"></div>
+          <div class="cmp-chart-wrap"><canvas id="cmpImportChart"></canvas></div>
+        </div>
+        <div class="stat-charts-row">
+          <div class="card stat-chart-card">
+            <div id="importHeader1" class="stat-report__header"></div>
+            <div id="importTable1" class="table-wrap"></div>
+          </div>
+          <div class="card stat-chart-card">
+            <div id="importHeader2" class="stat-report__header"></div>
+            <div id="importTable2" class="table-wrap"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <script src="/js/core/config.js"></script>
+  <script src="/js/core/api.js"></script>
+  <script src="/js/core/i18n.js"></script>
+  <script src="/js/core/utils.js"></script>
+  <script src="/js/core/app.js"></script>
+  <script src="/js/pages/country-comparison.js"></script>
+</body>
+</html>
