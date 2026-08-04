@@ -56,6 +56,12 @@ const App = {
       }
     }
 
+    // Country Comparison is an admin-only surface for now.
+    if (user.role !== 'ADMIN' && window.location.pathname.endsWith('/pages/country-comparison.html')) {
+      window.location.href = dashboardUrl(user.role);
+      return;
+    }
+
     await I18n.init();
 
     // The cached `user` in localStorage is whatever the login response held at
@@ -102,6 +108,7 @@ const App = {
       const l = (label || '').toLowerCase();
       if (l.includes('calendar')) return ICO.calendar;
       if (l.includes('library')) return ICO.library;
+      if (l.includes('comparison')) return ICO.statistics;
       if (l.includes('statistic')) return ICO.statistics;
       if (l.includes('admin')) return ICO.admin;
       return ICO.dashboard;
@@ -136,6 +143,7 @@ const App = {
       }
       navItems.push({ href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' });
       if (user.role === 'ADMIN') {
+        navItems.push({ href: '/pages/country-comparison.html', label: 'Country Comparison', i18n: 'nav.countryComparison', match: 'country-comparison' });
         navItems.push({ href: '/pages/admin.html', label: 'Admin Panel', i18n: 'nav.admin', match: 'admin' });
       }
     }
