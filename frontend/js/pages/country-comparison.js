@@ -51,6 +51,18 @@
   const importTable1 = document.getElementById('importTable1');
   const importHeader2 = document.getElementById('importHeader2');
   const importTable2 = document.getElementById('importTable2');
+  const fdiSection = document.getElementById('fdiSection');
+  const fdiChartHeader = document.getElementById('fdiChartHeader');
+  const fdiCanvas = document.getElementById('cmpFdiChart');
+  const fdiHeader1 = document.getElementById('fdiHeader1');
+  const fdiTable1 = document.getElementById('fdiTable1');
+  const fdiHeader2 = document.getElementById('fdiHeader2');
+  const fdiTable2 = document.getElementById('fdiTable2');
+  const fdiSectorsRow = document.getElementById('fdiSectorsRow');
+  const fdiSectorsHeader1 = document.getElementById('fdiSectorsHeader1');
+  const fdiSectorsTable1 = document.getElementById('fdiSectorsTable1');
+  const fdiSectorsHeader2 = document.getElementById('fdiSectorsHeader2');
+  const fdiSectorsTable2 = document.getElementById('fdiSectorsTable2');
   const reportLangToggle = document.getElementById('reportLangToggle');
 
   // ── State ──────────────────────────────────────────────────────────────
@@ -61,7 +73,7 @@
   let useProxy = false;
   let lastResult = null; // everything needed to re-render on language toggle
   let generating = false;
-  const chartInstances = { turnover: null, export: null, import: null };
+  const chartInstances = { turnover: null, export: null, import: null, fdi: null };
 
   // Same per-page report language convention (and persisted key) as the
   // statistics page — independent from the global site locale.
@@ -815,6 +827,103 @@
     return `In ${part} ${chosen.year}`;
   }
 
+  // ── FDI (investments) helpers ──────────────────────────────────────────
+  // FDI data is annual (thousand USD, keyed by the same country codes as
+  // the trade classificatory) plus quarterly YTD entries for years after
+  // the last closed annual year. The FDI section follows the trade charts'
+  // year window; month selection is ignored (no sub-annual history exists).
+
+  const ROMAN_Q = ['', 'I', 'II', 'III', 'IV'];
+
+  // Map the trade window's years onto FDI data points for one country.
+  // Rank = position among countries with positive FDI in that period;
+  // share = country value / grand total (adapted from statistics.js:2301).
+  function buildFdiPoints(fdiJson, countryCode, points) {
+    const allYears = fdiJson.years || [];
+    const lastAnnual = allYears[allYears.length - 1];
+    const countryData = fdiJson.countries[countryCode] || {};
+    const totals = fdiJson.totals || {};
+
+    function rankAndShare(year, ownVal) {
+      const entries = [];
+      for (const [code, data] of Object.entries(fdiJson.countries)) {
+        const v = (data[year] || 0) / 1000;
+        if (v > 0) entries.push({ code, v });
+      }
+      entries.sort((a, b) => b.v - a.v);
+      const idx = entries.findIndex(e => e.code === String(countryCode));
+      const rank = idx >= 0 ? idx + 1 : null;
+      const totalMln = (totals[year] || 0) / 1000;
+      const share = totalMln > 0 ? (ownVal / totalMln) * 100 : null;
+      return { rank, share };
+    }
+
+    const out = [];
+    const seen = new Set();
+    for (const p of points) {
+      if (seen.has(p.year)) continue;
+      seen.add(p.year);
+      if (allYears.includes(p.year)) {
+        const val = (countryData[p.year] || 0) / 1000;
+        const prev = (countryData[p.year - 1] || 0) / 1000;
+        const rs = val > 0 ? rankAndShare(p.year, val) : { rank: null, share: null };
+        out.push({ year: p.year, quarterInfo: null, valueMln: val, prevMln: prev, rank: rs.rank, share: rs.share });
+      } else if (p.year > lastAnnual) {
+        const q = (fdiJson.quarters || []).find(x => x.year === p.year);
+        if (!q) continue; // year beyond published FDI data — drop the point
+        const qs = q.quarters || [q.quarter];
+        const val = (q.countries[countryCode] || 0) / 1000;
+        const prev = ((q.prev && q.prev.countries[countryCode]) || 0) / 1000;
+        let rank = null, share = null;
+        if (val > 0) {
+          const entries = Object.entries(q.countries)
+            .map(([code, v]) => ({ code, v }))
+            .filter(e => e.v > 0)
+            .sort((a, b) => b.v - a.v);
+          const idx = entries.findIndex(e => e.code === String(countryCode));
+          rank = idx >= 0 ? idx + 1 : null;
+          const totalMln = (q.total || 0) / 1000;
+          share = totalMln > 0 ? (val / totalMln) * 100 : null;
+        }
+        out.push({
+          year: p.year,
+          quarterInfo: { quarters: qs, preliminary: !!q.preliminary },
+          valueMln: val, prevMln: prev, rank, share,
+        });
+      }
+    }
+    return out;
+  }
+
+  // "2024", or "2026 I კვ*" / "2026 Q1*" for a quarterly YTD point
+  // (label style from statistics.js:2329-2340).
+  function fdiPointLabel(p, isKa) {
+    if (!p.quarterInfo) return String(p.year);
+    const qs = p.quarterInfo.quarters;
+    const star = p.quarterInfo.preliminary ? '*' : '';
+    if (isKa) {
+      const roman = qs.length > 1 ? `${ROMAN_Q[qs[0]]}-${ROMAN_Q[qs[qs.length - 1]]}` : ROMAN_Q[qs[0]];
+      return `${p.year} ${roman} კვ${star}`;
+    }
+    const range = qs.length > 1 ? `${qs[0]}-Q${qs[qs.length - 1]}` : `${qs[0]}`;
+    return `${p.year} Q${range}${star}`;
+  }
+
+  // Prose form of one FDI point's period, e.g. "2024 წელს" / "In 2024",
+  // "2026 წლის I კვარტალში" / "In 2026 Q1".
+  function fdiPeriodProse(p, isKa) {
+    if (!p.quarterInfo) {
+      return isKa ? `${p.year} წელს` : `In ${p.year}`;
+    }
+    const qs = p.quarterInfo.quarters;
+    if (isKa) {
+      const roman = qs.length > 1 ? `${ROMAN_Q[qs[0]]}-${ROMAN_Q[qs[qs.length - 1]]}` : ROMAN_Q[qs[0]];
+      return `${p.year} წლის ${roman} ${qs.length > 1 ? 'კვარტლებში' : 'კვარტალში'}`;
+    }
+    const range = qs.length > 1 ? `Q${qs[0]}-Q${qs[qs.length - 1]}` : `Q${qs[0]}`;
+    return `In ${p.year} ${range}`;
+  }
+
   // ── Generate ───────────────────────────────────────────────────────────
 
   generateBtn.addEventListener('click', () => {
@@ -868,6 +977,7 @@
         exp1Prev, imp1Prev, exp2Prev, imp2Prev,
         expHs1, expHs1Prev, reexHs1, impHs1, impHs1Prev,
         expHs2, expHs2Prev, reexHs2, impHs2, impHs2Prev,
+        fdiJson, fdiSectorsJson,
       ] = await Promise.all([
         Promise.all(points.map(p => totalFor(10, p, c1))),
         Promise.all(points.map(p => totalFor(11, p, c1))),
@@ -885,10 +995,46 @@
         fetchAllTradeData(13, chosenYearsArr, chosenMonthsArr, c2),
         fetchAllTradeData(11, chosenYearsArr, chosenMonthsArr, c2),
         prevPeriod ? fetchAllTradeData(11, prevYearsArr, prevMonthsArr, c2) : Promise.resolve([]),
+        // FDI is best-effort: a failure hides the investments section but
+        // must not fail the trade report.
+        fetch(`${PROXY_API}/fdi`).then(r => r.json()).catch(() => null),
+        fetch(`${PROXY_API}/fdi-sectors`).then(r => r.json()).catch(() => null),
       ]);
 
       const toMln = arr => arr.map(v => v / 1000);
       const chosenIdx = points.indexOf(chosen);
+
+      let fdi = { available: false };
+      if (fdiJson && fdiJson.success) {
+        fdi = {
+          available: true,
+          points1: buildFdiPoints(fdiJson, c1, points),
+          points2: buildFdiPoints(fdiJson, c2, points),
+        };
+      }
+
+      // Sector breakdown exists only from ~2020 on (admin-uploaded file):
+      // keep the period columns that fall inside the chosen year window and
+      // hide the tables entirely when nothing overlaps.
+      let fdiSectors = { available: false };
+      if (fdiSectorsJson && fdiSectorsJson.success && !fdiSectorsJson.empty) {
+        const windowYears = points.map(p => p.year);
+        const minY = Math.min(...windowYears);
+        const maxY = Math.max(...windowYears);
+        const labels = (fdiSectorsJson.years || []).filter(l => {
+          const m = String(l).match(/(19|20)\d{2}/);
+          return m && Number(m[0]) >= minY && Number(m[0]) <= maxY;
+        });
+        if (labels.length) {
+          fdiSectors = {
+            available: true,
+            labels,
+            sectorNameMap: fdiSectorsJson.sectorNameMap || {},
+            c1: (fdiSectorsJson.countries && fdiSectorsJson.countries[String(c1)]) || null,
+            c2: (fdiSectorsJson.countries && fdiSectorsJson.countries[String(c2)]) || null,
+          };
+        }
+      }
 
       lastResult = {
         country1: selectedCountry1,
@@ -917,6 +1063,8 @@
           import1: buildProductList(impHs1, impHs1Prev, null),
           import2: buildProductList(impHs2, impHs2Prev, null),
         },
+        fdi,
+        fdiSectors,
       };
 
       renderComparison();
@@ -978,9 +1126,165 @@
     renderCmpSectionHeader(importHeader2, name2, 'import', periodText);
     renderProductTable(importTable2, r.products.import2, periodText, false, changeAvailable);
 
+    renderInvestments(name1, name2, isKa);
+
     renderComparisonSummary();
 
     cmpSections.classList.remove('hidden');
+  }
+
+  // ── Investments (FDI) render ───────────────────────────────────────────
+
+  function renderInvestments(name1, name2, isKa) {
+    const r = lastResult;
+    const f = r.fdi;
+    if (!f || !f.available || !f.points1.length) {
+      fdiSection.classList.add('hidden');
+      return;
+    }
+    fdiSection.classList.remove('hidden');
+
+    const labels = f.points1.map(p => fdiPointLabel(p, isKa));
+    renderLineChart('fdi', fdiChartHeader, fdiCanvas,
+      isKa ? 'პირდაპირი უცხოური ინვესტიციები, მლნ. $' : 'FDI, mln $',
+      labels, f.points1.map(p => p.valueMln), f.points2.map(p => p.valueMln), name1, name2);
+
+    renderCmpFdiHeader(fdiHeader1, name1, isKa);
+    renderCmpFdiTable(fdiTable1, f.points1, isKa);
+    renderCmpFdiHeader(fdiHeader2, name2, isKa);
+    renderCmpFdiTable(fdiTable2, f.points2, isKa);
+
+    const s = r.fdiSectors;
+    if (s && s.available && (s.c1 || s.c2)) {
+      fdiSectorsRow.classList.remove('hidden');
+      renderCmpFdiSectors(fdiSectorsHeader1, fdiSectorsTable1, s, s.c1, name1, isKa);
+      renderCmpFdiSectors(fdiSectorsHeader2, fdiSectorsTable2, s, s.c2, name2, isKa);
+    } else {
+      fdiSectorsRow.classList.add('hidden');
+    }
+  }
+
+  function renderCmpFdiHeader(el, countryName, isKa) {
+    const t = `${countryName} - ${isKa ? 'პირდაპირი უცხოური ინვესტიციები' : 'Foreign Direct Investment'}`;
+    el.innerHTML = `<h3 class="stat-report__title">${escapeHtml(t)}</h3>`;
+  }
+
+  // Copied from statistics.js:2732 (renderFdiTable), parameterised: rows
+  // come from buildFdiPoints and the period label is locale-built.
+  function renderCmpFdiTable(el, points, isKa) {
+    const data = [...points].reverse();
+    const hYear = isKa ? 'წელი' : 'Year';
+    const hRank = isKa ? 'ადგილი' : 'Rank';
+    const hValue = isKa ? 'მოცულობა, მლნ. $' : 'Volume, mln $';
+    const hChange = isKa ? 'ცვლილება, %' : 'Change, %';
+    const hShare = isKa ? 'წილი, %' : 'Share, %';
+
+    const showRank = data.some(p => p.valueMln > 0 && p.rank);
+
+    let html = `<table class="stat-table">
+      <thead>
+        <tr>
+          <th>${hYear}</th>
+          ${showRank ? `<th class="stat-col-change">${hRank}</th>` : ''}
+          <th class="stat-col-value">${hValue}</th>
+          <th class="stat-col-change">${hChange}</th>
+          <th class="stat-col-change">${hShare}</th>
+        </tr>
+      </thead>
+      <tbody>`;
+
+    for (const p of data) {
+      const isCurNeg = !(p.valueMln > 0);
+      const isPrevNeg = !(p.prevMln > 0);
+      const valueCell = isCurNeg ? '-' : formatMln(p.valueMln);
+      let changeCell = '-';
+      let changeClass = '';
+      if (!isCurNeg && !isPrevNeg) {
+        const pct = ((p.valueMln - p.prevMln) / p.prevMln) * 100;
+        changeClass = pct > 0 ? 'stat-positive' : (pct < 0 ? 'stat-negative' : '');
+        const sign = pct > 0 ? '+' : '';
+        changeCell = `${sign}${formatChangePct(pct)}`;
+      }
+      const rankCell = (!isCurNeg && p.rank) ? String(p.rank) : '-';
+      const shareCell = (!isCurNeg && p.share != null) ? `${(Math.round(p.share * 10) / 10).toFixed(1)}%` : '-';
+      html += `
+        <tr>
+          <td>${escapeHtml(fdiPointLabel(p, isKa))}</td>
+          ${showRank ? `<td class="stat-col-change">${rankCell}</td>` : ''}
+          <td class="stat-col-value">${valueCell}</td>
+          <td class="stat-col-change ${changeClass}">${changeCell}</td>
+          <td class="stat-col-change">${shareCell}</td>
+        </tr>`;
+    }
+
+    html += '</tbody></table>';
+    el.innerHTML = html;
+  }
+
+  // Copied from statistics.js:2459 (renderFdiSectorsTable), parameterised
+  // for one of the two countries and the window-filtered period labels.
+  function renderCmpFdiSectors(headerEl, tableEl, state, countryState, countryName, isKa) {
+    const yrRange = state.labels.length > 1
+      ? `${state.labels[0]}–${state.labels[state.labels.length - 1]}`
+      : `${state.labels[0]}`;
+    const title = isKa
+      ? `${countryName} - ინვესტიციები სექტორების მიხედვით, ${yrRange}`
+      : `${countryName} - FDI by Sector, ${yrRange}`;
+    headerEl.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3><div style="font-size:0.85rem;color:var(--text-secondary);">${isKa ? 'მლნ. აშშ დოლარი' : 'mln USD'}</div>`;
+
+    if (!countryState) {
+      tableEl.innerHTML = `<div class="empty-state"><p>${isKa ? 'მონაცემები ვერ მოიძებნა' : 'No data found'}</p></div>`;
+      return;
+    }
+
+    const fmt = (v) => {
+      if (v === null || v === undefined || v === 0) return '-';
+      const sign = v < 0 ? '-' : '';
+      const abs = Math.abs(v);
+      const str = abs >= 100 ? abs.toFixed(1) : abs.toFixed(2);
+      return sign + str.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    };
+    const cellCls = (v) => (v === null || v === undefined || v === 0) ? '' : (v < 0 ? 'stat-negative' : '');
+
+    const sectorHeader = isKa ? 'სექტორი' : 'Sector';
+    const totalLabel = isKa ? 'სულ' : 'Total';
+    const labels = state.labels;
+
+    let html = `<table class="stat-table">
+      <thead>
+        <tr>
+          <th>${sectorHeader}</th>
+          ${labels.map(y => `<th class="stat-col-value">${escapeHtml(String(y))}</th>`).join('')}
+        </tr>
+      </thead>
+      <tbody>`;
+
+    html += `<tr><td style="font-weight:700;">${totalLabel}</td>`;
+    for (const y of labels) {
+      const v = countryState.totals ? countryState.totals[y] : null;
+      html += `<td class="stat-col-value ${cellCls(v)}" style="font-weight:700;">${fmt(v)}</td>`;
+    }
+    html += `</tr>`;
+
+    const sectorNames = Object.keys(countryState.sectors || {});
+    const sortLabel = labels[labels.length - 1];
+    sectorNames.sort((a, b) => {
+      const va = (countryState.sectors[a] && countryState.sectors[a][sortLabel]) || 0;
+      const vb = (countryState.sectors[b] && countryState.sectors[b][sortLabel]) || 0;
+      return vb - va;
+    });
+    for (const sector of sectorNames) {
+      const vals = countryState.sectors[sector] || {};
+      const displayName = isKa ? sector : (state.sectorNameMap[sector] || sector);
+      html += `<tr><td>${escapeHtml(displayName)}</td>`;
+      for (const y of labels) {
+        const v = vals[y];
+        html += `<td class="stat-col-value ${cellCls(v)}">${fmt(v)}</td>`;
+      }
+      html += `</tr>`;
+    }
+    html += `</tbody></table>`;
+    tableEl.innerHTML = html;
   }
 
   // ── Line charts ────────────────────────────────────────────────────────
@@ -1097,6 +1401,7 @@
         turnover: isKa ? 'ბრუნვა' : 'turnover',
         export: isKa ? 'ექსპორტი' : 'exports',
         import: isKa ? 'იმპორტი' : 'imports',
+        fdi: isKa ? 'ინვესტიციები' : 'FDI',
       }[metricKey];
       const [bigName, big, smallName, small, bigGen, smallGen] = v1 >= v2
         ? [name1, v1, name2, v2, g1.of, g2.of]
@@ -1104,7 +1409,7 @@
       if (small < INSIGNIFICANT_MLN) {
         return isKa
           ? ` ${escapeHtml(smallGen)} შემთხვევაში ${subject} უმნიშვნელოა.`
-          : ` For ${escapeHtml(smallName)}, ${subject} ${metricKey === 'turnover' ? 'was' : 'were'} negligible.`;
+          : ` For ${escapeHtml(smallName)}, ${subject} ${metricKey === 'export' || metricKey === 'import' ? 'were' : 'was'} negligible.`;
       }
       const ratio = big / small;
       if (Math.abs(v1 - v2) / Math.max(v1, v2) <= 0.01) {
@@ -1159,6 +1464,52 @@
         ? `${prose} იმპორტმა ${escapeHtml(g1.from)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1)}, ხოლო ${escapeHtml(g2.from)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2)}.`
         : `${prose}, Georgia's imports from ${escapeHtml(name1)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1)}, while imports from ${escapeHtml(name2)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2)}.`
     }${compareSentence('import', m.import.v1, m.import.v2)}</p>`);
+
+    // Investments — based on the FDI point for the chosen year (annual when
+    // closed, quarterly YTD for the current year, else the latest point in
+    // the window). Skipped entirely when the FDI fetch failed.
+    if (r.fdi && r.fdi.available && r.fdi.points1.length) {
+      const pts1 = r.fdi.points1;
+      const pts2 = r.fdi.points2;
+      let idx = pts1.findIndex(p => p.year === r.chosen.year);
+      if (idx < 0) idx = pts1.length - 1;
+      const f1 = pts1[idx];
+      const f2 = pts2[idx];
+      const fdiProse = fdiPeriodProse(f1, isKa);
+
+      // "(+12%, rank 5)" — change only when the prior year had investment.
+      function fdiExtras(p) {
+        const parts = [];
+        if (p.prevMln > 0 && p.valueMln > 0) {
+          const pct = calcChange(p.valueMln, p.prevMln);
+          parts.push(`${pct > 0 ? '+' : ''}${formatChangePct(pct)}`);
+        }
+        if (p.valueMln > 0 && p.rank) {
+          parts.push(isKa ? `ადგილი: ${p.rank}` : `rank ${p.rank}`);
+        }
+        return parts.length ? ` (${parts.join(', ')})` : '';
+      }
+
+      // Per-country clause; negative/zero FDI reads as "no investment".
+      function fdiFragment(g, name, p) {
+        if (!(p.valueMln > 0)) {
+          return isKa
+            ? `${escapeHtml(g.from)} ინვესტიცია არ ფიქსირდება`
+            : `no investment was recorded from ${escapeHtml(name)}`;
+        }
+        return isKa
+          ? `${escapeHtml(g.from)} შემოსულმა ინვესტიციებმა შეადგინა ${formatMln2(p.valueMln)} ${mln}${fdiExtras(p)}`
+          : `FDI from ${escapeHtml(name)} amounted to ${formatMln2(p.valueMln)} ${mln}${fdiExtras(p)}`;
+      }
+
+      lines.push('<hr />');
+      lines.push(`<h4>${isKa ? 'ინვესტიციები' : 'Investments'}</h4>`);
+      lines.push(`<p>${
+        isKa
+          ? `${fdiProse} ${fdiFragment(g1, name1, f1)}, ხოლო ${fdiFragment(g2, name2, f2)}.`
+          : `${fdiProse}, ${fdiFragment(g1, name1, f1)}, while ${fdiFragment(g2, name2, f2)}.`
+      }${(f1.valueMln > 0 && f2.valueMln > 0) ? compareSentence('fdi', f1.valueMln, f2.valueMln) : ''}</p>`);
+    }
 
     cmpSummaryEl.innerHTML = lines.join('');
     cmpSummaryEl.classList.remove('hidden');
