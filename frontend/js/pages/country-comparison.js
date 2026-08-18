@@ -1140,12 +1140,38 @@
       const prevYearsArr = prevPeriod ? [prevPeriod.year] : null;
       const prevMonthsArr = prevPeriod && prevPeriod.months ? prevPeriod.months : undefined;
 
+      // Prior-period totals needed for the charts' per-point change labels:
+      // the year before the window start (the first point has no in-chart
+      // predecessor) and the same-months window a year before a YTD point
+      // (a YTD point can't be compared against the full prior year).
+      const firstPoint = points[0];
+      const chainPrevPeriod = firstPoint.year - 1 >= MIN_YEAR
+        ? { year: firstPoint.year - 1, months: firstPoint.months }
+        : null;
+      const ytdPoint = points.find(p => p.isYtd);
+      const ytdPrevPeriod = ytdPoint ? { year: ytdPoint.year - 1, months: ytdPoint.months } : null;
+      const chainOrNull = (flow, cid) => chainPrevPeriod ? totalFor(flow, chainPrevPeriod, cid) : Promise.resolve(null);
+      const ytdOrNull = (flow, cid) => ytdPrevPeriod ? totalFor(flow, ytdPrevPeriod, cid) : Promise.resolve(null);
+
+      // Country ranking for the chosen period (rank among all partner
+      // countries, from the backend's cached all-country computation).
+      // Best-effort: on failure the summary just omits the rank clauses.
+      const rankingMonths = chosen.months || Array.from({ length: 12 }, (_, i) => i + 1);
+      const rankingFor = (cid) => fetch(`${PROXY_API}/country-ranking`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ year: chosen.year, months: rankingMonths, countryId: cid }),
+      }).then(r => r.json()).catch(() => null);
+
       const [
         exp1Series, imp1Series, exp2Series, imp2Series,
         exp1Prev, imp1Prev, exp2Prev, imp2Prev,
         expHs1, expHs1Prev, reexHs1, impHs1, impHs1Prev,
         expHs2, expHs2Prev, reexHs2, impHs2, impHs2Prev,
         fdiJson, fdiSectorsJson, tourismJson,
+        chainPrevExp1, chainPrevImp1, chainPrevExp2, chainPrevImp2,
+        ytdPrevExp1, ytdPrevImp1, ytdPrevExp2, ytdPrevImp2,
+        rankingJson1, rankingJson2,
       ] = await Promise.all([
         Promise.all(points.map(p => totalFor(10, p, c1))),
         Promise.all(points.map(p => totalFor(11, p, c1))),
@@ -1168,6 +1194,9 @@
         fetch(`${PROXY_API}/fdi`).then(r => r.json()).catch(() => null),
         fetch(`${PROXY_API}/fdi-sectors`).then(r => r.json()).catch(() => null),
         fetch(`${PROXY_API}/tourism`).then(r => r.json()).catch(() => null),
+        chainOrNull(10, c1), chainOrNull(11, c1), chainOrNull(10, c2), chainOrNull(11, c2),
+        ytdOrNull(10, c1), ytdOrNull(11, c1), ytdOrNull(10, c2), ytdOrNull(11, c2),
+        rankingFor(c1), rankingFor(c2),
       ]);
 
       const toMln = arr => arr.map(v => v / 1000);
@@ -1250,6 +1279,18 @@
         fdi,
         fdiSectors,
         tourism,
+        chainPrev: chainPrevPeriod ? {
+          exp1: chainPrevExp1 / 1000, imp1: chainPrevImp1 / 1000,
+          exp2: chainPrevExp2 / 1000, imp2: chainPrevImp2 / 1000,
+        } : null,
+        ytdPrev: ytdPrevPeriod ? {
+          exp1: ytdPrevExp1 / 1000, imp1: ytdPrevImp1 / 1000,
+          exp2: ytdPrevExp2 / 1000, imp2: ytdPrevImp2 / 1000,
+        } : null,
+        rankings: {
+          c1: (rankingJson1 && rankingJson1.success && rankingJson1.country) || null,
+          c2: (rankingJson2 && rankingJson2.success && rankingJson2.country) || null,
+        },
       };
 
       renderComparison();
@@ -1279,6 +1320,34 @@
     const turnover1 = r.series.exp1.map((v, i) => v + r.series.imp1[i]);
     const turnover2 = r.series.exp2.map((v, i) => v + r.series.imp2[i]);
 
+    // Per-point change vs the comparable prior period: full-year points
+    // compare against the previous chart point (same-window years), the
+    // first point against the pre-window year, and a YTD point against the
+    // same months of the prior year (both fetched separately). Null = no
+    // comparable prior period, the label shows just the value.
+    function buildChangeLabels(series, chainPrevVal, ytdPrevVal) {
+      return series.map((v, i) => {
+        const p = r.points[i];
+        let prev = null;
+        if (p.isYtd) prev = ytdPrevVal;
+        else if (i === 0) prev = chainPrevVal;
+        else if (!r.points[i - 1].isYtd) prev = series[i - 1];
+        if (!(prev > 0)) return null;
+        const pct = calcChange(v, prev);
+        return `${pct > 0 ? '+' : ''}${formatChangePct(pct)}`;
+      });
+    }
+    const cp = r.chainPrev;
+    const yp = r.ytdPrev;
+    const changes = {
+      turnover1: buildChangeLabels(turnover1, cp ? cp.exp1 + cp.imp1 : null, yp ? yp.exp1 + yp.imp1 : null),
+      turnover2: buildChangeLabels(turnover2, cp ? cp.exp2 + cp.imp2 : null, yp ? yp.exp2 + yp.imp2 : null),
+      exp1: buildChangeLabels(r.series.exp1, cp ? cp.exp1 : null, yp ? yp.exp1 : null),
+      exp2: buildChangeLabels(r.series.exp2, cp ? cp.exp2 : null, yp ? yp.exp2 : null),
+      imp1: buildChangeLabels(r.series.imp1, cp ? cp.imp1 : null, yp ? yp.imp1 : null),
+      imp2: buildChangeLabels(r.series.imp2, cp ? cp.imp2 : null, yp ? yp.imp2 : null),
+    };
+
     // In month mode all points are the same Jan..M window — put the window
     // in the chart title once instead of repeating it on every x label.
     let titleSuffix = '';
@@ -1292,13 +1361,13 @@
 
     renderLineChart('turnover', turnoverChartHeader, turnoverCanvas,
       (isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover') + titleSuffix,
-      labels, turnover1, turnover2, name1, name2);
+      labels, turnover1, turnover2, name1, name2, 'line', chartLabel, changes.turnover1, changes.turnover2);
     renderLineChart('export', exportChartHeader, exportCanvas,
       (isKa ? 'ექსპორტი' : 'Export') + titleSuffix,
-      labels, r.series.exp1, r.series.exp2, name1, name2);
+      labels, r.series.exp1, r.series.exp2, name1, name2, 'line', chartLabel, changes.exp1, changes.exp2);
     renderLineChart('import', importChartHeader, importCanvas,
       (isKa ? 'იმპორტი' : 'Import') + titleSuffix,
-      labels, r.series.imp1, r.series.imp2, name1, name2);
+      labels, r.series.imp1, r.series.imp2, name1, name2, 'line', chartLabel, changes.imp1, changes.imp2);
 
     const periodText = chosenPeriodText(r.chosen, isKa);
     const changeAvailable = !!r.prevPeriod;
@@ -1569,7 +1638,7 @@
 
   // ── Line charts ────────────────────────────────────────────────────────
 
-  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line', valueFormatter = chartLabel) {
+  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line', valueFormatter = chartLabel, changes1 = null, changes2 = null) {
     headerEl.innerHTML = `
       <div class="stat-chart-title-row">
         <h3 class="stat-report__title">${escapeHtml(title)}</h3>
@@ -1624,7 +1693,15 @@
           datalabels: {
             font: { size: 11, weight: '600' },
             clamp: true,
-            formatter: (v) => valueFormatter(v),
+            textAlign: 'center',
+            // Second label line = change vs the comparable prior period,
+            // when the caller provides per-point change arrays.
+            formatter: (v, ctx) => {
+              const base = valueFormatter(v);
+              const arr = ctx.datasetIndex === 0 ? changes1 : changes2;
+              const change = arr && arr[ctx.dataIndex];
+              return change ? `${base}\n${change}` : base;
+            },
           },
         },
         scales: {
@@ -1666,13 +1743,23 @@
       import: { v1: t.c1.import, p1: t.c1.importPrev, v2: t.c2.import, p2: t.c2.importPrev },
     };
 
-    // "(+12%)" clause vs the same period a year earlier; empty when there is
-    // no prior period or no prior trade to compare against.
-    function changeClause(v, p) {
-      if (!r.prevPeriod || p < INSIGNIFICANT_MLN) return '';
-      const pct = calcChange(v, p);
-      const sign = pct > 0 ? '+' : '';
-      return ` (${sign}${formatChangePct(pct)})`;
+    // "( +12%, rank 5 )" clause: change vs the same period a year earlier
+    // (when a prior period exists) plus the country's rank among Georgia's
+    // partners for the chosen period (when the ranking endpoint delivered).
+    function rankOf(which, metricKey) {
+      const rk = r.rankings && r.rankings[which];
+      return (rk && rk[metricKey] && rk[metricKey].rank) || null;
+    }
+    function changeClause(v, p, rank) {
+      const parts = [];
+      if (r.prevPeriod && p >= INSIGNIFICANT_MLN) {
+        const pct = calcChange(v, p);
+        parts.push(`${pct > 0 ? '+' : ''}${formatChangePct(pct)}`);
+      }
+      if (v >= INSIGNIFICANT_MLN && rank) {
+        parts.push(isKa ? `ადგილი: ${rank}` : `rank ${rank}`);
+      }
+      return parts.length ? ` (${parts.join(', ')})` : '';
     }
 
     // Sentence comparing the two values: times / percent / roughly equal.
@@ -1725,8 +1812,8 @@
     lines.push(`<h4>${isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover'}</h4>`);
     lines.push(`<p>${
       isKa
-        ? `${prose} საქართველოს სავაჭრო ბრუნვამ ${escapeHtml(g1.withCase)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1)}, ხოლო ${escapeHtml(g2.withCase)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2)}.`
-        : `${prose}, Georgia's trade turnover with ${escapeHtml(name1)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1)}, while turnover with ${escapeHtml(name2)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2)}.`
+        ? `${prose} საქართველოს სავაჭრო ბრუნვამ ${escapeHtml(g1.withCase)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, ხოლო ${escapeHtml(g2.withCase)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
+        : `${prose}, Georgia's trade turnover with ${escapeHtml(name1)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, while turnover with ${escapeHtml(name2)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
     }${compareSentence('turnover', m.turnover.v1, m.turnover.v2)}</p>`);
 
     // Export
@@ -1734,8 +1821,8 @@
     lines.push(`<h4>${isKa ? 'ექსპორტი' : 'Export'}</h4>`);
     lines.push(`<p>${
       isKa
-        ? `${prose} საქართველოდან ექსპორტმა ${escapeHtml(g1.inCase)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1)}, ხოლო ${escapeHtml(g2.inCase)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2)}.`
-        : `${prose}, Georgia's exports to ${escapeHtml(name1)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1)}, while exports to ${escapeHtml(name2)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2)}.`
+        ? `${prose} საქართველოდან ექსპორტმა ${escapeHtml(g1.inCase)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, ხოლო ${escapeHtml(g2.inCase)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
+        : `${prose}, Georgia's exports to ${escapeHtml(name1)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, while exports to ${escapeHtml(name2)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
     }${compareSentence('export', m.export.v1, m.export.v2)}</p>`);
 
     // Import
@@ -1743,8 +1830,8 @@
     lines.push(`<h4>${isKa ? 'იმპორტი' : 'Import'}</h4>`);
     lines.push(`<p>${
       isKa
-        ? `${prose} იმპორტმა ${escapeHtml(g1.from)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1)}, ხოლო ${escapeHtml(g2.from)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2)}.`
-        : `${prose}, Georgia's imports from ${escapeHtml(name1)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1)}, while imports from ${escapeHtml(name2)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2)}.`
+        ? `${prose} იმპორტმა ${escapeHtml(g1.from)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, ხოლო ${escapeHtml(g2.from)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
+        : `${prose}, Georgia's imports from ${escapeHtml(name1)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, while imports from ${escapeHtml(name2)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
     }${compareSentence('import', m.import.v1, m.import.v2)}</p>`);
 
     // Investments — based on the FDI point for the chosen year (annual when
