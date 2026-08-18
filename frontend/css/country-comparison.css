@@ -37,3 +37,23 @@
     height: 240px;
   }
 }
+
+/* Merged FDI sectors table: the two country cells of one year sit tight
+   together, with a wider gap separating the year groups. width:1% shrinks
+   the numeric columns to their content so the padding actually shows as
+   gaps instead of being swallowed by the table's flexible layout; the
+   Sector column absorbs the slack. */
+#fdiSectorsTable .cmp-sec-a,
+#fdiSectorsTable .cmp-sec-b {
+  width: 1%;
+  white-space: nowrap;
+}
+
+#fdiSectorsTable .cmp-sec-a {
+  padding-left: 36px;
+  padding-right: 3px;
+}
+
+#fdiSectorsTable .cmp-sec-b {
+  padding-left: 3px;
+}
