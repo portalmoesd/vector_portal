@@ -834,9 +834,15 @@
     try {
       const grid = await Api.get(`/api/workflow/status-grid?event_id=${item.id}`);
       const secs = visibleSectionsFor(grid);
+      // Discussion-point sections are stored as topic/context/additional cards;
+      // render them the way the Library preview and the exports do.
+      const docShim = { documentType: grid.documentType, language: item.language };
       const sections = await Promise.all(secs.map(s =>
         Api.get(`/api/workflow/section-content?event_id=${item.id}&section_id=${s.sectionId}`)
-          .then(c => ({ title: s.sectionLabel, html: c.htmlContent }))
+          .then(c => ({
+            title: s.sectionLabel,
+            html: LibraryDoc.sectionPreviewHtml(docShim, { htmlContent: c.htmlContent }),
+          }))
           .catch(() => ({ title: s.sectionLabel, html: '' }))
       ));
       const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName, name_ka: item.countryNameKa });

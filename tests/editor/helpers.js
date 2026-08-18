@@ -10,12 +10,15 @@ const coreSrc = escapeScript(
   fs.readFileSync(path.join(__dirname, '../../frontend/js/core/editor-core.js'), 'utf8'));
 const editorSrc = escapeScript(
   fs.readFileSync(path.join(__dirname, '../../frontend/js/core/editor.js'), 'utf8'));
+const dpSrc = escapeScript(
+  fs.readFileSync(path.join(__dirname, '../../frontend/js/core/discussion-points.js'), 'utf8'));
 
 const PAGE = `<!doctype html><html><head><meta charset="utf-8"></head><body>
 <div id="host" style="width:1200px"></div>
 <script>window.I18n = { tr: k => k };</script>
 <script>${coreSrc}</script>
 <script>${editorSrc}</script>
+<script>${dpSrc}</script>
 </body></html>`;
 
 /**
@@ -28,6 +31,24 @@ async function bootEditor(page, opts = {}) {
   await page.evaluate(options => {
     window.deletedComments = [];
     window.ed = GCP.RichEditor(Object.assign({
+      container: document.getElementById('host'),
+      authorName: 'Alice Author',
+      onDeleteComment: id => window.deletedComments.push(id),
+    }, options));
+  }, opts);
+}
+
+/**
+ * Boot a DiscussionPointsEditor into the page as window.ed.
+ * Same fixture page as bootEditor — the module is loaded alongside the editor.
+ * @param {import('@playwright/test').Page} page
+ * @param {object} opts - editor options (initialHtml, readOnly, ...)
+ */
+async function bootDiscussionPoints(page, opts = {}) {
+  await page.setContent(PAGE);
+  await page.evaluate(options => {
+    window.deletedComments = [];
+    window.ed = GCP.DiscussionPointsEditor(Object.assign({
       container: document.getElementById('host'),
       authorName: 'Alice Author',
       onDeleteComment: id => window.deletedComments.push(id),
@@ -75,4 +96,4 @@ async function bodyHtml(page) {
   });
 }
 
-module.exports = { bootEditor, setCaret, bodyHtml };
+module.exports = { bootEditor, bootDiscussionPoints, setCaret, bodyHtml };

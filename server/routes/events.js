@@ -74,7 +74,7 @@ router.get('/', requireAuth, async (req, res) => {
     const { rows } = await db.query(
       `SELECT e.id, e.title, e.country_id, e.document_submitter_role,
               e.document_submitter_id, e.deputy_id, e.supervisor_id, e.curator_required,
-              e.workflow_type,
+              e.workflow_type, e.document_type,
               e.language, e.deadline_date, e.occasion, e.is_active,
               e.event_datetime,
               e.ended_at, e.status, e.created_at,
@@ -111,6 +111,7 @@ router.get('/', requireAuth, async (req, res) => {
       supervisorNameKa: r.supervisor_name_ka,
       curatorRequired: r.curator_required,
       workflowType: r.workflow_type,
+      documentType: r.document_type,
       language: r.language,
       deadlineDate: r.deadline_date,
       eventDateTime: canSeeWhen(r.document_submitter_id) ? r.event_datetime : null,
@@ -136,7 +137,7 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
     const {
       title, countryId, documentSubmitterRole, documentSubmitterId,
       deputyId, supervisorId, curatorRequired, language, deadlineDate, occasion, sections,
-      workflowType: rawWorkflowType, eventDateTime,
+      workflowType: rawWorkflowType, documentType: rawDocumentType, eventDateTime,
     } = req.body;
     // Normalise workflow type. Default 'advanced' preserves the existing
     // role-chain behaviour for clients that don't send the field. In
@@ -154,6 +155,12 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
     const workflowType = isMinisterDS
       ? 'simple'
       : (rawWorkflowType === 'simple' ? 'simple' : 'advanced');
+    // Document type decides how section content is authored and exported.
+    // 'DISCUSSION_POINTS' swaps the section editor for the structured
+    // topic/context/additional-information one and turns the export picker
+    // into a Section -> Topic tree; 'OTHER' (the default, and the fallback for
+    // any unrecognised value) keeps every existing path unchanged.
+    const documentType = rawDocumentType === 'DISCUSSION_POINTS' ? 'DISCUSSION_POINTS' : 'OTHER';
     // Accept boolean true OR string 'yes' / 'true' for forgiving
     // intake from any caller that might serialise differently.
     const forceCurator = workflowType === 'simple'
@@ -166,7 +173,7 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
     // needed. (In advanced mode deputyId is the responsible/curator deputy.)
     const effectiveDeputyId = workflowType === 'simple' ? null : (deputyId || null);
     const effectiveSupervisorId = workflowType === 'simple' ? null : (supervisorId || null);
-    console.log(`[events.create] workflow=${workflowType} owner=${documentSubmitterRole} curator_required=${effectiveCuratorRequired} (raw=${JSON.stringify(curatorRequired)})`);
+    console.log(`[events.create] workflow=${workflowType} document=${documentType} owner=${documentSubmitterRole} curator_required=${effectiveCuratorRequired} (raw=${JSON.stringify(curatorRequired)})`);
 
     if (!title || !countryId || !documentSubmitterRole || !documentSubmitterId) {
       return res.status(400).json({ error: 'Missing required fields' });
@@ -245,13 +252,15 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
 
       const { rows: [event] } = await client.query(
         `INSERT INTO events (title, country_id, document_submitter_role, document_submitter_id,
-                             deputy_id, supervisor_id, curator_required, workflow_type, language,
+                             deputy_id, supervisor_id, curator_required, workflow_type,
+                             document_type, language,
                              deadline_date, occasion, created_by_id, event_datetime)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
          RETURNING id`,
         [title, countryId, documentSubmitterRole, documentSubmitterId,
          effectiveDeputyId, effectiveSupervisorId, effectiveCuratorRequired, workflowType,
-         language || 'EN', deadlineDate || null, occasion || null, req.user.id, eventDateTime || null]
+         documentType, language || 'EN', deadlineDate || null, occasion || null,
+         req.user.id, eventDateTime || null]
       );
 
       if (sections && sections.length > 0) {
@@ -407,7 +416,7 @@ router.get('/:id', requireAuth, async (req, res) => {
     const { rows: [event] } = await db.query(
       `SELECT e.id, e.title, e.description, e.country_id, e.document_submitter_role,
               e.document_submitter_id, e.deputy_id, e.supervisor_id, e.curator_required,
-              e.workflow_type,
+              e.workflow_type, e.document_type,
               e.language, e.deadline_date, e.occasion, e.is_active,
               e.event_datetime,
               e.ended_at, e.status, e.created_at,
@@ -463,6 +472,7 @@ router.get('/:id', requireAuth, async (req, res) => {
       supervisorNameKa: event.supervisor_name_ka,
       curatorRequired: event.curator_required,
       workflowType: event.workflow_type,
+      documentType: event.document_type,
       language: event.language,
       deadlineDate: event.deadline_date,
       eventDateTime: canSeeWhen ? event.event_datetime : null,

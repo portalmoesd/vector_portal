@@ -18,6 +18,7 @@ DO $$ BEGIN CREATE TYPE event_status AS ENUM ('DRAFT','IN_PROGRESS','COMPLETED',
 DO $$ BEGIN CREATE TYPE workflow_step_status AS ENUM ('PENDING','IN_PROGRESS','APPROVED','RETURNED'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE history_action AS ENUM ('saved','submitted','returned','approved','asked_to_return','pushed'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE event_workflow_type AS ENUM ('advanced','simple'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+DO $$ BEGIN CREATE TYPE event_document_type AS ENUM ('OTHER','DISCUSSION_POINTS'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN ALTER TYPE history_action ADD VALUE IF NOT EXISTS 'pushed'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN ALTER TYPE history_action ADD VALUE IF NOT EXISTS 'pulled'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
@@ -114,6 +115,7 @@ CREATE TABLE IF NOT EXISTS events (
   supervisor_id             INT REFERENCES users(id),
   curator_required          BOOLEAN NOT NULL DEFAULT false,
   workflow_type             event_workflow_type NOT NULL DEFAULT 'advanced',
+  document_type             event_document_type NOT NULL DEFAULT 'OTHER',
   language                  event_language NOT NULL DEFAULT 'EN',
   deadline_date             DATE,
   occasion                  TEXT,
@@ -127,6 +129,9 @@ CREATE TABLE IF NOT EXISTS events (
 -- Backfill for databases predating the workflow_type column. Idempotent:
 -- ADD COLUMN IF NOT EXISTS is a no-op once the column has been added.
 ALTER TABLE events ADD COLUMN IF NOT EXISTS workflow_type event_workflow_type NOT NULL DEFAULT 'advanced';
+-- Backfill for databases predating the document_type column. 'OTHER' keeps
+-- every existing event on the free-form editor and export paths unchanged.
+ALTER TABLE events ADD COLUMN IF NOT EXISTS document_type event_document_type NOT NULL DEFAULT 'OTHER';
 -- Optional date/time of the actual event (used for Minister/Deputy owners).
 ALTER TABLE events ADD COLUMN IF NOT EXISTS event_datetime TIMESTAMPTZ;
 

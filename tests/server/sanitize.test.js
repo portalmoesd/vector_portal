@@ -73,6 +73,27 @@ test('preserves block-level insertions from block paste', () => {
   assert.equal(sanitizeEditorHtml(pasted), pasted);
 });
 
+test('preserves discussion-point scaffolding', () => {
+  const card = '<div data-dp-id="dp-a1"><h3 data-dp-field="topic">Trade turnover</h3>' +
+    '<div data-dp-field="context"><p>context body</p></div>' +
+    '<div data-dp-field="additional"><p>extra body</p></div></div>';
+  assert.equal(sanitizeEditorHtml(card), card);
+});
+
+test('preserves tracked changes and comment anchors inside discussion points', () => {
+  const card = '<div data-dp-id="dp-b2"><h3 data-dp-field="topic">Investments</h3>' +
+    '<div data-dp-field="context"><p><ins data-tc-id="tc12" data-tc-author="A">new</ins>' +
+    '<span class="gcp-cmt-anchor" data-cmt-anchor-id="cmt-1">noted</span></p></div></div>';
+  assert.equal(sanitizeEditorHtml(card), card);
+});
+
+test('strips classes from discussion-point scaffolding', () => {
+  assert.equal(
+    sanitizeEditorHtml('<div class="dp-card" data-dp-id="dp-c3"><h3 data-dp-field="topic">T</h3></div>'),
+    '<div data-dp-id="dp-c3"><h3 data-dp-field="topic">T</h3></div>'
+  );
+});
+
 test('handles null/empty input', () => {
   assert.equal(sanitizeEditorHtml(null), '');
   assert.equal(sanitizeEditorHtml(undefined), '');

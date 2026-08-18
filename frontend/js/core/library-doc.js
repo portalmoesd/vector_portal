@@ -42,8 +42,61 @@
     return root;
   }
 
+  // ── Discussion-point documents ──────────────────────────────────────────────
+  // Sections of a DISCUSSION_POINTS document hold an ordered list of points
+  // (topic / context / additional information) rather than free-form prose, so
+  // the export picker offers a Section -> Topic tree and the chosen points are
+  // rendered to presentation HTML before they reach the exporters.
+
+  function isDiscussionPoints(doc) {
+    return !!doc && doc.documentType === 'DISCUSSION_POINTS'
+      && typeof GCP !== 'undefined' && !!GCP.DiscussionPoints;
+  }
+
+  /** Points of one section, or [] when the section has none. */
+  function sectionPoints(section) {
+    try {
+      return GCP.DiscussionPoints.parsePoints(section.htmlContent || '');
+    } catch (e) {
+      console.error('Discussion-point parse failed:', e);
+      return [];
+    }
+  }
+
+  /** Render a whole section's points — used by preview and by full exports. */
+  function renderDiscussionPoints(section, lang) {
+    return GCP.DiscussionPoints.toExportHtml(sectionPoints(section), lang);
+  }
+
+  /**
+   * Keep only the comments still anchored in `html`.
+   *
+   * GCP.buildDocx registers every comment it is handed into the .docx package
+   * but only emits a reference where it meets the anchor span, so exporting a
+   * subset of points without pruning the comment list leaves entries in
+   * word/comments.xml that nothing points at. Replies follow their root.
+   */
+  function commentsAnchoredIn(html, comments) {
+    if (!comments || !comments.length) return [];
+    const probe = document.createElement('div');
+    probe.innerHTML = html || '';
+    const present = new Set(
+      Array.from(probe.querySelectorAll('[data-cmt-anchor-id]'))
+        .map(el => el.getAttribute('data-cmt-anchor-id'))
+    );
+    const roots = comments.filter(c => !c.parentId && c.anchorId && present.has(c.anchorId));
+    const rootIds = new Set(roots.map(c => c.id));
+    return comments.filter(c => rootIds.has(c.id) || rootIds.has(c.parentId));
+  }
+
   // ── Section selection modal helper ──────────────────────────────────────────
   function showSectionSelectModal(doc, title, onExport) {
+    // Discussion-point documents get a second level: each section lists its
+    // topics so the owner can extract any subset of points. Everything else
+    // keeps the flat section list.
+    const dp = isDiscussionPoints(doc);
+    const pointsBySection = dp ? doc.sections.map(sectionPoints) : [];
+
     const overlay = document.createElement('div');
     overlay.className = 'preview-overlay';
     overlay.innerHTML = `
@@ -59,10 +112,16 @@
         </div>
         <div id="sectionChecklist">
           ${doc.sections.map((s, i) => `
-            <label style="display:block;padding:4px 0;cursor:pointer;">
+            <label style="display:block;padding:4px 0;cursor:pointer;${dp ? 'font-weight:600;' : ''}">
               <input type="checkbox" class="section-check" data-idx="${i}" checked />
               ${escapeHtml(s.title)}
             </label>
+            ${dp ? `<div style="margin:0 0 8px 22px;">${pointsBySection[i].map((p, j) => `
+              <label style="display:block;padding:3px 0;cursor:pointer;font-size:13px;">
+                <input type="checkbox" class="point-check" data-idx="${i}" data-point="${j}" checked />
+                ${escapeHtml(GCP.DiscussionPoints.topicLabel(p, doc.language, j))}
+              </label>
+            `).join('')}</div>` : ''}
           `).join('')}
         </div>
         <div style="margin-top:16px;text-align:right;">
@@ -78,20 +137,89 @@
 
     document.body.appendChild(overlay);
 
+    const pointsOf = (idx) =>
+      Array.from(overlay.querySelectorAll(`.point-check[data-idx="${idx}"]`));
+
+    // A section checkbox reflects its own points: all / none / indeterminate.
+    function syncSection(idx) {
+      const section = overlay.querySelector(`.section-check[data-idx="${idx}"]`);
+      const boxes = pointsOf(idx);
+      if (!section || !boxes.length) return;
+      const checked = boxes.filter(cb => cb.checked).length;
+      section.checked = checked > 0;
+      section.indeterminate = checked > 0 && checked < boxes.length;
+    }
+
     // Select all toggle
     overlay.querySelector('#selectAllSections').addEventListener('change', (e) => {
-      overlay.querySelectorAll('.section-check').forEach(cb => cb.checked = e.target.checked);
+      overlay.querySelectorAll('.section-check').forEach(cb => {
+        cb.checked = e.target.checked;
+        cb.indeterminate = false;
+      });
+      overlay.querySelectorAll('.point-check').forEach(cb => cb.checked = e.target.checked);
+    });
+
+    // A section drives its points; a point updates its section.
+    overlay.querySelectorAll('.section-check').forEach(cb => {
+      cb.addEventListener('change', () => {
+        cb.indeterminate = false;
+        pointsOf(cb.dataset.idx).forEach(p => p.checked = cb.checked);
+      });
+    });
+    overlay.querySelectorAll('.point-check').forEach(cb => {
+      cb.addEventListener('change', () => syncSection(cb.dataset.idx));
     });
 
     // Export button
     overlay.querySelector('#exportConfirmBtn').addEventListener('click', () => {
-      const selectedIdxs = Array.from(overlay.querySelectorAll('.section-check:checked'))
-        .map(cb => parseInt(cb.dataset.idx));
-      const selectedSections = selectedIdxs.map(i => doc.sections[i]);
-      if (selectedSections.length === 0) { toast.warn(I18n.tr('library.sectionSelect.warnEmpty')); return; }
+      let selectedSections;
+
+      if (dp) {
+        // Drive the selection off the topic checkboxes, not the section ones:
+        // a partially selected section is `checked` AND `indeterminate`, and
+        // the :checked selector does not match an indeterminate checkbox, so
+        // reading the parents would silently drop every partial section.
+        // Filtering here also keeps exportPdf / exportWord reading plain
+        // { title, htmlContent } objects with no branch of their own.
+        selectedSections = doc.sections.map((sec, i) => {
+          const boxes = pointsOf(i);
+          if (!boxes.length) {
+            // A section with no discussion points has only its own checkbox.
+            const parent = overlay.querySelector(`.section-check[data-idx="${i}"]`);
+            return parent && parent.checked ? Object.assign({}, sec, { selectedPointCount: 0 }) : null;
+          }
+          const chosen = boxes.filter(cb => cb.checked)
+            .map(cb => pointsBySection[i][parseInt(cb.dataset.point)]);
+          if (!chosen.length) return null;
+          return Object.assign({}, sec, {
+            htmlContent: GCP.DiscussionPoints.toExportHtml(chosen, doc.language),
+            selectedPointCount: chosen.length,
+          });
+        }).filter(Boolean);
+
+        if (selectedSections.length === 0) {
+          toast.warn(I18n.tr(overlay.querySelector('.point-check')
+            ? 'library.sectionSelect.warnEmptyTopics'
+            : 'library.sectionSelect.warnEmpty'));
+          return;
+        }
+      } else {
+        selectedSections = Array.from(overlay.querySelectorAll('.section-check:checked'))
+          .map(cb => doc.sections[parseInt(cb.dataset.idx)]);
+        if (selectedSections.length === 0) { toast.warn(I18n.tr('library.sectionSelect.warnEmpty')); return; }
+      }
+
       overlay.remove();
       onExport(selectedSections);
     });
+  }
+
+  // Body of one section as the reader should see it: discussion-point sections
+  // render as numbered topics with labelled Context / Additional Information,
+  // matching the PDF and Word output; everything else renders as stored.
+  function sectionPreviewHtml(doc, section) {
+    if (!isDiscussionPoints(doc)) return section.htmlContent || '';
+    return renderDiscussionPoints(section, doc.language);
   }
 
   // ── Preview ────────────────────────────────────────────────────────────────
@@ -124,7 +252,7 @@
           ${doc.sections.map(s => `
             <div class="section-block">
               <h3>${escapeHtml(s.title)}</h3>
-              <div class="section-content-preview">${stripTrackChanges(s.htmlContent || '<em>No content</em>')}</div>
+              <div class="section-content-preview">${stripTrackChanges(sectionPreviewHtml(doc, s) || '<em>No content</em>')}</div>
               ${canSeeHistory(s) ? `
                 <details class="lib-history" data-section-id="${s.id}">
                   <summary>${escapeHtml(I18n.tr('library.history.title'))}</summary>
@@ -283,7 +411,13 @@
                 createdAt: c.createdAt,
               }));
             } catch (_) { /* comments are optional in the export */ }
-            return { sectionLabel: s.title, htmlContent: s.htmlContent, comments };
+            // Only comments whose anchor survived into the exported HTML may be
+            // registered — see commentsAnchoredIn(). A no-op for a full export.
+            return {
+              sectionLabel: s.title,
+              htmlContent: s.htmlContent,
+              comments: commentsAnchoredIn(s.htmlContent, comments),
+            };
           }));
           const flag = await flagPng(doc.countryCode, 128);
           await window.GCP.exportDocx(doc.title, mapped, {
@@ -340,5 +474,9 @@
     }
   }
 
-  window.LibraryDoc = { preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal };
+  window.LibraryDoc = {
+    preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal,
+    isDiscussionPoints, sectionPoints, renderDiscussionPoints, sectionPreviewHtml,
+    commentsAnchoredIn,
+  };
 })();

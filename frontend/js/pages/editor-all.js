@@ -79,6 +79,11 @@
   // ── Render sections ──────────────────────────────────────────────────────
 
   const docFlow = document.getElementById('docFlow');
+  // Discussion-point documents get the structured card editor; it exposes the
+  // same surface as GCP.RichEditor, so everything below is unchanged.
+  const makeEditor = grid.documentType === 'DISCUSSION_POINTS'
+    ? GCP.DiscussionPointsEditor
+    : GCP.RichEditor;
   const sections = {}; // sectionId → { editor, sectionInfo, canEdit, dividerEl, sectionEl }
   let focusedSectionId = null;
   let activeDropdown = null;
@@ -129,7 +134,7 @@
     docFlow.appendChild(sectionEl);
 
     // ── Create RichEditor ──
-    const editor = GCP.RichEditor({
+    const editor = makeEditor({
       container: editorContainer,
       initialHtml: content.htmlContent || '',
       authorName: localizedName(user.fullName, user.fullNameKa) || user.username,

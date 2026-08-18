@@ -1016,8 +1016,8 @@ router.get('/status-grid', requireAuth, async (req, res) => {
 
     const { rows: [event] } = await db.query(
       `SELECT id, document_submitter_role, document_submitter_id,
-              deputy_id, supervisor_id, curator_required, workflow_type, country_id,
-              status AS event_status
+              deputy_id, supervisor_id, curator_required, workflow_type, document_type,
+              country_id, status AS event_status
        FROM events WHERE id = $1`,
       [eventId]
     );
@@ -1245,6 +1245,9 @@ router.get('/status-grid', requireAuth, async (req, res) => {
       deputyId: event.deputy_id,
       curatorRequired: event.curator_required,
       workflowType: eventWorkflowType,
+      // Drives which editor the section pages instantiate: the structured
+      // GCP.DiscussionPointsEditor for DISCUSSION_POINTS, GCP.RichEditor otherwise.
+      documentType: event.document_type || 'OTHER',
       homeDepartmentId: dsDeptId,
       viewerLinkedToOwnerDeputy,
       sections: enrichedSections,

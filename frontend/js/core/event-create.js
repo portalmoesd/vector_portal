@@ -263,6 +263,13 @@
           </select>
         </div>
         <div class="form-group">
+          <label class="form-label" data-i18n="calendar.form.documentType">Document Type *</label>
+          <select class="form-select" id="newDocumentType">
+            <option value="OTHER" selected data-i18n="calendar.docType.OTHER">Other</option>
+            <option value="DISCUSSION_POINTS" data-i18n="calendar.docType.DISCUSSION_POINTS">Discussion Points</option>
+          </select>
+        </div>
+        <div class="form-group">
           <label class="form-label" data-i18n="calendar.form.workflow">Workflow *</label>
           <select class="form-select" id="newWorkflowType">
             <option value="simple" selected data-i18n="calendar.form.workflowSimple">Simple</option>
@@ -477,6 +484,18 @@
       applyRoleGroupLabel();
       applyRoleVisibility();
     });
+
+    // Discussion-point documents are normally run through the simple chain, so
+    // picking that type pre-selects it — but the creator can still switch back
+    // to advanced, so the two fields stay independent.
+    const docTypeSel = bodyEl.querySelector('#newDocumentType');
+    docTypeSel.addEventListener('change', () => {
+      if (docTypeSel.value !== 'DISCUSSION_POINTS' || wfSel.value === 'simple') return;
+      wfSel.value = 'simple';
+      populateRoleOptions();
+      applyRoleGroupLabel();
+      applyRoleVisibility();
+    });
     roleSel.addEventListener('change', applyRoleVisibility);
 
     populateRoleOptions();
@@ -491,6 +510,7 @@
       const countryId = parseInt(bodyEl.querySelector('#newCountry').value);
       const dsRole = bodyEl.querySelector('#newDSRole').value;
       const workflowType = bodyEl.querySelector('#newWorkflowType').value || 'advanced';
+      const documentType = bodyEl.querySelector('#newDocumentType').value || 'OTHER';
       const deputyId = bodyEl.querySelector('#newDeputy').value ? parseInt(bodyEl.querySelector('#newDeputy').value) : null;
       let supervisorId = bodyEl.querySelector('#newSupervisor').value ? parseInt(bodyEl.querySelector('#newSupervisor').value) : null;
       const language = bodyEl.querySelector('#newLanguage').value;
@@ -551,6 +571,7 @@
           supervisorId,
           curatorRequired: effCuratorRequired,
           workflowType: effWorkflowType,
+          documentType,
           language, deadlineDate, occasion,
           eventDateTime: (dsRole === 'MINISTER' || dsRole === 'DEPUTY' || dsRole === 'SUPERVISOR') && eventDateTimeRaw
             ? eventDateTimeRaw.trim().replace(' ', 'T') + ':00+04:00'

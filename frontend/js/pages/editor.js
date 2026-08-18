@@ -61,7 +61,15 @@
 
   // ── Initialize GCP.RichEditor ──────────────────────────────────────────────
 
-  const richEditor = GCP.RichEditor({
+  // Discussion-point documents author their sections as structured
+  // topic/context/additional-information cards. GCP.DiscussionPointsEditor
+  // exposes the same surface as GCP.RichEditor, so only the factory changes —
+  // saving, autosave, comments and the workflow actions below are identical.
+  const makeEditor = grid.documentType === 'DISCUSSION_POINTS'
+    ? GCP.DiscussionPointsEditor
+    : GCP.RichEditor;
+
+  const richEditor = makeEditor({
     container: document.getElementById('richEditorContainer'),
     initialHtml: content.htmlContent || '',
     authorName: localizedName(user.fullName, user.fullNameKa) || user.username,

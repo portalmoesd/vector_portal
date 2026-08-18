@@ -18,6 +18,9 @@ const BUNDLE = path.join(__dirname, '../fixtures/.cache/docx.umd.js');
 const exporterSrc = fs
   .readFileSync(path.join(__dirname, '../../frontend/js/docx-export.js'), 'utf8')
   .replace(/<\/script>/g, '<\\/script>');
+const dpSrc = fs
+  .readFileSync(path.join(__dirname, '../../frontend/js/core/discussion-points.js'), 'utf8')
+  .replace(/<\/script>/g, '<\\/script>');
 
 function readZipEntry(zipPath, entry) {
   return execFileSync('python3', [
@@ -74,4 +77,73 @@ test('exports tracked changes, tables and comments as native Word markup', async
   expect(commentsXml).toContain('root comment');
   expect(commentsXml).toContain('a reply');
   expect(commentsXml).toContain('w:author="Carol"');
+});
+
+test('exports discussion points as headings, labels and native revisions', async ({ page }, testInfo) => {
+  test.skip(!fs.existsSync(BUNDLE), 'docx UMD bundle not cached — see header comment');
+
+  const bundleSrc = fs.readFileSync(BUNDLE, 'utf8').replace(/<\/script>/g, '<\\/script>');
+  await page.setContent(`<!doctype html><html><head><meta charset="utf-8"></head><body>
+    <script>${bundleSrc}</script>
+    <script>${exporterSrc}</script>
+    <script>${dpSrc}</script>
+  </body></html>`);
+
+  const b64 = await page.evaluate(async () => {
+    // Two points authored, only the second exported — the owner deselected the
+    // first in the picker. Its comment must not survive into the package.
+    const points = [
+      {
+        id: 'dp-1', topic: 'Dropped topic',
+        contextHtml: '<p>dropped <span class="gcp-cmt-anchor" data-cmt-anchor-id="cmt-drop">x</span></p>',
+        additionalHtml: '',
+      },
+      {
+        id: 'dp-2', topic: 'Kept topic',
+        contextHtml: '<p>kept <ins data-tc-id="tc1" data-tc-author="Alice Author" data-tc-time="2026-01-01T00:00:00Z">added</ins>' +
+          '<span class="gcp-cmt-anchor" data-cmt-anchor-id="cmt-keep">flagged</span></p>',
+        additionalHtml: '<p>more detail</p>',
+      },
+    ];
+    const selected = [points[1]];
+    const html = GCP.DiscussionPoints.toExportHtml(selected, 'EN');
+
+    // Mirrors library-doc.js: prune comments to anchors present in the export.
+    const probe = document.createElement('div');
+    probe.innerHTML = html;
+    const present = new Set([...probe.querySelectorAll('[data-cmt-anchor-id]')]
+      .map(el => el.getAttribute('data-cmt-anchor-id')));
+    const all = [
+      { id: 20, anchorId: 'cmt-drop', parentId: null, authorName: 'Carol', text: 'on the dropped point', createdAt: '2026-01-02T00:00:00Z' },
+      { id: 21, anchorId: 'cmt-keep', parentId: null, authorName: 'Erin', text: 'on the kept point', createdAt: '2026-01-02T00:00:00Z' },
+    ];
+    const comments = all.filter(c => c.anchorId && present.has(c.anchorId));
+
+    const doc = GCP.buildDocx('Discussion Doc', [{
+      sectionLabel: 'Section One', htmlContent: html, comments,
+    }], { countryName: 'Georgia' });
+    return await docx.Packer.toBase64String(doc);
+  });
+
+  const zipPath = testInfo.outputPath('dp-export.docx');
+  fs.writeFileSync(zipPath, Buffer.from(b64, 'base64'));
+
+  const documentXml = readZipEntry(zipPath, 'word/document.xml');
+  // Only the selected point, renumbered from 1, as a real Heading 3.
+  expect(documentXml).toContain('1. Kept topic');
+  expect(documentXml).not.toContain('Dropped topic');
+  expect(documentXml).toContain('Heading3');
+  // Field labels are printed.
+  expect(documentXml).toContain('Context');
+  expect(documentXml).toContain('Additional Information');
+  // Track changes still become native revisions.
+  expect(documentXml).toContain('<w:ins ');
+  expect(documentXml).toContain('w:author="Alice Author"');
+
+  // The dropped point's comment must not be registered — an entry with no
+  // reference is exactly what Word complains about.
+  const commentsXml = readZipEntry(zipPath, 'word/comments.xml');
+  expect(commentsXml).toContain('on the kept point');
+  expect(commentsXml).not.toContain('on the dropped point');
+  expect(documentXml).toContain('commentReference');
 });
