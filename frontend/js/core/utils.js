@@ -125,9 +125,9 @@ function statusLabel(status) {
   if (!status) return _i18n('status.draft', 'Awaiting action');
   const fallback = {
     draft: 'Awaiting action',
-    submitted_to_super_collaborator: 'At Super-Collaborator',
-    returned_by_super_collaborator: 'Returned by Super-Collaborator',
-    approved_by_super_collaborator: 'Approved (Super-Collaborator)',
+    submitted_to_super_collaborator: 'At Senior Editor',
+    returned_by_super_collaborator: 'Returned by Senior Editor',
+    approved_by_super_collaborator: 'Approved (Senior Editor)',
     submitted_to_curator: 'At Curator',
     returned_by_curator: 'Returned by Curator',
     approved_by_curator: 'Approved (Curator)',
@@ -137,9 +137,9 @@ function statusLabel(status) {
     submitted_to_deputy: 'At Deputy',
     returned_by_deputy: 'Returned by Deputy',
     approved_by_deputy: 'Approved (Deputy)',
-    submitted_to_receiving_super_collaborator: 'At Super-Collaborator (Review)',
-    returned_by_receiving_super_collaborator: 'Returned by Super-Collaborator (Review)',
-    approved_by_receiving_super_collaborator: 'Approved (Super-Collaborator Review)',
+    submitted_to_receiving_super_collaborator: 'At Senior Editor (Review)',
+    returned_by_receiving_super_collaborator: 'Returned by Senior Editor (Review)',
+    approved_by_receiving_super_collaborator: 'Approved (Senior Editor Review)',
     submitted_to_receiving_supervisor: 'At Supervisor (Review)',
     returned_by_receiving_supervisor: 'Returned by Supervisor (Review)',
     approved_by_receiving_supervisor: 'Approved (Supervisor Review)',
@@ -271,14 +271,14 @@ function roleLabel(role) {
     PROTOCOL: 'Protocol',
     DEPUTY: 'Deputy',
     SUPERVISOR: 'Supervisor',
-    SUPER_COLLABORATOR: 'Super-Collaborator',
-    COLLABORATOR: 'Collaborator',
+    SUPER_COLLABORATOR: 'Senior Editor',
+    COLLABORATOR: 'Editor',
     ANALYST: 'Analyst',
     MINISTER: 'Minister',
     CURATOR: 'Curator',
     // Receiving chain roles display the same label — the department name
     // shown underneath distinguishes them from the section dept's roles
-    RECEIVING_SUPER_COLLABORATOR: 'Super-Collaborator',
+    RECEIVING_SUPER_COLLABORATOR: 'Senior Editor',
     RECEIVING_SUPERVISOR: 'Supervisor',
   }[role];
   return _i18n(`roles.${role || ''}`, fallback || role);

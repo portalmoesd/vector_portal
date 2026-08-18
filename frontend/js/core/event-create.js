@@ -281,7 +281,7 @@
           <select class="form-select" id="newDSRole">
             <option value="DEPUTY" data-i18n="roles.DEPUTY">Deputy</option>
             <option value="SUPERVISOR" data-i18n="roles.SUPERVISOR">Supervisor</option>
-            <option value="SUPER_COLLABORATOR" data-i18n="roles.SUPER_COLLABORATOR">Super-Collaborator</option>
+            <option value="SUPER_COLLABORATOR" data-i18n="roles.SUPER_COLLABORATOR">Senior Editor</option>
             ${isUnrestricted ? '<option value="MINISTER" data-i18n="roles.MINISTER">Minister</option>' : ''}
           </select>
         </div>
@@ -305,9 +305,9 @@
           </select>
         </div>
         <div class="form-group" id="dsSCGroup" style="display:none;">
-          <label class="form-label" data-i18n="calendar.form.superCollaborator">Super-Collaborator *</label>
+          <label class="form-label" data-i18n="calendar.form.superCollaborator">Senior Editor *</label>
           <select class="form-select" id="newDSSC">
-            <option value="" data-i18n="calendar.form.selectSuperCollaborator">— Select Super-Collaborator —</option>
+            <option value="" data-i18n="calendar.form.selectSuperCollaborator">— Select Senior Editor —</option>
           </select>
         </div>
         <div class="form-group">
@@ -471,10 +471,10 @@
       if (dsRole === 'SUPER_COLLABORATOR') {
         try {
           const list = await Api.get(isUnrestricted ? '/api/admin/all-super-collaborators' : '/api/admin/linked-super-collaborators');
-          bodyEl.querySelector('#newDSSC').innerHTML = '<option value="">— Select Super-Collaborator —</option>' +
+          bodyEl.querySelector('#newDSSC').innerHTML = `<option value="">${escapeHtml(I18n.tr('calendar.form.selectSuperCollaborator'))}</option>` +
             list.map(s => `<option value="${s.id}">${escapeHtml(localizedName(s.fullName, s.fullNameKa))}${s.departmentName ? ' — ' + escapeHtml(s.departmentName) : ''}</option>`).join('');
         } catch (e) {
-          bodyEl.querySelector('#newDSSC').innerHTML = '<option value="">— No super-collaborators found —</option>';
+          bodyEl.querySelector('#newDSSC').innerHTML = `<option value="">${escapeHtml(I18n.tr('calendar.form.noSuperCollaborators'))}</option>`;
         }
       }
     }

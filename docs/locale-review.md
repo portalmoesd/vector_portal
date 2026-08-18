@@ -31,7 +31,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `dashboard.title` | Dashboard | მთავარი |  |
 | `dashboard.deputyTitle` | Deputy Dashboard | მოადგილის მთავარი გვერდი |  |
 | `dashboard.supervisorTitle` | Supervisor Dashboard | ზედამხედველის მთავარი გვერდი |  |
-| `dashboard.superCollabTitle` | Super-collaborator Dashboard | სუპერ-კოლაბორატორის მთავარი გვერდი |  |
+| `dashboard.superCollabTitle` | Senior Editor Dashboard | უფროსი შემსრულებლის მთავარი გვერდი |  |
 | `dashboard.selectEvent` | Select event | აირჩიეთ ღონისძიება |  |
 | `dashboard.selectEventPlaceholder` | Select event... | აირჩიეთ ღონისძიება... |  |
 | `dashboard.noEvents` | No events available | ღონისძიებები არ არის |  |
@@ -45,8 +45,8 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `dashboard.noUpcoming` | No upcoming events | მომავალი ღონისძიებები არ არის |  |
 | `dashboard.descCollab` | Select an event to view your assigned sections and submit your work. | აირჩიეთ ღონისძიება, რათა ნახოთ თქვენთვის მინიჭებული სექციები და წარადგინოთ თქვენი ნამუშევარი. |  |
 | `dashboard.descDeputy` | Choose an event to review and finalize before sending to the library. | აირჩიეთ ღონისძიება განსახილველად და დასასრულებლად ბიბლიოთეკაში გაგზავნამდე. |  |
-| `dashboard.descSupervisor` | Choose an event to review super-collaborator submissions before they move to the deputy stage. | აირჩიეთ ღონისძიება სუპერ-კოლაბორატორის ნამუშევრის განსახილველად მოადგილის ეტაპზე გადასვლამდე. |  |
-| `dashboard.descSuperCollab` | Choose an event to review collaborator submissions before they move to the supervisor stage. | აირჩიეთ ღონისძიება კოლაბორატორის ნამუშევრის განსახილველად ზედამხედველის ეტაპზე გადასვლამდე. |  |
+| `dashboard.descSupervisor` | Choose an event to review senior editor submissions before they move to the deputy stage. | აირჩიეთ ღონისძიება უფროსი შემსრულებლის ნამუშევრის განსახილველად მოადგილის ეტაპზე გადასვლამდე. |  |
+| `dashboard.descSuperCollab` | Choose an event to review editor submissions before they move to the supervisor stage. | აირჩიეთ ღონისძიება შემსრულებლის ნამუშევრის განსახილველად ზედამხედველის ეტაპზე გადასვლამდე. |  |
 | `dashboard.approveAll` | Approve all | ყველას დადასტურება |  |
 | `dashboard.confirmApproveAll` | Approve all {n} sections | {n} სექციის დადასტურება |  |
 | `dashboard.sendToLibrary` | Send to library | ბიბლიოთეკაში გაგზავნა |  |
@@ -88,7 +88,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `calendar.form.deputy` | Deputy * | მოადგილე * |  |
 | `calendar.form.responsibleSupervisor` | Responsible Supervisor * | პასუხისმგებელი ზედამხედველი * |  |
 | `calendar.form.supervisor` | Supervisor * | ზედამხედველი * |  |
-| `calendar.form.superCollaborator` | Super-Collaborator * | სუპერ-კოლაბორატორი * |  |
+| `calendar.form.superCollaborator` | Senior Editor * | უფროსი შემსრულებელი * |  |
 | `calendar.form.language` | Language | ენა |  |
 | `calendar.form.deadline` | Deadline | ვადა |  |
 | `calendar.form.curatorRequired` | Curator Required | საჭიროა კურატორი |  |
@@ -99,7 +99,8 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `calendar.form.selectPlaceholder` | — Select — | — აირჩიეთ — |  |
 | `calendar.form.selectDeputy` | — Select Deputy — | — აირჩიეთ მოადგილე — |  |
 | `calendar.form.selectSupervisor` | — Select Supervisor — | — აირჩიეთ ზედამხედველი — |  |
-| `calendar.form.selectSuperCollaborator` | — Select Super-Collaborator — | — აირჩიეთ სუპერ-კოლაბორატორი — |  |
+| `calendar.form.selectSuperCollaborator` | — Select Senior Editor — | — აირჩიეთ უფროსი შემსრულებელი — |  |
+| `calendar.form.noSuperCollaborators` | — No senior editors found — | — უფროსი შემსრულებლები ვერ მოიძებნა — |  |
 | `calendar.form.selectTemplate` | — Select Template — | — აირჩიეთ შაბლონი — |  |
 | `calendar.form.sectionTitlePlaceholder` | Section title | სექციის სათაური |  |
 | `calendar.warn.missingRequired` | Title, Country, and DS Role are required | სათაური, ქვეყანა და DS-ის როლი სავალდებულოა |  |
@@ -143,10 +144,10 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `roles.PROTOCOL` | Protocol | პროტოკოლი |  |
 | `roles.DEPUTY` | Deputy | მოადგილე |  |
 | `roles.SUPERVISOR` | Supervisor | ზედამხედველი |  |
-| `roles.SUPER_COLLABORATOR` | Super-Collaborator | სუპერ-კოლაბორატორი |  |
-| `roles.COLLABORATOR` | Collaborator | კოლაბორატორი |  |
+| `roles.SUPER_COLLABORATOR` | Senior Editor | უფროსი შემსრულებელი |  |
+| `roles.COLLABORATOR` | Editor | შემსრულებელი |  |
 | `roles.CURATOR` | Curator | კურატორი |  |
-| `roles.RECEIVING_SUPER_COLLABORATOR` | Super-Collaborator | სუპერ-კოლაბორატორი |  |
+| `roles.RECEIVING_SUPER_COLLABORATOR` | Senior Editor | უფროსი შემსრულებელი |  |
 | `roles.RECEIVING_SUPERVISOR` | Supervisor | ზედამხედველი |  |
 
 ## Workflow statuses
@@ -154,9 +155,9 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | Key | English | Georgian | Notes |
 | --- | --- | --- | --- |
 | `status.draft` | Draft | პროექტი |  |
-| `status.submitted_to_super_collaborator` | At Super-Collaborator | სუპერ-კოლაბორატორთან |  |
-| `status.returned_by_super_collaborator` | Returned by Super-Collaborator | დაბრუნებული სუპერ-კოლაბორატორის მიერ |  |
-| `status.approved_by_super_collaborator` | Approved (Super-Collaborator) | დადასტურებული (სუპერ-კოლაბორატორი) |  |
+| `status.submitted_to_super_collaborator` | At Senior Editor | უფროს შემსრულებელთან |  |
+| `status.returned_by_super_collaborator` | Returned by Senior Editor | დაბრუნებული უფროსი შემსრულებლის მიერ |  |
+| `status.approved_by_super_collaborator` | Approved (Senior Editor) | დადასტურებული (უფროსი შემსრულებელი) |  |
 | `status.submitted_to_curator` | At Curator | კურატორთან |  |
 | `status.returned_by_curator` | Returned by Curator | დაბრუნებული კურატორის მიერ |  |
 | `status.approved_by_curator` | Approved (Curator) | დადასტურებული (კურატორი) |  |
@@ -166,9 +167,9 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `status.submitted_to_deputy` | At Deputy | მოადგილესთან |  |
 | `status.returned_by_deputy` | Returned by Deputy | დაბრუნებული მოადგილის მიერ |  |
 | `status.approved_by_deputy` | Approved (Deputy) | დადასტურებული (მოადგილე) |  |
-| `status.submitted_to_receiving_super_collaborator` | At Super-Collaborator (Review) | სუპერ-კოლაბორატორთან (განხილვა) |  |
-| `status.returned_by_receiving_super_collaborator` | Returned by Super-Collaborator (Review) | დაბრუნებული სუპერ-კოლაბორატორის მიერ (განხილვა) |  |
-| `status.approved_by_receiving_super_collaborator` | Approved (Super-Collaborator Review) | დადასტურებული (სუპერ-კოლაბორატორის განხილვა) |  |
+| `status.submitted_to_receiving_super_collaborator` | At Senior Editor (Review) | უფროს შემსრულებელთან (განხილვა) |  |
+| `status.returned_by_receiving_super_collaborator` | Returned by Senior Editor (Review) | დაბრუნებული უფროსი შემსრულებლის მიერ (განხილვა) |  |
+| `status.approved_by_receiving_super_collaborator` | Approved (Senior Editor Review) | დადასტურებული (უფროსი შემსრულებლის განხილვა) |  |
 | `status.submitted_to_receiving_supervisor` | At Supervisor (Review) | ზედამხედველთან (განხილვა) |  |
 | `status.returned_by_receiving_supervisor` | Returned by Supervisor (Review) | დაბრუნებული ზედამხედველის მიერ (განხილვა) |  |
 | `status.approved_by_receiving_supervisor` | Approved (Supervisor Review) | დადასტურებული (ზედამხედველის განხილვა) |  |
@@ -266,13 +267,13 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `admin.link.form.selectDeputy` | — Select Deputy — | — აირჩიეთ მოადგილე — |  |
 | `admin.link.form.selectSupervisor` | — Select Supervisor — | — აირჩიეთ ზედამხედველი — |  |
 | `admin.hier.title` | Department Hierarchy | დეპარტამენტის იერარქია |  |
-| `admin.hier.desc` | Shows how Supervisors, Super-Collaborators, and Collaborators are grouped within each department. | აჩვენებს, თუ როგორ არიან ზედამხედველები, სუპერ-კოლაბორატორები და კოლაბორატორები დაჯგუფებული თითოეულ დეპარტამენტში. |  |
+| `admin.hier.desc` | Shows how Supervisors, Senior Editors, and Editors are grouped within each department. | აჩვენებს, თუ როგორ არიან ზედამხედველები, უფროსი შემსრულებლები და შემსრულებლები დაჯგუფებული თითოეულ დეპარტამენტში. |  |
 | `admin.hier.empty` | No departments with assigned users | არ არის დეპარტამენტები მინიჭებული მომხმარებლებით |  |
 | `admin.hier.deputy` | Deputy | მოადგილე |  |
 | `admin.hier.noDeputy` | No deputy linked | მოადგილე არ არის მიბმული |  |
 | `admin.hier.supervisors` | Supervisors | ზედამხედველები |  |
-| `admin.hier.superCollabs` | Super-Collaborators | სუპერ-კოლაბორატორები |  |
-| `admin.hier.collaborators` | Collaborators | კოლაბორატორები |  |
+| `admin.hier.superCollabs` | Senior Editors | უფროსი შემსრულებლები |  |
+| `admin.hier.collaborators` | Editors | შემსრულებლები |  |
 | `admin.hier.none` | — None — | — არცერთი — |  |
 | `admin.upload.fdiTitle` | FDI Sectors | FDI სექტორები |  |
 | `admin.upload.fdiDesc` | Upload the Georgian FDI-by-country-by-sector XLSX file. The file must have a header row with "ქვეყნის კოდი" in column A, then one block per country (code, name, "სულ" row, sector sub-rows). | ატვირთეთ ქართული FDI-ქვეყანა-სექტორების XLSX ფაილი. ფაილს უნდა ჰქონდეს სათაურის ხაზი "ქვეყნის კოდი" A სვეტში, შემდეგ თითო ბლოკი ქვეყანაზე (კოდი, სახელი, "სულ" ხაზი, სექტორის ქვე-ხაზები). |  |
@@ -335,7 +336,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 
 | Key | English | Georgian | Notes |
 | --- | --- | --- | --- |
-| `editor.pageTitle` | Section Editor | სექციის რედაქტორი |  |
+| `editor.pageTitle` | Edit Section | სექციის რედაქტორი |  |
 | `editor.allTitle` | All Sections | ყველა სექცია |  |
 | `editor.saveAll.noneEditable` | No editable sections to save | შესანახი სექციები არ არის |  |
 | `editor.saveAll.inProgress` | Saving… | ინახება… |  |
@@ -393,7 +394,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `editor.history.empty` | No history yet | ისტორია ჯერ არ არის |  |
 | `editor.history.noComment` | No comment provided | კომენტარი არ არის მითითებული |  |
 | `editor.history.unknownUser` | Unknown | უცნობი |  |
-| `editor.history.stage.scReview` | Super-Collaborator (Review) | სუპერ-კოლაბორატორი (განხილვა) |  |
+| `editor.history.stage.scReview` | Senior Editor (Review) | უფროსი შემსრულებელი (განხილვა) |  |
 | `editor.history.stage.svReview` | Supervisor (Review) | ზედამხედველი (განხილვა) |  |
 | `editor.history.action.saved` | Edited | რედაქტირებული |  |
 | `editor.history.action.submitted` | Submitted | გაგზავნილი |  |
@@ -406,7 +407,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `editor.status.sectionOf` | Section {n} of {total} | სექცია {n} / {total} |  |
 | `editor.status.sectionsCount` | {total} sections | {total} სექცია |  |
 | `editor.status.words` | {n} words | {n} სიტყვა |  |
-| `editor.action.openInEditor` | Open in Editor | რედაქტორში გახსნა |  |
+| `editor.action.openInEditor` | Open for editing | რედაქტორში გახსნა |  |
 | `editor.action.updated` | Updated: | განახლდა: |  |
 | `editor.action.by` | by | მიერ |  |
 | `editor.toolbar.group.font` | Font | შრიფტი |  |
