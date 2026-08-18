@@ -72,6 +72,12 @@
   const appendixLoadingEl = document.getElementById('appendixLoading');
   const appendixHeaderEl = document.getElementById('appendixHeader');
   const appendixTableEl = document.getElementById('appendixTable');
+  const fdiAppendixWrapEl = document.getElementById('fdiAppendixWrap');
+  const fdiAppendixHeaderEl = document.getElementById('fdiAppendixHeader');
+  const fdiAppendixTableEl = document.getElementById('fdiAppendixTable');
+  const tourismAppendixWrapEl = document.getElementById('tourismAppendixWrap');
+  const tourismAppendixHeaderEl = document.getElementById('tourismAppendixHeader');
+  const tourismAppendixTableEl = document.getElementById('tourismAppendixTable');
 
   // ── State ────────────────────────────────────────────────────────────────
   let countries = [];
@@ -548,10 +554,13 @@
     'fdiSectorsHeader', 'fdiSectorsTable',
     'companiesSummary',
     'appendixHeader', 'appendixTable',
+    'fdiAppendixHeader', 'fdiAppendixTable',
+    'tourismAppendixHeader', 'tourismAppendixTable',
   ];
   // Container rows whose `hidden` class we snapshot.
   const SNAPSHOT_ROW_IDS = [
     'tradeChartsRow', 'tourismRow', 'fdiRow', 'fdiSectorsCard',
+    'fdiAppendixWrap', 'tourismAppendixWrap',
   ];
   // Card-style headers — each lives inside a `.card` whose
   // `display` style is toggled by showCard / hideCard.
@@ -1909,6 +1918,7 @@
         tourismTableEl.innerHTML = '';
         tourismChartHeader.innerHTML = '';
         if (tourismRowEl) tourismRowEl.classList.add('hidden');
+        if (tourismAppendixWrapEl) tourismAppendixWrapEl.classList.add('hidden');
         pdfState.tourism = { hasData: false };
         tourismLoading.classList.add('hidden');
         return;
@@ -1973,6 +1983,7 @@
             isCurrent: false,
             rank,
             share,
+            total: annualTotals[y] != null ? annualTotals[y] : null,
           });
         }
       }
@@ -1992,6 +2003,7 @@
           isCurrent: true,
           rank: curStats.rank,
           share: curStats.share,
+          total: currentTotal,
         });
         quarterlyRows.push({
           label: json.currentPeriod.compareLabel,
@@ -2022,6 +2034,10 @@
         visitors: countryData.current || 0,
       } : null;
       renderTourismChart(annualRows, tourismCurrentPeriod, isKa);
+      renderTourismAppendix(
+        quarterlyRows.length > 0 ? [...annualRows, quarterlyRows[0]] : annualRows,
+        isKa,
+      );
 
       pdfState.tourism = {
         hasData: true,
@@ -2043,6 +2059,7 @@
       console.error('Tourism error:', err);
       tourismTableEl.innerHTML = `<div class="msg msg-error">${escapeHtml(err.message)}</div>`;
       pdfState.tourism = { hasData: false };
+      if (tourismAppendixWrapEl) tourismAppendixWrapEl.classList.add('hidden');
     } finally {
       tourismLoading.classList.add('hidden');
       exportPdfBtn.disabled = false;
@@ -2281,6 +2298,7 @@
         pdfState.investments = { hasData: false };
         pdfState.investmentsSectors = null;
         if (fdiSectorsCardEl) fdiSectorsCardEl.classList.add('hidden');
+        if (fdiAppendixWrapEl) fdiAppendixWrapEl.classList.add('hidden');
         investmentsLoading.classList.add('hidden');
         return;
       }
@@ -2313,12 +2331,13 @@
         return { rank, share };
       }
 
-      // Build table data: year, value (mln USD), change %, rank, share
+      // Build table data: year, value (mln USD), change %, rank, share,
+      // plus the grand total of FDI into Georgia (for the appendix table)
       const tableData = displayYears.map(y => {
         const val = (countryData[y] || 0) / 1000;
         const prev = (countryData[y - 1] || 0) / 1000;
         const rs = val > 0 ? fdiRankAndShare(y) : { rank: null, share: null };
-        return { year: y, valueMln: val, prevMln: prev, rank: rs.rank, share: rs.share };
+        return { year: y, valueMln: val, prevMln: prev, rank: rs.rank, share: rs.share, totalMln: (fdiTotalsThd[y] || 0) / 1000 };
       });
 
       // Quarter rows: Geostat publishes quarters of the year following the
@@ -2351,7 +2370,7 @@
           const totalMln = (q.total || 0) / 1000;
           share = totalMln > 0 ? (val / totalMln) * 100 : null;
         }
-        tableData.push({ year: label, valueMln: val, prevMln: prev, rank, share });
+        tableData.push({ year: label, valueMln: val, prevMln: prev, rank, share, totalMln: (q.total || 0) / 1000 });
         latestQuarter = { year: q.year, quarters: qs, value: val, rank };
       }
 
@@ -2418,6 +2437,7 @@
 
       renderFdiTable(tableData, isKa);
       renderFdiChart(tableData, isKa);
+      renderFdiAppendix(tableData, isKa);
 
       pdfState.investments = {
         hasData: true,
@@ -2449,6 +2469,7 @@
       fdiTable.innerHTML = `<div class="msg msg-error">${escapeHtml(err.message)}</div>`;
       pdfState.investments = { hasData: false };
       if (fdiSectorsCardEl) fdiSectorsCardEl.classList.add('hidden');
+      if (fdiAppendixWrapEl) fdiAppendixWrapEl.classList.add('hidden');
     } finally {
       investmentsLoading.classList.add('hidden');
       exportPdfBtn.disabled = false;
@@ -3134,6 +3155,119 @@
     if (v == null || !isFinite(v)) return '-';
     const sign = signed && v > 0 ? '+' : '';
     return `${sign}${formatChangePct(v)}`;
+  }
+
+  // Country label + 3-letter abbreviation for the appendix row labels,
+  // matching renderAppendix.
+  function appendixCountryAbbr(isKa) {
+    const countryKa = selectedCountry ? selectedCountry.displayLabel : '';
+    const countryEn = (selectedCountry && countryNameEnMap[selectedCountry.value]) || countryKa;
+    const countryLabel = isKa ? countryKa : countryEn;
+    return (countryLabel || '').slice(0, 3);
+  }
+
+  // ── FDI appendix table ─────────────────────────────────────────────────
+  // Transposed view of the Investments section's data: periods as columns,
+  // rows = total FDI into Georgia, FDI from the selected country, change %
+  // and share %. `rows` is the tableData built in generateInvestments
+  // (5 annual years + the quarterly YTD entry when present).
+  function renderFdiAppendix(rows, isKa) {
+    if (!fdiAppendixWrapEl || !fdiAppendixHeaderEl || !fdiAppendixTableEl) return;
+    if (!rows || rows.length === 0) {
+      fdiAppendixWrapEl.classList.add('hidden');
+      return;
+    }
+
+    const abbr = appendixCountryAbbr(isKa);
+    const title = isKa ? 'პირდაპირი უცხოური ინვესტიციები' : 'Foreign Direct Investment';
+    fdiAppendixHeaderEl.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3><div style="font-size:0.85rem;color:var(--text-secondary);">${isKa ? 'მლნ. აშშ დოლარი' : 'mln USD'}</div>`;
+
+    const groupLabel = isKa ? 'ინვესტიციები' : 'FDI';
+    const headerCells = [`<th>&nbsp;</th>`]
+      .concat(rows.map(r => `<th>${escapeHtml(String(r.year))}</th>`))
+      .join('');
+
+    // Grand total of FDI into Georgia; a negative total (net disinvestment)
+    // is shown signed rather than hidden.
+    const totalCells = rows.map(r => {
+      if (!r.totalMln) return `<td>-</td>`;
+      const sign = r.totalMln < 0 ? '-' : '';
+      return `<td>${sign}${formatMln2(Math.abs(r.totalMln))}</td>`;
+    }).join('');
+
+    // Country value / change / share follow the section table's rules:
+    // non-positive values render "-" (no rank/change/share either).
+    const valueCells = rows.map(r =>
+      `<td>${r.valueMln > 0 ? formatMln2(r.valueMln) : '-'}</td>`).join('');
+    const changeCells = rows.map(r => {
+      if (!(r.valueMln > 0) || !(r.prevMln > 0)) return `<td>-</td>`;
+      const pct = ((r.valueMln - r.prevMln) / r.prevMln) * 100;
+      const cls = pct > 0 ? 'stat-positive' : (pct < 0 ? 'stat-negative' : '');
+      return `<td class="${cls}">${fmtAppendixPct(pct, true)}</td>`;
+    }).join('');
+    const shareCells = rows.map(r => {
+      if (!(r.valueMln > 0) || r.share == null) return `<td class="stat-appendix__share">-</td>`;
+      return `<td class="stat-appendix__share">${(Math.round(r.share * 10) / 10).toFixed(1)}%</td>`;
+    }).join('');
+
+    fdiAppendixTableEl.innerHTML = `
+      <table class="stat-appendix">
+        <thead><tr>${headerCells}</tr></thead>
+        <tbody>
+          <tr class="stat-appendix__group"><td>${escapeHtml(groupLabel)}</td>${totalCells}</tr>
+          <tr><td>${escapeHtml(`${groupLabel}-${abbr}`)}</td>${valueCells}</tr>
+          <tr><td>${isKa ? 'ცვლილება %' : 'Change %'}</td>${changeCells}</tr>
+          <tr><td>${isKa ? 'წილი %' : 'Share %'}</td>${shareCells}</tr>
+        </tbody>
+      </table>`;
+    fdiAppendixWrapEl.classList.remove('hidden');
+  }
+
+  // ── Tourism appendix table ─────────────────────────────────────────────
+  // Transposed view of the Tourism section's data: periods as columns,
+  // rows = total visitors to Georgia, visitors from the selected country,
+  // change % and share %. `rows` = annualRows plus the current YTD entry.
+  function renderTourismAppendix(rows, isKa) {
+    if (!tourismAppendixWrapEl || !tourismAppendixHeaderEl || !tourismAppendixTableEl) return;
+    if (!rows || rows.length === 0) {
+      tourismAppendixWrapEl.classList.add('hidden');
+      return;
+    }
+
+    const abbr = appendixCountryAbbr(isKa);
+    const title = isKa ? 'საერთაშორისო ვიზიტორები' : 'International Visitors';
+    tourismAppendixHeaderEl.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3>`;
+
+    const groupLabel = isKa ? 'ვიზიტორები' : 'Visitors';
+    const headerCells = [`<th>&nbsp;</th>`]
+      .concat(rows.map(r => `<th>${escapeHtml(localizePeriodLabel(r.label, isKa))}</th>`))
+      .join('');
+
+    const totalCells = rows.map(r =>
+      `<td>${r.total > 0 ? Number(r.total).toLocaleString() : '-'}</td>`).join('');
+    const valueCells = rows.map(r =>
+      `<td>${r.visitors > 0 ? Number(r.visitors).toLocaleString() : '-'}</td>`).join('');
+    const changeCells = rows.map(r => {
+      if (!(r.visitors > 0) || r.changePct == null) return `<td>-</td>`;
+      const cls = r.changePct > 0 ? 'stat-positive' : (r.changePct < 0 ? 'stat-negative' : '');
+      return `<td class="${cls}">${fmtAppendixPct(r.changePct, true)}</td>`;
+    }).join('');
+    const shareCells = rows.map(r => {
+      if (!(r.visitors > 0) || r.share == null) return `<td class="stat-appendix__share">-</td>`;
+      return `<td class="stat-appendix__share">${r.share.toFixed(1)}%</td>`;
+    }).join('');
+
+    tourismAppendixTableEl.innerHTML = `
+      <table class="stat-appendix">
+        <thead><tr>${headerCells}</tr></thead>
+        <tbody>
+          <tr class="stat-appendix__group"><td>${escapeHtml(groupLabel)}</td>${totalCells}</tr>
+          <tr><td>${escapeHtml(`${groupLabel}-${abbr}`)}</td>${valueCells}</tr>
+          <tr><td>${isKa ? 'ცვლილება %' : 'Change %'}</td>${changeCells}</tr>
+          <tr><td>${isKa ? 'წილი %' : 'Share %'}</td>${shareCells}</tr>
+        </tbody>
+      </table>`;
+    tourismAppendixWrapEl.classList.remove('hidden');
   }
 
   // Data fetch failed (Geostat unavailable) — say so instead of leaving
