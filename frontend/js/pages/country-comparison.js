@@ -61,6 +61,11 @@
   const fdiSectorsCard = document.getElementById('fdiSectorsCard');
   const fdiSectorsHeader = document.getElementById('fdiSectorsHeader');
   const fdiSectorsTable = document.getElementById('fdiSectorsTable');
+  const tourismSection = document.getElementById('tourismSection');
+  const tourismChartHeader = document.getElementById('tourismChartHeader');
+  const tourismCanvas = document.getElementById('cmpTourismChart');
+  const tourismTableHeader = document.getElementById('tourismTableHeader');
+  const tourismTable = document.getElementById('tourismTable');
   const reportLangToggle = document.getElementById('reportLangToggle');
 
   // ── State ──────────────────────────────────────────────────────────────
@@ -71,7 +76,7 @@
   let useProxy = false;
   let lastResult = null; // everything needed to re-render on language toggle
   let generating = false;
-  const chartInstances = { turnover: null, export: null, import: null, fdi: null };
+  const chartInstances = { turnover: null, export: null, import: null, fdi: null, tourism: null };
 
   // Same per-page report language convention (and persisted key) as the
   // statistics page — independent from the global site locale.
@@ -289,6 +294,63 @@
   }
   function grammarFor(nominative) {
     return countryGrammar[nominative] || kaGrammarFallback(nominative || '');
+  }
+
+  // ── Country name mapping (GNTA tourism names) ──────────────────────────
+  // GNTA tourism data is keyed by Georgian country names that don't always
+  // match the Geostat classificatory labels. Copied from statistics.js:303-324.
+  const countryNameMap = {}; // variant → canonical GNTA name
+  try {
+    const csvRes = await fetch('/data/country-name-mapping.csv');
+    const csvText = await csvRes.text();
+    for (const line of csvText.split('\n').slice(1)) {
+      // CSV format: "variant","canonical"
+      const match = line.match(/"([^"]*)","([^"]*)"/);
+      if (match) countryNameMap[match[1].trim()] = match[2].trim();
+    }
+  } catch (err) {
+    console.error('Failed to load country name mapping:', err);
+  }
+
+  // Apply canonical names to each country's KA display label, keeping the
+  // original trade name as rawLabel (statistics.js:319-324).
+  for (const c of countries) {
+    c.rawLabel = c.displayLabelKa;
+    const canonical = countryNameMap[c.displayLabelKa];
+    if (canonical) c.displayLabelKa = canonical;
+    c.displayLabel = reportLocale === 'ka' ? c.displayLabelKa : c.displayLabelEn;
+  }
+
+  // English → Georgian-canonical entries so GNTA resolution works when the
+  // report language is English (statistics.js:442-450).
+  for (const c of countries) {
+    const englishName = countryNameEnMap[c.value];
+    const georgianName = countryNameKaMap[c.value];
+    const georgianCanonical = (georgianName && countryNameMap[georgianName]) || georgianName;
+    if (englishName && georgianCanonical && !countryNameMap[englishName]) {
+      countryNameMap[englishName] = georgianCanonical;
+    }
+  }
+
+  // Resolve a classificatory country to a GNTA dataset key
+  // (copied from statistics.js:1854).
+  function resolveGntaName(country, gntaCountries) {
+    const canonical = country.displayLabel;
+    const raw = country.rawLabel || canonical;
+    if (gntaCountries[canonical]) return canonical;
+    if (gntaCountries[raw]) return raw;
+    const mapped = countryNameMap[canonical];
+    if (mapped && gntaCountries[mapped]) return mapped;
+    const mappedRaw = countryNameMap[raw];
+    if (mappedRaw && gntaCountries[mappedRaw]) return mappedRaw;
+    const target = mapped || canonical;
+    for (const [variant, canon] of Object.entries(countryNameMap)) {
+      if (canon === target && gntaCountries[variant]) return variant;
+    }
+    for (const gntaName of Object.keys(gntaCountries)) {
+      if (gntaName.includes(target) || target.includes(gntaName)) return gntaName;
+    }
+    return null;
   }
 
   // Georgian month forms (copied from statistics.js:1285-1287)
@@ -922,6 +984,95 @@
     return `In ${p.year} ${range}`;
   }
 
+  // ── Tourism helpers ────────────────────────────────────────────────────
+  // GNTA visitor data is annual (2011+) plus a single current YTD quarterly
+  // period (e.g. "2026 I-II კვ" vs "2025 I-II კვ"). The tourism section
+  // follows the trade charts' year window; the month selection is ignored
+  // (no sub-annual history exists) and years before 2011 are dropped.
+
+  // GNTA period labels arrive in Georgian ("2026 I-II კვ"); English gets
+  // "2026 Q1-Q2". Bare year labels pass through (statistics.js:2077).
+  function localizePeriodLabel(label, isKa) {
+    if (isKa) return label || '';
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(label || '');
+    if (!m) return label || '';
+    const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `${m[1]} ${q}`;
+  }
+
+  // Prose form of one tourism point's period: "2024 წელს" / "In 2024",
+  // "2026 წლის I-II კვარტლებში" / "In Q1-Q2 2026".
+  function tourismPeriodProse(p, isKa) {
+    if (!p.isCurrent) {
+      return isKa ? `${p.year} წელს` : `In ${p.year}`;
+    }
+    const m = /^(\d{4})\s+([IVX]+(?:-[IVX]+)?)\s+კვ$/.exec(p.label || '');
+    if (!m) return isKa ? (p.label || '') : `In ${localizePeriodLabel(p.label, false)}`;
+    if (isKa) {
+      return `${m[1]} წლის ${m[2]} ${m[2].includes('-') ? 'კვარტლებში' : 'კვარტალში'}`;
+    }
+    const romanToInt = { I: 1, II: 2, III: 3, IV: 4 };
+    const q = m[2].split('-').map(r => `Q${romanToInt[r] || r}`).join('-');
+    return `In ${q} ${m[1]}`;
+  }
+
+  // Map the trade window's years onto tourism points for one country.
+  // Rank = position among resolved real countries (aggregates excluded via
+  // validNames) with positive visitors; share = own value / grand total
+  // from the source file (adapted from statistics.js:1934-2004).
+  function buildTourismPoints(tJson, gntaKey, points, validNames) {
+    const countryData = gntaKey ? tJson.countries[gntaKey] : null;
+    const annual = (countryData && countryData.annual) || {};
+    const allYears = tJson.years || [];
+    const lastAnnual = allYears[allYears.length - 1];
+    const annualTotals = (tJson.totals && tJson.totals.annual) || {};
+
+    function rankShare(pickVal, totalVal) {
+      if (!gntaKey) return { rank: null, share: null };
+      const entries = [];
+      for (const [name, d] of Object.entries(tJson.countries)) {
+        if (!validNames.has(name)) continue;
+        const val = pickVal(d) || 0;
+        if (val > 0) entries.push({ name, val });
+      }
+      entries.sort((a, b) => b.val - a.val);
+      const idx = entries.findIndex(e => e.name === gntaKey);
+      const rank = idx >= 0 ? idx + 1 : null;
+      const ownVal = pickVal(countryData) || 0;
+      const share = totalVal && totalVal > 0 ? (ownVal / totalVal) * 100 : null;
+      return { rank, share };
+    }
+
+    const out = [];
+    const seen = new Set();
+    for (const p of points) {
+      if (seen.has(p.year)) continue;
+      seen.add(p.year);
+      if (allYears.includes(p.year)) {
+        const val = annual[p.year] || 0;
+        const prev = annual[p.year - 1] || 0;
+        const pct = prev > 0 ? ((val - prev) / prev * 100) : (val > 0 ? 100 : 0);
+        const rs = val > 0
+          ? rankShare(d => (d.annual && d.annual[p.year]) || 0, annualTotals[p.year])
+          : { rank: null, share: null };
+        out.push({ year: p.year, label: String(p.year), isCurrent: false, visitors: val, changePct: pct, rank: rs.rank, share: rs.share });
+      } else if (p.year > lastAnnual && tJson.currentPeriod) {
+        const m = /(\d{4})/.exec(tJson.currentPeriod.label || '');
+        if (!m || Number(m[1]) !== p.year) continue; // no published period for this year
+        const cur = (countryData && countryData.current) || 0;
+        const cmp = (countryData && countryData.compare) || 0;
+        const pct = cmp > 0 ? ((cur - cmp) / cmp * 100) : (cur > 0 ? 100 : 0);
+        const rs = cur > 0
+          ? rankShare(d => d.current || 0, tJson.totals ? tJson.totals.current : null)
+          : { rank: null, share: null };
+        out.push({ year: p.year, label: tJson.currentPeriod.label, isCurrent: true, visitors: cur, changePct: pct, rank: rs.rank, share: rs.share });
+      }
+      // Years before the first annual year (2011) are dropped.
+    }
+    return out;
+  }
+
   // ── Generate ───────────────────────────────────────────────────────────
 
   generateBtn.addEventListener('click', () => {
@@ -975,7 +1126,7 @@
         exp1Prev, imp1Prev, exp2Prev, imp2Prev,
         expHs1, expHs1Prev, reexHs1, impHs1, impHs1Prev,
         expHs2, expHs2Prev, reexHs2, impHs2, impHs2Prev,
-        fdiJson, fdiSectorsJson,
+        fdiJson, fdiSectorsJson, tourismJson,
       ] = await Promise.all([
         Promise.all(points.map(p => totalFor(10, p, c1))),
         Promise.all(points.map(p => totalFor(11, p, c1))),
@@ -997,6 +1148,7 @@
         // must not fail the trade report.
         fetch(`${PROXY_API}/fdi`).then(r => r.json()).catch(() => null),
         fetch(`${PROXY_API}/fdi-sectors`).then(r => r.json()).catch(() => null),
+        fetch(`${PROXY_API}/tourism`).then(r => r.json()).catch(() => null),
       ]);
 
       const toMln = arr => arr.map(v => v / 1000);
@@ -1034,6 +1186,21 @@
         }
       }
 
+      // Tourism is best-effort like FDI: a failure hides its section.
+      let tourism = { available: false };
+      if (tourismJson && tourismJson.success && tourismJson.countries) {
+        const validNames = new Set();
+        for (const c of countries) {
+          const resolved = resolveGntaName(c, tourismJson.countries);
+          if (resolved) validNames.add(resolved);
+        }
+        const key1 = resolveGntaName(selectedCountry1, tourismJson.countries);
+        const key2 = resolveGntaName(selectedCountry2, tourismJson.countries);
+        const tPoints1 = buildTourismPoints(tourismJson, key1, points, validNames);
+        const tPoints2 = buildTourismPoints(tourismJson, key2, points, validNames);
+        if (tPoints1.length) tourism = { available: true, points1: tPoints1, points2: tPoints2 };
+      }
+
       lastResult = {
         country1: selectedCountry1,
         country2: selectedCountry2,
@@ -1063,6 +1230,7 @@
         },
         fdi,
         fdiSectors,
+        tourism,
       };
 
       renderComparison();
@@ -1126,6 +1294,8 @@
 
     renderInvestments(name1, name2, isKa);
 
+    renderTourismCmp(name1, name2, isKa);
+
     renderComparisonSummary();
 
     cmpSections.classList.remove('hidden');
@@ -1159,6 +1329,75 @@
     } else {
       fdiSectorsCard.classList.add('hidden');
     }
+  }
+
+  // ── Tourism render ─────────────────────────────────────────────────────
+
+  function renderTourismCmp(name1, name2, isKa) {
+    const t = lastResult.tourism;
+    if (!t || !t.available || !t.points1.length) {
+      tourismSection.classList.add('hidden');
+      return;
+    }
+    tourismSection.classList.remove('hidden');
+
+    const title = isKa ? 'საერთაშორისო ვიზიტორები' : 'International Visitors';
+    const labels = t.points1.map(p => localizePeriodLabel(p.label, isKa));
+    renderLineChart('tourism', tourismChartHeader, tourismCanvas, title,
+      labels, t.points1.map(p => p.visitors), t.points2.map(p => p.visitors),
+      name1, name2, 'bar', v => Number(v).toLocaleString());
+
+    renderTourismTableCmp(t, name1, name2, isKa);
+  }
+
+  // Merged visitors table: period rows, one 4-column group per country
+  // (columns adapted from statistics.js:2128 renderTourismTable).
+  function renderTourismTableCmp(t, name1, name2, isKa) {
+    tourismTableHeader.innerHTML = `<h3 class="stat-report__title">${isKa ? 'ვიზიტორები' : 'Visitors'}</h3>`;
+
+    const hPeriod = isKa ? 'პერიოდი' : 'Period';
+    const hVisitors = isKa ? 'ვიზიტორები' : 'Visitors';
+    const hChange = isKa ? 'ცვლილება, %' : 'Change, %';
+    const hRank = isKa ? 'ადგილი' : 'Rank';
+    const hShare = isKa ? 'წილი, %' : 'Share, %';
+    const sub = `<th class="stat-col-value">${hVisitors}</th><th class="stat-col-change">${hChange}</th><th class="stat-col-change">${hRank}</th><th class="stat-col-change">${hShare}</th>`;
+
+    let html = `<table class="stat-table">
+      <thead>
+        <tr>
+          <th rowspan="2">${hPeriod}</th>
+          <th colspan="4" style="text-align:center;color:${C1_COLOR};">${escapeHtml(name1)}</th>
+          <th colspan="4" style="text-align:center;color:${C2_COLOR};">${escapeHtml(name2)}</th>
+        </tr>
+        <tr>${sub}${sub}</tr>
+      </thead>
+      <tbody>`;
+
+    const cells = (p) => {
+      const has = p.visitors > 0;
+      const visitorsCell = has ? Number(p.visitors).toLocaleString() : '-';
+      let changeCell = '-';
+      let changeClass = '';
+      if (has && p.changePct !== null && p.changePct !== undefined) {
+        changeClass = p.changePct > 0 ? 'stat-positive' : (p.changePct < 0 ? 'stat-negative' : '');
+        changeCell = `${p.changePct > 0 ? '+' : ''}${formatChangePct(p.changePct)}`;
+      }
+      const rankCell = has && p.rank ? String(p.rank) : '-';
+      const shareCell = has && p.share != null ? `${p.share.toFixed(1)}%` : '-';
+      return `<td class="stat-col-value">${visitorsCell}</td>` +
+        `<td class="stat-col-change ${changeClass}">${changeCell}</td>` +
+        `<td class="stat-col-change">${rankCell}</td>` +
+        `<td class="stat-col-change">${shareCell}</td>`;
+    };
+
+    const rows1 = [...t.points1].reverse();
+    const rows2 = [...t.points2].reverse();
+    rows1.forEach((p1, i) => {
+      html += `<tr><td>${escapeHtml(localizePeriodLabel(p1.label, isKa))}</td>${cells(p1)}${cells(rows2[i])}</tr>`;
+    });
+
+    html += '</tbody></table>';
+    tourismTable.innerHTML = html;
   }
 
   function renderCmpFdiHeader(el, countryName, isKa) {
@@ -1295,7 +1534,7 @@
 
   // ── Line charts ────────────────────────────────────────────────────────
 
-  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line') {
+  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line', valueFormatter = chartLabel) {
     headerEl.innerHTML = `
       <div class="stat-chart-title-row">
         <h3 class="stat-report__title">${escapeHtml(title)}</h3>
@@ -1350,7 +1589,7 @@
           datalabels: {
             font: { size: 11, weight: '600' },
             clamp: true,
-            formatter: (v) => chartLabel(v),
+            formatter: (v) => valueFormatter(v),
           },
         },
         scales: {
@@ -1409,6 +1648,7 @@
         export: isKa ? 'ექსპორტი' : 'exports',
         import: isKa ? 'იმპორტი' : 'imports',
         fdi: isKa ? 'ინვესტიციები' : 'FDI',
+        tourism: isKa ? 'ვიზიტორები' : 'visitor numbers',
       }[metricKey];
       const [bigName, big, smallName, small, bigGen, smallGen] = v1 >= v2
         ? [name1, v1, name2, v2, g1.of, g2.of]
@@ -1416,7 +1656,7 @@
       if (small < INSIGNIFICANT_MLN) {
         return isKa
           ? ` ${escapeHtml(smallGen)} შემთხვევაში ${subject} უმნიშვნელოა.`
-          : ` For ${escapeHtml(smallName)}, ${subject} ${metricKey === 'export' || metricKey === 'import' ? 'were' : 'was'} negligible.`;
+          : ` For ${escapeHtml(smallName)}, ${subject} ${['turnover', 'fdi'].includes(metricKey) ? 'was' : 'were'} negligible.`;
       }
       const ratio = big / small;
       if (Math.abs(v1 - v2) / Math.max(v1, v2) <= 0.01) {
@@ -1516,6 +1756,49 @@
           ? `${fdiProse} ${fdiFragment(g1, name1, f1)}, ხოლო ${fdiFragment(g2, name2, f2)}.`
           : `${fdiProse}, ${fdiFragment(g1, name1, f1)}, while ${fdiFragment(g2, name2, f2)}.`
       }${(f1.valueMln > 0 && f2.valueMln > 0) ? compareSentence('fdi', f1.valueMln, f2.valueMln) : ''}</p>`);
+    }
+
+    // Tourism — based on the visitor point for the chosen year (annual when
+    // covered, current YTD for the current year, else the latest point in
+    // the window). Skipped entirely when the tourism fetch failed.
+    if (r.tourism && r.tourism.available && r.tourism.points1.length) {
+      const pts1 = r.tourism.points1;
+      const pts2 = r.tourism.points2;
+      let tIdx = pts1.findIndex(p => p.year === r.chosen.year);
+      if (tIdx < 0) tIdx = pts1.length - 1;
+      const t1 = pts1[tIdx];
+      const t2 = pts2[tIdx];
+      const tProse = tourismPeriodProse(t1, isKa);
+
+      function tourismExtras(p) {
+        const parts = [];
+        if (p.visitors > 0 && p.changePct !== null && p.changePct !== undefined) {
+          parts.push(`${p.changePct > 0 ? '+' : ''}${formatChangePct(p.changePct)}`);
+        }
+        if (p.visitors > 0 && p.rank) {
+          parts.push(isKa ? `ადგილი: ${p.rank}` : `rank ${p.rank}`);
+        }
+        return parts.length ? ` (${parts.join(', ')})` : '';
+      }
+
+      function tourismFragment(g, name, p) {
+        if (!(p.visitors > 0)) {
+          return isKa
+            ? `${escapeHtml(g.from)} ვიზიტორები არ ფიქსირდება`
+            : `no visitors were recorded from ${escapeHtml(name)}`;
+        }
+        return isKa
+          ? `${escapeHtml(g.from)} საქართველოში განხორციელდა ${Number(p.visitors).toLocaleString()} ვიზიტი${tourismExtras(p)}`
+          : `${Number(p.visitors).toLocaleString()} visits were made from ${escapeHtml(name)} to Georgia${tourismExtras(p)}`;
+      }
+
+      lines.push('<hr />');
+      lines.push(`<h4>${isKa ? 'ტურიზმი' : 'Tourism'}</h4>`);
+      lines.push(`<p>${
+        isKa
+          ? `${tProse} ${tourismFragment(g1, name1, t1)}, ხოლო ${tourismFragment(g2, name2, t2)}.`
+          : `${tProse}, ${tourismFragment(g1, name1, t1)}, while ${tourismFragment(g2, name2, t2)}.`
+      }${(t1.visitors > 0 && t2.visitors > 0) ? compareSentence('tourism', t1.visitors, t2.visitors) : ''}</p>`);
     }
 
     cmpSummaryEl.innerHTML = lines.join('');
