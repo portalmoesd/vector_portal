@@ -266,6 +266,7 @@
       "title": "Title *",
       "titleNoStar": "Title",
       "country": "Country *",
+      "documentType": "Document Type *",
       "workflow": "Workflow *",
       "workflowSimple": "Simple",
       "workflowAdvanced": "Advanced",
@@ -290,6 +291,10 @@
       "selectSuperCollaborator": "— Select Super-Collaborator —",
       "selectTemplate": "— Select Template —",
       "sectionTitlePlaceholder": "Section title"
+    },
+    "docType": {
+      "OTHER": "Other",
+      "DISCUSSION_POINTS": "Discussion Points"
     },
     "warn": {
       "missingRequired": "Title, Country, and DS Role are required",
@@ -474,7 +479,9 @@
     "editTooltip": "Reopen this document for editing — it will leave the Library until you re-publish.",
     "sectionSelect": {
       "selectAll": "Select all",
-      "warnEmpty": "Select at least one section."
+      "warnEmpty": "Select at least one section.",
+      "untitledTopic": "(untitled topic)",
+      "warnEmptyTopics": "Select at least one discussion point."
     },
     "export": {
       "pdfTitle": "Export PDF",
@@ -719,6 +726,21 @@
       "justifyRight": "Align right",
       "justifyFull": "Justify",
       "removeFormat": "Clear formatting"
+    },
+    "dp": {
+      "sectionHint": "This document is composed of discussion points. Add one point per topic.",
+      "topic": "Discussion Point Topic",
+      "topicPlaceholder": "Enter the topic…",
+      "context": "Discussion Point Context",
+      "additional": "Additional Information",
+      "add": "+ Add discussion point",
+      "delete": "Delete discussion point",
+      "moveUp": "Move up",
+      "moveDown": "Move down",
+      "untitled": "Untitled discussion point",
+      "empty": "No discussion points yet.",
+      "emptyReadonly": "No discussion points have been added yet.",
+      "confirmDelete": "Delete this discussion point and all of its content?"
     }
   }
 }

@@ -3,8 +3,9 @@
  *
  * The allowlist mirrors the vocabulary GCP.RichEditor actually produces:
  * basic blocks, inline formatting, tables, tracked-change markup
- * (<ins>/<del>/<span> with data-tc-* attributes) and comment anchors
- * (<span class="gcp-cmt-anchor" data-cmt-anchor-id>). Everything else —
+ * (<ins>/<del>/<span> with data-tc-* attributes), comment anchors
+ * (<span class="gcp-cmt-anchor" data-cmt-anchor-id>) and the discussion-point
+ * scaffolding GCP.DiscussionPointsEditor produces (data-dp-*). Everything else —
  * scripts, event handlers, javascript: URLs, iframes — is stripped before
  * the content ever reaches the database.
  */
@@ -16,6 +17,12 @@ const TC_DATA_ATTRS = [
   'data-tc-author', 'data-tc-initials', 'data-tc-color', 'data-tc-time',
   'data-cmt-anchor-id',
 ];
+
+// Discussion-point scaffolding (documents whose event.document_type is
+// DISCUSSION_POINTS). The structure is carried entirely by data attributes —
+// never classes — because allowedClasses below keeps only the comment anchor
+// and strips everything else.
+const DP_DATA_ATTRS = ['data-dp-id', 'data-dp-field'];
 
 const COLOR_RE = /^(#[0-9a-fA-F]{3,8}|rgba?\([\d.,\s%]+\)|[a-zA-Z-]+)$/;
 const SIZE_RE = /^-?\d+(\.\d+)?(px|pt|em|rem|%)?$/;
@@ -55,7 +62,7 @@ const OPTIONS = {
     'img',
   ],
   allowedAttributes: {
-    '*': ['style', 'title', ...TC_DATA_ATTRS],
+    '*': ['style', 'title', ...TC_DATA_ATTRS, ...DP_DATA_ATTRS],
     a: ['href', 'name', 'target', 'rel'],
     font: ['color', 'face', 'size'],
     td: ['colspan', 'rowspan'],

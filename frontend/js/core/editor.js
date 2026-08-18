@@ -613,11 +613,11 @@
 
     // ── Fullscreen button ────────────────────────────────────────────────────
     const fsSep = document.createElement('span');
-    fsSep.className = 'gcp-re-sep'; fsSep.setAttribute('aria-hidden', 'true');
+    fsSep.className = 'gcp-re-sep gcp-re-sep--fullscreen'; fsSep.setAttribute('aria-hidden', 'true');
     toolbar.appendChild(fsSep);
 
     const fsBtn = document.createElement('button');
-    fsBtn.type = 'button'; fsBtn.className = 'gcp-re-btn';
+    fsBtn.type = 'button'; fsBtn.className = 'gcp-re-btn gcp-re-btn--fullscreen';
     fsBtn.setAttribute('aria-label', I18n.tr('editor.fullscreen.aria'));
     fsBtn.title = I18n.tr('editor.fullscreen.title');
     fsBtn.innerHTML = '<svg class="gcp-re-btn-fullscreen-icon-expand" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M1 5V1h4M11 1h4v4M15 11v4h-4M5 15H1v-4"/></svg><svg class="gcp-re-btn-fullscreen-icon-compress" viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M5 1v4H1M15 5h-4V1M11 15v-4h4M1 11h4v4"/></svg>';

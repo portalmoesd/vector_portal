@@ -344,6 +344,7 @@
           <p><strong>Document Submitter:</strong> ${escapeHtml(localizedName(e.documentSubmitterName, e.documentSubmitterNameKa))} (${roleLabel(e.documentSubmitterRole)})</p>
           ${e.deputyName ? `<p><strong>Deputy:</strong> ${escapeHtml(localizedName(e.deputyName, e.deputyNameKa))}</p>` : ''}
           ${e.supervisorName ? `<p><strong>Responsible Supervisor:</strong> ${escapeHtml(localizedName(e.supervisorName, e.supervisorNameKa))}</p>` : ''}
+          <p><strong>Document Type:</strong> ${escapeHtml(I18n.tr('calendar.docType.' + (e.documentType || 'OTHER')))}</p>
           <p><strong>Curator Required:</strong> ${e.curatorRequired ? 'Yes' : 'No'}</p>
           ${e.occasion ? `<div><strong>Task:</strong> ${e.occasion}</div>` : ''}
           ${e.deadlineDate ? `<p><strong>Deadline:</strong> ${formatDate(e.deadlineDate)}</p>` : ''}

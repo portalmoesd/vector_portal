@@ -78,6 +78,9 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `calendar.form.title` | Title * | სათაური * |  |
 | `calendar.form.titleNoStar` | Title | სათაური |  |
 | `calendar.form.country` | Country * | ქვეყანა * |  |
+| `calendar.form.documentType` | Document Type * | დოკუმენტის ტიპი * |  |
+| `calendar.docType.OTHER` | Other | სხვა |  |
+| `calendar.docType.DISCUSSION_POINTS` | Discussion Points | განსახილველი საკითხები |  |
 | `calendar.form.workflow` | Workflow * | დადასტურების პროცესი * |  |
 | `calendar.form.workflowSimple` | Simple | მარტივი |  |
 | `calendar.form.workflowAdvanced` | Advanced | სრული |  |
@@ -309,6 +312,8 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `library.editTooltip` | Reopen this document for editing — it will leave the Library until you re-publish. | გახსენით დოკუმენტი რედაქტირებისთვის — ბიბლიოთეკიდან ის ამოვა, ვიდრე თავიდან არ გამოაქვეყნებთ. |  |
 | `library.sectionSelect.selectAll` | Select all | ყველას არჩევა |  |
 | `library.sectionSelect.warnEmpty` | Select at least one section. | აირჩიეთ მინიმუმ ერთი სექცია. |  |
+| `library.sectionSelect.untitledTopic` | (untitled topic) | (უსათაურო საკითხი) |  |
+| `library.sectionSelect.warnEmptyTopics` | Select at least one discussion point. | აირჩიეთ მინიმუმ ერთი განსახილველი საკითხი. |  |
 | `library.export.pdfTitle` | Export PDF | PDF ექსპორტი |  |
 | `library.export.wordTitle` | Export Word | Word ექსპორტი |  |
 | `library.export.fail` | Export failed: | ექსპორტი ვერ მოხერხდა: |  |
@@ -449,3 +454,33 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `editor.find.replaceAll` | Replace All | ყველას ჩანაცვლება |  |
 | `editor.find.prev` | Previous | წინა |  |
 | `editor.find.next` | Next | შემდეგი |  |
+
+## Discussion Points editor
+
+Shown only for documents whose type is "განსახილველი საკითხები".
+
+| Key | English | Georgian | Notes |
+| --- | --- | --- | --- |
+| `editor.dp.sectionHint` | This document is composed of discussion points. Add one point per topic. | ეს დოკუმენტი შედგება განსახილველი საკითხებისგან. თითოეულ თემაზე დაამატეთ ცალკე საკითხი. |  |
+| `editor.dp.topic` | Discussion Point Topic | განსახილველი საკითხის სათაური |  |
+| `editor.dp.topicPlaceholder` | Enter the topic… | შეიყვანეთ საკითხი… |  |
+| `editor.dp.context` | Discussion Point Context | განსახილველი საკითხის კონტექსტი |  |
+| `editor.dp.additional` | Additional Information | დამატებითი ინფორმაცია |  |
+| `editor.dp.add` | + Add discussion point | + საკითხის დამატება |  |
+| `editor.dp.delete` | Delete discussion point | საკითხის წაშლა |  |
+| `editor.dp.moveUp` | Move up | ზემოთ გადატანა |  |
+| `editor.dp.moveDown` | Move down | ქვემოთ გადატანა |  |
+| `editor.dp.untitled` | Untitled discussion point | უსათაურო საკითხი |  |
+| `editor.dp.empty` | No discussion points yet. | საკითხები ჯერ არ არის დამატებული. |  |
+| `editor.dp.emptyReadonly` | No discussion points have been added yet. | საკითხები ჯერ არ არის დამატებული. |  |
+| `editor.dp.confirmDelete` | Delete this discussion point and all of its content? | წავშალოთ ეს საკითხი და მისი მთელი შიგთავსი? |  |
+
+The PDF / Word exports print their own field labels in the **document's**
+language (`events.language`), not the reader's UI locale, so these three are
+held in `frontend/js/core/discussion-points.js` rather than the locale files:
+
+| Field | English | Georgian | Russian |
+| --- | --- | --- | --- |
+| Context heading | Context | კონტექსტი | Контекст |
+| Additional heading | Additional Information | დამატებითი ინფორმაცია | Дополнительная информация |
+| Untitled point fallback | Point N | საკითხი N | Вопрос N |
