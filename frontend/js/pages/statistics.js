@@ -13,10 +13,24 @@
   if (!user) return;
 
   // The Latest Statistics ⇄ Country Comparison switch — available to
-  // every role that can see the statistics page.
+  // every role that can see the statistics page. The sliding thumb sits
+  // under the active tab (same mechanism as the dashboards' mn-toggle,
+  // dashboard-minister.js).
   const statModeSwitchEl = document.getElementById('statModeSwitch');
+  const statModeThumbEl = document.getElementById('statModeThumb');
+  function positionModeThumb() {
+    if (!statModeSwitchEl || !statModeThumbEl) return;
+    const active = statModeSwitchEl.querySelector('.stat-mode-switch__btn.active');
+    if (!active) return;
+    statModeThumbEl.style.left = active.offsetLeft + 'px';
+    statModeThumbEl.style.width = active.offsetWidth + 'px';
+  }
   if (statModeSwitchEl) {
     statModeSwitchEl.classList.remove('hidden');
+    positionModeThumb();
+    window.addEventListener('resize', positionModeThumb);
+    // Webfont load changes the label widths — realign once fonts are in.
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionModeThumb);
   }
 
   // ── Constants ──────────────────────────────────────────────────────────
@@ -391,12 +405,13 @@
   function applyReportLocale(regenerate = true) {
     const ka = reportLocale === 'ka';
 
-    // Mode switch labels
+    // Mode switch labels (label widths change → realign the thumb)
     if (statModeSwitchEl) {
       const btnLatest = statModeSwitchEl.querySelector('[data-mode="latest"]');
       const btnCmp = statModeSwitchEl.querySelector('[data-mode="comparison"]');
       if (btnLatest) btnLatest.textContent = ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
       if (btnCmp) btnCmp.textContent = ka ? 'ქვეყნების შედარება' : 'Country Comparison';
+      positionModeThumb();
     }
 
     // Tabs

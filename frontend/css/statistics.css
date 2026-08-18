@@ -124,13 +124,19 @@ html { scroll-padding-top: 160px; }
 }
 
 /* Mode switch: Latest Statistics ⇄ Country Comparison.
-   Same pill styling family as the report-language toggle below. */
+   Same segmented-toggle design as the dashboards' mn-toggle
+   (dashboard-minister.css) — glassy pill with a sliding gradient thumb
+   under the active tab, positioned by the page script. */
 .stat-mode-switch {
+  position: relative;
   display: inline-flex;
+  padding: 4px;
   border: 1px solid var(--border-color);
   border-radius: 999px;
-  padding: 3px;
-  background: var(--bg-secondary, #f8f9fa);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   margin-bottom: 10px;
 }
 
@@ -139,18 +145,20 @@ html { scroll-padding-top: 160px; }
 }
 
 .stat-mode-switch__btn {
+  position: relative;
+  z-index: 1;
   border: none;
   background: transparent;
-  padding: 7px 18px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--text-secondary);
   cursor: pointer;
+  padding: 8px 26px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
   border-radius: 999px;
   font-family: var(--font-primary);
   line-height: 1.2;
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  transition: color 200ms ease;
 }
 
 .stat-mode-switch__btn:hover {
@@ -158,9 +166,18 @@ html { scroll-padding-top: 160px; }
 }
 
 .stat-mode-switch__btn.active {
-  background: var(--bg-card, #fff);
-  color: var(--accent-blue);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  color: #fff;
+}
+
+.stat-mode-switch__thumb {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--primary, #0a84ff), var(--primary-2, #0071e3));
+  box-shadow: 0 6px 16px rgba(10, 132, 255, 0.35);
+  transition: left 260ms cubic-bezier(.22, .61, .36, 1), width 260ms cubic-bezier(.22, .61, .36, 1);
+  z-index: 0;
 }
 
 /* Report-language toggle — independent from the global site locale. */
