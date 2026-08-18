@@ -1252,8 +1252,8 @@
         </tr>
         <tr>
           ${labels.map(() =>
-            `<th class="stat-col-value" style="color:${C1_COLOR};font-weight:600;">${escapeHtml(name1)}</th>` +
-            `<th class="stat-col-value" style="color:${C2_COLOR};font-weight:600;">${escapeHtml(name2)}</th>`
+            `<th class="stat-col-value cmp-sec-a" style="color:${C1_COLOR};font-weight:600;" title="${escapeHtml(name1)}">${escapeHtml(name1.slice(0, 3))}</th>` +
+            `<th class="stat-col-value cmp-sec-b" style="color:${C2_COLOR};font-weight:600;" title="${escapeHtml(name2)}">${escapeHtml(name2.slice(0, 3))}</th>`
           ).join('')}
         </tr>
       </thead>
@@ -1262,8 +1262,8 @@
     // Totals row first (bold).
     html += `<tr><td style="font-weight:700;">${totalLabel}</td>`;
     for (const y of labels) {
-      html += `<td class="stat-col-value ${cellCls(c1 && c1.totals ? c1.totals[y] : null)}" style="font-weight:700;">${fmt(c1 && c1.totals ? c1.totals[y] : null)}</td>`;
-      html += `<td class="stat-col-value ${cellCls(c2 && c2.totals ? c2.totals[y] : null)}" style="font-weight:700;">${fmt(c2 && c2.totals ? c2.totals[y] : null)}</td>`;
+      html += `<td class="stat-col-value cmp-sec-a ${cellCls(c1 && c1.totals ? c1.totals[y] : null)}" style="font-weight:700;">${fmt(c1 && c1.totals ? c1.totals[y] : null)}</td>`;
+      html += `<td class="stat-col-value cmp-sec-b ${cellCls(c2 && c2.totals ? c2.totals[y] : null)}" style="font-weight:700;">${fmt(c2 && c2.totals ? c2.totals[y] : null)}</td>`;
     }
     html += `</tr>`;
 
@@ -1284,8 +1284,8 @@
       for (const y of labels) {
         const v1 = (c1 && c1.sectors && c1.sectors[sector]) ? c1.sectors[sector][y] : null;
         const v2 = (c2 && c2.sectors && c2.sectors[sector]) ? c2.sectors[sector][y] : null;
-        html += `<td class="stat-col-value ${cellCls(v1)}">${fmt(v1)}</td>`;
-        html += `<td class="stat-col-value ${cellCls(v2)}">${fmt(v2)}</td>`;
+        html += `<td class="stat-col-value cmp-sec-a ${cellCls(v1)}">${fmt(v1)}</td>`;
+        html += `<td class="stat-col-value cmp-sec-b ${cellCls(v2)}">${fmt(v2)}</td>`;
       }
       html += `</tr>`;
     }
