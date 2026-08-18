@@ -12,10 +12,10 @@
   const user = Api.getUser();
   if (!user) return;
 
-  // The Latest Statistics ⇄ Country Comparison switch is admin-only —
-  // the comparison page itself is restricted to ADMIN in App.init().
+  // The Latest Statistics ⇄ Country Comparison switch — available to
+  // every role that can see the statistics page.
   const statModeSwitchEl = document.getElementById('statModeSwitch');
-  if (statModeSwitchEl && user.role === 'ADMIN') {
+  if (statModeSwitchEl) {
     statModeSwitchEl.classList.remove('hidden');
   }
 
