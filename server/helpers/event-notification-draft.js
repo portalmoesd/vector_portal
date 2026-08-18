@@ -29,10 +29,10 @@ function roleLabel(role) {
     {
       [ROLES.DEPUTY]: 'Deputy',
       [ROLES.SUPERVISOR]: 'Supervisor',
-      [ROLES.SUPER_COLLABORATOR]: 'Super-Collaborator',
-      [ROLES.COLLABORATOR]: 'Collaborator',
+      [ROLES.SUPER_COLLABORATOR]: 'Senior Editor',
+      [ROLES.COLLABORATOR]: 'Editor',
       CURATOR: 'Curator',
-      RECEIVING_SUPER_COLLABORATOR: 'Receiving Super-Collaborator',
+      RECEIVING_SUPER_COLLABORATOR: 'Receiving Senior Editor',
       RECEIVING_SUPERVISOR: 'Receiving Supervisor',
     }[role] ||
     role ||
@@ -49,10 +49,10 @@ function roleLabelKa(role) {
       [ROLES.DEPUTY]: 'მოადგილე',
       [ROLES.MINISTER]: 'მინისტრი',
       [ROLES.SUPERVISOR]: 'ზედამხედველი',
-      [ROLES.SUPER_COLLABORATOR]: 'სუპერ-კოლაბორატორი',
-      [ROLES.COLLABORATOR]: 'კოლაბორატორი',
+      [ROLES.SUPER_COLLABORATOR]: 'უფროსი შემსრულებელი',
+      [ROLES.COLLABORATOR]: 'შემსრულებელი',
       CURATOR: 'კურატორი',
-      RECEIVING_SUPER_COLLABORATOR: 'სუპერ-კოლაბორატორი',
+      RECEIVING_SUPER_COLLABORATOR: 'უფროსი შემსრულებელი',
       RECEIVING_SUPERVISOR: 'ზედამხედველი',
     }[role] ||
     role ||

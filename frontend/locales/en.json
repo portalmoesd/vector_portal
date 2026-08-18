@@ -30,7 +30,7 @@
     "title": "Dashboard",
     "deputyTitle": "Deputy Dashboard",
     "supervisorTitle": "Supervisor Dashboard",
-    "superCollabTitle": "Super-collaborator Dashboard",
+    "superCollabTitle": "Senior Editor Dashboard",
     "ministerTitle": "Minister Dashboard",
     "toggleCompleted": "Completed",
     "toggleUpcoming": "In Progress",
@@ -93,8 +93,8 @@
     "noUpcoming": "No upcoming events",
     "descCollab": "Select an event to view your assigned sections and submit your work.",
     "descDeputy": "Choose an event to review and finalize before sending to the library.",
-    "descSupervisor": "Choose an event to review super-collaborator submissions before they move to the deputy stage.",
-    "descSuperCollab": "Choose an event to review collaborator submissions before they move to the supervisor stage.",
+    "descSupervisor": "Choose an event to review senior editor submissions before they move to the deputy stage.",
+    "descSuperCollab": "Choose an event to review editor submissions before they move to the supervisor stage.",
     "approveAll": "Approve all",
     "approveAllSections": "Approve all sections",
     "confirmApproveAll": "Approve all {n} sections",
@@ -115,7 +115,7 @@
     "progress": "Progress",
     "createEvent": "Create event",
     "templates": "Templates",
-    "openInEditor": "Open in editor",
+    "openInEditor": "Open for editing",
     "pushToCurator": "Push to curator",
     "pushToCompletion": "Push to completion",
     "sectionsApproved": "{done} of {total} sections approved",
@@ -144,9 +144,9 @@
   },
   "status": {
     "draft": "Awaiting action",
-    "submitted_to_super_collaborator": "At Super-Collaborator",
-    "returned_by_super_collaborator": "Returned by Super-Collaborator",
-    "approved_by_super_collaborator": "Approved (Super-Collaborator)",
+    "submitted_to_super_collaborator": "At Senior Editor",
+    "returned_by_super_collaborator": "Returned by Senior Editor",
+    "approved_by_super_collaborator": "Approved (Senior Editor)",
     "submitted_to_curator": "At Curator",
     "returned_by_curator": "Returned by Curator",
     "approved_by_curator": "Approved (Curator)",
@@ -156,9 +156,9 @@
     "submitted_to_deputy": "At Deputy",
     "returned_by_deputy": "Returned by Deputy",
     "approved_by_deputy": "Approved (Deputy)",
-    "submitted_to_receiving_super_collaborator": "At Super-Collaborator (Review)",
-    "returned_by_receiving_super_collaborator": "Returned by Super-Collaborator (Review)",
-    "approved_by_receiving_super_collaborator": "Approved (Super-Collaborator Review)",
+    "submitted_to_receiving_super_collaborator": "At Senior Editor (Review)",
+    "returned_by_receiving_super_collaborator": "Returned by Senior Editor (Review)",
+    "approved_by_receiving_super_collaborator": "Approved (Senior Editor Review)",
     "submitted_to_receiving_supervisor": "At Supervisor (Review)",
     "returned_by_receiving_supervisor": "Returned by Supervisor (Review)",
     "approved_by_receiving_supervisor": "Approved (Supervisor Review)",
@@ -171,11 +171,11 @@
     "DEPUTY": "Deputy",
     "MINISTER": "Minister",
     "SUPERVISOR": "Supervisor",
-    "SUPER_COLLABORATOR": "Super-Collaborator",
-    "COLLABORATOR": "Collaborator",
+    "SUPER_COLLABORATOR": "Senior Editor",
+    "COLLABORATOR": "Editor",
     "ANALYST": "Analyst",
     "CURATOR": "Curator",
-    "RECEIVING_SUPER_COLLABORATOR": "Super-Collaborator",
+    "RECEIVING_SUPER_COLLABORATOR": "Senior Editor",
     "RECEIVING_SUPERVISOR": "Supervisor"
   },
   "lang": {
@@ -275,7 +275,7 @@
       "deputy": "Deputy *",
       "responsibleSupervisor": "Responsible Supervisor *",
       "supervisor": "Supervisor *",
-      "superCollaborator": "Super-Collaborator *",
+      "superCollaborator": "Senior Editor *",
       "language": "Language",
       "deadline": "Deadline",
       "eventDateTime": "Event Date & Time",
@@ -288,7 +288,8 @@
       "selectPlaceholder": "— Select —",
       "selectDeputy": "— Select Deputy —",
       "selectSupervisor": "— Select Supervisor —",
-      "selectSuperCollaborator": "— Select Super-Collaborator —",
+      "selectSuperCollaborator": "— Select Senior Editor —",
+      "noSuperCollaborators": "— No senior editors found —",
       "selectTemplate": "— Select Template —",
       "sectionTitlePlaceholder": "Section title"
     },
@@ -415,13 +416,13 @@
     },
     "hier": {
       "title": "Department Hierarchy",
-      "desc": "Shows how Supervisors, Super-Collaborators, and Collaborators are grouped within each department.",
+      "desc": "Shows how Supervisors, Senior Editors, and Editors are grouped within each department.",
       "empty": "No departments with assigned users",
       "deputy": "Deputy",
       "noDeputy": "No deputy linked",
       "supervisors": "Supervisors",
-      "superCollabs": "Super-Collaborators",
-      "collaborators": "Collaborators",
+      "superCollabs": "Senior Editors",
+      "collaborators": "Editors",
       "none": "— None —"
     },
     "upload": {
@@ -514,7 +515,7 @@
     }
   },
   "editor": {
-    "pageTitle": "Section Editor",
+    "pageTitle": "Edit Section",
     "allTitle": "All Sections",
     "saveAll": {
       "noneEditable": "No editable sections to save",
@@ -582,7 +583,7 @@
       "noComment": "No comment provided",
       "unknownUser": "Unknown",
       "stage": {
-        "scReview": "Super-Collaborator (Review)",
+        "scReview": "Senior Editor (Review)",
         "svReview": "Supervisor (Review)"
       },
       "action": {
@@ -602,7 +603,7 @@
       "words": "{n} words"
     },
     "action": {
-      "openInEditor": "Open in Editor",
+      "openInEditor": "Open for editing",
       "updated": "Updated:",
       "by": "by"
     },

@@ -1346,9 +1346,11 @@
   function stageWithLabel(role) {
     if (isKa()) {
       const map = {
-        COLLABORATOR: 'კოლაბორატორთან',
-        SUPER_COLLABORATOR: 'სუპერ-კოლაბორატორთან',
-        RECEIVING_SUPER_COLLABORATOR: 'სუპერ-კოლაბორატორთან',
+        COLLABORATOR: 'შემსრულებელთან',
+        // Adessive declines the adjective too: უფროსი -> უფროს. The generic
+        // fallback below only strips the noun's trailing ი, so these are explicit.
+        SUPER_COLLABORATOR: 'უფროს შემსრულებელთან',
+        RECEIVING_SUPER_COLLABORATOR: 'უფროს შემსრულებელთან',
         SUPERVISOR: 'ზედამხედველთან',
         RECEIVING_SUPERVISOR: 'ზედამხედველთან',
         CURATOR: 'კურატორთან',
