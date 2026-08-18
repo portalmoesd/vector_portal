@@ -664,6 +664,14 @@
       country2Search.value = selectedCountry2.displayLabel;
     }
 
+    const modeSwitch = document.getElementById('statModeSwitch');
+    if (modeSwitch) {
+      const btnLatest = modeSwitch.querySelector('[data-mode="latest"]');
+      const btnCmp = modeSwitch.querySelector('[data-mode="comparison"]');
+      if (btnLatest) btnLatest.textContent = isKa ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
+      if (btnCmp) btnCmp.textContent = isKa ? 'ქვეყნების შედარება' : 'Country Comparison';
+    }
+
     country1Label.textContent = isKa ? 'ქვეყანა 1' : 'Country 1';
     country2Label.textContent = isKa ? 'ქვეყანა 2' : 'Country 2';
     periodLabelEl.textContent = isKa ? 'პერიოდი' : 'Period';
