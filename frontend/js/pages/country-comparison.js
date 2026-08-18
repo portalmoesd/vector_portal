@@ -1145,7 +1145,7 @@
     const labels = f.points1.map(p => fdiPointLabel(p, isKa));
     renderLineChart('fdi', fdiChartHeader, fdiCanvas,
       isKa ? 'პირდაპირი უცხოური ინვესტიციები, მლნ. $' : 'FDI, mln $',
-      labels, f.points1.map(p => p.valueMln), f.points2.map(p => p.valueMln), name1, name2);
+      labels, f.points1.map(p => p.valueMln), f.points2.map(p => p.valueMln), name1, name2, 'bar');
 
     renderCmpFdiHeader(fdiHeader1, name1, isKa);
     renderCmpFdiTable(fdiTable1, f.points1, isKa);
@@ -1295,7 +1295,7 @@
 
   // ── Line charts ────────────────────────────────────────────────────────
 
-  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2) {
+  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line') {
     headerEl.innerHTML = `
       <div class="stat-chart-title-row">
         <h3 class="stat-report__title">${escapeHtml(title)}</h3>
@@ -1310,33 +1310,34 @@
       chartInstances[key] = null;
     }
 
+    const isBar = chartType === 'bar';
+    const makeDataset = (name, data, color, lineAlign) => isBar
+      ? {
+          label: name,
+          data,
+          backgroundColor: color,
+          borderRadius: 3,
+          datalabels: { anchor: 'end', align: 'end', color },
+        }
+      : {
+          label: name,
+          data,
+          borderColor: color,
+          backgroundColor: color,
+          borderWidth: 2.5,
+          pointRadius: 4,
+          pointBackgroundColor: color,
+          tension: 0.3,
+          datalabels: { align: lineAlign, color },
+        };
+
     chartInstances[key] = new Chart(canvas, {
-      type: 'line',
+      type: chartType,
       data: {
         labels,
         datasets: [
-          {
-            label: name1,
-            data: series1,
-            borderColor: C1_COLOR,
-            backgroundColor: C1_COLOR,
-            borderWidth: 2.5,
-            pointRadius: 4,
-            pointBackgroundColor: C1_COLOR,
-            tension: 0.3,
-            datalabels: { align: 'top', color: C1_COLOR },
-          },
-          {
-            label: name2,
-            data: series2,
-            borderColor: C2_COLOR,
-            backgroundColor: C2_COLOR,
-            borderWidth: 2.5,
-            pointRadius: 4,
-            pointBackgroundColor: C2_COLOR,
-            tension: 0.3,
-            datalabels: { align: 'bottom', color: C2_COLOR },
-          },
+          makeDataset(name1, series1, C1_COLOR, 'top'),
+          makeDataset(name2, series2, C2_COLOR, 'bottom'),
         ],
       },
       options: {
