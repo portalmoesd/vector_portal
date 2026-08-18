@@ -1056,7 +1056,7 @@
         const rs = val > 0
           ? rankShare(d => (d.annual && d.annual[p.year]) || 0, annualTotals[p.year])
           : { rank: null, share: null };
-        out.push({ year: p.year, label: String(p.year), isCurrent: false, visitors: val, changePct: pct, rank: rs.rank, share: rs.share });
+        out.push({ year: p.year, label: String(p.year), isCurrent: false, visitors: val, changePct: pct, rank: rs.rank, share: rs.share, total: annualTotals[p.year] || null });
       } else if (p.year > lastAnnual && tJson.currentPeriod) {
         const m = /(\d{4})/.exec(tJson.currentPeriod.label || '');
         if (!m || Number(m[1]) !== p.year) continue; // no published period for this year
@@ -1066,7 +1066,7 @@
         const rs = cur > 0
           ? rankShare(d => d.current || 0, tJson.totals ? tJson.totals.current : null)
           : { rank: null, share: null };
-        out.push({ year: p.year, label: tJson.currentPeriod.label, isCurrent: true, visitors: cur, changePct: pct, rank: rs.rank, share: rs.share });
+        out.push({ year: p.year, label: tJson.currentPeriod.label, isCurrent: true, visitors: cur, changePct: pct, rank: rs.rank, share: rs.share, total: (tJson.totals && tJson.totals.current) || null });
       }
       // Years before the first annual year (2011) are dropped.
     }
@@ -1350,50 +1350,62 @@
     renderTourismTableCmp(t, name1, name2, isKa);
   }
 
-  // Merged visitors table: period rows, one 4-column group per country
-  // (columns adapted from statistics.js:2128 renderTourismTable).
+  // Merged visitors table, sectors-table style: metric column groups with
+  // the two countries paired inside each group. Columns: Period | total
+  // visitors to Georgia | Visitors | Rank | Change % | Share %.
   function renderTourismTableCmp(t, name1, name2, isKa) {
     tourismTableHeader.innerHTML = `<h3 class="stat-report__title">${isKa ? 'ვიზიტორები' : 'Visitors'}</h3>`;
 
     const hPeriod = isKa ? 'პერიოდი' : 'Period';
+    const hTotal = isKa ? 'სულ ვიზიტორები' : 'Total visitors';
     const hVisitors = isKa ? 'ვიზიტორები' : 'Visitors';
-    const hChange = isKa ? 'ცვლილება, %' : 'Change, %';
     const hRank = isKa ? 'ადგილი' : 'Rank';
+    const hChange = isKa ? 'ცვლილება, %' : 'Change, %';
     const hShare = isKa ? 'წილი, %' : 'Share, %';
-    const sub = `<th class="stat-col-value">${hVisitors}</th><th class="stat-col-change">${hChange}</th><th class="stat-col-change">${hRank}</th><th class="stat-col-change">${hShare}</th>`;
+    const metricHeads = [hVisitors, hRank, hChange, hShare];
+    const countryPair =
+      `<th class="stat-col-value cmp-sec-a" style="color:${C1_COLOR};font-weight:600;" title="${escapeHtml(name1)}">${escapeHtml(name1.slice(0, 3))}</th>` +
+      `<th class="stat-col-value cmp-sec-b" style="color:${C2_COLOR};font-weight:600;" title="${escapeHtml(name2)}">${escapeHtml(name2.slice(0, 3))}</th>`;
 
     let html = `<table class="stat-table">
       <thead>
         <tr>
           <th rowspan="2">${hPeriod}</th>
-          <th colspan="4" style="text-align:center;color:${C1_COLOR};">${escapeHtml(name1)}</th>
-          <th colspan="4" style="text-align:center;color:${C2_COLOR};">${escapeHtml(name2)}</th>
+          <th rowspan="2" class="stat-col-value">${hTotal}</th>
+          ${metricHeads.map(h => `<th class="stat-col-value" colspan="2" style="text-align:center;">${h}</th>`).join('')}
         </tr>
-        <tr>${sub}${sub}</tr>
+        <tr>${metricHeads.map(() => countryPair).join('')}</tr>
       </thead>
       <tbody>`;
 
-    const cells = (p) => {
+    const metricCells = (p) => {
       const has = p.visitors > 0;
-      const visitorsCell = has ? Number(p.visitors).toLocaleString() : '-';
-      let changeCell = '-';
+      const visitors = has ? Number(p.visitors).toLocaleString() : '-';
+      const rank = has && p.rank ? String(p.rank) : '-';
+      let change = '-';
       let changeClass = '';
       if (has && p.changePct !== null && p.changePct !== undefined) {
         changeClass = p.changePct > 0 ? 'stat-positive' : (p.changePct < 0 ? 'stat-negative' : '');
-        changeCell = `${p.changePct > 0 ? '+' : ''}${formatChangePct(p.changePct)}`;
+        change = `${p.changePct > 0 ? '+' : ''}${formatChangePct(p.changePct)}`;
       }
-      const rankCell = has && p.rank ? String(p.rank) : '-';
-      const shareCell = has && p.share != null ? `${p.share.toFixed(1)}%` : '-';
-      return `<td class="stat-col-value">${visitorsCell}</td>` +
-        `<td class="stat-col-change ${changeClass}">${changeCell}</td>` +
-        `<td class="stat-col-change">${rankCell}</td>` +
-        `<td class="stat-col-change">${shareCell}</td>`;
+      const share = has && p.share != null ? `${p.share.toFixed(1)}%` : '-';
+      return { visitors, rank, change, changeClass, share };
     };
 
     const rows1 = [...t.points1].reverse();
     const rows2 = [...t.points2].reverse();
     rows1.forEach((p1, i) => {
-      html += `<tr><td>${escapeHtml(localizePeriodLabel(p1.label, isKa))}</td>${cells(p1)}${cells(rows2[i])}</tr>`;
+      const m1 = metricCells(p1);
+      const m2 = metricCells(rows2[i]);
+      const totalCell = p1.total > 0 ? Number(p1.total).toLocaleString() : '-';
+      html += `<tr>
+        <td>${escapeHtml(localizePeriodLabel(p1.label, isKa))}</td>
+        <td class="stat-col-value">${totalCell}</td>
+        <td class="stat-col-value cmp-sec-a">${m1.visitors}</td><td class="stat-col-value cmp-sec-b">${m2.visitors}</td>
+        <td class="stat-col-value cmp-sec-a">${m1.rank}</td><td class="stat-col-value cmp-sec-b">${m2.rank}</td>
+        <td class="stat-col-value cmp-sec-a ${m1.changeClass}">${m1.change}</td><td class="stat-col-value cmp-sec-b ${m2.changeClass}">${m2.change}</td>
+        <td class="stat-col-value cmp-sec-a">${m1.share}</td><td class="stat-col-value cmp-sec-b">${m2.share}</td>
+      </tr>`;
     });
 
     html += '</tbody></table>';

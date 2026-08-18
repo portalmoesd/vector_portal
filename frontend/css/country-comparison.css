@@ -44,16 +44,20 @@
    gaps instead of being swallowed by the table's flexible layout; the
    Sector column absorbs the slack. */
 #fdiSectorsTable .cmp-sec-a,
-#fdiSectorsTable .cmp-sec-b {
+#fdiSectorsTable .cmp-sec-b,
+#tourismTable .cmp-sec-a,
+#tourismTable .cmp-sec-b {
   width: 1%;
   white-space: nowrap;
 }
 
-#fdiSectorsTable .cmp-sec-a {
+#fdiSectorsTable .cmp-sec-a,
+#tourismTable .cmp-sec-a {
   padding-left: 36px;
   padding-right: 3px;
 }
 
-#fdiSectorsTable .cmp-sec-b {
+#fdiSectorsTable .cmp-sec-b,
+#tourismTable .cmp-sec-b {
   padding-left: 3px;
 }
