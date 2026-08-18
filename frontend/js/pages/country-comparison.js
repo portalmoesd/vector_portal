@@ -527,6 +527,7 @@
     }
 
     return result.map(p => ({
+      hs4: p.hs4,
       name: p.name,
       nameEn: p.nameEn,
       valueMln: p.valueMln,
@@ -543,7 +544,10 @@
   // `changeAvailable` = false renders "—" in the Change column (no prior
   // period exists, e.g. the chosen year is 2009).
 
-  function renderProductTable(el, products, periodText, showReexport, changeAvailable) {
+  // `sharedHs4` marks products that appear in BOTH countries' tables of the
+  // pair (light-yellow row highlight). Expand buttons are wired per pair by
+  // wireExpandPair so "Show more" uncovers both tables together.
+  function renderProductTable(el, products, periodText, showReexport, changeAvailable, sharedHs4) {
     if (products.length === 0) {
       el.innerHTML = `<div class="empty-state"><p>${reportLocale === 'ka' ? 'მონაცემები ვერ მოიძებნა' : 'No data found'}</p></div>`;
       return;
@@ -574,8 +578,9 @@
       const changeSign = p.change > 0 ? '+' : '';
       const changeCell = changeAvailable ? `${changeSign}${formatChangePct(p.change)}` : '—';
       const hiddenStyle = (hasMore && i >= INITIAL_COUNT) ? ' style="display:none" data-expandable' : '';
+      const sharedClass = (sharedHs4 && sharedHs4.has(p.hs4)) ? ' class="cmp-shared-row"' : '';
       html += `
-        <tr${hiddenStyle}>
+        <tr${sharedClass}${hiddenStyle}>
           <td class="stat-col-product">${escapeHtml(reportLocale !== 'ka' && p.nameEn ? p.nameEn : p.name)}</td>
           <td class="stat-col-value">${formatMln(p.valueMln)}</td>
           <td class="stat-col-change ${changeAvailable ? changeClass : ''}">${changeCell}</td>
@@ -592,15 +597,29 @@
     }
 
     el.innerHTML = html;
+  }
 
-    const btn = el.querySelector('.stat-expand-btn');
-    if (btn) {
-      btn.addEventListener('click', () => {
-        const rows = el.querySelectorAll('tr[data-expandable]');
-        const expanded = rows[0]?.style.display !== 'none';
-        rows.forEach(r => r.style.display = expanded ? 'none' : '');
-        btn.textContent = expanded ? btn.dataset.more : btn.dataset.less;
-      });
+  // Products present in both lists, matched by HS4 code.
+  function sharedProductSet(list1, list2) {
+    const codes2 = new Set(list2.map(p => p.hs4));
+    return new Set(list1.map(p => p.hs4).filter(c => c !== undefined && codes2.has(c)));
+  }
+
+  // One expand state per table pair: pressing "Show more" on either side
+  // uncovers (or hides) the extra rows in both tables together.
+  function wireExpandPair(el1, el2) {
+    const els = [el1, el2];
+    const btns = els.map(el => el.querySelector('.stat-expand-btn')).filter(Boolean);
+    if (!btns.length) return;
+    let expanded = false;
+    const apply = () => {
+      for (const el of els) {
+        el.querySelectorAll('tr[data-expandable]').forEach(r => { r.style.display = expanded ? '' : 'none'; });
+      }
+      for (const b of btns) b.textContent = expanded ? b.dataset.less : b.dataset.more;
+    };
+    for (const b of btns) {
+      b.addEventListener('click', () => { expanded = !expanded; apply(); });
     }
   }
 
@@ -1283,14 +1302,18 @@
 
     const periodText = chosenPeriodText(r.chosen, isKa);
     const changeAvailable = !!r.prevPeriod;
+    const sharedExport = sharedProductSet(r.products.export1, r.products.export2);
+    const sharedImport = sharedProductSet(r.products.import1, r.products.import2);
     renderCmpSectionHeader(exportHeader1, name1, 'export', periodText);
-    renderProductTable(exportTable1, r.products.export1, periodText, true, changeAvailable);
+    renderProductTable(exportTable1, r.products.export1, periodText, true, changeAvailable, sharedExport);
     renderCmpSectionHeader(exportHeader2, name2, 'export', periodText);
-    renderProductTable(exportTable2, r.products.export2, periodText, true, changeAvailable);
+    renderProductTable(exportTable2, r.products.export2, periodText, true, changeAvailable, sharedExport);
+    wireExpandPair(exportTable1, exportTable2);
     renderCmpSectionHeader(importHeader1, name1, 'import', periodText);
-    renderProductTable(importTable1, r.products.import1, periodText, false, changeAvailable);
+    renderProductTable(importTable1, r.products.import1, periodText, false, changeAvailable, sharedImport);
     renderCmpSectionHeader(importHeader2, name2, 'import', periodText);
-    renderProductTable(importTable2, r.products.import2, periodText, false, changeAvailable);
+    renderProductTable(importTable2, r.products.import2, periodText, false, changeAvailable, sharedImport);
+    wireExpandPair(importTable1, importTable2);
 
     renderInvestments(name1, name2, isKa);
 

@@ -61,3 +61,10 @@
 #tourismTable .cmp-sec-b {
   padding-left: 3px;
 }
+
+/* Trade product tables: a product present in BOTH countries' tables of a
+   pair is highlighted light yellow. The id selector outranks the generic
+   .stat-table row-hover background. */
+#cmpSections tr.cmp-shared-row td {
+  background: #fef9c3;
+}
