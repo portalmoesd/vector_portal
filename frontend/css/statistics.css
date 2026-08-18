@@ -622,3 +622,10 @@ body.stat-exporting .stat-sections.hidden {
   color: var(--text-primary) !important;
 }
 
+/* FDI / tourism appendix tables sit below the trade appendix — give
+   their titles clear breathing room from the table above. */
+#fdiAppendixWrap,
+#tourismAppendixWrap {
+  margin-top: 32px;
+}
+
