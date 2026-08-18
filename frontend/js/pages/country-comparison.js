@@ -66,6 +66,19 @@
   const tourismTable = document.getElementById('tourismTable');
   const reportLangToggle = document.getElementById('reportLangToggle');
 
+  // Sliding thumb of the Latest Statistics ⇄ Country Comparison switch
+  // (same mechanism as the dashboards' mn-toggle, dashboard-minister.js).
+  function positionModeThumb() {
+    const sw = document.getElementById('statModeSwitch');
+    const thumb = document.getElementById('statModeThumb');
+    const active = sw && sw.querySelector('.stat-mode-switch__btn.active');
+    if (!sw || !thumb || !active) return;
+    thumb.style.left = active.offsetLeft + 'px';
+    thumb.style.width = active.offsetWidth + 'px';
+  }
+  window.addEventListener('resize', positionModeThumb);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionModeThumb);
+
   // ── State ──────────────────────────────────────────────────────────────
   let countries = [];
   let classData = null;
@@ -668,6 +681,7 @@
       const btnCmp = modeSwitch.querySelector('[data-mode="comparison"]');
       if (btnLatest) btnLatest.textContent = isKa ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
       if (btnCmp) btnCmp.textContent = isKa ? 'ქვეყნების შედარება' : 'Country Comparison';
+      positionModeThumb();
     }
 
     country1Label.textContent = isKa ? 'ქვეყანა 1' : 'Country 1';
