@@ -946,7 +946,7 @@
         const val = (countryData[p.year] || 0) / 1000;
         const prev = (countryData[p.year - 1] || 0) / 1000;
         const rs = val > 0 ? rankAndShare(p.year, val) : { rank: null, share: null };
-        out.push({ year: p.year, quarterInfo: null, valueMln: val, prevMln: prev, rank: rs.rank, share: rs.share });
+        out.push({ year: p.year, quarterInfo: null, valueMln: val, prevMln: prev, rank: rs.rank, share: rs.share, totalMln: (totals[p.year] || 0) / 1000 });
       } else if (p.year > lastAnnual) {
         const q = (fdiJson.quarters || []).find(x => x.year === p.year);
         if (!q) continue; // year beyond published FDI data — drop the point
@@ -968,6 +968,7 @@
           year: p.year,
           quarterInfo: { quarters: qs, preliminary: !!q.preliminary },
           valueMln: val, prevMln: prev, rank, share,
+          totalMln: (q.total || 0) / 1000,
         });
       }
     }
@@ -1514,6 +1515,7 @@
   function renderCmpFdiTable(el, points, isKa) {
     const data = [...points].reverse();
     const hYear = isKa ? 'წელი' : 'Year';
+    const hTotal = isKa ? 'სულ FDI, მლნ. $' : 'Total FDI, mln $';
     const hRank = isKa ? 'ადგილი' : 'Rank';
     const hValue = isKa ? 'მოცულობა, მლნ. $' : 'Volume, mln $';
     const hChange = isKa ? 'ცვლილება, %' : 'Change, %';
@@ -1525,6 +1527,7 @@
       <thead>
         <tr>
           <th>${hYear}</th>
+          <th class="stat-col-value">${hTotal}</th>
           ${showRank ? `<th class="stat-col-change">${hRank}</th>` : ''}
           <th class="stat-col-value">${hValue}</th>
           <th class="stat-col-change">${hChange}</th>
@@ -1547,9 +1550,15 @@
       }
       const rankCell = (!isCurNeg && p.rank) ? String(p.rank) : '-';
       const shareCell = (!isCurNeg && p.share != null) ? `${(Math.round(p.share * 10) / 10).toFixed(1)}%` : '-';
+      // Total FDI into Georgia for the period; a negative grand total
+      // (net disinvestment) is shown signed rather than hidden.
+      const totalCell = p.totalMln
+        ? (p.totalMln < 0 ? `-${formatMln(Math.abs(p.totalMln))}` : formatMln(p.totalMln))
+        : '-';
       html += `
         <tr>
           <td>${escapeHtml(fdiPointLabel(p, isKa))}</td>
+          <td class="stat-col-value">${totalCell}</td>
           ${showRank ? `<td class="stat-col-change">${rankCell}</td>` : ''}
           <td class="stat-col-value">${valueCell}</td>
           <td class="stat-col-change ${changeClass}">${changeCell}</td>
