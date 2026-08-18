@@ -58,11 +58,9 @@
   const fdiTable1 = document.getElementById('fdiTable1');
   const fdiHeader2 = document.getElementById('fdiHeader2');
   const fdiTable2 = document.getElementById('fdiTable2');
-  const fdiSectorsRow = document.getElementById('fdiSectorsRow');
-  const fdiSectorsHeader1 = document.getElementById('fdiSectorsHeader1');
-  const fdiSectorsTable1 = document.getElementById('fdiSectorsTable1');
-  const fdiSectorsHeader2 = document.getElementById('fdiSectorsHeader2');
-  const fdiSectorsTable2 = document.getElementById('fdiSectorsTable2');
+  const fdiSectorsCard = document.getElementById('fdiSectorsCard');
+  const fdiSectorsHeader = document.getElementById('fdiSectorsHeader');
+  const fdiSectorsTable = document.getElementById('fdiSectorsTable');
   const reportLangToggle = document.getElementById('reportLangToggle');
 
   // ── State ──────────────────────────────────────────────────────────────
@@ -1147,7 +1145,7 @@
     const labels = f.points1.map(p => fdiPointLabel(p, isKa));
     renderLineChart('fdi', fdiChartHeader, fdiCanvas,
       isKa ? 'პირდაპირი უცხოური ინვესტიციები, მლნ. $' : 'FDI, mln $',
-      labels, f.points1.map(p => p.valueMln), f.points2.map(p => p.valueMln), name1, name2);
+      labels, f.points1.map(p => p.valueMln), f.points2.map(p => p.valueMln), name1, name2, 'bar');
 
     renderCmpFdiHeader(fdiHeader1, name1, isKa);
     renderCmpFdiTable(fdiTable1, f.points1, isKa);
@@ -1156,11 +1154,10 @@
 
     const s = r.fdiSectors;
     if (s && s.available && (s.c1 || s.c2)) {
-      fdiSectorsRow.classList.remove('hidden');
-      renderCmpFdiSectors(fdiSectorsHeader1, fdiSectorsTable1, s, s.c1, name1, isKa);
-      renderCmpFdiSectors(fdiSectorsHeader2, fdiSectorsTable2, s, s.c2, name2, isKa);
+      fdiSectorsCard.classList.remove('hidden');
+      renderCmpFdiSectors(s, name1, name2, isKa);
     } else {
-      fdiSectorsRow.classList.add('hidden');
+      fdiSectorsCard.classList.add('hidden');
     }
   }
 
@@ -1221,21 +1218,17 @@
     el.innerHTML = html;
   }
 
-  // Copied from statistics.js:2459 (renderFdiSectorsTable), parameterised
-  // for one of the two countries and the window-filtered period labels.
-  function renderCmpFdiSectors(headerEl, tableEl, state, countryState, countryName, isKa) {
-    const yrRange = state.labels.length > 1
-      ? `${state.labels[0]}–${state.labels[state.labels.length - 1]}`
-      : `${state.labels[0]}`;
+  // Merged sectors table for both countries — adapted from
+  // statistics.js:2459 (renderFdiSectorsTable). Two-row header: each
+  // window-filtered period label spans two country sub-columns, colored
+  // with the chart palette so columns match the lines in the charts.
+  function renderCmpFdiSectors(state, name1, name2, isKa) {
+    const labels = state.labels;
+    const yrRange = labels.length > 1 ? `${labels[0]}–${labels[labels.length - 1]}` : `${labels[0]}`;
     const title = isKa
-      ? `${countryName} - ინვესტიციები სექტორების მიხედვით, ${yrRange}`
-      : `${countryName} - FDI by Sector, ${yrRange}`;
-    headerEl.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3><div style="font-size:0.85rem;color:var(--text-secondary);">${isKa ? 'მლნ. აშშ დოლარი' : 'mln USD'}</div>`;
-
-    if (!countryState) {
-      tableEl.innerHTML = `<div class="empty-state"><p>${isKa ? 'მონაცემები ვერ მოიძებნა' : 'No data found'}</p></div>`;
-      return;
-    }
+      ? `ინვესტიციები სექტორების მიხედვით, ${yrRange}`
+      : `FDI by Sector, ${yrRange}`;
+    fdiSectorsHeader.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3><div style="font-size:0.85rem;color:var(--text-secondary);">${isKa ? 'მლნ. აშშ დოლარი' : 'mln USD'}</div>`;
 
     const fmt = (v) => {
       if (v === null || v === undefined || v === 0) return '-';
@@ -1248,48 +1241,61 @@
 
     const sectorHeader = isKa ? 'სექტორი' : 'Sector';
     const totalLabel = isKa ? 'სულ' : 'Total';
-    const labels = state.labels;
+    const c1 = state.c1;
+    const c2 = state.c2;
 
     let html = `<table class="stat-table">
       <thead>
         <tr>
-          <th>${sectorHeader}</th>
-          ${labels.map(y => `<th class="stat-col-value">${escapeHtml(String(y))}</th>`).join('')}
+          <th rowspan="2">${sectorHeader}</th>
+          ${labels.map(y => `<th class="stat-col-value" colspan="2" style="text-align:center;">${escapeHtml(String(y))}</th>`).join('')}
+        </tr>
+        <tr>
+          ${labels.map(() =>
+            `<th class="stat-col-value" style="color:${C1_COLOR};font-weight:600;">${escapeHtml(name1)}</th>` +
+            `<th class="stat-col-value" style="color:${C2_COLOR};font-weight:600;">${escapeHtml(name2)}</th>`
+          ).join('')}
         </tr>
       </thead>
       <tbody>`;
 
+    // Totals row first (bold).
     html += `<tr><td style="font-weight:700;">${totalLabel}</td>`;
     for (const y of labels) {
-      const v = countryState.totals ? countryState.totals[y] : null;
-      html += `<td class="stat-col-value ${cellCls(v)}" style="font-weight:700;">${fmt(v)}</td>`;
+      html += `<td class="stat-col-value ${cellCls(c1 && c1.totals ? c1.totals[y] : null)}" style="font-weight:700;">${fmt(c1 && c1.totals ? c1.totals[y] : null)}</td>`;
+      html += `<td class="stat-col-value ${cellCls(c2 && c2.totals ? c2.totals[y] : null)}" style="font-weight:700;">${fmt(c2 && c2.totals ? c2.totals[y] : null)}</td>`;
     }
     html += `</tr>`;
 
-    const sectorNames = Object.keys(countryState.sectors || {});
+    // Union of both countries' sectors, sorted by combined value at the
+    // latest shown period; a country with no entry renders "-" throughout.
+    const sectorNames = [...new Set([
+      ...Object.keys((c1 && c1.sectors) || {}),
+      ...Object.keys((c2 && c2.sectors) || {}),
+    ])];
     const sortLabel = labels[labels.length - 1];
-    sectorNames.sort((a, b) => {
-      const va = (countryState.sectors[a] && countryState.sectors[a][sortLabel]) || 0;
-      const vb = (countryState.sectors[b] && countryState.sectors[b][sortLabel]) || 0;
-      return vb - va;
-    });
+    const sortVal = (cs, s) => (cs && cs.sectors && cs.sectors[s] && cs.sectors[s][sortLabel]) || 0;
+    sectorNames.sort((a, b) =>
+      (sortVal(c1, b) + sortVal(c2, b)) - (sortVal(c1, a) + sortVal(c2, a)));
+
     for (const sector of sectorNames) {
-      const vals = countryState.sectors[sector] || {};
       const displayName = isKa ? sector : (state.sectorNameMap[sector] || sector);
       html += `<tr><td>${escapeHtml(displayName)}</td>`;
       for (const y of labels) {
-        const v = vals[y];
-        html += `<td class="stat-col-value ${cellCls(v)}">${fmt(v)}</td>`;
+        const v1 = (c1 && c1.sectors && c1.sectors[sector]) ? c1.sectors[sector][y] : null;
+        const v2 = (c2 && c2.sectors && c2.sectors[sector]) ? c2.sectors[sector][y] : null;
+        html += `<td class="stat-col-value ${cellCls(v1)}">${fmt(v1)}</td>`;
+        html += `<td class="stat-col-value ${cellCls(v2)}">${fmt(v2)}</td>`;
       }
       html += `</tr>`;
     }
     html += `</tbody></table>`;
-    tableEl.innerHTML = html;
+    fdiSectorsTable.innerHTML = html;
   }
 
   // ── Line charts ────────────────────────────────────────────────────────
 
-  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2) {
+  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line') {
     headerEl.innerHTML = `
       <div class="stat-chart-title-row">
         <h3 class="stat-report__title">${escapeHtml(title)}</h3>
@@ -1304,33 +1310,34 @@
       chartInstances[key] = null;
     }
 
+    const isBar = chartType === 'bar';
+    const makeDataset = (name, data, color, lineAlign) => isBar
+      ? {
+          label: name,
+          data,
+          backgroundColor: color,
+          borderRadius: 3,
+          datalabels: { anchor: 'end', align: 'end', color },
+        }
+      : {
+          label: name,
+          data,
+          borderColor: color,
+          backgroundColor: color,
+          borderWidth: 2.5,
+          pointRadius: 4,
+          pointBackgroundColor: color,
+          tension: 0.3,
+          datalabels: { align: lineAlign, color },
+        };
+
     chartInstances[key] = new Chart(canvas, {
-      type: 'line',
+      type: chartType,
       data: {
         labels,
         datasets: [
-          {
-            label: name1,
-            data: series1,
-            borderColor: C1_COLOR,
-            backgroundColor: C1_COLOR,
-            borderWidth: 2.5,
-            pointRadius: 4,
-            pointBackgroundColor: C1_COLOR,
-            tension: 0.3,
-            datalabels: { align: 'top', color: C1_COLOR },
-          },
-          {
-            label: name2,
-            data: series2,
-            borderColor: C2_COLOR,
-            backgroundColor: C2_COLOR,
-            borderWidth: 2.5,
-            pointRadius: 4,
-            pointBackgroundColor: C2_COLOR,
-            tension: 0.3,
-            datalabels: { align: 'bottom', color: C2_COLOR },
-          },
+          makeDataset(name1, series1, C1_COLOR, 'top'),
+          makeDataset(name2, series2, C2_COLOR, 'bottom'),
         ],
       },
       options: {
