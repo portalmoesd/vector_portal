@@ -108,7 +108,6 @@ const App = {
       const l = (label || '').toLowerCase();
       if (l.includes('calendar')) return ICO.calendar;
       if (l.includes('library')) return ICO.library;
-      if (l.includes('comparison')) return ICO.statistics;
       if (l.includes('statistic')) return ICO.statistics;
       if (l.includes('admin')) return ICO.admin;
       return ICO.dashboard;
@@ -143,13 +142,16 @@ const App = {
       }
       navItems.push({ href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' });
       if (user.role === 'ADMIN') {
-        navItems.push({ href: '/pages/country-comparison.html', label: 'Country Comparison', i18n: 'nav.countryComparison', match: 'country-comparison' });
         navItems.push({ href: '/pages/admin.html', label: 'Admin Panel', i18n: 'nav.admin', match: 'admin' });
       }
     }
 
     const navHtml = navItems.map(it => {
-      const active = currentPath.includes(it.match) ? ' active' : '';
+      // Country Comparison is a sub-mode of Statistics (reached via the
+      // on-page switch), so it lights up the Statistics entry.
+      const isActive = currentPath.includes(it.match) ||
+        (it.match === 'statistics' && currentPath.includes('country-comparison'));
+      const active = isActive ? ' active' : '';
       return `<a href="${it.href}" class="gp-nav__link${active}"><span class="gp-nav__icon">${navIcon(it.label)}</span><span class="gp-nav__label" data-i18n="${it.i18n}">${escapeHtml(it.label)}</span></a>`;
     }).join('');
 

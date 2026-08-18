@@ -12,6 +12,13 @@
   const user = Api.getUser();
   if (!user) return;
 
+  // The Latest Statistics ⇄ Country Comparison switch is admin-only —
+  // the comparison page itself is restricted to ADMIN in App.init().
+  const statModeSwitchEl = document.getElementById('statModeSwitch');
+  if (statModeSwitchEl && user.role === 'ADMIN') {
+    statModeSwitchEl.classList.remove('hidden');
+  }
+
   // ── Constants ──────────────────────────────────────────────────────────
   const GEOSTAT_API = 'https://ex-trade-api.geostat.ge/api/trade';
   const PROXY_API = `${API_BASE}/api/statistics`;
@@ -383,6 +390,14 @@
 
   function applyReportLocale(regenerate = true) {
     const ka = reportLocale === 'ka';
+
+    // Mode switch labels
+    if (statModeSwitchEl) {
+      const btnLatest = statModeSwitchEl.querySelector('[data-mode="latest"]');
+      const btnCmp = statModeSwitchEl.querySelector('[data-mode="comparison"]');
+      if (btnLatest) btnLatest.textContent = ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
+      if (btnCmp) btnCmp.textContent = ka ? 'ქვეყნების შედარება' : 'Country Comparison';
+    }
 
     // Tabs
     document.querySelectorAll('.stat-tab').forEach(btn => {
