@@ -1,5 +1,5 @@
 /**
- * Country Comparison Page (admin-only)
+ * Country Comparison Page
  * Compares trade statistics (turnover / export / import + top products)
  * of two countries for a chosen period, using data from
  * ex-trade-api.geostat.ge.
@@ -11,9 +11,7 @@
   await App.init();
 
   const user = Api.getUser();
-  // App.init() already redirects non-admins; this is belt-and-braces so the
-  // page logic never runs for anyone else.
-  if (!user || user.role !== 'ADMIN') return;
+  if (!user) return;
 
   // ── Constants ──────────────────────────────────────────────────────────
   const GEOSTAT_API = 'https://ex-trade-api.geostat.ge/api/trade';

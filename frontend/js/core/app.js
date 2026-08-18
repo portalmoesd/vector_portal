@@ -21,7 +21,7 @@ const App = {
     // change-password). Any other path bounces them back to Statistics.
     if (user.role === 'ANALYST') {
       const path = window.location.pathname;
-      const allow = ['/pages/statistics.html', '/pages/change-password.html'];
+      const allow = ['/pages/statistics.html', '/pages/country-comparison.html', '/pages/change-password.html'];
       if (!allow.some(p => path.endsWith(p))) {
         window.location.href = '/pages/statistics.html';
         return;
@@ -38,6 +38,7 @@ const App = {
       const allow = [
         '/pages/dashboard-minister.html',
         '/pages/statistics.html',
+        '/pages/country-comparison.html',
         '/pages/change-password.html',
       ];
       if (!allow.some(p => path.endsWith(p))) {
@@ -56,11 +57,6 @@ const App = {
       }
     }
 
-    // Country Comparison is an admin-only surface for now.
-    if (user.role !== 'ADMIN' && window.location.pathname.endsWith('/pages/country-comparison.html')) {
-      window.location.href = dashboardUrl(user.role);
-      return;
-    }
 
     await I18n.init();
 

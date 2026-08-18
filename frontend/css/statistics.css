@@ -123,7 +123,7 @@ html { scroll-padding-top: 160px; }
   align-items: center;
 }
 
-/* Mode switch: Latest Statistics ⇄ Country Comparison (admin-only).
+/* Mode switch: Latest Statistics ⇄ Country Comparison.
    Same pill styling family as the report-language toggle below. */
 .stat-mode-switch {
   display: inline-flex;
