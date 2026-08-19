@@ -29,7 +29,7 @@
   "dashboard": {
     "title": "მთავარი",
     "deputyTitle": "მოადგილის მთავარი გვერდი",
-    "supervisorTitle": "ზედამხედველის მთავარი გვერდი",
+    "supervisorTitle": "ხელმძღვანელის მთავარი გვერდი",
     "superCollabTitle": "უფროსი შემსრულებლის მთავარი გვერდი",
     "ministerTitle": "მინისტრის მთავარი გვერდი",
     "toggleCompleted": "დასრულებული",
@@ -94,7 +94,7 @@
     "descCollab": "აირჩიეთ ღონისძიება, რათა ნახოთ თქვენთვის მინიჭებული სექციები და წარადგინოთ თქვენი ნამუშევარი.",
     "descDeputy": "აირჩიეთ ღონისძიება განსახილველად და დასასრულებლად ბიბლიოთეკაში გაგზავნამდე.",
     "descSupervisor": "აირჩიეთ ღონისძიება უფროსი შემსრულებლის ნამუშევრის განსახილველად მოადგილის ეტაპზე გადასვლამდე.",
-    "descSuperCollab": "აირჩიეთ ღონისძიება შემსრულებლის ნამუშევრის განსახილველად ზედამხედველის ეტაპზე გადასვლამდე.",
+    "descSuperCollab": "აირჩიეთ ღონისძიება შემსრულებლის ნამუშევრის განსახილველად ხელმძღვანელის ეტაპზე გადასვლამდე.",
     "approveAll": "ყველას დადასტურება",
     "approveAllSections": "ყველა სექციის დადასტურება",
     "confirmApproveAll": "{n} სექციის დადასტურება",
@@ -116,7 +116,7 @@
     "createEvent": "ღონისძიების შექმნა",
     "templates": "შაბლონები",
     "openInEditor": "რედაქტორში გახსნა",
-    "pushToCurator": "ზედამხედველის გამოტოვება",
+    "pushToCurator": "ხელმძღვანელის გამოტოვება",
     "pushToCompletion": "კურატორის გამოტოვება",
     "sectionsApproved": "{total}-დან {done} სექცია დასრულებულია",
     "stageApproved": "დასრულებულია",
@@ -150,18 +150,18 @@
     "submitted_to_curator": "კურატორთან",
     "returned_by_curator": "დაბრუნებული კურატორის მიერ",
     "approved_by_curator": "დადასტურებული (კურატორი)",
-    "submitted_to_supervisor": "ზედამხედველთან",
-    "returned_by_supervisor": "დაბრუნებული ზედამხედველის მიერ",
-    "approved_by_supervisor": "დადასტურებული (ზედამხედველი)",
+    "submitted_to_supervisor": "ხელმძღვანელთან",
+    "returned_by_supervisor": "დაბრუნებული ხელმძღვანელის მიერ",
+    "approved_by_supervisor": "დადასტურებული (ხელმძღვანელი)",
     "submitted_to_deputy": "მოადგილესთან",
     "returned_by_deputy": "დაბრუნებული მოადგილის მიერ",
     "approved_by_deputy": "დადასტურებული (მოადგილე)",
     "submitted_to_receiving_super_collaborator": "უფროს შემსრულებელთან (განხილვა)",
     "returned_by_receiving_super_collaborator": "დაბრუნებული უფროსი შემსრულებლის მიერ (განხილვა)",
     "approved_by_receiving_super_collaborator": "დადასტურებული (უფროსი შემსრულებლის განხილვა)",
-    "submitted_to_receiving_supervisor": "ზედამხედველთან (განხილვა)",
-    "returned_by_receiving_supervisor": "დაბრუნებული ზედამხედველის მიერ (განხილვა)",
-    "approved_by_receiving_supervisor": "დადასტურებული (ზედამხედველის განხილვა)",
+    "submitted_to_receiving_supervisor": "ხელმძღვანელთან (განხილვა)",
+    "returned_by_receiving_supervisor": "დაბრუნებული ხელმძღვანელის მიერ (განხილვა)",
+    "approved_by_receiving_supervisor": "დადასტურებული (ხელმძღვანელის განხილვა)",
     "submitted_to_amending_ds": "მიმდინარეობს რედაქტირება (DS)",
     "approved_by_ds_amendment": "შესწორებული (DS)"
   },
@@ -170,13 +170,13 @@
     "PROTOCOL": "პროტოკოლი",
     "DEPUTY": "მოადგილე",
     "MINISTER": "მინისტრი",
-    "SUPERVISOR": "ზედამხედველი",
+    "SUPERVISOR": "ხელმძღვანელი",
     "SUPER_COLLABORATOR": "უფროსი შემსრულებელი",
     "COLLABORATOR": "შემსრულებელი",
     "ANALYST": "ანალიტიკოსი",
     "CURATOR": "კურატორი",
     "RECEIVING_SUPER_COLLABORATOR": "უფროსი შემსრულებელი",
-    "RECEIVING_SUPERVISOR": "ზედამხედველი"
+    "RECEIVING_SUPERVISOR": "ხელმძღვანელი"
   },
   "lang": {
     "EN": "English",
@@ -273,8 +273,8 @@
       "dsRole": "დოკუმენტის წარმდგენის როლი *",
       "ownerRole": "დოკუმენტის მფლობელის როლი *",
       "deputy": "მოადგილე *",
-      "responsibleSupervisor": "პასუხისმგებელი ზედამხედველი *",
-      "supervisor": "ზედამხედველი *",
+      "responsibleSupervisor": "პასუხისმგებელი ხელმძღვანელი *",
+      "supervisor": "ხელმძღვანელი *",
       "superCollaborator": "უფროსი შემსრულებელი *",
       "language": "ენა",
       "deadline": "ვადა",
@@ -287,7 +287,7 @@
       "addSection": "+ სექციის დამატება",
       "selectPlaceholder": "— აირჩიეთ —",
       "selectDeputy": "— აირჩიეთ მოადგილე —",
-      "selectSupervisor": "— აირჩიეთ ზედამხედველი —",
+      "selectSupervisor": "— აირჩიეთ ხელმძღვანელი —",
       "selectSuperCollaborator": "— აირჩიეთ უფროსი შემსრულებელი —",
       "noSuperCollaborators": "— უფროსი შემსრულებლები ვერ მოიძებნა —",
       "selectTemplate": "— აირჩიეთ შაბლონი —",
@@ -320,7 +320,7 @@
     "tabs": {
       "departments": "დეპარტამენტები",
       "users": "მომხმარებლები",
-      "links": "მოადგილე–ზედამხედველის კავშირები",
+      "links": "მოადგილე–ხელმძღვანელის კავშირები",
       "hierarchy": "დეპარტამენტის იერარქია",
       "uploads": "მონაცემთა ატვირთვა"
     },
@@ -394,33 +394,33 @@
       }
     },
     "link": {
-      "title": "მოადგილე–ზედამხედველის კავშირები",
+      "title": "მოადგილე–ხელმძღვანელის კავშირები",
       "add": "+ კავშირის დამატება",
       "empty": "კავშირები ჯერ არ არის განსაზღვრული",
       "col": {
         "deputy": "მოადგილე",
-        "supervisor": "ზედამხედველი",
+        "supervisor": "ხელმძღვანელი",
         "dept": "დეპარტამენტი",
         "actions": "მოქმედებები"
       },
       "confirmDelete": "წავშალოთ ეს კავშირი?",
       "modal": {
-        "add": "მოადგილე–ზედამხედველის კავშირის დამატება"
+        "add": "მოადგილე–ხელმძღვანელის კავშირის დამატება"
       },
       "form": {
         "deputy": "მოადგილე",
-        "supervisor": "ზედამხედველი",
+        "supervisor": "ხელმძღვანელი",
         "selectDeputy": "— აირჩიეთ მოადგილე —",
-        "selectSupervisor": "— აირჩიეთ ზედამხედველი —"
+        "selectSupervisor": "— აირჩიეთ ხელმძღვანელი —"
       }
     },
     "hier": {
       "title": "დეპარტამენტის იერარქია",
-      "desc": "აჩვენებს, თუ როგორ არიან ზედამხედველები, უფროსი შემსრულებლები და შემსრულებლები დაჯგუფებული თითოეულ დეპარტამენტში.",
+      "desc": "აჩვენებს, თუ როგორ არიან ხელმძღვანელები, უფროსი შემსრულებლები და შემსრულებლები დაჯგუფებული თითოეულ დეპარტამენტში.",
       "empty": "არ არის დეპარტამენტები მინიჭებული მომხმარებლებით",
       "deputy": "მოადგილე",
       "noDeputy": "მოადგილე არ არის მიბმული",
-      "supervisors": "ზედამხედველები",
+      "supervisors": "ხელმძღვანელები",
       "superCollabs": "უფროსი შემსრულებლები",
       "collaborators": "შემსრულებლები",
       "none": "— არცერთი —"
@@ -584,7 +584,7 @@
       "unknownUser": "უცნობი",
       "stage": {
         "scReview": "უფროსი შემსრულებელი (განხილვა)",
-        "svReview": "ზედამხედველი (განხილვა)"
+        "svReview": "ხელმძღვანელი (განხილვა)"
       },
       "action": {
         "saved": "რედაქტირებული",

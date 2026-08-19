@@ -1351,8 +1351,8 @@
         // fallback below only strips the noun's trailing ი, so these are explicit.
         SUPER_COLLABORATOR: 'უფროს შემსრულებელთან',
         RECEIVING_SUPER_COLLABORATOR: 'უფროს შემსრულებელთან',
-        SUPERVISOR: 'ზედამხედველთან',
-        RECEIVING_SUPERVISOR: 'ზედამხედველთან',
+        SUPERVISOR: 'ხელმძღვანელთან',
+        RECEIVING_SUPERVISOR: 'ხელმძღვანელთან',
         CURATOR: 'კურატორთან',
         DEPUTY: 'მოადგილესთან',
         MINISTER: 'მინისტრთან',

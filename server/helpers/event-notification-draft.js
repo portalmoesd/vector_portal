@@ -48,12 +48,12 @@ function roleLabelKa(role) {
       [ROLES.PROTOCOL]: 'პროტოკოლი',
       [ROLES.DEPUTY]: 'მოადგილე',
       [ROLES.MINISTER]: 'მინისტრი',
-      [ROLES.SUPERVISOR]: 'ზედამხედველი',
+      [ROLES.SUPERVISOR]: 'ხელმძღვანელი',
       [ROLES.SUPER_COLLABORATOR]: 'უფროსი შემსრულებელი',
       [ROLES.COLLABORATOR]: 'შემსრულებელი',
       CURATOR: 'კურატორი',
       RECEIVING_SUPER_COLLABORATOR: 'უფროსი შემსრულებელი',
-      RECEIVING_SUPERVISOR: 'ზედამხედველი',
+      RECEIVING_SUPERVISOR: 'ხელმძღვანელი',
     }[role] ||
     role ||
     'მონაწილე'

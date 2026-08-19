@@ -6,6 +6,10 @@
  * COLLABORATOR / SUPER_COLLABORATOR — those are baked into stored section
  * statuses and are deliberately not renamed.
  *
+ * SUPERVISOR is renamed in Georgian only: ხელმძღვანელი, not ზედამხედველი. The
+ * English label stays "Supervisor", so unlike the pair above this one has to be
+ * checked per language.
+ *
  * The display text is duplicated across four files (both locale bundles, the
  * frontend's offline fallback maps, and the server's own tables for outgoing
  * email), so these tests exist to stop one of them drifting: a locale-only edit
@@ -87,6 +91,41 @@ test('no in-code label fallback still says Collaborator', () => {
   }
 });
 
+test('the Supervisor is ხელმძღვანელი in Georgian and unchanged in English', () => {
+  assert.equal(ka.roles.SUPERVISOR, 'ხელმძღვანელი');
+  // The receiving-chain role shows the same label; the department name
+  // underneath is what distinguishes it.
+  assert.equal(ka.roles.RECEIVING_SUPERVISOR, ka.roles.SUPERVISOR);
+  // English was not part of the rename.
+  assert.equal(en.roles.SUPERVISOR, 'Supervisor');
+  assert.equal(en.roles.RECEIVING_SUPERVISOR, 'Supervisor');
+});
+
+test('no Georgian string still says ზედამხედველი', () => {
+  // Every inflected form shares the ზედამხედველ stem — genitive -ის, adessive
+  // -თან, plural -ები — so one stem check covers the lot.
+  const stale = Object.entries(kaFlat)
+    .filter(([, v]) => v.includes('ზედამხედველ'))
+    .map(([k, v]) => `${k} = ${v}`);
+  assert.deepEqual(stale, [], 'ka.json still renders the old Supervisor name');
+
+  for (const file of LABEL_SOURCES) {
+    if (file.endsWith('.json')) continue;
+    assert.ok(!read(file).includes('ზედამხედველ'), `${file} still contains the old Supervisor name`);
+  }
+});
+
+test('the department list keeps ზედამხედველობა in agency names', () => {
+  // Two real agencies are named for *supervision* as an activity, not for the
+  // role — "ტექნიკური და სამშენებლო ზედამხედველობის სააგენტო" and "ბაზარზე
+  // ზედამხედველობის სააგენტო". A blanket stem rename would corrupt them.
+  const depts = JSON.parse(read('server/data/departments.json'));
+  const kept = depts.filter(d => (d.name || '').includes('ზედამხედველობ'));
+  assert.equal(kept.length, 2, 'the two supervision agencies must keep their own names');
+  assert.ok(!depts.some(d => (d.name || '').includes('ხელმძღვანელობ')),
+    'an agency name was caught by the role rename');
+});
+
 test('status labels name the Senior Editor', () => {
   assert.equal(en.status.submitted_to_super_collaborator, 'At Senior Editor');
   assert.equal(en.status.returned_by_super_collaborator, 'Returned by Senior Editor');
@@ -95,12 +134,21 @@ test('status labels name the Senior Editor', () => {
   assert.equal(ka.status.submitted_to_super_collaborator, 'უფროს შემსრულებელთან');
 });
 
+test('status labels name the Supervisor in the right case', () => {
+  assert.equal(en.status.submitted_to_supervisor, 'At Supervisor');
+  assert.equal(ka.status.submitted_to_supervisor, 'ხელმძღვანელთან');            // adessive
+  assert.equal(ka.status.returned_by_supervisor, 'დაბრუნებული ხელმძღვანელის მიერ'); // genitive
+  assert.equal(ka.status.approved_by_supervisor, 'დადასტურებული (ხელმძღვანელი)');   // nominative
+});
+
 test('the Georgian adessive map declines the adjective', () => {
   // dashboard-minister.js builds "with <role>" itself and bypasses the locale
   // files. Its generic fallback only strips the noun's trailing ი, which would
   // leave "უფროსი შემსრულებელთან" — so the entries must be explicit.
   const src = read('frontend/js/pages/dashboard-minister.js');
   assert.match(src, /COLLABORATOR: 'შემსრულებელთან'/);
+  assert.match(src, /SUPERVISOR: 'ხელმძღვანელთან'/);
+  assert.match(src, /RECEIVING_SUPERVISOR: 'ხელმძღვანელთან'/);
   assert.match(src, /SUPER_COLLABORATOR: 'უფროს შემსრულებელთან'/);
   assert.match(src, /RECEIVING_SUPER_COLLABORATOR: 'უფროს შემსრულებელთან'/);
   assert.doesNotMatch(src, /'უფროსი შემსრულებელთან'/);
@@ -114,6 +162,8 @@ test('the server email tables match the locale labels', () => {
   assert.match(src, /\[ROLES\.COLLABORATOR\]: 'Editor'/);
   assert.match(src, new RegExp(`\\[ROLES\\.SUPER_COLLABORATOR\\]: '${ka.roles.SUPER_COLLABORATOR}'`));
   assert.match(src, new RegExp(`\\[ROLES\\.COLLABORATOR\\]: '${ka.roles.COLLABORATOR}'`));
+  assert.match(src, new RegExp(`\\[ROLES\\.SUPERVISOR\\]: '${ka.roles.SUPERVISOR}'`));
+  assert.match(src, new RegExp(`RECEIVING_SUPERVISOR: '${ka.roles.RECEIVING_SUPERVISOR}'`));
 });
 
 test('the two locale bundles stay key-for-key identical', () => {

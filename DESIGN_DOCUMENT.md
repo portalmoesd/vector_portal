@@ -39,6 +39,13 @@ event creation, and progress tracking for the Vector Portal system.
 > document: role tables and prose use the display names, schema listings and
 > status values use the identifiers.
 
+> **Supervisor in Georgian.** The Supervisor is shown as **ხელმძღვანელი**, not
+> ზედამხედველი. This one is a Georgian-only rename — the English label stays
+> "Supervisor" and the `SUPERVISOR` identifier is untouched. Note that two
+> external agencies in `server/data/departments.json` are named for supervision
+> as an activity (ზედამხედველობის სააგენტო); those are proper nouns and keep
+> their own spelling.
+
 ### 2.2 Removed Roles
 
 - **Minister** — Will not be involved in document creation or approval.
