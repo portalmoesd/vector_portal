@@ -1,5 +1,6 @@
 /**
- * Justified body text in the document exports.
+ * The document PDF/Word export: justified body text, and keeping content inside
+ * the PDF page.
  *
  * Body prose in the exported PDF and Word files is set flush to both margins.
  * `LibraryDoc.justifyBodyHtml` does that once, on the section HTML, and both
@@ -10,6 +11,11 @@
  * html2canvas, so it is not enough that the CSS says justify — the rendered
  * pixels have to show it. The Word assertions read the produced OOXML
  * (`<w:jc w:val="both"/>`).
+ *
+ * The page-geometry tests below use html2pdf's REAL container width. It builds
+ * its own container at the printable width (210mm - 2*12.7mm = 184.6mm) and
+ * html2canvas crops at that box, so anything wider is silently rasterised away.
+ * Measuring at any other width would not see the bug.
  *
  * The html2pdf bundle is cached at tests/fixtures/.cache/, same as the docx one:
  *   curl -o tests/fixtures/.cache/html2pdf.bundle.min.js \
@@ -278,5 +284,272 @@ test.describe('Word output carries the justification', () => {
     const tables = xml.match(/<w:tbl>[\s\S]*?<\/w:tbl>/g) || [];
     expect(tables.length).toBeGreaterThan(0);
     tables.forEach(t => expect(justified(t)).toBe(false));
+  });
+});
+
+test.describe('content stays inside the PDF page', () => {
+  // exportPdf's options verbatim: the margin is what fixes the container width.
+  const PDF_OPT = `{
+    margin: [12.7, 12.7, 12.7, 12.7],
+    html2canvas: { scale: 2, useCORS: true, scrollX: 0, scrollY: 0 },
+    jsPDF: { format: 'a4', orientation: 'portrait' },
+    image: { type: 'jpeg', quality: 0.98 },
+  }`;
+
+  // Each of these overflowed the capture box, or sat on its boundary, before the fix.
+  const CASES = {
+    'justified paragraph': `<p style="margin:0">${PROSE}</p>`,
+    'unbreakable token': `<p style="margin:0">https://www.economy.ge/${'x'.repeat(200)}/final.pdf</p>`,
+    'eight-column table':
+      '<table><tbody><tr>' +
+      Array.from({ length: 8 }, (_, i) => `<th>Column ${i + 1}</th>`).join('') +
+      '</tr><tr>' +
+      Array.from({ length: 8 }, (_, i) => `<td>Value ${i + 1} of the row</td>`).join('') +
+      '</tr></tbody></table>',
+    'oversized image':
+      '<img width="1400" height="120" src="data:image/svg+xml;base64,' +
+      Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="120">' +
+        '<rect width="1400" height="120" fill="#333"/></svg>').toString('base64') + '">',
+  };
+
+  for (const [label, fragment] of Object.entries(CASES)) {
+    test(`${label} is not clipped at the right edge`, async ({ page }) => {
+      test.skip(!fs.existsSync(PDF_BUNDLE), 'html2pdf bundle not cached — see header comment');
+
+      const bundle = fs.readFileSync(PDF_BUNDLE, 'utf8').replace(/<\/script>/g, '<\\/script>');
+      await page.setContent(page$(`<script>${bundle}</script>`));
+      // The export inherits the app's global table styling; without it the
+      // measurement would be more forgiving than reality.
+      for (const css of ['frontend/css/base.css', 'frontend/css/components.css']) {
+        await page.addStyleTag({ content: read(css) });
+      }
+
+      const res = await page.evaluate(async ({ html, optSrc }) => {
+        const host = document.createElement('div');
+        // Mirrors exportPdf's wrapper, including the right inset.
+        host.style.cssText =
+          'background:#fff;font-family:Arial,sans-serif;font-size:11pt;padding-right:3px;';
+        host.innerHTML = '<div>' +
+          LibraryDoc.constrainForPdf(LibraryDoc.justifyBodyHtml(html)) + '</div>';
+        document.body.appendChild(host);
+
+        // eslint-disable-next-line no-eval
+        const canvas = await html2pdf().from(host).set(eval('(' + optSrc + ')'))
+          .toCanvas().get('canvas');
+        // html2pdf removes its container once rendering finishes, so the captured
+        // canvas is what tells us the width that was actually rasterised.
+        const boxW = canvas.width / 2;   // html2canvas scale: 2
+
+        const ctx = canvas.getContext('2d');
+        const { width, height } = canvas;
+        const d = ctx.getImageData(0, 0, width, height).data;
+        let maxInk = -1;
+        for (let y = 0; y < height; y++) {
+          for (let x = width - 1; x > maxInk; x--) {
+            const i = (y * width + x) * 4;
+            if (d[i] < 160 || d[i + 1] < 160 || d[i + 2] < 160) { maxInk = x; break; }
+          }
+        }
+        host.remove();
+        return { boxW, canvasW: width, gapDevicePx: width - 1 - maxInk };
+      }, { html: fragment, optSrc: PDF_OPT });
+
+      // Guard the premise: 210mm - 2*12.7mm = 184.6mm = 697.7px, captured as 698.
+      // If this drifts the test is no longer measuring the real capture box.
+      expect(res.boxW).toBe(698);
+      // Ink must stop clear of the crop edge. Justified text used to land within
+      // 0.5 css px of it, and the image and long token were clipped outright.
+      expect(res.gapDevicePx).toBeGreaterThanOrEqual(4);
+    });
+  }
+
+  test('no text line is left crossing a page boundary', async ({ page }) => {
+    test.skip(!fs.existsSync(PDF_BUNDLE), 'html2pdf bundle not cached — see header comment');
+
+    const bundle = fs.readFileSync(PDF_BUNDLE, 'utf8').replace(/<\/script>/g, '<\\/script>');
+    await page.setContent(page$(`<script>${bundle}</script>`));
+
+    const res = await page.evaluate(async ({ prose, optSrc }) => {
+      document.querySelectorAll('.html2pdf__overlay').forEach(e => e.remove());
+      const host = document.createElement('div');
+      host.style.cssText = 'background:#fff;font-family:Arial,sans-serif;font-size:11pt;';
+      // Four pages of prose with a table in the middle — enough boundaries that
+      // at least one is bound to land on a line.
+      host.innerHTML = Array.from({ length: 30 },
+        (_, i) => `<p style="text-align:justify;margin:0 0 10px">${i + 1}. ${prose}</p>`).join('')
+        + '<table style="width:100%"><tbody>'
+        + Array.from({ length: 12 }, (_, r) =>
+          '<tr>' + Array.from({ length: 4 }, (_, c) =>
+            `<td style="padding:6px 10px">Cell ${r + 1}.${c + 1}</td>`).join('') + '</tr>').join('')
+        + '</tbody></table>'
+        + Array.from({ length: 12 },
+          (_, i) => `<p style="text-align:justify;margin:0 0 10px">${i + 31}. ${prose}</p>`).join('');
+      document.body.appendChild(host);
+
+      // eslint-disable-next-line no-eval
+      const opt = eval('(' + optSrc + ')');
+      const worker = html2pdf().from(host).set(opt);
+      await worker.toCanvas();
+      const canvas = worker.prop.canvas;
+      // Exactly what html2pdf's toPdf uses to slice.
+      const band = Math.floor(canvas.width * worker.prop.pageSize.inner.ratio);
+
+      const boundaryInk = c => {
+        const ctx = c.getContext('2d');
+        const out = [];
+        for (let y = band; y < c.height; y += band) {
+          const d = ctx.getImageData(0, y, c.width, 1).data;
+          let n = 0;
+          for (let x = 0; x < c.width; x++) {
+            const i = x * 4;
+            if (d[i] < 245 || d[i + 1] < 245 || d[i + 2] < 245) n++;
+          }
+          out.push(n);
+        }
+        return out;
+      };
+
+      const before = boundaryInk(canvas);
+      const aligned = LibraryDoc.alignCanvasToPages(canvas, band);
+      const after = boundaryInk(aligned);
+
+      host.remove();
+      document.querySelectorAll('.html2pdf__overlay').forEach(e => e.remove());
+      return { band, width: canvas.width, before, after,
+               pagesBefore: Math.ceil(canvas.height / band),
+               pagesAfter: Math.ceil(aligned.height / band) };
+    }, { prose: PROSE, optSrc: PDF_OPT });
+
+    // The document must actually run to several pages, or nothing is proven.
+    expect(res.pagesBefore).toBeGreaterThanOrEqual(3);
+    // The bug reproduces: at least one raw boundary cuts through inked pixels.
+    expect(Math.max(...res.before)).toBeGreaterThan(res.width * 0.02);
+    // After alignment every boundary sits in whitespace. The allowance is the
+    // same 2% the aligner uses, so a break between two table rows — which still
+    // crosses the vertical borders — counts as clean.
+    res.after.forEach(n => expect(n).toBeLessThanOrEqual(Math.round(res.width * 0.02)));
+    // Pushing lines down may add a page, but must not lose one.
+    expect(res.pagesAfter).toBeGreaterThanOrEqual(res.pagesBefore);
+  });
+});
+
+test.describe('alignCanvasToPages', () => {
+  // A synthetic canvas of evenly spaced "lines": 10 inked rows, 5 blank, repeat.
+  // With band = 50 the first boundary lands inside the line at rows 45-54.
+  const STRIPES = `(width, height, band) => {
+    const c = document.createElement('canvas');
+    c.width = width; c.height = height;
+    const ctx = c.getContext('2d');
+    ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, width, height);
+    ctx.fillStyle = '#000';
+    for (let y = 0; y + 10 <= height; y += 15) ctx.fillRect(0, y, width, 10);
+    return c;
+  }`;
+
+  const INK = `(c) => {
+    const ctx = c.getContext('2d');
+    const d = ctx.getImageData(0, 0, c.width, c.height).data;
+    const rows = [];
+    for (let y = 0; y < c.height; y++) {
+      let n = 0;
+      const base = y * c.width * 4;
+      for (let x = 0; x < c.width; x++) {
+        const i = base + x * 4;
+        if (d[i] < 245 || d[i + 1] < 245 || d[i + 2] < 245) n++;
+      }
+      rows.push(n);
+    }
+    return rows;
+  }`;
+
+  test.beforeEach(async ({ page }) => { await page.setContent(page$()); });
+
+  test('moves every boundary off a line and keeps all the ink', async ({ page }) => {
+    const res = await page.evaluate(({ stripesSrc, inkSrc }) => {
+      // eslint-disable-next-line no-eval
+      const stripes = eval(stripesSrc), ink = eval(inkSrc);
+      const band = 50;
+      const src = stripes(100, 300, band);
+      const out = LibraryDoc.alignCanvasToPages(src, band);
+      const before = ink(src), after = ink(out);
+      const at = (rows, y) => (y < rows.length ? rows[y] : 0);
+      return {
+        beforeBoundaries: [50, 100, 150, 200, 250].map(y => at(before, y)),
+        afterBoundaries: [50, 100, 150, 200, 250].map(y => at(after, y)),
+        inkBefore: before.reduce((a, b) => a + b, 0),
+        inkAfter: after.reduce((a, b) => a + b, 0),
+        heightBefore: src.height, heightAfter: out.height,
+      };
+    }, { stripesSrc: STRIPES, inkSrc: INK });
+
+    // Without alignment the boundaries fall inside a stripe.
+    expect(Math.max(...res.beforeBoundaries)).toBeGreaterThan(2);
+    // With it, every boundary is blank.
+    res.afterBoundaries.forEach(n => expect(n).toBe(0));
+    // Nothing is cropped away — the same ink comes out, on a taller sheet.
+    expect(res.inkAfter).toBe(res.inkBefore);
+    expect(res.heightAfter).toBeGreaterThan(res.heightBefore);
+  });
+
+  test('leaves a canvas that fits on one page alone', async ({ page }) => {
+    const same = await page.evaluate(({ stripesSrc }) => {
+      // eslint-disable-next-line no-eval
+      const stripes = eval(stripesSrc);
+      const src = stripes(100, 40, 50);
+      return LibraryDoc.alignCanvasToPages(src, 50) === src;
+    }, { stripesSrc: STRIPES });
+    expect(same).toBe(true);
+  });
+
+  test('cuts where it falls when the block is taller than the search window', async ({ page }) => {
+    // A solid block spanning the whole page has no blank row to retreat to; the
+    // aligner must give up rather than push it forever or loop.
+    const res = await page.evaluate(({ inkSrc }) => {
+      // eslint-disable-next-line no-eval
+      const ink = eval(inkSrc);
+      const c = document.createElement('canvas');
+      c.width = 100; c.height = 300;
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, 100, 300);
+      ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 100, 300);
+      const out = LibraryDoc.alignCanvasToPages(c, 50);
+      return { height: out.height, rows: ink(out).length };
+    }, { inkSrc: INK });
+    expect(res.height).toBe(300);
+    expect(res.rows).toBe(300);
+  });
+});
+
+test.describe('constrainForPdf', () => {
+  test.beforeEach(async ({ page }) => { await page.setContent(page$()); });
+
+  test('lets long tokens wrap', async ({ page }) => {
+    const out = await page.evaluate(() => LibraryDoc.constrainForPdf('<p>x</p>'));
+    expect(out).toMatch(/overflow-wrap:\s*break-word/);
+    expect(out).toMatch(/word-break:\s*break-word/);
+  });
+
+  test('constrains images and tables', async ({ page }) => {
+    const out = await page.evaluate(() => LibraryDoc.constrainForPdf(
+      '<img width="1400" src="x.png"><table><tbody><tr><th>H</th><td>C</td></tr></tbody></table>'));
+    expect(out).toMatch(/max-width:\s*100%/);
+    expect(out).toMatch(/table-layout:\s*fixed/);
+    // The editor's cell padding, not the app's roomier global rule.
+    expect(out).toMatch(/padding:\s*6px 10px/);
+    // Undo the global uppercasing, which widens header cells.
+    expect(out).toMatch(/text-transform:\s*none/);
+  });
+
+  test('preserves tracked changes and comment anchors', async ({ page }) => {
+    const out = await page.evaluate(() => LibraryDoc.constrainForPdf(
+      '<p>a <ins data-tc-id="tc1">added</ins>' +
+      '<span class="gcp-cmt-anchor" data-cmt-anchor-id="cmt-1">flagged</span></p>'));
+    expect(out).toContain('<ins data-tc-id="tc1">added</ins>');
+    expect(out).toContain('data-cmt-anchor-id="cmt-1"');
+  });
+
+  test('handles empty input', async ({ page }) => {
+    expect(await page.evaluate(() => LibraryDoc.constrainForPdf(''))).toBe('');
+    expect(await page.evaluate(() => LibraryDoc.constrainForPdf(null))).toBe('');
   });
 });

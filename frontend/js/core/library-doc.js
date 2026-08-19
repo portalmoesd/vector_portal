@@ -88,6 +88,175 @@
     return root.innerHTML;
   }
 
+  // ── Keeping content inside the PDF page ─────────────────────────────────────
+  // html2pdf builds its own container at exactly the printable width
+  // (210mm - 2*12.7mm = 184.6mm, about 698 CSS px) and html2canvas crops at that
+  // element's bounding box — anything laid out wider is rasterised off the edge
+  // and silently disappears.
+  //
+  // The trap is that the editor's own protections are scoped to `.gcp-re-body`
+  // (see editor-core.js) and do not travel with the content: `overflow-wrap`,
+  // `table { width: 100% }` and its narrower cell padding are all lost. What the
+  // export inherits instead is the app's *global* table styling from
+  // components.css, which is wider — fatter cell padding plus uppercased,
+  // letter-spaced headers. So a table that fits on screen can overflow here.
+  //
+  // These rules restore the lost protections, as inline styles rather than an
+  // injected <style> block: html2pdf clones the container into the live page, so
+  // a stylesheet would leak into the app while the export runs.
+
+  const PDF_TEXT_BLOCKS = 'p, div, li, blockquote, td, th';
+
+  /** Constrain section HTML so nothing can exceed the PDF's capture width. */
+  function constrainForPdf(html) {
+    if (!html) return html || '';
+    const root = document.createElement('div');
+    root.innerHTML = html;
+
+    // Long unbreakable tokens (URLs, file paths) would otherwise run off the edge.
+    root.querySelectorAll(PDF_TEXT_BLOCKS).forEach(el => {
+      el.style.overflowWrap = 'break-word';
+      el.style.wordBreak = 'break-word';
+    });
+
+    // The sanitizer preserves width/height attributes on images, so a pasted
+    // screenshot keeps its natural size and hangs off the page.
+    root.querySelectorAll('img').forEach(el => {
+      el.style.maxWidth = '100%';
+      el.style.height = 'auto';
+    });
+
+    // insertTable() emits no widths at all; `fixed` makes the columns share the
+    // available measure instead of growing to fit their content.
+    root.querySelectorAll('table').forEach(el => {
+      el.style.width = '100%';
+      el.style.maxWidth = '100%';
+      el.style.tableLayout = 'fixed';
+    });
+
+    // Match the editor's cell padding rather than the app's roomier global rule,
+    // and undo the global uppercasing, which widens header cells.
+    root.querySelectorAll('td, th').forEach(el => {
+      el.style.padding = '6px 10px';
+    });
+    root.querySelectorAll('th').forEach(el => {
+      el.style.textTransform = 'none';
+      el.style.letterSpacing = 'normal';
+    });
+
+    return root.innerHTML;
+  }
+
+  // ── Page breaks ────────────────────────────────────────────────────────────
+  // html2pdf renders the whole document into one tall canvas and then slices it
+  // into fixed-height bands, a purely geometric cut that knows nothing about
+  // where the text sits: any line crossing a boundary is guillotined.
+  //
+  // Its `pagebreak` plugin is meant to prevent that, and it does not work well
+  // enough here. It measures elements in the *live* DOM and inserts spacers to
+  // push straddling ones down, but html2canvas rasterises a re-laid-out clone,
+  // not the live DOM, and the two disagree. Measured on a four-page export, the
+  // clone's lines sat between 1.5 px above and 10 px below where the live layout
+  // put them, drifting further down the document; the plugin also aligns to
+  // `floor(inner.height in px)` = 1026 css px while the slicer cuts every
+  // `floor(canvasWidth * ratio) / scale` = 1026.5 css px, so its "perfectly
+  // aligned" elements start half a pixel before each cut anyway. Paragraphs it
+  // had already moved were still sliced through the middle of the glyphs.
+  //
+  // So pagination is done on the canvas instead, which is the thing that is
+  // actually cut. Before handing it to the slicer we look at each upcoming
+  // boundary, walk up to the nearest near-blank row and pad the page out to full
+  // height from there. Every band boundary then falls in whitespace by
+  // construction, whatever the clone's layout turned out to be.
+
+  // A row counts as a cut point when at most this fraction of it is inked. Not
+  // zero: a break between two table rows still crosses the vertical borders, and
+  // those few columns should not veto an otherwise clean cut.
+  const CUT_INK_RATIO = 0.02;
+  // How far up from a boundary to look. Beyond this the element is too tall to
+  // move (a full-page image, a long table) and it is cut where it falls, which
+  // is what html2pdf would have done anyway.
+  const CUT_SEARCH_RATIO = 0.3;
+
+  /** Non-white pixel count for each row of [y, y + h) of `ctx`. */
+  function rowInk(ctx, width, y, h) {
+    const d = ctx.getImageData(0, y, width, h).data;
+    const out = new Array(h);
+    for (let r = 0; r < h; r++) {
+      let n = 0;
+      const base = r * width * 4;
+      for (let x = 0; x < width; x++) {
+        const i = base + x * 4;
+        // Anti-aliasing leaves near-white pixels around glyphs; 245 keeps those
+        // from reading as ink while still catching the faintest real rule.
+        if (d[i] < 245 || d[i + 1] < 245 || d[i + 2] < 245) { n++; }
+      }
+      out[r] = n;
+    }
+    return out;
+  }
+
+  /**
+   * Re-pad a rendered canvas so that every `band`-high slice starts on blank
+   * pixels, and return the new canvas.
+   *
+   * Returns the canvas untouched if it fits on one page, or if reading its
+   * pixels is not allowed — a cross-origin image taints the canvas and
+   * getImageData throws, in which case the old geometric slicing still applies
+   * rather than the export failing.
+   */
+  function alignCanvasToPages(canvas, band) {
+    if (!canvas || !band || canvas.height <= band) return canvas;
+
+    let ctx;
+    try {
+      ctx = canvas.getContext('2d');
+      ctx.getImageData(0, 0, 1, 1);
+    } catch (e) {
+      console.warn('PDF page alignment skipped (canvas is tainted):', e.message);
+      return canvas;
+    }
+
+    const inkLimit = Math.max(2, Math.round(canvas.width * CUT_INK_RATIO));
+    const reach = Math.max(1, Math.round(band * CUT_SEARCH_RATIO));
+
+    // Source rows at which each page ends. The search window never starts above
+    // `hard - reach`, so every page advances by at least (1 - CUT_SEARCH_RATIO)
+    // of a band and the loop always terminates.
+    const cuts = [];
+    let start = 0;
+    while (start + band < canvas.height) {
+      const hard = start + band;
+      const from = Math.max(start + 1, hard - reach);
+      const ink = rowInk(ctx, canvas.width, from, hard - from + 1);
+      let cut = hard;
+      for (let r = ink.length - 1; r >= 0; r--) {
+        if (ink[r] <= inkLimit) { cut = from + r; break; }
+      }
+      cuts.push(cut);
+      start = cut;
+    }
+    cuts.push(canvas.height);
+
+    const out = document.createElement('canvas');
+    out.width = canvas.width;
+    // The final page keeps only the height it needs; html2pdf trims the last
+    // page to `height % band`, which is how the PDF stays A4 rather than
+    // stretching a short page to fill the sheet.
+    out.height = (cuts.length - 1) * band + (cuts[cuts.length - 1] - (cuts[cuts.length - 2] || 0));
+    const octx = out.getContext('2d');
+    octx.fillStyle = '#ffffff';
+    octx.fillRect(0, 0, out.width, out.height);
+
+    let src = 0;
+    cuts.forEach((cut, i) => {
+      const h = Math.min(cut - src, band);
+      octx.drawImage(canvas, 0, src, canvas.width, h, 0, i * band, canvas.width, h);
+      src = cut;
+    });
+    return out;
+  }
+
   // ── Discussion-point documents ──────────────────────────────────────────────
   // Sections of a DISCUSSION_POINTS document hold an ordered list of points
   // (topic / context / additional information) rather than free-form prose, so
@@ -395,8 +564,13 @@
         const metaLine = [docCountryLabel(doc), dateLabel].filter(Boolean).join(' · ');
         // No container padding — the pdf page margin alone positions the
         // content, so the text starts at the top of the printable area.
+        // padding-right keeps justified lines off the capture boundary. Measured:
+        // ragged text ends ~6px inside html2canvas's crop edge, but justified text
+        // ends flush at the measure, leaving only ~0.5px — inside the rounding and
+        // glyph-overhang zone, which shaves the last character. 3px restores the
+        // clearance ragged text always had, and is invisible at print size.
         const html = `
-          <div style="font-family: Arial, sans-serif; font-size: 11pt;">
+          <div style="font-family: Arial, sans-serif; font-size: 11pt; padding-right: 3px;">
             <div style="display:flex; align-items:center; gap:14px; padding-bottom:12px; border-bottom:2px solid #0a84ff; margin-bottom:22px;">
               ${flag ? `<img src="${flag.dataUrl}" style="width:42px;height:42px;border-radius:50%;flex:0 0 auto;">` : ''}
               <div>
@@ -406,7 +580,7 @@
             </div>
             ${sections.map(s => `
               <p style="font-size: 12pt; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 4px;">${escapeHtml(s.title)}</p>
-              <div>${justifyBodyHtml(stripTrackChanges(s.htmlContent || ''))}</div>
+              <div>${constrainForPdf(justifyBodyHtml(stripTrackChanges(s.htmlContent || '')))}</div>
             `).join('<hr style="border:none;border-top:1px solid #e5e7eb;margin:18px 0;">')}
           </div>
         `;
@@ -424,7 +598,17 @@
             html2canvas: { scale: 2, useCORS: true, scrollX: 0, scrollY: 0 },
             jsPDF: { format: 'a4', orientation: 'portrait' },
             image: { type: 'jpeg', quality: 0.98 },
-          }).save();
+            // The DOM-side pagebreak plugin is left on its defaults on purpose —
+            // see alignCanvasToPages above for why it cannot be trusted to keep
+            // a line off a page boundary, and what replaces it.
+          })
+            .toCanvas()
+            .then(function alignPages() {
+              // toPdf slices at exactly this height, so align to the same grid.
+              const band = Math.floor(this.prop.canvas.width * this.prop.pageSize.inner.ratio);
+              this.prop.canvas = alignCanvasToPages(this.prop.canvas, band);
+            })
+            .save();
         } else {
           // Fallback: open print dialog
           const w = window.open('', '_blank');
@@ -525,6 +709,6 @@
   window.LibraryDoc = {
     preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal,
     isDiscussionPoints, sectionPoints, renderDiscussionPoints, sectionPreviewHtml,
-    commentsAnchoredIn, justifyBodyHtml,
+    commentsAnchoredIn, justifyBodyHtml, constrainForPdf, alignCanvasToPages,
   };
 })();

@@ -859,6 +859,7 @@ Opens a modal displaying the full document content:
 - Settings: A4 portrait, 0.5-inch margins, JPEG images at 0.98 quality, 2x canvas scale
 - Track changes are **hidden** in PDF output (accepted view)
 - Body text is **justified** (see "Justified body text" below)
+- Content is kept inside the page (see "Fitting the PDF page" below)
 - Filename: slugified document title + `.pdf`
 
 #### Export to Word
@@ -898,6 +899,48 @@ changing.
   text — headings, the Context / Additional Information labels — renders
   identically either way.
 - All generation happens client-side (no backend processing)
+
+#### Fitting the PDF page
+
+html2pdf renders the whole document into one tall canvas and then slices it into
+fixed-height bands, so nothing about the export is page-aware by default. Two
+things had to be added, both in `frontend/js/core/library-doc.js`.
+
+**Right edge — `constrainForPdf()`.** html2pdf builds its own container at
+exactly the printable width (210 mm − 2 × 12.7 mm = 184.6 mm, about 698 CSS px)
+and html2canvas crops at that box: anything laid out wider is rasterised off the
+edge and silently disappears. The editor's own protections are scoped to
+`.gcp-re-body` and do not travel with the content, so the export instead inherits
+the app's *global* table styling, which is wider. `constrainForPdf()` restores
+them as inline styles on the section HTML: `overflow-wrap` on body blocks so a
+long URL can break, `max-width: 100%` on images, `width: 100%; table-layout:
+fixed` on tables, the editor's narrower cell padding, and no uppercasing on
+`<th>`. The export wrapper also carries `padding-right: 3px` — justified lines
+end flush at the measure, where ragged-right lines used to stop ~6 px short.
+
+**Page breaks — `alignCanvasToPages()`.** html2pdf's `pagebreak` plugin measures
+elements in the *live* DOM and inserts spacers to push straddling ones down, but
+html2canvas rasterises a re-laid-out clone, and the two disagree: measured on a
+four-page export, the clone's lines sat between 1.5 px above and 10 px below the
+live layout, drifting further down the document. The plugin also aligns to
+`floor(inner.height in px)` = 1026 CSS px while the slicer cuts every
+`floor(canvasWidth × ratio) / scale` = 1026.5 CSS px. Paragraphs it had already
+moved were still sliced through the glyphs.
+
+Pagination is therefore done on the canvas, which is the thing actually being
+cut. Between `toCanvas()` and `toPdf()` the export walks each upcoming band
+boundary, retreats to the nearest near-blank row (up to 30 % of a page) and pads
+the page out to full height from there. Every boundary then falls in whitespace
+by construction, whatever the clone's layout turned out to be.
+
+- A row counts as a cut point at ≤ 2 % ink, so a break between two table rows —
+  which still crosses the vertical borders — is treated as clean. Long tables
+  split between rows rather than being pushed whole.
+- A block taller than the search window (a full-page image) is cut where it
+  falls, as before. Nothing loops or is dropped.
+- If the canvas is tainted — a cross-origin image the browser will not let us
+  read back — alignment is skipped and the old geometric slicing applies, rather
+  than the export failing.
 
 #### View Files
 Opens a modal listing all uploaded files for the event:
