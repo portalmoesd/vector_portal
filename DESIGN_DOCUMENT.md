@@ -859,7 +859,42 @@ Opens a modal displaying the full document content:
 - Settings: A4 portrait, 0.5-inch margins, JPEG images at 0.98 quality, 2x canvas scale
 - Track changes are **hidden** in PDF output (accepted view)
 - Body text is **justified** (see "Justified body text" below)
+- Content is **fitted to the sheet** (see "Fitting the export to the page" below)
 - Filename: slugified document title + `.pdf`
+
+#### Fitting the export to the page
+
+html2pdf lays the document out in a box exactly as wide as the A4 printable
+area, rasterizes it, and slices the bitmap into pages. Anything wider than that
+box is missing from the right of the page, and an unguided slice lands in the
+middle of a line of text. Three things in `frontend/js/core/library-doc.js` keep
+the content on the sheet:
+
+- **An export stylesheet** (`EXPORT_CSS`) travels with the document as a
+  `<style>` node, scoped to `.pdf-export` so it cannot restyle the app page
+  underneath while html2pdf's container is attached to it. It bounds tables to
+  the content width, gives them the borders they have on the editing canvas
+  (`.gcp-re-body` in `editor-core.js`, which the export never sees), caps images
+  at the page width, and wraps tokens too long to break — `overflow-wrap:
+  anywhere` in table cells, which is what actually lets a table shrink, and
+  `break-word` in prose, which leaves the justified line breaking alone.
+- **`fitToPageHtml()`** drops author geometry that cannot fit: inline widths in
+  absolute units and the legacy `width`/`height` attributes. Percentages stay —
+  they are relative to the container and therefore already fit. Sizing is all it
+  touches; tracked changes, comment anchors, colours and alignment pass through.
+- **Page-break avoidance** (`pagebreak: { mode: ['css', 'legacy', 'avoid-all'] }`)
+  moves any block that would straddle a page boundary onto the next page, so the
+  raster is cut between blocks rather than through a line. A section title is
+  grouped with the first block of its body (`.pdf-keep`) so it is never stranded
+  at the foot of a page — but nothing larger is grouped: a unit approaching a
+  full sheet gets moved whole and leaves the page before it blank.
+
+The canvas scale steps below 2x for documents long enough to approach the
+browser's maximum canvas size, past which html2canvas returns a truncated bitmap
+and the end of the document goes missing with no error.
+
+Geometry is covered by `tests/editor/pdf-layout.spec.js`, which measures the
+rendered layout and drives html2pdf's own page-break pass.
 
 #### Export to Word
 - Modal with same section checklist as PDF export
