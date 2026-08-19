@@ -601,10 +601,21 @@
 }
 /* A deadline is not a meeting time — say so quietly instead of faking a clock. */
 .mn-dash .mn-day__when--due { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); }
+/* Country flag, left of the title — same round treatment as the list cards
+   (.mn-card__flag), sized for the panel. */
+.mn-dash .mn-day__flag { flex: 0 0 auto; width: 22px; height: 22px; line-height: 0; }
+.mn-dash .mn-day__flag img {
+  width: 22px; height: 22px; border-radius: 50%; display: block;
+  box-shadow: 0 0 0 1px var(--border), 0 2px 6px rgba(0, 0, 0, 0.12);
+}
 .mn-dash .mn-day__body { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+/* The panel is half the overview row and the time column eats into it, so titles
+   get two lines before they ellipsise. Without -webkit-line-clamp support the
+   title simply wraps un-ellipsised — never a broken row. */
 .mn-dash .mn-day__name {
-  font-size: 0.88rem; font-weight: 700; color: var(--text-primary);
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  font-size: 0.88rem; font-weight: 700; color: var(--text-primary); line-height: 1.3;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .mn-dash .mn-day__country { font-size: 0.75rem; color: var(--text-muted); }
 /* Same attention colours the cards and tab badges use. */

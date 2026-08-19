@@ -154,6 +154,43 @@ test.describe('the day preview', () => {
     await expect(dayCell(page, D)).toHaveClass(/dp-cal-grid__day--selected/);
   });
 
+  test('each row carries its country flag, left of the title', async ({ page }) => {
+    await openDashboard(page);
+
+    const flag = rows(page).filter({ hasText: 'Morning Briefing' }).locator('.mn-day__flag img');
+    await expect(flag).toHaveAttribute('src', '/assets/flags/de.svg');
+    await expect(flag).toHaveAttribute('alt', 'Germany');
+    // Left of the title, not after it.
+    const [flagBox, titleBox] = await Promise.all([
+      flag.boundingBox(),
+      rows(page).filter({ hasText: 'Morning Briefing' }).locator('.mn-day__name').boundingBox(),
+    ]);
+    expect(flagBox.x).toBeLessThan(titleBox.x);
+  });
+
+  test('an event with no country leaves no gap where the flag would be', async ({ page }) => {
+    const noCountry = { id: 8, title: 'Internal Review', countryCode: '', countryName: '',
+      documentSubmitterId: 3, endedAt: at(D, 7), eventDateTime: at(D, 7), language: 'EN', sections: [] };
+    await openDashboard(page, { library: [noCountry] });
+
+    await expect(rows(page)).toHaveCount(1);
+    await expect(rows(page).locator('.mn-day__flag')).toHaveCount(0);
+  });
+
+  test('a long title runs to two lines instead of being cut off at one', async ({ page }) => {
+    const long = { ...LIBRARY[0], id: 7,
+      title: 'Bilateral Meeting with the Federal Republic of Germany on Trade and Investment' };
+    await openDashboard(page, { library: [LIBRARY[1], long] });
+
+    const shortName = rows(page).filter({ hasText: 'Afternoon Session' }).locator('.mn-day__name');
+    const longName = rows(page).filter({ hasText: 'Bilateral Meeting' }).locator('.mn-day__name');
+    const [shortBox, longBox] = await Promise.all([shortName.boundingBox(), longName.boundingBox()]);
+    // Two lines is taller than one — the old nowrap clamp made these equal.
+    expect(longBox.height).toBeGreaterThan(shortBox.height * 1.5);
+    // ...and it stops at two, rather than growing with the title.
+    expect(longBox.height).toBeLessThan(shortBox.height * 2.5);
+  });
+
   test('an event that lands on the day by its deadline says so, not a time', async ({ page }) => {
     // A Deputy's calendar is the hybrid one: events they only contribute to sit
     // on it too, and those often carry no shared meeting time. Rendering "00:00"

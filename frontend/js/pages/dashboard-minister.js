@@ -1646,6 +1646,12 @@
     // by its deadline. Showing "00:00" for a deadline would invent a meeting time.
     const byMeeting = item.eventDateTime && tbYmd(item.eventDateTime).key === selectedDay;
     const when = byMeeting ? fmtTimeOnly(item.eventDateTime) : I18n.tr('dashboard.deadline');
+    // Same flag idiom the list cards use (see listCardHtml), at panel scale. Only
+    // emitted when there is a country code, so a codeless event leaves no gutter.
+    const code = (item.countryCode || '').toLowerCase();
+    const flag = code
+      ? `<span class="mn-day__flag"><img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" loading="lazy" onerror="this.closest('.mn-day__flag').style.display='none'"></span>`
+      : '';
     // Same attention colours the cards use.
     let dot = '';
     if (isActEvent(item.id)) dot = 'is-act';
@@ -1654,6 +1660,7 @@
     return `
       <li class="mn-day__row${String(item.id) === selectedId ? ' is-open' : ''}" data-event-id="${item.id}" role="button" tabindex="0">
         <span class="mn-day__when${byMeeting ? '' : ' mn-day__when--due'}">${escapeHtml(when)}</span>
+        ${flag}
         <span class="mn-day__body">
           <span class="mn-day__name">${escapeHtml(item.title || '')}</span>
           <span class="mn-day__country">${escapeHtml(country)}</span>
