@@ -40,6 +40,11 @@
   // document ministry-wide (the API widens /api/library for these roles);
   // Supervisor keeps the two-tab view.
   const HAS_DOCS_TAB = isMinister || isDeputy;
+  // Minister / Protocol / Deputy organise their day around meetings, so their
+  // overview side column shows a day preview (today by default, or whichever day
+  // is picked on the calendar) instead of the notification center. Those move to
+  // a bell in the hero. Every other role keeps the notification center.
+  const HAS_DAY_PANEL = isMinister || isDeputy;
   // Roles that may create events from the dashboard (the collapsible create panel).
   const CAN_CREATE_EVENT = ['PROTOCOL', 'DEPUTY', 'SUPERVISOR', 'SUPER_COLLABORATOR'];
   const canCreateEvent = CAN_CREATE_EVENT.includes(user.role);
@@ -113,6 +118,20 @@
   }
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
+  // The day the preview panel is showing, as a Tbilisi "YYYY-MM-DD" key. Starts
+  // on today; a calendar day click moves it. Only used when HAS_DAY_PANEL.
+  // Set here rather than lazily in renderDayPanel: the first renderCalendar()
+  // runs during boot, before the panel is built, and needs it to ring today.
+  // (todayKey/tbYmd are hoisted function declarations that only touch Intl.)
+  let selectedDay = todayKey();
+  // While true the preview rolls over with the clock — this dashboard is often
+  // left open all day. Picking a day by hand turns it off.
+  let dayFollowsToday = true;
+  // Day-preview panel elements. Declared here, not beside their builder, because
+  // paintHero() runs at boot and reads dayPanel — a `let` further down the file
+  // would still be in its temporal dead zone at that point.
+  let dayPanel, dayTitleEl, dayTodayEl, dayListEl;
+  let dayRenderKey = '';   // cheap change-detector, see renderDayPanel
   // Whether the list being rendered holds both finished and in-preparation
   // events — decides whether the cards carry a readiness chip (see listCardHtml).
   let mixedReadiness = false;
@@ -251,6 +270,11 @@
       img.addEventListener('error', () => { heroIconEl.innerHTML = FALLBACK_ICONS[pod]; });
     }
     if (clockEl) clockEl.innerHTML = `${String(hourNum).padStart(2, '0')}<span class="mn-hero__colon">:</span>${t.minute}`;
+    // Left open past midnight: roll the day preview onto the new day, unless the
+    // user has picked a day of their own.
+    if (dayPanel && dayFollowsToday && selectedDay !== todayKey()) {
+      setSelectedDay(todayKey(), { revealMonth: true });
+    }
   }
   paintHero();
   setInterval(paintHero, 30000);
@@ -549,6 +573,14 @@
     }).formatToParts(new Date(iso)).forEach(x => { p[x.type] = x.value; });
     const hh = String(parseInt(p.hour, 10) % 24).padStart(2, '0');
     return `${parseInt(p.day, 10)} ${gMonth(parseInt(p.month, 10) - 1, 'long')}, ${hh}:${p.minute}`;
+  }
+  // Just the clock time in Tbilisi ("14:30") — the day preview already states the day.
+  function fmtTimeOnly(iso) {
+    const p = {};
+    new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Asia/Tbilisi', hour: '2-digit', minute: '2-digit', hour12: false,
+    }).formatToParts(new Date(iso)).forEach(x => { p[x.type] = x.value; });
+    return `${String(parseInt(p.hour, 10) % 24).padStart(2, '0')}:${p.minute}`;
   }
   function fmtMonthYear(d) { return `${gMonth(d.getMonth(), 'long')} ${d.getFullYear()}`; }
   function fmtWeekRange(ws) {
@@ -1397,6 +1429,12 @@
     }).formatToParts(new Date(iso)).forEach(x => { p[x.type] = x.value; });
     return { y: +p.year, m: +p.month, d: +p.day, key: `${p.year}-${p.month}-${p.day}` };
   }
+  // Today's Tbilisi day key, and the inverse of tbYmd().key for label formatting.
+  function todayKey() { return tbYmd(new Date()).key; }
+  function dateFromKey(key) {
+    const [y, m, d] = key.split('-').map(Number);
+    return new Date(y, m - 1, d);
+  }
 
   // ── Calendar (adapted from dashboard-pipeline.js renderMiniCalendar) ─────────
   function renderCalendar(date) {
@@ -1469,11 +1507,18 @@
       }
       // Marked days are interactive (select the event): expose them as buttons so
       // keyboard/screen-reader users can reach them, with the full date as the name.
+      // On the day-preview dashboards EVERY day is selectable — an empty day is a
+      // valid thing to preview. Elsewhere only event days are interactive, as before.
       let dayAttrs = '';
-      if (hasEvent) {
+      if (hasEvent || HAS_DAY_PANEL) {
         const label = longDate(new Date(year, month, d));
-        dayAttrs = ` data-cal-date="${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}"`
-          + ` role="button" tabindex="0" aria-label="${escapeHtml(label)}"`;
+        const key = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+        // Keep the tab order short: event days and the selected day are tab stops,
+        // empty days stay clickable but are skipped by Tab (30 stops would wall
+        // off the card list below).
+        const tab = (hasEvent || key === selectedDay) ? 0 : -1;
+        dayAttrs = ` data-cal-date="${key}" role="button" tabindex="${tab}" aria-label="${escapeHtml(label)}"`
+          + (HAS_DAY_PANEL ? ` aria-pressed="${key === selectedDay ? 'true' : 'false'}"` : '');
       }
       daysHtml += `<span class="${cls}"${dayAttrs}>${d}</span>`;
     }
@@ -1490,28 +1535,158 @@
     document.getElementById('calPrev')?.addEventListener('click', () => renderCalendar(new Date(year, month - 1, 1)));
     document.getElementById('calNext')?.addEventListener('click', () => renderCalendar(new Date(year, month + 1, 1)));
 
-    // Click (or Enter/Space) a marked date → select (expand) the first matching event.
+    // Click (or Enter/Space) a date. With a day preview the calendar is a day
+    // picker — it fills the panel, which then lists every event on that day.
+    // Without one it keeps opening the first matching event directly.
     const selectByCalDate = (clicked) => {
+      if (HAS_DAY_PANEL) {
+        dayFollowsToday = (clicked === todayKey());
+        setSelectedDay(clicked);
+        return;
+      }
       const match = calendarItems().find(item => {
         const ds = calItemDate(item);
         return ds && tbYmd(ds).key === clicked; // Tbilisi day, matching how days are marked
       });
-      if (!match) return;
-      if (isOwner) {
-        // The event may live on another tab (hybrid calendar, or the Minister
-        // clicking while the docs tab is active) — revealEvent switches to it,
-        // opens the card and scrolls to it. Keep the calendar on the month the
-        // user is viewing (setMode otherwise resets it to the current month).
-        const viewed = calendarDate;
-        Promise.resolve(revealEvent(match.id)).then(() => renderCalendar(viewed));
-      } else {
-        select(match.id);
-      }
+      if (match) openEventFromOverview(match.id);
     };
     miniCalendarEl.querySelectorAll('[data-cal-date]').forEach(day => {
       day.addEventListener('click', () => selectByCalDate(day.dataset.calDate));
       day.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectByCalDate(day.dataset.calDate); }
+      });
+    });
+    // The grid was just rebuilt — re-apply the selected-day ring.
+    paintSelectedDay();
+  }
+
+  // ── Day preview (side column, Minister / Protocol / Deputy) ─────────────────
+  // Shows one day's schedule: today on load, or whichever day is picked on the
+  // calendar. Clicking a row opens the event's card in the list below, exactly
+  // as clicking a calendar day used to.
+
+  // The day's events, taken from the very same source the calendar marks days
+  // from, so the panel and the day dots can never disagree.
+  function eventsForDay(key) {
+    return calendarItems()
+      .filter(item => {
+        const ds = calItemDate(item);
+        return ds && tbYmd(ds).key === key;
+      })
+      .sort((a, b) => new Date(calItemDate(a)) - new Date(calItemDate(b)));
+  }
+
+  function buildDayPanel() {
+    if (!HAS_DAY_PANEL) return;
+    const side = document.getElementById('mnSide');
+    if (!side) return;
+    dayPanel = document.createElement('div');
+    dayPanel.className = 'mn-day';
+    dayPanel.innerHTML = `
+      <div class="mn-day__head">
+        <span class="mn-day__title"></span>
+        <button type="button" class="mn-day__today" hidden>${escapeHtml(I18n.tr('dashboard.showToday'))}</button>
+      </div>
+      <ul class="mn-day__list"></ul>`;
+    side.appendChild(dayPanel);
+    dayTitleEl = dayPanel.querySelector('.mn-day__title');
+    dayTodayEl = dayPanel.querySelector('.mn-day__today');
+    dayListEl = dayPanel.querySelector('.mn-day__list');
+    dayTodayEl.addEventListener('click', () => {
+      dayFollowsToday = true;
+      setSelectedDay(todayKey(), { revealMonth: true });
+    });
+    // renderAll() already ran during boot, before this panel existed.
+    renderDayPanel();
+  }
+
+  // Paint the selected-day ring in place. Selecting a day must NOT go through
+  // renderCalendar(): that replaces the grid's innerHTML, which would throw away
+  // the focused cell every time a day is picked with Enter/Space.
+  function paintSelectedDay() {
+    if (!miniCalendarEl || !HAS_DAY_PANEL) return;
+    miniCalendarEl.querySelectorAll('[data-cal-date]').forEach(el => {
+      const on = el.dataset.calDate === selectedDay;
+      el.classList.toggle('dp-cal-grid__day--selected', on);
+      el.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) el.tabIndex = 0;
+    });
+  }
+
+  // Move the preview to `key`. `revealMonth` also brings the calendar to that
+  // month (used by the "Show today" button, which may be a month away).
+  function setSelectedDay(key, { revealMonth = false } = {}) {
+    selectedDay = key;
+    const [y, m] = key.split('-').map(Number);
+    if (revealMonth && (calendarDate.getFullYear() !== y || calendarDate.getMonth() !== m - 1)) {
+      renderCalendar(new Date(y, m - 1, 1)); // ends with paintSelectedDay()
+    } else {
+      paintSelectedDay();
+    }
+    renderDayPanel();
+  }
+
+  // Open an event chosen from the overview row (a day-preview row, or a calendar
+  // day on the roles that still open events directly). The event may live on
+  // another tab — revealEvent switches to it, expands the card and scrolls to it
+  // — but setMode() resets the calendar to the current month, so restore the
+  // month the user was browsing afterwards.
+  function openEventFromOverview(id) {
+    if (!isOwner) { select(id); return; }
+    const viewed = calendarDate;
+    Promise.resolve(revealEvent(id)).then(() => {
+      renderCalendar(viewed);
+      renderDayPanel();
+    });
+  }
+
+  function dayRowHtml(item) {
+    const country = localizedCountryName({ code: item.countryCode, name_en: item.countryName, name_ka: item.countryNameKa });
+    // An item can land on this day by its meeting time or (hybrid calendars only)
+    // by its deadline. Showing "00:00" for a deadline would invent a meeting time.
+    const byMeeting = item.eventDateTime && tbYmd(item.eventDateTime).key === selectedDay;
+    const when = byMeeting ? fmtTimeOnly(item.eventDateTime) : I18n.tr('dashboard.deadline');
+    // Same attention colours the cards use.
+    let dot = '';
+    if (isActEvent(item.id)) dot = 'is-act';
+    else if (newEventIds.has(String(item.id))) dot = 'is-new';
+    else if (item._ready && readyEvents.has(String(item.id))) dot = 'is-ready';
+    return `
+      <li class="mn-day__row${String(item.id) === selectedId ? ' is-open' : ''}" data-event-id="${item.id}" role="button" tabindex="0">
+        <span class="mn-day__when${byMeeting ? '' : ' mn-day__when--due'}">${escapeHtml(when)}</span>
+        <span class="mn-day__body">
+          <span class="mn-day__name">${escapeHtml(item.title || '')}</span>
+          <span class="mn-day__country">${escapeHtml(country)}</span>
+        </span>
+        ${dot ? `<span class="mn-day__dot ${dot}" aria-hidden="true"></span>` : ''}
+      </li>`;
+  }
+
+  function renderDayPanel() {
+    if (!dayPanel) return;
+    const isToday = selectedDay === todayKey();
+    dayTitleEl.textContent = isToday
+      ? `${I18n.tr('dashboard.grpToday')} · ${longDate(dateFromKey(selectedDay))}`
+      : longDate(dateFromKey(selectedDay));
+    dayTodayEl.hidden = isToday;
+    const items = eventsForDay(selectedDay);
+    // renderAll() fires on both 45s polls; rewriting identical HTML would reset
+    // the list's scroll position every time. Only redraw when something changed.
+    const key = [selectedDay, selectedId, ...items.map(d => [d.id, d._ready ? 1 : 0,
+      isActEvent(d.id) ? 1 : 0, newEventIds.has(String(d.id)) ? 1 : 0,
+      readyEvents.has(String(d.id)) ? 1 : 0].join(':'))].join('|');
+    if (key === dayRenderKey) return;
+    dayRenderKey = key;
+    if (!items.length) {
+      dayListEl.innerHTML = `<li class="mn-day__empty">${escapeHtml(I18n.tr('dashboard.dayNoEvents'))}</li>`;
+      return;
+    }
+    dayListEl.innerHTML = items.map(dayRowHtml).join('');
+    dayListEl.querySelectorAll('.mn-day__row').forEach(row => {
+      const open = () => openEventFromOverview(parseInt(row.dataset.eventId, 10));
+      row.addEventListener('click', open);
+      row.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
       });
     });
   }
@@ -1521,6 +1696,7 @@
     // hits an unexpected snag.
     renderCalendar(calendarDate);
     renderList();
+    renderDayPanel();
   }
 
   // ── Wire controls ────────────────────────────────────────────────────────────
@@ -1641,6 +1817,7 @@
   let notifPanel, notifListEl, notifBadgeEl, notifShowAllEl;
   let notifAll = [];
   function buildNotifPanel() {
+    if (HAS_DAY_PANEL) return;   // these roles get the day preview + hero bell instead
     const side = document.getElementById('mnSide');
     if (!side) return;
     notifPanel = document.createElement('div');
@@ -1659,9 +1836,47 @@
     notifShowAllEl.addEventListener('click', openNotifModal);
   }
 
+  // ── Hero bell (roles whose side column shows the day preview instead) ────────
+  // A real <button>, so focus and Enter/Space come for free. It opens the same
+  // "show all" popup the panel's header button opens.
+  let notifBellEl = null, notifBellBadgeEl = null;
+  function buildNotifBell() {
+    if (!HAS_DAY_PANEL) return;
+    const hero = document.getElementById('mnHero');
+    if (!hero) return;
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'mn-hero__bell';
+    btn.setAttribute('aria-haspopup', 'dialog');
+    btn.setAttribute('aria-label', I18n.tr('notif.title'));
+    // NOTIF_ICON.your_turn is already the bell glyph — reuse it rather than
+    // shipping a second, slightly different bell.
+    btn.innerHTML = `<span class="mn-hero__bellicon" aria-hidden="true">${NOTIF_ICON.your_turn}</span>`
+      + `<span class="mn-hero__bellbadge" aria-hidden="true" hidden></span>`;
+    btn.addEventListener('click', openNotifModal);
+    hero.appendChild(btn);
+    notifBellEl = btn;
+    notifBellBadgeEl = btn.querySelector('.mn-hero__bellbadge');
+  }
+  function renderNotifBell(data) {
+    if (!notifBellEl) return;
+    const unread = (data && data.unreadCount) || 0;
+    // The badge is aria-hidden, so the count has to reach screen readers here.
+    notifBellEl.setAttribute('aria-label', unread
+      ? I18n.tr('notif.bellUnread').replace('{n}', String(unread))
+      : I18n.tr('notif.title'));
+    paintNotifBadge(notifBellBadgeEl, unread, 9);
+  }
+
   // Render notification rows into a <ul>, wiring the click behaviour (mark read →
   // reveal the event → refresh). `onAfterClick` lets the modal close itself.
   function renderNotifRows(ulEl, list, onAfterClick) {
+    // The hero bell is always available, so the popup can be opened with nothing
+    // in it. (The side panel hides itself when empty and never lands here.)
+    if (!list.length) {
+      ulEl.innerHTML = `<li class="mn-notifs__empty">${escapeHtml(I18n.tr('notif.empty'))}</li>`;
+      return;
+    }
     ulEl.innerHTML = list.map(n => `
       <li class="mn-notif ${n.isRead ? '' : 'is-unread'}" data-id="${n.id}" data-type="${n.type}" data-event="${n.eventId || ''}" data-section="${n.sectionId || ''}" role="button" tabindex="0">
         <span class="mn-notif__icon" aria-hidden="true">${NOTIF_ICON[n.type] || NOTIF_ICON.your_turn}</span>
@@ -1686,9 +1901,23 @@
   }
 
   function renderNotifications(data) {
-    if (!notifPanel) return;
     const list = (data && data.notifications) || [];
     notifAll = list;
+    // The attention signals are derived from the same payload but are NOT part of
+    // the panel: the roles that swapped the panel for the day preview still need
+    // their card dots, tab badges and calendar colours. Keep this unguarded.
+    applyNotifSignals(list);
+    renderNotifBell(data);
+    renderNotifPanel(data, list);
+    // Keep an open "show all" modal in sync with the freshly polled list. It is
+    // reachable from both the panel and the bell, so it lives out here.
+    if (notifModal && notifModal.style.display !== 'none') {
+      renderNotifRows(notifModal.querySelector('.mn-notifs__list'), notifAll, hideNotifModal);
+    }
+  }
+
+  // Derive the card/tab/calendar attention sets from the notification list.
+  function applyNotifSignals(list) {
     // Recompute the card attention dots (event needs the user's attention).
     // Only re-render the card list when the set actually changes, so the ~45s
     // poll doesn't disrupt an expanded card.
@@ -1708,26 +1937,38 @@
     // The calendar now colours other-event days by attention, so re-render it too (not just
     // the list). Calendar re-render doesn't disturb an expanded card (that lives in the list).
     if (changed) renderAll();
+  }
+
+  // The unread count is coloured by the most urgent pending category:
+  // red (act) → orange (new) → green (ready) → base blue. Shared by the side-column
+  // panel's badge and the hero bell's badge.
+  function notifBadgeClass() {
+    if (myTurnEvents.size || actEvents.size) return 'is-alert';
+    if (newEventIds.size) return 'is-new';
+    if (readyEvents.size) return 'is-ready';
+    return '';
+  }
+  // Paint a count badge (panel or bell) from the poll payload. The bell's badge
+  // is a small disc, so it caps the count the way the tab dots do (:9+).
+  function paintNotifBadge(el, unread, cap) {
+    if (!el) return;
+    el.textContent = unread ? (cap && unread > cap ? `${cap}+` : String(unread)) : '';
+    el.hidden = !unread;
+    el.classList.remove('is-alert', 'is-new', 'is-ready');
+    const cls = notifBadgeClass();
+    if (cls) el.classList.add(cls);
+  }
+
+  function renderNotifPanel(data, list) {
+    if (!notifPanel) return;
     if (!list.length) { notifPanel.hidden = true; return; }
     notifPanel.hidden = false;
-    const unread = (data && data.unreadCount) || 0;
-    notifBadgeEl.textContent = unread ? String(unread) : '';
-    notifBadgeEl.hidden = !unread;
-    // Colour the count by the most urgent pending category: red (act) → orange (new) →
-    // green (ready) → base blue.
-    notifBadgeEl.classList.remove('is-alert', 'is-new', 'is-ready');
-    if (myTurnEvents.size || actEvents.size) notifBadgeEl.classList.add('is-alert');
-    else if (newEventIds.size) notifBadgeEl.classList.add('is-new');
-    else if (readyEvents.size) notifBadgeEl.classList.add('is-ready');
+    paintNotifBadge(notifBadgeEl, (data && data.unreadCount) || 0);
     renderNotifRows(notifListEl, list.slice(0, NOTIF_INLINE_LIMIT));
     // "Show all" opens the full list in a modal — always offer it while any
     // notifications exist (the panel itself is hidden when the list is empty).
     notifShowAllEl.hidden = false;
     notifShowAllEl.textContent = I18n.tr('notif.showAll').replace('{n}', String(list.length));
-    // Keep an open modal in sync with the freshly polled list.
-    if (notifModal && notifModal.style.display !== 'none') {
-      renderNotifRows(notifModal.querySelector('.mn-notifs__list'), notifAll, hideNotifModal);
-    }
   }
 
   // ── "Show all" popup listing every notification ─────────────────────────────
@@ -1819,7 +2060,9 @@
   }
 
   buildCreateButton();
-  buildNotifPanel();
+  buildDayPanel();     // no-op unless HAS_DAY_PANEL
+  buildNotifPanel();   // early-returns when HAS_DAY_PANEL
+  buildNotifBell();    // no-op unless HAS_DAY_PANEL
   loadNotifications();
   loadMyTurn();
   setInterval(() => { loadNotifications(); loadMyTurn(); }, 45000);
