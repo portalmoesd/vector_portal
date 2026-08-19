@@ -113,6 +113,9 @@
   }
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
+  // Whether the list being rendered holds both finished and in-preparation
+  // events — decides whether the cards carry a readiness chip (see listCardHtml).
+  let mixedReadiness = false;
   // The ministry-wide docs list can be long — render it in chunks behind a
   // "Show more" button. Resets on tab switch and on search input.
   const DOCS_CHUNK = 50;
@@ -302,11 +305,11 @@
     if (act > 0) return { color: 'red', count: act };
     const isNew = items.filter(d => !d._ready && newEventIds.has(String(d.id)) && !isActEvent(d.id)).length;
     if (isNew > 0) return { color: 'orange', count: isNew };
-    // Green = finished documents. Owner roles show every finished doc (a persistent
-    // "done" status); workers keep the unopened-only (readyEvents) attention cue.
-    // The all-completed docs tab would pin a permanent count — count only fresh
-    // (unread-notification) arrivals there, like the worker rule.
-    const green = items.filter(d => d._ready && ((isOwner && m !== 'docs') || readyEvents.has(String(d.id)))).length;
+    // Green = finished documents the user has not opened yet. It is an attention
+    // cue, not a tally of finished work: counting every finished document would
+    // pin a badge that can never reach zero, so it follows readyEvents (unread
+    // 'completed' notifications) on every tab and for every role.
+    const green = items.filter(d => d._ready && readyEvents.has(String(d.id))).length;
     if (green > 0) return { color: 'green', count: green };
     return null;
   }
@@ -372,13 +375,22 @@
 
   function select(id) {
     selectedId = id == null ? null : String(id);
-    // Opening a card clears its "new event" (red) or "ready" (green) dot — both
-    // clear on open. (The your-turn red dot persists until the action is done.)
-    const clearType = selectedId && newEventIds.has(selectedId) ? 'event_created'
-      : (selectedId && readyEvents.has(selectedId) ? 'completed' : null);
-    if (clearType) {
-      Api.post('/api/notifications/read', { eventId: parseInt(selectedId, 10), type: clearType })
-        .then(loadNotifications).catch(() => {});
+    // Opening a card clears its "new event" (orange) and "document ready" (green)
+    // dots — both mean "you have not looked at this yet". An event that was
+    // created and later published carries both, so clear both: clearing one
+    // would leave the other's dot sitting on the card the user just read. (The
+    // your-turn red dot persists until the action is actually done.)
+    const types = [];
+    if (selectedId && newEventIds.has(selectedId)) types.push('event_created');
+    if (selectedId && readyEvents.has(selectedId)) types.push('completed');
+    if (types.length) {
+      // Drop them locally first so the dot goes on the click rather than after
+      // the round-trip; loadNotifications() then reconciles with the server, and
+      // a failed POST simply brings the dot back on the next poll.
+      newEventIds.delete(selectedId);
+      readyEvents.delete(selectedId);
+      Api.post('/api/notifications/read', { eventId: parseInt(selectedId, 10), type: types })
+        .then(loadNotifications).catch(loadNotifications);
     }
     renderList();
   }
@@ -456,8 +468,13 @@
           ${tasksWhen}
         </div>`;
 
-    // Readiness chip (meetings only).
-    const chip = isMeetings
+    // Readiness chip: shown on My Calendar, and on any list that actually holds
+    // both finished and in-preparation events (Other Events does, for the roles
+    // without a Library tab). A list that is all one or the other says so in the
+    // tab's own name, and a chip on every card there would be noise. Unlike the
+    // corner dot this is a label, not a cue — it stays after the event is opened,
+    // which is what keeps "this one is done" readable once the dot has cleared.
+    const chip = (isMeetings || mixedReadiness)
       ? (ready
           ? `<span class="mn-chip mn-chip--ready">${escapeHtml(I18n.tr('dashboard.ready'))}</span>`
           : `<span class="mn-chip mn-chip--prep">${escapeHtml(I18n.tr('dashboard.inPreparation'))}</span>`)
@@ -477,14 +494,18 @@
       meta = `${dueHtml}${langMeta}`;
     }
 
-    // Card dot: green = the document is finished; red = an in-progress event
-    // needing the user's action (their turn); orange = a new in-progress event.
-    // Finished documents are never in the in-progress sets, so these are exclusive.
+    // Card dot: green = a finished document the user has not opened yet; red = an
+    // in-progress event needing their action (their turn); orange = a new
+    // in-progress event. All three are attention cues that clear once dealt with
+    // — the finished/in-preparation status itself is carried by the chip above.
+    // A finished document is handled in its own branch because an event created
+    // and later published carries an unread 'event_created' too, and "document
+    // ready" is the cue that matters on it.
     let attn = '';
-    // The docs tab lists only finished documents — a green tick on every card
-    // would be noise, so it carries no attention dots.
-    if (d._ready && mode !== 'docs') {
-      attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}">${ICON_TICK}</span>`; // green: finished (tick)
+    if (d._ready) {
+      if (readyEvents.has(String(d.id))) {
+        attn = `<span class="mn-card__attn mn-card__attn--ready" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeReady'))}">${ICON_TICK}</span>`; // green: finished, unopened (tick)
+      }
     } else if (isActEvent(d.id)) {
       attn = `<span class="mn-card__attn" role="img" aria-label="${escapeHtml(I18n.tr('dashboard.badgeAttention'))}">!</span>`; // red: your turn (!)
     } else if (newEventIds.has(String(d.id))) {
@@ -628,6 +649,7 @@
   function renderList() {
     updateTabDots();
     const items = getFiltered();
+    mixedReadiness = items.some(d => d._ready) && items.some(d => !d._ready);
     if (items.length === 0) {
       const emptyKey = { completed: 'dashboard.noCompleted', upcoming: 'dashboard.noUpcoming',
         meetings: 'dashboard.noMeetings', tasks: 'dashboard.noTasks', docs: 'dashboard.noDocs' }[mode] || 'dashboard.noUpcoming';

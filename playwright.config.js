@@ -5,7 +5,10 @@ const fs = require('fs');
 const managedChromium = '/opt/pw-browsers/chromium';
 
 module.exports = {
-  testDir: './tests/editor',
+  testDir: './tests',
+  // Browser specs are *.spec.js; the server suite (tests/server/*.test.js) runs
+  // under `node --test` and must not be picked up here.
+  testMatch: '**/*.spec.js',
   timeout: 30000,
   fullyParallel: true,
   reporter: [['list']],
