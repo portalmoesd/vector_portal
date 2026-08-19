@@ -597,10 +597,11 @@
   // `changeAvailable` = false renders "—" in the Change column (no prior
   // period exists, e.g. the chosen year is 2009).
 
-  // `sharedHs4` marks products that appear in BOTH countries' tables of the
-  // pair (light-yellow row highlight). Expand buttons are wired per pair by
+  // `sharedColors` maps the HS4 of a product that appears in BOTH countries'
+  // tables of the pair to its pastel step, so the same product is tinted the
+  // same colour on both sides. Expand buttons are wired per pair by
   // wireExpandPair so "Show more" uncovers both tables together.
-  function renderProductTable(el, products, periodText, showReexport, changeAvailable, sharedHs4) {
+  function renderProductTable(el, products, periodText, showReexport, changeAvailable, sharedColors) {
     if (products.length === 0) {
       el.innerHTML = `<div class="empty-state"><p>${reportLocale === 'ka' ? 'მონაცემები ვერ მოიძებნა' : 'No data found'}</p></div>`;
       return;
@@ -631,7 +632,8 @@
       const changeSign = p.change > 0 ? '+' : '';
       const changeCell = changeAvailable ? `${changeSign}${formatChangePct(p.change)}` : '—';
       const hiddenStyle = (hasMore && i >= INITIAL_COUNT) ? ' style="display:none" data-expandable' : '';
-      const sharedClass = (sharedHs4 && sharedHs4.has(p.hs4)) ? ' class="cmp-shared-row"' : '';
+      const sharedColor = sharedColors && sharedColors.get(p.hs4);
+      const sharedClass = sharedColor ? ` class="cmp-shared-row cmp-shared-${sharedColor}"` : '';
       html += `
         <tr${sharedClass}${hiddenStyle}>
           <td class="stat-col-product">${escapeHtml(reportLocale !== 'ka' && p.nameEn ? p.nameEn : p.name)}</td>
@@ -652,10 +654,20 @@
     el.innerHTML = html;
   }
 
-  // Products present in both lists, matched by HS4 code.
-  function sharedProductSet(list1, list2) {
+  // Products present in both lists, matched by HS4 code → the pastel step
+  // that tints them. Numbered in the first list's order, so the colours run
+  // top-to-bottom down the left-hand table and both tables of a pair agree
+  // on which colour belongs to which product. Wraps past the ramp's 12
+  // steps, which needs two nearly identical 15-row lists.
+  const SHARED_COLORS = 12;
+  function sharedProductColors(list1, list2) {
     const codes2 = new Set(list2.map(p => p.hs4));
-    return new Set(list1.map(p => p.hs4).filter(c => c !== undefined && codes2.has(c)));
+    const colors = new Map();
+    for (const p of list1) {
+      if (p.hs4 === undefined || colors.has(p.hs4) || !codes2.has(p.hs4)) continue;
+      colors.set(p.hs4, (colors.size % SHARED_COLORS) + 1);
+    }
+    return colors;
   }
 
   // One expand state per table pair: pressing "Show more" on either side
@@ -1431,8 +1443,8 @@
 
     const periodText = chosenPeriodText(r.chosen, isKa);
     const changeAvailable = !!r.prevPeriod;
-    const sharedExport = sharedProductSet(r.products.export1, r.products.export2);
-    const sharedImport = sharedProductSet(r.products.import1, r.products.import2);
+    const sharedExport = sharedProductColors(r.products.export1, r.products.export2);
+    const sharedImport = sharedProductColors(r.products.import1, r.products.import2);
     renderCmpSectionHeader(exportHeader1, name1, 'export', periodText);
     renderProductTable(exportTable1, r.products.export1, periodText, true, changeAvailable, sharedExport);
     renderCmpSectionHeader(exportHeader2, name2, 'export', periodText);

@@ -63,8 +63,20 @@
 }
 
 /* Trade product tables: a product present in BOTH countries' tables of a
-   pair is highlighted light yellow. The id selector outranks the generic
-   .stat-table row-hover background. */
-#cmpSections tr.cmp-shared-row td {
-  background: #fef9c3;
-}
+   pair is tinted, and each shared product gets its own colour off the
+   pastel ramp — the same colour on both sides — so a glance pairs the two
+   rows up instead of hunting for the matching HS4 name. The index is
+   assigned in the left-hand table's order and wraps past 12. The id
+   selector outranks the generic .stat-table row-hover background. */
+#cmpSections tr.cmp-shared-1 td { background: var(--pastel-1); }
+#cmpSections tr.cmp-shared-2 td { background: var(--pastel-2); }
+#cmpSections tr.cmp-shared-3 td { background: var(--pastel-3); }
+#cmpSections tr.cmp-shared-4 td { background: var(--pastel-4); }
+#cmpSections tr.cmp-shared-5 td { background: var(--pastel-5); }
+#cmpSections tr.cmp-shared-6 td { background: var(--pastel-6); }
+#cmpSections tr.cmp-shared-7 td { background: var(--pastel-7); }
+#cmpSections tr.cmp-shared-8 td { background: var(--pastel-8); }
+#cmpSections tr.cmp-shared-9 td { background: var(--pastel-9); }
+#cmpSections tr.cmp-shared-10 td { background: var(--pastel-10); }
+#cmpSections tr.cmp-shared-11 td { background: var(--pastel-11); }
+#cmpSections tr.cmp-shared-12 td { background: var(--pastel-12); }
