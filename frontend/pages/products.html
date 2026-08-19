@@ -81,16 +81,10 @@
         <!-- Summary overview -->
         <div id="prodSummary" class="card stat-summary hidden"></div>
 
-        <!-- Export / import dynamics side by side -->
-        <div class="stat-charts-row">
-          <div class="card stat-chart-card" id="exportChartCard">
-            <div id="exportChartHeader" class="stat-report__header"></div>
-            <div class="cmp-chart-wrap"><canvas id="prodExportChart"></canvas></div>
-          </div>
-          <div class="card stat-chart-card" id="importChartCard">
-            <div id="importChartHeader" class="stat-report__header"></div>
-            <div class="cmp-chart-wrap"><canvas id="prodImportChart"></canvas></div>
-          </div>
+        <!-- Export / import dynamics (combined) -->
+        <div class="card cmp-chart-card" id="prodChartCard">
+          <div id="prodChartHeader" class="stat-report__header"></div>
+          <div class="cmp-chart-wrap"><canvas id="prodChart"></canvas></div>
         </div>
 
         <!-- Top partners, exactly below the charts -->
