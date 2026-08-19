@@ -730,9 +730,9 @@
     },
     "dp": {
       "sectionHint": "This document is composed of discussion points. Add one point per topic.",
-      "topic": "Discussion Point Topic",
-      "topicPlaceholder": "Enter the topic…",
-      "context": "Discussion Point Context",
+      "topic": "Discussion Point Title",
+      "topicPlaceholder": "Enter the title…",
+      "context": "Discussion Point",
       "additional": "Additional Information",
       "add": "+ Add discussion point",
       "delete": "Delete discussion point",

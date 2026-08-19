@@ -463,9 +463,9 @@ Shown only for documents whose type is "განსახილველი ს
 | Key | English | Georgian | Notes |
 | --- | --- | --- | --- |
 | `editor.dp.sectionHint` | This document is composed of discussion points. Add one point per topic. | ეს დოკუმენტი შედგება განსახილველი საკითხებისგან. თითოეულ თემაზე დაამატეთ ცალკე საკითხი. |  |
-| `editor.dp.topic` | Discussion Point Topic | განსახილველი საკითხის სათაური |  |
-| `editor.dp.topicPlaceholder` | Enter the topic… | შეიყვანეთ საკითხი… |  |
-| `editor.dp.context` | Discussion Point Context | განსახილველი საკითხის კონტექსტი |  |
+| `editor.dp.topic` | Discussion Point Title | განსახილველი საკითხის სათაური |  |
+| `editor.dp.topicPlaceholder` | Enter the title… | შეიყვანეთ სათაური… |  |
+| `editor.dp.context` | Discussion Point | განსახილველი საკითხი |  |
 | `editor.dp.additional` | Additional Information | დამატებითი ინფორმაცია |  |
 | `editor.dp.add` | + Add discussion point | + საკითხის დამატება |  |
 | `editor.dp.delete` | Delete discussion point | საკითხის წაშლა |  |
@@ -482,6 +482,6 @@ held in `frontend/js/core/discussion-points.js` rather than the locale files:
 
 | Field | English | Georgian | Russian |
 | --- | --- | --- | --- |
-| Context heading | Context | კონტექსტი | Контекст |
+| Discussion Point heading | Discussion Point | განსახილველი საკითხი | Обсуждаемый вопрос |
 | Additional heading | Additional Information | დამატებითი ინფორმაცია | Дополнительная информация |
 | Untitled point fallback | Point N | საკითხი N | Вопрос N |
