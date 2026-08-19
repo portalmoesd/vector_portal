@@ -675,6 +675,32 @@ Each user's dashboard displays **pending action notifications** — sections tha
 at their level and require their review or editing. This ensures users can see at a glance
 what work is waiting for them.
 
+#### Attention dots
+
+The same notifications drive a coloured dot in the corner of each event card and a matching
+count on the dashboard's tab switch (which also tints the sliding thumb). Precedence is
+red → orange → green; a card carries at most one.
+
+| Colour | Meaning | Source | Clears when |
+|---|---|---|---|
+| **Red** | It is your turn to act on this event | live workflow state (`/api/workflow/my-turn`) plus unread `your_turn` / `returned` | the user actually acts (`markActorTurnRead`) |
+| **Orange** | A new event was added | unread `event_created` | the card is opened |
+| **Green** | A finished document you have not opened yet | unread `completed` | the card is opened |
+
+All three are **attention cues, not status labels** — every one of them clears. A finished
+document that has been opened carries no dot at all; its state is shown by the Ready /
+In preparation chip, which is a label and stays. (Drawing the green tick from "this document
+is finished" instead of from the unread notification is what once made it permanent.)
+
+Opening a card clears every cue notification the event holds in one request — an event that
+was created and later published carries both `event_created` and `completed`, and clearing
+only one would leave the other's dot on a card the user has just read. The dot is dropped
+locally on the click so it goes immediately; the next poll reconciles with the server, which
+restores it if the request never landed.
+
+`GET /api/notifications` returns the recent window **plus every unread row however old**, so
+a notification pushed out of that window by newer traffic cannot silently drop its dot.
+
 ---
 
 ## 11. Resolved Design Decisions

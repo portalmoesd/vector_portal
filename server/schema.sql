@@ -272,7 +272,7 @@ CREATE TABLE IF NOT EXISTS section_return_requests (
 CREATE TABLE IF NOT EXISTS notifications (
   id          SERIAL PRIMARY KEY,
   user_id     INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
-  type        VARCHAR(40) NOT NULL,   -- 'event_created' | 'your_turn' | 'returned'
+  type        VARCHAR(40) NOT NULL,   -- 'event_created' | 'your_turn' | 'returned' | 'completed'
   event_id    INT REFERENCES events(id) ON DELETE CASCADE,
   section_id  INT REFERENCES sections(id) ON DELETE CASCADE,
   meta        JSONB NOT NULL DEFAULT '{}'::jsonb,
