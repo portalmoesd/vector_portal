@@ -811,10 +811,10 @@
 
     // Combined export/import dynamics chart
     const title = wantExport && wantImport
-      ? `${name} — ${isKa ? 'ექსპორტ-იმპორტის დინამიკა, მლნ. $' : 'Export-Import Dynamics, mln $'}`
+      ? `${name} - ${isKa ? 'ექსპორტ-იმპორტის დინამიკა, მლნ. $' : 'Export-Import Dynamics, mln $'}`
       : (wantExport
-        ? `${name} — ${isKa ? 'ექსპორტის დინამიკა, მლნ. $' : 'Export Dynamics, mln $'}`
-        : `${name} — ${isKa ? 'იმპორტის დინამიკა, მლნ. $' : 'Import Dynamics, mln $'}`);
+        ? `${name} - ${isKa ? 'ექსპორტის დინამიკა, მლნ. $' : 'Export Dynamics, mln $'}`
+        : `${name} - ${isKa ? 'იმპორტის დინამიკა, მლნ. $' : 'Import Dynamics, mln $'}`);
     renderCombinedChart(title, labels,
       wantExport ? r.series.exp : null,
       wantImport ? r.series.imp : null,
@@ -957,7 +957,7 @@
   }
 
   function renderPartnerHeader(el, productNameText, sectionTitle, chosenText) {
-    el.innerHTML = `<h3 class="stat-report__title">${escapeHtml(`${productNameText} — ${sectionTitle}, ${chosenText}`)}</h3>`;
+    el.innerHTML = `<h3 class="stat-report__title">${escapeHtml(`${productNameText} - ${sectionTitle}, ${chosenText}`)}</h3>`;
   }
 
   // Partner table. Columns: Country | (base-year value in compare mode) |
@@ -1001,7 +1001,7 @@
         ? (countryNameKaMap[row.cid] || countryNameEnMap[row.cid] || row.cid)
         : (countryNameEnMap[row.cid] || countryNameKaMap[row.cid] || row.cid);
       const changeAvailable = hasBase;
-      let changeCell = '—';
+      let changeCell = '-';
       let changeClass = '';
       if (changeAvailable) {
         const pct = calcChange(row.cur, row.prev);
@@ -1076,8 +1076,11 @@
 
     // Top-5 partner listing: "Russia (170.7 mln USD, -7%, domestic export
     // share 96%)" — change omitted when no base, dom share only for export.
+    // Countries holding less than 1% of the product's flow are skipped.
     function topList(rows, flowTotal, withDomShare) {
-      return rows.slice(0, 5).map(row => {
+      return rows
+        .filter(row => flowTotal > 0 && (row.cur / flowTotal) * 100 >= 1)
+        .slice(0, 5).map(row => {
         const countryName = isKa
           ? (countryNameKaMap[row.cid] || countryNameEnMap[row.cid] || row.cid)
           : (countryNameEnMap[row.cid] || countryNameKaMap[row.cid] || row.cid);
@@ -1119,7 +1122,7 @@
           ? `ამ პროდუქტის ექსპორტმა ${prose} შეადგინა ${formatMln2(t.exp)} ${mln}${paren([changeTxt(t.exp, t.expBase)])}.`
           : `Export of this product reached ${formatMln2(t.exp)} ${mln}${paren([changeTxt(t.exp, t.expBase)])}.`;
         const domSentence = isKa
-          ? ` ადგილობრივმა ექსპორტმა შეადგინა ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `წილი ${domShare.toFixed(1)}%`])}, ხოლო რეექსპორტმა — ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `წილი ${reexShare.toFixed(1)}%`])}.`
+          ? ` ადგილობრივმა ექსპორტმა შეადგინა ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `წილი ${domShare.toFixed(1)}%`])}, ხოლო რეექსპორტმა - ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `წილი ${reexShare.toFixed(1)}%`])}.`
           : ` Domestic export amounted to ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `share ${domShare.toFixed(1)}%`])}, while re-export amounted to ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `share ${reexShare.toFixed(1)}%`])}.`;
         const destSentence = r.partners.exp.length
           ? (isKa
