@@ -340,39 +340,89 @@ function pairedLabelAlign(ownSeries, otherSeries, isFirstSeries, minRoomPx = 34)
   };
 }
 
+// Change colours for chart labels, mirroring --accent-green / --accent-red
+// (the two chart pages already carry their palette as literals).
+const CHANGE_UP_COLOR = '#16a34a';
+const CHANGE_DOWN_COLOR = '#dc2626';
+
+// Stacking distance between the two labels of a point. It has to clear one
+// label box — the 11px label font at Chart.js's 1.2 line height (13.2px)
+// plus the charts' `padding: 1` top and bottom — or the pair overlaps and
+// the collision pass hides the change. Revisit if either changes.
+const POINT_LABEL_LINE = 16;
+const POINT_LABEL_OFFSET = 4;
+
 /**
- * Scriptable `formatter` for those same charts. The first line is always
- * the value; the second carries whatever context the caller supplies for
- * that point — the change vs the prior period and the country's rank —
- * and is thinned as the points crowd together, so the label never grows
- * past the two lines the placement above is sized for:
+ * The `labels` block for one dataset of those charts — two stacked labels
+ * per point, because a datalabel is drawn in a single colour and the value
+ * and its change need different ones:
  *
- *   roomy     1,240.80 / "+12% · №2"
- *   tight     1,240.80 / "№2"          the change goes first
- *   tightest  1,240.80                 value alone
+ *   1,240.80 №2   the value, in the series colour, rank alongside
+ *   +12%          the change, green when positive and red when negative
+ *
+ * The second line is thinned as the points crowd together, and the rank
+ * falls back onto the freed line rather than widening the value line on a
+ * narrow chart:
+ *
+ *   roomy (>= 64px per point)   "1,240.80 №2" / "+12%"
+ *   tight (>= 44px)             "1,240.80"    / "№2"
+ *   tightest                    "1,240.80"
  *
  * @param {(v:number)=>string} formatValue  per-chart value formatter
- * @param {Array<Array<{change?: string|null, rank?: number|null}|null>|null>} metaByDataset
- *        per-point context, indexed by dataset then by point. Entries are
- *        read at draw time, so a caller that fills a rank in later only
- *        needs chart.update() — no rebuild.
- * @param {number} minPxPerPoint  width per point needed for the full line
+ * @param {Array<{change?: string|null, rank?: number|null}|null>|null} meta
+ *        per-point context for this dataset. Entries are read at draw time,
+ *        so a caller that fills a rank in later only needs chart.update().
+ * @param {string} seriesColor  this dataset's colour, also used for a
+ *        neutral (zero) change and for the rank on its own line
+ * @param {(ctx:object)=>string} alignFor  the dataset's scriptable `align`
+ *        (pairedLabelAlign), so the two labels stack on the side the pair
+ *        was placed on
+ * @param {number} minPxPerPoint  width per point needed for the change
  * @param {number} rankPxPerPoint  width per point needed for the rank alone
  */
-function pointLabelFormatter(formatValue, metaByDataset, minPxPerPoint = 64, rankPxPerPoint = 44) {
-  return (v, ctx) => {
-    const base = formatValue(v);
-    const arr = metaByDataset && metaByDataset[ctx.datasetIndex];
-    const meta = arr && arr[ctx.dataIndex];
-    if (!meta) return base;
-    const change = meta.change || null;
-    const rank = meta.rank != null ? `№${meta.rank}` : null;
-    if (!change && !rank) return base;
+function pointLabelParts(formatValue, meta, seriesColor, alignFor, minPxPerPoint = 64, rankPxPerPoint = 44) {
+  const at = (ctx) => (meta && meta[ctx.dataIndex]) || null;
+  const perPoint = (ctx) => {
     const area = ctx.chart.chartArea;
-    const gaps = Math.max(1, ctx.chart.data.labels.length - 1);
-    const perPoint = area ? area.width / gaps : Infinity;
-    if (perPoint >= minPxPerPoint) return `${base}\n${[change, rank].filter(Boolean).join(' · ')}`;
-    if (perPoint >= rankPxPerPoint && rank) return `${base}\n${rank}`;
-    return base;
+    if (!area) return Infinity;
+    return area.width / Math.max(1, ctx.chart.data.labels.length - 1);
+  };
+  // The change owns the second line wherever there is room for it, and the
+  // rank rides beside the value; when there is not, the rank takes the line
+  // back. The decision is by chart width, not per point, so the rank sits in
+  // the same place on every point of a chart even where a change is missing.
+  const roomy = (ctx) => perPoint(ctx) >= minPxPerPoint;
+  const rankText = (ctx) => {
+    const m = at(ctx);
+    return m && m.rank != null ? `№${m.rank}` : null;
+  };
+  // Stacked by offset: whichever label sits nearer the point takes the base
+  // offset, the outer one clears a line. `align` is the same function for
+  // both, so the pair always moves together.
+  const outer = POINT_LABEL_OFFSET + POINT_LABEL_LINE;
+  return {
+    // Declared first so the collision sort — which ties on data index and
+    // dataset index here — leaves the value as the survivor.
+    detail: {
+      offset: (ctx) => (alignFor(ctx) === 'top' ? POINT_LABEL_OFFSET : outer),
+      color: (ctx) => {
+        const m = at(ctx);
+        if (!roomy(ctx) || !m || !m.change) return seriesColor;
+        if (m.change.startsWith('+')) return CHANGE_UP_COLOR;
+        if (m.change.startsWith('-')) return CHANGE_DOWN_COLOR;
+        return seriesColor;   // a flat 0%, like an unclassed table cell
+      },
+      formatter: (v, ctx) => {
+        if (roomy(ctx)) return (at(ctx) || {}).change || null;
+        return perPoint(ctx) >= rankPxPerPoint ? rankText(ctx) : null;
+      },
+    },
+    value: {
+      offset: (ctx) => (alignFor(ctx) === 'top' ? outer : POINT_LABEL_OFFSET),
+      formatter: (v, ctx) => {
+        const rank = roomy(ctx) ? rankText(ctx) : null;
+        return rank ? `${formatValue(v)} ${rank}` : formatValue(v);
+      },
+    },
   };
 }

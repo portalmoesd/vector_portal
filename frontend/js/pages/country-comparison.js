@@ -1828,13 +1828,20 @@
     }
 
     const isBar = chartType === 'bar';
-    const makeDataset = (name, data, color, otherData, isFirst) => isBar
+    const makeDataset = (name, data, color, otherData, isFirst, pointMeta) => isBar
       ? {
           label: name,
           data,
           backgroundColor: color,
           borderRadius: 3,
-          datalabels: { anchor: 'end', align: 'end', color },
+          datalabels: {
+            anchor: 'end',
+            align: 'end',
+            color,
+            // 'end' on a bar points the same way 'top' does on a line, so
+            // the value sits against the bar and the rank stacks above it.
+            labels: pointLabelParts(valueFormatter, pointMeta, color, () => 'top'),
+          },
         }
       : {
           label: name,
@@ -1846,8 +1853,13 @@
           pointBackgroundColor: color,
           tension: 0.3,
           // Side picked per point, so the two series' labels never share
-          // the gap between the lines.
-          datalabels: { align: pairedLabelAlign(data, otherData, isFirst), color },
+          // the gap between the lines. Value and change are separate
+          // labels stacked on that side — one datalabel draws in one
+          // colour, and the change has to read green or red.
+          datalabels: (() => {
+            const align = pairedLabelAlign(data, otherData, isFirst);
+            return { align, color, labels: pointLabelParts(valueFormatter, pointMeta, color, align) };
+          })(),
         };
 
     chartInstances[key] = new Chart(canvas, {
@@ -1855,8 +1867,8 @@
       data: {
         labels,
         datasets: [
-          makeDataset(name1, series1, C1_COLOR, isBar ? null : series2, true),
-          makeDataset(name2, series2, C2_COLOR, isBar ? null : series1, false),
+          makeDataset(name1, series1, C1_COLOR, isBar ? null : series2, true, meta1),
+          makeDataset(name2, series2, C2_COLOR, isBar ? null : series1, false, meta2),
         ],
       },
       options: {
@@ -1870,16 +1882,12 @@
             font: { size: 11, weight: '600' },
             clamp: true,
             textAlign: 'center',
+            padding: 1,
             // Last resort for labels the per-point placement cannot pull
             // apart (neighbouring points on a narrow chart): the plugin
             // hides the lower-priority one, keeping the most recent
             // periods — it ranks by data index descending.
             display: 'auto',
-            // Second label line = change vs the comparable prior period
-            // and the country's rank among Georgia's partners, from the
-            // caller's per-point arrays; thinned when the points sit too
-            // close together for two lines of text.
-            formatter: pointLabelFormatter(valueFormatter, [meta1, meta2]),
           },
         },
         scales: {
@@ -1918,6 +1926,11 @@
     // stand out from the surrounding prose. b() escapes its argument, so
     // it replaces escapeHtml() at those call sites.
     const b = (x) => `<strong>${escapeHtml(String(x))}</strong>`;
+    // Change percentages carry the same green/red the tables use.
+    const bChange = (pct, text) => {
+      const cls = pct > 0 ? ' class="stat-positive"' : (pct < 0 ? ' class="stat-negative"' : '');
+      return `<strong${cls}>${escapeHtml(String(text))}</strong>`;
+    };
 
     const t = r.totals;
     const metrics = {
@@ -1940,7 +1953,7 @@
       const parts = [];
       if (r.prevPeriod && p >= INSIGNIFICANT_MLN) {
         const pct = calcChange(v, p);
-        parts.push(b(`${pct > 0 ? '+' : ''}${formatChangePct(pct)}`));
+        parts.push(bChange(pct, `${pct > 0 ? '+' : ''}${formatChangePct(pct)}`));
       }
       if (v >= INSIGNIFICANT_MLN && rank) {
         parts.push(isKa ? `ადგილი: ${b(rank)}` : `rank ${b(rank)}`);
@@ -2037,7 +2050,7 @@
         const parts = [];
         if (p.prevMln > 0 && p.valueMln > 0) {
           const pct = calcChange(p.valueMln, p.prevMln);
-          parts.push(b(`${pct > 0 ? '+' : ''}${formatChangePct(pct)}`));
+          parts.push(bChange(pct, `${pct > 0 ? '+' : ''}${formatChangePct(pct)}`));
         }
         if (p.valueMln > 0 && p.rank) {
           parts.push(isKa ? `ადგილი: ${b(p.rank)}` : `rank ${b(p.rank)}`);
@@ -2081,7 +2094,7 @@
       function tourismExtras(p) {
         const parts = [];
         if (p.visitors > 0 && p.changePct !== null && p.changePct !== undefined) {
-          parts.push(b(`${p.changePct > 0 ? '+' : ''}${formatChangePct(p.changePct)}`));
+          parts.push(bChange(p.changePct, `${p.changePct > 0 ? '+' : ''}${formatChangePct(p.changePct)}`));
         }
         if (p.visitors > 0 && p.rank) {
           parts.push(isKa ? `ადგილი: ${b(p.rank)}` : `rank ${b(p.rank)}`);

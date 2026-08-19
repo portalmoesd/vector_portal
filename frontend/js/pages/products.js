@@ -914,29 +914,31 @@
       chartInstances.main = null;
     }
 
-    const makeDataset = (data, color, otherData, isFirst) => ({
-      data,
-      borderColor: color,
-      backgroundColor: color,
-      borderWidth: 2.5,
-      pointRadius: 4,
-      pointBackgroundColor: color,
-      tension: 0.3,
+    const makeDataset = (data, color, otherData, isFirst, pointMeta) => {
       // Side picked per point, so the two series' labels never share the
       // gap between the lines and a floor-hugging point keeps its label
-      // above the line.
-      datalabels: { align: pairedLabelAlign(data, otherData, isFirst), color },
-    });
+      // above the line. Value and change are separate labels stacked on
+      // that side — one datalabel draws in one colour, and the change has
+      // to read green or red.
+      const align = pairedLabelAlign(data, otherData, isFirst);
+      return {
+        data,
+        borderColor: color,
+        backgroundColor: color,
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointBackgroundColor: color,
+        tension: 0.3,
+        datalabels: { align, color, labels: pointLabelParts(chartLabel, pointMeta, color, align) },
+      };
+    };
     const datasets = [];
-    const metaByDataset = [];
     const toMeta = (changes) => (changes || []).map(change => ({ change }));
     if (expSeries) {
-      datasets.push(makeDataset(expSeries, EXP_COLOR, both ? impSeries : null, true));
-      metaByDataset.push(toMeta(expChanges));
+      datasets.push(makeDataset(expSeries, EXP_COLOR, both ? impSeries : null, true, toMeta(expChanges)));
     }
     if (impSeries) {
-      datasets.push(makeDataset(impSeries, IMP_COLOR, both ? expSeries : null, false));
-      metaByDataset.push(toMeta(impChanges));
+      datasets.push(makeDataset(impSeries, IMP_COLOR, both ? expSeries : null, false, toMeta(impChanges)));
     }
 
     chartInstances.main = new Chart(prodChartCanvas, {
@@ -955,14 +957,12 @@
             font: { size: 11, weight: '600' },
             clamp: true,
             textAlign: 'center',
+            padding: 1,
             // Last resort for labels the per-point placement cannot pull
             // apart (neighbouring points on a narrow chart): the plugin
             // hides the lower-priority one, keeping the most recent
             // periods — it ranks by data index descending.
             display: 'auto',
-            // The change line is dropped when the points sit too close
-            // together for two lines of text.
-            formatter: pointLabelFormatter(chartLabel, metaByDataset),
           },
         },
         scales: {
@@ -1096,7 +1096,10 @@
     function changeTxt(cur, prev) {
       if (!hasBase || !(prev > 0)) return '';
       const pct = calcChange(cur, prev);
-      return `${b(`${pct > 0 ? '+' : ''}${formatChangePct(pct)}`)}${vsBase}`;
+      // Green up / red down, the same colours the tables use.
+      const cls = pct > 0 ? ' class="stat-positive"' : (pct < 0 ? ' class="stat-negative"' : '');
+      const txt = escapeHtml(`${pct > 0 ? '+' : ''}${formatChangePct(pct)}`);
+      return `<strong${cls}>${txt}</strong>${vsBase}`;
     }
     function paren(parts) {
       const list = parts.filter(Boolean);
