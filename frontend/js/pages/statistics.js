@@ -409,8 +409,10 @@
     if (statModeSwitchEl) {
       const btnLatest = statModeSwitchEl.querySelector('[data-mode="latest"]');
       const btnCmp = statModeSwitchEl.querySelector('[data-mode="comparison"]');
+      const btnProd = statModeSwitchEl.querySelector('[data-mode="products"]');
       if (btnLatest) btnLatest.textContent = ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
       if (btnCmp) btnCmp.textContent = ka ? 'ქვეყნების შედარება' : 'Country Comparison';
+      if (btnProd) btnProd.textContent = ka ? 'პროდუქტები' : 'Products';
       positionModeThumb();
     }
 
