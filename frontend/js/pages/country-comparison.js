@@ -34,12 +34,15 @@
     document.querySelectorAll('#reportLangToggle .stat-lang-toggle__btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.reportLang === early);
     });
+    // The mode-switch pill is interface chrome, so its labels follow the
+    // site locale, like the page title and the Generate button.
     const sw = document.getElementById('statModeSwitch');
     if (sw) {
+      const siteKa = earlySite === 'ka';
       const labels = {
-        latest: ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics',
-        comparison: ka ? 'ქვეყნების შედარება' : 'Country Comparison',
-        products: ka ? 'პროდუქტები' : 'Products',
+        latest: siteKa ? 'უახლესი სტატისტიკა' : 'Latest Statistics',
+        comparison: siteKa ? 'ქვეყნების შედარება' : 'Country Comparison',
+        products: siteKa ? 'პროდუქტები' : 'Products',
       };
       for (const [mode, text] of Object.entries(labels)) {
         const btn = sw.querySelector(`[data-mode="${mode}"]`);
@@ -714,17 +717,6 @@
     if (selectedCountry2) {
       selectedCountry2.displayLabel = isKa ? selectedCountry2.displayLabelKa : selectedCountry2.displayLabelEn;
       country2Search.value = selectedCountry2.displayLabel;
-    }
-
-    const modeSwitch = document.getElementById('statModeSwitch');
-    if (modeSwitch) {
-      const btnLatest = modeSwitch.querySelector('[data-mode="latest"]');
-      const btnCmp = modeSwitch.querySelector('[data-mode="comparison"]');
-      const btnProd = modeSwitch.querySelector('[data-mode="products"]');
-      if (btnLatest) btnLatest.textContent = isKa ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
-      if (btnCmp) btnCmp.textContent = isKa ? 'ქვეყნების შედარება' : 'Country Comparison';
-      if (btnProd) btnProd.textContent = isKa ? 'პროდუქტები' : 'Products';
-      positionModeThumb();
     }
 
     country1Label.textContent = isKa ? 'ქვეყანა 1' : 'Country 1';

@@ -22,6 +22,12 @@
     en: 'Search country...',
   };
   const LOADING_LABEL = { ka: 'იტვირთება...', en: 'Loading...' };
+  // Mode-switch pill labels. Chrome, not report content — these follow the
+  // site interface locale, like the page title and the Generate button.
+  const MODE_LABELS = {
+    ka: { latest: 'უახლესი სტატისტიკა', comparison: 'ქვეყნების შედარება', products: 'პროდუქტები' },
+    en: { latest: 'Latest Statistics',  comparison: 'Country Comparison',  products: 'Products' },
+  };
   const earlySiteLocale = localStorage.getItem('locale') || 'ka';
   let reportLocale = localStorage.getItem('statReportLocale') || earlySiteLocale;
 
@@ -43,7 +49,7 @@
     const titleEl = document.querySelector('.page-title[data-i18n="nav.statistics"]');
     if (titleEl) titleEl.textContent = earlySiteLocale === 'ka' ? 'სტატისტიკა' : 'Statistics';
     document.querySelectorAll('.stat-tab').forEach(btn => {
-      const label = TAB_LABELS[reportLocale] && TAB_LABELS[reportLocale][btn.dataset.tab];
+      const label = TAB_LABELS[earlySiteLocale] && TAB_LABELS[earlySiteLocale][btn.dataset.tab];
       if (label) btn.textContent = label;
     });
     document.querySelectorAll('[data-stat-heading]').forEach(h => {
@@ -63,11 +69,7 @@
       btn.classList.toggle('active', btn.dataset.reportLang === reportLocale);
     });
     if (statModeSwitchEl) {
-      const labels = {
-        latest: ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics',
-        comparison: ka ? 'ქვეყნების შედარება' : 'Country Comparison',
-        products: ka ? 'პროდუქტები' : 'Products',
-      };
+      const labels = MODE_LABELS[earlySiteLocale] || MODE_LABELS.ka;
       for (const [mode, text] of Object.entries(labels)) {
         const btn = statModeSwitchEl.querySelector(`[data-mode="${mode}"]`);
         if (btn) btn.textContent = text;
@@ -445,25 +447,9 @@
   const reportLangToggle = document.getElementById('reportLangToggle');
 
   function applyReportLocale(regenerate = true) {
-    const ka = reportLocale === 'ka';
-
-    // Mode switch labels (label widths change → realign the thumb)
-    if (statModeSwitchEl) {
-      const btnLatest = statModeSwitchEl.querySelector('[data-mode="latest"]');
-      const btnCmp = statModeSwitchEl.querySelector('[data-mode="comparison"]');
-      const btnProd = statModeSwitchEl.querySelector('[data-mode="products"]');
-      if (btnLatest) btnLatest.textContent = ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
-      if (btnCmp) btnCmp.textContent = ka ? 'ქვეყნების შედარება' : 'Country Comparison';
-      if (btnProd) btnProd.textContent = ka ? 'პროდუქტები' : 'Products';
-      positionModeThumb();
-    }
-
-    // Tabs
-    document.querySelectorAll('.stat-tab').forEach(btn => {
-      const key = btn.dataset.tab;
-      const label = TAB_LABELS[reportLocale] && TAB_LABELS[reportLocale][key];
-      if (label) btn.textContent = label;
-    });
+    // The mode-switch pill and the tab strip are interface chrome: they
+    // follow the site locale (set once in the early pass / by I18n) and
+    // do not change with the report language.
 
     // Section h2 headings
     document.querySelectorAll('[data-stat-heading]').forEach(h => {
