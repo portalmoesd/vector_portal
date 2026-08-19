@@ -46,8 +46,6 @@
 
   (function applyStaticLabelsEarly() {
     const ka = reportLocale === 'ka';
-    const titleEl = document.querySelector('.page-title[data-i18n="nav.statistics"]');
-    if (titleEl) titleEl.textContent = earlySiteLocale === 'ka' ? 'სტატისტიკა' : 'Statistics';
     document.querySelectorAll('.stat-tab').forEach(btn => {
       const label = TAB_LABELS[earlySiteLocale] && TAB_LABELS[earlySiteLocale][btn.dataset.tab];
       if (label) btn.textContent = label;
