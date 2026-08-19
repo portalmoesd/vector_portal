@@ -149,6 +149,21 @@ html { scroll-padding-top: 160px; }
   display: none;
 }
 
+/* Wider screens: lay the segments out as equal-width grid columns (the
+   widest label sets the width) so the pill reads as a balanced block and
+   the sliding thumb steps in even increments. Narrow screens keep the
+   natural per-label widths so the pill doesn't overflow. */
+@media (min-width: 601px) {
+  .stat-mode-switch {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+  .stat-mode-switch__btn {
+    text-align: center;
+  }
+}
+
 .stat-mode-switch__btn {
   position: relative;
   z-index: 1;
