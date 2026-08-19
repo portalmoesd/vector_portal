@@ -7,15 +7,27 @@
  * Falls back to our backend proxy (/api/statistics/) if direct calls fail.
  */
 (async function () {
-  await App.init();
+  // ── Synchronous pre-localization ─────────────────────────────────────
+  // Both locales live in localStorage and this script runs with the DOM
+  // already parsed, so every static label is set BEFORE the async init
+  // (auth, locale JSON, classificatory fetches) — otherwise a Georgian
+  // UI flashes the English fallback text for a noticeable moment. The
+  // later I18n / applyReportLocale passes re-apply identical strings.
+  const TAB_LABELS = {
+    ka: { trade: 'ვაჭრობა', tourism: 'ტურიზმი', investments: 'ინვესტიციები', companies: 'კომპანიები', appendix: 'დანართი' },
+    en: { trade: 'Trade',    tourism: 'Tourism',  investments: 'Investments',  companies: 'Companies',  appendix: 'Appendix' },
+  };
+  const SEARCH_PLACEHOLDER = {
+    ka: 'ქვეყნის ძებნა...',
+    en: 'Search country...',
+  };
+  const LOADING_LABEL = { ka: 'იტვირთება...', en: 'Loading...' };
+  const earlySiteLocale = localStorage.getItem('locale') || 'ka';
+  let reportLocale = localStorage.getItem('statReportLocale') || earlySiteLocale;
 
-  const user = Api.getUser();
-  if (!user) return;
-
-  // The Latest Statistics ⇄ Country Comparison switch — available to
-  // every role that can see the statistics page. The sliding thumb sits
-  // under the active tab (same mechanism as the dashboards' mn-toggle,
-  // dashboard-minister.js).
+  // Latest Statistics ⇄ Country Comparison ⇄ Products switch: sliding
+  // thumb under the active tab (same mechanism as the dashboards'
+  // mn-toggle, dashboard-minister.js).
   const statModeSwitchEl = document.getElementById('statModeSwitch');
   const statModeThumbEl = document.getElementById('statModeThumb');
   function positionModeThumb() {
@@ -25,13 +37,53 @@
     statModeThumbEl.style.left = active.offsetLeft + 'px';
     statModeThumbEl.style.width = active.offsetWidth + 'px';
   }
-  if (statModeSwitchEl) {
-    statModeSwitchEl.classList.remove('hidden');
-    positionModeThumb();
-    window.addEventListener('resize', positionModeThumb);
-    // Webfont load changes the label widths — realign once fonts are in.
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionModeThumb);
-  }
+
+  (function applyStaticLabelsEarly() {
+    const ka = reportLocale === 'ka';
+    const titleEl = document.querySelector('.page-title[data-i18n="nav.statistics"]');
+    if (titleEl) titleEl.textContent = earlySiteLocale === 'ka' ? 'სტატისტიკა' : 'Statistics';
+    document.querySelectorAll('.stat-tab').forEach(btn => {
+      const label = TAB_LABELS[reportLocale] && TAB_LABELS[reportLocale][btn.dataset.tab];
+      if (label) btn.textContent = label;
+    });
+    document.querySelectorAll('[data-stat-heading]').forEach(h => {
+      const label = TAB_LABELS[reportLocale] && TAB_LABELS[reportLocale][h.dataset.statHeading];
+      if (label) h.textContent = label;
+    });
+    const countryLabelEl = document.querySelector('[data-i18n="statistics.country"]');
+    if (countryLabelEl) countryLabelEl.textContent = ka ? 'ქვეყანა' : 'Country';
+    const searchEl = document.getElementById('countrySearch');
+    if (searchEl) searchEl.placeholder = SEARCH_PLACEHOLDER[reportLocale];
+    const genBtn = document.getElementById('generateBtn');
+    if (genBtn) genBtn.textContent = earlySiteLocale === 'ka' ? 'გენერაცია' : 'Generate';
+    document.querySelectorAll('.stat-loading-label').forEach(el => {
+      el.textContent = LOADING_LABEL[reportLocale];
+    });
+    document.querySelectorAll('#reportLangToggle .stat-lang-toggle__btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.reportLang === reportLocale);
+    });
+    if (statModeSwitchEl) {
+      const labels = {
+        latest: ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics',
+        comparison: ka ? 'ქვეყნების შედარება' : 'Country Comparison',
+        products: ka ? 'პროდუქტები' : 'Products',
+      };
+      for (const [mode, text] of Object.entries(labels)) {
+        const btn = statModeSwitchEl.querySelector(`[data-mode="${mode}"]`);
+        if (btn) btn.textContent = text;
+      }
+      statModeSwitchEl.classList.remove('hidden');
+      positionModeThumb();
+    }
+  })();
+  window.addEventListener('resize', positionModeThumb);
+  // Webfont load changes the label widths — realign once fonts are in.
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(positionModeThumb);
+
+  await App.init();
+
+  const user = Api.getUser();
+  if (!user) return;
 
   // ── Constants ──────────────────────────────────────────────────────────
   const GEOSTAT_API = 'https://ex-trade-api.geostat.ge/api/trade';
@@ -126,18 +178,8 @@
   // card) that drives the entire report — tabs, section headings, country
   // names, generated content, and the PDF export language. It is
   // independent of the global site locale, which on this page only
-  // translates "Statistics" / "Country" / "Generate".
-  let reportLocale = localStorage.getItem('statReportLocale') || I18n.getLocale() || 'ka';
-
-  const TAB_LABELS = {
-    ka: { trade: 'ვაჭრობა', tourism: 'ტურიზმი', investments: 'ინვესტიციები', companies: 'კომპანიები', appendix: 'დანართი' },
-    en: { trade: 'Trade',    tourism: 'Tourism',  investments: 'Investments',  companies: 'Companies',  appendix: 'Appendix' },
-  };
-  const SEARCH_PLACEHOLDER = {
-    ka: 'ქვეყნის ძებნა...',
-    en: 'Search country...',
-  };
-  const LOADING_LABEL = { ka: 'იტვირთება...', en: 'Loading...' };
+  // translates "Statistics" / "Country" / "Generate". `reportLocale` and
+  // the label tables are declared in the pre-localization block above.
 
   // ── PDF state ────────────────────────────────────────────────────────────
   // Captured alongside each tab's render so the PDF builder doesn't scrape
