@@ -928,14 +928,15 @@
       datalabels: { align: pairedLabelAlign(data, otherData, isFirst), color },
     });
     const datasets = [];
-    const changesByDataset = [];
+    const metaByDataset = [];
+    const toMeta = (changes) => (changes || []).map(change => ({ change }));
     if (expSeries) {
       datasets.push(makeDataset(expSeries, EXP_COLOR, both ? impSeries : null, true));
-      changesByDataset.push(expChanges);
+      metaByDataset.push(toMeta(expChanges));
     }
     if (impSeries) {
       datasets.push(makeDataset(impSeries, IMP_COLOR, both ? expSeries : null, false));
-      changesByDataset.push(impChanges);
+      metaByDataset.push(toMeta(impChanges));
     }
 
     chartInstances.main = new Chart(prodChartCanvas, {
@@ -961,7 +962,7 @@
             display: 'auto',
             // The change line is dropped when the points sit too close
             // together for two lines of text.
-            formatter: pointLabelFormatter(chartLabel, changesByDataset),
+            formatter: pointLabelFormatter(chartLabel, metaByDataset),
           },
         },
         scales: {
