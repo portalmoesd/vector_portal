@@ -75,8 +75,8 @@
 
   // Mode set per role:
   //  - owner roles: 'meetings' (events they own, keyed by meeting date/time, with
-  //    a readiness chip — still to come only, where an Archive tab exists to hold
-  //    the finished ones) and 'tasks' (events they only contribute to);
+  //    a readiness chip — past days drop off where an Archive tab exists to hold
+  //    them) and 'tasks' (events they only contribute to);
   //  - worker roles: 'completed' | 'upcoming' (unchanged).
   // Worker roles land on the In-Progress view first; owners default to meetings.
   let mode = isOwner ? 'meetings' : 'upcoming';
@@ -302,20 +302,34 @@
 
   // Every event they own, finished or not. The calendar and its day preview show
   // all of them — a meeting that happened is still part of that day — even where
-  // the My Calendar list itself has stopped carrying the finished ones.
+  // the My Calendar list itself has stopped carrying the older ones.
   function ownedEvents() { return completed.filter(isOwned).concat(upcoming.filter(isOwned)); }
+
+  // My Calendar is a forward-looking schedule, so an event leaves it only once
+  // its meeting day has passed AND its document is finished. Publishing a
+  // document happens *before* the meeting in this workflow, so readiness alone
+  // must never take an event off the schedule.
+  // Unfinished work stays however old it is — that is the overdue pile, and
+  // burying it in Archive would hide outstanding work. A finished event with no
+  // meeting scheduled has nothing left to attend, so it goes straight to Archive.
+  function staysOnMyCalendar(item) {
+    if (!item._ready) return true;
+    if (!item.eventDateTime) return false;
+    // Tbilisi day keys, like the calendar — "YYYY-MM-DD" sorts chronologically.
+    return tbYmd(item.eventDateTime).key >= todayKey();
+  }
 
   function itemsForMode(m) {
     switch (m) {
       case 'completed': return completed;
       case 'upcoming': return upcoming;
-      // My Calendar = the events they own that are still to come. Finished ones
-      // move to the Archive tab, so they are listed once rather than twice.
-      // The Supervisor has no Archive tab, so theirs stays unified — dropping
-      // the finished ones would leave nowhere on their dashboard to find them.
+      // My Calendar = the events they own, minus the ones whose day has passed
+      // and whose document is done — those are found on Archive. The Supervisor
+      // has no Archive tab, so theirs keeps everything: moving events out would
+      // leave nowhere on their dashboard to find them.
       case 'meetings': return HAS_DOCS_TAB
-        ? upcoming.filter(isOwned)
-        : completed.filter(isOwned).concat(upcoming.filter(isOwned));
+        ? ownedEvents().filter(staysOnMyCalendar)
+        : ownedEvents();
       // Tasks ("Other Events") = events they contribute to but don't own —
       // in-progress ones plus finished ones (shown once ready). For roles with
       // a docs tab the completed list is ministry-wide (not participation-
@@ -1760,9 +1774,10 @@
     if (!item) return false;
     let targetMode;
     if (isOwner) {
-      // Owned: in-preparation ones sit on My Calendar, finished ones on Archive
-      // (for the roles that have one — the Supervisor's My Calendar keeps both).
-      if (isOwned(item)) targetMode = (inCompleted && HAS_DOCS_TAB) ? 'docs' : 'meetings';
+      // Owned: same predicate the list uses, so routing and membership can never
+      // disagree — a finished document for an upcoming meeting is still on My
+      // Calendar, while one whose day has passed is only on Archive.
+      if (isOwned(item)) targetMode = (HAS_DOCS_TAB && !staysOnMyCalendar(item)) ? 'docs' : 'meetings';
       else if (inCompleted && HAS_DOCS_TAB) targetMode = 'docs'; // completed, not owned → docs tab
       else if (!inCompleted && !isMinister) targetMode = 'tasks'; // active, contributing
       else if (inCompleted) {
