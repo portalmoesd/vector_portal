@@ -126,10 +126,15 @@ html { scroll-padding-top: 160px; }
 /* Mode switch: Latest Statistics ⇄ Country Comparison.
    Same segmented-toggle design as the dashboards' mn-toggle
    (dashboard-minister.css) — glassy pill with a sliding gradient thumb
-   under the active tab, positioned by the page script. */
+   under the active tab, positioned by the page script.
+   Centred on the page: the pill hugs its buttons (fit-content) and the
+   auto side margins pull it to the middle of the content column. */
 .stat-mode-switch {
   position: relative;
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
   padding: 4px;
   border: 1px solid var(--border-color);
   border-radius: 999px;

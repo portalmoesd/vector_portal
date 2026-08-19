@@ -1106,43 +1106,20 @@
     function changeTxt(cur, prev) {
       if (!hasBase || !(prev > 0)) return '';
       const pct = calcChange(cur, prev);
-      return `${pct > 0 ? '+' : ''}${formatChangePct(pct)}${vsBase}`;
+      return `${b(`${pct > 0 ? '+' : ''}${formatChangePct(pct)}`)}${vsBase}`;
     }
     function paren(parts) {
       const list = parts.filter(Boolean);
       return list.length ? ` (${list.join(', ')})` : '';
     }
-
-    // Top-5 partner listing: "Russia (170.7 mln USD, -7%, domestic export
-    // share 96%)" — change omitted when no base, dom share only for export.
-    // Countries holding less than 1% of the product's flow are skipped.
-    function topList(rows, flowTotal, withDomShare) {
-      return rows
-        .filter(row => flowTotal > 0 && (row.cur / flowTotal) * 100 >= 1)
-        .slice(0, 5).map(row => {
-        const countryName = isKa
-          ? (countryNameKaMap[row.cid] || countryNameEnMap[row.cid] || row.cid)
-          : (countryNameEnMap[row.cid] || countryNameKaMap[row.cid] || row.cid);
-        const parts = [`${formatMln2(row.cur)} ${mln}`];
-        const ch = changeTxt(row.cur, row.prev);
-        if (ch) parts.push(ch);
-        if (withDomShare && row.dom != null && row.cur > 0) {
-          parts.push(isKa
-            ? `ადგ. ექსპორტის წილი ${Math.min(100, (row.dom / row.cur) * 100).toFixed(0)}%`
-            : `domestic export share ${Math.min(100, (row.dom / row.cur) * 100).toFixed(0)}%`);
-        } else if (!withDomShare && flowTotal > 0) {
-          parts.push(isKa
-            ? `წილი ${((row.cur / flowTotal) * 100).toFixed(1)}%`
-            : `share ${((row.cur / flowTotal) * 100).toFixed(1)}%`);
-        }
-        return `${escapeHtml(countryName)} (${parts.join(', ')})`;
-      }).join(', ');
-    }
+    // Flow labels, ranks and every figure are bolded so the numbers stand
+    // out from the surrounding prose.
+    function b(s) { return `<strong>${escapeHtml(String(s))}</strong>`; }
 
     const lines = [];
 
     if (wantExport) {
-      lines.push(`<h4>${isKa ? 'ექსპორტი' : 'Export'}</h4>`);
+      lines.push(`<h4 class="stat-summary__heading">${isKa ? 'ექსპორტი' : 'Export'}</h4>`);
       if (!(t.exp > INSIGNIFICANT_MLN)) {
         lines.push(`<p>${
           isKa
@@ -1154,27 +1131,22 @@
         const reexShare = t.exp > 0 ? (t.reex / t.exp) * 100 : 0;
         const rankSentence = r.ranks.exp.rank
           ? (isKa
-            ? `«${escapeHtml(name)}» ${prose} საქართველოდან ექსპორტირებულ პროდუქტებს შორის ${geOrdinal(r.ranks.exp.rank)} ადგილზეა. `
-            : `«${escapeHtml(name)}» is ranked ${enOrdinal(r.ranks.exp.rank)} among Georgia's exported products ${prose}. `)
+            ? `«${escapeHtml(name)}» ${prose} საქართველოდან ექსპორტირებულ პროდუქტებს შორის ${b(`${geOrdinal(r.ranks.exp.rank)} ადგილზეა`)}. `
+            : `«${escapeHtml(name)}» is ${b(`ranked ${enOrdinal(r.ranks.exp.rank)}`)} among Georgia's exported products ${prose}. `)
           : '';
         const expSentence = isKa
-          ? `ამ პროდუქტის ექსპორტმა ${prose} შეადგინა ${formatMln2(t.exp)} ${mln}${paren([changeTxt(t.exp, t.expBase)])}.`
-          : `Export of this product reached ${formatMln2(t.exp)} ${mln}${paren([changeTxt(t.exp, t.expBase)])}.`;
+          ? `ამ პროდუქტის ${b('ექსპორტმა')} ${prose} შეადგინა ${b(`${formatMln2(t.exp)} ${mln}`)}${paren([changeTxt(t.exp, t.expBase)])}.`
+          : `${b('Export')} of this product reached ${b(`${formatMln2(t.exp)} ${mln}`)}${paren([changeTxt(t.exp, t.expBase)])}.`;
         const domSentence = isKa
-          ? ` ადგილობრივმა ექსპორტმა შეადგინა ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `წილი ${domShare.toFixed(1)}%`])}, ხოლო რეექსპორტმა - ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `წილი ${reexShare.toFixed(1)}%`])}.`
-          : ` Domestic export amounted to ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `share ${domShare.toFixed(1)}%`])}, while re-export amounted to ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `share ${reexShare.toFixed(1)}%`])}.`;
-        const destSentence = r.partners.exp.length
-          ? (isKa
-            ? ` ძირითადი საექსპორტო მიმართულებები: ${topList(r.partners.exp, r.totals.exp, true)}.`
-            : ` Main export destinations: ${topList(r.partners.exp, r.totals.exp, true)}.`)
-          : '';
-        lines.push(`<p>${rankSentence}${expSentence}${domSentence}${destSentence}</p>`);
+          ? ` ${b('ადგილობრივმა ექსპორტმა')} შეადგინა ${b(`${formatMln2(t.dom)} ${mln}`)}${paren([changeTxt(t.dom, t.domBase), `წილი ${b(`${domShare.toFixed(1)}%`)}`])}, ხოლო ${b('რეექსპორტმა')} - ${b(`${formatMln2(t.reex)} ${mln}`)}${paren([changeTxt(t.reex, t.reexBase), `წილი ${b(`${reexShare.toFixed(1)}%`)}`])}.`
+          : ` ${b('Domestic export')} amounted to ${b(`${formatMln2(t.dom)} ${mln}`)}${paren([changeTxt(t.dom, t.domBase), `share ${b(`${domShare.toFixed(1)}%`)}`])}, while ${b('re-export')} amounted to ${b(`${formatMln2(t.reex)} ${mln}`)}${paren([changeTxt(t.reex, t.reexBase), `share ${b(`${reexShare.toFixed(1)}%`)}`])}.`;
+        lines.push(`<p>${rankSentence}${expSentence}${domSentence}</p>`);
       }
     }
 
     if (wantImport) {
-      if (wantExport) lines.push('<hr />');
-      lines.push(`<h4>${isKa ? 'იმპორტი' : 'Import'}</h4>`);
+      if (wantExport) lines.push('<hr class="stat-summary__divider">');
+      lines.push(`<h4 class="stat-summary__heading">${isKa ? 'იმპორტი' : 'Import'}</h4>`);
       if (!(t.imp > INSIGNIFICANT_MLN)) {
         lines.push(`<p>${
           isKa
@@ -1184,18 +1156,13 @@
       } else {
         const rankSentence = r.ranks.imp.rank
           ? (isKa
-            ? `«${escapeHtml(name)}» ${prose} საქართველოში იმპორტირებულ პროდუქტებს შორის ${geOrdinal(r.ranks.imp.rank)} ადგილზეა. `
-            : `«${escapeHtml(name)}» is ranked ${enOrdinal(r.ranks.imp.rank)} among Georgia's imported products ${prose}. `)
+            ? `«${escapeHtml(name)}» ${prose} საქართველოში იმპორტირებულ პროდუქტებს შორის ${b(`${geOrdinal(r.ranks.imp.rank)} ადგილზეა`)}. `
+            : `«${escapeHtml(name)}» is ${b(`ranked ${enOrdinal(r.ranks.imp.rank)}`)} among Georgia's imported products ${prose}. `)
           : '';
         const impSentence = isKa
-          ? `ამ პროდუქტის იმპორტმა ${prose} შეადგინა ${formatMln2(t.imp)} ${mln}${paren([changeTxt(t.imp, t.impBase)])}.`
-          : `Import of this product reached ${formatMln2(t.imp)} ${mln}${paren([changeTxt(t.imp, t.impBase)])}.`;
-        const origSentence = r.partners.imp.length
-          ? (isKa
-            ? ` ძირითადი საიმპორტო ქვეყნები: ${topList(r.partners.imp, r.totals.imp, false)}.`
-            : ` Main import origins: ${topList(r.partners.imp, r.totals.imp, false)}.`)
-          : '';
-        lines.push(`<p>${rankSentence}${impSentence}${origSentence}</p>`);
+          ? `ამ პროდუქტის ${b('იმპორტმა')} ${prose} შეადგინა ${b(`${formatMln2(t.imp)} ${mln}`)}${paren([changeTxt(t.imp, t.impBase)])}.`
+          : `${b('Import')} of this product reached ${b(`${formatMln2(t.imp)} ${mln}`)}${paren([changeTxt(t.imp, t.impBase)])}.`;
+        lines.push(`<p>${rankSentence}${impSentence}</p>`);
       }
     }
 
