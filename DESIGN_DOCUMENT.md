@@ -858,6 +858,7 @@ Opens a modal displaying the full document content:
 - Uses **html2pdf.js** (v0.10.1) for client-side PDF generation
 - Settings: A4 portrait, 0.5-inch margins, JPEG images at 0.98 quality, 2x canvas scale
 - Track changes are **hidden** in PDF output (accepted view)
+- Body text is **justified** (see "Justified body text" below)
 - Filename: slugified document title + `.pdf`
 
 #### Export to Word
@@ -870,9 +871,32 @@ Opens a modal displaying the full document content:
   - Users can accept/reject revisions natively in Microsoft Word
 - **Supported formatting in export:** Bold, Italic, Underline, Strikethrough, Superscript, Subscript, Font family, Font size, Text color, Headings (H1–H4), Bullet and numbered lists (up to 9 nesting levels), Text alignment
 - Page layout: 1-inch margins, A4
+- Body text is **justified** (see "Justified body text" below)
 - Font names are referenced (not embedded) — Word uses local fonts or substitutes
 - Tables are flattened to tab-delimited text (not native Word tables)
 - Filename: slugified title + `.docx` (max 80 chars)
+
+#### Justified body text
+
+Exported documents circulate as formal ministry papers, so body prose is set
+flush to both margins. `justifyBodyHtml()` in `frontend/js/core/library-doc.js`
+normalises each section's HTML once, before it reaches either exporter — the PDF
+renders the resulting inline styles directly, and the Word path converts them
+through `getAlignment()` in `docx-export.js`, which already maps `justify` to
+`AlignmentType.BOTH` (OOXML `<w:jc w:val="both"/>`). Neither exporter needed
+changing.
+
+- **Justified:** paragraphs and list items, including any the author had
+  explicitly centred or right-aligned — the exported document is uniform by
+  design.
+- **Left as authored:** headings, discussion-point topics, the document title
+  block, and anything inside a table (justifying a narrow column opens ugly
+  gaps between words).
+- The read-only Preview goes through the same helper, so what is on screen
+  matches the exported file. The editing canvas is unchanged.
+- Justification never stretches the last line of a paragraph, so single-line
+  text — headings, the Context / Additional Information labels — renders
+  identically either way.
 - All generation happens client-side (no backend processing)
 
 #### View Files
