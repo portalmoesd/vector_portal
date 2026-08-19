@@ -12,7 +12,7 @@
   "nav": {
     "dashboard": "Dashboard",
     "calendar": "Calendar",
-    "library": "Library",
+    "library": "Archive",
     "statistics": "Statistics",
     "countryComparison": "Country Comparison",
     "admin": "Admin Panel",
@@ -68,7 +68,7 @@
     "grpNoDeadline": "No deadline",
     "tabMeetings": "My Calendar",
     "tabTasks": "Other Events",
-    "tabDocuments": "Library",
+    "tabDocuments": "Archive",
     "ready": "Ready",
     "inPreparation": "In preparation",
     "notScheduled": "Not scheduled",
@@ -92,14 +92,14 @@
     "upcomingEvents": "Upcoming events",
     "noUpcoming": "No upcoming events",
     "descCollab": "Select an event to view your assigned sections and submit your work.",
-    "descDeputy": "Choose an event to review and finalize before sending to the library.",
+    "descDeputy": "Choose an event to review and finalize before sending to the archive.",
     "descSupervisor": "Choose an event to review senior editor submissions before they move to the deputy stage.",
     "descSuperCollab": "Choose an event to review editor submissions before they move to the supervisor stage.",
     "approveAll": "Approve all",
     "approveAllSections": "Approve all sections",
     "confirmApproveAll": "Approve all {n} sections",
-    "sendToLibrary": "Send to library",
-    "sentToLibrary": "Document sent to library successfully.",
+    "sendToLibrary": "Send to archive",
+    "sentToLibrary": "Document sent to archive successfully.",
     "country": "Country",
     "language": "Language",
     "deadline": "Deadline",
@@ -463,9 +463,9 @@
       "country": "Country"
     },
     "clear": {
-      "button": "Clear Library",
+      "button": "Clear Archive",
       "confirm": "Permanently delete all {count} published and archived event(s)? They will also disappear from the calendar's Past tab. This cannot be undone.",
-      "done": "Deleted {count} event(s) from the library."
+      "done": "Deleted {count} event(s) from the archive."
     },
     "empty": "No documents found",
     "meta": {
@@ -480,7 +480,7 @@
       "files": "Files",
       "edit": "Edit"
     },
-    "editTooltip": "Reopen this document for editing — it will leave the Library until you re-publish.",
+    "editTooltip": "Reopen this document for editing — it will leave the Archive until you re-publish.",
     "sectionSelect": {
       "selectAll": "Select all",
       "warnEmpty": "Select at least one section.",
@@ -512,7 +512,7 @@
       "failLoad": "Failed to load files:"
     },
     "reopen": {
-      "confirm": "Reopen this document for editing? It will leave the Library until you re-publish.",
+      "confirm": "Reopen this document for editing? It will leave the Archive until you re-publish.",
       "fail": "Failed to reopen:",
       "unknownError": "Unknown error"
     }
