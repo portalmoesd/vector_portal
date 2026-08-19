@@ -36,12 +36,8 @@
   const prodLoading = document.getElementById('prodLoading');
   const prodSections = document.getElementById('prodSections');
   const prodSummaryEl = document.getElementById('prodSummary');
-  const exportChartCard = document.getElementById('exportChartCard');
-  const exportChartHeader = document.getElementById('exportChartHeader');
-  const exportChartCanvas = document.getElementById('prodExportChart');
-  const importChartCard = document.getElementById('importChartCard');
-  const importChartHeader = document.getElementById('importChartHeader');
-  const importChartCanvas = document.getElementById('prodImportChart');
+  const prodChartHeader = document.getElementById('prodChartHeader');
+  const prodChartCanvas = document.getElementById('prodChart');
   const exportDestCard = document.getElementById('exportDestCard');
   const exportDestHeader = document.getElementById('exportDestHeader');
   const exportDestTable = document.getElementById('exportDestTable');
@@ -62,13 +58,15 @@
   let useProxy = false;
   let lastResult = null;
   let generating = false;
-  const chartInstances = { export: null, import: null };
+  const chartInstances = { main: null };
 
   let reportLocale = localStorage.getItem('statReportLocale') || I18n.getLocale() || 'ka';
 
   const SEARCH_PLACEHOLDER = { ka: 'პროდუქტის სახელი ან HS კოდი...', en: 'Product name or HS code...' };
   const LOADING_LABEL = { ka: 'იტვირთება...', en: 'Loading...' };
-  const SERIES_COLOR = '#3b82f6';
+  // Export/import palette from the statistics page's dynamics chart.
+  const EXP_COLOR = '#16a34a';
+  const IMP_COLOR = '#dc2626';
 
   // ── Mode switch thumb (same mechanism as dashboards' mn-toggle) ────────
   function positionModeThumb() {
@@ -701,8 +699,15 @@
       const emptyMap = Promise.resolve(new Map());
       const emptyRank = Promise.resolve({ rank: null, productCount: 0, totalMln: 0 });
 
+      // Pre-window year totals for the chart's first-point change label
+      // (five-years mode only; compare mode labels only the second point).
+      const chainPrevPeriod = !pp.compareMode && points[0].year - 1 >= minYear
+        ? { year: points[0].year - 1, months: points[0].months }
+        : null;
+
       const [
         expSeries, impSeries,
+        chainPrevExp, chainPrevImp,
         expCur, expBase, domCur, domBase, reexCur, reexBase, impCur, impBase,
         expRank, impRank,
         expPartnersCur, expPartnersBase, domPartnersCur, domPartnersBase,
@@ -710,6 +715,8 @@
       ] = await Promise.all([
         wantExport ? Promise.all(points.map(p => totalFor(10, p))) : Promise.resolve([]),
         wantImport ? Promise.all(points.map(p => totalFor(11, p))) : Promise.resolve([]),
+        wantExport && chainPrevPeriod ? totalFor(10, chainPrevPeriod) : Promise.resolve(null),
+        wantImport && chainPrevPeriod ? totalFor(11, chainPrevPeriod) : Promise.resolve(null),
         wantExport ? totalFor(10, chosen) : zero,
         wantExport && base ? totalFor(10, base) : zero,
         wantExport ? totalFor(12, chosen) : zero,
@@ -757,6 +764,10 @@
           exp: expSeries.map(v => v / 1000),
           imp: impSeries.map(v => v / 1000),
         },
+        chainPrev: chainPrevPeriod ? {
+          exp: chainPrevExp != null ? chainPrevExp / 1000 : null,
+          imp: chainPrevImp != null ? chainPrevImp / 1000 : null,
+        } : null,
         totals: {
           exp: expCur / 1000, expBase: expBase / 1000,
           dom: domCur / 1000, domBase: domBase / 1000,
@@ -798,19 +809,18 @@
     const labels = r.pp.points.map(p => periodPointLabel(p, isKa));
     const chosenText = periodText(r.pp.chosen, isKa);
 
-    // Charts
-    exportChartCard.classList.toggle('hidden', !wantExport);
-    importChartCard.classList.toggle('hidden', !wantImport);
-    if (wantExport) {
-      renderProductChart('export', exportChartHeader, exportChartCanvas,
-        `${name} — ${isKa ? 'ექსპორტის დინამიკა, მლნ. $' : 'Export Dynamics, mln $'}`,
-        labels, r.series.exp);
-    }
-    if (wantImport) {
-      renderProductChart('import', importChartHeader, importChartCanvas,
-        `${name} — ${isKa ? 'იმპორტის დინამიკა, მლნ. $' : 'Import Dynamics, mln $'}`,
-        labels, r.series.imp);
-    }
+    // Combined export/import dynamics chart
+    const title = wantExport && wantImport
+      ? `${name} - ${isKa ? 'ექსპორტ-იმპორტის დინამიკა, მლნ. $' : 'Export-Import Dynamics, mln $'}`
+      : (wantExport
+        ? `${name} - ${isKa ? 'ექსპორტის დინამიკა, მლნ. $' : 'Export Dynamics, mln $'}`
+        : `${name} - ${isKa ? 'იმპორტის დინამიკა, მლნ. $' : 'Import Dynamics, mln $'}`);
+    renderCombinedChart(title, labels,
+      wantExport ? r.series.exp : null,
+      wantImport ? r.series.imp : null,
+      wantExport ? buildChangeLabels(r.series.exp, r.chainPrev ? r.chainPrev.exp : null, r.totals.expBase) : null,
+      wantImport ? buildChangeLabels(r.series.imp, r.chainPrev ? r.chainPrev.imp : null, r.totals.impBase) : null,
+      isKa);
 
     // Partner tables
     exportDestCard.classList.toggle('hidden', !wantExport);
@@ -834,39 +844,96 @@
     prodSections.classList.remove('hidden');
   }
 
-  function renderProductChart(key, headerEl, canvas, title, labels, series) {
-    headerEl.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3>`;
-    if (chartInstances[key]) {
-      chartInstances[key].destroy();
-      chartInstances[key] = null;
+  // Per-point change label for a chart series: consecutive points are
+  // comparable prior periods (only the last point can be YTD); the first
+  // point compares against the pre-window year (chainPrevMln); a YTD last
+  // point compares against the same-months prior-year total (ytdBaseMln),
+  // never against the full prior-year point. Compare mode labels only the
+  // second point (change vs the first chosen period).
+  function buildChangeLabels(series, chainPrevMln, ytdBaseMln) {
+    const r = lastResult;
+    const points = r.pp.points;
+    return series.map((v, i) => {
+      let prev = null;
+      if (r.pp.compareMode) {
+        prev = i === 1 ? series[0] : null;
+      } else if (points[i].isYtd) {
+        prev = r.pp.base ? ytdBaseMln : null;
+      } else if (i === 0) {
+        prev = chainPrevMln;
+      } else {
+        prev = series[i - 1];
+      }
+      if (!(prev > 0)) return null;
+      const pct = calcChange(v, prev);
+      return `${pct > 0 ? '+' : ''}${formatChangePct(pct)}`;
+    });
+  }
+
+  function renderCombinedChart(title, labels, expSeries, impSeries, expChanges, impChanges, isKa) {
+    const both = !!(expSeries && impSeries);
+    const legendItems = [];
+    if (expSeries) legendItems.push(`<div class="stat-chart-legend__item"><span class="stat-chart-legend__color" style="background:${EXP_COLOR}"></span>${isKa ? 'ექსპორტი' : 'Export'}</div>`);
+    if (impSeries) legendItems.push(`<div class="stat-chart-legend__item"><span class="stat-chart-legend__color" style="background:${IMP_COLOR}"></span>${isKa ? 'იმპორტი' : 'Import'}</div>`);
+    prodChartHeader.innerHTML = `
+      <div class="stat-chart-title-row">
+        <h3 class="stat-report__title">${escapeHtml(title)}</h3>
+        <div class="stat-chart-legend">${legendItems.join('')}</div>
+      </div>`;
+
+    if (chartInstances.main) {
+      chartInstances.main.destroy();
+      chartInstances.main = null;
     }
-    chartInstances[key] = new Chart(canvas, {
+
+    const makeDataset = (data, color, align) => ({
+      data,
+      borderColor: color,
+      backgroundColor: color,
+      borderWidth: 2.5,
+      pointRadius: 4,
+      pointBackgroundColor: color,
+      tension: 0.3,
+      datalabels: { align, color },
+    });
+    const datasets = [];
+    const changesByDataset = [];
+    // When the two series differ wildly in magnitude, the smaller line hugs
+    // the chart floor and below-point labels would collide with the x-axis —
+    // flip that series' labels above the line instead.
+    const overallMax = Math.max(...(expSeries || [0]), ...(impSeries || [0]), 0.001);
+    const impNearFloor = both && Math.max(...impSeries) < 0.25 * overallMax;
+    if (expSeries) {
+      datasets.push(makeDataset(expSeries, EXP_COLOR, 'top'));
+      changesByDataset.push(expChanges);
+    }
+    if (impSeries) {
+      datasets.push(makeDataset(impSeries, IMP_COLOR, both && !impNearFloor ? 'bottom' : 'top'));
+      changesByDataset.push(impChanges);
+    }
+
+    chartInstances.main = new Chart(prodChartCanvas, {
       type: 'line',
-      data: {
-        labels,
-        datasets: [{
-          data: series,
-          borderColor: SERIES_COLOR,
-          backgroundColor: SERIES_COLOR,
-          borderWidth: 2.5,
-          pointRadius: 4,
-          pointBackgroundColor: SERIES_COLOR,
-          tension: 0.3,
-        }],
-      },
+      data: { labels, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        layout: { padding: { top: 24, bottom: 8, left: 40, right: 40 } },
+        // Extra bottom room so the import line's below-point labels don't
+        // collide with the x-axis year ticks.
+        layout: { padding: { top: 24, bottom: both ? 30 : 8, left: 40, right: 40 } },
         plugins: {
           legend: { display: false },
           tooltip: { enabled: true },
           datalabels: {
-            align: 'top',
-            color: SERIES_COLOR,
             font: { size: 11, weight: '600' },
             clamp: true,
-            formatter: (v) => chartLabel(v),
+            textAlign: 'center',
+            formatter: (v, ctx) => {
+              const base = chartLabel(v);
+              const arr = changesByDataset[ctx.datasetIndex];
+              const change = arr && arr[ctx.dataIndex];
+              return change ? `${base}\n${change}` : base;
+            },
           },
         },
         scales: {
@@ -879,6 +946,9 @@
             display: false,
             grid: { display: false },
             beginAtZero: true,
+            // Lift a floor-hugging series off the chart bottom so its
+            // below-point labels have room inside the plot area.
+            grace: '18%',
           },
         },
       },
@@ -887,7 +957,7 @@
   }
 
   function renderPartnerHeader(el, productNameText, sectionTitle, chosenText) {
-    el.innerHTML = `<h3 class="stat-report__title">${escapeHtml(`${productNameText} — ${sectionTitle}, ${chosenText}`)}</h3>`;
+    el.innerHTML = `<h3 class="stat-report__title">${escapeHtml(`${productNameText} - ${sectionTitle}, ${chosenText}`)}</h3>`;
   }
 
   // Partner table. Columns: Country | (base-year value in compare mode) |
@@ -931,7 +1001,7 @@
         ? (countryNameKaMap[row.cid] || countryNameEnMap[row.cid] || row.cid)
         : (countryNameEnMap[row.cid] || countryNameKaMap[row.cid] || row.cid);
       const changeAvailable = hasBase;
-      let changeCell = '—';
+      let changeCell = '-';
       let changeClass = '';
       if (changeAvailable) {
         const pct = calcChange(row.cur, row.prev);
@@ -1006,8 +1076,11 @@
 
     // Top-5 partner listing: "Russia (170.7 mln USD, -7%, domestic export
     // share 96%)" — change omitted when no base, dom share only for export.
+    // Countries holding less than 1% of the product's flow are skipped.
     function topList(rows, flowTotal, withDomShare) {
-      return rows.slice(0, 5).map(row => {
+      return rows
+        .filter(row => flowTotal > 0 && (row.cur / flowTotal) * 100 >= 1)
+        .slice(0, 5).map(row => {
         const countryName = isKa
           ? (countryNameKaMap[row.cid] || countryNameEnMap[row.cid] || row.cid)
           : (countryNameEnMap[row.cid] || countryNameKaMap[row.cid] || row.cid);
@@ -1049,7 +1122,7 @@
           ? `ამ პროდუქტის ექსპორტმა ${prose} შეადგინა ${formatMln2(t.exp)} ${mln}${paren([changeTxt(t.exp, t.expBase)])}.`
           : `Export of this product reached ${formatMln2(t.exp)} ${mln}${paren([changeTxt(t.exp, t.expBase)])}.`;
         const domSentence = isKa
-          ? ` ადგილობრივმა ექსპორტმა შეადგინა ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `წილი ${domShare.toFixed(1)}%`])}, ხოლო რეექსპორტმა — ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `წილი ${reexShare.toFixed(1)}%`])}.`
+          ? ` ადგილობრივმა ექსპორტმა შეადგინა ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `წილი ${domShare.toFixed(1)}%`])}, ხოლო რეექსპორტმა - ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `წილი ${reexShare.toFixed(1)}%`])}.`
           : ` Domestic export amounted to ${formatMln2(t.dom)} ${mln}${paren([changeTxt(t.dom, t.domBase), `share ${domShare.toFixed(1)}%`])}, while re-export amounted to ${formatMln2(t.reex)} ${mln}${paren([changeTxt(t.reex, t.reexBase), `share ${reexShare.toFixed(1)}%`])}.`;
         const destSentence = r.partners.exp.length
           ? (isKa
