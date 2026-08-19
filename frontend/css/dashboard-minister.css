@@ -92,12 +92,38 @@
   font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
   color: var(--text-muted);
 }
+/* Notification bell — Minister/Protocol/Deputy, whose notification center moved
+   here from the side column to make room for the day preview. Same frosted disc
+   as the time-of-day icon so the hero keeps one material. */
+.mn-dash .mn-hero__bell {
+  position: relative; z-index: 1; flex: 0 0 auto;
+  width: 44px; height: 44px; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; color: #475569;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.32));
+  box-shadow: 0 4px 14px rgba(2, 12, 27, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.mn-dash .mn-hero__bell:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(2, 12, 27, 0.12); }
+.mn-dash .mn-hero__bellicon { display: block; width: 20px; height: 20px; }
+.mn-dash .mn-hero__bellicon svg { width: 20px; height: 20px; display: block; }
+/* Unread count, straddling the disc's top-right edge. */
+.mn-dash .mn-hero__bellbadge {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 18px; height: 18px; padding: 0 5px; border-radius: 999px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 0.66rem; font-weight: 800; line-height: 1; color: #fff;
+  background: var(--primary, #0a84ff); box-shadow: 0 0 0 1.5px #fff;
+}
 @media (max-width: 560px) {
   .mn-dash .mn-hero { gap: 16px; padding: 20px; }
   .mn-dash .mn-hero__clock {
     margin-left: 0; padding-left: 0; border-left: none;
     align-items: flex-start;
   }
+  /* The clock drops its margin-left:auto here — keep the bell on the right. */
+  .mn-dash .mn-hero__bell { margin-left: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   .mn-dash .mn-hero,
@@ -296,6 +322,16 @@
   background: var(--mn-other);
 }
 
+/* On the day-preview dashboards every day is a picker target, not just event days. */
+.mn-dash .dp-cal-grid__day[data-cal-date] { cursor: pointer; }
+/* Selected day: a ring rather than a fill, so it composes with the blue/green/
+   orange event tint and its dot instead of replacing them. Both ::before and
+   ::after are already spoken for by the event dots, hence an inset shadow. */
+.mn-dash .dp-cal-grid__day--selected {
+  box-shadow: inset 0 0 0 2px var(--primary, #0a84ff);
+  font-weight: 700;
+}
+
 /* ── Event cards (below) — two per row on desktop, tall card layout ─────────── */
 .mn-dash .mn-list {
   margin-top: 20px;
@@ -390,13 +426,16 @@
 .mn-dash .mn-overview__side {
   flex: 1 1 0; min-width: 0; min-height: 0; display: flex; flex-direction: column; gap: 14px;
 }
-/* The side column matches the calendar's height: the notification center fills the
-   remaining space below the button and scrolls internally instead of growing. */
-.mn-dash .mn-overview__side .mn-notifs {
+/* The side column matches the calendar's height: the panel below the button (the
+   notification center, or the day preview on Minister/Protocol/Deputy) fills the
+   remaining space and scrolls internally instead of growing. */
+.mn-dash .mn-overview__side .mn-notifs,
+.mn-dash .mn-overview__side .mn-day {
   margin: 0; flex: 1 1 0; min-height: 0;
   display: flex; flex-direction: column; overflow: hidden;
 }
-.mn-dash .mn-overview__side .mn-notifs .mn-notifs__list {
+.mn-dash .mn-overview__side .mn-notifs .mn-notifs__list,
+.mn-dash .mn-overview__side .mn-day .mn-day__list {
   flex: 1 1 0; min-height: 0; overflow-y: auto;
 }
 
@@ -431,9 +470,11 @@
   /* Stacked: the side column takes its natural content height (flex-basis:0 would
      collapse it in a column with no fixed height, letting the events overlap it). */
   .mn-dash .mn-overview__side { flex: none; }
-  /* And let the notification center show its full height (page scrolls). */
-  .mn-dash .mn-overview__side .mn-notifs { flex: 0 1 auto; overflow: visible; }
-  .mn-dash .mn-overview__side .mn-notifs .mn-notifs__list { flex: 0 1 auto; overflow-y: visible; }
+  /* And let the side panel show its full height (page scrolls). */
+  .mn-dash .mn-overview__side .mn-notifs,
+  .mn-dash .mn-overview__side .mn-day { flex: 0 1 auto; overflow: visible; }
+  .mn-dash .mn-overview__side .mn-notifs .mn-notifs__list,
+  .mn-dash .mn-overview__side .mn-day .mn-day__list { flex: 0 1 auto; overflow-y: visible; }
 }
 
 /* ── Inline-accordion: the selected card expands to a full row ───────────── */
@@ -481,9 +522,12 @@
 }
 /* Count badge coloured by the most urgent pending category: red (act) → orange (new) →
    green (ready) → blue base. */
-.mn-dash .mn-notifs__badge.is-alert { background: var(--accent-red, #dc2626); }
-.mn-dash .mn-notifs__badge.is-new { background: var(--accent-orange, #f97316); }
-.mn-dash .mn-notifs__badge.is-ready { background: var(--accent-green, #16a34a); }
+.mn-dash .mn-notifs__badge.is-alert,
+.mn-dash .mn-hero__bellbadge.is-alert { background: var(--accent-red, #dc2626); }
+.mn-dash .mn-notifs__badge.is-new,
+.mn-dash .mn-hero__bellbadge.is-new { background: var(--accent-orange, #f97316); }
+.mn-dash .mn-notifs__badge.is-ready,
+.mn-dash .mn-hero__bellbadge.is-ready { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-notifs__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
 .mn-dash .mn-notif {
   display: flex; align-items: center; gap: 12px; padding: 10px 8px; cursor: pointer;
@@ -515,6 +559,59 @@
 /* The popup reuses the .mn-notif row styles (its card carries .mn-dash); scroll a
    long list inside the modal. */
 .modal-card .mn-notifs__list { max-height: 60vh; overflow-y: auto; }
+.mn-dash .mn-notifs__empty,
+.mn-dash .mn-day__empty {
+  list-style: none; text-align: center; padding: 18px 8px;
+  font-size: 0.86rem; color: var(--text-muted);
+}
+
+/* ── Day preview panel (side column: Minister / Protocol / Deputy) ────────────
+   One day's schedule, in place of the notification center. Same card recipe as
+   .mn-notifs above so the two are visually interchangeable and both match the
+   calendar sitting beside them. */
+.mn-dash .mn-day {
+  background: var(--card, #fff); border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  padding: 14px 18px; margin: 0;
+}
+.mn-dash .mn-day__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.mn-dash .mn-day__title { font-weight: 800; color: var(--text-primary); font-size: 0.92rem; min-width: 0; }
+/* Same quiet text button as the notification panel's "Show all". */
+.mn-dash .mn-day__today {
+  flex: 0 0 auto; margin: 0; padding: 2px 6px;
+  border: 0; background: transparent;
+  color: var(--primary, #0a84ff); font-size: 0.78rem; font-weight: 800;
+  cursor: pointer; border-radius: 8px; transition: background 0.12s ease;
+}
+.mn-dash .mn-day__today:hover { background: rgba(10, 132, 255, 0.08); }
+.mn-dash .mn-day__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.mn-dash .mn-day__row {
+  display: flex; align-items: center; gap: 12px; padding: 10px 8px; cursor: pointer;
+  border-radius: 10px; border-top: 1px solid var(--border, rgba(2, 12, 27, 0.06));
+}
+.mn-dash .mn-day__row:first-child { border-top: none; }
+.mn-dash .mn-day__row:hover { background: rgba(10, 132, 255, 0.05); }
+/* The row whose card is currently expanded below. */
+.mn-dash .mn-day__row.is-open { background: rgba(10, 132, 255, 0.10); }
+.mn-dash .mn-day__when {
+  flex: 0 0 auto; min-width: 42px;
+  font-size: 0.82rem; font-weight: 800; color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+/* A deadline is not a meeting time — say so quietly instead of faking a clock. */
+.mn-dash .mn-day__when--due { font-size: 0.72rem; font-weight: 700; color: var(--text-muted); }
+.mn-dash .mn-day__body { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.mn-dash .mn-day__name {
+  font-size: 0.88rem; font-weight: 700; color: var(--text-primary);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.mn-dash .mn-day__country { font-size: 0.75rem; color: var(--text-muted); }
+/* Same attention colours the cards and tab badges use. */
+.mn-dash .mn-day__dot { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; }
+.mn-dash .mn-day__dot.is-act { background: var(--accent-red, #dc2626); }
+.mn-dash .mn-day__dot.is-new { background: var(--accent-orange, #f97316); }
+.mn-dash .mn-day__dot.is-ready { background: var(--accent-green, #16a34a); }
 .mn-dash .mn-card__flag { flex: 0 0 auto; width: 46px; height: 46px; line-height: 0; }
 .mn-dash .mn-card__flag img {
   width: 46px; height: 46px;
@@ -1085,6 +1182,9 @@
 .mn-dash .mn-detail__close:focus-visible,
 .mn-dash .mn-stage__close:focus-visible,
 .mn-dash .mn-notifs__showall:focus-visible,
+.mn-dash .mn-hero__bell:focus-visible,
+.mn-dash .mn-day__row:focus-visible,
+.mn-dash .mn-day__today:focus-visible,
 .mn-dash .dp-cal-nav:focus-visible,
 .mn-dash .dp-cal-grid__day[role="button"]:focus-visible {
   outline: 2px solid var(--primary, #0a84ff);

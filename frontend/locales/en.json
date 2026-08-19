@@ -7,7 +7,9 @@
     "eventCreated": "New event created: {event}",
     "completed": "Document ready: {event}",
     "yourTurn": "Awaiting your action — {section} · {event}",
-    "returned": "{section} returned to you · {event}"
+    "returned": "{section} returned to you · {event}",
+    "empty": "No notifications",
+    "bellUnread": "Notifications ({n} unread)"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -49,6 +51,8 @@
     "owner": "Document owner",
     "prevMonth": "Previous month",
     "nextMonth": "Next month",
+    "dayNoEvents": "No events on this day",
+    "showToday": "Show today",
     "badgeReady": "Document ready",
     "badgeAttention": "Needs your attention",
     "badgeNew": "New event",
