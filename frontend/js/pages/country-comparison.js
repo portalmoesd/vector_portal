@@ -1795,8 +1795,9 @@
     const prose = chosenPeriodProse(r.chosen, isKa);
     const mln = isKa ? 'მლნ. აშშ დოლარი' : 'mln USD';
 
-    // Metric labels and every figure are bolded so the numbers stand out
-    // from the surrounding prose (same treatment as the products summary).
+    // Country names, metric labels and every figure are bolded so they
+    // stand out from the surrounding prose. b() escapes its argument, so
+    // it replaces escapeHtml() at those call sites.
     const b = (x) => `<strong>${escapeHtml(String(x))}</strong>`;
 
     const t = r.totals;
@@ -1843,8 +1844,8 @@
         : [name2, v2, name1, v1, g2.of, g1.of];
       if (small < INSIGNIFICANT_MLN) {
         return isKa
-          ? ` ${escapeHtml(smallGen)} შემთხვევაში ${b(subject)} უმნიშვნელოა.`
-          : ` For ${escapeHtml(smallName)}, ${b(subject)} ${['turnover', 'fdi'].includes(metricKey) ? 'was' : 'were'} negligible.`;
+          ? ` ${b(smallGen)} შემთხვევაში ${b(subject)} უმნიშვნელოა.`
+          : ` For ${b(smallName)}, ${b(subject)} ${['turnover', 'fdi'].includes(metricKey) ? 'was' : 'were'} negligible.`;
       }
       const ratio = big / small;
       if (Math.abs(v1 - v2) / Math.max(v1, v2) <= 0.01) {
@@ -1855,13 +1856,13 @@
       if (ratio >= 2) {
         const times = ratio >= 10 ? Math.round(ratio) : ratio.toFixed(1).replace(/\.0$/, '');
         return isKa
-          ? ` ${escapeHtml(bigGen)} მაჩვენებელი დაახლოებით ${b(`${times}-ჯერ`)} აღემატება ${escapeHtml(smallGen)} მაჩვენებელს.`
-          : ` The figure for ${escapeHtml(bigName)} is about ${b(`${times} times`)} higher than for ${escapeHtml(smallName)}.`;
+          ? ` ${b(bigGen)} მაჩვენებელი დაახლოებით ${b(`${times}-ჯერ`)} აღემატება ${b(smallGen)} მაჩვენებელს.`
+          : ` The figure for ${b(bigName)} is about ${b(`${times} times`)} higher than for ${b(smallName)}.`;
       }
       const pctMore = Math.round((ratio - 1) * 100);
       return isKa
-        ? ` ${escapeHtml(bigGen)} მაჩვენებელი დაახლოებით ${b(`${pctMore}%-ით`)} აღემატება ${escapeHtml(smallGen)} მაჩვენებელს.`
-        : ` The figure for ${escapeHtml(bigName)} is about ${b(`${pctMore}%`)} higher than for ${escapeHtml(smallName)}.`;
+        ? ` ${b(bigGen)} მაჩვენებელი დაახლოებით ${b(`${pctMore}%-ით`)} აღემატება ${b(smallGen)} მაჩვენებელს.`
+        : ` The figure for ${b(bigName)} is about ${b(`${pctMore}%`)} higher than for ${b(smallName)}.`;
     }
 
     function valuePhrase(v) {
@@ -1878,8 +1879,8 @@
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover'}</h4>`);
     lines.push(`<p>${
       isKa
-        ? `${prose} საქართველოს ${b('სავაჭრო ბრუნვამ')} ${escapeHtml(g1.withCase)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, ხოლო ${escapeHtml(g2.withCase)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
-        : `${prose}, Georgia's ${b('trade turnover')} with ${escapeHtml(name1)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, while ${b('turnover')} with ${escapeHtml(name2)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
+        ? `${prose} საქართველოს ${b('სავაჭრო ბრუნვამ')} ${b(g1.withCase)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, ხოლო ${b(g2.withCase)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
+        : `${prose}, Georgia's ${b('trade turnover')} with ${b(name1)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, while ${b('turnover')} with ${b(name2)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
     }${compareSentence('turnover', m.turnover.v1, m.turnover.v2)}</p>`);
 
     // Export
@@ -1887,8 +1888,8 @@
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'ექსპორტი' : 'Export'}</h4>`);
     lines.push(`<p>${
       isKa
-        ? `${prose} საქართველოდან ${b('ექსპორტმა')} ${escapeHtml(g1.inCase)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, ხოლო ${escapeHtml(g2.inCase)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
-        : `${prose}, Georgia's ${b('exports')} to ${escapeHtml(name1)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, while ${b('exports')} to ${escapeHtml(name2)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
+        ? `${prose} საქართველოდან ${b('ექსპორტმა')} ${b(g1.inCase)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, ხოლო ${b(g2.inCase)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
+        : `${prose}, Georgia's ${b('exports')} to ${b(name1)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, while ${b('exports')} to ${b(name2)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
     }${compareSentence('export', m.export.v1, m.export.v2)}</p>`);
 
     // Import
@@ -1896,8 +1897,8 @@
     lines.push(`<h4 class="stat-summary__heading">${isKa ? 'იმპორტი' : 'Import'}</h4>`);
     lines.push(`<p>${
       isKa
-        ? `${prose} ${b('იმპორტმა')} ${escapeHtml(g1.from)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, ხოლო ${escapeHtml(g2.from)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
-        : `${prose}, Georgia's ${b('imports')} from ${escapeHtml(name1)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, while ${b('imports')} from ${escapeHtml(name2)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
+        ? `${prose} ${b('იმპორტმა')} ${b(g1.from)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, ხოლო ${b(g2.from)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
+        : `${prose}, Georgia's ${b('imports')} from ${b(name1)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, while ${b('imports')} from ${b(name2)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
     }${compareSentence('import', m.import.v1, m.import.v2)}</p>`);
 
     // Investments — based on the FDI point for the chosen year (annual when
@@ -1929,12 +1930,12 @@
       function fdiFragment(g, name, p) {
         if (!(p.valueMln > 0)) {
           return isKa
-            ? `${escapeHtml(g.from)} ინვესტიცია არ ფიქსირდება`
-            : `no investment was recorded from ${escapeHtml(name)}`;
+            ? `${b(g.from)} ინვესტიცია არ ფიქსირდება`
+            : `no investment was recorded from ${b(name)}`;
         }
         return isKa
-          ? `${escapeHtml(g.from)} შემოსულმა ${b('ინვესტიციებმა')} შეადგინა ${b(`${formatMln2(p.valueMln)} ${mln}`)}${fdiExtras(p)}`
-          : `${b('FDI')} from ${escapeHtml(name)} amounted to ${b(`${formatMln2(p.valueMln)} ${mln}`)}${fdiExtras(p)}`;
+          ? `${b(g.from)} შემოსულმა ${b('ინვესტიციებმა')} შეადგინა ${b(`${formatMln2(p.valueMln)} ${mln}`)}${fdiExtras(p)}`
+          : `${b('FDI')} from ${b(name)} amounted to ${b(`${formatMln2(p.valueMln)} ${mln}`)}${fdiExtras(p)}`;
       }
 
       lines.push('<hr class="stat-summary__divider">');
@@ -1972,12 +1973,12 @@
       function tourismFragment(g, name, p) {
         if (!(p.visitors > 0)) {
           return isKa
-            ? `${escapeHtml(g.from)} ვიზიტორები არ ფიქსირდება`
-            : `no visitors were recorded from ${escapeHtml(name)}`;
+            ? `${b(g.from)} ვიზიტორები არ ფიქსირდება`
+            : `no visitors were recorded from ${b(name)}`;
         }
         return isKa
-          ? `${escapeHtml(g.from)} საქართველოში განხორციელდა ${b(`${Number(p.visitors).toLocaleString()} ვიზიტი`)}${tourismExtras(p)}`
-          : `${b(`${Number(p.visitors).toLocaleString()} visits`)} were made from ${escapeHtml(name)} to Georgia${tourismExtras(p)}`;
+          ? `${b(g.from)} საქართველოში განხორციელდა ${b(`${Number(p.visitors).toLocaleString()} ვიზიტი`)}${tourismExtras(p)}`
+          : `${b(`${Number(p.visitors).toLocaleString()} visits`)} were made from ${b(name)} to Georgia${tourismExtras(p)}`;
       }
 
       lines.push('<hr class="stat-summary__divider">');
