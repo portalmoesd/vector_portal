@@ -39,9 +39,9 @@
   // not the reader's UI locale — a Georgian brief must read as Georgian
   // wherever it is opened. I18n only ships en/ka, hence the local table.
   var EXPORT_LABELS = {
-    KA: { context: 'კონტექსტი', additional: 'დამატებითი ინფორმაცია', point: 'საკითხი' },
-    EN: { context: 'Context', additional: 'Additional Information', point: 'Point' },
-    RU: { context: 'Контекст', additional: 'Дополнительная информация', point: 'Вопрос' },
+    KA: { context: 'განსახილველი საკითხი', additional: 'დამატებითი ინფორმაცია', point: 'საკითხი' },
+    EN: { context: 'Discussion Point', additional: 'Additional Information', point: 'Point' },
+    RU: { context: 'Обсуждаемый вопрос', additional: 'Дополнительная информация', point: 'Вопрос' },
   };
 
   function exportLabels(lang) {
@@ -368,12 +368,12 @@
       var body = document.createElement('div');
       body.className = 'gcp-dp-card-body';
 
-      body.appendChild(mkLabel(tr('editor.dp.topic', 'Discussion Point Topic')));
+      body.appendChild(mkLabel(tr('editor.dp.topic', 'Discussion Point Title')));
       var topic = document.createElement('input');
       topic.type = 'text';
       topic.className = 'gcp-dp-topic';
       topic.value = point.topic || '';
-      topic.placeholder = tr('editor.dp.topicPlaceholder', 'Enter the topic…');
+      topic.placeholder = tr('editor.dp.topicPlaceholder', 'Enter the title…');
       topic.disabled = readOnly;
       body.appendChild(topic);
       card.topicInput = topic;

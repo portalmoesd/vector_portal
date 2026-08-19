@@ -79,17 +79,17 @@ test('topicLabel falls back to a numbered label in the document language', () =>
 });
 
 test('export labels follow the document language, defaulting to Georgian', () => {
-  assert.equal(DP.exportLabels('EN').context, 'Context');
+  assert.equal(DP.exportLabels('EN').context, 'Discussion Point');
   assert.equal(DP.exportLabels('ka').additional, 'დამატებითი ინფორმაცია');
-  assert.equal(DP.exportLabels('FR').context, 'კონტექსტი');
-  assert.equal(DP.exportLabels(undefined).context, 'კონტექსტი');
+  assert.equal(DP.exportLabels('FR').context, 'განსახილველი საკითხი');
+  assert.equal(DP.exportLabels(undefined).context, 'განსახილველი საკითხი');
 });
 
 test('toExportHtml numbers the selected points and labels each field', () => {
   const out = DP.toExportHtml(POINTS, 'EN');
   assert.ok(out.includes('>1. Trade turnover<'));
   assert.ok(out.includes('>2. Investments<'));
-  assert.ok(out.includes('<b>Context</b>'));
+  assert.ok(out.includes('<b>Discussion Point</b>'));
   assert.ok(out.includes('<b>Additional Information</b>'));
   assert.ok(out.includes('<p>ctx one</p>'));
 });
@@ -102,7 +102,7 @@ test('toExportHtml renumbers from 1 when only a subset is exported', () => {
 
 test('toExportHtml omits a field label when that field is empty', () => {
   const out = DP.toExportHtml([{ id: 'dp-x', topic: 'T', contextHtml: '<p>c</p>', additionalHtml: '<p><br></p>' }], 'EN');
-  assert.ok(out.includes('<b>Context</b>'));
+  assert.ok(out.includes('<b>Discussion Point</b>'));
   assert.ok(!out.includes('<b>Additional Information</b>'));
 });
 

@@ -131,7 +131,7 @@ test.describe('export picker — discussion points', () => {
     const html = (await exported(page))[0].htmlContent;
     expect(html).toContain('>1. Trade<');
     expect(html).toContain('>2. Investments<');
-    expect(html).toContain('<b>Context</b>');
+    expect(html).toContain('<b>Discussion Point</b>');
     expect(html).toContain('<b>Additional Information</b>');
     // The storage scaffolding must not reach the exporters.
     expect(html).not.toContain('data-dp-id');
