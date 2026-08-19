@@ -19,7 +19,7 @@
     const early = localStorage.getItem('statReportLocale') || earlySite;
     const ka = early === 'ka';
     const setText = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
-    setText('pageTitle', ka ? 'პროდუქტები' : 'Products');
+    setText('pageTitle', earlySite === 'ka' ? 'პროდუქტები' : 'Products');
     setText('productLabel', ka ? 'პროდუქტი' : 'Product');
     setText('yearLabel', ka ? 'წელი' : 'Year');
     setText('periodLabel', ka ? 'პერიოდი' : 'Period');
@@ -34,12 +34,15 @@
     document.querySelectorAll('#reportLangToggle .stat-lang-toggle__btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.reportLang === early);
     });
+    // The mode-switch pill is interface chrome, so its labels follow the
+    // site locale, like the page title and the Generate button.
     const sw = document.getElementById('statModeSwitch');
     if (sw) {
+      const siteKa = earlySite === 'ka';
       const labels = {
-        latest: ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics',
-        comparison: ka ? 'ქვეყნების შედარება' : 'Country Comparison',
-        products: ka ? 'პროდუქტები' : 'Products',
+        latest: siteKa ? 'უახლესი სტატისტიკა' : 'Latest Statistics',
+        comparison: siteKa ? 'ქვეყნების შედარება' : 'Country Comparison',
+        products: siteKa ? 'პროდუქტები' : 'Products',
       };
       for (const [mode, text] of Object.entries(labels)) {
         const btn = sw.querySelector(`[data-mode="${mode}"]`);
@@ -60,7 +63,6 @@
   const USD_COL_RE = /^usd1000_\d{4}(_\d+)*$/;
 
   // ── DOM refs ───────────────────────────────────────────────────────────
-  const pageTitleEl = document.getElementById('pageTitle');
   const productSearch = document.getElementById('productSearch');
   const productDropdown = document.getElementById('productDropdown');
   const productValue = document.getElementById('productValue');
@@ -652,7 +654,6 @@
     const isKa = reportLocale === 'ka';
     classData = isKa ? (classDataKa || classDataEn) : (classDataEn || classDataKa);
 
-    if (pageTitleEl) pageTitleEl.textContent = isKa ? 'პროდუქტები' : 'Products';
     productLabelEl.textContent = isKa ? 'პროდუქტი' : 'Product';
     yearLabelEl.textContent = isKa ? 'წელი' : 'Year';
     periodLabelEl.textContent = isKa ? 'პერიოდი' : 'Period';
@@ -661,17 +662,6 @@
     document.querySelectorAll('.stat-loading-label').forEach(el => {
       el.textContent = LOADING_LABEL[reportLocale];
     });
-
-    const modeSwitch = document.getElementById('statModeSwitch');
-    if (modeSwitch) {
-      const btnLatest = modeSwitch.querySelector('[data-mode="latest"]');
-      const btnCmp = modeSwitch.querySelector('[data-mode="comparison"]');
-      const btnProd = modeSwitch.querySelector('[data-mode="products"]');
-      if (btnLatest) btnLatest.textContent = isKa ? 'უახლესი სტატისტიკა' : 'Latest Statistics';
-      if (btnCmp) btnCmp.textContent = isKa ? 'ქვეყნების შედარება' : 'Country Comparison';
-      if (btnProd) btnProd.textContent = isKa ? 'პროდუქტები' : 'Products';
-      positionModeThumb();
-    }
 
     if (selectedProduct) {
       productSearch.value = productLabel(selectedProduct, isKa);
