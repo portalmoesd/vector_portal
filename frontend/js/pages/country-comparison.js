@@ -16,8 +16,6 @@
     const earlySite = localStorage.getItem('locale') || 'ka';
     const early = localStorage.getItem('statReportLocale') || earlySite;
     const ka = early === 'ka';
-    const titleEl = document.querySelector('.page-title[data-i18n="nav.countryComparison"]');
-    if (titleEl) titleEl.textContent = earlySite === 'ka' ? 'ქვეყნების შედარება' : 'Country Comparison';
     const setText = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
     setText('country1Label', ka ? 'ქვეყანა 1' : 'Country 1');
     setText('country2Label', ka ? 'ქვეყანა 2' : 'Country 2');

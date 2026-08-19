@@ -19,7 +19,6 @@
     const early = localStorage.getItem('statReportLocale') || earlySite;
     const ka = early === 'ka';
     const setText = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
-    setText('pageTitle', earlySite === 'ka' ? 'პროდუქტები' : 'Products');
     setText('productLabel', ka ? 'პროდუქტი' : 'Product');
     setText('yearLabel', ka ? 'წელი' : 'Year');
     setText('periodLabel', ka ? 'პერიოდი' : 'Period');
