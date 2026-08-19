@@ -134,7 +134,7 @@ const App = {
       if (seesManagement) {
         navItems.push(
           { href: '/pages/calendar.html', label: 'Calendar', i18n: 'nav.calendar', match: 'calendar' },
-          { href: '/pages/library.html', label: 'Library', i18n: 'nav.library', match: 'library' },
+          { href: '/pages/library.html', label: 'Archive', i18n: 'nav.library', match: 'library' },
         );
       }
       navItems.push({ href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' });

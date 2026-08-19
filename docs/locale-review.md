@@ -8,7 +8,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | --- | --- | --- | --- |
 | `nav.dashboard` | Dashboard | მთავარი |  |
 | `nav.calendar` | Calendar | კალენდარი |  |
-| `nav.library` | Library | ბიბლიოთეკა |  |
+| `nav.library` | Archive | არქივი |  |
 | `nav.statistics` | Statistics | სტატისტიკა |  |
 | `nav.admin` | Admin Panel | ადმინ. პანელი |  |
 | `nav.logout` | Log out | გასვლა |  |
@@ -44,13 +44,13 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `dashboard.upcomingEvents` | Upcoming events | მომავალი ღონისძიებები |  |
 | `dashboard.noUpcoming` | No upcoming events | მომავალი ღონისძიებები არ არის |  |
 | `dashboard.descCollab` | Select an event to view your assigned sections and submit your work. | აირჩიეთ ღონისძიება, რათა ნახოთ თქვენთვის მინიჭებული სექციები და წარადგინოთ თქვენი ნამუშევარი. |  |
-| `dashboard.descDeputy` | Choose an event to review and finalize before sending to the library. | აირჩიეთ ღონისძიება განსახილველად და დასასრულებლად ბიბლიოთეკაში გაგზავნამდე. |  |
+| `dashboard.descDeputy` | Choose an event to review and finalize before sending to the archive. | აირჩიეთ ღონისძიება განსახილველად და დასასრულებლად არქივში გაგზავნამდე. |  |
 | `dashboard.descSupervisor` | Choose an event to review senior editor submissions before they move to the deputy stage. | აირჩიეთ ღონისძიება უფროსი შემსრულებლის ნამუშევრის განსახილველად მოადგილის ეტაპზე გადასვლამდე. |  |
 | `dashboard.descSuperCollab` | Choose an event to review editor submissions before they move to the supervisor stage. | აირჩიეთ ღონისძიება შემსრულებლის ნამუშევრის განსახილველად ხელმძღვანელის ეტაპზე გადასვლამდე. |  |
 | `dashboard.approveAll` | Approve all | ყველას დადასტურება |  |
 | `dashboard.confirmApproveAll` | Approve all {n} sections | {n} სექციის დადასტურება |  |
-| `dashboard.sendToLibrary` | Send to library | ბიბლიოთეკაში გაგზავნა |  |
-| `dashboard.sentToLibrary` | Document sent to library successfully. | დოკუმენტი წარმატებით გაიგზავნა ბიბლიოთეკაში. |  |
+| `dashboard.sendToLibrary` | Send to archive | არქივში გაგზავნა |  |
+| `dashboard.sentToLibrary` | Document sent to archive successfully. | დოკუმენტი წარმატებით გაიგზავნა არქივში. |  |
 
 ## Calendar (Events)
 
@@ -294,7 +294,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `admin.upload.errNoSheet` | Workbook has no sheets | ფაილში ცხრილი არ არის |  |
 | `admin.upload.errNoActive` | No active companies with foreign capital found in the file | ფაილში აქტიური კომპანიები უცხოური კაპიტალით ვერ მოიძებნა |  |
 
-## Library
+## Archive
 
 | Key | English | Georgian | Notes |
 | --- | --- | --- | --- |
@@ -310,7 +310,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `library.btn.word` | Word | Word |  |
 | `library.btn.files` | Files | ფაილები |  |
 | `library.btn.edit` | Edit | რედაქტირება |  |
-| `library.editTooltip` | Reopen this document for editing — it will leave the Library until you re-publish. | გახსენით დოკუმენტი რედაქტირებისთვის — ბიბლიოთეკიდან ის ამოვა, ვიდრე თავიდან არ გამოაქვეყნებთ. |  |
+| `library.editTooltip` | Reopen this document for editing — it will leave the Archive until you re-publish. | გახსენით დოკუმენტი რედაქტირებისთვის — არქივიდან ის ამოვა, ვიდრე თავიდან არ გამოაქვეყნებთ. |  |
 | `library.sectionSelect.selectAll` | Select all | ყველას არჩევა |  |
 | `library.sectionSelect.warnEmpty` | Select at least one section. | აირჩიეთ მინიმუმ ერთი სექცია. |  |
 | `library.sectionSelect.untitledTopic` | (untitled topic) | (უსათაურო საკითხი) |  |
@@ -328,7 +328,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `library.files.col.by` | By | ვის მიერ |  |
 | `library.files.col.size` | Size | ზომა |  |
 | `library.files.failLoad` | Failed to load files: | ფაილები ვერ ჩაიტვირთა: |  |
-| `library.reopen.confirm` | Reopen this document for editing? It will leave the Library until you re-publish. | გავხსნათ ეს დოკუმენტი რედაქტირებისთვის? ბიბლიოთეკიდან დოკუმენტი გაქრება, სანამ თავიდან არ გამოაქვეყნებთ. |  |
+| `library.reopen.confirm` | Reopen this document for editing? It will leave the Archive until you re-publish. | გავხსნათ ეს დოკუმენტი რედაქტირებისთვის? არქივიდან დოკუმენტი გაქრება, სანამ თავიდან არ გამოაქვეყნებთ. |  |
 | `library.reopen.fail` | Failed to reopen: | გახსნა ვერ მოხერხდა: |  |
 | `library.reopen.unknownError` | Unknown error | უცნობი შეცდომა |  |
 
