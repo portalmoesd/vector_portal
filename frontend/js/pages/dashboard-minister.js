@@ -75,7 +75,8 @@
 
   // Mode set per role:
   //  - owner roles: 'meetings' (events they own, keyed by meeting date/time, with
-  //    a readiness chip) and 'tasks' (events they only contribute to);
+  //    a readiness chip — still to come only, where an Archive tab exists to hold
+  //    the finished ones) and 'tasks' (events they only contribute to);
   //  - worker roles: 'completed' | 'upcoming' (unchanged).
   // Worker roles land on the In-Progress view first; owners default to meetings.
   let mode = isOwner ? 'meetings' : 'upcoming';
@@ -299,12 +300,22 @@
   // ── Helpers ────────────────────────────────────────────────────────────────
   function isOwned(item) { return item.documentSubmitterId === ownerId; }
 
+  // Every event they own, finished or not. The calendar and its day preview show
+  // all of them — a meeting that happened is still part of that day — even where
+  // the My Calendar list itself has stopped carrying the finished ones.
+  function ownedEvents() { return completed.filter(isOwned).concat(upcoming.filter(isOwned)); }
+
   function itemsForMode(m) {
     switch (m) {
       case 'completed': return completed;
       case 'upcoming': return upcoming;
-      // Meetings = events they own (ready + in-preparation), unified.
-      case 'meetings': return completed.filter(isOwned).concat(upcoming.filter(isOwned));
+      // My Calendar = the events they own that are still to come. Finished ones
+      // move to the Archive tab, so they are listed once rather than twice.
+      // The Supervisor has no Archive tab, so theirs stays unified — dropping
+      // the finished ones would leave nowhere on their dashboard to find them.
+      case 'meetings': return HAS_DOCS_TAB
+        ? upcoming.filter(isOwned)
+        : completed.filter(isOwned).concat(upcoming.filter(isOwned));
       // Tasks ("Other Events") = events they contribute to but don't own —
       // in-progress ones plus finished ones (shown once ready). For roles with
       // a docs tab the completed list is ministry-wide (not participation-
@@ -369,8 +380,11 @@
   // Minister's calendar always shows their own meetings — it stays "my
   // schedule" even while the ministry-wide Ready Documents tab is active.
   function calendarItems() {
-    if (HYBRID_CAL) return itemsForMode('meetings').concat(itemsForMode('tasks'));
-    if (isMinister) return itemsForMode('meetings');
+    // ownedEvents(), not itemsForMode('meetings'): the calendar keeps marking days
+    // whose meeting is already finished, even though the My Calendar list no
+    // longer carries them. Clicking one opens it on the Archive tab.
+    if (HYBRID_CAL) return ownedEvents().concat(itemsForMode('tasks'));
+    if (isMinister) return ownedEvents();
     return activeItems();
   }
 
@@ -1746,7 +1760,9 @@
     if (!item) return false;
     let targetMode;
     if (isOwner) {
-      if (isOwned(item)) targetMode = 'meetings';               // owned (ready or in prep)
+      // Owned: in-preparation ones sit on My Calendar, finished ones on Archive
+      // (for the roles that have one — the Supervisor's My Calendar keeps both).
+      if (isOwned(item)) targetMode = (inCompleted && HAS_DOCS_TAB) ? 'docs' : 'meetings';
       else if (inCompleted && HAS_DOCS_TAB) targetMode = 'docs'; // completed, not owned → docs tab
       else if (!inCompleted && !isMinister) targetMode = 'tasks'; // active, contributing
       else if (inCompleted) {
