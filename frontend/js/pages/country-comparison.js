@@ -20,6 +20,14 @@
     setText('country1Label', ka ? 'ქვეყანა 1' : 'Country 1');
     setText('country2Label', ka ? 'ქვეყანა 2' : 'Country 2');
     setText('periodLabelEl', ka ? 'პერიოდი' : 'Period');
+    setText('sectionsLabel', ka ? 'სექციები' : 'Sections');
+    // The button reads "All" unless sections were filtered out on a previous
+    // visit; a partial selection needs the section names, which live in the
+    // module body, so applyReportLocale fills that in a moment later.
+    try {
+      const saved = JSON.parse(localStorage.getItem('cmpReportSections'));
+      if (!Array.isArray(saved) || saved.length >= 5) setText('sectionsSummary', ka ? 'ყველა' : 'All');
+    } catch (e) { setText('sectionsSummary', ka ? 'ყველა' : 'All'); }
     for (const id of ['country1Search', 'country2Search']) {
       const el = document.getElementById(id);
       if (el) el.placeholder = ka ? 'ქვეყნის ძებნა...' : 'Search country...';
@@ -77,6 +85,13 @@
   const cmpLoading = document.getElementById('cmpLoading');
   const cmpSections = document.getElementById('cmpSections');
   const cmpSummaryEl = document.getElementById('cmpSummary');
+  const sectionsLabel = document.getElementById('sectionsLabel');
+  const sectionsToggle = document.getElementById('sectionsToggle');
+  const sectionsSummaryEl = document.getElementById('sectionsSummary');
+  const sectionsDropdown = document.getElementById('sectionsDropdown');
+  const turnoverSection = document.getElementById('turnoverSection');
+  const exportSection = document.getElementById('exportSection');
+  const importSection = document.getElementById('importSection');
   const turnoverChartHeader = document.getElementById('turnoverChartHeader');
   const turnoverCanvas = document.getElementById('cmpTurnoverChart');
   const exportChartHeader = document.getElementById('exportChartHeader');
@@ -137,6 +152,45 @@
 
   const SEARCH_PLACEHOLDER = { ka: 'ქვეყნის ძებნა...', en: 'Search country...' };
   const LOADING_LABEL = { ka: 'იტვირთება...', en: 'Loading...' };
+
+  // ── Report sections filter ─────────────────────────────────────────────
+  // Which parts of the report to show. Everything is still fetched and
+  // rendered — the filter only decides what is on screen, so ticking a
+  // section back on is instant.
+  const SECTION_KEYS = ['turnover', 'export', 'import', 'fdi', 'tourism'];
+  const SECTION_LABELS = {
+    ka: {
+      all: 'ყველა',
+      turnover: 'სავაჭრო ბრუნვა',
+      export: 'ექსპორტი',
+      import: 'იმპორტი',
+      fdi: 'ინვესტიციები',
+      tourism: 'ტურიზმი',
+    },
+    en: {
+      all: 'All',
+      turnover: 'Trade Turnover',
+      export: 'Export',
+      import: 'Import',
+      fdi: 'Investments',
+      tourism: 'Tourism',
+    },
+  };
+  const SECTIONS_STORE_KEY = 'cmpReportSections';
+
+  function loadSelectedSections() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(SECTIONS_STORE_KEY));
+      if (Array.isArray(saved)) {
+        const kept = saved.filter(k => SECTION_KEYS.includes(k));
+        if (kept.length) return new Set(kept);
+      }
+    } catch (e) { /* malformed storage → fall back to everything */ }
+    return new Set(SECTION_KEYS);
+  }
+
+  let selectedSections = loadSelectedSections();
+  const sectionOn = (key) => selectedSections.has(key);
 
   // Two-country palette: same color = same country on every chart.
   const C1_COLOR = '#3b82f6'; // blue
@@ -732,6 +786,9 @@
     country1Label.textContent = isKa ? 'ქვეყანა 1' : 'Country 1';
     country2Label.textContent = isKa ? 'ქვეყანა 2' : 'Country 2';
     periodLabelEl.textContent = isKa ? 'პერიოდი' : 'Period';
+    sectionsLabel.textContent = isKa ? 'სექციები' : 'Sections';
+    renderSectionsSummary();
+    if (!sectionsDropdown.classList.contains('hidden')) renderSectionsDropdown();
     country1Search.placeholder = SEARCH_PLACEHOLDER[reportLocale];
     country2Search.placeholder = SEARCH_PLACEHOLDER[reportLocale];
     document.querySelectorAll('.stat-loading-label').forEach(el => {
@@ -818,6 +875,7 @@
     if (!e.target.closest('.stat-search-wrap')) {
       country1Dropdown.classList.add('hidden');
       country2Dropdown.classList.add('hidden');
+      setSectionsOpen(false);
     }
   });
 
@@ -1462,6 +1520,10 @@
 
     renderComparisonSummary();
 
+    // Runs last: the FDI and tourism renderers above decide whether their
+    // data exists, and this decides what the reader asked to see.
+    applySectionFilter();
+
     cmpSections.classList.remove('hidden');
 
     // Charts are on screen — fill in the ranks the report did not fetch.
@@ -1719,6 +1781,85 @@
     }
     html += `</tbody></table>`;
     fdiSectorsTable.innerHTML = html;
+  }
+
+  // ── Report sections dropdown ───────────────────────────────────────────
+
+  function sectionLabels() {
+    return SECTION_LABELS[reportLocale] || SECTION_LABELS.ka;
+  }
+
+  // The button reads "All" when nothing is filtered out, otherwise the
+  // chosen sections in report order.
+  function renderSectionsSummary() {
+    const L = sectionLabels();
+    sectionsSummaryEl.textContent = selectedSections.size === SECTION_KEYS.length
+      ? L.all
+      : SECTION_KEYS.filter(sectionOn).map(k => L[k]).join(', ');
+    sectionsToggle.title = sectionsSummaryEl.textContent;
+  }
+
+  function renderSectionsDropdown() {
+    const L = sectionLabels();
+    const all = selectedSections.size === SECTION_KEYS.length;
+    // A report with no sections would be a blank page, so the last one
+    // standing is held checked.
+    const lockLast = selectedSections.size === 1;
+    const item = (key, label, checked, extraClass = '', disabled = false) => `
+      <label class="cmp-sections__item ${extraClass}">
+        <input type="checkbox" data-section="${key}"${checked ? ' checked' : ''}${disabled ? ' disabled' : ''} />
+        <span>${escapeHtml(label)}</span>
+      </label>`;
+    sectionsDropdown.innerHTML =
+      // "All" is a select-all shortcut: clicking it when everything is
+      // already on changes nothing, and the re-render puts the tick back.
+      item('all', L.all, all, 'cmp-sections__item--all') +
+      SECTION_KEYS.map(k => item(k, L[k], sectionOn(k), '', lockLast && sectionOn(k))).join('');
+  }
+
+  function setSectionsOpen(open) {
+    sectionsDropdown.classList.toggle('hidden', !open);
+    sectionsToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  sectionsToggle.addEventListener('click', () => {
+    const open = sectionsDropdown.classList.contains('hidden');
+    if (open) renderSectionsDropdown();
+    setSectionsOpen(open);
+  });
+
+  sectionsDropdown.addEventListener('change', (e) => {
+    const cb = e.target.closest('input[data-section]');
+    if (!cb) return;
+    const key = cb.dataset.section;
+    if (key === 'all') {
+      SECTION_KEYS.forEach(k => selectedSections.add(k));
+    } else if (cb.checked) {
+      selectedSections.add(key);
+    } else {
+      selectedSections.delete(key);
+    }
+    localStorage.setItem(SECTIONS_STORE_KEY, JSON.stringify([...selectedSections]));
+    renderSectionsDropdown();
+    renderSectionsSummary();
+    applySectionFilter();
+    // The summary carries one block per section, so it is rebuilt to list
+    // exactly what is on screen.
+    if (lastResult) renderComparisonSummary();
+  });
+
+  // Show or hide each part of the report. FDI and tourism also depend on
+  // their data having arrived at all, which renderInvestments/
+  // renderTourismCmp record on lastResult.
+  function applySectionFilter() {
+    turnoverSection.classList.toggle('hidden', !sectionOn('turnover'));
+    exportSection.classList.toggle('hidden', !sectionOn('export'));
+    importSection.classList.toggle('hidden', !sectionOn('import'));
+    const r = lastResult;
+    const fdiReady = !!(r && r.fdi && r.fdi.available && r.fdi.points1.length);
+    const tourismReady = !!(r && r.tourism && r.tourism.available && r.tourism.points1.length);
+    fdiSection.classList.toggle('hidden', !(fdiReady && sectionOn('fdi')));
+    tourismSection.classList.toggle('hidden', !(tourismReady && sectionOn('tourism')));
   }
 
   // ── Chart label context ────────────────────────────────────────────────
@@ -2006,37 +2147,47 @@
 
     const m = metrics;
     const lines = [];
+    // The summary carries one block per report section, so it follows the
+    // sections filter. The divider only appears between blocks that are
+    // actually there.
+    function openSection(key, heading) {
+      if (!sectionOn(key)) return false;
+      if (lines.length) lines.push('<hr class="stat-summary__divider">');
+      lines.push(`<h4 class="stat-summary__heading">${heading}</h4>`);
+      return true;
+    }
 
     // Turnover
-    lines.push(`<h4 class="stat-summary__heading">${isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover'}</h4>`);
+    if (openSection('turnover', isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover')) {
     lines.push(`<p>${
       isKa
         ? `${prose} საქართველოს ${b('სავაჭრო ბრუნვამ')} ${b(g1.withCase)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, ხოლო ${b(g2.withCase)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
         : `${prose}, Georgia's ${b('trade turnover')} with ${b(name1)} ${valuePhrase(m.turnover.v1)}${changeClause(m.turnover.v1, m.turnover.p1, rankOf('c1', 'turnover'))}, while ${b('turnover')} with ${b(name2)} ${valuePhrase(m.turnover.v2)}${changeClause(m.turnover.v2, m.turnover.p2, rankOf('c2', 'turnover'))}.`
     }${compareSentence('turnover', m.turnover.v1, m.turnover.v2)}</p>`);
+    }
 
     // Export
-    lines.push('<hr class="stat-summary__divider">');
-    lines.push(`<h4 class="stat-summary__heading">${isKa ? 'ექსპორტი' : 'Export'}</h4>`);
+    if (openSection('export', isKa ? 'ექსპორტი' : 'Export')) {
     lines.push(`<p>${
       isKa
         ? `${prose} საქართველოდან ${b('ექსპორტმა')} ${b(g1.inCase)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, ხოლო ${b(g2.inCase)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
         : `${prose}, Georgia's ${b('exports')} to ${b(name1)} ${valuePhrase(m.export.v1)}${changeClause(m.export.v1, m.export.p1, rankOf('c1', 'export'))}, while ${b('exports')} to ${b(name2)} ${valuePhrase(m.export.v2)}${changeClause(m.export.v2, m.export.p2, rankOf('c2', 'export'))}.`
     }${compareSentence('export', m.export.v1, m.export.v2)}</p>`);
+    }
 
     // Import
-    lines.push('<hr class="stat-summary__divider">');
-    lines.push(`<h4 class="stat-summary__heading">${isKa ? 'იმპორტი' : 'Import'}</h4>`);
+    if (openSection('import', isKa ? 'იმპორტი' : 'Import')) {
     lines.push(`<p>${
       isKa
         ? `${prose} ${b('იმპორტმა')} ${b(g1.from)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, ხოლო ${b(g2.from)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
         : `${prose}, Georgia's ${b('imports')} from ${b(name1)} ${valuePhrase(m.import.v1)}${changeClause(m.import.v1, m.import.p1, rankOf('c1', 'import'))}, while ${b('imports')} from ${b(name2)} ${valuePhrase(m.import.v2)}${changeClause(m.import.v2, m.import.p2, rankOf('c2', 'import'))}.`
     }${compareSentence('import', m.import.v1, m.import.v2)}</p>`);
+    }
 
     // Investments — based on the FDI point for the chosen year (annual when
     // closed, quarterly YTD for the current year, else the latest point in
     // the window). Skipped entirely when the FDI fetch failed.
-    if (r.fdi && r.fdi.available && r.fdi.points1.length) {
+    if (sectionOn('fdi') && r.fdi && r.fdi.available && r.fdi.points1.length) {
       const pts1 = r.fdi.points1;
       const pts2 = r.fdi.points2;
       let idx = pts1.findIndex(p => p.year === r.chosen.year);
@@ -2070,8 +2221,7 @@
           : `${b('FDI')} from ${b(name)} amounted to ${b(`${formatMln2(p.valueMln)} ${mln}`)}${fdiExtras(p)}`;
       }
 
-      lines.push('<hr class="stat-summary__divider">');
-      lines.push(`<h4 class="stat-summary__heading">${isKa ? 'ინვესტიციები' : 'Investments'}</h4>`);
+      openSection('fdi', isKa ? 'ინვესტიციები' : 'Investments');
       lines.push(`<p>${
         isKa
           ? `${fdiProse} ${fdiFragment(g1, name1, f1)}, ხოლო ${fdiFragment(g2, name2, f2)}.`
@@ -2082,7 +2232,7 @@
     // Tourism — based on the visitor point for the chosen year (annual when
     // covered, current YTD for the current year, else the latest point in
     // the window). Skipped entirely when the tourism fetch failed.
-    if (r.tourism && r.tourism.available && r.tourism.points1.length) {
+    if (sectionOn('tourism') && r.tourism && r.tourism.available && r.tourism.points1.length) {
       const pts1 = r.tourism.points1;
       const pts2 = r.tourism.points2;
       let tIdx = pts1.findIndex(p => p.year === r.chosen.year);
@@ -2113,8 +2263,7 @@
           : `${b(`${Number(p.visitors).toLocaleString()} visits`)} were made from ${b(name)} to Georgia${tourismExtras(p)}`;
       }
 
-      lines.push('<hr class="stat-summary__divider">');
-      lines.push(`<h4 class="stat-summary__heading">${isKa ? 'ტურიზმი' : 'Tourism'}</h4>`);
+      openSection('tourism', isKa ? 'ტურიზმი' : 'Tourism');
       lines.push(`<p>${
         isKa
           ? `${tProse} ${tourismFragment(g1, name1, t1)}, ხოლო ${tourismFragment(g2, name2, t2)}.`

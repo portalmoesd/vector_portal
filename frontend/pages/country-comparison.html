@@ -51,6 +51,16 @@
               <select id="cmpMonth" class="form-input cmp-select" disabled></select>
             </div>
           </div>
+          <div class="form-group cmp-period-group">
+            <label class="form-label" id="sectionsLabel">Sections</label>
+            <div class="stat-search-wrap">
+              <button type="button" id="sectionsToggle" class="form-input cmp-select cmp-sections__toggle"
+                      aria-haspopup="true" aria-expanded="false">
+                <span id="sectionsSummary">All</span>
+              </button>
+              <div id="sectionsDropdown" class="stat-dropdown cmp-sections__menu hidden"></div>
+            </div>
+          </div>
           <div class="form-group stat-controls__btn-wrap">
             <label class="form-label">&nbsp;</label>
             <div class="stat-controls__buttons">
@@ -75,40 +85,46 @@
         <div id="cmpSummary" class="card stat-summary hidden"></div>
 
         <!-- Turnover line chart (full width) -->
-        <div class="card cmp-chart-card">
-          <div id="turnoverChartHeader" class="stat-report__header"></div>
-          <div class="cmp-chart-wrap"><canvas id="cmpTurnoverChart"></canvas></div>
+        <div id="turnoverSection">
+          <div class="card cmp-chart-card">
+            <div id="turnoverChartHeader" class="stat-report__header"></div>
+            <div class="cmp-chart-wrap"><canvas id="cmpTurnoverChart"></canvas></div>
+          </div>
         </div>
 
         <!-- Export section -->
-        <div class="card cmp-chart-card">
-          <div id="exportChartHeader" class="stat-report__header"></div>
-          <div class="cmp-chart-wrap"><canvas id="cmpExportChart"></canvas></div>
-        </div>
-        <div class="stat-charts-row">
-          <div class="card stat-chart-card">
-            <div id="exportHeader1" class="stat-report__header"></div>
-            <div id="exportTable1" class="table-wrap"></div>
+        <div id="exportSection">
+          <div class="card cmp-chart-card">
+            <div id="exportChartHeader" class="stat-report__header"></div>
+            <div class="cmp-chart-wrap"><canvas id="cmpExportChart"></canvas></div>
           </div>
-          <div class="card stat-chart-card">
-            <div id="exportHeader2" class="stat-report__header"></div>
-            <div id="exportTable2" class="table-wrap"></div>
+          <div class="stat-charts-row">
+            <div class="card stat-chart-card">
+              <div id="exportHeader1" class="stat-report__header"></div>
+              <div id="exportTable1" class="table-wrap"></div>
+            </div>
+            <div class="card stat-chart-card">
+              <div id="exportHeader2" class="stat-report__header"></div>
+              <div id="exportTable2" class="table-wrap"></div>
+            </div>
           </div>
         </div>
 
         <!-- Import section -->
-        <div class="card cmp-chart-card">
-          <div id="importChartHeader" class="stat-report__header"></div>
-          <div class="cmp-chart-wrap"><canvas id="cmpImportChart"></canvas></div>
-        </div>
-        <div class="stat-charts-row">
-          <div class="card stat-chart-card">
-            <div id="importHeader1" class="stat-report__header"></div>
-            <div id="importTable1" class="table-wrap"></div>
+        <div id="importSection">
+          <div class="card cmp-chart-card">
+            <div id="importChartHeader" class="stat-report__header"></div>
+            <div class="cmp-chart-wrap"><canvas id="cmpImportChart"></canvas></div>
           </div>
-          <div class="card stat-chart-card">
-            <div id="importHeader2" class="stat-report__header"></div>
-            <div id="importTable2" class="table-wrap"></div>
+          <div class="stat-charts-row">
+            <div class="card stat-chart-card">
+              <div id="importHeader1" class="stat-report__header"></div>
+              <div id="importTable1" class="table-wrap"></div>
+            </div>
+            <div class="card stat-chart-card">
+              <div id="importHeader2" class="stat-report__header"></div>
+              <div id="importTable2" class="table-wrap"></div>
+            </div>
           </div>
         </div>
 

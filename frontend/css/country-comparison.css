@@ -20,6 +20,91 @@
   cursor: not-allowed;
 }
 
+/* ─── Report sections filter ──────────────────────────────────────────── */
+
+/* A button styled to read as a select — it opens a checkbox list instead of
+   a native option list, since several sections can be on at once. */
+.cmp-sections__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-primary);
+}
+
+.cmp-sections__toggle::after {
+  content: '';
+  flex: none;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 5px solid var(--text-secondary);
+}
+
+.cmp-sections__toggle > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* The menu drops below the button, so unlike the country search dropdown it
+   keeps its top border and corners. It sizes to the section names rather
+   than to the button, which the .cmp-select cap keeps narrow. */
+.cmp-sections__menu {
+  right: auto;
+  min-width: 100%;
+  width: max-content;
+  max-width: 260px;
+  border-top: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  margin-top: 2px;
+  padding: 4px 0;
+}
+
+.cmp-sections__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cmp-sections__item:hover {
+  background: var(--bg-hover);
+}
+
+.cmp-sections__item input {
+  cursor: pointer;
+  accent-color: var(--accent-blue);
+}
+
+.cmp-sections__item > span {
+  white-space: nowrap;
+}
+
+/* The last section standing cannot be switched off — an empty report has
+   nothing to show — so its box is held checked and greyed. */
+.cmp-sections__item input:disabled {
+  cursor: not-allowed;
+}
+.cmp-sections__item:has(input:disabled) {
+  color: var(--text-muted);
+  cursor: not-allowed;
+}
+
+/* "All" sits above the individual sections, divided from them. */
+.cmp-sections__item--all {
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 4px;
+  padding-bottom: 9px;
+  font-weight: 600;
+}
+
 /* Full-width line-chart cards: cap the height so the responsive canvas
    doesn't grow into a huge square on wide screens. */
 .cmp-chart-wrap {
