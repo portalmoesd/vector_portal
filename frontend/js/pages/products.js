@@ -10,6 +10,45 @@
  * Falls back to our backend proxy (/api/statistics/) if direct calls fail.
  */
 (async function () {
+  // ── Synchronous pre-localization ─────────────────────────────────────
+  // Set static labels from the localStorage locales BEFORE the async init
+  // so a Georgian UI doesn't flash the English fallback text. The later
+  // applyReportLocale pass re-applies identical strings.
+  {
+    const earlySite = localStorage.getItem('locale') || 'ka';
+    const early = localStorage.getItem('statReportLocale') || earlySite;
+    const ka = early === 'ka';
+    const setText = (id, txt) => { const el = document.getElementById(id); if (el) el.textContent = txt; };
+    setText('pageTitle', ka ? 'პროდუქტები' : 'Products');
+    setText('productLabel', ka ? 'პროდუქტი' : 'Product');
+    setText('yearLabel', ka ? 'წელი' : 'Year');
+    setText('periodLabel', ka ? 'პერიოდი' : 'Period');
+    setText('flowLabel', ka ? 'მიმართულება' : 'Flow');
+    const searchEl = document.getElementById('productSearch');
+    if (searchEl) searchEl.placeholder = ka ? 'პროდუქტის სახელი ან HS კოდი...' : 'Product name or HS code...';
+    const genBtn = document.getElementById('generateBtn');
+    if (genBtn) genBtn.textContent = earlySite === 'ka' ? 'გენერაცია' : 'Generate';
+    document.querySelectorAll('.stat-loading-label').forEach(el => {
+      el.textContent = ka ? 'იტვირთება...' : 'Loading...';
+    });
+    document.querySelectorAll('#reportLangToggle .stat-lang-toggle__btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.reportLang === early);
+    });
+    const sw = document.getElementById('statModeSwitch');
+    if (sw) {
+      const labels = {
+        latest: ka ? 'უახლესი სტატისტიკა' : 'Latest Statistics',
+        comparison: ka ? 'ქვეყნების შედარება' : 'Country Comparison',
+        products: ka ? 'პროდუქტები' : 'Products',
+      };
+      for (const [mode, text] of Object.entries(labels)) {
+        const btn = sw.querySelector(`[data-mode="${mode}"]`);
+        if (btn) btn.textContent = text;
+      }
+    }
+    positionModeThumb(); // hoisted function declaration
+  }
+
   await App.init();
 
   const user = Api.getUser();
