@@ -21,7 +21,7 @@ const App = {
     // change-password). Any other path bounces them back to Statistics.
     if (user.role === 'ANALYST') {
       const path = window.location.pathname;
-      const allow = ['/pages/statistics.html', '/pages/country-comparison.html', '/pages/change-password.html'];
+      const allow = ['/pages/statistics.html', '/pages/country-comparison.html', '/pages/products.html', '/pages/change-password.html'];
       if (!allow.some(p => path.endsWith(p))) {
         window.location.href = '/pages/statistics.html';
         return;
@@ -39,6 +39,7 @@ const App = {
         '/pages/dashboard-minister.html',
         '/pages/statistics.html',
         '/pages/country-comparison.html',
+        '/pages/products.html',
         '/pages/change-password.html',
       ];
       if (!allow.some(p => path.endsWith(p))) {
@@ -143,10 +144,12 @@ const App = {
     }
 
     const navHtml = navItems.map(it => {
-      // Country Comparison is a sub-mode of Statistics (reached via the
-      // on-page switch), so it lights up the Statistics entry.
+      // Country Comparison and Products are sub-modes of Statistics
+      // (reached via the on-page switch), so they light up the
+      // Statistics entry.
       const isActive = currentPath.includes(it.match) ||
-        (it.match === 'statistics' && currentPath.includes('country-comparison'));
+        (it.match === 'statistics' &&
+          (currentPath.includes('country-comparison') || currentPath.includes('/pages/products')));
       const active = isActive ? ' active' : '';
       return `<a href="${it.href}" class="gp-nav__link${active}"><span class="gp-nav__icon">${navIcon(it.label)}</span><span class="gp-nav__label" data-i18n="${it.i18n}">${escapeHtml(it.label)}</span></a>`;
     }).join('');
