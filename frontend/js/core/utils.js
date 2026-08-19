@@ -347,8 +347,8 @@ function pairedLabelAlign(ownSeries, otherSeries, isFirstSeries, minRoomPx = 34)
  * and is thinned as the points crowd together, so the label never grows
  * past the two lines the placement above is sized for:
  *
- *   roomy     1,240.80 / "+12% · #2"
- *   tight     1,240.80 / "#2"          the change goes first
+ *   roomy     1,240.80 / "+12% · №2"
+ *   tight     1,240.80 / "№2"          the change goes first
  *   tightest  1,240.80                 value alone
  *
  * @param {(v:number)=>string} formatValue  per-chart value formatter
@@ -366,7 +366,7 @@ function pointLabelFormatter(formatValue, metaByDataset, minPxPerPoint = 64, ran
     const meta = arr && arr[ctx.dataIndex];
     if (!meta) return base;
     const change = meta.change || null;
-    const rank = meta.rank != null ? `#${meta.rank}` : null;
+    const rank = meta.rank != null ? `№${meta.rank}` : null;
     if (!change && !rank) return base;
     const area = ctx.chart.chartArea;
     const gaps = Math.max(1, ctx.chart.data.labels.length - 1);
