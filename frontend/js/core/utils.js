@@ -341,25 +341,38 @@ function pairedLabelAlign(ownSeries, otherSeries, isFirstSeries, minRoomPx = 34)
 }
 
 /**
- * Scriptable `formatter` for those same charts: "value\nchange" normally,
- * value alone once the points sit too close together for two lines of text
- * to fit between them. Dropping the change % keeps every figure readable on
- * a phone instead of letting whole labels collide (and be hidden).
+ * Scriptable `formatter` for those same charts. The first line is always
+ * the value; the second carries whatever context the caller supplies for
+ * that point — the change vs the prior period and the country's rank —
+ * and is thinned as the points crowd together, so the label never grows
+ * past the two lines the placement above is sized for:
+ *
+ *   roomy     1,240.80 / "+12% · #2"
+ *   tight     1,240.80 / "#2"          the change goes first
+ *   tightest  1,240.80                 value alone
  *
  * @param {(v:number)=>string} formatValue  per-chart value formatter
- * @param {Array<Array<string|null>|null>} changesByDataset  change labels,
- *        indexed by dataset then by point
- * @param {number} minPxPerPoint  width per point needed for the second line
+ * @param {Array<Array<{change?: string|null, rank?: number|null}|null>|null>} metaByDataset
+ *        per-point context, indexed by dataset then by point. Entries are
+ *        read at draw time, so a caller that fills a rank in later only
+ *        needs chart.update() — no rebuild.
+ * @param {number} minPxPerPoint  width per point needed for the full line
+ * @param {number} rankPxPerPoint  width per point needed for the rank alone
  */
-function pointLabelFormatter(formatValue, changesByDataset, minPxPerPoint = 64) {
+function pointLabelFormatter(formatValue, metaByDataset, minPxPerPoint = 64, rankPxPerPoint = 44) {
   return (v, ctx) => {
     const base = formatValue(v);
-    const arr = changesByDataset && changesByDataset[ctx.datasetIndex];
-    const change = arr && arr[ctx.dataIndex];
-    if (!change) return base;
+    const arr = metaByDataset && metaByDataset[ctx.datasetIndex];
+    const meta = arr && arr[ctx.dataIndex];
+    if (!meta) return base;
+    const change = meta.change || null;
+    const rank = meta.rank != null ? `#${meta.rank}` : null;
+    if (!change && !rank) return base;
     const area = ctx.chart.chartArea;
     const gaps = Math.max(1, ctx.chart.data.labels.length - 1);
-    if (area && area.width / gaps < minPxPerPoint) return base;
-    return `${base}\n${change}`;
+    const perPoint = area ? area.width / gaps : Infinity;
+    if (perPoint >= minPxPerPoint) return `${base}\n${[change, rank].filter(Boolean).join(' · ')}`;
+    if (perPoint >= rankPxPerPoint && rank) return `${base}\n${rank}`;
+    return base;
   };
 }

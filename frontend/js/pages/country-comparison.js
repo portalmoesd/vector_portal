@@ -1393,14 +1393,20 @@
     }
     const cp = r.chainPrev;
     const yp = r.ytdPrev;
-    const changes = {
-      turnover1: buildChangeLabels(turnover1, cp ? cp.exp1 + cp.imp1 : null, yp ? yp.exp1 + yp.imp1 : null),
-      turnover2: buildChangeLabels(turnover2, cp ? cp.exp2 + cp.imp2 : null, yp ? yp.exp2 + yp.imp2 : null),
-      exp1: buildChangeLabels(r.series.exp1, cp ? cp.exp1 : null, yp ? yp.exp1 : null),
-      exp2: buildChangeLabels(r.series.exp2, cp ? cp.exp2 : null, yp ? yp.exp2 : null),
-      imp1: buildChangeLabels(r.series.imp1, cp ? cp.imp1 : null, yp ? yp.imp1 : null),
-      imp2: buildChangeLabels(r.series.imp2, cp ? cp.imp2 : null, yp ? yp.imp2 : null),
+    // Per-point label context: the change vs the comparable prior period
+    // plus the country's rank among Georgia's partners for that point.
+    // Only the chosen period's ranking comes with the report; the rest are
+    // filled into these same objects by loadPointRankings() afterwards.
+    seedPointRankings(r);
+    r.chartMeta = {
+      turnover1: buildChangeLabels(turnover1, cp ? cp.exp1 + cp.imp1 : null, yp ? yp.exp1 + yp.imp1 : null).map(change => ({ change, rank: null })),
+      turnover2: buildChangeLabels(turnover2, cp ? cp.exp2 + cp.imp2 : null, yp ? yp.exp2 + yp.imp2 : null).map(change => ({ change, rank: null })),
+      exp1: buildChangeLabels(r.series.exp1, cp ? cp.exp1 : null, yp ? yp.exp1 : null).map(change => ({ change, rank: null })),
+      exp2: buildChangeLabels(r.series.exp2, cp ? cp.exp2 : null, yp ? yp.exp2 : null).map(change => ({ change, rank: null })),
+      imp1: buildChangeLabels(r.series.imp1, cp ? cp.imp1 : null, yp ? yp.imp1 : null).map(change => ({ change, rank: null })),
+      imp2: buildChangeLabels(r.series.imp2, cp ? cp.imp2 : null, yp ? yp.imp2 : null).map(change => ({ change, rank: null })),
     };
+    applyPointRankings(r);
 
     // In month mode all points are the same Jan..M window — put the window
     // in the chart title once instead of repeating it on every x label.
@@ -1415,13 +1421,13 @@
 
     renderLineChart('turnover', turnoverChartHeader, turnoverCanvas,
       (isKa ? 'სავაჭრო ბრუნვა' : 'Trade Turnover') + titleSuffix,
-      labels, turnover1, turnover2, name1, name2, 'line', chartLabel, changes.turnover1, changes.turnover2);
+      labels, turnover1, turnover2, name1, name2, 'line', chartLabel, r.chartMeta.turnover1, r.chartMeta.turnover2);
     renderLineChart('export', exportChartHeader, exportCanvas,
       (isKa ? 'ექსპორტი' : 'Export') + titleSuffix,
-      labels, r.series.exp1, r.series.exp2, name1, name2, 'line', chartLabel, changes.exp1, changes.exp2);
+      labels, r.series.exp1, r.series.exp2, name1, name2, 'line', chartLabel, r.chartMeta.exp1, r.chartMeta.exp2);
     renderLineChart('import', importChartHeader, importCanvas,
       (isKa ? 'იმპორტი' : 'Import') + titleSuffix,
-      labels, r.series.imp1, r.series.imp2, name1, name2, 'line', chartLabel, changes.imp1, changes.imp2);
+      labels, r.series.imp1, r.series.imp2, name1, name2, 'line', chartLabel, r.chartMeta.imp1, r.chartMeta.imp2);
 
     const periodText = chosenPeriodText(r.chosen, isKa);
     const changeAvailable = !!r.prevPeriod;
@@ -1445,6 +1451,9 @@
     renderComparisonSummary();
 
     cmpSections.classList.remove('hidden');
+
+    // Charts are on screen — fill in the ranks the report did not fetch.
+    loadPointRankings(r);
   }
 
   // ── Investments (FDI) render ───────────────────────────────────────────
@@ -1461,7 +1470,8 @@
     const labels = f.points1.map(p => fdiPointLabel(p, isKa));
     renderLineChart('fdi', fdiChartHeader, fdiCanvas,
       isKa ? 'პირდაპირი უცხოური ინვესტიციები, მლნ. $' : 'FDI, mln $',
-      labels, f.points1.map(p => p.valueMln), f.points2.map(p => p.valueMln), name1, name2, 'bar');
+      labels, f.points1.map(p => p.valueMln), f.points2.map(p => p.valueMln), name1, name2, 'bar',
+      chartLabel, rankMeta(f.points1, p => p.valueMln > 0), rankMeta(f.points2, p => p.valueMln > 0));
 
     renderCmpFdiHeader(fdiHeader1, name1, isKa);
     renderCmpFdiTable(fdiTable1, f.points1, isKa);
@@ -1491,7 +1501,8 @@
     const labels = t.points1.map(p => localizePeriodLabel(p.label, isKa));
     renderLineChart('tourism', tourismChartHeader, tourismCanvas, title,
       labels, t.points1.map(p => p.visitors), t.points2.map(p => p.visitors),
-      name1, name2, 'bar', v => Number(v).toLocaleString());
+      name1, name2, 'bar', v => Number(v).toLocaleString(),
+      rankMeta(t.points1, p => p.visitors > 0), rankMeta(t.points2, p => p.visitors > 0));
 
     renderTourismTableCmp(t, name1, name2, isKa);
   }
@@ -1698,9 +1709,98 @@
     fdiSectorsTable.innerHTML = html;
   }
 
+  // ── Chart label context ────────────────────────────────────────────────
+
+  // Which trade chart reads which ranking flow and which label arrays.
+  const TRADE_RANK_CHARTS = [
+    { chart: 'turnover', metric: 'turnover', meta: 'turnover' },
+    { chart: 'export', metric: 'export', meta: 'exp' },
+    { chart: 'import', metric: 'import', meta: 'imp' },
+  ];
+
+  // FDI and tourism points carry their own per-year rank already; a point
+  // with no value has no meaningful rank to show.
+  function rankMeta(points, hasValue) {
+    return points.map(p => ({ change: null, rank: hasValue(p) ? (p.rank || null) : null }));
+  }
+
+  // One ranking slot per chart point per country. The report fetches the
+  // chosen period only (rankingFor, in generate), so that slot starts out
+  // filled and the rest arrive later.
+  function seedPointRankings(r) {
+    if (r.pointRankings) return;
+    r.pointRankings = { c1: r.points.map(() => null), c2: r.points.map(() => null) };
+    const idx = r.points.indexOf(r.chosen);
+    if (idx >= 0) {
+      r.pointRankings.c1[idx] = r.rankings.c1;
+      r.pointRankings.c2[idx] = r.rankings.c2;
+    }
+  }
+
+  // Copy whatever rankings have loaded into the label context objects the
+  // charts read at draw time.
+  function applyPointRankings(r) {
+    if (!r.chartMeta || !r.pointRankings) return;
+    for (const c of TRADE_RANK_CHARTS) {
+      for (const n of [1, 2]) {
+        const meta = r.chartMeta[c.meta + n];
+        if (!meta) continue;
+        const ranks = r.pointRankings['c' + n];
+        meta.forEach((m, i) => {
+          const flow = ranks[i] && ranks[i][c.metric];
+          m.rank = (flow && flow.rank) || null;
+        });
+      }
+    }
+  }
+
+  // The remaining points' rankings, once the charts are on screen. A cold
+  // period costs the backend four Geostat calls across every country, so
+  // the report never waits on these: newest period first, two periods at a
+  // time, and the two countries of a period in sequence so the second
+  // request hits the cache the first one just warmed instead of
+  // recomputing the same period.
+  function loadPointRankings(r) {
+    if (r.rankingsRequested) return;
+    r.rankingsRequested = true;
+    const chosenIdx = r.points.indexOf(r.chosen);
+    const queue = r.points
+      .map((p, i) => ({ p, i }))
+      .filter(job => job.i !== chosenIdx)
+      .reverse();
+
+    const fetchRank = (year, months, cid) => fetch(`${PROXY_API}/country-ranking`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ year, months, countryId: cid }),
+    })
+      .then(res => res.json())
+      .then(json => (json && json.success && json.country) || null)
+      .catch(() => null);
+
+    let cursor = 0;
+    const worker = async () => {
+      while (cursor < queue.length) {
+        const { p, i } = queue[cursor++];
+        const months = p.months || Array.from({ length: 12 }, (_, k) => k + 1);
+        const rank1 = await fetchRank(p.year, months, r.country1.value);
+        const rank2 = await fetchRank(p.year, months, r.country2.value);
+        // A newer report has replaced this one — stop patching stale state.
+        if (lastResult !== r) return;
+        r.pointRankings.c1[i] = rank1;
+        r.pointRankings.c2[i] = rank2;
+        applyPointRankings(r);
+        for (const c of TRADE_RANK_CHARTS) {
+          if (chartInstances[c.chart]) chartInstances[c.chart].update('none');
+        }
+      }
+    };
+    Promise.all([worker(), worker()]).catch(() => {});
+  }
+
   // ── Line charts ────────────────────────────────────────────────────────
 
-  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line', valueFormatter = chartLabel, changes1 = null, changes2 = null) {
+  function renderLineChart(key, headerEl, canvas, title, labels, series1, series2, name1, name2, chartType = 'line', valueFormatter = chartLabel, meta1 = null, meta2 = null) {
     headerEl.innerHTML = `
       <div class="stat-chart-title-row">
         <h3 class="stat-report__title">${escapeHtml(title)}</h3>
@@ -1763,10 +1863,11 @@
             // hides the lower-priority one, keeping the most recent
             // periods — it ranks by data index descending.
             display: 'auto',
-            // Second label line = change vs the comparable prior period,
-            // when the caller provides per-point change arrays; dropped
-            // when the points sit too close together for two text lines.
-            formatter: pointLabelFormatter(valueFormatter, [changes1, changes2]),
+            // Second label line = change vs the comparable prior period
+            // and the country's rank among Georgia's partners, from the
+            // caller's per-point arrays; thinned when the points sit too
+            // close together for two lines of text.
+            formatter: pointLabelFormatter(valueFormatter, [meta1, meta2]),
           },
         },
         scales: {
