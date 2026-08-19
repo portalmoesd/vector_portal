@@ -42,6 +42,52 @@
     return root;
   }
 
+  // ── Justified body text ─────────────────────────────────────────────────────
+  // Exported documents circulate as formal ministry papers, where body prose is
+  // set flush to both margins. Rather than teaching each exporter about
+  // alignment separately, the section HTML is normalised once here: the PDF path
+  // renders these inline styles directly, and the Word path converts them via
+  // getAlignment() in docx-export.js, which already maps `justify` to
+  // AlignmentType.BOTH. So neither exporter needs to change.
+
+  // Blocks that carry body prose. Headings are absent on purpose — a heading
+  // keeps whatever alignment it was given.
+  const BODY_BLOCKS = 'p, div, li, blockquote';
+
+  /**
+   * Set `text-align: justify` on the body blocks of a section's HTML.
+   *
+   * Any alignment the author chose in the editor is overwritten: the exported
+   * document is uniform by design. Two things are deliberately left alone —
+   * headings (see BODY_BLOCKS) and anything inside a table, because justifying
+   * a narrow column opens ugly gaps between words.
+   *
+   * Only ever sets a style. Tracked-change markup (<ins>/<del>) and comment
+   * anchors pass through untouched, which the Word export depends on to emit
+   * native revisions and comments.
+   */
+  function justifyBodyHtml(html) {
+    if (!html) return html || '';
+    const root = document.createElement('div');
+    root.innerHTML = html;
+
+    // Loose text with no block around it would reach Word as an unaligned
+    // paragraph (docx-export.js turns bare text nodes into plain Paragraphs),
+    // so give it one. Content and order are preserved.
+    Array.from(root.childNodes).forEach(node => {
+      if (node.nodeType !== Node.TEXT_NODE || !node.textContent.trim()) return;
+      const p = document.createElement('p');
+      root.insertBefore(p, node);
+      p.appendChild(node);
+    });
+
+    root.querySelectorAll(BODY_BLOCKS).forEach(el => {
+      if (el.closest('table')) return;
+      el.style.textAlign = 'justify';
+    });
+    return root.innerHTML;
+  }
+
   // ── Discussion-point documents ──────────────────────────────────────────────
   // Sections of a DISCUSSION_POINTS document hold an ordered list of points
   // (topic / context / additional information) rather than free-form prose, so
@@ -218,8 +264,9 @@
   // render as numbered topics with labelled Context / Additional Information,
   // matching the PDF and Word output; everything else renders as stored.
   function sectionPreviewHtml(doc, section) {
-    if (!isDiscussionPoints(doc)) return section.htmlContent || '';
-    return renderDiscussionPoints(section, doc.language);
+    // Justified here too, so the preview matches the file the exports produce.
+    if (!isDiscussionPoints(doc)) return justifyBodyHtml(section.htmlContent || '');
+    return justifyBodyHtml(renderDiscussionPoints(section, doc.language));
   }
 
   // ── Preview ────────────────────────────────────────────────────────────────
@@ -359,7 +406,7 @@
             </div>
             ${sections.map(s => `
               <p style="font-size: 12pt; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 4px;">${escapeHtml(s.title)}</p>
-              <div>${stripTrackChanges(s.htmlContent || '')}</div>
+              <div>${justifyBodyHtml(stripTrackChanges(s.htmlContent || ''))}</div>
             `).join('<hr style="border:none;border-top:1px solid #e5e7eb;margin:18px 0;">')}
           </div>
         `;
@@ -413,10 +460,11 @@
             } catch (_) { /* comments are optional in the export */ }
             // Only comments whose anchor survived into the exported HTML may be
             // registered — see commentsAnchoredIn(). A no-op for a full export.
+            const htmlContent = justifyBodyHtml(s.htmlContent);
             return {
               sectionLabel: s.title,
-              htmlContent: s.htmlContent,
-              comments: commentsAnchoredIn(s.htmlContent, comments),
+              htmlContent,
+              comments: commentsAnchoredIn(htmlContent, comments),
             };
           }));
           const flag = await flagPng(doc.countryCode, 128);
@@ -477,6 +525,6 @@
   window.LibraryDoc = {
     preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal,
     isDiscussionPoints, sectionPoints, renderDiscussionPoints, sectionPreviewHtml,
-    commentsAnchoredIn,
+    commentsAnchoredIn, justifyBodyHtml,
   };
 })();
