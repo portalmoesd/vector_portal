@@ -126,6 +126,10 @@ const tab = (page, mode) => page.locator(`.mn-toggle__btn[data-mode="${mode}"]`)
 test.describe('the green "document ready" cue', () => {
   test('marks only the documents the user has not opened', async ({ page }) => {
     await openDashboard(page);
+    // A Deputy's finished documents live on Archive; My Calendar carries only
+    // the events still to come, so it is empty for this fixture.
+    await expect(page.locator('.mn-list .empty-state')).toHaveCount(1);
+    await page.click('.mn-toggle__btn[data-mode="docs"]');
     await expect(page.locator('.mn-list .mn-card')).toHaveCount(2);
 
     await expect(card(page, 'Unopened Ready Document').locator('.mn-card__attn--ready')).toHaveCount(1);
@@ -134,12 +138,16 @@ test.describe('the green "document ready" cue', () => {
     await expect(card(page, 'Already Opened Document').locator('.mn-card__attn')).toHaveCount(0);
 
     // The switch counts the same thing: one unopened document, not two finished ones.
-    await expect(tab(page, 'meetings')).toHaveAttribute('data-dot', 'green');
-    await expect(tab(page, 'meetings')).toHaveAttribute('data-count', '1');
+    await expect(tab(page, 'docs')).toHaveAttribute('data-dot', 'green');
+    await expect(tab(page, 'docs')).toHaveAttribute('data-count', '1');
   });
 
   test('a finished document still says so, cue or no cue', async ({ page }) => {
-    await openDashboard(page);
+    // The chip earns its place where a list mixes states. The Supervisor has no
+    // Archive tab, so their My Calendar still holds finished and in-preparation
+    // events together — the case a Deputy's used to be.
+    const SV = { id: 3, fullName: 'Supervisor Test', username: 'sv', role: 'SUPERVISOR', departmentId: null };
+    await openDashboard(page, { user: SV, page_: 'supervisor' });
     // Status lives on the chip, which stays; the corner dot is only the cue.
     await expect(card(page, 'Already Opened Document').locator('.mn-chip--ready')).toHaveCount(1);
   });
@@ -180,6 +188,7 @@ test.describe('opening an event clears the cue', () => {
 
   test('opening the event clears it, on the card and on the switch', async ({ page }) => {
     const state = await openDashboard(page);
+    await page.click('.mn-toggle__btn[data-mode="docs"]');   // finished documents live here
 
     await card(page, 'Unopened Ready Document').click();
     // The corner dot is CSS-hidden while a card is expanded, so close it again —
@@ -200,11 +209,12 @@ test.describe('opening an event clears the cue', () => {
     // The dot goes on the click rather than after the round-trip. That optimism
     // must not survive a request that did not land.
     await openDashboard(page, { readFails: true });
+    await page.click('.mn-toggle__btn[data-mode="docs"]');   // finished documents live here
 
     await card(page, 'Unopened Ready Document').click();
     await page.click('.mn-card__close');
 
     await expect(card(page, 'Unopened Ready Document').locator('.mn-card__attn--ready')).toHaveCount(1);
-    await expect(tab(page, 'meetings')).toHaveAttribute('data-dot', 'green');
+    await expect(tab(page, 'docs')).toHaveAttribute('data-dot', 'green');
   });
 });
