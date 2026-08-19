@@ -1716,7 +1716,7 @@
     }
 
     const isBar = chartType === 'bar';
-    const makeDataset = (name, data, color, lineAlign) => isBar
+    const makeDataset = (name, data, color, otherData, isFirst) => isBar
       ? {
           label: name,
           data,
@@ -1733,7 +1733,9 @@
           pointRadius: 4,
           pointBackgroundColor: color,
           tension: 0.3,
-          datalabels: { align: lineAlign, color },
+          // Side picked per point, so the two series' labels never share
+          // the gap between the lines.
+          datalabels: { align: pairedLabelAlign(data, otherData, isFirst), color },
         };
 
     chartInstances[key] = new Chart(canvas, {
@@ -1741,14 +1743,14 @@
       data: {
         labels,
         datasets: [
-          makeDataset(name1, series1, C1_COLOR, 'top'),
-          makeDataset(name2, series2, C2_COLOR, 'bottom'),
+          makeDataset(name1, series1, C1_COLOR, isBar ? null : series2, true),
+          makeDataset(name2, series2, C2_COLOR, isBar ? null : series1, false),
         ],
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        layout: { padding: { top: 24, bottom: 8, left: 40, right: 40 } },
+        layout: { padding: { top: 24, bottom: isBar ? 8 : 30, left: 40, right: 40 } },
         plugins: {
           legend: { display: false },
           tooltip: { enabled: true },
@@ -1756,14 +1758,15 @@
             font: { size: 11, weight: '600' },
             clamp: true,
             textAlign: 'center',
+            // Last resort for labels the per-point placement cannot pull
+            // apart (neighbouring points on a narrow chart): the plugin
+            // hides the lower-priority one, keeping the most recent
+            // periods — it ranks by data index descending.
+            display: 'auto',
             // Second label line = change vs the comparable prior period,
-            // when the caller provides per-point change arrays.
-            formatter: (v, ctx) => {
-              const base = valueFormatter(v);
-              const arr = ctx.datasetIndex === 0 ? changes1 : changes2;
-              const change = arr && arr[ctx.dataIndex];
-              return change ? `${base}\n${change}` : base;
-            },
+            // when the caller provides per-point change arrays; dropped
+            // when the points sit too close together for two text lines.
+            formatter: pointLabelFormatter(valueFormatter, [changes1, changes2]),
           },
         },
         scales: {
@@ -1776,6 +1779,9 @@
             display: false,
             grid: { display: false },
             beginAtZero: true,
+            // Lift a floor-hugging series off the chart bottom so its
+            // below-point labels have room inside the plot area.
+            grace: isBar ? 0 : '18%',
           },
         },
       },

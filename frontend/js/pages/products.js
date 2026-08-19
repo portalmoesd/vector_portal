@@ -914,7 +914,7 @@
       chartInstances.main = null;
     }
 
-    const makeDataset = (data, color, align) => ({
+    const makeDataset = (data, color, otherData, isFirst) => ({
       data,
       borderColor: color,
       backgroundColor: color,
@@ -922,21 +922,19 @@
       pointRadius: 4,
       pointBackgroundColor: color,
       tension: 0.3,
-      datalabels: { align, color },
+      // Side picked per point, so the two series' labels never share the
+      // gap between the lines and a floor-hugging point keeps its label
+      // above the line.
+      datalabels: { align: pairedLabelAlign(data, otherData, isFirst), color },
     });
     const datasets = [];
     const changesByDataset = [];
-    // When the two series differ wildly in magnitude, the smaller line hugs
-    // the chart floor and below-point labels would collide with the x-axis —
-    // flip that series' labels above the line instead.
-    const overallMax = Math.max(...(expSeries || [0]), ...(impSeries || [0]), 0.001);
-    const impNearFloor = both && Math.max(...impSeries) < 0.25 * overallMax;
     if (expSeries) {
-      datasets.push(makeDataset(expSeries, EXP_COLOR, 'top'));
+      datasets.push(makeDataset(expSeries, EXP_COLOR, both ? impSeries : null, true));
       changesByDataset.push(expChanges);
     }
     if (impSeries) {
-      datasets.push(makeDataset(impSeries, IMP_COLOR, both && !impNearFloor ? 'bottom' : 'top'));
+      datasets.push(makeDataset(impSeries, IMP_COLOR, both ? expSeries : null, false));
       changesByDataset.push(impChanges);
     }
 
@@ -956,12 +954,14 @@
             font: { size: 11, weight: '600' },
             clamp: true,
             textAlign: 'center',
-            formatter: (v, ctx) => {
-              const base = chartLabel(v);
-              const arr = changesByDataset[ctx.datasetIndex];
-              const change = arr && arr[ctx.dataIndex];
-              return change ? `${base}\n${change}` : base;
-            },
+            // Last resort for labels the per-point placement cannot pull
+            // apart (neighbouring points on a narrow chart): the plugin
+            // hides the lower-priority one, keeping the most recent
+            // periods — it ranks by data index descending.
+            display: 'auto',
+            // The change line is dropped when the points sit too close
+            // together for two lines of text.
+            formatter: pointLabelFormatter(chartLabel, changesByDataset),
           },
         },
         scales: {

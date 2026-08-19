@@ -299,3 +299,67 @@ function dashboardUrl(role) {
   };
   return map[role] || '/pages/dashboard-collab.html';
 }
+
+// ── Chart data-label placement ───────────────────────────────────────────
+// The two-series line charts (country comparison, products) label every
+// point of both lines with a value and, on a second text line, the change
+// vs the prior period. Fixing the side per dataset — series 1 above its
+// points, series 2 below — collides wherever the lines run close or cross:
+// both labels then land in the same narrow gap between the two lines. The
+// helpers below place each label on the side facing away from the other
+// series, and thin a label down before the datalabels plugin has to hide
+// it outright.
+
+/**
+ * Scriptable `align` for one series of a paired line chart. The higher of
+ * the two points takes the space above, the lower one the space below, so
+ * a pair always opens away from itself. Falls back to 'top' for a lone
+ * series, a gap in either series, or a point sitting too close to the
+ * chart floor for a label to fit underneath.
+ *
+ * @param {Array<number|null>} ownSeries      this dataset's values
+ * @param {Array<number|null>|null} otherSeries  the paired dataset's values
+ * @param {boolean} isFirstSeries  decides ties, so equal values still split
+ * @param {number} minRoomPx  room a below-point label needs: two 11px text
+ *                            lines + the plugin's default offset + padding
+ */
+function pairedLabelAlign(ownSeries, otherSeries, isFirstSeries, minRoomPx = 34) {
+  return (ctx) => {
+    if (!otherSeries) return 'top';
+    const own = ownSeries[ctx.dataIndex];
+    const other = otherSeries[ctx.dataIndex];
+    if (own == null || other == null) return 'top';
+    const below = own === other ? !isFirstSeries : own < other;
+    if (!below) return 'top';
+    // Scriptable options are evaluated before the first layout too, when
+    // the scales and chart area are not measured yet — stay on top then.
+    const scale = ctx.chart.scales && ctx.chart.scales.y;
+    const area = ctx.chart.chartArea;
+    if (!scale || !area) return 'top';
+    return area.bottom - scale.getPixelForValue(own) >= minRoomPx ? 'bottom' : 'top';
+  };
+}
+
+/**
+ * Scriptable `formatter` for those same charts: "value\nchange" normally,
+ * value alone once the points sit too close together for two lines of text
+ * to fit between them. Dropping the change % keeps every figure readable on
+ * a phone instead of letting whole labels collide (and be hidden).
+ *
+ * @param {(v:number)=>string} formatValue  per-chart value formatter
+ * @param {Array<Array<string|null>|null>} changesByDataset  change labels,
+ *        indexed by dataset then by point
+ * @param {number} minPxPerPoint  width per point needed for the second line
+ */
+function pointLabelFormatter(formatValue, changesByDataset, minPxPerPoint = 64) {
+  return (v, ctx) => {
+    const base = formatValue(v);
+    const arr = changesByDataset && changesByDataset[ctx.datasetIndex];
+    const change = arr && arr[ctx.dataIndex];
+    if (!change) return base;
+    const area = ctx.chart.chartArea;
+    const gaps = Math.max(1, ctx.chart.data.labels.length - 1);
+    if (area && area.width / gaps < minPxPerPoint) return base;
+    return `${base}\n${change}`;
+  };
+}
