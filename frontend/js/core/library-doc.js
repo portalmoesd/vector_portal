@@ -88,6 +88,82 @@
     return root.innerHTML;
   }
 
+  // ── Fitting the export to the printable page ────────────────────────────────
+  // html2pdf lays the document out in a box exactly as wide as the A4 printable
+  // area and rasterizes that box, so anything sticking out of it is not on the
+  // canvas at all — it is simply missing from the right of the page. Section HTML
+  // arrives carrying whatever geometry its author gave it (the server sanitizer
+  // allows inline width/height in absolute units, and a table or image pasted
+  // from Word or a browser brings the width it had there), so absolute widths
+  // are dropped here and EXPORT_CSS below bounds whatever is left.
+
+  const PAGE_MARGIN_MM = 12.7;                        // 0.5in on all four sides
+  const CONTENT_WIDTH_MM = 210 - 2 * PAGE_MARGIN_MM;  // A4 portrait minus margins
+  const ABSOLUTE_LENGTH = /^-?\d+(\.\d+)?(px|pt|pc|cm|mm|in|q)$/i;
+
+  /**
+   * Drop the layout that cannot fit the printable width from a section's HTML.
+   *
+   * Absolute widths go; percentages stay, since those are relative to the
+   * container and therefore already fit. An <img> also loses an absolute height,
+   * so `height: auto` can keep its aspect ratio once the width is bounded.
+   *
+   * Only ever removes sizing. Tracked-change markup (<ins>/<del>), comment
+   * anchors, colours and alignment pass through untouched, the same guarantee
+   * justifyBodyHtml() makes.
+   */
+  function fitToPageHtml(html) {
+    if (!html) return html || '';
+    const root = document.createElement('div');
+    root.innerHTML = html;
+    root.querySelectorAll('*').forEach(el => {
+      const isImg = el.tagName === 'IMG';
+      const props = isImg ? ['width', 'min-width', 'height', 'min-height'] : ['width', 'min-width'];
+      props.forEach(prop => {
+        if (ABSOLUTE_LENGTH.test((el.style.getPropertyValue(prop) || '').trim())) {
+          el.style.removeProperty(prop);
+        }
+      });
+      // Legacy sizing attributes. The sanitizer only keeps these on <img>, but
+      // the others cost nothing to clear and cover unsanitized input.
+      if (isImg || ['TABLE', 'TD', 'TH'].indexOf(el.tagName) !== -1) {
+        el.removeAttribute('width');
+        el.removeAttribute('height');
+      }
+    });
+    return root.innerHTML;
+  }
+
+  // Styles for the exported document. Everything is scoped to `.pdf-export`:
+  // html2pdf attaches its render container to the live page, so an unscoped rule
+  // would restyle the app underneath for as long as the export runs.
+  //
+  // This travels as a real <style> node inside the exported HTML rather than
+  // being injected into html2canvas's clone — html2pdf's page-break plugin
+  // measures the live container before the snapshot is taken, so styles that
+  // existed only in the clone would not influence where the pages break.
+  //
+  // The table rules mirror the editing canvas (`.gcp-re-body` in
+  // editor-core.js): the export carries no app stylesheet, so without them a
+  // table renders borderless and as wide as its content wants to be.
+  const EXPORT_CSS = `
+    .pdf-export, .pdf-export * { box-sizing: border-box; }
+    .pdf-export p, .pdf-export div, .pdf-export li, .pdf-export blockquote,
+    .pdf-export h1, .pdf-export h2, .pdf-export h3,
+    .pdf-export h4, .pdf-export h5, .pdf-export h6 { overflow-wrap: break-word; }
+    .pdf-export table { width: 100% !important; border-collapse: collapse; margin: .5em 0; }
+    .pdf-export th, .pdf-export td { border: 1px solid #d1d5db; padding: 6px 10px;
+      vertical-align: top; overflow-wrap: anywhere; }
+    .pdf-export th { background: #f1f5f9; font-weight: 700; text-align: left; }
+    .pdf-export img { max-width: 100%; height: auto; }
+    .pdf-export pre { white-space: pre-wrap; }
+  `;
+  // Cells get `anywhere` rather than `break-word` on purpose: only `anywhere`
+  // lowers a cell's min-content width, and without that one long token keeps the
+  // whole table wider than the page however much `width: 100%` asks otherwise.
+  // Body prose keeps `break-word`, which never changes intrinsic sizing and so
+  // leaves the justified line breaking alone.
+
   // ── Discussion-point documents ──────────────────────────────────────────────
   // Sections of a DISCUSSION_POINTS document hold an ordered list of points
   // (topic / context / additional information) rather than free-form prose, so
@@ -386,49 +462,131 @@
   }
 
   // ── Export PDF ─────────────────────────────────────────────────────────────
+
+  /**
+   * One section: its title glued to the first block of its body.
+   *
+   * `avoid-all` page-breaking moves any element that straddles a page boundary
+   * down to the next page, but a title on its own never straddles anything — it
+   * just gets stranded at the foot of a page. Wrapping the title together with
+   * the block that follows it makes the pair one short element, so the pair
+   * moves as a unit. Same idea as withTitle() in statistics-pdf.js.
+   */
+  function sectionExportHtml(section) {
+    const body = document.createElement('div');
+    body.innerHTML = fitToPageHtml(justifyBodyHtml(stripTrackChanges(section.htmlContent || '')));
+
+    const keep = document.createElement('div');
+    keep.className = 'pdf-keep';
+    keep.innerHTML = `<p class="pdf-section-title" style="font-size: 12pt; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 4px;">${escapeHtml(section.title)}</p>`;
+    if (body.firstElementChild) keep.appendChild(body.firstElementChild);
+
+    // The section is emitted flat, with no wrapper of its own: a div around the
+    // whole section would itself be a block shorter than a sheet, so `avoid-all`
+    // would keep *it* whole and push a nearly-full section to the next page,
+    // leaving most of one blank.
+    const out = document.createElement('div');
+    out.appendChild(keep);
+    while (body.firstChild) out.appendChild(body.firstChild);
+    return out.innerHTML;
+  }
+
+  /**
+   * The whole exported document as one HTML string — header, then each section.
+   *
+   * Kept separate from exportPdf() so the layout can be rendered and measured on
+   * its own, which is what the PDF layout tests do.
+   */
+  function buildExportHtml(doc, sections, flagDataUrl) {
+    const metaLine = [docCountryLabel(doc), docDateLabel(doc)].filter(Boolean).join(' · ');
+    // No container padding — the pdf page margin alone positions the
+    // content, so the text starts at the top of the printable area.
+    return `
+      <div class="pdf-export" style="font-family: Arial, sans-serif; font-size: 11pt;">
+        <style>${EXPORT_CSS}</style>
+        <div class="pdf-keep" style="display:flex; align-items:center; gap:14px; padding-bottom:12px; border-bottom:2px solid #0a84ff; margin-bottom:22px;">
+          ${flagDataUrl ? `<img src="${flagDataUrl}" style="width:42px;height:42px;border-radius:50%;flex:0 0 auto;">` : ''}
+          <div>
+            <div style="font-size:15pt; font-weight:bold; line-height:1.25; margin:0;">${escapeHtml(doc.title)}</div>
+            ${metaLine ? `<div style="color:#666; font-size:9.5pt; margin-top:3px;">${escapeHtml(metaLine)}</div>` : ''}
+          </div>
+        </div>
+        ${sections.map(sectionExportHtml).join('<hr style="border:none;border-top:1px solid #e5e7eb;margin:18px 0;">')}
+      </div>
+    `;
+  }
+
+  /** html2pdf settings. `scale` comes from fittingScale() below. */
+  function pdfOptions(filename, scale) {
+    return {
+      margin: [PAGE_MARGIN_MM, PAGE_MARGIN_MM, PAGE_MARGIN_MM, PAGE_MARGIN_MM],
+      filename,
+      // scrollX/scrollY pinned to 0 — html2canvas otherwise offsets the
+      // capture by the page's scroll position, so exporting from a
+      // scrolled library list pushed the content down (or off) the page.
+      html2canvas: { scale, useCORS: true, scrollX: 0, scrollY: 0 },
+      jsPDF: { format: 'a4', orientation: 'portrait' },
+      image: { type: 'jpeg', quality: 0.98 },
+      // 'avoid-all' pushes any element that would straddle a page boundary onto
+      // the next page, so the raster is cut between blocks instead of through a
+      // line of text. Without it html2pdf slices the canvas at fixed intervals
+      // and paragraphs are cut in half at the bottom of the sheet. 'css' and
+      // 'legacy' are html2pdf's own defaults, kept so explicit page-break
+      // styling keeps working.
+      pagebreak: { mode: ['css', 'legacy', 'avoid-all'] },
+    };
+  }
+
+  // A canvas is capped by the browser — 268M pixels on Chrome, considerably less
+  // on Safari — and past the cap html2canvas hands back a truncated bitmap, so
+  // the tail of a long document goes missing from the PDF with no error. Stay
+  // well inside the smallest of those caps.
+  const MAX_CANVAS_AREA = 80e6;
+
+  /**
+   * Render `container` off-screen at the width html2pdf will use, and pick the
+   * largest canvas scale (up to the usual 2x) that keeps the bitmap inside
+   * MAX_CANVAS_AREA. Only documents dozens of pages long are scaled down.
+   *
+   * Also the natural place to notice content that still does not fit the page
+   * width, which is a bug in fitToPageHtml()/EXPORT_CSS rather than in the file.
+   */
+  function fittingScale(container) {
+    const host = document.createElement('div');
+    host.style.cssText = `position:absolute; left:-10000px; top:0; visibility:hidden; width:${CONTENT_WIDTH_MM}mm;`;
+    document.body.appendChild(host);
+    host.appendChild(container);
+    let scale = 2;
+    try {
+      const pageRight = host.getBoundingClientRect().right;
+      const spill = Array.from(host.querySelectorAll('*'))
+        .find(el => el.getBoundingClientRect().right > pageRight + 1);
+      if (spill) console.warn('PDF export: content wider than the printable page', spill);
+      const area = host.offsetWidth * host.offsetHeight;
+      if (area > 0) scale = Math.max(1, Math.min(2, Math.sqrt(MAX_CANVAS_AREA / area)));
+    } catch (_) { /* the measurement is an optimisation; 2x is the safe default */ }
+    host.removeChild(container);
+    host.remove();
+    return scale;
+  }
+
   async function exportPdf(eventId) {
     try {
       const doc = await Api.get(`/api/library/${eventId}/document`);
       showSectionSelectModal(doc, I18n.tr('library.export.pdfTitle'), async (sections) => {
         const flag = await flagPng(doc.countryCode, 128);
-        const dateLabel = docDateLabel(doc);
-        const metaLine = [docCountryLabel(doc), dateLabel].filter(Boolean).join(' · ');
-        // No container padding — the pdf page margin alone positions the
-        // content, so the text starts at the top of the printable area.
-        const html = `
-          <div style="font-family: Arial, sans-serif; font-size: 11pt;">
-            <div style="display:flex; align-items:center; gap:14px; padding-bottom:12px; border-bottom:2px solid #0a84ff; margin-bottom:22px;">
-              ${flag ? `<img src="${flag.dataUrl}" style="width:42px;height:42px;border-radius:50%;flex:0 0 auto;">` : ''}
-              <div>
-                <div style="font-size:15pt; font-weight:bold; line-height:1.25; margin:0;">${escapeHtml(doc.title)}</div>
-                ${metaLine ? `<div style="color:#666; font-size:9.5pt; margin-top:3px;">${escapeHtml(metaLine)}</div>` : ''}
-              </div>
-            </div>
-            ${sections.map(s => `
-              <p style="font-size: 12pt; font-weight: bold; border-bottom: 1px solid #ccc; padding-bottom: 4px;">${escapeHtml(s.title)}</p>
-              <div>${justifyBodyHtml(stripTrackChanges(s.htmlContent || ''))}</div>
-            `).join('<hr style="border:none;border-top:1px solid #e5e7eb;margin:18px 0;">')}
-          </div>
-        `;
+        const html = buildExportHtml(doc, sections, flag ? flag.dataUrl : null);
+        const slug = doc.title.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 80);
 
         if (typeof html2pdf !== 'undefined') {
           const container = document.createElement('div');
           container.innerHTML = html;
-          const slug = doc.title.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 80);
-          html2pdf().from(container).set({
-            margin: [12.7, 12.7, 12.7, 12.7],
-            filename: `${slug}.pdf`,
-            // scrollX/scrollY pinned to 0 — html2canvas otherwise offsets the
-            // capture by the page's scroll position, so exporting from a
-            // scrolled library list pushed the content down (or off) the page.
-            html2canvas: { scale: 2, useCORS: true, scrollX: 0, scrollY: 0 },
-            jsPDF: { format: 'a4', orientation: 'portrait' },
-            image: { type: 'jpeg', quality: 0.98 },
-          }).save();
+          html2pdf().from(container).set(pdfOptions(`${slug}.pdf`, fittingScale(container))).save();
         } else {
-          // Fallback: open print dialog
+          // Fallback: open print dialog. EXPORT_CSS rides along inside `html`;
+          // the page box is all the browser still needs.
           const w = window.open('', '_blank');
-          w.document.write(`<html><head><title>${escapeHtml(doc.title)}</title></head><body>${html}</body></html>`);
+          w.document.write(`<html><head><title>${escapeHtml(doc.title)}</title><style>@page { size: A4; margin: ${PAGE_MARGIN_MM}mm; }</style></head><body>${html}</body></html>`);
           w.document.close();
           w.print();
         }
@@ -525,6 +683,8 @@
   window.LibraryDoc = {
     preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal,
     isDiscussionPoints, sectionPoints, renderDiscussionPoints, sectionPreviewHtml,
-    commentsAnchoredIn, justifyBodyHtml,
+    commentsAnchoredIn, justifyBodyHtml, fitToPageHtml,
+    // Layout surface, exercised by the PDF layout tests.
+    buildExportHtml, pdfOptions, EXPORT_CSS, PAGE_MARGIN_MM, CONTENT_WIDTH_MM,
   };
 })();
