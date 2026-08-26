@@ -488,3 +488,57 @@ held in `frontend/js/core/discussion-points.js` rather than the locale files:
 | Discussion Point heading | Discussion Point | განსახილველი საკითხი | Обсуждаемый вопрос |
 | Additional heading | Additional Information | დამატებითი ინფორმაცია | Дополнительная информация |
 | Untitled point fallback | Point N | საკითხი N | Вопрос N |
+
+## Meeting Summary
+
+After a Discussion Points meeting, the Supervisors responsible for each extracted
+point write a summary against it — the discussion point on the left, the summary on
+the right. Reached from the Archive / dashboard document card, and from the
+supervisor's own task panel.
+
+| Key | English | Georgian | Notes |
+| --- | --- | --- | --- |
+| `library.btn.summary` | Meeting Summary | შეხვედრის შეჯამება | Card action; shown only for a Discussion Points document with a recorded agenda |
+| `library.summary.title` | Meeting Summary | შეხვედრის შეჯამება |  |
+| `library.summary.colPoint` | Discussion Point | განსახილველი საკითხი |  |
+| `library.summary.colSummary` | Summary | შეჯამება |  |
+| `library.summary.notFilled` | Not yet written | ჯერ არ არის შევსებული |  |
+| `library.summary.unassigned` | No responsible department head | პასუხისმგებელი დეპარტამენტის ხელმძღვანელი არ არის |  |
+| `library.summary.assignedTo` | Responsible: {names} | პასუხისმგებელი: {names} |  |
+| `library.summary.lastEdited` | Last edited by {name} · {when} | ბოლოს დაარედაქტირა {name} · {when} |  |
+| `library.summary.progress` | {done} of {total} written | შევსებულია {done} / {total} |  |
+| `library.summary.save` | Save | შენახვა |  |
+| `library.summary.saved` | Summary saved | შეჯამება შენახულია |  |
+| `library.summary.saveFail` | Failed to save the summary: | შეჯამების შენახვა ვერ მოხერხდა: |  |
+| `library.summary.placeholder` | Write the meeting summary for this point… | დაწერეთ ამ საკითხის შეხვედრის შეჯამება… |  |
+| `library.summary.empty` | No meeting agenda has been recorded for this document yet. | ამ დოკუმენტისთვის შეხვედრის დღის წესრიგი ჯერ არ დაფიქსირებულა. |  |
+| `library.summary.failLoad` | Failed to load the meeting summary: | შეხვედრის შეჯამების ჩატვირთვა ვერ მოხერხდა: |  |
+| `library.summary.removedFromAgenda` | Removed from the agenda | ამოღებულია დღის წესრიგიდან |  |
+| `library.summary.notOpened` | The summary task opens one hour after the meeting. | შეჯამების დავალება იხსნება შეხვედრიდან ერთი საათის შემდეგ. |  |
+| `library.summary.noMeetingTime` | No meeting date and time is set, so the summary task cannot open. | შეხვედრის თარიღი და დრო არ არის მითითებული, ამიტომ შეჯამების დავალება ვერ გაიხსნება. |  |
+| `library.summary.readOnly` | You can read this summary but not edit it. | შეგიძლიათ წაიკითხოთ, მაგრამ არა რედაქტირება. |  |
+| `library.summary.exportPdf` | Summary PDF | შეჯამება PDF |  |
+| `library.summary.exportWord` | Summary Word | შეჯამება Word |  |
+| `library.summary.deadline` | Due {date} | ვადა {date} |  |
+| `library.summary.overdue` | Overdue | ვადაგადაცილებული |  |
+
+The supervisor's task panel on the dashboard:
+
+| Key | English | Georgian | Notes |
+| --- | --- | --- | --- |
+| `dashboard.summaryTitle` | Meeting summaries | შეხვედრის შეჯამებები |  |
+| `dashboard.summaryPending` | {n} left | დარჩა {n} |  |
+| `dashboard.summaryDone` | Done | დასრულებულია |  |
+
+Notifications. The `notif.*` keys have no section of their own in this document, so
+the two this feature adds are recorded here alongside it:
+
+| Key | English | Georgian | Notes |
+| --- | --- | --- | --- |
+| `notif.summaryDue` | Meeting summary due: {event} | შესავსებია შეხვედრის შეჯამება: {event} |  |
+| `notif.summaryUnassigned` | {n} discussion point(s) in {event} have no responsible department head | {event}-ის {n} საკითხს არ ჰყავს პასუხისმგებელი დეპარტამენტის ხელმძღვანელი |  |
+
+The left-hand column reuses the discussion-point field labels held in
+`frontend/js/core/discussion-points.js` (see the table above), so a point reads the
+same in the summary as it does in the exported document — in the **document's**
+language, not the reader's UI locale.

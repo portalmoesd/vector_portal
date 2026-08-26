@@ -148,8 +148,6 @@
     "actionReturn": "RETURN",
     "actionAskReturn": "ASK RETURN",
     "summaryTitle": "Meeting summaries",
-    "summaryEmpty": "No meeting summaries to write",
-    "summaryOpen": "Write summary",
     "summaryPending": "{n} left",
     "summaryDone": "Done"
   },
@@ -492,7 +490,8 @@
       "pdf": "PDF",
       "word": "Word",
       "files": "Files",
-      "edit": "Edit"
+      "edit": "Edit",
+      "summary": "Meeting Summary"
     },
     "editTooltip": "Reopen this document for editing — it will leave the Archive until you re-publish.",
     "sectionSelect": {
@@ -529,11 +528,6 @@
       "confirm": "Reopen this document for editing? It will leave the Archive until you re-publish.",
       "fail": "Failed to reopen:",
       "unknownError": "Unknown error"
-    },
-    "library": {
-      "btn": {
-        "summary": "Meeting Summary"
-      }
     },
     "summary": {
       "title": "Meeting Summary",

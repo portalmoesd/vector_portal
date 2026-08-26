@@ -214,3 +214,88 @@ test.describe('comment pruning for partial exports', () => {
     expect(kept).toEqual([]);
   });
 });
+
+test.describe('recording the meeting agenda', () => {
+  // The owner's export selection is the record of what went into the meeting.
+  // It is captured here, in the only place that still knows which points were
+  // chosen — by the time onExport runs, the sections carry rendered HTML and
+  // point identity is gone.
+
+  // Drives the real export path — LibraryDoc.exportPdf — rather than the modal
+  // alone, since that is where the recording hangs off. html2pdf is absent
+  // here, so the print fallback is stubbed out.
+  async function exportAs(page, doc, viewerId, opts = {}) {
+    await page.setContent(PAGE);
+    await page.evaluate(({ d, id, fail }) => {
+      window.__exported = null;
+      window.__posted = null;
+      window.Api.getUser = () => ({ id, role: 'SUPER_COLLABORATOR' });
+      window.Api.get = async () => d;
+      window.Api.post = async (path, body) => {
+        window.__posted = { path, body };
+        if (fail) throw new Error('recording failed');
+        return { success: true };
+      };
+      window.open = () => ({
+        document: { write(html) { window.__exported = html; }, close() {} },
+        print() {},
+      });
+      LibraryDoc.exportPdf(d.eventId);
+    }, { d: doc, id: viewerId, fail: !!opts.fail });
+    await page.waitForSelector('#exportConfirmBtn');
+  }
+
+  const OWNED = { ...DP_DOC, eventId: 7, documentSubmitterId: 1 };
+
+  test('the picker hands back the chosen points, not just their HTML', async ({ page }) => {
+    await openPicker(page, DP_DOC);
+    await page.click('#exportConfirmBtn');
+    const out = await exported(page);
+    expect(out[0].selectedPoints.map(p => p.id)).toEqual(['dp-1', 'dp-2']);
+    expect(out[1].selectedPoints.map(p => p.id)).toEqual(['dp-3']);
+    // The existing contract is unchanged.
+    expect(out[0].selectedPointCount).toBe(2);
+  });
+
+  test('the owner exporting records exactly what was ticked', async ({ page }) => {
+    await exportAs(page, OWNED, 1);
+    await page.evaluate(() => {
+      const cb = document.querySelector('.point-check[data-idx="0"][data-point="0"]');
+      cb.checked = false; cb.dispatchEvent(new Event('change'));
+    });
+    await page.click('#exportConfirmBtn');
+    await page.waitForFunction(() => window.__posted !== null);
+    const posted = await page.evaluate(() => window.__posted);
+    expect(posted.path).toBe('/api/meeting-summaries/agenda');
+    expect(posted.body.eventId).toBe(7);
+    expect(posted.body.points.map(p => p.dpId)).toEqual(['dp-2', 'dp-3']);
+    expect(posted.body.points[0]).toMatchObject({ sectionId: 1, topic: 'Investments' });
+    expect(posted.body.points[1]).toMatchObject({ sectionId: 2, topic: 'Tourism' });
+  });
+
+  test('a non-owner records nothing', async ({ page }) => {
+    // Everyone who can read the document can export it; only the owner's
+    // selection is the agenda of record.
+    await exportAs(page, OWNED, 99);
+    await page.click('#exportConfirmBtn');
+    await page.waitForFunction(() => window.__exported !== null);
+    expect(await page.evaluate(() => window.__posted)).toBeNull();
+  });
+
+  test('a document that is not discussion points records nothing', async ({ page }) => {
+    await exportAs(page, { ...OTHER_DOC, eventId: 8, documentSubmitterId: 1 }, 1);
+    await page.click('#exportConfirmBtn');
+    await page.waitForFunction(() => window.__exported !== null);
+    expect(await page.evaluate(() => window.__posted)).toBeNull();
+  });
+
+  test('a failed recording still lets the export through', async ({ page }) => {
+    // Recording is fire-and-forget on purpose: it must never cost the user
+    // the file they asked for.
+    await exportAs(page, OWNED, 1, { fail: true });
+    await page.click('#exportConfirmBtn');
+    // The file is still produced even though the recording threw.
+    await page.waitForFunction(() => window.__exported !== null);
+    expect(await page.evaluate(() => window.__exported)).toContain('Investments');
+  });
+});
