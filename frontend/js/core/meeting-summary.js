@@ -143,6 +143,9 @@
           .replace('{names}', item.assignees.map(function (a) { return name(a.fullName, a.fullNameKa); }).join(', '))
       ) + '</span> ';
     }
+    // Per row, not once in the header: each send sets its own deadline, so
+    // points added by a later top-up are due after the first batch.
+    if (item.deadlineDate && !item.filled) out += deadlineChip(item.deadlineDate) + ' ';
     return out;
   }
 
@@ -157,17 +160,34 @@
     return LibraryDoc.canActAsOwner(doc, viewer);
   }
 
-  /** Sending assigns work to other people, so it is always confirmed first. */
-  function confirmSend(doc) {
+  /**
+   * Sending assigns work to other people, so it is always confirmed first.
+   *
+   * Falls back to the native confirm where GCP.ActionDialog is absent — the
+   * Archive page does not load every core module, and a missing dialog must
+   * not turn the button into a no-op.
+   */
+  function confirmSend(count) {
     var msg = tr('library.summary.sendConfirm',
       'Send {n} discussion point(s) to the responsible department heads? They have one week to write their summaries.')
-      .replace('{n}', String(doc.unsentCount));
+      .replace('{n}', String(count));
     if (typeof GCP !== 'undefined' && GCP.ActionDialog && GCP.ActionDialog.confirm) {
       return GCP.ActionDialog.confirm(msg, {
-        confirmLabel: tr('library.summary.send', 'Send for Meeting Summary ({n})').replace(' ({n})', ''),
+        confirmLabel: tr('library.btn.sendSummary', 'Send for Summary'),
       });
     }
     return Promise.resolve(typeof window === 'undefined' || window.confirm(msg));
+  }
+
+  /**
+   * Confirm, then send. The single entry point both the cards and the modal
+   * use, so the confirmation and its wording cannot drift between them.
+   * Resolves to the server's report, or null if declined or failed.
+   */
+  function sendWithConfirm(eventId, count) {
+    return confirmSend(count).then(function (ok) {
+      return ok ? send(eventId) : null;
+    });
   }
 
   /**
@@ -227,7 +247,13 @@
       notes += '<div class="ms-note">' + esc(tr('library.summary.readOnly', 'You can read this summary but not edit it.')) + '</div>';
     }
 
-    var deadline = (doc.items.find(function (i) { return i.deadlineDate; }) || {}).deadlineDate;
+    // Only shown when every sent row shares it; after a top-up send they differ
+    // and each row carries its own chip instead.
+    var deadlines = doc.items
+      .map(function (i) { return i.deadlineDate; })
+      .filter(Boolean)
+      .filter(function (d, i, all) { return all.indexOf(d) === i; });
+    var deadline = deadlines.length === 1 ? deadlines[0] : null;
 
     overlay.innerHTML =
       '<div class="ms-card">' +
@@ -352,16 +378,13 @@
     var sendBtn = overlay.querySelector('[data-act="send"]');
     if (sendBtn) {
       sendBtn.addEventListener('click', function () {
-        confirmSend(doc).then(function (ok) {
-          if (!ok) return;
-          sendBtn.disabled = true;
-          send(doc.eventId).then(function (sent) {
-            if (!sent) { sendBtn.disabled = false; return; }
-            // Reopen on the fresh state rather than patching rows in place:
-            // a send changes assignees, deadlines and every row's canEdit.
-            close();
-            open(doc.eventId);
-          });
+        sendBtn.disabled = true;
+        sendWithConfirm(doc.eventId, doc.unsentCount).then(function (sent) {
+          if (!sent) { sendBtn.disabled = false; return; }
+          // Reopen on the fresh state rather than patching rows in place: a
+          // send changes assignees, deadlines and every row's canEdit.
+          close();
+          open(doc.eventId);
         });
       });
     }
@@ -417,7 +440,7 @@
     window.GCP = window.GCP || {};
     window.GCP.MeetingSummary = {
       open: open, exportPdf: exportPdf, exportWord: exportWord,
-      send: send, canSend: canSend,
+      send: send, canSend: canSend, sendWithConfirm: sendWithConfirm,
     };
   }
 })();

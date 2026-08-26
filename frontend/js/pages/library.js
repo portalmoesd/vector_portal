@@ -165,11 +165,7 @@
   window.sendSummary = async function (eventId) {
     const doc = documents.find(d => d.id === eventId);
     if (!doc) return;
-    const msg = I18n.tr('library.summary.sendConfirm')
-      .replace('{n}', String(doc.unsentSummaryPoints));
-    const ok = await GCP.ActionDialog.confirm(msg, { confirmLabel: I18n.tr('library.btn.sendSummary') });
-    if (!ok) return;
-    if (!await GCP.MeetingSummary.send(eventId)) return;
+    if (!await GCP.MeetingSummary.sendWithConfirm(eventId, doc.unsentSummaryPoints)) return;
     documents = await Api.get('/api/library');
     render();
   };

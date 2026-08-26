@@ -881,11 +881,8 @@
       const sendBtn = detailEl.querySelector('[data-act="sendSummary"]');
       if (sendBtn) {
         sendBtn.addEventListener('click', async () => {
-          const msg = I18n.tr('library.summary.sendConfirm')
-            .replace('{n}', String(item.unsentSummaryPoints));
-          if (!await GCP.ActionDialog.confirm(msg, { confirmLabel: I18n.tr('library.btn.sendSummary') })) return;
           sendBtn.disabled = true;
-          const out = await GCP.MeetingSummary.send(item.id);
+          const out = await GCP.MeetingSummary.sendWithConfirm(item.id, item.unsentSummaryPoints);
           if (!out) { sendBtn.disabled = false; return; }
           // Reflect what actually went out without a full reload: the count on
           // the button is the only thing on this card that a send changes.

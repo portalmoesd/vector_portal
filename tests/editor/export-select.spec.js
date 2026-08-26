@@ -293,12 +293,17 @@ test.describe('recording the meeting agenda', () => {
     expect(await page.evaluate(() => window.__posted)).toBeNull();
   });
 
-  test('an admin records on any document', async ({ page }) => {
+  test("an admin's export does not rewrite someone else's agenda", async ({ page }) => {
+    // Admin authority belongs on the deliberate, confirmed act of sending, not
+    // on a casual export. Recording happens silently as a side effect, and an
+    // admin exporting a partial selection would drop the owner's other points
+    // off the agenda without anyone being told — revoking supervisors' access
+    // to summaries already assigned to them.
     await exportAs(page, { ...OWNED, documentSubmitterId: 42, documentSubmitterRole: 'DEPUTY' },
       7, { role: 'ADMIN' });
     await page.click('#exportConfirmBtn');
-    await page.waitForFunction(() => window.__posted !== null);
-    expect(await page.evaluate(() => window.__posted)).not.toBeNull();
+    await page.waitForFunction(() => window.__exported !== null);
+    expect(await page.evaluate(() => window.__posted)).toBeNull();
   });
 
   test('a non-owner records nothing', async ({ page }) => {

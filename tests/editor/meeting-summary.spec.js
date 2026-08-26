@@ -250,3 +250,55 @@ test('declining the confirmation sends nothing', async ({ page }) => {
   expect(await page.evaluate(() => window.__sent)).toBeNull();
   await expect(page.locator('[data-act="send"]')).toBeEnabled();
 });
+
+test('sending still works where the styled dialog is absent', async ({ page }) => {
+  // Regression: the Archive page loads a smaller set of core modules than the
+  // dashboards, and calling GCP.ActionDialog.confirm there threw — leaving the
+  // button a silent no-op that showed no dialog and sent nothing.
+  await page.setContent('<div id="root"></div>');
+  await page.addScriptTag({ content: read('frontend/js/core/discussion-points.js') });
+  await page.addScriptTag({ content: read('frontend/js/simple-editor.js') });
+  await page.evaluate(() => {
+    window.escapeHtml = s => String(s == null ? '' : s);
+    window.localizedName = a => a || '';
+    window.formatDate = d => String(d).slice(0, 10);
+    window.I18n = { tr: k => k, translateRoot: () => {} };
+    window.toast = { success(){}, error(){}, warn(){} };
+    window.LibraryDoc = { canActAsOwner: () => true };
+    window.__sent = null;
+    // No GCP.ActionDialog at all — exactly the Archive page's situation.
+    window.GCP = {};
+    window.confirm = () => true;
+    window.Api = { post: async (p) => { window.__sent = p; return { opened: 1, supervisors: 1, unassigned: 0 }; } };
+  });
+  await page.addScriptTag({ content: read('frontend/js/core/meeting-summary.js') });
+
+  const out = await page.evaluate(() => window.GCP.MeetingSummary.sendWithConfirm(4, 1));
+  expect(out).toMatchObject({ opened: 1 });
+  expect(await page.evaluate(() => window.__sent)).toBe('/api/meeting-summaries/4/send');
+});
+
+test('a top-up send shows each row its own deadline', async ({ page }) => {
+  // Deadlines run a week from the send, so points added by a later send are
+  // due after the first batch. One header chip would show the wrong date on
+  // the newer rows — and an "Overdue" chip once the first batch's date passed.
+  await openWith(page, {
+    canSend: false, unsentCount: 0, opened: true, canEditAny: false,
+    items: [
+      { agendaPointId: 1, summaryId: 1, sectionId: 1, sectionTitle: 'Trade', dpId: 'dp-a',
+        position: 0, topic: 'First batch', contextHtml: '', additionalHtml: '',
+        summaryHtml: '', filled: false, opened: true, removedFromAgenda: false,
+        deadlineDate: '2099-01-01', assignees: [{ id: 2, fullName: 'Sup A1' }],
+        lastEditedBy: null, lastEditedAt: null, canEdit: false },
+      { agendaPointId: 2, summaryId: 2, sectionId: 2, sectionTitle: 'Tourism', dpId: 'dp-b',
+        position: 1, topic: 'Added later', contextHtml: '', additionalHtml: '',
+        summaryHtml: '', filled: false, opened: true, removedFromAgenda: false,
+        deadlineDate: '2099-02-02', assignees: [{ id: 3, fullName: 'Sup B1' }],
+        lastEditedBy: null, lastEditedAt: null, canEdit: false },
+    ],
+  });
+  await expect(page.locator('tr[data-row="0"]')).toContainText('2099-01-01');
+  await expect(page.locator('tr[data-row="1"]')).toContainText('2099-02-02');
+  // The header chip stands down while the rows disagree.
+  await expect(page.locator('.ms-meta .ms-chip')).toHaveCount(0);
+});

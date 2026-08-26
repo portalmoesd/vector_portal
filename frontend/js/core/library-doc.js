@@ -223,9 +223,24 @@
   function canActAsOwner(doc, viewer) {
     if (!doc || !viewer) return false;
     if (viewer.role === 'ADMIN') return true;
+    return isOwnerOrProxy(doc, viewer);
+  }
+
+  /**
+   * The owner, or Protocol standing in for a Minister who never logs in.
+   *
+   * Deliberately excludes Admin, unlike canActAsOwner. Recording the agenda
+   * happens silently as a side effect of exporting, and an admin exporting a
+   * partial selection would rewrite the owner's agenda without anyone being
+   * told — dropping unsent points out of the send set and revoking supervisors'
+   * access to summaries already assigned. Admin authority belongs on the
+   * deliberate, confirmed act of sending, not on a casual export.
+   */
+  function isOwnerOrProxy(doc, viewer) {
+    if (!doc || !viewer) return false;
     if (doc.documentSubmitterId && doc.documentSubmitterId === viewer.id) return true;
-    // Protocol runs the Minister's documents — the Minister never logs in — but
-    // has no such standing on anyone else's.
+    // Protocol runs the Minister's documents but has no such standing on
+    // anyone else's.
     return viewer.role === 'PROTOCOL' && doc.documentSubmitterRole === 'MINISTER';
   }
 
@@ -242,7 +257,7 @@
   function recordMeetingAgenda(doc, sections) {
     if (!isDiscussionPoints(doc)) return;
     const viewer = (typeof Api !== 'undefined' && Api.getUser) ? Api.getUser() : null;
-    if (!canActAsOwner(doc, viewer)) return;
+    if (!isOwnerOrProxy(doc, viewer)) return;
 
     const points = [];
     sections.forEach((sec) => {
@@ -769,7 +784,8 @@
 
   window.LibraryDoc = {
     preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal,
-    recordMeetingAgenda, exportHtmlAsPdf, exportSectionsAsDocx, canActAsOwner,
+    recordMeetingAgenda, exportHtmlAsPdf, exportSectionsAsDocx,
+    canActAsOwner, isOwnerOrProxy,
     isDiscussionPoints, sectionPoints, renderDiscussionPoints, sectionPreviewHtml,
     commentsAnchoredIn, justifyBodyHtml, fitToPageHtml,
     // Layout surface, exercised by the PDF layout tests.
