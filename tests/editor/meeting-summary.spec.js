@@ -60,6 +60,12 @@ test('meeting summary table renders and saves', async ({ page }) => {
     window.LibraryDoc = {
       exportHtmlAsPdf(d, secs) { window.__exportedSections = secs; },
       exportSectionsAsDocx(d, secs) { window.__exportedSections = secs; },
+      canActAsOwner(d, viewer) {
+        if (!d || !viewer) return false;
+        if (viewer.role === 'ADMIN') return true;
+        if (d.documentSubmitterId && d.documentSubmitterId === viewer.id) return true;
+        return viewer.role === 'PROTOCOL' && d.documentSubmitterRole === 'MINISTER';
+      },
     };
     window.Api = {
       get: async () => doc,
@@ -125,6 +131,12 @@ test('exporting after a save carries the saved text, not the loaded one', async 
     window.LibraryDoc = {
       exportHtmlAsPdf(d, secs) { window.__exportedSections = secs; },
       exportSectionsAsDocx(d, secs) { window.__exportedSections = secs; },
+      canActAsOwner(d, viewer) {
+        if (!d || !viewer) return false;
+        if (viewer.role === 'ADMIN') return true;
+        if (d.documentSubmitterId && d.documentSubmitterId === viewer.id) return true;
+        return viewer.role === 'PROTOCOL' && d.documentSubmitterRole === 'MINISTER';
+      },
     };
     // Start from an unwritten row so the export would say "Not yet written".
     const blank = JSON.parse(JSON.stringify(doc));
@@ -156,4 +168,85 @@ test('exporting after a save carries the saved text, not the loaded one', async 
   expect(html).not.toContain('Not yet written</i></p></td></tr><tr><td><p class="ms-point-title">1.');
 
   expect(errors).toEqual([]);
+});
+
+// ── Sending ──────────────────────────────────────────────────────────────────
+// Summaries go out when the Document Owner presses the button, not on a timer,
+// so the button's presence and wording are the whole contract here.
+
+async function openWith(page, overrides, opts = {}) {
+  await page.setContent('<div id="root"></div>');
+  await page.addScriptTag({ content: read('frontend/js/core/discussion-points.js') });
+  await page.addScriptTag({ content: read('frontend/js/simple-editor.js') });
+  await page.evaluate(({ base, over, confirmResult }) => {
+    window.escapeHtml = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    window.localizedName = a => a || '';
+    window.formatDate = d => String(d).slice(0, 10);
+    window.I18n = { tr: k => k, translateRoot: () => {} };
+    window.toast = { success(){}, error(){}, warn(){} };
+    window.LibraryDoc = { exportHtmlAsPdf(){}, exportSectionsAsDocx(){},
+      canActAsOwner(d, v) {
+        if (!d || !v) return false;
+        if (v.role === 'ADMIN') return true;
+        if (d.documentSubmitterId && d.documentSubmitterId === v.id) return true;
+        return v.role === 'PROTOCOL' && d.documentSubmitterRole === 'MINISTER';
+      } };
+    window.__sent = null;
+    window.__confirmed = null;
+    window.GCP = window.GCP || {};
+    window.GCP.ActionDialog = {
+      confirm(msg) { window.__confirmed = msg; return Promise.resolve(confirmResult); },
+    };
+    const doc = Object.assign(JSON.parse(JSON.stringify(base)), over);
+    window.Api = {
+      get: async () => doc,
+      put: async () => ({ success: true, filled: true, status: 'SUBMITTED' }),
+      post: async (path) => { window.__sent = path; return { opened: doc.unsentCount, supervisors: 2, unassigned: 0 }; },
+    };
+  }, { base: DOC, over: overrides, confirmResult: opts.confirm !== false });
+  await page.addScriptTag({ content: read('frontend/js/core/meeting-summary.js') });
+  await page.evaluate(() => window.GCP.MeetingSummary.open(1));
+  await page.waitForSelector('.ms-overlay');
+}
+
+test('a viewer who may send gets the button, one who may not does not', async ({ page }) => {
+  await openWith(page, { canSend: true, unsentCount: 2, opened: false });
+  await expect(page.locator('[data-act="send"]')).toHaveCount(1);
+
+  await openWith(page, { canSend: false, unsentCount: 2, opened: false });
+  await expect(page.locator('[data-act="send"]')).toHaveCount(0);
+  // ...and is told what it is waiting on instead of being left guessing.
+  await expect(page.locator('.ms-note')).toContainText('waiting for the document owner');
+});
+
+test('nothing left to send means no button', async ({ page }) => {
+  await openWith(page, { canSend: true, unsentCount: 0, opened: true });
+  await expect(page.locator('[data-act="send"]')).toHaveCount(0);
+});
+
+test('the button reads "send new points" once some are already out', async ({ page }) => {
+  // A re-export that adds a point after the first send is the common case, and
+  // the wording has to say it is a top-up rather than the first send.
+  await openWith(page, { canSend: true, unsentCount: 1, opened: true });
+  await expect(page.locator('[data-act="send"]')).toContainText('Send new points (1)');
+
+  await openWith(page, { canSend: true, unsentCount: 2, opened: false });
+  await expect(page.locator('[data-act="send"]')).toContainText('Send for Meeting Summary (2)');
+});
+
+test('sending confirms first, then posts', async ({ page }) => {
+  await openWith(page, { canSend: true, unsentCount: 2, opened: false });
+  await page.click('[data-act="send"]');
+  await page.waitForFunction(() => window.__sent !== null);
+  expect(await page.evaluate(() => window.__confirmed)).toBeTruthy();
+  expect(await page.evaluate(() => window.__sent)).toBe('/api/meeting-summaries/1/send');
+});
+
+test('declining the confirmation sends nothing', async ({ page }) => {
+  // Sending assigns work to other people; a mis-click must not do it.
+  await openWith(page, { canSend: true, unsentCount: 2, opened: false }, { confirm: false });
+  await page.click('[data-act="send"]');
+  await page.waitForFunction(() => window.__confirmed !== null);
+  expect(await page.evaluate(() => window.__sent)).toBeNull();
+  await expect(page.locator('[data-act="send"]')).toBeEnabled();
 });

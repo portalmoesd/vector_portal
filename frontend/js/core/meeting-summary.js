@@ -146,6 +146,57 @@
     return out;
   }
 
+  // ── Sending ────────────────────────────────────────────────────────────────
+
+  /**
+   * May this viewer send? Delegates to the shared rule in library-doc.js so the
+   * card buttons and this modal cannot drift apart. The server re-checks.
+   */
+  function canSend(doc, viewer) {
+    if (typeof LibraryDoc === 'undefined' || !LibraryDoc.canActAsOwner) return false;
+    return LibraryDoc.canActAsOwner(doc, viewer);
+  }
+
+  /** Sending assigns work to other people, so it is always confirmed first. */
+  function confirmSend(doc) {
+    var msg = tr('library.summary.sendConfirm',
+      'Send {n} discussion point(s) to the responsible department heads? They have one week to write their summaries.')
+      .replace('{n}', String(doc.unsentCount));
+    if (typeof GCP !== 'undefined' && GCP.ActionDialog && GCP.ActionDialog.confirm) {
+      return GCP.ActionDialog.confirm(msg, {
+        confirmLabel: tr('library.summary.send', 'Send for Meeting Summary ({n})').replace(' ({n})', ''),
+      });
+    }
+    return Promise.resolve(typeof window === 'undefined' || window.confirm(msg));
+  }
+
+  /**
+   * Send an event's unsent points out for summaries.
+   *
+   * Resolves to the server's report on success, or null on failure — the
+   * caller re-enables its button rather than navigating.
+   */
+  function send(eventId) {
+    return Api.post('/api/meeting-summaries/' + eventId + '/send', {})
+      .then(function (out) {
+        if (out.opened) {
+          toast.success(tr('library.summary.sendDone', 'Sent {n} point(s) to {s} department head(s).')
+            .replace('{n}', String(out.opened)).replace('{s}', String(out.supervisors)));
+        } else {
+          toast.warn(tr('library.summary.allSent', 'Every discussion point has already been sent.'));
+        }
+        if (out.unassigned) {
+          toast.warn(tr('library.summary.sentUnassigned', '{n} point(s) have no responsible department head.')
+            .replace('{n}', String(out.unassigned)));
+        }
+        return out;
+      })
+      .catch(function (e) {
+        toast.error(tr('library.summary.sendFail', 'Sending for meeting summaries failed:') + ' ' + (e && e.message));
+        return null;
+      });
+  }
+
   // ── The modal ──────────────────────────────────────────────────────────────
 
   async function open(eventId) {
@@ -162,12 +213,17 @@
     var overlay = document.createElement('div');
     overlay.className = 'ms-overlay';
 
+    // What still has to be sent, and by whom. A viewer who cannot send is told
+    // it is waiting on someone; one who can gets the button below.
     var notes = '';
-    if (!doc.hasMeetingTime) {
-      notes += '<div class="ms-note">' + esc(tr('library.summary.noMeetingTime', 'No meeting date and time is set, so the summary task cannot open.')) + '</div>';
-    } else if (!doc.opened) {
-      notes += '<div class="ms-note">' + esc(tr('library.summary.notOpened', 'The summary task opens one hour after the meeting.')) + '</div>';
-    } else if (!doc.canEditAny) {
+    if (doc.unsentCount) {
+      notes += '<div class="ms-note">' + esc(
+        (doc.canSend
+          ? tr('library.summary.unsent', '{n} discussion point(s) have not been sent for summaries yet.')
+          : tr('library.summary.notSent', '{n} discussion point(s) are waiting for the document owner to send them.')
+        ).replace('{n}', String(doc.unsentCount))
+      ) + '</div>';
+    } else if (!doc.canEditAny && doc.items.length) {
       notes += '<div class="ms-note">' + esc(tr('library.summary.readOnly', 'You can read this summary but not edit it.')) + '</div>';
     }
 
@@ -201,6 +257,14 @@
             '</tbody></table>'
           : '<div class="ms-empty">' + esc(tr('library.summary.empty', 'No meeting agenda has been recorded for this document yet.')) + '</div>') +
         '<div class="ms-foot">' +
+          (doc.canSend && doc.unsentCount
+            ? '<button class="ms-btn ms-btn--primary ms-btn--send" data-act="send">' + esc(
+                (doc.opened
+                  ? tr('library.summary.sendNew', 'Send new points ({n})')
+                  : tr('library.summary.send', 'Send for Meeting Summary ({n})')
+                ).replace('{n}', String(doc.unsentCount))
+              ) + '</button>'
+            : '') +
           '<button class="ms-btn" data-act="pdf">' + esc(tr('library.summary.exportPdf', 'Summary PDF')) + '</button>' +
           '<button class="ms-btn" data-act="word">' + esc(tr('library.summary.exportWord', 'Summary Word')) + '</button>' +
         '</div>' +
@@ -285,6 +349,23 @@
       });
     });
 
+    var sendBtn = overlay.querySelector('[data-act="send"]');
+    if (sendBtn) {
+      sendBtn.addEventListener('click', function () {
+        confirmSend(doc).then(function (ok) {
+          if (!ok) return;
+          sendBtn.disabled = true;
+          send(doc.eventId).then(function (sent) {
+            if (!sent) { sendBtn.disabled = false; return; }
+            // Reopen on the fresh state rather than patching rows in place:
+            // a send changes assignees, deadlines and every row's canEdit.
+            close();
+            open(doc.eventId);
+          });
+        });
+      });
+    }
+
     overlay.querySelector('[data-act="pdf"]').addEventListener('click', function () { exportPdf(doc); });
     overlay.querySelector('[data-act="word"]').addEventListener('click', function () { exportWord(doc); });
   }
@@ -334,6 +415,9 @@
 
   if (typeof window !== 'undefined') {
     window.GCP = window.GCP || {};
-    window.GCP.MeetingSummary = { open: open, exportPdf: exportPdf, exportWord: exportWord };
+    window.GCP.MeetingSummary = {
+      open: open, exportPdf: exportPdf, exportWord: exportWord,
+      send: send, canSend: canSend,
+    };
   }
 })();

@@ -864,6 +864,10 @@
             ${item.documentType === 'DISCUSSION_POINTS' && item.hasMeetingAgenda
               ? `<button class="mn-pillbtn" data-act="summary">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.summary'))}</span></button>`
               : ''}
+            ${item.documentType === 'DISCUSSION_POINTS' && item.unsentSummaryPoints > 0
+              && GCP.MeetingSummary.canSend(item, user)
+              ? `<button class="mn-pillbtn" data-act="sendSummary">${ICON_DOWNLOAD}<span>${escapeHtml(I18n.tr('library.btn.sendSummary'))} (${item.unsentSummaryPoints})</span></button>`
+              : ''}
           </div>
           <div class="mn-files-wrap" id="mnFiles"></div>
         </div>
@@ -874,6 +878,22 @@
       detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
       const summaryBtn = detailEl.querySelector('[data-act="summary"]');
       if (summaryBtn) summaryBtn.addEventListener('click', () => GCP.MeetingSummary.open(item.id));
+      const sendBtn = detailEl.querySelector('[data-act="sendSummary"]');
+      if (sendBtn) {
+        sendBtn.addEventListener('click', async () => {
+          const msg = I18n.tr('library.summary.sendConfirm')
+            .replace('{n}', String(item.unsentSummaryPoints));
+          if (!await GCP.ActionDialog.confirm(msg, { confirmLabel: I18n.tr('library.btn.sendSummary') })) return;
+          sendBtn.disabled = true;
+          const out = await GCP.MeetingSummary.send(item.id);
+          if (!out) { sendBtn.disabled = false; return; }
+          // Reflect what actually went out without a full reload: the count on
+          // the button is the only thing on this card that a send changes.
+          item.unsentSummaryPoints = Math.max(0, item.unsentSummaryPoints - out.opened);
+          item.hasMeetingAgenda = true;
+          fillCardDetail(item, detailEl);
+        });
+      }
       loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
       loadReadyHistory(item.id, detailEl.querySelector('#mnHistory'));
       return;

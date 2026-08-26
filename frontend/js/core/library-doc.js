@@ -212,11 +212,29 @@
   }
 
   /**
+   * May this viewer act as the document's owner — record its meeting agenda,
+   * and send it out for summaries?
+   *
+   * The mirror of canActAsOwner() in server/helpers/meeting-summary.js, kept
+   * here rather than in the summary module because the export path needs it
+   * too and loads first. It only decides what to show and what to skip; every
+   * endpoint re-checks the same rule server-side.
+   */
+  function canActAsOwner(doc, viewer) {
+    if (!doc || !viewer) return false;
+    if (viewer.role === 'ADMIN') return true;
+    if (doc.documentSubmitterId && doc.documentSubmitterId === viewer.id) return true;
+    // Protocol runs the Minister's documents — the Minister never logs in — but
+    // has no such standing on anyone else's.
+    return viewer.role === 'PROTOCOL' && doc.documentSubmitterRole === 'MINISTER';
+  }
+
+  /**
    * Record the owner's extraction as the meeting agenda.
    *
-   * Only the Document Owner's selection is the agenda of record — the export
-   * buttons are visible to everyone who can read the document. Gated here to
-   * save a pointless round-trip; the server re-checks ownership regardless.
+   * Only the owner's selection is the agenda of record — the export buttons are
+   * visible to everyone who can read the document. Gated here to save a
+   * pointless round-trip; the server re-checks regardless.
    *
    * Fire-and-forget: recording must never block or fail an export, so a
    * rejected or failed call is logged and swallowed.
@@ -224,7 +242,7 @@
   function recordMeetingAgenda(doc, sections) {
     if (!isDiscussionPoints(doc)) return;
     const viewer = (typeof Api !== 'undefined' && Api.getUser) ? Api.getUser() : null;
-    if (!viewer || !doc.documentSubmitterId || doc.documentSubmitterId !== viewer.id) return;
+    if (!canActAsOwner(doc, viewer)) return;
 
     const points = [];
     sections.forEach((sec) => {
@@ -751,7 +769,7 @@
 
   window.LibraryDoc = {
     preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal,
-    recordMeetingAgenda, exportHtmlAsPdf, exportSectionsAsDocx,
+    recordMeetingAgenda, exportHtmlAsPdf, exportSectionsAsDocx, canActAsOwner,
     isDiscussionPoints, sectionPoints, renderDiscussionPoints, sectionPreviewHtml,
     commentsAnchoredIn, justifyBodyHtml, fitToPageHtml,
     // Layout surface, exercised by the PDF layout tests.

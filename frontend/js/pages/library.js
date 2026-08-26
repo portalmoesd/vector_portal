@@ -137,6 +137,11 @@
             <button class="btn btn-outline" onclick="meetingSummary(${d.id})">
               ${lblSummary}
             </button>` : ''}
+          ${d.documentType === 'DISCUSSION_POINTS' && d.unsentSummaryPoints > 0
+            && GCP.MeetingSummary.canSend(d, user) ? `
+            <button class="btn btn-outline" onclick="sendSummary(${d.id})">
+              ${escapeHtml(I18n.tr('library.btn.sendSummary'))} (${d.unsentSummaryPoints})
+            </button>` : ''}
           ${d.documentSubmitterId === user.id ? `
             <button class="btn btn-outline" onclick="reopenDoc(${d.id})" title="${escapeHtml(editTooltip)}">
               ${lblEdit}
@@ -154,6 +159,20 @@
   window.exportWord = LibraryDoc.exportWord;
   window.viewFiles = LibraryDoc.viewFiles;
   window.meetingSummary = GCP.MeetingSummary.open;
+
+  // Sending assigns work to other people, so it confirms first; the list is
+  // reloaded afterwards so the button's count follows what actually went out.
+  window.sendSummary = async function (eventId) {
+    const doc = documents.find(d => d.id === eventId);
+    if (!doc) return;
+    const msg = I18n.tr('library.summary.sendConfirm')
+      .replace('{n}', String(doc.unsentSummaryPoints));
+    const ok = await GCP.ActionDialog.confirm(msg, { confirmLabel: I18n.tr('library.btn.sendSummary') });
+    if (!ok) return;
+    if (!await GCP.MeetingSummary.send(eventId)) return;
+    documents = await Api.get('/api/library');
+    render();
+  };
 
   // Reopen a published event for editing. DS-only — the Edit button is
   // already DS-gated in the card render, but the server enforces it
