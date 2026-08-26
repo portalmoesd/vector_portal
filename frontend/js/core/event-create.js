@@ -323,7 +323,7 @@
           <input class="form-input" type="text" id="newDeadline" placeholder="dd/mm/yyyy" />
         </div>
         <div class="form-group" id="eventDateTimeGroup" style="display:none;">
-          <label class="form-label" data-i18n="calendar.form.eventDateTime">Event date &amp; time</label>
+          <label class="form-label" id="eventDateTimeLabel" data-i18n="calendar.form.eventDateTime">Event date &amp; time</label>
           <input class="form-input" type="text" id="newEventDateTime" placeholder="dd/mm/yyyy, hh:mm" />
         </div>
         <div class="form-group">
@@ -447,12 +447,35 @@
       }
     }
 
+    // The meeting date/time is optional for most documents and only offered to
+    // owner roles that run meetings. A Discussion Points document always leads
+    // to a meeting, and its Meeting Summary task is scheduled off this value,
+    // so there it is shown and required whoever the Document Submitter is.
+    // This is about *entering* the time only — canSeeEventDateTime still
+    // decides who may see it afterwards, and is deliberately unchanged.
+    function isDiscussionPointsSelected() {
+      const sel = bodyEl.querySelector('#newDocumentType');
+      return !!sel && sel.value === 'DISCUSSION_POINTS';
+    }
+
+    function applyDateTimeVisibility() {
+      const dsRole = roleSel.value;
+      const dp = isDiscussionPointsSelected();
+      const show = dp || dsRole === 'MINISTER' || dsRole === 'DEPUTY' || dsRole === 'SUPERVISOR';
+      bodyEl.querySelector('#eventDateTimeGroup').style.display = show ? '' : 'none';
+      const label = bodyEl.querySelector('#eventDateTimeLabel');
+      if (label) {
+        label.setAttribute('data-i18n', dp ? 'calendar.form.eventDateTimeRequired' : 'calendar.form.eventDateTime');
+        label.textContent = I18n.tr(dp ? 'calendar.form.eventDateTimeRequired' : 'calendar.form.eventDateTime');
+      }
+    }
+
     async function applyRoleVisibility() {
       const dsRole = roleSel.value;
       bodyEl.querySelector('#deputyGroup').style.display = dsRole === 'DEPUTY' ? '' : 'none';
       bodyEl.querySelector('#dsSupervisorGroup').style.display = dsRole === 'SUPERVISOR' ? '' : 'none';
       bodyEl.querySelector('#dsSCGroup').style.display = dsRole === 'SUPER_COLLABORATOR' ? '' : 'none';
-      bodyEl.querySelector('#eventDateTimeGroup').style.display = (dsRole === 'MINISTER' || dsRole === 'DEPUTY' || dsRole === 'SUPERVISOR') ? '' : 'none';
+      applyDateTimeVisibility();
       applyWorkflowTypeVisibility();
       applyCuratorRule();
 
@@ -490,6 +513,9 @@
     // to advanced, so the two fields stay independent.
     const docTypeSel = bodyEl.querySelector('#newDocumentType');
     docTypeSel.addEventListener('change', () => {
+      // Runs before the early return below: the meeting-time field has to
+      // follow the document type even when the workflow needs no change.
+      applyDateTimeVisibility();
       if (docTypeSel.value !== 'DISCUSSION_POINTS' || wfSel.value === 'simple') return;
       wfSel.value = 'simple';
       populateRoleOptions();
@@ -521,6 +547,16 @@
 
       if (!title || !countryId || !dsRole) {
         toast.warn(I18n.tr('calendar.warn.missingRequired'));
+        return;
+      }
+
+      // The Meeting Summary task is scheduled off the meeting time, so a
+      // Discussion Points document cannot be created without one. Validated in
+      // JS rather than with the `required` attribute: #newEventDateTime is a
+      // flatpickr altInput field, so the real input is hidden and native
+      // validation would never surface. The server enforces this too.
+      if (documentType === 'DISCUSSION_POINTS' && !eventDateTimeRaw) {
+        toast.warn(I18n.tr('calendar.warn.eventDateTimeRequired'));
         return;
       }
 
@@ -573,7 +609,8 @@
           workflowType: effWorkflowType,
           documentType,
           language, deadlineDate, occasion,
-          eventDateTime: (dsRole === 'MINISTER' || dsRole === 'DEPUTY' || dsRole === 'SUPERVISOR') && eventDateTimeRaw
+          eventDateTime: (documentType === 'DISCUSSION_POINTS'
+            || dsRole === 'MINISTER' || dsRole === 'DEPUTY' || dsRole === 'SUPERVISOR') && eventDateTimeRaw
             ? eventDateTimeRaw.trim().replace(' ', 'T') + ':00+04:00'
             : null,
           sections,

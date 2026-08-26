@@ -298,7 +298,8 @@
       "selectSuperCollaborator": "— Select Senior Editor —",
       "noSuperCollaborators": "— No senior editors found —",
       "selectTemplate": "— Select Template —",
-      "sectionTitlePlaceholder": "Section title"
+      "sectionTitlePlaceholder": "Section title",
+      "eventDateTimeRequired": "Event Date & Time *"
     },
     "docType": {
       "OTHER": "Other",
@@ -309,7 +310,9 @@
       "missingSection": "Add at least one section",
       "missingDeputy": "Select a deputy or the minister",
       "noMinister": "No Minister is configured — create a Minister user first",
-      "attachmentFailed": "Event created, but the attachment could not be uploaded:"
+      "attachmentFailed": "Event created, but the attachment could not be uploaded:",
+      "eventDateTimeRequired": "Discussion Points documents require the meeting date and time.",
+      "eventDateTimeLocked": "The meeting date and time cannot be removed from a Discussion Points event."
     },
     "email": {
       "attachmentLine": "Attached file (open in the portal to download):",

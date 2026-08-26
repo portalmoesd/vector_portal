@@ -103,8 +103,11 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `calendar.form.noSuperCollaborators` | — No senior editors found — | — უფროსი შემსრულებლები ვერ მოიძებნა — |  |
 | `calendar.form.selectTemplate` | — Select Template — | — აირჩიეთ შაბლონი — |  |
 | `calendar.form.sectionTitlePlaceholder` | Section title | სექციის სათაური |  |
+| `calendar.form.eventDateTimeRequired` | Event Date &amp; Time * | ღონისძიების თარიღი და დრო * | Replaces `calendar.form.eventDateTime` when the document type is Discussion Points, where the meeting time is mandatory |
 | `calendar.warn.missingRequired` | Title, Country, and DS Role are required | სათაური, ქვეყანა და DS-ის როლი სავალდებულოა |  |
 | `calendar.warn.missingSection` | Add at least one section | დაამატეთ მინიმუმ ერთი სექცია |  |
+| `calendar.warn.eventDateTimeRequired` | Discussion Points documents require the meeting date and time. | განსახილველი საკითხების დოკუმენტისთვის შეხვედრის თარიღი და დრო სავალდებულოა. | Discussion Points only |
+| `calendar.warn.eventDateTimeLocked` | The meeting date and time cannot be removed from a Discussion Points event. | განსახილველი საკითხების ღონისძიებას შეხვედრის თარიღი და დრო ვერ წაეშლება. | Server-side guard |
 | `calendar.action.view` | View | ნახვა |  |
 | `calendar.action.end` | End | დასრულება |  |
 
