@@ -16,6 +16,7 @@ const { canSeeEventDateTime } = require('../helpers/roles');
 const {
   isBlankHtml, ymd, normalizeAgendaPoints, agendaKeys,
 } = require('../helpers/meeting-summary');
+const { canSeeCompletedEvent } = require('../helpers/library-visibility');
 
 const router = express.Router();
 
@@ -129,9 +130,12 @@ router.get('/mine', requireAuth, async (req, res) => {
               c.name_en AS country_name, c.name_ka AS country_name_ka,
               min(ms.deadline_date) AS deadline_date,
               count(*)::int AS my_total,
-              count(*) FILTER (WHERE btrim(regexp_replace(
-                regexp_replace(ms.summary_html, '<[^>]*>', '', 'g'),
-                '&nbsp;', ' ', 'g')) = '')::int AS my_pending
+              -- ms.status is the authoritative "is this written", set through
+              -- isBlankHtml on every save. Re-deriving it in SQL would drift:
+              -- btrim strips only spaces where JS trim() also strips tabs and
+              -- newlines, so a whitespace-only summary would read as done here
+              -- and unwritten in the table.
+              count(*) FILTER (WHERE ms.status = 'PENDING')::int AS my_pending
        FROM meeting_summary_assignees a
        JOIN meeting_summaries ms ON ms.id = a.summary_id
        JOIN meeting_agenda_points ap ON ap.id = ms.agenda_point_id
@@ -160,8 +164,9 @@ router.get('/mine', requireAuth, async (req, res) => {
 
 // ─── GET /api/meeting-summaries/:eventId ─────────────────────────────────────
 // The whole two-column table for one document: every extracted point with its
-// summary. Readable by anyone who can already see the document in the Library
-// — write access is per row and much narrower (assignees only).
+// summary. Gated by the Library's own visibility rule, so it is readable by
+// exactly whoever can read the document — write access is per row and much
+// narrower (assignees only).
 router.get('/:eventId', requireAuth, async (req, res) => {
   try {
     const eventId = parseInt(req.params.eventId, 10);
@@ -175,6 +180,14 @@ router.get('/:eventId', requireAuth, async (req, res) => {
       [eventId]
     );
     if (!event) return res.status(404).json({ error: 'Event not found' });
+
+    // Reading a summary is exactly as wide as reading the document it belongs
+    // to — the same predicate GET /api/library applies, not a second copy.
+    // 404 rather than 403: a user who cannot see the document should not learn
+    // that it exists.
+    if (!await canSeeCompletedEvent(db, req.user, eventId)) {
+      return res.status(404).json({ error: 'Event not found' });
+    }
 
     const { rows } = await db.query(
       `SELECT ap.id AS agenda_point_id, ap.section_id, s.title AS section_title,
@@ -270,11 +283,21 @@ router.put('/row/:id', requireAuth, denyAnalyst, async (req, res) => {
     if (!summaryId) return res.status(400).json({ error: 'Invalid summary id' });
 
     const { rows: [allowed] } = await db.query(
-      `SELECT 1 FROM meeting_summary_assignees WHERE summary_id = $1 AND user_id = $2`,
+      `SELECT ap.removed_at
+       FROM meeting_summary_assignees a
+       JOIN meeting_summaries ms ON ms.id = a.summary_id
+       JOIN meeting_agenda_points ap ON ap.id = ms.agenda_point_id
+       WHERE a.summary_id = $1 AND a.user_id = $2`,
       [summaryId, req.user.id]
     );
     if (!allowed) {
       return res.status(403).json({ error: 'Only an assigned supervisor can write this summary' });
+    }
+    // The owner may have dropped this point since the table was opened. Writing
+    // to it now would pin a stale row into the view permanently, since a
+    // dropped point is only hidden while nothing is written against it.
+    if (allowed.removed_at) {
+      return res.status(409).json({ error: 'This discussion point is no longer on the meeting agenda' });
     }
 
     const summaryHtml = sanitizeEditorHtml(req.body.summaryHtml || '');

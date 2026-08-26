@@ -56,7 +56,11 @@ test('meeting summary table renders and saves', async ({ page }) => {
     window.formatDate = d => String(d).slice(0, 10);
     window.I18n = { tr: k => k, translateRoot: () => {} };
     window.toast = { success(){}, error(){}, warn(){} };
-    window.LibraryDoc = { exportHtmlAsPdf(){}, exportSectionsAsDocx(){} };
+    window.__exportedSections = null;
+    window.LibraryDoc = {
+      exportHtmlAsPdf(d, secs) { window.__exportedSections = secs; },
+      exportSectionsAsDocx(d, secs) { window.__exportedSections = secs; },
+    };
     window.Api = {
       get: async () => doc,
       put: async (p, b) => { window.__saved = { path: p, body: b };
@@ -95,6 +99,61 @@ test('meeting summary table renders and saves', async ({ page }) => {
   expect(saved.path).toBe('/api/meeting-summaries/row/1');
   expect(saved.body.summaryHtml).toContain('Revised text');
   await expect(page.locator('tr[data-row="0"] .ms-byline')).toContainText('Sup A2');
+
+  // Re-saving a row that already counted must not count it twice.
+  await expect(page.locator('[data-progress]')).toContainText('1 of 2');
+
+  expect(errors).toEqual([]);
+});
+
+test('exporting after a save carries the saved text, not the loaded one', async ({ page }) => {
+  // Regression: the save used to update only the byline, leaving the loaded
+  // document stale — so an export taken straight afterwards printed the old
+  // text, and "Not yet written" for a row that had just been filled in.
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  await page.setContent('<div id="root"></div>');
+  await page.addScriptTag({ content: read('frontend/js/core/discussion-points.js') });
+  await page.addScriptTag({ content: read('frontend/js/simple-editor.js') });
+  await page.evaluate((doc) => {
+    window.escapeHtml = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    window.localizedName = a => a || '';
+    window.formatDate = d => String(d).slice(0, 10);
+    window.I18n = { tr: k => k, translateRoot: () => {} };
+    window.toast = { success(){}, error(){}, warn(){} };
+    window.__exportedSections = null;
+    window.LibraryDoc = {
+      exportHtmlAsPdf(d, secs) { window.__exportedSections = secs; },
+      exportSectionsAsDocx(d, secs) { window.__exportedSections = secs; },
+    };
+    // Start from an unwritten row so the export would say "Not yet written".
+    const blank = JSON.parse(JSON.stringify(doc));
+    blank.items[0].summaryHtml = '';
+    blank.items[0].filled = false;
+    blank.progress = { done: 0, total: 2, unassigned: 1 };
+    window.Api = {
+      get: async () => blank,
+      put: async () => ({ success: true, filled: true, status: 'SUBMITTED',
+                          lastEditedBy: 'Sup A1', lastEditedAt: '2026-08-26T12:00:00Z' }),
+    };
+  }, DOC);
+  await page.addScriptTag({ content: read('frontend/js/core/meeting-summary.js') });
+
+  await page.evaluate(() => window.GCP.MeetingSummary.open(1));
+  await page.waitForSelector('.ms-overlay');
+  await expect(page.locator('[data-progress]')).toContainText('0 of 2');
+
+  await page.evaluate(() => {
+    document.querySelector('tr[data-row="0"] .se-body').innerHTML = '<p>Freshly written</p>';
+  });
+  await page.click('tr[data-row="0"] .ms-btn--primary');
+  await expect(page.locator('[data-progress]')).toContainText('1 of 2');
+
+  await page.click('[data-act="pdf"]');
+  await page.waitForFunction(() => window.__exportedSections !== null);
+  const html = await page.evaluate(() => window.__exportedSections[0].htmlContent);
+  expect(html).toContain('Freshly written');
+  expect(html).not.toContain('Not yet written</i></p></td></tr><tr><td><p class="ms-point-title">1.');
 
   expect(errors).toEqual([]);
 });

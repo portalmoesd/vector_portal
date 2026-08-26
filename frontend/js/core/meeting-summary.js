@@ -180,7 +180,7 @@
           '<button class="ms-close" type="button" aria-label="Close">&times;</button>' +
         '</div>' +
         '<div class="ms-meta">' +
-          '<span>' + esc(tr('library.summary.progress', '{done} of {total} written')
+          '<span data-progress>' + esc(tr('library.summary.progress', '{done} of {total} written')
             .replace('{done}', doc.progress.done).replace('{total}', doc.progress.total)) + '</span>' +
           deadlineChip(deadline) +
         '</div>' +
@@ -208,6 +208,13 @@
 
     document.body.appendChild(overlay);
     if (typeof I18n !== 'undefined' && I18n.translateRoot) I18n.translateRoot(overlay);
+
+    function paintProgress() {
+      var el = overlay.querySelector('[data-progress]');
+      if (!el) return;
+      el.textContent = tr('library.summary.progress', '{done} of {total} written')
+        .replace('{done}', doc.progress.done).replace('{total}', doc.progress.total);
+    }
 
     var close = function () { overlay.remove(); };
     overlay.querySelector('.ms-close').addEventListener('click', close);
@@ -248,15 +255,26 @@
       save.addEventListener('click', async function () {
         save.disabled = true;
         try {
+          var html = editor.getHtml();
           var out = await Api.put('/api/meeting-summaries/row/' + item.summaryId, {
-            summaryHtml: editor.getHtml(),
+            summaryHtml: html,
           });
+          // Fold the save back into the loaded document, not just the byline:
+          // the header count and both exporters read from `doc`, so leaving it
+          // stale would print "not yet written" for a row just saved.
+          var wasFilled = item.filled;
+          item.summaryHtml = html;
+          item.filled = !!out.filled;
           item.lastEditedBy = out.lastEditedBy;
           item.lastEditedByKa = out.lastEditedByKa;
           item.lastEditedAt = out.lastEditedAt;
+          if (item.filled !== wasFilled && !item.removedFromAgenda) {
+            doc.progress.done += item.filled ? 1 : -1;
+            paintProgress();
+          }
           var cell = overlay.querySelector('[data-cell="' + idx + '"]');
-          var old = cell.querySelector('.ms-byline');
-          if (old) old.remove();
+          var stale = cell.querySelector('.ms-byline');
+          if (stale) stale.remove();
           cell.insertAdjacentHTML('beforeend', bylineHtml(item));
           toast.success(tr('library.summary.saved', 'Summary saved'));
         } catch (e) {

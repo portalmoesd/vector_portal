@@ -68,22 +68,28 @@ function deadlineFromMeeting(eventDateTime) {
 /**
  * Normalise the points an owner's export offers into agenda rows.
  *
- * Drops anything without a section or a dp id, de-duplicates repeated
- * (sectionId, dpId) pairs — a duplicate would collide on the table's unique
- * key mid-upsert — and renumbers positions so the agenda's order is its own,
- * independent of any later reordering of the document.
+ * Drops anything without a section or a dp id, drops points belonging to some
+ * other document, de-duplicates repeated (sectionId, dpId) pairs — a duplicate
+ * would collide on the table's unique key mid-upsert — and renumbers positions
+ * so the agenda's order is its own, independent of any later reordering of the
+ * document.
+ *
+ * `allowedSectionIds` is the event's own sections; pass null to skip the check.
  */
 function normalizeAgendaPoints(points, allowedSectionIds) {
-  const allowed = allowedSectionIds instanceof Set
-    ? allowedSectionIds
-    : new Set(allowedSectionIds || []);
+  // An explicit allowlist is always enforced, empty included: an event with no
+  // sections must accept no points, not every point. Pass null only where
+  // there is genuinely nothing to check against.
+  const allowed = allowedSectionIds == null
+    ? null
+    : (allowedSectionIds instanceof Set ? allowedSectionIds : new Set(allowedSectionIds));
   const out = [];
   const seen = new Set();
   (points || []).forEach((p) => {
     const sectionId = parseInt(p && p.sectionId, 10);
     const dpId = p && p.dpId ? String(p.dpId).slice(0, 60) : '';
     if (!sectionId || !dpId) return;
-    if (allowed.size && !allowed.has(sectionId)) return;
+    if (allowed && !allowed.has(sectionId)) return;
     const key = `${sectionId}:${dpId}`;
     if (seen.has(key)) return;
     seen.add(key);

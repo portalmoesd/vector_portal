@@ -85,6 +85,18 @@ test('a point from another document is dropped', () => {
   assert.deepEqual(out.map(p => p.dpId), ['dp-a']);
 });
 
+test('an empty allowlist accepts nothing rather than everything', () => {
+  // An event with no sections owns no points. Treating an empty allowlist as
+  // "unrestricted" would fail open and let any foreign section id through.
+  assert.deepEqual(MS.normalizeAgendaPoints([{ sectionId: 1, dpId: 'dp-a' }], new Set()), []);
+  assert.deepEqual(MS.normalizeAgendaPoints([{ sectionId: 1, dpId: 'dp-a' }], []), []);
+});
+
+test('the check is skipped only when explicitly given nothing to check', () => {
+  const out = MS.normalizeAgendaPoints([{ sectionId: 42, dpId: 'dp-a' }], null);
+  assert.deepEqual(out.map(p => p.sectionId), [42]);
+});
+
 test('a repeated point is collapsed', () => {
   // Two rows with the same (section, dp_id) would collide on the table's
   // unique key halfway through the upsert.

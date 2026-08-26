@@ -440,6 +440,11 @@
 .mn-dash .mn-overview__side .mn-day .mn-day__list {
   flex: 1 1 0; min-height: 0; overflow-y: auto;
 }
+/* The rule above sets display:flex, which outranks the hidden attribute's own
+   display:none — without this an empty panel would still take a share of the
+   column. Same fix as .mn-prog__list[hidden] further down. */
+.mn-dash .mn-overview__side .mn-notifs[hidden],
+.mn-dash .mn-overview__side .mn-summaries[hidden] { display: none; }
 
 /* Create-event button (top of the side column) → opens the create popup. */
 .mn-dash .mn-createbtn {
@@ -474,8 +479,10 @@
   .mn-dash .mn-overview__side { flex: none; }
   /* And let the side panel show its full height (page scrolls). */
   .mn-dash .mn-overview__side .mn-notifs,
+  .mn-dash .mn-overview__side .mn-summaries,
   .mn-dash .mn-overview__side .mn-day { flex: 0 1 auto; overflow: visible; }
   .mn-dash .mn-overview__side .mn-notifs .mn-notifs__list,
+  .mn-dash .mn-overview__side .mn-summaries .mn-notifs__list,
   .mn-dash .mn-overview__side .mn-day .mn-day__list { flex: 0 1 auto; overflow-y: visible; }
 }
 

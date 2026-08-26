@@ -3,6 +3,7 @@ const db = require('../db');
 const { requireAuth, requireRole, denyAnalyst } = require('../middleware/auth');
 const { sanitizeEditorHtml } = require('../helpers/sanitize');
 const { seesAllCompletedDocs, canSeeEventDateTime } = require('../helpers/roles');
+const { BASE_OR, chainOrFor } = require('../helpers/library-visibility');
 
 const router = express.Router();
 
@@ -21,7 +22,6 @@ const router = express.Router();
 router.get('/', requireAuth, async (req, res) => {
   try {
     const role = req.user.role;
-    const isCollabRole = role === 'COLLABORATOR' || role === 'SUPER_COLLABORATOR';
 
     const selectCols = `e.id, e.title, e.language, e.ended_at, e.event_datetime,
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code,
@@ -33,45 +33,10 @@ router.get('/', requireAuth, async (req, res) => {
               EXISTS (SELECT 1 FROM meeting_agenda_points ap
                       WHERE ap.event_id = e.id AND ap.removed_at IS NULL) AS has_meeting_agenda`;
 
-    // Common to every non-admin role: acted on it, or a named/owner relationship.
-    const baseOr = `
-      sh.user_id = $1
-      OR e.document_submitter_id = $1
-      OR e.deputy_id = $1
-      OR e.supervisor_id = $1
-      OR e.created_by_id = $1`;
-
-    let chainOr;
-    if (isCollabRole) {
-      // Collaborator / SC: country assignment AND department on a section.
-      chainOr = `
-        OR (
-          e.country_id IN (SELECT country_id FROM country_assignments WHERE user_id = $1)
-          AND EXISTS (
-            SELECT 1 FROM sections s
-            JOIN section_departments sd ON sd.section_id = s.id
-            WHERE s.event_id = e.id
-              AND sd.department_id = (SELECT department_id FROM users WHERE id = $1)
-          )
-        )`;
-    } else {
-      // Supervisor / Deputy: country assignment, department on a section, or
-      // (deputies) they oversee a section's department via deputy_department_links.
-      chainOr = `
-        OR e.country_id IN (SELECT country_id FROM country_assignments WHERE user_id = $1)
-        OR EXISTS (
-          SELECT 1 FROM sections s
-          JOIN section_departments sd ON sd.section_id = s.id
-          WHERE s.event_id = e.id
-            AND sd.department_id = (SELECT department_id FROM users WHERE id = $1)
-        )
-        OR EXISTS (
-          SELECT 1 FROM sections s
-          JOIN section_departments sd ON sd.section_id = s.id
-          JOIN deputy_department_links ddl ON ddl.department_id = sd.department_id
-          WHERE s.event_id = e.id AND ddl.deputy_id = $1
-        )`;
-    }
+    // The clauses live in helpers/library-visibility.js so anything hanging off
+    // a published document is gated by this same rule rather than a copy.
+    const baseOr = BASE_OR;
+    const chainOr = chainOrFor(role);
 
     // Ministry-wide roles skip the visibility clause (and with it the
     // section_history join / DISTINCT): every completed document, newest first.
