@@ -9,7 +9,9 @@
     "yourTurn": "Awaiting your action — {section} · {event}",
     "returned": "{section} returned to you · {event}",
     "empty": "No notifications",
-    "bellUnread": "Notifications ({n} unread)"
+    "bellUnread": "Notifications ({n} unread)",
+    "summaryDue": "Meeting summary due: {event}",
+    "summaryUnassigned": "{n} discussion point(s) in {event} have no responsible department head"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -144,7 +146,10 @@
     "actionSubmit": "SUBMIT",
     "actionApprove": "APPROVE",
     "actionReturn": "RETURN",
-    "actionAskReturn": "ASK RETURN"
+    "actionAskReturn": "ASK RETURN",
+    "summaryTitle": "Meeting summaries",
+    "summaryPending": "{n} left",
+    "summaryDone": "Done"
   },
   "status": {
     "draft": "Awaiting action",
@@ -298,7 +303,8 @@
       "selectSuperCollaborator": "— Select Senior Editor —",
       "noSuperCollaborators": "— No senior editors found —",
       "selectTemplate": "— Select Template —",
-      "sectionTitlePlaceholder": "Section title"
+      "sectionTitlePlaceholder": "Section title",
+      "eventDateTimeRequired": "Event Date & Time *"
     },
     "docType": {
       "OTHER": "Other",
@@ -309,7 +315,9 @@
       "missingSection": "Add at least one section",
       "missingDeputy": "Select a deputy or the minister",
       "noMinister": "No Minister is configured — create a Minister user first",
-      "attachmentFailed": "Event created, but the attachment could not be uploaded:"
+      "attachmentFailed": "Event created, but the attachment could not be uploaded:",
+      "eventDateTimeRequired": "Discussion Points documents require the meeting date and time.",
+      "eventDateTimeLocked": "The meeting date and time cannot be removed from a Discussion Points event."
     },
     "email": {
       "attachmentLine": "Attached file (open in the portal to download):",
@@ -482,7 +490,8 @@
       "pdf": "PDF",
       "word": "Word",
       "files": "Files",
-      "edit": "Edit"
+      "edit": "Edit",
+      "summary": "Meeting Summary"
     },
     "editTooltip": "Reopen this document for editing — it will leave the Archive until you re-publish.",
     "sectionSelect": {
@@ -519,6 +528,30 @@
       "confirm": "Reopen this document for editing? It will leave the Archive until you re-publish.",
       "fail": "Failed to reopen:",
       "unknownError": "Unknown error"
+    },
+    "summary": {
+      "title": "Meeting Summary",
+      "colPoint": "Discussion Point",
+      "colSummary": "Summary",
+      "notFilled": "Not yet written",
+      "unassigned": "No responsible department head",
+      "assignedTo": "Responsible: {names}",
+      "lastEdited": "Last edited by {name} · {when}",
+      "progress": "{done} of {total} written",
+      "save": "Save",
+      "saved": "Summary saved",
+      "saveFail": "Failed to save the summary:",
+      "placeholder": "Write the meeting summary for this point…",
+      "empty": "No meeting agenda has been recorded for this document yet.",
+      "failLoad": "Failed to load the meeting summary:",
+      "removedFromAgenda": "Removed from the agenda",
+      "notOpened": "The summary task opens one hour after the meeting.",
+      "noMeetingTime": "No meeting date and time is set, so the summary task cannot open.",
+      "readOnly": "You can read this summary but not edit it.",
+      "exportPdf": "Summary PDF",
+      "exportWord": "Summary Word",
+      "deadline": "Due {date}",
+      "overdue": "Overdue"
     }
   },
   "editor": {

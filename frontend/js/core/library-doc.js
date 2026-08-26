@@ -211,6 +211,39 @@
     return comments.filter(c => rootIds.has(c.id) || rootIds.has(c.parentId));
   }
 
+  /**
+   * Record the owner's extraction as the meeting agenda.
+   *
+   * Only the Document Owner's selection is the agenda of record — the export
+   * buttons are visible to everyone who can read the document. Gated here to
+   * save a pointless round-trip; the server re-checks ownership regardless.
+   *
+   * Fire-and-forget: recording must never block or fail an export, so a
+   * rejected or failed call is logged and swallowed.
+   */
+  function recordMeetingAgenda(doc, sections) {
+    if (!isDiscussionPoints(doc)) return;
+    const viewer = (typeof Api !== 'undefined' && Api.getUser) ? Api.getUser() : null;
+    if (!viewer || !doc.documentSubmitterId || doc.documentSubmitterId !== viewer.id) return;
+
+    const points = [];
+    sections.forEach((sec) => {
+      (sec.selectedPoints || []).forEach((p) => {
+        points.push({
+          sectionId: sec.id,
+          dpId: p.id,
+          topic: p.topic || '',
+          contextHtml: p.contextHtml || '',
+          additionalHtml: p.additionalHtml || '',
+        });
+      });
+    });
+    if (!points.length) return;
+
+    Api.post('/api/meeting-summaries/agenda', { eventId: doc.eventId, points })
+      .catch((e) => console.error('Recording the meeting agenda failed:', e && e.message));
+  }
+
   // ── Section selection modal helper ──────────────────────────────────────────
   function showSectionSelectModal(doc, title, onExport) {
     // Discussion-point documents get a second level: each section lists its
@@ -308,7 +341,9 @@
           if (!boxes.length) {
             // A section with no discussion points has only its own checkbox.
             const parent = overlay.querySelector(`.section-check[data-idx="${i}"]`);
-            return parent && parent.checked ? Object.assign({}, sec, { selectedPointCount: 0 }) : null;
+            return parent && parent.checked
+              ? Object.assign({}, sec, { selectedPointCount: 0, selectedPoints: [] })
+              : null;
           }
           const chosen = boxes.filter(cb => cb.checked)
             .map(cb => pointsBySection[i][parseInt(cb.dataset.point)]);
@@ -316,6 +351,9 @@
           return Object.assign({}, sec, {
             htmlContent: GCP.DiscussionPoints.toExportHtml(chosen, doc.language),
             selectedPointCount: chosen.length,
+            // The points themselves, so an owner export can record the meeting
+            // agenda. Additive: everything else reads htmlContent as before.
+            selectedPoints: chosen,
           });
         }).filter(Boolean);
 
@@ -570,26 +608,56 @@
     return scale;
   }
 
+  /**
+   * Render arbitrary sections of a document to PDF.
+   *
+   * Split out of exportPdf so another view — the Meeting Summary table — can
+   * reuse the whole pipeline (page CSS, flag header, canvas fitting, the
+   * html2pdf-less print fallback) instead of duplicating it. `doc` only needs
+   * title / countryCode / endedAt; sections only need { title, htmlContent }.
+   */
+  async function exportHtmlAsPdf(doc, sections, filenameHint) {
+    const flag = await flagPng(doc.countryCode, 128);
+    const html = buildExportHtml(doc, sections, flag ? flag.dataUrl : null);
+    const base = (filenameHint || doc.title || 'document');
+    const slug = base.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 80);
+
+    if (typeof html2pdf !== 'undefined') {
+      const container = document.createElement('div');
+      container.innerHTML = html;
+      html2pdf().from(container).set(pdfOptions(`${slug}.pdf`, fittingScale(container))).save();
+      return;
+    }
+    const w = window.open('', '_blank');
+    w.document.write(`<html><head><title>${escapeHtml(doc.title)}</title><style>@page { size: A4; margin: ${PAGE_MARGIN_MM}mm; }</style></head><body>${html}</body></html>`);
+    w.document.close();
+    w.print();
+  }
+
+  /**
+   * Render arbitrary sections of a document to .docx, same reasoning as above.
+   * No comments are registered: only section bodies carry comment anchors.
+   */
+  async function exportSectionsAsDocx(doc, sections, filenameHint) {
+    const mapped = sections.map(s => ({
+      sectionLabel: s.sectionLabel || s.title,
+      htmlContent: justifyBodyHtml(s.htmlContent),
+      comments: [],
+    }));
+    const flag = await flagPng(doc.countryCode, 128);
+    await window.GCP.exportDocx(filenameHint || doc.title, mapped, {
+      countryName: docCountryLabel(doc),
+      endedAt: doc.endedAt,
+      flagPng: flag ? flag.bytes : null,
+    });
+  }
+
   async function exportPdf(eventId) {
     try {
       const doc = await Api.get(`/api/library/${eventId}/document`);
       showSectionSelectModal(doc, I18n.tr('library.export.pdfTitle'), async (sections) => {
-        const flag = await flagPng(doc.countryCode, 128);
-        const html = buildExportHtml(doc, sections, flag ? flag.dataUrl : null);
-        const slug = doc.title.replace(/[^a-zA-Z0-9]+/g, '-').substring(0, 80);
-
-        if (typeof html2pdf !== 'undefined') {
-          const container = document.createElement('div');
-          container.innerHTML = html;
-          html2pdf().from(container).set(pdfOptions(`${slug}.pdf`, fittingScale(container))).save();
-        } else {
-          // Fallback: open print dialog. EXPORT_CSS rides along inside `html`;
-          // the page box is all the browser still needs.
-          const w = window.open('', '_blank');
-          w.document.write(`<html><head><title>${escapeHtml(doc.title)}</title><style>@page { size: A4; margin: ${PAGE_MARGIN_MM}mm; }</style></head><body>${html}</body></html>`);
-          w.document.close();
-          w.print();
-        }
+        recordMeetingAgenda(doc, sections);
+        await exportHtmlAsPdf(doc, sections);
       });
     } catch (e) {
       toast.error(I18n.tr('library.export.fail') + ' ' + e.message);
@@ -601,6 +669,7 @@
     try {
       const doc = await Api.get(`/api/library/${eventId}/document`);
       showSectionSelectModal(doc, I18n.tr('library.export.wordTitle'), async (sections) => {
+        recordMeetingAgenda(doc, sections);
         try {
           // Include section comments so anchored ones export as native Word comments
           const mapped = await Promise.all(sections.map(async s => {
@@ -682,6 +751,7 @@
 
   window.LibraryDoc = {
     preview, exportPdf, exportWord, viewFiles, stripTrackChanges, showSectionSelectModal,
+    recordMeetingAgenda, exportHtmlAsPdf, exportSectionsAsDocx,
     isDiscussionPoints, sectionPoints, renderDiscussionPoints, sectionPreviewHtml,
     commentsAnchoredIn, justifyBodyHtml, fitToPageHtml,
     // Layout surface, exercised by the PDF layout tests.

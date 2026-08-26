@@ -102,6 +102,7 @@
     const lblWord = escapeHtml(I18n.tr('library.btn.word'));
     const lblFiles = escapeHtml(I18n.tr('library.btn.files'));
     const lblEdit = escapeHtml(I18n.tr('library.btn.edit'));
+    const lblSummary = escapeHtml(I18n.tr('library.btn.summary'));
     const editTooltip = I18n.tr('library.editTooltip');
 
     libraryList.innerHTML = filtered.map(d => `
@@ -132,6 +133,10 @@
             <span class="icon" style="--icon-url: url(/assets/files-icon.svg); mask-image: var(--icon-url); -webkit-mask-image: var(--icon-url); width:16px;height:16px;display:inline-block;background:currentColor;"></span>
             ${lblFiles}
           </button>
+          ${d.documentType === 'DISCUSSION_POINTS' && d.hasMeetingAgenda ? `
+            <button class="btn btn-outline" onclick="meetingSummary(${d.id})">
+              ${lblSummary}
+            </button>` : ''}
           ${d.documentSubmitterId === user.id ? `
             <button class="btn btn-outline" onclick="reopenDoc(${d.id})" title="${escapeHtml(editTooltip)}">
               ${lblEdit}
@@ -148,6 +153,7 @@
   window.exportPdf = LibraryDoc.exportPdf;
   window.exportWord = LibraryDoc.exportWord;
   window.viewFiles = LibraryDoc.viewFiles;
+  window.meetingSummary = GCP.MeetingSummary.open;
 
   // Reopen a published event for editing. DS-only — the Edit button is
   // already DS-gated in the card render, but the server enforces it

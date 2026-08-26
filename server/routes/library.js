@@ -3,6 +3,7 @@ const db = require('../db');
 const { requireAuth, requireRole, denyAnalyst } = require('../middleware/auth');
 const { sanitizeEditorHtml } = require('../helpers/sanitize');
 const { seesAllCompletedDocs, canSeeEventDateTime } = require('../helpers/roles');
+const { BASE_OR, chainOrFor } = require('../helpers/library-visibility');
 
 const router = express.Router();
 
@@ -21,53 +22,21 @@ const router = express.Router();
 router.get('/', requireAuth, async (req, res) => {
   try {
     const role = req.user.role;
-    const isCollabRole = role === 'COLLABORATOR' || role === 'SUPER_COLLABORATOR';
 
     const selectCols = `e.id, e.title, e.language, e.ended_at, e.event_datetime,
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code,
               ds.full_name AS document_submitter_name,
               ds.full_name_ka AS document_submitter_name_ka,
-              e.document_submitter_id`;
+              e.document_submitter_id, e.document_type,
+              -- Gates the Meeting Summary button: only a Discussion Points
+              -- document whose owner has recorded an agenda has one to show.
+              EXISTS (SELECT 1 FROM meeting_agenda_points ap
+                      WHERE ap.event_id = e.id AND ap.removed_at IS NULL) AS has_meeting_agenda`;
 
-    // Common to every non-admin role: acted on it, or a named/owner relationship.
-    const baseOr = `
-      sh.user_id = $1
-      OR e.document_submitter_id = $1
-      OR e.deputy_id = $1
-      OR e.supervisor_id = $1
-      OR e.created_by_id = $1`;
-
-    let chainOr;
-    if (isCollabRole) {
-      // Collaborator / SC: country assignment AND department on a section.
-      chainOr = `
-        OR (
-          e.country_id IN (SELECT country_id FROM country_assignments WHERE user_id = $1)
-          AND EXISTS (
-            SELECT 1 FROM sections s
-            JOIN section_departments sd ON sd.section_id = s.id
-            WHERE s.event_id = e.id
-              AND sd.department_id = (SELECT department_id FROM users WHERE id = $1)
-          )
-        )`;
-    } else {
-      // Supervisor / Deputy: country assignment, department on a section, or
-      // (deputies) they oversee a section's department via deputy_department_links.
-      chainOr = `
-        OR e.country_id IN (SELECT country_id FROM country_assignments WHERE user_id = $1)
-        OR EXISTS (
-          SELECT 1 FROM sections s
-          JOIN section_departments sd ON sd.section_id = s.id
-          WHERE s.event_id = e.id
-            AND sd.department_id = (SELECT department_id FROM users WHERE id = $1)
-        )
-        OR EXISTS (
-          SELECT 1 FROM sections s
-          JOIN section_departments sd ON sd.section_id = s.id
-          JOIN deputy_department_links ddl ON ddl.department_id = sd.department_id
-          WHERE s.event_id = e.id AND ddl.deputy_id = $1
-        )`;
-    }
+    // The clauses live in helpers/library-visibility.js so anything hanging off
+    // a published document is gated by this same rule rather than a copy.
+    const baseOr = BASE_OR;
+    const chainOr = chainOrFor(role);
 
     // Ministry-wide roles skip the visibility clause (and with it the
     // section_history join / DISTINCT): every completed document, newest first.
@@ -107,6 +76,8 @@ router.get('/', requireAuth, async (req, res) => {
       documentSubmitterName: r.document_submitter_name,
       documentSubmitterNameKa: r.document_submitter_name_ka,
       documentSubmitterId: r.document_submitter_id,
+      documentType: r.document_type || 'OTHER',
+      hasMeetingAgenda: r.has_meeting_agenda,
     })));
   } catch (err) {
     console.error('Library list error:', err);
@@ -120,7 +91,7 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
     const eventId = req.params.eventId;
 
     const { rows: [event] } = await db.query(
-      `SELECT e.title, e.language, e.ended_at, e.document_type,
+      `SELECT e.title, e.language, e.ended_at, e.document_type, e.document_submitter_id,
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code
        FROM events e JOIN countries c ON c.id = e.country_id
        WHERE e.id = $1 AND (e.status = 'COMPLETED' OR e.status = 'ARCHIVED')`,
@@ -144,6 +115,10 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
       // The export picker branches on this: a Section -> Topic tree for
       // DISCUSSION_POINTS, the flat section list for OTHER.
       documentType: event.document_type || 'OTHER',
+      // The export picker records the meeting agenda only when the viewer is
+      // the document owner, so it needs to know who that is. The server
+      // re-checks ownership on POST /api/meeting-summaries/agenda regardless.
+      documentSubmitterId: event.document_submitter_id,
       countryName: event.country_name,
       countryNameKa: event.country_name_ka,
       countryCode: event.country_code,

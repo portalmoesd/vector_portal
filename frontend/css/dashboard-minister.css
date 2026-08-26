@@ -430,14 +430,21 @@
    notification center, or the day preview on Minister/Protocol/Deputy) fills the
    remaining space and scrolls internally instead of growing. */
 .mn-dash .mn-overview__side .mn-notifs,
+.mn-dash .mn-overview__side .mn-summaries,
 .mn-dash .mn-overview__side .mn-day {
   margin: 0; flex: 1 1 0; min-height: 0;
   display: flex; flex-direction: column; overflow: hidden;
 }
 .mn-dash .mn-overview__side .mn-notifs .mn-notifs__list,
+.mn-dash .mn-overview__side .mn-summaries .mn-notifs__list,
 .mn-dash .mn-overview__side .mn-day .mn-day__list {
   flex: 1 1 0; min-height: 0; overflow-y: auto;
 }
+/* The rule above sets display:flex, which outranks the hidden attribute's own
+   display:none — without this an empty panel would still take a share of the
+   column. Same fix as .mn-prog__list[hidden] further down. */
+.mn-dash .mn-overview__side .mn-notifs[hidden],
+.mn-dash .mn-overview__side .mn-summaries[hidden] { display: none; }
 
 /* Create-event button (top of the side column) → opens the create popup. */
 .mn-dash .mn-createbtn {
@@ -472,8 +479,10 @@
   .mn-dash .mn-overview__side { flex: none; }
   /* And let the side panel show its full height (page scrolls). */
   .mn-dash .mn-overview__side .mn-notifs,
+  .mn-dash .mn-overview__side .mn-summaries,
   .mn-dash .mn-overview__side .mn-day { flex: 0 1 auto; overflow: visible; }
   .mn-dash .mn-overview__side .mn-notifs .mn-notifs__list,
+  .mn-dash .mn-overview__side .mn-summaries .mn-notifs__list,
   .mn-dash .mn-overview__side .mn-day .mn-day__list { flex: 0 1 auto; overflow-y: visible; }
 }
 
@@ -506,7 +515,12 @@
 .mn-dash .mn-list .mn-card.is-expanded .mn-card__head { padding-right: 34px; }
 
 /* ── Notifications panel (injected below the hero) ───────────────────────── */
-.mn-dash .mn-notifs {
+/* .mn-summaries — the supervisor's Meeting Summary task list — rides along on
+   every rule here: same card, same list, same rows, so the two panels stack in
+   the side column as one visual family. It keeps a class of its own only so
+   the notification centre stays uniquely addressable. */
+.mn-dash .mn-notifs,
+.mn-dash .mn-summaries {
   /* Match the calendar card exactly (same tint, border, radius, subtle shadow, blur). */
   background: var(--card, #fff); border: 1px solid var(--border-color);
   border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);

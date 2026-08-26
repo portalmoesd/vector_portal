@@ -19,6 +19,7 @@ DO $$ BEGIN CREATE TYPE workflow_step_status AS ENUM ('PENDING','IN_PROGRESS','A
 DO $$ BEGIN CREATE TYPE history_action AS ENUM ('saved','submitted','returned','approved','asked_to_return','pushed'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE event_workflow_type AS ENUM ('advanced','simple'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN CREATE TYPE event_document_type AS ENUM ('OTHER','DISCUSSION_POINTS'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
+DO $$ BEGIN CREATE TYPE meeting_summary_status AS ENUM ('PENDING','SUBMITTED'); EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN ALTER TYPE history_action ADD VALUE IF NOT EXISTS 'pushed'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 DO $$ BEGIN ALTER TYPE history_action ADD VALUE IF NOT EXISTS 'pulled'; EXCEPTION WHEN duplicate_object THEN NULL; END $$;
 
@@ -273,6 +274,7 @@ CREATE TABLE IF NOT EXISTS notifications (
   id          SERIAL PRIMARY KEY,
   user_id     INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
   type        VARCHAR(40) NOT NULL,   -- 'event_created' | 'your_turn' | 'returned' | 'completed'
+                                      -- | 'summary_due' | 'summary_unassigned'
   event_id    INT REFERENCES events(id) ON DELETE CASCADE,
   section_id  INT REFERENCES sections(id) ON DELETE CASCADE,
   meta        JSONB NOT NULL DEFAULT '{}'::jsonb,
@@ -281,6 +283,68 @@ CREATE TABLE IF NOT EXISTS notifications (
 );
 CREATE INDEX IF NOT EXISTS idx_notifications_user
   ON notifications(user_id, is_read, created_at DESC);
+
+-- ─── Meeting Summaries ──────────────────────────────────────────────────────
+-- After a Discussion Points meeting, the Supervisors responsible for each
+-- extracted point write a summary against it. Three tables:
+--
+--   meeting_agenda_points   what the Document Owner extracted for the meeting
+--   meeting_summaries       one shared summary row per extracted point
+--   meeting_summary_assignees  which supervisors own that row
+--
+-- The agenda stores a *snapshot* of each point rather than a pointer into
+-- section_content.html_content. The owner can reopen a published document and
+-- edit, reorder or delete points afterwards (and parsePoints() regenerates ids
+-- it finds missing or duplicated), so a pointer would rot. section_id / dp_id /
+-- position are kept alongside so a live re-link is still possible when the id
+-- still resolves.
+CREATE TABLE IF NOT EXISTS meeting_agenda_points (
+  id                  SERIAL PRIMARY KEY,
+  event_id            INT NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+  section_id          INT NOT NULL REFERENCES sections(id) ON DELETE CASCADE,
+  dp_id               VARCHAR(60) NOT NULL,   -- the data-dp-id at extraction time
+  position            INT NOT NULL DEFAULT 0, -- order within the agenda
+  topic_snapshot      TEXT NOT NULL DEFAULT '',
+  context_snapshot    TEXT NOT NULL DEFAULT '',
+  additional_snapshot TEXT NOT NULL DEFAULT '',
+  -- Set when a later re-export drops this point. Soft, never DELETE: a point
+  -- that already carries a written summary must not lose it silently.
+  removed_at          TIMESTAMPTZ,
+  recorded_by_id      INT REFERENCES users(id),
+  created_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at          TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (event_id, section_id, dp_id)
+);
+CREATE INDEX IF NOT EXISTS idx_meeting_agenda_event
+  ON meeting_agenda_points (event_id, position);
+
+-- One shared row per agenda point (hence UNIQUE agenda_point_id): either
+-- assigned supervisor may fill it and the last save wins, so the row records
+-- who wrote it and when. The row's existence means the task is open.
+CREATE TABLE IF NOT EXISTS meeting_summaries (
+  id                     SERIAL PRIMARY KEY,
+  agenda_point_id        INT NOT NULL UNIQUE REFERENCES meeting_agenda_points(id) ON DELETE CASCADE,
+  event_id               INT NOT NULL REFERENCES events(id) ON DELETE CASCADE,
+  summary_html           TEXT NOT NULL DEFAULT '',
+  status                 meeting_summary_status NOT NULL DEFAULT 'PENDING',
+  deadline_date          DATE,
+  opened_at              TIMESTAMPTZ NOT NULL DEFAULT now(),
+  last_edited_by_user_id INT REFERENCES users(id),
+  last_edited_at         TIMESTAMPTZ,
+  created_at             TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at             TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS idx_meeting_summaries_event ON meeting_summaries (event_id);
+
+-- Resolved once when the task opens and then frozen, so a supervisor who moves
+-- department keeps the task they were actually given.
+CREATE TABLE IF NOT EXISTS meeting_summary_assignees (
+  summary_id INT NOT NULL REFERENCES meeting_summaries(id) ON DELETE CASCADE,
+  user_id    INT NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+  PRIMARY KEY (summary_id, user_id)
+);
+CREATE INDEX IF NOT EXISTS idx_meeting_summary_assignees_user
+  ON meeting_summary_assignees (user_id);
 
 -- ─── Event Templates ────────────────────────────────────────────────────────
 
