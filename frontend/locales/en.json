@@ -9,7 +9,9 @@
     "yourTurn": "Awaiting your action — {section} · {event}",
     "returned": "{section} returned to you · {event}",
     "empty": "No notifications",
-    "bellUnread": "Notifications ({n} unread)"
+    "bellUnread": "Notifications ({n} unread)",
+    "summaryDue": "Meeting summary due: {event}",
+    "summaryUnassigned": "{n} discussion point(s) in {event} have no responsible department head"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -144,7 +146,12 @@
     "actionSubmit": "SUBMIT",
     "actionApprove": "APPROVE",
     "actionReturn": "RETURN",
-    "actionAskReturn": "ASK RETURN"
+    "actionAskReturn": "ASK RETURN",
+    "summaryTitle": "Meeting summaries",
+    "summaryEmpty": "No meeting summaries to write",
+    "summaryOpen": "Write summary",
+    "summaryPending": "{n} left",
+    "summaryDone": "Done"
   },
   "status": {
     "draft": "Awaiting action",
@@ -522,6 +529,35 @@
       "confirm": "Reopen this document for editing? It will leave the Archive until you re-publish.",
       "fail": "Failed to reopen:",
       "unknownError": "Unknown error"
+    },
+    "library": {
+      "btn": {
+        "summary": "Meeting Summary"
+      }
+    },
+    "summary": {
+      "title": "Meeting Summary",
+      "colPoint": "Discussion Point",
+      "colSummary": "Summary",
+      "notFilled": "Not yet written",
+      "unassigned": "No responsible department head",
+      "assignedTo": "Responsible: {names}",
+      "lastEdited": "Last edited by {name} · {when}",
+      "progress": "{done} of {total} written",
+      "save": "Save",
+      "saved": "Summary saved",
+      "saveFail": "Failed to save the summary:",
+      "placeholder": "Write the meeting summary for this point…",
+      "empty": "No meeting agenda has been recorded for this document yet.",
+      "failLoad": "Failed to load the meeting summary:",
+      "removedFromAgenda": "Removed from the agenda",
+      "notOpened": "The summary task opens one hour after the meeting.",
+      "noMeetingTime": "No meeting date and time is set, so the summary task cannot open.",
+      "readOnly": "You can read this summary but not edit it.",
+      "exportPdf": "Summary PDF",
+      "exportWord": "Summary Word",
+      "deadline": "Due {date}",
+      "overdue": "Overdue"
     }
   },
   "editor": {

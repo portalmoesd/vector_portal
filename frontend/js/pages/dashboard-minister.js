@@ -861,6 +861,9 @@
             <button class="mn-pillbtn" data-act="preview">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.preview'))}</span></button>
             <button class="mn-pillbtn" data-act="pdf">${ICON_DOWNLOAD}<span>${escapeHtml(I18n.tr('library.btn.pdf'))}</span></button>
             <button class="mn-pillbtn" data-act="word">${ICON_DOWNLOAD}<span>${escapeHtml(I18n.tr('library.btn.word'))}</span></button>
+            ${item.documentType === 'DISCUSSION_POINTS' && item.hasMeetingAgenda
+              ? `<button class="mn-pillbtn" data-act="summary">${ICON_EYE}<span>${escapeHtml(I18n.tr('library.btn.summary'))}</span></button>`
+              : ''}
           </div>
           <div class="mn-files-wrap" id="mnFiles"></div>
         </div>
@@ -869,6 +872,8 @@
       detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => LibraryDoc.preview(item.id));
       detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
       detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
+      const summaryBtn = detailEl.querySelector('[data-act="summary"]');
+      if (summaryBtn) summaryBtn.addEventListener('click', () => GCP.MeetingSummary.open(item.id));
       loadAttachments(item.id, detailEl.querySelector('#mnFiles'));
       loadReadyHistory(item.id, detailEl.querySelector('#mnHistory'));
       return;
@@ -1832,6 +1837,10 @@
     your_turn: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>',
     returned: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 4v6h6"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>',
     completed: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>',
+    // A page with a pen: a summary waiting to be written.
+    summary_due: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>',
+    // A warning triangle: a point nobody was assigned to.
+    summary_unassigned: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>',
   };
 
   function notifMessage(n) {
@@ -1839,6 +1848,8 @@
     if (n.type === 'event_created') return I18n.tr('notif.eventCreated').replace('{event}', m.eventTitle || '');
     if (n.type === 'completed') return I18n.tr('notif.completed').replace('{event}', m.eventTitle || '');
     if (n.type === 'returned') return I18n.tr('notif.returned').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
+    if (n.type === 'summary_due') return I18n.tr('notif.summaryDue').replace('{event}', m.eventTitle || '');
+    if (n.type === 'summary_unassigned') return I18n.tr('notif.summaryUnassigned').replace('{n}', String(m.count || 0)).replace('{event}', m.eventTitle || '');
     return I18n.tr('notif.yourTurn').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
   }
   function notifTimeAgo(iso) {
@@ -2097,11 +2108,76 @@
     side.insertBefore(row, side.firstChild);
   }
 
+
+  // ── Meeting summaries panel ─────────────────────────────────────────────────
+  // The supervisor's post-meeting task list: the discussion points they owe a
+  // summary for. Reuses the notifications panel's card styling so it reads as
+  // part of the same side column, and stays hidden for anyone with nothing to
+  // write — which is every role that never gets assigned a point.
+  let summaryPanel, summaryListEl;
+
+  function buildSummaryPanel() {
+    const side = document.getElementById('mnSide');
+    if (!side) return;
+    summaryPanel = document.createElement('div');
+    // Its own class, not .mn-notifs: the notification centre is addressed by
+    // that class elsewhere (and asserted on), so sharing it would make two
+    // panels answer to one name. The CSS gives the two the same card recipe.
+    summaryPanel.className = 'mn-summaries';
+    summaryPanel.hidden = true;
+    summaryPanel.innerHTML = `
+      <div class="mn-notifs__head">
+        <span class="mn-notifs__title">${escapeHtml(I18n.tr('dashboard.summaryTitle'))}</span>
+      </div>
+      <ul class="mn-notifs__list"></ul>`;
+    side.appendChild(summaryPanel);
+    summaryListEl = summaryPanel.querySelector('.mn-notifs__list');
+    if (typeof I18n !== 'undefined' && I18n.translateRoot) I18n.translateRoot(summaryPanel);
+  }
+
+  async function loadSummaryTasks() {
+    if (!summaryPanel) return;
+    let rows = [];
+    try {
+      rows = await Api.get('/api/meeting-summaries/mine') || [];
+    } catch (_) {
+      // Best-effort, exactly like the notifications poll: a failed fetch must
+      // not disturb the rest of the dashboard.
+      return;
+    }
+    if (!rows.length) { summaryPanel.hidden = true; return; }
+    summaryPanel.hidden = false;
+
+    summaryListEl.innerHTML = rows.map((r) => {
+      const due = dueInfo(r.deadlineDate);
+      const done = r.myPending === 0;
+      const status = done
+        ? escapeHtml(I18n.tr('dashboard.summaryDone'))
+        : escapeHtml(I18n.tr('dashboard.summaryPending').replace('{n}', String(r.myPending)));
+      return `
+        <li class="mn-notif ${done ? '' : 'is-unread'}" data-event="${r.eventId}" role="button" tabindex="0">
+          <span class="mn-notif__msg">${escapeHtml(r.title)} · ${status}</span>
+          <span class="mn-notif__time ${due ? due.cls : ''}">${due ? escapeHtml(due.text) : ''}</span>
+        </li>`;
+    }).join('');
+
+    summaryListEl.querySelectorAll('[data-event]').forEach((li) => {
+      const open = () => GCP.MeetingSummary.open(parseInt(li.dataset.event, 10));
+      li.addEventListener('click', open);
+      // The notification rows are keyboard-operable; these match.
+      li.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      });
+    });
+  }
+
   buildCreateButton();
   buildDayPanel();     // no-op unless HAS_DAY_PANEL
   buildNotifPanel();   // early-returns when HAS_DAY_PANEL
   buildNotifBell();    // no-op unless HAS_DAY_PANEL
+  buildSummaryPanel();
   loadNotifications();
   loadMyTurn();
-  setInterval(() => { loadNotifications(); loadMyTurn(); }, 45000);
+  loadSummaryTasks();
+  setInterval(() => { loadNotifications(); loadMyTurn(); loadSummaryTasks(); }, 45000);
 })();

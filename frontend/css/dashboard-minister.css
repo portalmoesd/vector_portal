@@ -430,11 +430,13 @@
    notification center, or the day preview on Minister/Protocol/Deputy) fills the
    remaining space and scrolls internally instead of growing. */
 .mn-dash .mn-overview__side .mn-notifs,
+.mn-dash .mn-overview__side .mn-summaries,
 .mn-dash .mn-overview__side .mn-day {
   margin: 0; flex: 1 1 0; min-height: 0;
   display: flex; flex-direction: column; overflow: hidden;
 }
 .mn-dash .mn-overview__side .mn-notifs .mn-notifs__list,
+.mn-dash .mn-overview__side .mn-summaries .mn-notifs__list,
 .mn-dash .mn-overview__side .mn-day .mn-day__list {
   flex: 1 1 0; min-height: 0; overflow-y: auto;
 }
@@ -506,7 +508,12 @@
 .mn-dash .mn-list .mn-card.is-expanded .mn-card__head { padding-right: 34px; }
 
 /* ── Notifications panel (injected below the hero) ───────────────────────── */
-.mn-dash .mn-notifs {
+/* .mn-summaries — the supervisor's Meeting Summary task list — rides along on
+   every rule here: same card, same list, same rows, so the two panels stack in
+   the side column as one visual family. It keeps a class of its own only so
+   the notification centre stays uniquely addressable. */
+.mn-dash .mn-notifs,
+.mn-dash .mn-summaries {
   /* Match the calendar card exactly (same tint, border, radius, subtle shadow, blur). */
   background: var(--card, #fff); border: 1px solid var(--border-color);
   border-radius: var(--radius-lg); box-shadow: var(--shadow-sm);

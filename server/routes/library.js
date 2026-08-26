@@ -27,7 +27,11 @@ router.get('/', requireAuth, async (req, res) => {
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code,
               ds.full_name AS document_submitter_name,
               ds.full_name_ka AS document_submitter_name_ka,
-              e.document_submitter_id`;
+              e.document_submitter_id, e.document_type,
+              -- Gates the Meeting Summary button: only a Discussion Points
+              -- document whose owner has recorded an agenda has one to show.
+              EXISTS (SELECT 1 FROM meeting_agenda_points ap
+                      WHERE ap.event_id = e.id AND ap.removed_at IS NULL) AS has_meeting_agenda`;
 
     // Common to every non-admin role: acted on it, or a named/owner relationship.
     const baseOr = `
@@ -107,6 +111,8 @@ router.get('/', requireAuth, async (req, res) => {
       documentSubmitterName: r.document_submitter_name,
       documentSubmitterNameKa: r.document_submitter_name_ka,
       documentSubmitterId: r.document_submitter_id,
+      documentType: r.document_type || 'OTHER',
+      hasMeetingAgenda: r.has_meeting_agenda,
     })));
   } catch (err) {
     console.error('Library list error:', err);
