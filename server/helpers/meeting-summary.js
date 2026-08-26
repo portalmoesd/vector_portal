@@ -1,9 +1,8 @@
 /**
- * Pure helpers shared by the Meeting Summary route and its scheduler.
+ * Pure helpers shared by the Meeting Summary route and the send path.
  *
- * Kept free of `db` and of any timer so both can require it without pulling in
- * the other's side effects, and so it is unit-testable the way roles.js and
- * sanitize.js are.
+ * Kept free of `db` so both can require it without pulling in the other's
+ * side effects, and so it is unit-testable the way roles.js and sanitize.js are.
  */
 
 // Georgia is UTC+4 and observes no DST, so meeting times are unambiguous; only
@@ -40,29 +39,46 @@ function ymd(value) {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 }
 
-/** When a meeting's summary task becomes due: one hour after the meeting. */
-function dueAt(eventDateTime) {
-  if (!eventDateTime) return null;
-  const d = new Date(eventDateTime);
-  if (Number.isNaN(d.getTime())) return null;
-  return new Date(d.getTime() + 60 * 60 * 1000);
-}
-
 /**
- * The summary deadline: the meeting's Tbilisi calendar day plus seven.
+ * The summary deadline: a week from the day it is sent.
  *
- * Anchored to Tbilisi rather than the server's zone — the app runs in UTC,
- * where a meeting held after midnight Tbilisi time falls on the previous
- * calendar day and would be given a deadline a day early.
+ * Measured from the send rather than from the meeting so supervisors always get
+ * a full week, however long the owner takes to send. Anchored to Tbilisi rather
+ * than the server's zone — the app runs in UTC, where anything sent after 20:00
+ * UTC already belongs to the next Tbilisi day and would be dated a day early.
  */
-function deadlineFromMeeting(eventDateTime) {
-  if (!eventDateTime) return null;
-  const d = new Date(eventDateTime);
+function deadlineFromSend(now) {
+  const d = now ? new Date(now) : new Date();
   if (Number.isNaN(d.getTime())) return null;
   const tb = new Date(d.getTime() + TBILISI_OFFSET_HOURS * 60 * 60 * 1000);
   const pad = (n) => String(n).padStart(2, '0');
   const due = new Date(Date.UTC(tb.getUTCFullYear(), tb.getUTCMonth(), tb.getUTCDate() + 7));
   return `${due.getUTCFullYear()}-${pad(due.getUTCMonth() + 1)}-${pad(due.getUTCDate())}`;
+}
+
+/**
+ * May this user act as the Document Owner of this event — record its meeting
+ * agenda, and send it out for summaries?
+ *
+ * Three ways in:
+ *   - the owner themself, which covers a Deputy, Supervisor or Senior Editor
+ *     document since the owner *is* events.document_submitter_id;
+ *   - PROTOCOL, but only where the document submitter role is MINISTER. The
+ *     Minister is a read-only role that never logs in, so without this nobody
+ *     at all could record or send a Minister's document. Protocol's authority
+ *     here is not general: on a Deputy's document it is no wider than anyone
+ *     else's. It needs no Minister lookup — PROTOCOL is a global role with no
+ *     link to a particular Minister row, so the submitter role is the whole
+ *     test.
+ *   - ADMIN, as the fallback for a document whose owner has left or is away.
+ *
+ * `event` needs only { document_submitter_id, document_submitter_role }.
+ */
+function canActAsOwner(user, event) {
+  if (!user || !event) return false;
+  if (user.role === 'ADMIN') return true;
+  if (event.document_submitter_id === user.id) return true;
+  return user.role === 'PROTOCOL' && event.document_submitter_role === 'MINISTER';
 }
 
 /**
@@ -111,5 +127,5 @@ function agendaKeys(points) {
 }
 
 module.exports = {
-  isBlankHtml, ymd, dueAt, deadlineFromMeeting, normalizeAgendaPoints, agendaKeys,
+  isBlankHtml, ymd, deadlineFromSend, canActAsOwner, normalizeAgendaPoints, agendaKeys,
 };

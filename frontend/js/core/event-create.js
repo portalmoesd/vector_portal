@@ -449,8 +449,8 @@
 
     // The meeting date/time is optional for most documents and only offered to
     // owner roles that run meetings. A Discussion Points document always leads
-    // to a meeting, and its Meeting Summary task is scheduled off this value,
-    // so there it is shown and required whoever the Document Submitter is.
+    // to a meeting, so there it is shown and required whoever the Document
+    // Submitter is.
     // This is about *entering* the time only — canSeeEventDateTime still
     // decides who may see it afterwards, and is deliberately unchanged.
     function isDiscussionPointsSelected() {
@@ -550,9 +550,9 @@
         return;
       }
 
-      // The Meeting Summary task is scheduled off the meeting time, so a
-      // Discussion Points document cannot be created without one. Validated in
-      // JS rather than with the `required` attribute: #newEventDateTime is a
+      // A Discussion Points document cannot be created without a meeting time.
+      // Validated in JS rather than with the `required` attribute:
+      // #newEventDateTime is a
       // flatpickr altInput field, so the real input is hidden and native
       // validation would never surface. The server enforces this too.
       if (documentType === 'DISCUSSION_POINTS' && !eventDateTimeRaw) {

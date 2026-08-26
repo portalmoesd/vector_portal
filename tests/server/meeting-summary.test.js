@@ -29,30 +29,68 @@ test('the server blank test agrees with the editor one', () => {
   }
 });
 
-// ── Due and deadline arithmetic ──────────────────────────────────────────────
+// ── Deadline arithmetic ──────────────────────────────────────────────────────
 
-test('a summary task comes due one hour after the meeting', () => {
-  assert.equal(MS.dueAt('2026-09-01T10:00:00+04:00').toISOString(), '2026-09-01T07:00:00.000Z');
-  assert.equal(MS.dueAt(null), null);
-  assert.equal(MS.dueAt('not a date'), null);
-});
-
-test('the deadline is the meeting day plus seven', () => {
-  assert.equal(MS.deadlineFromMeeting('2026-09-01T10:00:00+04:00'), '2026-09-08');
+test('the deadline is a week from the day it is sent', () => {
+  // Measured from the send, not the meeting, so supervisors always get a full
+  // week however long the owner took to send.
+  assert.equal(MS.deadlineFromSend('2026-09-01T10:00:00+04:00'), '2026-09-08');
 });
 
 test('the deadline is anchored to Tbilisi, not to the server clock', () => {
-  // The app runs in UTC, where a meeting held just after midnight in Tbilisi
-  // falls on the previous calendar day. Reading the day in UTC would issue the
-  // deadline a day early — 2026-09-07 instead of 2026-09-08.
-  assert.equal(MS.deadlineFromMeeting('2026-09-01T01:00:00+04:00'), '2026-09-08');
-  // And a late-evening meeting must not roll forward either.
-  assert.equal(MS.deadlineFromMeeting('2026-09-01T23:30:00+04:00'), '2026-09-08');
+  // The app runs in UTC, where anything sent after 20:00 UTC already belongs
+  // to the next Tbilisi day. Reading the day in UTC would date the deadline a
+  // day early — 2026-09-08 instead of 2026-09-09.
+  assert.equal(MS.deadlineFromSend('2026-09-01T23:30:00+04:00'), '2026-09-08');
+  assert.equal(MS.deadlineFromSend('2026-09-01T20:30:00Z'), '2026-09-09');
+  // And just before local midnight must not roll forward.
+  assert.equal(MS.deadlineFromSend('2026-09-01T19:30:00Z'), '2026-09-08');
 });
 
-test('no meeting time means no deadline rather than a guessed one', () => {
-  assert.equal(MS.deadlineFromMeeting(null), null);
-  assert.equal(MS.deadlineFromMeeting('nonsense'), null);
+test('sending with no clock given still yields a deadline', () => {
+  // The route calls it with no argument; it must never hand back null and
+  // leave a task with no deadline at all.
+  assert.match(MS.deadlineFromSend(), /^\d{4}-\d{2}-\d{2}$/);
+  assert.equal(MS.deadlineFromSend('nonsense'), null);
+});
+
+// ── Who may act as the Document Owner ────────────────────────────────────────
+
+const MINISTER_DOC = { document_submitter_id: 5, document_submitter_role: 'MINISTER' };
+const DEPUTY_DOC = { document_submitter_id: 5, document_submitter_role: 'DEPUTY' };
+
+test('the owner may act on their own document', () => {
+  // A Deputy, Supervisor or Senior Editor owner *is* document_submitter_id.
+  assert.equal(MS.canActAsOwner({ id: 5, role: 'DEPUTY' }, DEPUTY_DOC), true);
+  assert.equal(MS.canActAsOwner({ id: 5, role: 'SUPER_COLLABORATOR' }, DEPUTY_DOC), true);
+});
+
+test('Protocol may act on a Minister-owned document', () => {
+  // Without this nobody could: the Minister is read-only and never logs in, so
+  // a Minister's agenda could never be recorded or sent at all.
+  assert.equal(MS.canActAsOwner({ id: 9, role: 'PROTOCOL' }, MINISTER_DOC), true);
+});
+
+test("Protocol's authority does not extend past the Minister", () => {
+  // Protocol runs the Minister's page, not everyone's documents.
+  assert.equal(MS.canActAsOwner({ id: 9, role: 'PROTOCOL' }, DEPUTY_DOC), false);
+});
+
+test('Admin may act as a fallback', () => {
+  assert.equal(MS.canActAsOwner({ id: 1, role: 'ADMIN' }, DEPUTY_DOC), true);
+  assert.equal(MS.canActAsOwner({ id: 1, role: 'ADMIN' }, MINISTER_DOC), true);
+});
+
+test('nobody else may', () => {
+  assert.equal(MS.canActAsOwner({ id: 7, role: 'SUPERVISOR' }, DEPUTY_DOC), false);
+  assert.equal(MS.canActAsOwner({ id: 7, role: 'COLLABORATOR' }, DEPUTY_DOC), false);
+  assert.equal(MS.canActAsOwner({ id: 7, role: 'ANALYST' }, DEPUTY_DOC), false);
+  assert.equal(MS.canActAsOwner({ id: 7, role: 'MINISTER' }, DEPUTY_DOC), false);
+});
+
+test('a missing user or event is never authorized', () => {
+  assert.equal(MS.canActAsOwner(null, DEPUTY_DOC), false);
+  assert.equal(MS.canActAsOwner({ id: 5, role: 'DEPUTY' }, null), false);
 });
 
 // ── ymd ──────────────────────────────────────────────────────────────────────

@@ -179,11 +179,10 @@ router.post('/', requireAuth, denyAnalyst, async (req, res) => {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    // A Discussion Points document always leads to a meeting, and the Meeting
-    // Summary task is scheduled off that meeting time — without it the
-    // supervisors' summaries could never open. Required for every owner role,
-    // unlike the optional field other document types get. This does not widen
-    // who may *see* the time afterwards: canSeeEventDateTime is unchanged.
+    // A Discussion Points document always leads to a meeting, so its date and
+    // time is required for every owner role, unlike the optional field other
+    // document types get. This does not widen who may *see* the time
+    // afterwards: canSeeEventDateTime is unchanged.
     if (documentType === 'DISCUSSION_POINTS' && !eventDateTime) {
       return res.status(400).json({
         error: 'Meeting date and time is required for Discussion Points documents',
@@ -514,10 +513,9 @@ router.patch('/:id', requireAuth, denyAnalyst, async (req, res) => {
 
     const { title, language, deadlineDate, occasion, eventDateTime } = req.body;
 
-    // Clearing the meeting time on a Discussion Points event would strand its
-    // Meeting Summary task: the scheduler keys off event_datetime, so the
-    // supervisors' summaries could never open. Moving it to another time is
-    // still fine.
+    // A Discussion Points document exists for a meeting: the date and time
+    // drives the calendar and the meeting-centric dashboards, and the document
+    // is meaningless without it. Moving it to another time is still fine.
     if (eventDateTime !== undefined && !eventDateTime) {
       const { rows: [ev] } = await db.query(
         'SELECT document_type FROM events WHERE id = $1', [req.params.id]
