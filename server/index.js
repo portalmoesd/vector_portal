@@ -30,6 +30,7 @@ app.use('/api/admin', require('./routes/admin'));
 app.use('/api/templates', require('./routes/templates'));
 app.use('/api/statistics', require('./routes/statistics'));
 app.use('/api/notifications', require('./routes/notifications'));
+app.use('/api/meeting-summaries', require('./routes/meeting-summaries'));
 
 // Short add-to-calendar link used in event emails: /cal/:id redirects to the
 // Outlook web "add event" deeplink. Unauthenticated on purpose — recipients

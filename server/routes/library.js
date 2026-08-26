@@ -120,7 +120,7 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
     const eventId = req.params.eventId;
 
     const { rows: [event] } = await db.query(
-      `SELECT e.title, e.language, e.ended_at, e.document_type,
+      `SELECT e.title, e.language, e.ended_at, e.document_type, e.document_submitter_id,
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code
        FROM events e JOIN countries c ON c.id = e.country_id
        WHERE e.id = $1 AND (e.status = 'COMPLETED' OR e.status = 'ARCHIVED')`,
@@ -144,6 +144,10 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
       // The export picker branches on this: a Section -> Topic tree for
       // DISCUSSION_POINTS, the flat section list for OTHER.
       documentType: event.document_type || 'OTHER',
+      // The export picker records the meeting agenda only when the viewer is
+      // the document owner, so it needs to know who that is. The server
+      // re-checks ownership on POST /api/meeting-summaries/agenda regardless.
+      documentSubmitterId: event.document_submitter_id,
       countryName: event.country_name,
       countryNameKa: event.country_name_ka,
       countryCode: event.country_code,
