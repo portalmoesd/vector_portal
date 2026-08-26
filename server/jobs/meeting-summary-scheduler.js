@@ -12,6 +12,7 @@
 const db = require('../db');
 const { resolveStepUserIds } = require('../helpers/event-notification-draft');
 const { insertNotifications } = require('../helpers/notifications');
+const { ymd } = require('../helpers/meeting-summary');
 
 // The SLA is "one hour after the meeting", and event_datetime is a wall-clock
 // instant rather than a date, so the daily anchoring the statistics jobs use
@@ -24,15 +25,6 @@ const BATCH_LIMIT = 50;
 // Guards against a slow tick stacking with the next one (mirrors the
 // in-flight flags the statistics schedulers keep).
 let tickRunning = false;
-
-/** A DATE column as a plain YYYY-MM-DD string, never a UTC-shifted instant. */
-function ymd(value) {
-  if (!value) return null;
-  if (typeof value === 'string') return value.slice(0, 10);
-  const d = new Date(value);
-  const pad = (n) => String(n).padStart(2, '0');
-  return `${d.getUTCFullYear()}-${pad(d.getUTCMonth() + 1)}-${pad(d.getUTCDate())}`;
-}
 
 /**
  * Points that are due and have no summary row yet.
@@ -205,4 +197,4 @@ function start() {
 
 if (process.env.NODE_ENV !== 'test') start();
 
-module.exports = { runTick, openEvent, DUE_SQL, TICK_MS, ymd };
+module.exports = { runTick, openEvent, DUE_SQL, TICK_MS };
