@@ -32,6 +32,10 @@ app.use('/api/statistics', require('./routes/statistics'));
 app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/meeting-summaries', require('./routes/meeting-summaries'));
 
+// Opens Meeting Summary tasks an hour after each Discussion Points meeting.
+// Self-starting at require time, like the statistics schedulers.
+require('./jobs/meeting-summary-scheduler');
+
 // Short add-to-calendar link used in event emails: /cal/:id redirects to the
 // Outlook web "add event" deeplink. Unauthenticated on purpose — recipients
 // click it straight from their inbox; it exposes only the event title/task
