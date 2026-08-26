@@ -27,11 +27,17 @@ router.get('/', requireAuth, async (req, res) => {
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code,
               ds.full_name AS document_submitter_name,
               ds.full_name_ka AS document_submitter_name_ka,
-              e.document_submitter_id, e.document_type,
+              e.document_submitter_id, e.document_submitter_role, e.document_type,
               -- Gates the Meeting Summary button: only a Discussion Points
               -- document whose owner has recorded an agenda has one to show.
               EXISTS (SELECT 1 FROM meeting_agenda_points ap
-                      WHERE ap.event_id = e.id AND ap.removed_at IS NULL) AS has_meeting_agenda`;
+                      WHERE ap.event_id = e.id AND ap.removed_at IS NULL) AS has_meeting_agenda,
+              -- Gates the Send button, and makes it read "send new points":
+              -- how many extracted points a send would open right now.
+              (SELECT count(*) FROM meeting_agenda_points ap
+                WHERE ap.event_id = e.id AND ap.removed_at IS NULL
+                  AND NOT EXISTS (SELECT 1 FROM meeting_summaries ms
+                                  WHERE ms.agenda_point_id = ap.id)) AS unsent_summary_points`;
 
     // The clauses live in helpers/library-visibility.js so anything hanging off
     // a published document is gated by this same rule rather than a copy.
@@ -76,8 +82,10 @@ router.get('/', requireAuth, async (req, res) => {
       documentSubmitterName: r.document_submitter_name,
       documentSubmitterNameKa: r.document_submitter_name_ka,
       documentSubmitterId: r.document_submitter_id,
+      documentSubmitterRole: r.document_submitter_role,
       documentType: r.document_type || 'OTHER',
       hasMeetingAgenda: r.has_meeting_agenda,
+      unsentSummaryPoints: Number(r.unsent_summary_points || 0),
     })));
   } catch (err) {
     console.error('Library list error:', err);
@@ -91,7 +99,8 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
     const eventId = req.params.eventId;
 
     const { rows: [event] } = await db.query(
-      `SELECT e.title, e.language, e.ended_at, e.document_type, e.document_submitter_id,
+      `SELECT e.title, e.language, e.ended_at, e.document_type,
+              e.document_submitter_id, e.document_submitter_role,
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code
        FROM events e JOIN countries c ON c.id = e.country_id
        WHERE e.id = $1 AND (e.status = 'COMPLETED' OR e.status = 'ARCHIVED')`,
@@ -115,10 +124,12 @@ router.get('/:eventId/document', requireAuth, async (req, res) => {
       // The export picker branches on this: a Section -> Topic tree for
       // DISCUSSION_POINTS, the flat section list for OTHER.
       documentType: event.document_type || 'OTHER',
-      // The export picker records the meeting agenda only when the viewer is
-      // the document owner, so it needs to know who that is. The server
-      // re-checks ownership on POST /api/meeting-summaries/agenda regardless.
+      // The export picker records the meeting agenda only for someone who may
+      // act as the owner, which for a Minister-owned document includes
+      // Protocol — hence the role as well as the id. The server re-checks on
+      // POST /api/meeting-summaries/agenda regardless.
       documentSubmitterId: event.document_submitter_id,
+      documentSubmitterRole: event.document_submitter_role,
       countryName: event.country_name,
       countryNameKa: event.country_name_ka,
       countryCode: event.country_code,

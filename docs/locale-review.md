@@ -491,14 +491,17 @@ held in `frontend/js/core/discussion-points.js` rather than the locale files:
 
 ## Meeting Summary
 
-After a Discussion Points meeting, the Supervisors responsible for each extracted
-point write a summary against it — the discussion point on the left, the summary on
-the right. Reached from the Archive / dashboard document card, and from the
-supervisor's own task panel.
+After a Discussion Points meeting the Document Owner sends the recorded agenda out,
+and the Supervisors responsible for each extracted point write a summary against it
+— the discussion point on the left, the summary on the right. Sending is a
+deliberate act: the owner presses the button (Protocol may do so for a
+Minister-owned document, an Admin for any). Reached from the Archive / dashboard
+document card, and from the supervisor's own task panel.
 
 | Key | English | Georgian | Notes |
 | --- | --- | --- | --- |
 | `library.btn.summary` | Meeting Summary | შეხვედრის შეჯამება | Card action; shown only for a Discussion Points document with a recorded agenda |
+| `library.btn.sendSummary` | Send for Summary | შეჯამებისთვის გაგზავნა | Card action; shown to whoever may act as the owner while points remain unsent |
 | `library.summary.title` | Meeting Summary | შეხვედრის შეჯამება |  |
 | `library.summary.colPoint` | Discussion Point | განსახილველი საკითხი |  |
 | `library.summary.colSummary` | Summary | შეჯამება |  |
@@ -514,13 +517,20 @@ supervisor's own task panel.
 | `library.summary.empty` | No meeting agenda has been recorded for this document yet. | ამ დოკუმენტისთვის შეხვედრის დღის წესრიგი ჯერ არ დაფიქსირებულა. |  |
 | `library.summary.failLoad` | Failed to load the meeting summary: | შეხვედრის შეჯამების ჩატვირთვა ვერ მოხერხდა: |  |
 | `library.summary.removedFromAgenda` | Removed from the agenda | ამოღებულია დღის წესრიგიდან |  |
-| `library.summary.notOpened` | The summary task opens one hour after the meeting. | შეჯამების დავალება იხსნება შეხვედრიდან ერთი საათის შემდეგ. |  |
-| `library.summary.noMeetingTime` | No meeting date and time is set, so the summary task cannot open. | შეხვედრის თარიღი და დრო არ არის მითითებული, ამიტომ შეჯამების დავალება ვერ გაიხსნება. |  |
 | `library.summary.readOnly` | You can read this summary but not edit it. | შეგიძლიათ წაიკითხოთ, მაგრამ არა რედაქტირება. |  |
 | `library.summary.exportPdf` | Summary PDF | შეჯამება PDF |  |
 | `library.summary.exportWord` | Summary Word | შეჯამება Word |  |
 | `library.summary.deadline` | Due {date} | ვადა {date} |  |
 | `library.summary.overdue` | Overdue | ვადაგადაცილებული |  |
+| `library.summary.send` | Send for Meeting Summary ({n}) | შეჯამებისთვის გაგზავნა ({n}) |  |
+| `library.summary.sendNew` | Send new points ({n}) | ახალი საკითხების გაგზავნა ({n}) |  |
+| `library.summary.sendConfirm` | Send {n} discussion point(s) to the responsible department heads? They have one week to write their summaries. | გავუგზავნოთ {n} საკითხი პასუხისმგებელ დეპარტამენტის ხელმძღვანელებს? შეჯამების დასაწერად მათ ერთი კვირა ექნებათ. |  |
+| `library.summary.sendDone` | Sent {n} point(s) to {s} department head(s). | გაიგზავნა {n} საკითხი {s} ხელმძღვანელთან. |  |
+| `library.summary.sendFail` | Sending for meeting summaries failed: | შეჯამებისთვის გაგზავნა ვერ მოხერხდა: |  |
+| `library.summary.sentUnassigned` | {n} point(s) have no responsible department head. | {n} საკითხს არ ჰყავს პასუხისმგებელი დეპარტამენტის ხელმძღვანელი. |  |
+| `library.summary.unsent` | {n} discussion point(s) have not been sent for summaries yet. | {n} საკითხი ჯერ არ არის გაგზავნილი შესაჯამებლად. |  |
+| `library.summary.notSent` | {n} discussion point(s) are waiting for the document owner to send them. | {n} საკითხი ელოდება დოკუმენტის მფლობელის მიერ გაგზავნას. |  |
+| `library.summary.allSent` | Every discussion point has already been sent. | ყველა საკითხი უკვე გაგზავნილია. |  |
 
 The supervisor's task panel on the dashboard:
 

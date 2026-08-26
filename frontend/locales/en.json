@@ -491,7 +491,8 @@
       "word": "Word",
       "files": "Files",
       "edit": "Edit",
-      "summary": "Meeting Summary"
+      "summary": "Meeting Summary",
+      "sendSummary": "Send for Summary"
     },
     "editTooltip": "Reopen this document for editing — it will leave the Archive until you re-publish.",
     "sectionSelect": {
@@ -545,13 +546,20 @@
       "empty": "No meeting agenda has been recorded for this document yet.",
       "failLoad": "Failed to load the meeting summary:",
       "removedFromAgenda": "Removed from the agenda",
-      "notOpened": "The summary task opens one hour after the meeting.",
-      "noMeetingTime": "No meeting date and time is set, so the summary task cannot open.",
       "readOnly": "You can read this summary but not edit it.",
       "exportPdf": "Summary PDF",
       "exportWord": "Summary Word",
       "deadline": "Due {date}",
-      "overdue": "Overdue"
+      "overdue": "Overdue",
+      "send": "Send for Meeting Summary ({n})",
+      "sendNew": "Send new points ({n})",
+      "sendConfirm": "Send {n} discussion point(s) to the responsible department heads? They have one week to write their summaries.",
+      "sendDone": "Sent {n} point(s) to {s} department head(s).",
+      "sendFail": "Sending for meeting summaries failed:",
+      "sentUnassigned": "{n} point(s) have no responsible department head.",
+      "unsent": "{n} discussion point(s) have not been sent for summaries yet.",
+      "notSent": "{n} discussion point(s) are waiting for the document owner to send them.",
+      "allSent": "Every discussion point has already been sent."
     }
   },
   "editor": {

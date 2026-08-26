@@ -3,10 +3,10 @@
  *
  * Before a meeting the Document Owner opens the export picker and chooses which
  * discussion points to take along. That choice used to be transient; POST
- * /agenda persists it as the meeting agenda. One hour after the meeting the
- * scheduler (server/helpers/meeting-summary-scheduler.js) opens a summary row
- * per extracted point and assigns it to the Supervisors of that point's
- * section, who then fill in the right-hand column here.
+ * /agenda persists it as the meeting agenda. Once the meeting is done the owner
+ * sends it (POST /:eventId/send), which opens a summary row per extracted point
+ * and assigns it to the Supervisors of that point's section, who then fill in
+ * the right-hand column here.
  */
 const express = require('express');
 const db = require('../db');
@@ -14,8 +14,9 @@ const { requireAuth, denyAnalyst } = require('../middleware/auth');
 const { sanitizeEditorHtml } = require('../helpers/sanitize');
 const { canSeeEventDateTime } = require('../helpers/roles');
 const {
-  isBlankHtml, ymd, normalizeAgendaPoints, agendaKeys,
+  isBlankHtml, ymd, normalizeAgendaPoints, agendaKeys, canActAsOwner, deadlineFromSend,
 } = require('../helpers/meeting-summary');
+const { sendForSummaries, countPending } = require('../helpers/meeting-summary-open');
 const { canSeeCompletedEvent } = require('../helpers/library-visibility');
 
 const router = express.Router();
@@ -39,7 +40,7 @@ router.post('/agenda', requireAuth, denyAnalyst, async (req, res) => {
     if (!eventId) return res.status(400).json({ error: 'eventId is required' });
 
     const { rows: [event] } = await client.query(
-      `SELECT document_submitter_id, document_type, status, event_datetime
+      `SELECT id, document_submitter_id, document_submitter_role, document_type, status
        FROM events WHERE id = $1`,
       [eventId]
     );
@@ -50,7 +51,10 @@ router.post('/agenda', requireAuth, denyAnalyst, async (req, res) => {
     if (event.status !== 'COMPLETED' && event.status !== 'ARCHIVED') {
       return res.status(400).json({ error: `Event is ${event.status}, not a published document` });
     }
-    if (event.document_submitter_id !== req.user.id) {
+    // Owner, Protocol for a Minister-owned document, or Admin. Without the
+    // Protocol branch a Minister's agenda could never be recorded at all: the
+    // Minister is read-only and never logs in to export.
+    if (!canActAsOwner(req.user, event)) {
       return res.status(403).json({ error: 'Only the Document Owner can record the meeting agenda' });
     }
 
@@ -104,12 +108,12 @@ router.post('/agenda', requireAuth, denyAnalyst, async (req, res) => {
 
     await client.query('COMMIT');
 
-    console.log(`[meeting-summaries.agenda] event=${eventId} owner=${req.user.id} points=${clean.length}`);
+    console.log(`[meeting-summaries.agenda] event=${eventId} by=${req.user.id} points=${clean.length}`);
     res.json({
       success: true,
       recorded: clean.length,
-      // The scheduler can only open summaries once a meeting time exists.
-      hasMeetingTime: !!event.event_datetime,
+      // Recording is not sending: the owner sends once the meeting is done.
+      unsent: await countPending(client, eventId),
     });
   } catch (err) {
     try { await client.query('ROLLBACK'); } catch (_) { /* already failed */ }
@@ -117,6 +121,72 @@ router.post('/agenda', requireAuth, denyAnalyst, async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   } finally {
     client.release();
+  }
+});
+
+// ─── POST /api/meeting-summaries/:eventId/send ───────────────────────────────
+// Send the recorded agenda out for summaries.
+//
+// Deliberate, not scheduled: the owner decides the meeting is done and presses
+// the button. Sending again is safe and expected — it opens only the points not
+// already out, so a re-export that added a point reaches its supervisors
+// without disturbing any summary already written.
+router.post('/:eventId/send', requireAuth, denyAnalyst, async (req, res) => {
+  try {
+    const eventId = parseInt(req.params.eventId, 10);
+    if (!eventId) return res.status(400).json({ error: 'Invalid event id' });
+
+    const { rows: [event] } = await db.query(
+      `SELECT id, title, document_submitter_id, document_submitter_role,
+              deputy_id, document_type, status
+       FROM events WHERE id = $1`,
+      [eventId]
+    );
+    if (!event) return res.status(404).json({ error: 'Event not found' });
+    if (event.document_type !== 'DISCUSSION_POINTS') {
+      return res.status(400).json({ error: 'Not a Discussion Points document' });
+    }
+    if (event.status !== 'COMPLETED' && event.status !== 'ARCHIVED') {
+      return res.status(400).json({ error: `Event is ${event.status}, not a published document` });
+    }
+    if (!canActAsOwner(req.user, event)) {
+      return res.status(403).json({ error: 'Only the Document Owner can send for meeting summaries' });
+    }
+
+    const pending = await countPending(db, eventId);
+    if (!pending) {
+      const { rows: [t] } = await db.query(
+        `SELECT count(*)::int AS n FROM meeting_agenda_points
+         WHERE event_id = $1 AND removed_at IS NULL`,
+        [eventId]
+      );
+      // Nothing to do is not a failure: either the agenda was never recorded,
+      // or every point is already out.
+      if (!t.n) return res.status(400).json({ error: 'No meeting agenda has been recorded' });
+      return res.json({ success: true, opened: 0, alreadySent: t.n, supervisors: 0, unassigned: 0 });
+    }
+
+    // A week from today, not from the meeting: supervisors get a full week
+    // however long the owner took to send.
+    const deadlineDate = deadlineFromSend();
+    const out = await sendForSummaries(eventId, req.user, event, deadlineDate);
+
+    const { rows: [t] } = await db.query(
+      `SELECT count(*)::int AS n FROM meeting_agenda_points
+       WHERE event_id = $1 AND removed_at IS NULL`,
+      [eventId]
+    );
+    res.json({
+      success: true,
+      opened: out.opened,
+      alreadySent: t.n - out.opened,
+      supervisors: out.supervisors,
+      unassigned: out.unassigned,
+      deadlineDate,
+    });
+  } catch (err) {
+    console.error('Send for meeting summaries error:', err);
+    res.status(500).json({ error: 'Internal server error' });
   }
 });
 
@@ -173,7 +243,8 @@ router.get('/:eventId', requireAuth, async (req, res) => {
     if (!eventId) return res.status(400).json({ error: 'Invalid event id' });
 
     const { rows: [event] } = await db.query(
-      `SELECT e.id, e.title, e.language, e.event_datetime, e.document_submitter_id,
+      `SELECT e.id, e.title, e.language, e.event_datetime,
+              e.document_submitter_id, e.document_submitter_role,
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code
        FROM events e JOIN countries c ON c.id = e.country_id
        WHERE e.id = $1`,
@@ -233,8 +304,8 @@ router.get('/:eventId', requireAuth, async (req, res) => {
       additionalHtml: r.additional_snapshot,
       summaryHtml: r.summary_html || '',
       filled: !isBlankHtml(r.summary_html),
-      // No summary row yet means the meeting has not passed (or has no time),
-      // so the task simply has not opened.
+      // No summary row yet means this point has not been sent out for a
+      // summary — the owner sends once the meeting is done.
       opened: !!r.summary_id,
       removedFromAgenda: !!r.removed_at,
       deadlineDate: ymd(r.deadline_date),
@@ -257,9 +328,12 @@ router.get('/:eventId', requireAuth, async (req, res) => {
       // Reused verbatim; the rule is deliberately not widened by this feature.
       eventDateTime: canSeeEventDateTime(req.user.role, req.user.id, event.document_submitter_id)
         ? event.event_datetime : null,
-      hasMeetingTime: !!event.event_datetime,
       opened: counted.some((i) => i.opened),
       canEditAny: items.some((i) => i.canEdit),
+      // Whether this viewer may send, and how many points a send would open.
+      // Both drive the button; the send endpoint re-checks the first.
+      canSend: canActAsOwner(req.user, event),
+      unsentCount: counted.filter((i) => !i.opened).length,
       progress: {
         done: counted.filter((i) => i.filled).length,
         total: counted.length,

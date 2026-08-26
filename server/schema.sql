@@ -329,12 +329,17 @@ CREATE TABLE IF NOT EXISTS meeting_summaries (
   status                 meeting_summary_status NOT NULL DEFAULT 'PENDING',
   deadline_date          DATE,
   opened_at              TIMESTAMPTZ NOT NULL DEFAULT now(),
+  -- Who sent this out. Sending is a deliberate act by the Document Owner (or
+  -- Protocol acting for the Minister), so the row records who performed it.
+  opened_by_user_id      INT REFERENCES users(id),
   last_edited_by_user_id INT REFERENCES users(id),
   last_edited_at         TIMESTAMPTZ,
   created_at             TIMESTAMPTZ NOT NULL DEFAULT now(),
   updated_at             TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 CREATE INDEX IF NOT EXISTS idx_meeting_summaries_event ON meeting_summaries (event_id);
+-- Backfill for databases predating the opened_by_user_id column.
+ALTER TABLE meeting_summaries ADD COLUMN IF NOT EXISTS opened_by_user_id INT REFERENCES users(id);
 
 -- Resolved once when the task opens and then frozen, so a supervisor who moves
 -- department keeps the task they were actually given.

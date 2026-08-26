@@ -226,10 +226,10 @@ test.describe('recording the meeting agenda', () => {
   // here, so the print fallback is stubbed out.
   async function exportAs(page, doc, viewerId, opts = {}) {
     await page.setContent(PAGE);
-    await page.evaluate(({ d, id, fail }) => {
+    await page.evaluate(({ d, id, fail, role }) => {
       window.__exported = null;
       window.__posted = null;
-      window.Api.getUser = () => ({ id, role: 'SUPER_COLLABORATOR' });
+      window.Api.getUser = () => ({ id, role: role || 'SUPER_COLLABORATOR' });
       window.Api.get = async () => d;
       window.Api.post = async (path, body) => {
         window.__posted = { path, body };
@@ -241,7 +241,7 @@ test.describe('recording the meeting agenda', () => {
         print() {},
       });
       LibraryDoc.exportPdf(d.eventId);
-    }, { d: doc, id: viewerId, fail: !!opts.fail });
+    }, { d: doc, id: viewerId, fail: !!opts.fail, role: opts.role || null });
     await page.waitForSelector('#exportConfirmBtn');
   }
 
@@ -271,6 +271,39 @@ test.describe('recording the meeting agenda', () => {
     expect(posted.body.points.map(p => p.dpId)).toEqual(['dp-2', 'dp-3']);
     expect(posted.body.points[0]).toMatchObject({ sectionId: 1, topic: 'Investments' });
     expect(posted.body.points[1]).toMatchObject({ sectionId: 2, topic: 'Tourism' });
+  });
+
+  test('Protocol records for a Minister-owned document', async ({ page }) => {
+    // The Minister is read-only and never logs in to export, so without this
+    // a Minister's agenda could never be recorded by anyone at all.
+    await exportAs(page, { ...OWNED, documentSubmitterId: 42, documentSubmitterRole: 'MINISTER' },
+      7, { role: 'PROTOCOL' });
+    await page.click('#exportConfirmBtn');
+    await page.waitForFunction(() => window.__posted !== null);
+    const posted = await page.evaluate(() => window.__posted);
+    expect(posted.path).toBe('/api/meeting-summaries/agenda');
+  });
+
+  test("Protocol's standing does not extend past the Minister", async ({ page }) => {
+    // On someone else's document Protocol is no different from any other reader.
+    await exportAs(page, { ...OWNED, documentSubmitterId: 42, documentSubmitterRole: 'DEPUTY' },
+      7, { role: 'PROTOCOL' });
+    await page.click('#exportConfirmBtn');
+    await page.waitForFunction(() => window.__exported !== null);
+    expect(await page.evaluate(() => window.__posted)).toBeNull();
+  });
+
+  test("an admin's export does not rewrite someone else's agenda", async ({ page }) => {
+    // Admin authority belongs on the deliberate, confirmed act of sending, not
+    // on a casual export. Recording happens silently as a side effect, and an
+    // admin exporting a partial selection would drop the owner's other points
+    // off the agenda without anyone being told — revoking supervisors' access
+    // to summaries already assigned to them.
+    await exportAs(page, { ...OWNED, documentSubmitterId: 42, documentSubmitterRole: 'DEPUTY' },
+      7, { role: 'ADMIN' });
+    await page.click('#exportConfirmBtn');
+    await page.waitForFunction(() => window.__exported !== null);
+    expect(await page.evaluate(() => window.__posted)).toBeNull();
   });
 
   test('a non-owner records nothing', async ({ page }) => {
