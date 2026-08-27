@@ -49,12 +49,14 @@ const adminOnly = [requireAuth, requireRole('ADMIN')];
  */
 async function saveParsedAndRaw(kind, parsed, buffer, fileName) {
   await db.query(
-    `INSERT INTO admin_uploads (kind, parsed_json, raw_bytes, file_name, uploaded_at)
-     VALUES ($1, $2::jsonb, $3, $4, now())
+    `INSERT INTO admin_uploads
+       (kind, parsed_json, raw_bytes, file_name, file_uploaded_at, uploaded_at)
+     VALUES ($1, $2::jsonb, $3, $4, CASE WHEN $3::bytea IS NULL THEN NULL ELSE now() END, now())
      ON CONFLICT (kind) DO UPDATE
        SET parsed_json = EXCLUDED.parsed_json,
            raw_bytes   = COALESCE(EXCLUDED.raw_bytes, admin_uploads.raw_bytes),
            file_name   = COALESCE(EXCLUDED.file_name, admin_uploads.file_name),
+           file_uploaded_at = COALESCE(EXCLUDED.file_uploaded_at, admin_uploads.file_uploaded_at),
            uploaded_at = EXCLUDED.uploaded_at`,
     [kind, JSON.stringify(parsed), buffer || null, fileName || null]
   );
@@ -69,7 +71,8 @@ async function saveParsedAndRaw(kind, parsed, buffer, fileName) {
  */
 async function saveRawFile(kind, buffer, fileName) {
   const { rowCount } = await db.query(
-    `UPDATE admin_uploads SET raw_bytes = $2, file_name = $3
+    `UPDATE admin_uploads
+     SET raw_bytes = $2, file_name = $3, file_uploaded_at = now()
      WHERE kind = $1`,
     [kind, buffer, fileName || null]
   );

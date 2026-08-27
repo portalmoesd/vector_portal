@@ -2111,6 +2111,20 @@ function uploadedFileName(file) {
   }
 }
 
+/**
+ * An attachment Content-Disposition carrying a name of any script.
+ *
+ * RFC 5987: filename* holds the UTF-8 name and the plain filename is the ASCII
+ * fallback. encodeURIComponent leaves an apostrophe alone, and since ' is the
+ * ext-value delimiter a name like "company's registry.xlsx" would otherwise
+ * add a third one and make the parameter unparseable.
+ */
+function contentDisposition(name) {
+  const ascii = name.replace(/[^\x20-\x7e]/g, '_').replace(/"/g, '');
+  const utf8 = encodeURIComponent(name).replace(/'/g, '%27');
+  return `attachment; filename="${ascii}"; filename*=UTF-8''${utf8}`;
+}
+
 /** Fallback name for a file stored before the name was kept. */
 function fallbackFileName(kind, uploadedAt) {
   const day = uploadedAt ? new Date(uploadedAt).toISOString().slice(0, 10) : 'stored';
@@ -2123,18 +2137,28 @@ function fallbackFileName(kind, uploadedAt) {
 router.get('/uploads', ...adminOnly, async (req, res) => {
   try {
     const { rows } = await db.query(
-      `SELECT kind, file_name, uploaded_at, length(raw_bytes) AS file_size
+      `SELECT kind, file_name, uploaded_at, file_uploaded_at,
+              length(raw_bytes) AS file_size
        FROM admin_uploads
        WHERE kind = ANY($1) AND raw_bytes IS NOT NULL
        ORDER BY kind`,
       [DOWNLOADABLE_KINDS]
     );
-    res.json(rows.map((r) => ({
-      kind: r.kind,
-      fileName: r.file_name || fallbackFileName(r.kind, r.uploaded_at),
-      fileSize: Number(r.file_size || 0),
-      uploadedAt: r.uploaded_at,
-    })));
+    res.json(rows.map((r) => {
+      // The file's own timestamp, not the dataset's. A browser-parsed upload
+      // saves its summary first and its file after, so a failed second step
+      // leaves an older file behind newer figures — and saying so is better
+      // than stamping the old workbook with the new date.
+      const fileAt = r.file_uploaded_at || r.uploaded_at;
+      return {
+        kind: r.kind,
+        fileName: r.file_name || fallbackFileName(r.kind, fileAt),
+        fileSize: Number(r.file_size || 0),
+        uploadedAt: fileAt,
+        // True when the stored file predates the data it sits beside.
+        stale: !!r.file_uploaded_at && r.file_uploaded_at < r.uploaded_at,
+      };
+    }));
   } catch (err) {
     console.error('admin uploads list error:', err.message);
     res.status(500).json({ error: 'Internal server error' });
@@ -2149,7 +2173,8 @@ router.get('/uploads/:kind/download', ...adminOnly, async (req, res) => {
       return res.status(404).json({ error: 'Unknown upload' });
     }
     const { rows: [row] } = await db.query(
-      'SELECT raw_bytes, file_name, uploaded_at FROM admin_uploads WHERE kind = $1',
+      `SELECT raw_bytes, file_name, COALESCE(file_uploaded_at, uploaded_at) AS uploaded_at
+       FROM admin_uploads WHERE kind = $1`,
       [kind]
     );
     if (!row) return res.status(404).json({ error: 'Nothing uploaded for this dataset' });
@@ -2159,10 +2184,7 @@ router.get('/uploads/:kind/download', ...adminOnly, async (req, res) => {
 
     const name = row.file_name || fallbackFileName(kind, row.uploaded_at);
     res.set('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    // RFC 5987: filename* carries the UTF-8 name; the ASCII filename is a fallback.
-    const asciiName = name.replace(/[^\x20-\x7e]/g, '_').replace(/"/g, '');
-    res.set('Content-Disposition',
-      `attachment; filename="${asciiName}"; filename*=UTF-8''${encodeURIComponent(name)}`);
+    res.set('Content-Disposition', contentDisposition(name));
     res.send(row.raw_bytes);
   } catch (err) {
     console.error('admin upload download error:', err.message);

@@ -464,7 +464,8 @@
       "download": "Download original",
       "downloadFail": "Download failed.",
       "archiving": "Storing the original file…",
-      "fileArchiveFail": "The data was saved, but the original file could not be stored."
+      "fileArchiveFail": "The data was saved, but the original file could not be stored.",
+      "fileStale": "the stored file is older than this data"
     },
     "status": {
       "title": "Data Status",

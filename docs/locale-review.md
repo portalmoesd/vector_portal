@@ -300,6 +300,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `admin.upload.downloadFail` | Download failed. | ჩამოტვირთვა ვერ მოხერხდა. |  |
 | `admin.upload.archiving` | Storing the original file… | ორიგინალი ფაილი ინახება… |  |
 | `admin.upload.fileArchiveFail` | The data was saved, but the original file could not be stored. | მონაცემები შენახულია, თუმცა ორიგინალი ფაილი ვერ შეინახა. |  |
+| `admin.upload.fileStale` | the stored file is older than this data | შენახული ფაილი ამ მონაცემებზე ძველია | Shown when the stored original predates the data beside it |
 | `admin.status.fdiAnnualFile` | Annual FDI workbook, fetched from Geostat: | წლიური პირდაპირი ინვესტიციების ფაილი, მიღებული საქსტატიდან: | Labels the Geostat-fetched workbook on the Data Status card |
 
 ## Archive

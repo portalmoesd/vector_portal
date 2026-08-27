@@ -388,10 +388,17 @@ CREATE TABLE IF NOT EXISTS admin_uploads (
   parsed_json  JSONB NOT NULL,
   raw_bytes    BYTEA,
   file_name    TEXT,
+  -- When the *file* was stored, which is not always when the data was: a
+  -- dataset parsed in the browser saves its summary first and uploads the file
+  -- after, so if that second step fails the stored file is older than the
+  -- figures. Reporting its own timestamp keeps the download line honest
+  -- instead of stamping yesterday's workbook with today's date.
+  file_uploaded_at TIMESTAMPTZ,
   uploaded_at  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
--- Backfill for databases predating the file_name column.
+-- Backfill for databases predating these columns.
 ALTER TABLE admin_uploads ADD COLUMN IF NOT EXISTS file_name TEXT;
+ALTER TABLE admin_uploads ADD COLUMN IF NOT EXISTS file_uploaded_at TIMESTAMPTZ;
 
 -- Persisted trade-API computations so deploys don't wipe them and Geostat
 -- is hit once per period instead of once per restart. Keys look like

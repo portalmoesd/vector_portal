@@ -610,12 +610,28 @@
     return `${n < 10 && i > 0 ? n.toFixed(1) : Math.round(n)} ${units[i]}`;
   }
 
-  async function fetchStoredUploads() {
+  // Every slot that wants a download line, registered by the panel that owns
+  // it. One list serves all three — the two upload cards and the Geostat card
+  // asked for it separately, which meant three concurrent requests for the
+  // same data on every page load.
+  const storedFileSlots = [];
+
+  function registerStoredFileSlot(kind, el, onRender) {
+    if (el) storedFileSlots.push({ kind, el, onRender });
+  }
+
+  async function refreshStoredFiles() {
+    let stored = [];
     try {
-      return await Api.get('/api/statistics/uploads') || [];
+      stored = await Api.get('/api/statistics/uploads') || [];
     } catch (_) {
-      return [];
+      stored = [];
     }
+    storedFileSlots.forEach(({ kind, el, onRender }) => {
+      const entry = stored.find((u) => u.kind === kind) || null;
+      if (onRender) onRender(entry);
+      renderDownload(el, entry);
+    });
   }
 
   /**
@@ -629,6 +645,10 @@
       entry.fileName,
       humanSize(entry.fileSize),
       entry.uploadedAt ? new Date(entry.uploadedAt).toLocaleString() : '',
+      // The file is older than the figures beside it — its upload did not
+      // finish. Say so rather than letting the admin download the wrong one
+      // believing it matches.
+      entry.stale ? I18n.tr('admin.upload.fileStale') : '',
     ].filter(Boolean).join(' · ');
     el.innerHTML = `
       <button type="button" class="btn btn-outline" style="padding:4px 10px;font-size:12px;">
@@ -674,10 +694,6 @@
       } catch (err) {
         statusEl.textContent = labels.noFile;
       }
-      // Separate element, not part of renderStatus: that writes textContent,
-      // and this needs a real button.
-      const stored = await fetchStoredUploads();
-      renderDownload(downloadEl, stored.find((u) => u.kind === kind));
     }
 
     async function submitServerSide() {
@@ -773,6 +789,9 @@
           feedback.style.color = color;
           form.reset();
           refresh();
+          // Not just this panel's: an fdi-sectors upload also refreshes the
+          // annual Geostat workbook shown on the Data Status card.
+          refreshStoredFiles();
         } else {
           feedback.textContent = (j && j.error) || labels.failure;
           feedback.style.color = 'crimson';
@@ -783,6 +802,9 @@
       }
     });
 
+    // Separate element from the status line, which is written as textContent
+    // and could not hold a button.
+    registerStoredFileSlot(kind, downloadEl);
     refresh();
   }
 
@@ -887,20 +909,23 @@
    * when the trade state is unknown, which would leave this unrendered exactly
    * when someone is on this tab looking into why.
    */
-  async function loadGeostatFile() {
+  function registerGeostatFile() {
     const fileEl = document.getElementById('dataStatusFile');
     if (!fileEl) return;
-    const stored = await fetchStoredUploads();
-    const entry = stored.find((u) => u.kind === 'fdi-annual');
-    if (!entry) { fileEl.innerHTML = ''; return; }
-    fileEl.innerHTML = `<div style="color:var(--text-secondary);margin-bottom:6px;">${escapeHtml(I18n.tr('admin.status.fdiAnnualFile'))}</div>`;
+    const label = document.createElement('div');
+    label.style.cssText = 'color:var(--text-secondary);margin-bottom:6px;';
+    label.textContent = I18n.tr('admin.status.fdiAnnualFile');
     const slot = document.createElement('div');
+    fileEl.appendChild(label);
     fileEl.appendChild(slot);
-    renderDownload(slot, entry);
+    // The label only makes sense while there is a file under it.
+    registerStoredFileSlot('fdi-annual', slot, (entry) => {
+      label.style.display = entry ? '' : 'none';
+    });
   }
 
   loadDataStatus();
-  loadGeostatFile();
+  registerGeostatFile();
 
   initUploadPanel({
     panelId: 'panel-fdi-sectors',
@@ -932,4 +957,7 @@
       failure: I18n.tr('admin.upload.failure'),
     },
   });
+
+  // Last, once every panel has registered its slot: one request fills them all.
+  refreshStoredFiles();
 })();
