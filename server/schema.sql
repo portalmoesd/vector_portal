@@ -378,15 +378,20 @@ CREATE TABLE IF NOT EXISTS event_template_section_departments (
 );
 
 -- Admin-uploaded datasets (companies registry, FDI sectors, etc.).
--- Rows are keyed by a short kind string; parsed_json holds the
--- aggregated result the statistics page reads, raw_bytes keeps the
--- original XLSX so the admin can re-download it after a deploy.
+-- Rows are keyed by a short kind string; parsed_json holds the aggregated
+-- result the statistics page reads, and raw_bytes + file_name keep the
+-- original XLSX so the admin can download it back from the admin page after
+-- a deploy. Rows predating that (and the legacy disk migration's imports)
+-- have no raw_bytes, and simply offer no download.
 CREATE TABLE IF NOT EXISTS admin_uploads (
   kind         TEXT PRIMARY KEY,
   parsed_json  JSONB NOT NULL,
   raw_bytes    BYTEA,
+  file_name    TEXT,
   uploaded_at  TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+-- Backfill for databases predating the file_name column.
+ALTER TABLE admin_uploads ADD COLUMN IF NOT EXISTS file_name TEXT;
 
 -- Persisted trade-API computations so deploys don't wipe them and Geostat
 -- is hit once per period instead of once per restart. Keys look like

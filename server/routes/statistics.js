@@ -1327,7 +1327,7 @@ router.get('/fdi', async (req, res) => {
 
 const path = require('path');
 const fs = require('fs');
-const { upload, adminOnly, saveParsedAndRaw, loadParsed } = require('./admin-uploads');
+const { upload, adminOnly, saveParsedAndRaw, saveRawFile, loadParsed } = require('./admin-uploads');
 
 const TOURISM_HISTORICAL_URL = 'https://api.gnta.ge/api/v1/web/media/download/10068';
 const TOURISM_HISTORICAL_LOCAL = path.join(__dirname, '../data/gnta-visitors-historical.xlsx');
@@ -1983,7 +1983,7 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
     const parsed = parseFdiSectorsWorkbook(wb);
     const countryCount = Object.keys(parsed.countries).length;
     if (!countryCount) return res.status(400).json({ error: 'No country data found in file' });
-    await saveParsedAndRaw('fdi-sectors', parsed, req.file.buffer);
+    await saveParsedAndRaw('fdi-sectors', parsed, req.file.buffer, uploadedFileName(req.file));
     fdiSectorsCache.data = parsed;
     console.log(`fdi-sectors: uploaded (${countryCount} countries, ${parsed.sectors.length} sectors, years ${parsed.years.join(',')})`);
 
@@ -2084,6 +2084,110 @@ router.post('/companies/data', ...adminOnly, async (req, res) => {
   } catch (err) {
     console.error('companies data save error:', err.message);
     res.status(400).json({ error: err.message || 'Failed to save companies data' });
+  }
+});
+
+// ─── Stored original files ───────────────────────────────────────────────────
+// The admin uploads the datasets that drive these pages; these hand the
+// original files back. Only the three real datasets are addressable: the
+// legacy disk migration also swept server/data/*.json into admin_uploads
+// (countries, departments, users, tourism-cache), and those are not files
+// anyone uploaded.
+const DOWNLOADABLE_KINDS = ['fdi-sectors', 'companies', 'fdi-annual'];
+
+/**
+ * The name a multipart upload arrived with.
+ *
+ * Busboy hands filenames back as latin1, so a Georgian or otherwise non-ASCII
+ * name is mojibake unless it is read back as UTF-8 — the same fix the event
+ * attachment upload applies.
+ */
+function uploadedFileName(file) {
+  if (!file || !file.originalname) return null;
+  try {
+    return Buffer.from(file.originalname, 'latin1').toString('utf8');
+  } catch (_) {
+    return file.originalname;
+  }
+}
+
+/** Fallback name for a file stored before the name was kept. */
+function fallbackFileName(kind, uploadedAt) {
+  const day = uploadedAt ? new Date(uploadedAt).toISOString().slice(0, 10) : 'stored';
+  return `${kind}-${day}.xlsx`;
+}
+
+// GET /api/statistics/uploads — what is stored, for the admin page.
+// Deliberately reads length(raw_bytes) rather than the bytes: the companies
+// registry runs to tens of megabytes and listing must not haul it into memory.
+router.get('/uploads', ...adminOnly, async (req, res) => {
+  try {
+    const { rows } = await db.query(
+      `SELECT kind, file_name, uploaded_at, length(raw_bytes) AS file_size
+       FROM admin_uploads
+       WHERE kind = ANY($1) AND raw_bytes IS NOT NULL
+       ORDER BY kind`,
+      [DOWNLOADABLE_KINDS]
+    );
+    res.json(rows.map((r) => ({
+      kind: r.kind,
+      fileName: r.file_name || fallbackFileName(r.kind, r.uploaded_at),
+      fileSize: Number(r.file_size || 0),
+      uploadedAt: r.uploaded_at,
+    })));
+  } catch (err) {
+    console.error('admin uploads list error:', err.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// GET /api/statistics/uploads/:kind/download — hand the original file back.
+router.get('/uploads/:kind/download', ...adminOnly, async (req, res) => {
+  try {
+    const kind = req.params.kind;
+    if (!DOWNLOADABLE_KINDS.includes(kind)) {
+      return res.status(404).json({ error: 'Unknown upload' });
+    }
+    const { rows: [row] } = await db.query(
+      'SELECT raw_bytes, file_name, uploaded_at FROM admin_uploads WHERE kind = $1',
+      [kind]
+    );
+    if (!row) return res.status(404).json({ error: 'Nothing uploaded for this dataset' });
+    if (!row.raw_bytes) {
+      return res.status(404).json({ error: 'The original file was not kept for this upload' });
+    }
+
+    const name = row.file_name || fallbackFileName(kind, row.uploaded_at);
+    res.set('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    // RFC 5987: filename* carries the UTF-8 name; the ASCII filename is a fallback.
+    const asciiName = name.replace(/[^\x20-\x7e]/g, '_').replace(/"/g, '');
+    res.set('Content-Disposition',
+      `attachment; filename="${asciiName}"; filename*=UTF-8''${encodeURIComponent(name)}`);
+    res.send(row.raw_bytes);
+  } catch (err) {
+    console.error('admin upload download error:', err.message);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// POST /api/statistics/companies/file — archive the original companies file.
+//
+// The registry is parsed in the browser and only its summary is posted (see
+// /companies/data), so the file itself has to arrive separately to be
+// downloadable later. Bytes and name only: parsed_json belongs to the summary
+// save, and a failure here must leave the already-saved statistics untouched.
+router.post('/companies/file', ...adminOnly, upload.single('file'), async (req, res) => {
+  try {
+    if (!req.file) return res.status(400).json({ error: 'No file uploaded (field name: "file")' });
+    const stored = await saveRawFile('companies', req.file.buffer, uploadedFileName(req.file));
+    if (!stored) {
+      return res.status(409).json({ error: 'Upload the companies data before archiving its file' });
+    }
+    console.log(`companies: archived original file (${req.file.size} bytes)`);
+    res.json({ success: true, fileSize: req.file.size, fileName: uploadedFileName(req.file) });
+  } catch (err) {
+    console.error('companies file archive error:', err.message);
+    res.status(400).json({ error: err.message || 'Failed to store the file' });
   }
 });
 

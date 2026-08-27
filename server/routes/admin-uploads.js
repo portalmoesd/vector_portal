@@ -39,16 +39,41 @@ const upload = multer({
 // Spread this into route definitions: router.post('/x', ...adminOnly, handler)
 const adminOnly = [requireAuth, requireRole('ADMIN')];
 
-async function saveParsedAndRaw(kind, parsed, buffer) {
+/**
+ * Persist a parsed dataset, and the original file behind it where there is one.
+ *
+ * `buffer` and `fileName` are COALESCEd rather than overwritten: a save that
+ * carries only freshly parsed data — the companies summary, which is parsed in
+ * the browser and posted as JSON — must not blank the file stored against that
+ * kind by a separate upload.
+ */
+async function saveParsedAndRaw(kind, parsed, buffer, fileName) {
   await db.query(
-    `INSERT INTO admin_uploads (kind, parsed_json, raw_bytes, uploaded_at)
-     VALUES ($1, $2::jsonb, $3, now())
+    `INSERT INTO admin_uploads (kind, parsed_json, raw_bytes, file_name, uploaded_at)
+     VALUES ($1, $2::jsonb, $3, $4, now())
      ON CONFLICT (kind) DO UPDATE
        SET parsed_json = EXCLUDED.parsed_json,
            raw_bytes   = COALESCE(EXCLUDED.raw_bytes, admin_uploads.raw_bytes),
+           file_name   = COALESCE(EXCLUDED.file_name, admin_uploads.file_name),
            uploaded_at = EXCLUDED.uploaded_at`,
-    [kind, JSON.stringify(parsed), buffer || null]
+    [kind, JSON.stringify(parsed), buffer || null, fileName || null]
   );
+}
+
+/**
+ * Store just the original file against a kind that already exists.
+ *
+ * For a dataset whose parsing happens in the browser, the file arrives on its
+ * own after the summary has been saved — so this touches bytes and name only
+ * and leaves parsed_json alone.
+ */
+async function saveRawFile(kind, buffer, fileName) {
+  const { rowCount } = await db.query(
+    `UPDATE admin_uploads SET raw_bytes = $2, file_name = $3
+     WHERE kind = $1`,
+    [kind, buffer, fileName || null]
+  );
+  return rowCount > 0;
 }
 
 async function loadParsed(kind) {
@@ -98,6 +123,7 @@ module.exports = {
   upload,
   adminOnly,
   saveParsedAndRaw,
+  saveRawFile,
   loadParsed,
   migrateLegacyDiskUploadsOnce,
 };
