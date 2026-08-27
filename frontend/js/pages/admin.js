@@ -596,10 +596,84 @@
   // - Client-side mode (clientParse): parse the file in the browser and
   //   POST the aggregated JSON to `${endpoint}${clientPostPath}`. Used for
   //   files too large for the server to parse within the proxy timeout.
-  function initUploadPanel({ panelId, endpoint, labels, clientParse, clientPostPath }) {
+  // ── Stored original files ──────────────────────────────────────────────────
+  // The admin uploads these datasets; this is how they get them back. Only
+  // uploads whose original file was actually kept are listed, so a dataset
+  // stored before the file was retained simply offers no download rather than
+  // a button that fails.
+
+  function humanSize(bytes) {
+    if (!bytes) return '';
+    const units = ['B', 'KB', 'MB', 'GB'];
+    let n = bytes, i = 0;
+    while (n >= 1024 && i < units.length - 1) { n /= 1024; i += 1; }
+    return `${n < 10 && i > 0 ? n.toFixed(1) : Math.round(n)} ${units[i]}`;
+  }
+
+  // Every slot that wants a download line, registered by the panel that owns
+  // it. One list serves all three — the two upload cards and the Geostat card
+  // asked for it separately, which meant three concurrent requests for the
+  // same data on every page load.
+  const storedFileSlots = [];
+
+  function registerStoredFileSlot(kind, el, onRender) {
+    if (el) storedFileSlots.push({ kind, el, onRender });
+  }
+
+  async function refreshStoredFiles() {
+    let stored = [];
+    try {
+      stored = await Api.get('/api/statistics/uploads') || [];
+    } catch (_) {
+      stored = [];
+    }
+    storedFileSlots.forEach(({ kind, el, onRender }) => {
+      const entry = stored.find((u) => u.kind === kind) || null;
+      if (onRender) onRender(entry);
+      renderDownload(el, entry);
+    });
+  }
+
+  /**
+   * Render a download line for one kind into `el`, or empty it when nothing is
+   * stored. Returns the entry so the caller can tell whether one was drawn.
+   */
+  function renderDownload(el, entry) {
+    if (!el) return null;
+    if (!entry) { el.innerHTML = ''; return null; }
+    const meta = [
+      entry.fileName,
+      humanSize(entry.fileSize),
+      entry.uploadedAt ? new Date(entry.uploadedAt).toLocaleString() : '',
+      // The file is older than the figures beside it — its upload did not
+      // finish. Say so rather than letting the admin download the wrong one
+      // believing it matches.
+      entry.stale ? I18n.tr('admin.upload.fileStale') : '',
+    ].filter(Boolean).join(' · ');
+    el.innerHTML = `
+      <button type="button" class="btn btn-outline" style="padding:4px 10px;font-size:12px;">
+        ${escapeHtml(I18n.tr('admin.upload.download'))}
+      </button>
+      <span style="margin-left:8px;color:var(--text-secondary);">${escapeHtml(meta)}</span>`;
+    el.querySelector('button').addEventListener('click', async (e) => {
+      const btn = e.currentTarget;
+      btn.disabled = true;
+      try {
+        await downloadAdminUploadAuth(entry.kind, entry.fileName);
+      } catch (err) {
+        toast.error(err.message || I18n.tr('admin.upload.downloadFail'));
+      } finally {
+        btn.disabled = false;
+      }
+    });
+    return entry;
+  }
+
+  function initUploadPanel({ panelId, endpoint, kind, labels, clientParse, clientPostPath }) {
     const panel = document.getElementById(panelId);
     if (!panel) return;
     const statusEl = panel.querySelector('.upload-status');
+    const downloadEl = panel.querySelector('.upload-download');
     const form = panel.querySelector('.upload-form');
     const feedback = panel.querySelector('.upload-feedback');
 
@@ -656,7 +730,30 @@
         },
         body: JSON.stringify(payload),
       });
-      return { res, body: await res.json() };
+      // Hand the file back up so it can be archived once the summary is in.
+      return { res, body: await res.json(), file };
+    }
+
+    /**
+     * Store the original file behind a browser-parsed upload.
+     *
+     * Runs only after the summary saved, and its failure is reported without
+     * failing the upload: the statistics are already correct at that point, and
+     * the file is only there so the admin can download it back later.
+     */
+    async function archiveOriginal(file) {
+      const fd = new FormData();
+      fd.append('file', file);
+      const token = Api.getToken();
+      const res = await fetch(`${API_BASE}${endpoint}/file`, {
+        method: 'POST',
+        headers: token ? { 'Authorization': `Bearer ${token}` } : {},
+        body: fd,
+      });
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        throw new Error(j.error || I18n.tr('admin.upload.fileArchiveFail'));
+      }
     }
 
     form.addEventListener('submit', async (e) => {
@@ -664,10 +761,20 @@
       feedback.textContent = labels.uploading;
       feedback.style.color = 'var(--text-secondary)';
       try {
-        const { res, body: j } = clientParse ? await submitClientSide() : await submitServerSide();
+        const { res, body: j, file } = clientParse ? await submitClientSide() : await submitServerSide();
         if (res.ok && j.success) {
           let msg = `${labels.success} · ${j.countryCount || 0} ${labels.countries}`;
           let color = 'green';
+          if (clientParse && file) {
+            feedback.textContent = I18n.tr('admin.upload.archiving');
+            try {
+              await archiveOriginal(file);
+            } catch (err) {
+              // The data saved; only the archive copy did not.
+              msg += ` · ${err.message}`;
+              color = 'darkorange';
+            }
+          }
           // fdi-sectors uploads also refresh the annual FDI table; surface
           // that outcome so a failed refresh doesn't go unnoticed.
           if (j.fdiAnnual) {
@@ -682,6 +789,9 @@
           feedback.style.color = color;
           form.reset();
           refresh();
+          // Not just this panel's: an fdi-sectors upload also refreshes the
+          // annual Geostat workbook shown on the Data Status card.
+          refreshStoredFiles();
         } else {
           feedback.textContent = (j && j.error) || labels.failure;
           feedback.style.color = 'crimson';
@@ -692,6 +802,9 @@
       }
     });
 
+    // Separate element from the status line, which is written as textContent
+    // and could not hold a button.
+    registerStoredFileSlot(kind, downloadEl);
     refresh();
   }
 
@@ -787,11 +900,37 @@
       el.textContent = I18n.tr('admin.status.tradeUnknown');
     }
   }
+
+  /**
+   * The annual FDI workbook, which is fetched from Geostat rather than
+   * uploaded — so it belongs on this card rather than beside an upload form.
+   *
+   * Loaded on its own rather than inside loadDataStatus: that returns early
+   * when the trade state is unknown, which would leave this unrendered exactly
+   * when someone is on this tab looking into why.
+   */
+  function registerGeostatFile() {
+    const fileEl = document.getElementById('dataStatusFile');
+    if (!fileEl) return;
+    const label = document.createElement('div');
+    label.style.cssText = 'color:var(--text-secondary);margin-bottom:6px;';
+    label.textContent = I18n.tr('admin.status.fdiAnnualFile');
+    const slot = document.createElement('div');
+    fileEl.appendChild(label);
+    fileEl.appendChild(slot);
+    // The label only makes sense while there is a file under it.
+    registerStoredFileSlot('fdi-annual', slot, (entry) => {
+      label.style.display = entry ? '' : 'none';
+    });
+  }
+
   loadDataStatus();
+  registerGeostatFile();
 
   initUploadPanel({
     panelId: 'panel-fdi-sectors',
     endpoint: '/api/statistics/fdi-sectors',
+    kind: 'fdi-sectors',
     labels: {
       current: I18n.tr('admin.upload.current'),
       countries: I18n.tr('admin.upload.countries'),
@@ -805,6 +944,7 @@
   initUploadPanel({
     panelId: 'panel-companies',
     endpoint: '/api/statistics/companies',
+    kind: 'companies',
     clientParse: parseCompaniesFile,
     clientPostPath: '/data',
     labels: {
@@ -817,4 +957,7 @@
       failure: I18n.tr('admin.upload.failure'),
     },
   });
+
+  // Last, once every panel has registered its slot: one request fills them all.
+  refreshStoredFiles();
 })();

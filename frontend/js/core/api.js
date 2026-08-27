@@ -84,3 +84,10 @@ function downloadFileAuth(fileId, fileName) {
 function downloadEventFileAuth(eventId, fileId, fileName) {
   blobDownload(`/api/events/${eventId}/files/${fileId}/download`, fileName).catch(err => alert(err.message));
 }
+
+// The original XLSX behind an admin-uploaded dataset. Goes through
+// blobDownload rather than a plain link because the endpoint is admin-only and
+// a bare <a href> carries no bearer token.
+function downloadAdminUploadAuth(kind, fileName) {
+  return blobDownload(`/api/statistics/uploads/${encodeURIComponent(kind)}/download`, fileName);
+}
