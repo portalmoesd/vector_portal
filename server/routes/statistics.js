@@ -1837,6 +1837,38 @@ function sectorEnName(fullName) {
   return m ? m.en : fullName;
 }
 
+/**
+ * Columns from D onwards that carry numbers but were not read as periods.
+ *
+ * A period column whose header the parser cannot make sense of is dropped in
+ * silence — which is how a newly added quarter goes missing from an upload
+ * that otherwise reports success. The commonest cause is a merged header
+ * cell: a merge gives its value to its top-left cell only, so a quarter
+ * labelled by one merge across several columns arrives as one labelled
+ * column followed by blanks.
+ *
+ * Only columns holding actual numbers are reported, so the trailing empty
+ * columns every workbook carries stay quiet.
+ */
+function unreadPeriodColumns(rows, headerIdx, header, periodCols) {
+  const taken = new Set(periodCols.map((p) => p.col));
+  const ignored = [];
+  for (let c = 3; c < header.length; c++) {
+    if (taken.has(c)) continue;
+    let carriesData = false;
+    for (let r = headerIdx + 1; r < rows.length && !carriesData; r++) {
+      const v = (rows[r] || [])[c];
+      if (v === null || v === undefined || v === '' || v === '-') continue;
+      const n = parseFloat(String(v).replace(/,/g, '').replace(/\s/g, ''));
+      if (!isNaN(n)) carriesData = true;
+    }
+    if (carriesData) {
+      ignored.push({ column: XLSX.utils.encode_col(c), header: String(header[c] == null ? '' : header[c]).trim() });
+    }
+  }
+  return ignored;
+}
+
 function parseFdiSectorsWorkbook(wb) {
   const sheet = wb.Sheets[wb.SheetNames[0]];
   if (!sheet) throw new Error('Workbook has no sheets');
@@ -1946,6 +1978,10 @@ function parseFdiSectorsWorkbook(wb) {
     sectors: Array.from(sectorsSet),
     sectorNameMap,
     countries,
+    // Kept with the snapshot, not just reported once: it records what this
+    // stored dataset left behind, so a table missing a period can be
+    // explained long after the upload that produced it.
+    ignoredColumns: unreadPeriodColumns(rows, headerIdx, header, periodCols),
   };
 }
 
@@ -1986,6 +2022,10 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
     await saveParsedAndRaw('fdi-sectors', parsed, req.file.buffer, uploadedFileName(req.file));
     fdiSectorsCache.data = parsed;
     console.log(`fdi-sectors: uploaded (${countryCount} countries, ${parsed.sectors.length} sectors, years ${parsed.years.join(',')})`);
+    if (parsed.ignoredColumns.length) {
+      console.warn('fdi-sectors: columns with data but no readable period header were ignored:',
+        parsed.ignoredColumns.map((c) => `${c.column}${c.header ? ` (${c.header})` : ' (blank header)'}`).join(', '));
+    }
 
     // Both FDI series follow the same quarterly Geostat release, so refresh
     // the annual-by-country snapshot alongside the sector upload. A failed
@@ -2005,6 +2045,7 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
       yearsCovered: parsed.years,
       countryCount,
       sectorCount: parsed.sectors.length,
+      ignoredColumns: parsed.ignoredColumns,
       fdiAnnual,
     });
   } catch (err) {

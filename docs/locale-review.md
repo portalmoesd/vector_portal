@@ -296,6 +296,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `admin.upload.errParser` | Spreadsheet parser not loaded — check your connection | ცხრილების დამუშავება ვერ ჩაიტვირთა — შეამოწმეთ კავშირი |  |
 | `admin.upload.errNoSheet` | Workbook has no sheets | ფაილში ცხრილი არ არის |  |
 | `admin.upload.errNoActive` | No active companies with foreign capital found in the file | ფაილში აქტიური კომპანიები უცხოური კაპიტალით ვერ მოიძებნა |  |
+| `admin.upload.ignoredColumns` | ignored {columns} — those columns hold data but no readable period header | იგნორირებულია {columns} — ამ სვეტებს აქვს მონაცემები, მაგრამ არ აქვს ამოსაცნობი პერიოდის სათაური | Appended to the FDI-sector upload result when a column of figures had no header the parser could read |
 | `admin.upload.download` | Download original | ორიგინალის ჩამოტვირთვა |  |
 | `admin.upload.downloadFail` | Download failed. | ჩამოტვირთვა ვერ მოხერხდა. |  |
 | `admin.upload.archiving` | Storing the original file… | ორიგინალი ფაილი ინახება… |  |

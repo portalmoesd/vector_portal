@@ -775,6 +775,17 @@
               color = 'darkorange';
             }
           }
+          // Columns the parser could not read a period header from but which
+          // held numbers. Silently dropping one is how an added quarter goes
+          // missing from an upload that otherwise reports success, so it is
+          // said out loud rather than left to be noticed in the table.
+          if (Array.isArray(j.ignoredColumns) && j.ignoredColumns.length) {
+            const cols = j.ignoredColumns
+              .map((c) => (c.header ? `${c.column} ("${c.header}")` : c.column))
+              .join(', ');
+            msg += ` · ${I18n.tr('admin.upload.ignoredColumns', { columns: cols })}`;
+            color = 'darkorange';
+          }
           // fdi-sectors uploads also refresh the annual FDI table; surface
           // that outcome so a failed refresh doesn't go unnoticed.
           if (j.fdiAnnual) {

@@ -461,6 +461,7 @@
       "errNoActive": "No active companies with foreign capital found in the file",
       "fdiAnnualOk": "annual FDI table refreshed through {period}",
       "fdiAnnualFail": "annual FDI refresh failed ({error}) — previous table kept",
+      "ignoredColumns": "ignored {columns} — those columns hold data but no readable period header",
       "download": "Download original",
       "downloadFail": "Download failed.",
       "archiving": "Storing the original file…",
