@@ -93,6 +93,26 @@ async function migrate() {
       ALTER TABLE event_templates ALTER COLUMN created_by_id DROP NOT NULL;
     `);
 
+    // admin_uploads' later columns, as their own statements.
+    //
+    // schema.sql already carries these as ADD COLUMN IF NOT EXISTS, but it is
+    // sent as one multi-statement string, which Postgres runs in a single
+    // implicit transaction — so one failing statement anywhere in that file
+    // rolls back every other, these included, and the catch below lets the
+    // server start regardless. Every admin upload then fails on the missing
+    // column. Run separately, they survive that.
+    // Guarded on the table itself: on a database where schema.sql never
+    // succeeded at all there is nothing to alter, and that must not abort the
+    // migrations that follow.
+    await db.query(`
+      DO $$ BEGIN
+        ALTER TABLE admin_uploads ADD COLUMN IF NOT EXISTS file_name TEXT;
+        ALTER TABLE admin_uploads ADD COLUMN IF NOT EXISTS file_uploaded_at TIMESTAMPTZ;
+      EXCEPTION WHEN undefined_table THEN NULL;
+      END $$;
+    `);
+
+
     // Add supervisor_id column to events if missing
     await db.query(`
       DO $$ BEGIN
