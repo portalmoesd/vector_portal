@@ -596,64 +596,10 @@
   // - Client-side mode (clientParse): parse the file in the browser and
   //   POST the aggregated JSON to `${endpoint}${clientPostPath}`. Used for
   //   files too large for the server to parse within the proxy timeout.
-  // ── Stored original files ──────────────────────────────────────────────────
-  // The admin uploads these datasets; this is how they get them back. Only
-  // uploads whose original file was actually kept are listed, so a dataset
-  // stored before the file was retained simply offers no download rather than
-  // a button that fails.
-
-  function humanSize(bytes) {
-    if (!bytes) return '';
-    const units = ['B', 'KB', 'MB', 'GB'];
-    let n = bytes, i = 0;
-    while (n >= 1024 && i < units.length - 1) { n /= 1024; i += 1; }
-    return `${n < 10 && i > 0 ? n.toFixed(1) : Math.round(n)} ${units[i]}`;
-  }
-
-  async function fetchStoredUploads() {
-    try {
-      return await Api.get('/api/statistics/uploads') || [];
-    } catch (_) {
-      return [];
-    }
-  }
-
-  /**
-   * Render a download line for one kind into `el`, or empty it when nothing is
-   * stored. Returns the entry so the caller can tell whether one was drawn.
-   */
-  function renderDownload(el, entry) {
-    if (!el) return null;
-    if (!entry) { el.innerHTML = ''; return null; }
-    const meta = [
-      entry.fileName,
-      humanSize(entry.fileSize),
-      entry.uploadedAt ? new Date(entry.uploadedAt).toLocaleString() : '',
-    ].filter(Boolean).join(' · ');
-    el.innerHTML = `
-      <button type="button" class="btn btn-outline" style="padding:4px 10px;font-size:12px;">
-        ${escapeHtml(I18n.tr('admin.upload.download'))}
-      </button>
-      <span style="margin-left:8px;color:var(--text-secondary);">${escapeHtml(meta)}</span>`;
-    el.querySelector('button').addEventListener('click', async (e) => {
-      const btn = e.currentTarget;
-      btn.disabled = true;
-      try {
-        await downloadAdminUploadAuth(entry.kind, entry.fileName);
-      } catch (err) {
-        toast.error(err.message || I18n.tr('admin.upload.downloadFail'));
-      } finally {
-        btn.disabled = false;
-      }
-    });
-    return entry;
-  }
-
-  function initUploadPanel({ panelId, endpoint, kind, labels, clientParse, clientPostPath }) {
+  function initUploadPanel({ panelId, endpoint, labels, clientParse, clientPostPath }) {
     const panel = document.getElementById(panelId);
     if (!panel) return;
     const statusEl = panel.querySelector('.upload-status');
-    const downloadEl = panel.querySelector('.upload-download');
     const form = panel.querySelector('.upload-form');
     const feedback = panel.querySelector('.upload-feedback');
 
@@ -674,10 +620,6 @@
       } catch (err) {
         statusEl.textContent = labels.noFile;
       }
-      // Separate element, not part of renderStatus: that writes textContent,
-      // and this needs a real button.
-      const stored = await fetchStoredUploads();
-      renderDownload(downloadEl, stored.find((u) => u.kind === kind));
     }
 
     async function submitServerSide() {
@@ -714,30 +656,7 @@
         },
         body: JSON.stringify(payload),
       });
-      // Hand the file back up so it can be archived once the summary is in.
-      return { res, body: await res.json(), file };
-    }
-
-    /**
-     * Store the original file behind a browser-parsed upload.
-     *
-     * Runs only after the summary saved, and its failure is reported without
-     * failing the upload: the statistics are already correct at that point, and
-     * the file is only there so the admin can download it back later.
-     */
-    async function archiveOriginal(file) {
-      const fd = new FormData();
-      fd.append('file', file);
-      const token = Api.getToken();
-      const res = await fetch(`${API_BASE}${endpoint}/file`, {
-        method: 'POST',
-        headers: token ? { 'Authorization': `Bearer ${token}` } : {},
-        body: fd,
-      });
-      if (!res.ok) {
-        const j = await res.json().catch(() => ({}));
-        throw new Error(j.error || I18n.tr('admin.upload.fileArchiveFail'));
-      }
+      return { res, body: await res.json() };
     }
 
     form.addEventListener('submit', async (e) => {
@@ -745,20 +664,10 @@
       feedback.textContent = labels.uploading;
       feedback.style.color = 'var(--text-secondary)';
       try {
-        const { res, body: j, file } = clientParse ? await submitClientSide() : await submitServerSide();
+        const { res, body: j } = clientParse ? await submitClientSide() : await submitServerSide();
         if (res.ok && j.success) {
           let msg = `${labels.success} · ${j.countryCount || 0} ${labels.countries}`;
           let color = 'green';
-          if (clientParse && file) {
-            feedback.textContent = I18n.tr('admin.upload.archiving');
-            try {
-              await archiveOriginal(file);
-            } catch (err) {
-              // The data saved; only the archive copy did not.
-              msg += ` · ${err.message}`;
-              color = 'darkorange';
-            }
-          }
           // fdi-sectors uploads also refresh the annual FDI table; surface
           // that outcome so a failed refresh doesn't go unnoticed.
           if (j.fdiAnnual) {
@@ -878,34 +787,11 @@
       el.textContent = I18n.tr('admin.status.tradeUnknown');
     }
   }
-
-  /**
-   * The annual FDI workbook, which is fetched from Geostat rather than
-   * uploaded — so it belongs on this card rather than beside an upload form.
-   *
-   * Loaded on its own rather than inside loadDataStatus: that returns early
-   * when the trade state is unknown, which would leave this unrendered exactly
-   * when someone is on this tab looking into why.
-   */
-  async function loadGeostatFile() {
-    const fileEl = document.getElementById('dataStatusFile');
-    if (!fileEl) return;
-    const stored = await fetchStoredUploads();
-    const entry = stored.find((u) => u.kind === 'fdi-annual');
-    if (!entry) { fileEl.innerHTML = ''; return; }
-    fileEl.innerHTML = `<div style="color:var(--text-secondary);margin-bottom:6px;">${escapeHtml(I18n.tr('admin.status.fdiAnnualFile'))}</div>`;
-    const slot = document.createElement('div');
-    fileEl.appendChild(slot);
-    renderDownload(slot, entry);
-  }
-
   loadDataStatus();
-  loadGeostatFile();
 
   initUploadPanel({
     panelId: 'panel-fdi-sectors',
     endpoint: '/api/statistics/fdi-sectors',
-    kind: 'fdi-sectors',
     labels: {
       current: I18n.tr('admin.upload.current'),
       countries: I18n.tr('admin.upload.countries'),
@@ -919,7 +805,6 @@
   initUploadPanel({
     panelId: 'panel-companies',
     endpoint: '/api/statistics/companies',
-    kind: 'companies',
     clientParse: parseCompaniesFile,
     clientPostPath: '/data',
     labels: {
