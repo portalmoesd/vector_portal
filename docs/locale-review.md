@@ -296,6 +296,10 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `admin.upload.errParser` | Spreadsheet parser not loaded — check your connection | ცხრილების დამუშავება ვერ ჩაიტვირთა — შეამოწმეთ კავშირი |  |
 | `admin.upload.errNoSheet` | Workbook has no sheets | ფაილში ცხრილი არ არის |  |
 | `admin.upload.errNoActive` | No active companies with foreign capital found in the file | ფაილში აქტიური კომპანიები უცხოური კაპიტალით ვერ მოიძებნა |  |
+| `admin.upload.clear` | Erase stored data | შენახული მონაცემების წაშლა | Button on each upload panel; hidden while nothing is stored |
+| `admin.upload.clearConfirm` | Erase this dataset? The statistics will show no data until a new file is uploaded. | წავშალოთ ეს მონაცემები? სტატისტიკა მონაცემების გარეშე დარჩება ახალი ფაილის ატვირთვამდე. |  |
+| `admin.upload.cleared` | Data erased. Upload a new file. | მონაცემები წაიშალა. ატვირთეთ ახალი ფაილი. |  |
+| `admin.upload.clearFail` | Failed to erase the data | მონაცემების წაშლა ვერ მოხერხდა |  |
 
 ## Archive
 
