@@ -2516,7 +2516,7 @@
         const sJson = await sRes.json();
         if (sJson && sJson.success && !sJson.empty) {
           const c = sJson.countries && sJson.countries[String(countryCode)];
-          if (c) sectorsData = { years: sJson.years, sectors: sJson.sectors, sectorNameMap: sJson.sectorNameMap || {}, data: c };
+          if (c) sectorsData = { years: sJson.years, sectors: sJson.sectors, sectorNameMap: sJson.sectorNameMap || {}, data: c, uploadedAt: sJson.uploadedAt };
         }
       } catch (_) { /* silently hide sectors card */ }
       pdfState.investmentsSectors = sectorsData;
@@ -2547,7 +2547,12 @@
     const title = isKa
       ? `${country} - პირდაპირი უცხოური ინვესტიციები სექტორების მიხედვით, ${yrRange}`
       : `${country} - Foreign Direct Investment by Sector, ${yrRange}`;
-    fdiSectorsHeaderEl.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3><div style="font-size:0.85rem;color:var(--text-secondary);">${isKa ? 'მლნ. აშშ დოლარი' : 'mln USD'}</div>`;
+    // The upload date beside the unit, so whether the table reflects the
+    // latest admin upload is readable off the report itself.
+    const uploadedNote = sectorsState.uploadedAt
+      ? ` · ${isKa ? 'მონაცემები ატვირთულია' : 'data uploaded'}: ${new Date(sectorsState.uploadedAt).toLocaleString()}`
+      : '';
+    fdiSectorsHeaderEl.innerHTML = `<h3 class="stat-report__title">${escapeHtml(title)}</h3><div style="font-size:0.85rem;color:var(--text-secondary);">${isKa ? 'მლნ. აშშ დოლარი' : 'mln USD'}${escapeHtml(uploadedNote)}</div>`;
 
     const fmt = (v) => {
       if (v === null || v === undefined || v === 0) return '-';
