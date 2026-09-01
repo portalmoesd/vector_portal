@@ -603,8 +603,22 @@
     const form = panel.querySelector('.upload-form');
     const feedback = panel.querySelector('.upload-feedback');
 
+    // Erase button, created here rather than in the HTML since every upload
+    // panel gets one. Hidden while there is nothing stored to erase.
+    const clearBtn = document.createElement('button');
+    clearBtn.type = 'button';
+    clearBtn.className = 'btn btn-outline';
+    clearBtn.style.cssText = 'margin-top:10px;font-size:12px;padding:4px 10px;color:crimson;border-color:crimson;';
+    clearBtn.textContent = I18n.tr('admin.upload.clear');
+    // display, not the hidden attribute: .btn sets display:inline-flex, which
+    // outranks the browser's [hidden] rule.
+    clearBtn.style.display = 'none';
+    form.insertAdjacentElement('afterend', clearBtn);
+
     function renderStatus(j) {
-      if (j && j.success && !j.empty) {
+      const hasData = !!(j && j.success && !j.empty);
+      clearBtn.style.display = hasData ? '' : 'none';
+      if (hasData) {
         const date = j.uploadedAt ? new Date(j.uploadedAt).toLocaleString() : '-';
         const years = Array.isArray(j.yearsCovered) ? `${j.yearsCovered[0]}–${j.yearsCovered[j.yearsCovered.length - 1]}` : '';
         statusEl.textContent = `${labels.current}: ${date} · ${j.countryCount || 0} ${labels.countries}${years ? ' · ' + years : ''}`;
@@ -612,6 +626,28 @@
         statusEl.textContent = labels.noFile;
       }
     }
+
+    clearBtn.addEventListener('click', async () => {
+      if (!confirm(I18n.tr('admin.upload.clearConfirm'))) return;
+      clearBtn.disabled = true;
+      try {
+        const token = Api.getToken();
+        const res = await fetch(`${API_BASE}${endpoint}`, {
+          method: 'DELETE',
+          headers: token ? { 'Authorization': `Bearer ${token}` } : {},
+        });
+        const j = await res.json().catch(() => ({}));
+        if (!res.ok || !j.success) throw new Error((j && j.error) || I18n.tr('admin.upload.clearFail'));
+        feedback.textContent = I18n.tr('admin.upload.cleared');
+        feedback.style.color = 'green';
+        refresh();
+      } catch (err) {
+        feedback.textContent = err.message || I18n.tr('admin.upload.clearFail');
+        feedback.style.color = 'crimson';
+      } finally {
+        clearBtn.disabled = false;
+      }
+    });
 
     async function refresh() {
       try {

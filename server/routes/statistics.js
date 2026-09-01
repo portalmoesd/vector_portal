@@ -1331,20 +1331,37 @@ const { upload, adminOnly, saveParsedAndRaw, loadParsed } = require('./admin-upl
 // Each admin dataset (fdi-annual, fdi-sectors, companies) is served from a
 // module-level cache that an upload refreshes — but the upload lands in
 // whichever instance happened to take the request, and every other
-// instance's memory would keep the previous upload forever. The tell: the
-// stored original downloads correctly (that read goes to the database) while
-// the statistics keep showing the old figures. So before serving, compare
-// the row's uploaded_at with the one the cache was loaded from and re-read
-// the row when they differ. The probe is a primary-key lookup of one
+// instance's memory would keep the previous upload forever. So before
+// serving, compare the row's uploaded_at with the one the cache was loaded
+// from and re-read the row when they differ. The probe is a primary-key lookup of one
 // timestamp; the full JSONB read happens only when something changed.
 // Never throws: with the database unreachable, whatever memory holds is
 // still the best answer available.
+// Erase a stored dataset so the admin can start clean before uploading a
+// new file. The database row is the source of truth: deleting it clears
+// this instance immediately and every other instance on its next request,
+// through the same revalidation the GETs run.
+async function eraseSnapshot(kind, cache, res) {
+  const { rowCount } = await db.query('DELETE FROM admin_uploads WHERE kind = $1', [kind]);
+  cache.data = null;
+  cache.dbUploadedAt = null;
+  console.log(`${kind}: dataset erased by admin${rowCount ? '' : ' (nothing was stored)'}`);
+  res.json({ success: true, erased: rowCount > 0 });
+}
+
 async function freshenSnapshot(kind, cache) {
   try {
     const { rows: [row] } = await db.query(
       'SELECT uploaded_at FROM admin_uploads WHERE kind = $1', [kind]
     );
-    if (!row) return;
+    if (!row) {
+      // No row can mean an admin erased the dataset, possibly in another
+      // instance. Only a cache that was loaded from the database is dropped:
+      // the /fdi bootstrap fills its cache with no row behind it, and that
+      // copy must survive.
+      if (cache.dbUploadedAt) { cache.data = null; cache.dbUploadedAt = null; }
+      return;
+    }
     const at = row.uploaded_at instanceof Date
       ? row.uploaded_at.toISOString() : String(row.uploaded_at);
     if (cache.data && cache.dbUploadedAt === at) return;
@@ -2008,6 +2025,16 @@ router.get('/fdi-sectors', async (req, res) => {
   });
 });
 
+// ── DELETE /api/statistics/fdi-sectors ──────────────────────────────────
+router.delete('/fdi-sectors', ...adminOnly, async (req, res) => {
+  try {
+    await eraseSnapshot('fdi-sectors', fdiSectorsCache, res);
+  } catch (err) {
+    console.error('fdi-sectors erase error:', err.message);
+    res.status(500).json({ error: 'Failed to erase the data' });
+  }
+});
+
 router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (req, res) => {
   try {
     if (!req.file) return res.status(400).json({ error: 'No file uploaded (field name: "file")' });
@@ -2042,6 +2069,16 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
   } catch (err) {
     console.error('fdi-sectors upload error:', err.message);
     res.status(400).json({ error: err.message || 'Failed to parse uploaded file' });
+  }
+});
+
+// ── DELETE /api/statistics/companies ────────────────────────────────────
+router.delete('/companies', ...adminOnly, async (req, res) => {
+  try {
+    await eraseSnapshot('companies', companiesCache, res);
+  } catch (err) {
+    console.error('companies erase error:', err.message);
+    res.status(500).json({ error: 'Failed to erase the data' });
   }
 });
 
