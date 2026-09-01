@@ -296,13 +296,6 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `admin.upload.errParser` | Spreadsheet parser not loaded — check your connection | ცხრილების დამუშავება ვერ ჩაიტვირთა — შეამოწმეთ კავშირი |  |
 | `admin.upload.errNoSheet` | Workbook has no sheets | ფაილში ცხრილი არ არის |  |
 | `admin.upload.errNoActive` | No active companies with foreign capital found in the file | ფაილში აქტიური კომპანიები უცხოური კაპიტალით ვერ მოიძებნა |  |
-| `admin.upload.ignoredColumns` | ignored {columns} — those columns hold data but no readable period header | იგნორირებულია {columns} — ამ სვეტებს აქვს მონაცემები, მაგრამ არ აქვს ამოსაცნობი პერიოდის სათაური | Appended to the FDI-sector upload result when a column of figures had no header the parser could read |
-| `admin.upload.download` | Download original | ორიგინალის ჩამოტვირთვა |  |
-| `admin.upload.downloadFail` | Download failed. | ჩამოტვირთვა ვერ მოხერხდა. |  |
-| `admin.upload.archiving` | Storing the original file… | ორიგინალი ფაილი ინახება… |  |
-| `admin.upload.fileArchiveFail` | The data was saved, but the original file could not be stored. | მონაცემები შენახულია, თუმცა ორიგინალი ფაილი ვერ შეინახა. |  |
-| `admin.upload.fileStale` | the stored file is older than this data | შენახული ფაილი ამ მონაცემებზე ძველია | Shown when the stored original predates the data beside it |
-| `admin.status.fdiAnnualFile` | Annual FDI workbook, fetched from Geostat: | წლიური პირდაპირი ინვესტიციების ფაილი, მიღებული საქსტატიდან: | Labels the Geostat-fetched workbook on the Data Status card |
 
 ## Archive
 

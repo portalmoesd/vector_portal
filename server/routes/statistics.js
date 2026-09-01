@@ -1113,7 +1113,7 @@ router.get('/trade-status', async (req, res) => {
 const FDI_PAGE_URL = 'https://www.geostat.ge/ka/modules/categories/191/pirdapiri-utskhouri-investitsiebi';
 const FDI_FALLBACK_URL = 'https://www.geostat.ge/media/79883/FDI_Geo_countries.xlsx';
 const FDI_LOCAL = require('path').join(__dirname, '../data/FDI_Geo_countries.xlsx');
-let fdiCache = { data: null, dbUploadedAt: null };
+let fdiCache = { data: null };
 
 async function resolveFdiAnnualUrl() {
   const pageRes = await geostatHttp(FDI_PAGE_URL, {
@@ -1292,14 +1292,16 @@ function parseFdiQuarterSheet(wb, lastAnnualYear) {
 }
 
 router.get('/fdi', async (req, res) => {
-  res.set('Cache-Control', 'no-store');
   try {
-    // Snapshot semantics: serve the last refreshed copy, replaced only by
-    // the next refresh (triggered from /fdi-sectors/upload). That refresh
-    // may have run in another instance, so revalidate against the database
-    // row rather than trusting this process's memory.
-    await freshenSnapshot('fdi-annual', fdiCache);
+    // Snapshot semantics: serve the last refreshed copy as-is. It's replaced
+    // only by the next refresh, triggered from /fdi-sectors/upload.
     if (fdiCache.data) return res.json(fdiCache.data);
+
+    const saved = await loadParsed('fdi-annual');
+    if (saved) {
+      fdiCache.data = saved;
+      return res.json(saved);
+    }
 
     // Nothing persisted yet (first boot before any sector upload): try a
     // live refresh, then the bundled workbook.
@@ -1325,39 +1327,7 @@ router.get('/fdi', async (req, res) => {
 
 const path = require('path');
 const fs = require('fs');
-const { upload, adminOnly, saveParsedAndRaw, saveRawFile, loadParsed } = require('./admin-uploads');
-
-// ── Serving the admin-uploaded snapshots ────────────────────────────────
-// Each admin dataset (fdi-annual, fdi-sectors, companies) is served from a
-// module-level cache that an upload refreshes — but the upload lands in
-// whichever instance happened to take the request, and every other
-// instance's memory would keep the previous upload forever. The tell: the
-// stored original downloads correctly (that read goes to the database) while
-// the statistics keep showing the old figures. So before serving, compare
-// the row's uploaded_at with the one the cache was loaded from and re-read
-// the row when they differ. The probe is a primary-key lookup of one
-// timestamp; the full JSONB read happens only when something changed.
-// Never throws: with the database unreachable, whatever memory holds is
-// still the best answer available.
-async function freshenSnapshot(kind, cache) {
-  try {
-    const { rows: [row] } = await db.query(
-      'SELECT uploaded_at FROM admin_uploads WHERE kind = $1', [kind]
-    );
-    if (!row) return;
-    const at = row.uploaded_at instanceof Date
-      ? row.uploaded_at.toISOString() : String(row.uploaded_at);
-    if (cache.data && cache.dbUploadedAt === at) return;
-    const parsed = await loadParsed(kind);
-    if (parsed) {
-      cache.data = parsed;
-      cache.dbUploadedAt = at;
-      console.log(`${kind}: snapshot reloaded from DB (uploaded_at ${at})`);
-    }
-  } catch (err) {
-    console.warn(`${kind}: snapshot revalidation failed, serving cached:`, err.message);
-  }
-}
+const { upload, adminOnly, saveParsedAndRaw, loadParsed } = require('./admin-uploads');
 
 const TOURISM_HISTORICAL_URL = 'https://api.gnta.ge/api/v1/web/media/download/10068';
 const TOURISM_HISTORICAL_LOCAL = path.join(__dirname, '../data/gnta-visitors-historical.xlsx');
@@ -1832,7 +1802,7 @@ router.post('/tourism/refresh', ...adminOnly, (req, res) => {
 // XLSX file. No initial data is bundled — the endpoint returns {empty:true}
 // until the first upload.
 
-let fdiSectorsCache = { data: null, dbUploadedAt: null };
+let fdiSectorsCache = { data: null };
 
 // Sector name mapping: full Georgian name → { short (Georgian), en (English) }
 const SECTOR_NAMES = {
@@ -1865,38 +1835,6 @@ function sectorShortName(fullName) {
 function sectorEnName(fullName) {
   const m = SECTOR_NAMES[fullName];
   return m ? m.en : fullName;
-}
-
-/**
- * Columns from D onwards that carry numbers but were not read as periods.
- *
- * A period column whose header the parser cannot make sense of is dropped in
- * silence — which is how a newly added quarter goes missing from an upload
- * that otherwise reports success. The commonest cause is a merged header
- * cell: a merge gives its value to its top-left cell only, so a quarter
- * labelled by one merge across several columns arrives as one labelled
- * column followed by blanks.
- *
- * Only columns holding actual numbers are reported, so the trailing empty
- * columns every workbook carries stay quiet.
- */
-function unreadPeriodColumns(rows, headerIdx, header, periodCols) {
-  const taken = new Set(periodCols.map((p) => p.col));
-  const ignored = [];
-  for (let c = 3; c < header.length; c++) {
-    if (taken.has(c)) continue;
-    let carriesData = false;
-    for (let r = headerIdx + 1; r < rows.length && !carriesData; r++) {
-      const v = (rows[r] || [])[c];
-      if (v === null || v === undefined || v === '' || v === '-') continue;
-      const n = parseFloat(String(v).replace(/,/g, '').replace(/\s/g, ''));
-      if (!isNaN(n)) carriesData = true;
-    }
-    if (carriesData) {
-      ignored.push({ column: XLSX.utils.encode_col(c), header: String(header[c] == null ? '' : header[c]).trim() });
-    }
-  }
-  return ignored;
 }
 
 function parseFdiSectorsWorkbook(wb) {
@@ -2008,10 +1946,6 @@ function parseFdiSectorsWorkbook(wb) {
     sectors: Array.from(sectorsSet),
     sectorNameMap,
     countries,
-    // Kept with the snapshot, not just reported once: it records what this
-    // stored dataset left behind, so a table missing a period can be
-    // explained long after the upload that produced it.
-    ignoredColumns: unreadPeriodColumns(rows, headerIdx, header, periodCols),
   };
 }
 
@@ -2026,9 +1960,7 @@ async function loadFdiSectorsFromDb() {
 // Init: load any previously uploaded data on module load.
 loadFdiSectorsFromDb().catch((err) => console.warn('fdi-sectors load failed:', err.message));
 
-router.get('/fdi-sectors', async (req, res) => {
-  res.set('Cache-Control', 'no-store');
-  await freshenSnapshot('fdi-sectors', fdiSectorsCache);
+router.get('/fdi-sectors', (req, res) => {
   const data = fdiSectorsCache.data;
   if (!data) return res.json({ success: true, empty: true });
   res.json({
@@ -2051,13 +1983,9 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
     const parsed = parseFdiSectorsWorkbook(wb);
     const countryCount = Object.keys(parsed.countries).length;
     if (!countryCount) return res.status(400).json({ error: 'No country data found in file' });
-    await saveParsedAndRaw('fdi-sectors', parsed, req.file.buffer, uploadedFileName(req.file));
+    await saveParsedAndRaw('fdi-sectors', parsed, req.file.buffer);
     fdiSectorsCache.data = parsed;
     console.log(`fdi-sectors: uploaded (${countryCount} countries, ${parsed.sectors.length} sectors, years ${parsed.years.join(',')})`);
-    if (parsed.ignoredColumns.length) {
-      console.warn('fdi-sectors: columns with data but no readable period header were ignored:',
-        parsed.ignoredColumns.map((c) => `${c.column}${c.header ? ` (${c.header})` : ' (blank header)'}`).join(', '));
-    }
 
     // Both FDI series follow the same quarterly Geostat release, so refresh
     // the annual-by-country snapshot alongside the sector upload. A failed
@@ -2077,7 +2005,6 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
       yearsCovered: parsed.years,
       countryCount,
       sectorCount: parsed.sectors.length,
-      ignoredColumns: parsed.ignoredColumns,
       fdiAnnual,
     });
   } catch (err) {
@@ -2094,7 +2021,7 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
 // the already-aggregated JSON is POSTed here. The payload is tiny (one
 // entry per country).
 
-let companiesCache = { data: null, dbUploadedAt: null };
+let companiesCache = { data: null };
 
 async function loadCompaniesFromDb() {
   const parsed = await loadParsed('companies');
@@ -2105,9 +2032,7 @@ async function loadCompaniesFromDb() {
 }
 loadCompaniesFromDb().catch((err) => console.warn('companies load failed:', err.message));
 
-router.get('/companies', async (req, res) => {
-  res.set('Cache-Control', 'no-store');
-  await freshenSnapshot('companies', companiesCache);
+router.get('/companies', (req, res) => {
   const data = companiesCache.data;
   if (!data) return res.json({ success: true, empty: true });
   res.json({
@@ -2159,132 +2084,6 @@ router.post('/companies/data', ...adminOnly, async (req, res) => {
   } catch (err) {
     console.error('companies data save error:', err.message);
     res.status(400).json({ error: err.message || 'Failed to save companies data' });
-  }
-});
-
-// ─── Stored original files ───────────────────────────────────────────────────
-// The admin uploads the datasets that drive these pages; these hand the
-// original files back. Only the three real datasets are addressable: the
-// legacy disk migration also swept server/data/*.json into admin_uploads
-// (countries, departments, users, tourism-cache), and those are not files
-// anyone uploaded.
-const DOWNLOADABLE_KINDS = ['fdi-sectors', 'companies', 'fdi-annual'];
-
-/**
- * The name a multipart upload arrived with.
- *
- * Busboy hands filenames back as latin1, so a Georgian or otherwise non-ASCII
- * name is mojibake unless it is read back as UTF-8 — the same fix the event
- * attachment upload applies.
- */
-function uploadedFileName(file) {
-  if (!file || !file.originalname) return null;
-  try {
-    return Buffer.from(file.originalname, 'latin1').toString('utf8');
-  } catch (_) {
-    return file.originalname;
-  }
-}
-
-/**
- * An attachment Content-Disposition carrying a name of any script.
- *
- * RFC 5987: filename* holds the UTF-8 name and the plain filename is the ASCII
- * fallback. encodeURIComponent leaves an apostrophe alone, and since ' is the
- * ext-value delimiter a name like "company's registry.xlsx" would otherwise
- * add a third one and make the parameter unparseable.
- */
-function contentDisposition(name) {
-  const ascii = name.replace(/[^\x20-\x7e]/g, '_').replace(/"/g, '');
-  const utf8 = encodeURIComponent(name).replace(/'/g, '%27');
-  return `attachment; filename="${ascii}"; filename*=UTF-8''${utf8}`;
-}
-
-/** Fallback name for a file stored before the name was kept. */
-function fallbackFileName(kind, uploadedAt) {
-  const day = uploadedAt ? new Date(uploadedAt).toISOString().slice(0, 10) : 'stored';
-  return `${kind}-${day}.xlsx`;
-}
-
-// GET /api/statistics/uploads — what is stored, for the admin page.
-// Deliberately reads length(raw_bytes) rather than the bytes: the companies
-// registry runs to tens of megabytes and listing must not haul it into memory.
-router.get('/uploads', ...adminOnly, async (req, res) => {
-  try {
-    const { rows } = await db.query(
-      `SELECT kind, file_name, uploaded_at, file_uploaded_at,
-              length(raw_bytes) AS file_size
-       FROM admin_uploads
-       WHERE kind = ANY($1) AND raw_bytes IS NOT NULL
-       ORDER BY kind`,
-      [DOWNLOADABLE_KINDS]
-    );
-    res.json(rows.map((r) => {
-      // The file's own timestamp, not the dataset's. A browser-parsed upload
-      // saves its summary first and its file after, so a failed second step
-      // leaves an older file behind newer figures — and saying so is better
-      // than stamping the old workbook with the new date.
-      const fileAt = r.file_uploaded_at || r.uploaded_at;
-      return {
-        kind: r.kind,
-        fileName: r.file_name || fallbackFileName(r.kind, fileAt),
-        fileSize: Number(r.file_size || 0),
-        uploadedAt: fileAt,
-        // True when the stored file predates the data it sits beside.
-        stale: !!r.file_uploaded_at && r.file_uploaded_at < r.uploaded_at,
-      };
-    }));
-  } catch (err) {
-    console.error('admin uploads list error:', err.message);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-// GET /api/statistics/uploads/:kind/download — hand the original file back.
-router.get('/uploads/:kind/download', ...adminOnly, async (req, res) => {
-  try {
-    const kind = req.params.kind;
-    if (!DOWNLOADABLE_KINDS.includes(kind)) {
-      return res.status(404).json({ error: 'Unknown upload' });
-    }
-    const { rows: [row] } = await db.query(
-      `SELECT raw_bytes, file_name, COALESCE(file_uploaded_at, uploaded_at) AS uploaded_at
-       FROM admin_uploads WHERE kind = $1`,
-      [kind]
-    );
-    if (!row) return res.status(404).json({ error: 'Nothing uploaded for this dataset' });
-    if (!row.raw_bytes) {
-      return res.status(404).json({ error: 'The original file was not kept for this upload' });
-    }
-
-    const name = row.file_name || fallbackFileName(kind, row.uploaded_at);
-    res.set('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-    res.set('Content-Disposition', contentDisposition(name));
-    res.send(row.raw_bytes);
-  } catch (err) {
-    console.error('admin upload download error:', err.message);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
-
-// POST /api/statistics/companies/file — archive the original companies file.
-//
-// The registry is parsed in the browser and only its summary is posted (see
-// /companies/data), so the file itself has to arrive separately to be
-// downloadable later. Bytes and name only: parsed_json belongs to the summary
-// save, and a failure here must leave the already-saved statistics untouched.
-router.post('/companies/file', ...adminOnly, upload.single('file'), async (req, res) => {
-  try {
-    if (!req.file) return res.status(400).json({ error: 'No file uploaded (field name: "file")' });
-    const stored = await saveRawFile('companies', req.file.buffer, uploadedFileName(req.file));
-    if (!stored) {
-      return res.status(409).json({ error: 'Upload the companies data before archiving its file' });
-    }
-    console.log(`companies: archived original file (${req.file.size} bytes)`);
-    res.json({ success: true, fileSize: req.file.size, fileName: uploadedFileName(req.file) });
-  } catch (err) {
-    console.error('companies file archive error:', err.message);
-    res.status(400).json({ error: err.message || 'Failed to store the file' });
   }
 });
 
