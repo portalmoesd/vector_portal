@@ -1113,7 +1113,7 @@ router.get('/trade-status', async (req, res) => {
 const FDI_PAGE_URL = 'https://www.geostat.ge/ka/modules/categories/191/pirdapiri-utskhouri-investitsiebi';
 const FDI_FALLBACK_URL = 'https://www.geostat.ge/media/79883/FDI_Geo_countries.xlsx';
 const FDI_LOCAL = require('path').join(__dirname, '../data/FDI_Geo_countries.xlsx');
-let fdiCache = { data: null };
+let fdiCache = { data: null, dbUploadedAt: null };
 
 async function resolveFdiAnnualUrl() {
   const pageRes = await geostatHttp(FDI_PAGE_URL, {
@@ -1292,16 +1292,14 @@ function parseFdiQuarterSheet(wb, lastAnnualYear) {
 }
 
 router.get('/fdi', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
   try {
-    // Snapshot semantics: serve the last refreshed copy as-is. It's replaced
-    // only by the next refresh, triggered from /fdi-sectors/upload.
+    // Snapshot semantics: serve the last refreshed copy, replaced only by
+    // the next refresh (triggered from /fdi-sectors/upload). That refresh
+    // may have run in another instance, so revalidate against the database
+    // row rather than trusting this process's memory.
+    await freshenSnapshot('fdi-annual', fdiCache);
     if (fdiCache.data) return res.json(fdiCache.data);
-
-    const saved = await loadParsed('fdi-annual');
-    if (saved) {
-      fdiCache.data = saved;
-      return res.json(saved);
-    }
 
     // Nothing persisted yet (first boot before any sector upload): try a
     // live refresh, then the bundled workbook.
@@ -1328,6 +1326,38 @@ router.get('/fdi', async (req, res) => {
 const path = require('path');
 const fs = require('fs');
 const { upload, adminOnly, saveParsedAndRaw, saveRawFile, loadParsed } = require('./admin-uploads');
+
+// ── Serving the admin-uploaded snapshots ────────────────────────────────
+// Each admin dataset (fdi-annual, fdi-sectors, companies) is served from a
+// module-level cache that an upload refreshes — but the upload lands in
+// whichever instance happened to take the request, and every other
+// instance's memory would keep the previous upload forever. The tell: the
+// stored original downloads correctly (that read goes to the database) while
+// the statistics keep showing the old figures. So before serving, compare
+// the row's uploaded_at with the one the cache was loaded from and re-read
+// the row when they differ. The probe is a primary-key lookup of one
+// timestamp; the full JSONB read happens only when something changed.
+// Never throws: with the database unreachable, whatever memory holds is
+// still the best answer available.
+async function freshenSnapshot(kind, cache) {
+  try {
+    const { rows: [row] } = await db.query(
+      'SELECT uploaded_at FROM admin_uploads WHERE kind = $1', [kind]
+    );
+    if (!row) return;
+    const at = row.uploaded_at instanceof Date
+      ? row.uploaded_at.toISOString() : String(row.uploaded_at);
+    if (cache.data && cache.dbUploadedAt === at) return;
+    const parsed = await loadParsed(kind);
+    if (parsed) {
+      cache.data = parsed;
+      cache.dbUploadedAt = at;
+      console.log(`${kind}: snapshot reloaded from DB (uploaded_at ${at})`);
+    }
+  } catch (err) {
+    console.warn(`${kind}: snapshot revalidation failed, serving cached:`, err.message);
+  }
+}
 
 const TOURISM_HISTORICAL_URL = 'https://api.gnta.ge/api/v1/web/media/download/10068';
 const TOURISM_HISTORICAL_LOCAL = path.join(__dirname, '../data/gnta-visitors-historical.xlsx');
@@ -1802,7 +1832,7 @@ router.post('/tourism/refresh', ...adminOnly, (req, res) => {
 // XLSX file. No initial data is bundled — the endpoint returns {empty:true}
 // until the first upload.
 
-let fdiSectorsCache = { data: null };
+let fdiSectorsCache = { data: null, dbUploadedAt: null };
 
 // Sector name mapping: full Georgian name → { short (Georgian), en (English) }
 const SECTOR_NAMES = {
@@ -1996,7 +2026,9 @@ async function loadFdiSectorsFromDb() {
 // Init: load any previously uploaded data on module load.
 loadFdiSectorsFromDb().catch((err) => console.warn('fdi-sectors load failed:', err.message));
 
-router.get('/fdi-sectors', (req, res) => {
+router.get('/fdi-sectors', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  await freshenSnapshot('fdi-sectors', fdiSectorsCache);
   const data = fdiSectorsCache.data;
   if (!data) return res.json({ success: true, empty: true });
   res.json({
@@ -2062,7 +2094,7 @@ router.post('/fdi-sectors/upload', ...adminOnly, upload.single('file'), async (r
 // the already-aggregated JSON is POSTed here. The payload is tiny (one
 // entry per country).
 
-let companiesCache = { data: null };
+let companiesCache = { data: null, dbUploadedAt: null };
 
 async function loadCompaniesFromDb() {
   const parsed = await loadParsed('companies');
@@ -2073,7 +2105,9 @@ async function loadCompaniesFromDb() {
 }
 loadCompaniesFromDb().catch((err) => console.warn('companies load failed:', err.message));
 
-router.get('/companies', (req, res) => {
+router.get('/companies', async (req, res) => {
+  res.set('Cache-Control', 'no-store');
+  await freshenSnapshot('companies', companiesCache);
   const data = companiesCache.data;
   if (!data) return res.json({ success: true, empty: true });
   res.json({
