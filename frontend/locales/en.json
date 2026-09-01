@@ -442,7 +442,7 @@
     },
     "upload": {
       "fdiTitle": "FDI Sectors",
-      "fdiDesc": "Upload the Georgian FDI-by-country-by-sector XLSX file. The file must have a header row with \"ქვეყნის კოდი\" in column A, then one block per country (code, name, \"სულ\" row, sector sub-rows). Values must be in thousand USD, as Geostat publishes them — the table divides by 1,000 and shows mln USD.",
+      "fdiDesc": "Upload the Georgian FDI-by-country-by-sector XLSX file. The file must have a header row with \"ქვეყნის კოდი\" in column A, then one block per country (code, name, \"სულ\" row, sector sub-rows). Values must be in mln USD — the table shows them exactly as uploaded.",
       "companiesTitle": "Companies",
       "companiesDesc": "Upload the active-companies XLSX file. Column S contains the active flag (blank = inactive), column V lists the capital-origin countries separated by \" / \". The file is parsed in your browser; only the small aggregated summary is sent to the server.",
       "btn": "Upload",

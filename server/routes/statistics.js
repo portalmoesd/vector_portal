@@ -1924,7 +1924,12 @@ function parseFdiSectorsWorkbook(wb) {
     const s = String(v).replace(/,/g, '').replace(/\s/g, '').replace(/\u00A0/g, '');
     const n = parseFloat(s);
     if (isNaN(n)) return null;
-    return n / 1000; // thousand USD → mln USD
+    // The uploaded file carries mln USD, which is also what every consumer
+    // displays — so values pass through exactly as uploaded. (This used to
+    // divide by 1,000 assuming Geostat's thousand-USD workbook; the file the
+    // ministry actually maintains is already in mln, and the division showed
+    // 0.02 where the file said 19.67.)
+    return n;
   }
 
   const countries = {};
