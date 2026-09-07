@@ -149,7 +149,9 @@
     "actionAskReturn": "ASK RETURN",
     "summaryTitle": "Meeting summaries",
     "summaryPending": "{n} left",
-    "summaryDone": "Done"
+    "summaryDone": "Done",
+    "tabSummaries": "Summaries",
+    "noSummaries": "No meeting summaries"
   },
   "status": {
     "draft": "Awaiting action",

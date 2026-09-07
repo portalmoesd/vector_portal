@@ -117,6 +117,34 @@
       tu.classList.add('is-active');
     }
   }
+
+  // Summaries tab: the Meeting Summary task list. Built for every role but
+  // hidden until /api/meeting-summaries/mine returns rows — the gate is
+  // data-driven, not role-driven, matching how assignments themselves work.
+  // Injected here, before the click wiring / thumb / badge code below runs,
+  // so it participates in all of them like the Deputy's docs segment.
+  let summaryRows = [];          // last /mine payload
+  let summariesRevealed = false; // one-way per page load: never re-hide mid-session
+  let summariesTabBtn = null;
+  if (toggleWrap) {
+    const ts = document.createElement('button');
+    ts.type = 'button';
+    ts.className = 'mn-toggle__btn';
+    ts.dataset.mode = 'summaries';
+    ts.setAttribute('data-i18n', 'dashboard.tabSummaries');
+    ts.textContent = I18n.tr('dashboard.tabSummaries');
+    ts.hidden = true;
+    toggleWrap.appendChild(ts);
+    toggleBtns.push(ts);
+    summariesTabBtn = ts;
+  }
+  function revealSummariesTab() {
+    if (!summariesTabBtn || summariesRevealed) return;
+    summariesTabBtn.hidden = false;
+    summariesRevealed = true;
+    positionThumb(); // the pill widened
+  }
+
   let calendarDate = new Date();
   let selectedId = null;  // currently expanded event id (within the active mode)
   // The day the preview panel is showing, as a Tbilisi "YYYY-MM-DD" key. Starts
@@ -349,6 +377,11 @@
   // Precedence: red (your turn to act) → orange (new event) → green (ready, unopened
   // document). The count is how many cards of the shown category the tab holds.
   function tabBadge(m) {
+    // Summary tasks are always "your turn to act": red, count = points still owed.
+    if (m === 'summaries') {
+      const pending = summaryRows.reduce((n, r) => n + (r.myPending || 0), 0);
+      return pending > 0 ? { color: 'red', count: pending } : null;
+    }
     const items = itemsForMode(m);
     const act = items.filter(d => !d._ready && isActEvent(d.id)).length;
     if (act > 0) return { color: 'red', count: act };
@@ -706,13 +739,78 @@
     return groups;
   }
 
+  // The Summaries tab list: one card per event the user owes (or wrote) meeting
+  // summaries for. Rows come from /api/meeting-summaries/mine, not /api/library,
+  // so they get their own renderer instead of listCardHtml — they have no
+  // readiness, owner or language, and clicking one opens the Meeting Summary
+  // modal rather than the inline card detail.
+  function summaryCardHtml(r) {
+    const country = localizedCountryName({ code: r.countryCode, name_en: r.countryName, name_ka: r.countryNameKa });
+    const code = (r.countryCode || '').toLowerCase();
+    const flag = code
+      ? `<img src="/assets/flags/${code}.svg" alt="${escapeHtml(country)}" loading="lazy" onerror="this.closest('.mn-card__flag').style.display='none'">`
+      : '';
+    const done = r.myPending === 0;
+    let statusClass = done ? 'mn-card--completed' : 'mn-card--inprogress';
+    if (!done && r.deadlineDate && startOfDay(new Date(r.deadlineDate)) < startOfDay(new Date())) {
+      statusClass += ' mn-card--overdue';
+    }
+    const chip = done
+      ? `<span class="mn-chip mn-chip--ready">${escapeHtml(I18n.tr('dashboard.summaryDone'))}</span>`
+      : `<span class="mn-chip mn-chip--todo">${escapeHtml(I18n.tr('dashboard.summaryPending').replace('{n}', String(r.myPending)))}</span>`;
+    const due = done ? null : dueInfo(r.deadlineDate);
+    const dueHtml = due ? `<span class="${due.cls}">${escapeHtml(due.text)}</span>` : '';
+    return `
+      <div class="dp-upcoming-event mn-card ${statusClass}" data-summary-event="${r.eventId}" role="button" tabindex="0">
+        <div class="mn-card__head">
+          <span class="mn-card__flag" title="${escapeHtml(country)}">${flag}</span>
+          <h4 class="mn-card__title">${escapeHtml(r.title)}</h4>
+          ${chip}
+        </div>
+        <div class="mn-card__sub">
+          <span class="mn-card__country">${escapeHtml(country)}</span>
+        </div>
+        <div class="mn-card__foot">
+          <span class="mn-card__meta">${dueHtml}</span>
+          <span class="mn-card__cta">${escapeHtml(I18n.tr('dashboard.cardView'))} <span class="mn-card__arrow" aria-hidden="true">&rarr;</span></span>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderSummaryList() {
+    const kw = (keywordEl.value || '').toLowerCase().trim();
+    const rows = !kw ? summaryRows : summaryRows.filter(r =>
+      (r.title || '').toLowerCase().includes(kw) ||
+      (r.countryName || '').toLowerCase().includes(kw) ||
+      localizedCountryName({ code: r.countryCode, name_en: r.countryName, name_ka: r.countryNameKa }).toLowerCase().includes(kw)
+    );
+    if (!rows.length) {
+      listEl.innerHTML = `<div class="empty-state"><p>${escapeHtml(I18n.tr('dashboard.noSummaries'))}</p></div>`;
+      return;
+    }
+    // Outstanding work first; the server already orders by deadline within each half.
+    const ordered = rows.filter(r => r.myPending > 0).concat(rows.filter(r => !r.myPending));
+    listEl.innerHTML = ordered.map(summaryCardHtml).join('');
+    listEl.querySelectorAll('[data-summary-event]').forEach(cardEl => {
+      const open = () => GCP.MeetingSummary.open(parseInt(cardEl.dataset.summaryEvent, 10), { onClose: loadSummaryTasks });
+      cardEl.addEventListener('click', open);
+      // The event cards are keyboard-operable; these match.
+      cardEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+      });
+    });
+  }
+
   function renderList() {
     updateTabDots();
+    if (mode === 'summaries') { renderSummaryList(); return; }
     const items = getFiltered();
     mixedReadiness = items.some(d => d._ready) && items.some(d => !d._ready);
     if (items.length === 0) {
       const emptyKey = { completed: 'dashboard.noCompleted', upcoming: 'dashboard.noUpcoming',
-        meetings: 'dashboard.noMeetings', tasks: 'dashboard.noTasks', docs: 'dashboard.noDocs' }[mode] || 'dashboard.noUpcoming';
+        meetings: 'dashboard.noMeetings', tasks: 'dashboard.noTasks', docs: 'dashboard.noDocs',
+        summaries: 'dashboard.noSummaries' }[mode] || 'dashboard.noUpcoming';
       listEl.innerHTML = `<div class="empty-state"><p>${escapeHtml(I18n.tr(emptyKey))}</p></div>`;
       return;
     }
@@ -1953,10 +2051,19 @@
       const open = async () => {
         try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
         if (onAfterClick) onAfterClick();
-        // Switch to the tab holding the event and select it (no jump to editor).
-        // Works for read and unread alike; revealEvent refreshes + retries so an
-        // older read notification still opens its event.
-        if (li.dataset.event) await revealEvent(parseInt(li.dataset.event, 10));
+        if (li.dataset.type === 'summary_due') {
+          // The task lives on the Summaries tab, not on an event card — land
+          // there (revealing the tab even before /mine has answered) and
+          // refresh so the row is present and fresh.
+          revealSummariesTab();
+          setMode('summaries');
+          loadSummaryTasks();
+        } else if (li.dataset.event) {
+          // Switch to the tab holding the event and select it (no jump to editor).
+          // Works for read and unread alike; revealEvent refreshes + retries so an
+          // older read notification still opens its event.
+          await revealEvent(parseInt(li.dataset.event, 10));
+        }
         loadNotifications();
       };
       li.addEventListener('click', open);
@@ -2126,35 +2233,13 @@
   }
 
 
-  // ── Meeting summaries panel ─────────────────────────────────────────────────
-  // The supervisor's post-meeting task list: the discussion points they owe a
-  // summary for. Reuses the notifications panel's card styling so it reads as
-  // part of the same side column, and stays hidden for anyone with nothing to
-  // write — which is every role that never gets assigned a point.
-  let summaryPanel, summaryListEl;
-
-  function buildSummaryPanel() {
-    const side = document.getElementById('mnSide');
-    if (!side) return;
-    summaryPanel = document.createElement('div');
-    // Its own class, not .mn-notifs: the notification centre is addressed by
-    // that class elsewhere (and asserted on), so sharing it would make two
-    // panels answer to one name. The CSS gives the two the same card recipe.
-    summaryPanel.className = 'mn-summaries';
-    summaryPanel.hidden = true;
-    summaryPanel.innerHTML = `
-      <div class="mn-notifs__head">
-        <span class="mn-notifs__title">${escapeHtml(I18n.tr('dashboard.summaryTitle'))}</span>
-      </div>
-      <ul class="mn-notifs__list"></ul>`;
-    side.appendChild(summaryPanel);
-    summaryListEl = summaryPanel.querySelector('.mn-notifs__list');
-    if (typeof I18n !== 'undefined' && I18n.translateRoot) I18n.translateRoot(summaryPanel);
-  }
-
+  // ── Meeting summary tasks ───────────────────────────────────────────────────
+  // Feeds the Summaries tab: fetches the user's assignments, reveals the tab on
+  // the first non-empty payload, and keeps its red pending badge current. The
+  // reveal is one-way per page load — finishing the last task must not yank the
+  // tab out from under the user; it simply stays hidden on the next load.
   async function loadSummaryTasks() {
-    if (!summaryPanel) return;
-    let rows = [];
+    let rows;
     try {
       rows = await Api.get('/api/meeting-summaries/mine') || [];
     } catch (_) {
@@ -2162,37 +2247,18 @@
       // not disturb the rest of the dashboard.
       return;
     }
-    if (!rows.length) { summaryPanel.hidden = true; return; }
-    summaryPanel.hidden = false;
-
-    summaryListEl.innerHTML = rows.map((r) => {
-      const due = dueInfo(r.deadlineDate);
-      const done = r.myPending === 0;
-      const status = done
-        ? escapeHtml(I18n.tr('dashboard.summaryDone'))
-        : escapeHtml(I18n.tr('dashboard.summaryPending').replace('{n}', String(r.myPending)));
-      return `
-        <li class="mn-notif ${done ? '' : 'is-unread'}" data-event="${r.eventId}" role="button" tabindex="0">
-          <span class="mn-notif__msg">${escapeHtml(r.title)} · ${status}</span>
-          <span class="mn-notif__time ${due ? due.cls : ''}">${due ? escapeHtml(due.text) : ''}</span>
-        </li>`;
-    }).join('');
-
-    summaryListEl.querySelectorAll('[data-event]').forEach((li) => {
-      const open = () => GCP.MeetingSummary.open(parseInt(li.dataset.event, 10));
-      li.addEventListener('click', open);
-      // The notification rows are keyboard-operable; these match.
-      li.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
-      });
-    });
+    const changed = JSON.stringify(rows) !== JSON.stringify(summaryRows);
+    summaryRows = rows;
+    if (rows.length) revealSummariesTab();
+    updateTabDots();
+    // Re-render only on change so the 45s poll never churns the list mid-use.
+    if (changed && mode === 'summaries') renderList();
   }
 
   buildCreateButton();
   buildDayPanel();     // no-op unless HAS_DAY_PANEL
   buildNotifPanel();   // early-returns when HAS_DAY_PANEL
   buildNotifBell();    // no-op unless HAS_DAY_PANEL
-  buildSummaryPanel();
   loadNotifications();
   loadMyTurn();
   loadSummaryTasks();

@@ -149,7 +149,9 @@
     "actionAskReturn": "დაბრუნების მოთხოვნა",
     "summaryTitle": "შეხვედრის შეჯამებები",
     "summaryPending": "დარჩა {n}",
-    "summaryDone": "დასრულებულია"
+    "summaryDone": "დასრულებულია",
+    "tabSummaries": "შეჯამებები",
+    "noSummaries": "შეხვედრის შეჯამებები არ არის"
   },
   "status": {
     "draft": "დამატების მოლოდინში",
