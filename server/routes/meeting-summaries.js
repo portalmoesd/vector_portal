@@ -78,18 +78,19 @@ router.post('/agenda', requireAuth, denyAnalyst, async (req, res) => {
     for (const p of clean) {
       await client.query(
         `INSERT INTO meeting_agenda_points
-           (event_id, section_id, dp_id, position, topic_snapshot,
+           (event_id, section_id, dp_id, kind, position, topic_snapshot,
             context_snapshot, additional_snapshot, recorded_by_id)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
          ON CONFLICT (event_id, section_id, dp_id) DO UPDATE
-           SET position            = EXCLUDED.position,
+           SET kind                = EXCLUDED.kind,
+               position            = EXCLUDED.position,
                topic_snapshot      = EXCLUDED.topic_snapshot,
                context_snapshot    = EXCLUDED.context_snapshot,
                additional_snapshot = EXCLUDED.additional_snapshot,
                recorded_by_id      = EXCLUDED.recorded_by_id,
                removed_at          = NULL,
                updated_at          = now()`,
-        [eventId, p.sectionId, p.dpId, p.position, p.topic,
+        [eventId, p.sectionId, p.dpId, p.kind, p.position, p.topic,
          p.contextHtml, p.additionalHtml, req.user.id]
       );
     }
@@ -262,7 +263,7 @@ router.get('/:eventId', requireAuth, async (req, res) => {
 
     const { rows } = await db.query(
       `SELECT ap.id AS agenda_point_id, ap.section_id, s.title AS section_title,
-              ap.dp_id, ap.position, ap.topic_snapshot,
+              ap.dp_id, ap.kind, ap.position, ap.topic_snapshot,
               ap.context_snapshot, ap.additional_snapshot, ap.removed_at,
               ms.id AS summary_id, ms.summary_html, ms.status, ms.deadline_date,
               ms.last_edited_at,
@@ -298,6 +299,7 @@ router.get('/:eventId', requireAuth, async (req, res) => {
       sectionId: r.section_id,
       sectionTitle: r.section_title,
       dpId: r.dp_id,
+      kind: r.kind || 'point',
       position: r.position,
       topic: r.topic_snapshot,
       contextHtml: r.context_snapshot,

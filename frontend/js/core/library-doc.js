@@ -265,6 +265,7 @@
         points.push({
           sectionId: sec.id,
           dpId: p.id,
+          kind: p.kind || 'point',
           topic: p.topic || '',
           contextHtml: p.contextHtml || '',
           additionalHtml: p.additionalHtml || '',

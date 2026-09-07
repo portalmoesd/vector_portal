@@ -113,6 +113,15 @@ test('normalising keeps the selected points and numbers them from zero', () => {
   assert.deepEqual(out.map(p => [p.dpId, p.position]), [['dp-a', 0], ['dp-b', 1]]);
 });
 
+test('kind carries through and defaults to point', () => {
+  const out = MS.normalizeAgendaPoints([
+    { sectionId: 1, dpId: 'dp-a', kind: 'initiative' },
+    { sectionId: 1, dpId: 'dp-b' },
+    { sectionId: 2, dpId: 'dp-c', kind: 'bogus' },
+  ], SECTIONS);
+  assert.deepEqual(out.map(p => p.kind), ['initiative', 'point', 'point']);
+});
+
 test('a point from another document is dropped', () => {
   // The owner posts the selection, so the section has to be checked against
   // the event rather than trusted.

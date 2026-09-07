@@ -112,6 +112,7 @@ function normalizeAgendaPoints(points, allowedSectionIds) {
     out.push({
       sectionId,
       dpId,
+      kind: p.kind === 'initiative' ? 'initiative' : 'point',
       position: out.length,
       topic: String(p.topic == null ? '' : p.topic).slice(0, 2000),
       contextHtml: p.contextHtml || '',

@@ -317,6 +317,8 @@ CREATE TABLE IF NOT EXISTS meeting_agenda_points (
 );
 CREATE INDEX IF NOT EXISTS idx_meeting_agenda_event
   ON meeting_agenda_points (event_id, position);
+-- 'point' or 'initiative' — mirrors the card's data-dp-kind at extraction time.
+ALTER TABLE meeting_agenda_points ADD COLUMN IF NOT EXISTS kind VARCHAR(20) NOT NULL DEFAULT 'point';
 
 -- One shared row per agenda point (hence UNIQUE agenda_point_id): either
 -- assigned supervisor may fill it and the last save wins, so the row records

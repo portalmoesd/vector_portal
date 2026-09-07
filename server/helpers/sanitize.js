@@ -21,8 +21,8 @@ const TC_DATA_ATTRS = [
 // Discussion-point scaffolding (documents whose event.document_type is
 // DISCUSSION_POINTS). The structure is carried entirely by data attributes —
 // never classes — because allowedClasses below keeps only the comment anchor
-// and strips everything else.
-const DP_DATA_ATTRS = ['data-dp-id', 'data-dp-field'];
+// and strips everything else. data-dp-kind marks an initiative card.
+const DP_DATA_ATTRS = ['data-dp-id', 'data-dp-field', 'data-dp-kind'];
 
 const COLOR_RE = /^(#[0-9a-fA-F]{3,8}|rgba?\([\d.,\s%]+\)|[a-zA-Z-]+)$/;
 const SIZE_RE = /^-?\d+(\.\d+)?(px|pt|em|rem|%)?$/;

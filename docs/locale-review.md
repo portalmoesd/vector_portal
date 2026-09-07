@@ -471,27 +471,34 @@ Shown only for documents whose type is "განსახილველი ს
 | --- | --- | --- | --- |
 | `editor.dp.sectionHint` | This document is composed of discussion points. Add one point per topic. | ეს დოკუმენტი შედგება განსახილველი საკითხებისგან. თითოეულ თემაზე დაამატეთ ცალკე საკითხი. |  |
 | `editor.dp.topic` | Discussion Point Title | განსახილველი საკითხის სათაური |  |
+| `editor.dp.initiativeTopic` | Initiative Title | ინიციატივის სათაური |  |
 | `editor.dp.topicPlaceholder` | Enter the title… | შეიყვანეთ სათაური… |  |
 | `editor.dp.context` | Discussion Point | განსახილველი საკითხი |  |
+| `editor.dp.initiative` | Initiative | ინიციატივა |  |
 | `editor.dp.additional` | Additional Information | დამატებითი ინფორმაცია |  |
-| `editor.dp.add` | + Add discussion point | + საკითხის დამატება |  |
+| `editor.dp.add` | + Add discussion point | + განსახილველი საკითხის დამატება |  |
+| `editor.dp.addInitiative` | + Add new initiative | + ახალი ინიციატივის დამატება |  |
 | `editor.dp.delete` | Delete discussion point | საკითხის წაშლა |  |
+| `editor.dp.deleteInitiative` | Delete initiative | ინიციატივის წაშლა |  |
 | `editor.dp.moveUp` | Move up | ზემოთ გადატანა |  |
 | `editor.dp.moveDown` | Move down | ქვემოთ გადატანა |  |
 | `editor.dp.untitled` | Untitled discussion point | უსათაურო საკითხი |  |
 | `editor.dp.empty` | No discussion points yet. | საკითხები ჯერ არ არის დამატებული. |  |
 | `editor.dp.emptyReadonly` | No discussion points have been added yet. | საკითხები ჯერ არ არის დამატებული. |  |
 | `editor.dp.confirmDelete` | Delete this discussion point and all of its content? | წავშალოთ ეს საკითხი და მისი მთელი შიგთავსი? |  |
+| `editor.dp.confirmDeleteInitiative` | Delete this initiative and all of its content? | წავშალოთ ეს ინიციატივა და მისი მთელი შიგთავსი? |  |
 
 The PDF / Word exports print their own field labels in the **document's**
-language (`events.language`), not the reader's UI locale, so these three are
+language (`events.language`), not the reader's UI locale, so these labels are
 held in `frontend/js/core/discussion-points.js` rather than the locale files:
 
 | Field | English | Georgian | Russian |
 | --- | --- | --- | --- |
 | Discussion Point heading | Discussion Point | განსახილველი საკითხი | Обсуждаемый вопрос |
+| Initiative heading | Initiative | ინიციატივა | Инициатива |
 | Additional heading | Additional Information | დამატებითი ინფორმაცია | Дополнительная информация |
 | Untitled point fallback | Point N | საკითხი N | Вопрос N |
+| Untitled initiative fallback | Initiative N | ინიციატივა N | Инициатива N |
 
 ## Meeting Summary
 
