@@ -155,8 +155,11 @@
   // LibraryDoc module (/js/core/library-doc.js). The card markup binds to these
   // global handlers, so expose the shared implementations under the same names.
   window.previewDoc = LibraryDoc.preview;
-  window.exportPdf = LibraryDoc.exportPdf;
-  window.exportWord = LibraryDoc.exportWord;
+  // Exporting a Discussion Points document records its meeting agenda, which
+  // makes the Summary/Send buttons appear — refresh the list so they do.
+  const refreshList = async () => { documents = await Api.get('/api/library'); render(); };
+  window.exportPdf = (id) => LibraryDoc.exportPdf(id, { onAgendaRecorded: refreshList });
+  window.exportWord = (id) => LibraryDoc.exportWord(id, { onAgendaRecorded: refreshList });
   window.viewFiles = LibraryDoc.viewFiles;
   window.meetingSummary = GCP.MeetingSummary.open;
 

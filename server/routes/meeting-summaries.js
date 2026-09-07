@@ -16,7 +16,7 @@ const { canSeeEventDateTime } = require('../helpers/roles');
 const {
   isBlankHtml, ymd, normalizeAgendaPoints, agendaKeys, canActAsOwner, deadlineFromSend,
 } = require('../helpers/meeting-summary');
-const { sendForSummaries, countPending } = require('../helpers/meeting-summary-open');
+const { sendForSummaries, countPending, countUnassigned } = require('../helpers/meeting-summary-open');
 const { canSeeCompletedEvent } = require('../helpers/library-visibility');
 
 const router = express.Router();
@@ -154,8 +154,12 @@ router.post('/:eventId/send', requireAuth, denyAnalyst, async (req, res) => {
       return res.status(403).json({ error: 'Only the Document Owner can send for meeting summaries' });
     }
 
+    // A send has two jobs: open the points not yet out, and retry the
+    // assignment of rows opened when nobody covered them. Skip only when
+    // neither has anything to do.
     const pending = await countPending(db, eventId);
-    if (!pending) {
+    const unassignedNow = await countUnassigned(db, eventId);
+    if (!pending && !unassignedNow) {
       const { rows: [t] } = await db.query(
         `SELECT count(*)::int AS n FROM meeting_agenda_points
          WHERE event_id = $1 AND removed_at IS NULL`,
@@ -164,7 +168,7 @@ router.post('/:eventId/send', requireAuth, denyAnalyst, async (req, res) => {
       // Nothing to do is not a failure: either the agenda was never recorded,
       // or every point is already out.
       if (!t.n) return res.status(400).json({ error: 'No meeting agenda has been recorded' });
-      return res.json({ success: true, opened: 0, alreadySent: t.n, supervisors: 0, unassigned: 0 });
+      return res.json({ success: true, opened: 0, reassigned: 0, alreadySent: t.n, supervisors: 0, unassigned: 0 });
     }
 
     // A week from today, not from the meeting: supervisors get a full week
@@ -180,6 +184,7 @@ router.post('/:eventId/send', requireAuth, denyAnalyst, async (req, res) => {
     res.json({
       success: true,
       opened: out.opened,
+      reassigned: out.reassigned,
       alreadySent: t.n - out.opened,
       supervisors: out.supervisors,
       unassigned: out.unassigned,
@@ -214,6 +219,10 @@ router.get('/mine', requireAuth, async (req, res) => {
        JOIN countries c ON c.id = e.country_id
        WHERE a.user_id = $1 AND ap.removed_at IS NULL
        GROUP BY e.id, e.title, c.code, c.name_en, c.name_ka
+       -- Anything still owed always shows; fully-written events age off the
+       -- task tab a month after they were last touched.
+       HAVING count(*) FILTER (WHERE ms.status = 'PENDING') > 0
+           OR max(GREATEST(ms.updated_at, ms.opened_at)) > now() - interval '30 days'
        ORDER BY min(ms.deadline_date) NULLS LAST, e.title`,
       [req.user.id]
     );
@@ -244,7 +253,7 @@ router.get('/:eventId', requireAuth, async (req, res) => {
     if (!eventId) return res.status(400).json({ error: 'Invalid event id' });
 
     const { rows: [event] } = await db.query(
-      `SELECT e.id, e.title, e.language, e.event_datetime,
+      `SELECT e.id, e.title, e.language, e.event_datetime, e.ended_at,
               e.document_submitter_id, e.document_submitter_role,
               c.name_en AS country_name, c.name_ka AS country_name_ka, c.code AS country_code
        FROM events e JOIN countries c ON c.id = e.country_id
@@ -327,6 +336,8 @@ router.get('/:eventId', requireAuth, async (req, res) => {
       countryName: event.country_name,
       countryNameKa: event.country_name_ka,
       countryCode: event.country_code,
+      // The exporters' date line (docDateLabel / the docx meta) reads this.
+      endedAt: event.ended_at,
       // Reused verbatim; the rule is deliberately not widened by this feature.
       eventDateTime: canSeeEventDateTime(req.user.role, req.user.id, event.document_submitter_id)
         ? event.event_datetime : null,

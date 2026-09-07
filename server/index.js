@@ -743,6 +743,9 @@ migrate().then(() => {
   app.listen(config.port, () => {
     console.log(`Vector Portal running on port ${config.port}`);
   });
+  // Daily Meeting Summary deadline reminders. Scheduled here, not at module
+  // require time, so tests that mount routes never start timers.
+  require('./helpers/summary-reminders').scheduleSummaryReminders();
 });
 
 module.exports = app;

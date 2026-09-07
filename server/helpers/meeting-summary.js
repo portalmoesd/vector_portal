@@ -40,20 +40,34 @@ function ymd(value) {
 }
 
 /**
- * The summary deadline: a week from the day it is sent.
+ * The Tbilisi calendar day `plusDays` days from `now`, as YYYY-MM-DD.
  *
- * Measured from the send rather than from the meeting so supervisors always get
- * a full week, however long the owner takes to send. Anchored to Tbilisi rather
- * than the server's zone — the app runs in UTC, where anything sent after 20:00
- * UTC already belongs to the next Tbilisi day and would be dated a day early.
+ * Anchored to Tbilisi rather than the server's zone — the app runs in UTC,
+ * where anything after 20:00 UTC already belongs to the next Tbilisi day and
+ * would otherwise be dated a day early.
  */
-function deadlineFromSend(now) {
+function tbilisiYmd(now, plusDays) {
   const d = now ? new Date(now) : new Date();
   if (Number.isNaN(d.getTime())) return null;
   const tb = new Date(d.getTime() + TBILISI_OFFSET_HOURS * 60 * 60 * 1000);
   const pad = (n) => String(n).padStart(2, '0');
-  const due = new Date(Date.UTC(tb.getUTCFullYear(), tb.getUTCMonth(), tb.getUTCDate() + 7));
-  return `${due.getUTCFullYear()}-${pad(due.getUTCMonth() + 1)}-${pad(due.getUTCDate())}`;
+  const day = new Date(Date.UTC(tb.getUTCFullYear(), tb.getUTCMonth(), tb.getUTCDate() + plusDays));
+  return `${day.getUTCFullYear()}-${pad(day.getUTCMonth() + 1)}-${pad(day.getUTCDate())}`;
+}
+
+/** Today as a Tbilisi calendar day — what the reminder sweep compares against. */
+function tbilisiToday(now) {
+  return tbilisiYmd(now, 0);
+}
+
+/**
+ * The summary deadline: a week from the day it is sent.
+ *
+ * Measured from the send rather than from the meeting so supervisors always get
+ * a full week, however long the owner takes to send.
+ */
+function deadlineFromSend(now) {
+  return tbilisiYmd(now, 7);
 }
 
 /**
@@ -128,5 +142,5 @@ function agendaKeys(points) {
 }
 
 module.exports = {
-  isBlankHtml, ymd, deadlineFromSend, canActAsOwner, normalizeAgendaPoints, agendaKeys,
+  isBlankHtml, ymd, deadlineFromSend, tbilisiToday, canActAsOwner, normalizeAgendaPoints, agendaKeys,
 };

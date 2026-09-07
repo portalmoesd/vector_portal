@@ -87,6 +87,10 @@ test('meeting summary table renders and saves', async ({ page }) => {
   await expect(page.locator('.ms-table tbody tr').first()).toContainText('1. Trade turnover');
   await expect(page.locator('.ms-table tbody tr').first()).toContainText('Context one');
 
+  // The document spans two sections, so each point carries its section caption.
+  await expect(page.locator('tr[data-row="0"] .ms-section')).toHaveText('Trade');
+  await expect(page.locator('tr[data-row="1"] .ms-section')).toHaveText('Orphan');
+
   // Editable row mounts the lightweight editor; read-only row does not.
   await expect(page.locator('tr[data-row="0"] .se-body')).toHaveCount(1);
   await expect(page.locator('tr[data-row="1"] .se-body')).toHaveCount(0);
@@ -128,9 +132,10 @@ test('exporting after a save carries the saved text, not the loaded one', async 
     window.I18n = { tr: k => k, translateRoot: () => {} };
     window.toast = { success(){}, error(){}, warn(){} };
     window.__exportedSections = null;
+    window.__exportHint = null;
     window.LibraryDoc = {
-      exportHtmlAsPdf(d, secs) { window.__exportedSections = secs; },
-      exportSectionsAsDocx(d, secs) { window.__exportedSections = secs; },
+      exportHtmlAsPdf(d, secs, hint) { window.__exportedSections = secs; window.__exportHint = hint; },
+      exportSectionsAsDocx(d, secs, hint) { window.__exportedSections = secs; window.__exportHint = hint; },
       canActAsOwner(d, viewer) {
         if (!d || !viewer) return false;
         if (viewer.role === 'ADMIN') return true;
@@ -167,7 +172,24 @@ test('exporting after a save carries the saved text, not the loaded one', async 
   expect(html).toContain('Freshly written');
   expect(html).not.toContain('Not yet written</i></p></td></tr><tr><td><p class="ms-point-title">1.');
 
+  // The export carries the section captions too, and names the file (and, for
+  // Word, the in-document header) after the summary rather than the document —
+  // otherwise both exports land in Downloads under the same name.
+  expect(html).toContain('class="ms-section"');
+  expect(html).toContain('Orphan');
+  expect(await page.evaluate(() => window.__exportHint)).toBe('Meeting Summary — Trade meeting');
+
   expect(errors).toEqual([]);
+});
+
+test('a single-section document skips the section captions', async ({ page }) => {
+  await openWith(page, {
+    canSend: false, unsentCount: 0, opened: true, canEditAny: false,
+    progress: { done: 0, total: 2, unassigned: 0 },
+    items: DOC.items.map(i => Object.assign({}, i, { sectionTitle: 'Trade' })),
+  });
+  await expect(page.locator('.ms-table tbody tr')).toHaveCount(2);
+  await expect(page.locator('.ms-section')).toHaveCount(0);
 });
 
 // ── Sending ──────────────────────────────────────────────────────────────────
@@ -220,18 +242,41 @@ test('a viewer who may send gets the button, one who may not does not', async ({
 });
 
 test('nothing left to send means no button', async ({ page }) => {
-  await openWith(page, { canSend: true, unsentCount: 0, opened: true });
+  // "Nothing" now includes unassigned rows: a send also retries those, so the
+  // button only disappears when there are neither unsent nor orphaned points.
+  await openWith(page, { canSend: true, unsentCount: 0, opened: true,
+    progress: { done: 1, total: 2, unassigned: 0 } });
   await expect(page.locator('[data-act="send"]')).toHaveCount(0);
 });
 
 test('the button reads "send new points" once some are already out', async ({ page }) => {
   // A re-export that adds a point after the first send is the common case, and
   // the wording has to say it is a top-up rather than the first send.
-  await openWith(page, { canSend: true, unsentCount: 1, opened: true });
+  await openWith(page, { canSend: true, unsentCount: 1, opened: true,
+    progress: { done: 1, total: 2, unassigned: 0 } });
   await expect(page.locator('[data-act="send"]')).toContainText('Send new points (1)');
 
-  await openWith(page, { canSend: true, unsentCount: 2, opened: false });
+  await openWith(page, { canSend: true, unsentCount: 2, opened: false,
+    progress: { done: 1, total: 2, unassigned: 0 } });
   await expect(page.locator('[data-act="send"]')).toContainText('Send for Meeting Summary (2)');
+});
+
+test('orphaned rows alone keep the button alive — sending retries their assignment', async ({ page }) => {
+  // Nothing unsent, but two rows nobody owns: this used to be a dead end with
+  // no button at all; now the send is the rescue path.
+  await openWith(page, { canSend: true, unsentCount: 0, opened: true,
+    progress: { done: 0, total: 2, unassigned: 2 } });
+  await expect(page.locator('[data-act="send"]')).toContainText('(2)');
+
+  // Unsent and unassigned add up — the count is everything a send would touch.
+  await openWith(page, { canSend: true, unsentCount: 1, opened: true,
+    progress: { done: 0, total: 3, unassigned: 1 } });
+  await expect(page.locator('[data-act="send"]')).toContainText('(2)');
+
+  // A viewer who may not send still gets no button, orphans or not.
+  await openWith(page, { canSend: false, unsentCount: 0, opened: true,
+    progress: { done: 0, total: 2, unassigned: 2 } });
+  await expect(page.locator('[data-act="send"]')).toHaveCount(0);
 });
 
 test('sending confirms first, then posts', async ({ page }) => {

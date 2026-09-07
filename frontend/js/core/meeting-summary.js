@@ -98,8 +98,19 @@
     return '<span class="ms-chip ' + (days <= 7 ? 'ms-chip--due' : '') + '">' + esc(label) + '</span>';
   }
 
+  /** More than one distinct section — only then are captions worth the ink. */
+  function hasManySections(items) {
+    var seen = {};
+    var n = 0;
+    (items || []).forEach(function (i) {
+      var t = i.sectionTitle || '';
+      if (!seen[t]) { seen[t] = 1; n += 1; }
+    });
+    return n > 1;
+  }
+
   /** The point as the reader saw it, rendered the way the exports render it. */
-  function pointHtml(item, lang) {
+  function pointHtml(item, lang, showSection) {
     var L = (typeof GCP !== 'undefined' && GCP.DiscussionPoints)
       ? GCP.DiscussionPoints.exportLabels(lang)
       : { context: 'Discussion Point', initiative: 'Initiative', additional: 'Additional Information' };
@@ -107,7 +118,16 @@
       ? GCP.DiscussionPoints.isBlankHtml
       : function (h) { return !h; };
 
-    var out = '<p class="ms-point-title">' + (item.position + 1) + '. ' + esc(item.topic || '') + '</p>';
+    var out = '';
+    if (showSection && item.sectionTitle) {
+      // Inline style, not a stylesheet rule: this HTML also goes into the PDF
+      // and Word exports, which the modal's injected CSS never reaches. The
+      // class survives purely as a stable selector.
+      out += '<p class="ms-section" style="font-size:11px;font-weight:700;color:#6b7280;' +
+        'text-transform:uppercase;letter-spacing:.03em;margin:0 0 2px;">' +
+        esc(item.sectionTitle) + '</p>';
+    }
+    out += '<p class="ms-point-title">' + (item.position + 1) + '. ' + esc(item.topic || '') + '</p>';
     if (!blank(item.contextHtml)) {
       out += '<span class="ms-label">' + esc(item.kind === 'initiative' ? L.initiative : L.context) + '</span>';
       out += '<div class="ms-point-body">' + item.contextHtml + '</div>';
@@ -202,7 +222,12 @@
         if (out.opened) {
           toast.success(tr('library.summary.sendDone', 'Sent {n} point(s) to {s} department head(s).')
             .replace('{n}', String(out.opened)).replace('{s}', String(out.supervisors)));
-        } else {
+        }
+        if (out.reassigned) {
+          toast.success(tr('library.summary.reassigned', 'Re-assigned {n} point(s) to the responsible department heads.')
+            .replace('{n}', String(out.reassigned)));
+        }
+        if (!out.opened && !out.reassigned) {
           toast.warn(tr('library.summary.allSent', 'Every discussion point has already been sent.'));
         }
         if (out.unassigned) {
@@ -235,6 +260,10 @@
 
     var overlay = document.createElement('div');
     overlay.className = 'ms-overlay';
+
+    // What a send would act on: the points not yet out, plus the rows that are
+    // out but still have nobody assigned — sending retries their assignment.
+    var actionable = (doc.unsentCount || 0) + ((doc.progress && doc.progress.unassigned) || 0);
 
     // What still has to be sent, and by whom. A viewer who cannot send is told
     // it is waiting on someone; one who can gets the button below.
@@ -277,7 +306,7 @@
             '</tr></thead><tbody>' +
             doc.items.map(function (item, idx) {
               return '<tr data-row="' + idx + '">' +
-                '<td class="ms-col">' + pointHtml(item, doc.language) + '</td>' +
+                '<td class="ms-col">' + pointHtml(item, doc.language, hasManySections(doc.items)) + '</td>' +
                 '<td class="ms-col" data-cell="' + idx + '">' + statusChips(item) +
                   '<div data-host="' + idx + '"></div>' + bylineHtml(item) +
                 '</td>' +
@@ -286,12 +315,12 @@
             '</tbody></table>'
           : '<div class="ms-empty">' + esc(tr('library.summary.empty', 'No meeting agenda has been recorded for this document yet.')) + '</div>') +
         '<div class="ms-foot">' +
-          (doc.canSend && doc.unsentCount
+          (doc.canSend && actionable
             ? '<button class="ms-btn ms-btn--primary ms-btn--send" data-act="send">' + esc(
                 (doc.opened
                   ? tr('library.summary.sendNew', 'Send new points ({n})')
                   : tr('library.summary.send', 'Send for Meeting Summary ({n})')
-                ).replace('{n}', String(doc.unsentCount))
+                ).replace('{n}', String(actionable))
               ) + '</button>'
             : '') +
           '<button class="ms-btn" data-act="pdf">' + esc(tr('library.summary.exportPdf', 'Summary PDF')) + '</button>' +
@@ -387,7 +416,7 @@
     if (sendBtn) {
       sendBtn.addEventListener('click', function () {
         sendBtn.disabled = true;
-        sendWithConfirm(doc.eventId, doc.unsentCount).then(function (sent) {
+        sendWithConfirm(doc.eventId, actionable).then(function (sent) {
           if (!sent) { sendBtn.disabled = false; return; }
           // Reopen on the fresh state rather than patching rows in place: a
           // send changes assignees, deadlines and every row's canEdit.
@@ -414,7 +443,7 @@
         var summary = item.filled
           ? item.summaryHtml
           : '<p><i>' + esc(tr('library.summary.notFilled', 'Not yet written')) + '</i></p>';
-        return '<tr><td>' + pointHtml(item, doc.language) + '</td><td>' + summary + '</td></tr>';
+        return '<tr><td>' + pointHtml(item, doc.language, hasManySections(doc.items)) + '</td><td>' + summary + '</td></tr>';
       }).join('') +
       '</tbody></table>';
   }
@@ -428,9 +457,16 @@
     }];
   }
 
+  // The hint separates the summary file from the main document export, which
+  // is otherwise named identically. For Word it also becomes the visible
+  // in-document header title — wanted, for the same reason.
+  function exportHint(doc) {
+    return tr('library.summary.title', 'Meeting Summary') + ' — ' + (doc.title || '');
+  }
+
   async function exportPdf(doc) {
     try {
-      await LibraryDoc.exportHtmlAsPdf(doc, exportSections(doc));
+      await LibraryDoc.exportHtmlAsPdf(doc, exportSections(doc), exportHint(doc));
     } catch (e) {
       toast.error(tr('library.export.fail', 'Export failed:') + ' ' + (e && e.message));
     }
@@ -438,7 +474,7 @@
 
   async function exportWord(doc) {
     try {
-      await LibraryDoc.exportSectionsAsDocx(doc, exportSections(doc));
+      await LibraryDoc.exportSectionsAsDocx(doc, exportSections(doc), exportHint(doc));
     } catch (e) {
       toast.error(tr('library.export.wordFail', 'Word export failed:') + ' ' + (e && e.message));
     }

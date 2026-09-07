@@ -11,7 +11,9 @@
     "empty": "No notifications",
     "bellUnread": "Notifications ({n} unread)",
     "summaryDue": "Meeting summary due: {event}",
-    "summaryUnassigned": "{n} discussion point(s) in {event} have no responsible department head"
+    "summaryUnassigned": "{n} discussion point(s) in {event} have no responsible department head",
+    "summaryDueSoon": "Meeting summary due {date}: {event}",
+    "summaryOverdue": "Meeting summary overdue: {event}"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -565,7 +567,11 @@
       "sentUnassigned": "{n} point(s) have no responsible department head.",
       "unsent": "{n} discussion point(s) have not been sent for summaries yet.",
       "notSent": "{n} discussion point(s) are waiting for the document owner to send them.",
-      "allSent": "Every discussion point has already been sent."
+      "allSent": "Every discussion point has already been sent.",
+      "reassigned": "Re-assigned {n} point(s) to the responsible department heads.",
+      "agendaRecorded": "Meeting agenda recorded.",
+      "agendaRecordedUnsent": "{n} point(s) ready to send for summaries.",
+      "agendaRecordFailed": "Recording the meeting agenda failed:"
     }
   },
   "editor": {
