@@ -368,8 +368,8 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `editor.requestFailed` | Request failed: | მოთხოვნა ვერ გაიგზავნა: |  |
 | `editor.pushed` | Section pushed successfully | სექცია წარმატებით გადაეცა |  |
 | `editor.pushFailed` | Push failed: | გადაცემა ვერ მოხერხდა: |  |
-| `editor.pulled` | Section pulled successfully | სექცია წარმატებით დაბრუნდა |  |
-| `editor.pullFailed` | Pull failed: | დაბრუნება ვერ მოხერხდა: |  |
+| `editor.pulled` | Section pulled successfully | სექცია წარმატებით გადმოტანილია |  |
+| `editor.pullFailed` | Pull failed: | გადმოტანა ვერ მოხერხდა: |  |
 | `editor.confirmSubmit` | Submit section | სექციის გაგზავნა |  |
 | `editor.confirmApprove` | Approve section | სექციის დადასტურება |  |
 | `editor.confirmPush` | Push section | სექციის გადაცემა |  |
@@ -409,7 +409,7 @@ Side-by-side draft of every UI string. Use the Notes column to flag corrections;
 | `editor.history.action.returned` | Returned | დაბრუნებული |  |
 | `editor.history.action.askedToReturn` | Asked to Return | დაბრუნების მოთხოვნა |  |
 | `editor.history.action.pushed` | Pushed | გადაცემული |  |
-| `editor.history.action.pulled` | Pulled | დაბრუნებული |  |
+| `editor.history.action.pulled` | Pulled | გადმოტანილი |  |
 | `editor.status.saved` | Saved | შენახულია |  |
 | `editor.status.sectionOf` | Section {n} of {total} | სექცია {n} / {total} |  |
 | `editor.status.sectionsCount` | {total} sections | {total} სექცია |  |
