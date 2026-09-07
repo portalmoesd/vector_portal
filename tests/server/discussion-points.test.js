@@ -64,6 +64,33 @@ test('persisted markup survives the server sanitizer unchanged', () => {
   assert.equal(sanitizeEditorHtml(html), html);
 });
 
+test('an initiative serializes with data-dp-kind after data-dp-id', () => {
+  const out = DP.serializePoints([{
+    id: 'dp-i1', kind: 'initiative', topic: 'New program', contextHtml: '<p>c</p>', additionalHtml: '<p>a</p>',
+  }]);
+  assert.equal(
+    out,
+    '<div data-dp-id="dp-i1" data-dp-kind="initiative"><h3 data-dp-field="topic">New program</h3>' +
+    '<div data-dp-field="context"><p>c</p></div>' +
+    '<div data-dp-field="additional"><p>a</p></div></div>'
+  );
+});
+
+test('a plain point never emits data-dp-kind, keeping legacy markup byte-stable', () => {
+  // Legacy documents predate the kind attribute; stamping it onto them would
+  // make the first open of every old document autosave a section_history row.
+  const legacy = DP.serializePoints(POINTS);
+  assert.ok(!legacy.includes('data-dp-kind'));
+  assert.equal(DP.serializePoints(POINTS.map(p => Object.assign({}, p, { kind: 'point' }))), legacy);
+});
+
+test('an initiative card survives the server sanitizer unchanged', () => {
+  const html = DP.serializePoints([{
+    id: 'dp-i1', kind: 'initiative', topic: 'ინიციატივა', contextHtml: '<p>c</p>', additionalHtml: '<p>a</p>',
+  }]);
+  assert.equal(sanitizeEditorHtml(html), html);
+});
+
 test('isBlankHtml recognises visually empty bodies', () => {
   assert.equal(DP.isBlankHtml(''), true);
   assert.equal(DP.isBlankHtml('<p><br></p>'), true);
@@ -76,6 +103,13 @@ test('topicLabel falls back to a numbered label in the document language', () =>
   assert.equal(DP.topicLabel({ topic: '   ' }, 'EN', 2), 'Point 3');
   assert.equal(DP.topicLabel({ topic: '' }, 'KA', 0), 'საკითხი 1');
   assert.equal(DP.topicLabel({ topic: '' }, 'RU', 1), 'Вопрос 2');
+});
+
+test('topicLabel falls back to a numbered initiative label for initiatives', () => {
+  assert.equal(DP.topicLabel({ topic: '', kind: 'initiative' }, 'EN', 0), 'Initiative 1');
+  assert.equal(DP.topicLabel({ topic: '', kind: 'initiative' }, 'KA', 0), 'ინიციატივა 1');
+  assert.equal(DP.topicLabel({ topic: '', kind: 'initiative' }, 'RU', 1), 'Инициатива 2');
+  assert.equal(DP.topicLabel({ topic: 'Named', kind: 'initiative' }, 'EN', 0), 'Named');
 });
 
 test('export labels follow the document language, defaulting to Georgian', () => {
@@ -92,6 +126,22 @@ test('toExportHtml numbers the selected points and labels each field', () => {
   assert.ok(out.includes('<b>Discussion Point</b>'));
   assert.ok(out.includes('<b>Additional Information</b>'));
   assert.ok(out.includes('<p>ctx one</p>'));
+});
+
+test('toExportHtml labels an initiative body per document language, numbering the mixed list', () => {
+  const mixed = [
+    POINTS[0],
+    { id: 'dp-i1', kind: 'initiative', topic: 'New program', contextHtml: '<p>c</p>', additionalHtml: '<p>a</p>' },
+  ];
+  const out = DP.toExportHtml(mixed, 'EN');
+  assert.ok(out.includes('>1. Trade turnover<'));
+  assert.ok(out.includes('>2. New program<'));
+  assert.ok(out.includes('<b>Discussion Point</b>'));
+  assert.ok(out.includes('<b>Initiative</b>'));
+  // The Additional Information label is shared by both kinds.
+  assert.equal(out.split('<b>Additional Information</b>').length - 1, 2);
+  const ka = DP.toExportHtml([mixed[1]], 'KA');
+  assert.ok(ka.includes('<b>ინიციატივა</b>'));
 });
 
 test('toExportHtml renumbers from 1 when only a subset is exported', () => {

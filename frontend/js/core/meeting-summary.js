@@ -102,14 +102,14 @@
   function pointHtml(item, lang) {
     var L = (typeof GCP !== 'undefined' && GCP.DiscussionPoints)
       ? GCP.DiscussionPoints.exportLabels(lang)
-      : { context: 'Discussion Point', additional: 'Additional Information' };
+      : { context: 'Discussion Point', initiative: 'Initiative', additional: 'Additional Information' };
     var blank = (typeof GCP !== 'undefined' && GCP.DiscussionPoints)
       ? GCP.DiscussionPoints.isBlankHtml
       : function (h) { return !h; };
 
     var out = '<p class="ms-point-title">' + (item.position + 1) + '. ' + esc(item.topic || '') + '</p>';
     if (!blank(item.contextHtml)) {
-      out += '<span class="ms-label">' + esc(L.context) + '</span>';
+      out += '<span class="ms-label">' + esc(item.kind === 'initiative' ? L.initiative : L.context) + '</span>';
       out += '<div class="ms-point-body">' + item.contextHtml + '</div>';
     }
     if (!blank(item.additionalHtml)) {

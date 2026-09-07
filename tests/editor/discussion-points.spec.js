@@ -9,6 +9,14 @@ const TWO_POINTS =
   '<div data-dp-field="context"><p>context two</p></div>' +
   '<div data-dp-field="additional"><p>extra two</p></div></div>';
 
+const POINT_AND_INITIATIVE =
+  '<div data-dp-id="dp-1"><h3 data-dp-field="topic">Trade turnover</h3>' +
+  '<div data-dp-field="context"><p>context one</p></div>' +
+  '<div data-dp-field="additional"><p>extra one</p></div></div>' +
+  '<div data-dp-id="dp-2" data-dp-kind="initiative"><h3 data-dp-field="topic">New program</h3>' +
+  '<div data-dp-field="context"><p>init body</p></div>' +
+  '<div data-dp-field="additional"><p>init extra</p></div></div>';
+
 test.describe('DiscussionPointsEditor', () => {
   test('renders one card per point with three fields each', async ({ page }) => {
     await bootDiscussionPoints(page, { initialHtml: TWO_POINTS });
@@ -119,6 +127,59 @@ test.describe('DiscussionPointsEditor', () => {
     expect(topics).toEqual(['Trade turnover', 'Investments']);
   });
 
+  test('the initiative button adds an initiative-labelled card', async ({ page }) => {
+    await bootDiscussionPoints(page, { initialHtml: TWO_POINTS });
+
+    await page.locator('.gcp-dp-add-initiative').click();
+    await expect(page.locator('.gcp-dp-card')).toHaveCount(3);
+    const card = page.locator('.gcp-dp-card').nth(2);
+    await expect(card).toHaveAttribute('data-dp-card-kind', 'initiative');
+    // Fallback strings — the fixture's I18n stub returns the key itself.
+    await expect(card.locator('.gcp-dp-label').first()).toHaveText('Initiative Title');
+    await expect(card.locator('.gcp-dp-label').nth(1)).toHaveText('Initiative');
+    await expect(card.locator('.gcp-dp-label').nth(2)).toHaveText('additional');
+
+    await page.locator('.gcp-dp-topic').nth(2).fill('New program');
+    const points = await page.evaluate(() => window.ed.getPoints());
+    expect(points.map(p => p.kind)).toEqual(['point', 'point', 'initiative']);
+    const html = await page.evaluate(() => window.ed.getHtml());
+    expect(html).toContain('data-dp-kind="initiative"');
+  });
+
+  test('a mixed point/initiative document round-trips byte-identically', async ({ page }) => {
+    await bootDiscussionPoints(page, { initialHtml: POINT_AND_INITIATIVE });
+
+    await expect(page.locator('.gcp-dp-card')).toHaveCount(2);
+    const kinds = await page.evaluate(() => window.ed.getPoints().map(p => p.kind));
+    expect(kinds).toEqual(['point', 'initiative']);
+    const out = await page.evaluate(() => window.ed.getHtml());
+    expect(out).toBe(POINT_AND_INITIATIVE);
+  });
+
+  test('points and initiatives share one numbering and reorder freely', async ({ page }) => {
+    await bootDiscussionPoints(page, { initialHtml: POINT_AND_INITIATIVE });
+
+    let nums = await page.locator('.gcp-dp-card-num').allTextContents();
+    expect(nums).toEqual(['1', '2']);
+
+    // Move the initiative above the point; the kind travels with its card.
+    await page.locator('.gcp-dp-card').nth(1).locator('.gcp-dp-up').click();
+    nums = await page.locator('.gcp-dp-card-num').allTextContents();
+    expect(nums).toEqual(['1', '2']);
+    const points = await page.evaluate(() => window.ed.getPoints());
+    expect(points.map(p => [p.topic, p.kind])).toEqual(
+      [['New program', 'initiative'], ['Trade turnover', 'point']]);
+    const html = await page.evaluate(() => window.ed.getHtml());
+    expect(html.indexOf('data-dp-kind="initiative"')).toBeLessThan(html.indexOf('dp-1'));
+  });
+
+  test('an untouched initiative card is dropped like an untouched point', async ({ page }) => {
+    await bootDiscussionPoints(page, { initialHtml: TWO_POINTS });
+    await page.locator('.gcp-dp-add-initiative').click();
+    const html = await page.evaluate(() => window.ed.getHtml());
+    expect(html).toBe(TWO_POINTS);
+  });
+
   test('drops points the author left completely empty', async ({ page }) => {
     await bootDiscussionPoints(page, { initialHtml: TWO_POINTS });
     await page.locator('.gcp-dp-add').click();
@@ -139,6 +200,7 @@ test.describe('DiscussionPointsEditor', () => {
     await expect(page.locator('.gcp-dp-card')).toHaveCount(2);
     await expect(page.locator('.gcp-dp-topic').first()).toBeDisabled();
     await expect(page.locator('.gcp-dp-add')).toBeHidden();
+    await expect(page.locator('.gcp-dp-add-initiative')).toBeHidden();
     await expect(page.locator('.gcp-dp-card-actions')).toHaveCount(0);
     const editable = await page.evaluate(() =>
       [...document.querySelectorAll('.gcp-dp-field .gcp-re-body')]

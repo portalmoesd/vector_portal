@@ -783,17 +783,22 @@
     "dp": {
       "sectionHint": "This document is composed of discussion points. Add one point per topic.",
       "topic": "Discussion Point Title",
+      "initiativeTopic": "Initiative Title",
       "topicPlaceholder": "Enter the title…",
       "context": "Discussion Point",
+      "initiative": "Initiative",
       "additional": "Additional Information",
       "add": "+ Add discussion point",
+      "addInitiative": "+ Add new initiative",
       "delete": "Delete discussion point",
+      "deleteInitiative": "Delete initiative",
       "moveUp": "Move up",
       "moveDown": "Move down",
       "untitled": "Untitled discussion point",
       "empty": "No discussion points yet.",
       "emptyReadonly": "No discussion points have been added yet.",
-      "confirmDelete": "Delete this discussion point and all of its content?"
+      "confirmDelete": "Delete this discussion point and all of its content?",
+      "confirmDeleteInitiative": "Delete this initiative and all of its content?"
     }
   }
 }

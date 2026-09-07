@@ -4,12 +4,16 @@
  *
  * A section is authored as an ordered list of discussion points; each point has
  * a plain-text Topic and two rich bodies, Context and Additional Information.
+ * A point is either a discussion point or an initiative (`kind`) — same
+ * structure, different labels — mixed freely in the one numbered list.
  * The whole list still serialises to the one `section_content.html_content`
  * string every other part of the system already reads, so the workflow (save,
  * submit, approve, return, history, comments, optimistic locking) is untouched.
  *
  * Persisted markup — structure carried by data attributes only, never classes,
- * because server/helpers/sanitize.js strips every class but the comment anchor:
+ * because server/helpers/sanitize.js strips every class but the comment anchor.
+ * `data-dp-kind="initiative"` marks an initiative; the attribute is omitted for
+ * discussion points so legacy documents round-trip byte-identically:
  *
  *   <div data-dp-id="dp-k3n1x8">
  *     <h3 data-dp-field="topic">Trade turnover</h3>
@@ -39,9 +43,9 @@
   // not the reader's UI locale — a Georgian brief must read as Georgian
   // wherever it is opened. I18n only ships en/ka, hence the local table.
   var EXPORT_LABELS = {
-    KA: { context: 'განსახილველი საკითხი', additional: 'დამატებითი ინფორმაცია', point: 'საკითხი' },
-    EN: { context: 'Discussion Point', additional: 'Additional Information', point: 'Point' },
-    RU: { context: 'Обсуждаемый вопрос', additional: 'Дополнительная информация', point: 'Вопрос' },
+    KA: { context: 'განსახილველი საკითხი', additional: 'დამატებითი ინფორმაცია', point: 'საკითხი', initiative: 'ინიციატივა' },
+    EN: { context: 'Discussion Point', additional: 'Additional Information', point: 'Point', initiative: 'Initiative' },
+    RU: { context: 'Обсуждаемый вопрос', additional: 'Дополнительная информация', point: 'Вопрос', initiative: 'Инициатива' },
   };
 
   function exportLabels(lang) {
@@ -74,7 +78,10 @@
   function serializePoints(points) {
     if (!points || !points.length) return '';
     return points.map(function (p) {
-      var out = '<div data-dp-id="' + escapeText(p.id) + '">';
+      // data-dp-kind is emitted only for initiatives so legacy documents
+      // (all plain points) round-trip byte-identically and never autosave.
+      var out = '<div data-dp-id="' + escapeText(p.id) + '"' +
+        (p.kind === 'initiative' ? ' data-dp-kind="initiative"' : '') + '>';
       out += '<h3 data-dp-field="topic">' + escapeText(p.topic) + '</h3>';
       out += '<div data-dp-field="context">' + (p.contextHtml || EMPTY_BODY) + '</div>';
       out += '<div data-dp-field="additional">' + (p.additionalHtml || EMPTY_BODY) + '</div>';
@@ -92,11 +99,13 @@
       .trim() === '';
   }
 
-  /** Picker/export label for a point, falling back to "Point N". */
+  /** Picker/export label for a point, falling back to "Point N"/"Initiative N". */
   function topicLabel(point, lang, index) {
     var topic = point && point.topic ? String(point.topic).trim() : '';
     if (topic) return topic;
-    return exportLabels(lang).point + ' ' + ((index == null ? 0 : index) + 1);
+    var L = exportLabels(lang);
+    var noun = point && point.kind === 'initiative' ? L.initiative : L.point;
+    return noun + ' ' + ((index == null ? 0 : index) + 1);
   }
 
   /**
@@ -116,7 +125,8 @@
       var out = '<h3 style="font-size:12pt;font-weight:bold;margin:14px 0 4px;">' +
         (i + 1) + '. ' + escapeText(topicLabel(p, lang, i)) + '</h3>';
       if (!isBlankHtml(p.contextHtml)) {
-        out += '<p style="margin:8px 0 2px;"><b>' + escapeText(L.context) + '</b></p>';
+        var contextLabel = p.kind === 'initiative' ? L.initiative : L.context;
+        out += '<p style="margin:8px 0 2px;"><b>' + escapeText(contextLabel) + '</b></p>';
         out += '<div>' + p.contextHtml + '</div>';
       }
       if (!isBlankHtml(p.additionalHtml)) {
@@ -154,7 +164,7 @@
     if (!cards.length) {
       var body = (html || '').trim();
       if (!body) return [];
-      return [{ id: newPointId(), topic: '', contextHtml: body, additionalHtml: '' }];
+      return [{ id: newPointId(), kind: 'point', topic: '', contextHtml: body, additionalHtml: '' }];
     }
 
     var points = [];
@@ -170,6 +180,7 @@
         var topicEl = node.querySelector('[data-dp-field="topic"]');
         points.push({
           id: id,
+          kind: node.getAttribute('data-dp-kind') === 'initiative' ? 'initiative' : 'point',
           // Topic is plain text by contract; strip any markup that reached it
           // (a paste, or content folded in by an earlier repair).
           topic: topicEl ? (topicEl.textContent || '').replace(/\s+/g, ' ').trim() : '',
@@ -189,7 +200,7 @@
 
     if (stray.length) {
       if (points.length) points[0].contextHtml = stray.join('') + points[0].contextHtml;
-      else points.push({ id: newPointId(), topic: '', contextHtml: stray.join(''), additionalHtml: '' });
+      else points.push({ id: newPointId(), kind: 'point', topic: '', contextHtml: stray.join(''), additionalHtml: '' });
     }
     return points;
   }
@@ -234,6 +245,7 @@
       '.gcp-dp-topic:focus{outline:none;border-color:#0a84ff;}',
       '.gcp-dp-topic[disabled]{background:rgba(43,68,91,.04);}',
       '.gcp-dp-add{margin-top:4px;}',
+      '.gcp-dp-add-initiative{margin-top:4px;margin-left:8px;}',
       /* Collapse the RichEditor page sheet down to an inline field box. */
       '.gcp-dp-field .gcp-re-wrap{border:1px solid var(--border-color,#dde2e9);border-radius:8px;overflow:hidden;}',
       '.gcp-dp-field .gcp-re-toolbar{display:none;}',
@@ -292,23 +304,33 @@
       ? tr('editor.dp.emptyReadonly', 'No discussion points have been added yet.')
       : tr('editor.dp.empty', 'No discussion points yet.');
 
+    function addCard(kind) {
+      var card = buildCard({ id: newPointId(), kind: kind, topic: '', contextHtml: '', additionalHtml: '' });
+      cards.push(card);
+      list.appendChild(card.el);
+      renumber();
+      card.topicInput.focus();
+    }
+
     var addBtn = document.createElement('button');
     addBtn.type = 'button';
     addBtn.className = 'btn btn-outline gcp-dp-add';
     addBtn.textContent = tr('editor.dp.add', '+ Add discussion point');
     if (readOnly) addBtn.style.display = 'none';
-    addBtn.addEventListener('click', function () {
-      var card = buildCard({ id: newPointId(), topic: '', contextHtml: '', additionalHtml: '' });
-      cards.push(card);
-      list.appendChild(card.el);
-      renumber();
-      card.topicInput.focus();
-    });
+    addBtn.addEventListener('click', function () { addCard('point'); });
+
+    var addInitBtn = document.createElement('button');
+    addInitBtn.type = 'button';
+    addInitBtn.className = 'btn btn-outline gcp-dp-add-initiative';
+    addInitBtn.textContent = tr('editor.dp.addInitiative', '+ Add new initiative');
+    if (readOnly) addInitBtn.style.display = 'none';
+    addInitBtn.addEventListener('click', function () { addCard('initiative'); });
 
     root.appendChild(hint);
     root.appendChild(list);
     root.appendChild(emptyEl);
     root.appendChild(addBtn);
+    root.appendChild(addInitBtn);
     wrap.appendChild(dock);
     wrap.appendChild(root);
     opts.container.innerHTML = '';
@@ -337,11 +359,13 @@
     // ── Cards ────────────────────────────────────────────────────────────────
 
     function buildCard(point) {
-      var card = { id: point.id, editors: {}, el: null, topicInput: null };
+      var kind = point.kind === 'initiative' ? 'initiative' : 'point';
+      var card = { id: point.id, kind: kind, editors: {}, el: null, topicInput: null };
 
       var el = document.createElement('div');
       el.className = 'gcp-dp-card';
       el.setAttribute('data-dp-card-id', point.id);
+      el.setAttribute('data-dp-card-kind', kind);
 
       var head = document.createElement('div');
       head.className = 'gcp-dp-card-head';
@@ -355,7 +379,10 @@
         actions.className = 'gcp-dp-card-actions';
         var up = mkBtn('▲', tr('editor.dp.moveUp', 'Move up'), function () { movePoint(card, -1); });
         var down = mkBtn('▼', tr('editor.dp.moveDown', 'Move down'), function () { movePoint(card, 1); });
-        var del = mkBtn('✕', tr('editor.dp.delete', 'Delete discussion point'), function () { deletePoint(card); });
+        var delTitle = kind === 'initiative'
+          ? tr('editor.dp.deleteInitiative', 'Delete initiative')
+          : tr('editor.dp.delete', 'Delete discussion point');
+        var del = mkBtn('✕', delTitle, function () { deletePoint(card); });
         up.classList.add('gcp-dp-up');
         down.classList.add('gcp-dp-down');
         del.classList.add('gcp-dp-del');
@@ -368,7 +395,9 @@
       var body = document.createElement('div');
       body.className = 'gcp-dp-card-body';
 
-      body.appendChild(mkLabel(tr('editor.dp.topic', 'Discussion Point Title')));
+      body.appendChild(mkLabel(kind === 'initiative'
+        ? tr('editor.dp.initiativeTopic', 'Initiative Title')
+        : tr('editor.dp.topic', 'Discussion Point Title')));
       var topic = document.createElement('input');
       topic.type = 'text';
       topic.className = 'gcp-dp-topic';
@@ -379,7 +408,8 @@
       card.topicInput = topic;
 
       FIELDS.forEach(function (name) {
-        body.appendChild(mkLabel(tr('editor.dp.' + name, name)));
+        var labelKey = name === 'context' && kind === 'initiative' ? 'editor.dp.initiative' : 'editor.dp.' + name;
+        body.appendChild(mkLabel(tr(labelKey, name === 'context' && kind === 'initiative' ? 'Initiative' : name)));
         var host = document.createElement('div');
         host.className = 'gcp-dp-field';
         host.setAttribute('data-dp-host', name);
@@ -459,7 +489,9 @@
         card.el.remove();
         renumber();
       };
-      var msg = tr('editor.dp.confirmDelete', 'Delete this discussion point and all of its content?');
+      var msg = card.kind === 'initiative'
+        ? tr('editor.dp.confirmDeleteInitiative', 'Delete this initiative and all of its content?')
+        : tr('editor.dp.confirmDelete', 'Delete this discussion point and all of its content?');
       if (typeof GCP !== 'undefined' && GCP.ActionDialog && GCP.ActionDialog.confirm) {
         GCP.ActionDialog.confirm(msg, { confirmLabel: tr('common.delete', 'Delete'), confirmColor: '#dc2626' })
           .then(function (ok) { if (ok) run(); });
@@ -474,6 +506,7 @@
       return cards.map(function (c) {
         return {
           id: c.id,
+          kind: c.kind,
           topic: c.topicInput.value.trim(),
           contextHtml: c.editors.context.getHtml(),
           additionalHtml: c.editors.additional.getHtml(),
@@ -493,6 +526,7 @@
       return serializePoints(cards.map(function (c) {
         return {
           id: c.id,
+          kind: c.kind,
           topic: c.topicInput.value.trim(),
           contextHtml: c.editors.context.getCleanHtml(),
           additionalHtml: c.editors.additional.getCleanHtml(),
