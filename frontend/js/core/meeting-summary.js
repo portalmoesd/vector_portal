@@ -219,7 +219,10 @@
 
   // ── The modal ──────────────────────────────────────────────────────────────
 
-  async function open(eventId) {
+  // opts.onClose — optional: called whenever the modal closes, so a host page
+  // (the dashboard's Summaries tab) can refresh its counts immediately instead
+  // of waiting for its next poll.
+  async function open(eventId, opts) {
     injectCss();
     var doc;
     try {
@@ -306,7 +309,12 @@
         .replace('{done}', doc.progress.done).replace('{total}', doc.progress.total);
     }
 
-    var close = function () { overlay.remove(); };
+    var close = function () {
+      overlay.remove();
+      if (opts && typeof opts.onClose === 'function') {
+        try { opts.onClose(); } catch (_) { /* host callback must not break the modal */ }
+      }
+    };
     overlay.querySelector('.ms-close').addEventListener('click', close);
     overlay.addEventListener('click', function (e) { if (e.target === overlay) close(); });
 
@@ -384,7 +392,7 @@
           // Reopen on the fresh state rather than patching rows in place: a
           // send changes assignees, deadlines and every row's canEdit.
           close();
-          open(doc.eventId);
+          open(doc.eventId, opts);
         });
       });
     }

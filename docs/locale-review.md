@@ -550,6 +550,8 @@ The supervisor's task panel on the dashboard:
 | `dashboard.summaryTitle` | Meeting summaries | შეხვედრის შეჯამებები |  |
 | `dashboard.summaryPending` | {n} left | დარჩა {n} |  |
 | `dashboard.summaryDone` | Done | დასრულებულია |  |
+| `dashboard.tabSummaries` | Summaries | შეჯამებები |  |
+| `dashboard.noSummaries` | No meeting summaries | შეხვედრის შეჯამებები არ არის |  |
 
 Notifications. The `notif.*` keys have no section of their own in this document, so
 the two this feature adds are recorded here alongside it:
