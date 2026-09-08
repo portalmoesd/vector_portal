@@ -972,8 +972,15 @@
         <div class="mn-hist-wrap" id="mnHistory"></div>
       `;
       detailEl.querySelector('[data-act="preview"]').addEventListener('click', () => LibraryDoc.preview(item.id));
-      detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id));
-      detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id));
+      // Exporting a Discussion Points document records its meeting agenda —
+      // reflect that on the card so the Summary/Send buttons appear right away.
+      const onAgendaRecorded = (out) => {
+        item.hasMeetingAgenda = true;
+        if (out && typeof out.unsent === 'number') item.unsentSummaryPoints = out.unsent;
+        fillCardDetail(item, detailEl);
+      };
+      detailEl.querySelector('[data-act="pdf"]').addEventListener('click', () => LibraryDoc.exportPdf(item.id, { onAgendaRecorded }));
+      detailEl.querySelector('[data-act="word"]').addEventListener('click', () => LibraryDoc.exportWord(item.id, { onAgendaRecorded }));
       const summaryBtn = detailEl.querySelector('[data-act="summary"]');
       if (summaryBtn) summaryBtn.addEventListener('click', () => GCP.MeetingSummary.open(item.id));
       const sendBtn = detailEl.querySelector('[data-act="sendSummary"]');
@@ -1956,6 +1963,10 @@
     summary_due: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15l2 2 4-4"/></svg>',
     // A warning triangle: a point nobody was assigned to.
     summary_unassigned: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>',
+    // A clock: the summary deadline is today or tomorrow.
+    summary_due_soon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>',
+    // A circled exclamation: the deadline has passed.
+    summary_overdue: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>',
   };
 
   function notifMessage(n) {
@@ -1964,6 +1975,12 @@
     if (n.type === 'completed') return I18n.tr('notif.completed').replace('{event}', m.eventTitle || '');
     if (n.type === 'returned') return I18n.tr('notif.returned').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
     if (n.type === 'summary_due') return I18n.tr('notif.summaryDue').replace('{event}', m.eventTitle || '');
+    if (n.type === 'summary_due_soon') {
+      return I18n.tr('notif.summaryDueSoon')
+        .replace('{date}', m.deadlineDate && typeof formatDate === 'function' ? formatDate(m.deadlineDate) : (m.deadlineDate || ''))
+        .replace('{event}', m.eventTitle || '');
+    }
+    if (n.type === 'summary_overdue') return I18n.tr('notif.summaryOverdue').replace('{event}', m.eventTitle || '');
     if (n.type === 'summary_unassigned') return I18n.tr('notif.summaryUnassigned').replace('{n}', String(m.count || 0)).replace('{event}', m.eventTitle || '');
     return I18n.tr('notif.yourTurn').replace('{section}', m.sectionTitle || '').replace('{event}', m.eventTitle || '');
   }
@@ -2051,7 +2068,7 @@
       const open = async () => {
         try { await Api.post('/api/notifications/read', { id: parseInt(li.dataset.id, 10) }); } catch (_) { /* ignore */ }
         if (onAfterClick) onAfterClick();
-        if (li.dataset.type === 'summary_due') {
+        if (['summary_due', 'summary_due_soon', 'summary_overdue'].indexOf(li.dataset.type) !== -1) {
           // The task lives on the Summaries tab, not on an event card — land
           // there (revealing the tab even before /mine has answered) and
           // refresh so the row is present and fresh.

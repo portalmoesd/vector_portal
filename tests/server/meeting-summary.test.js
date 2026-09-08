@@ -54,6 +54,14 @@ test('sending with no clock given still yields a deadline', () => {
   assert.equal(MS.deadlineFromSend('nonsense'), null);
 });
 
+test('tbilisiToday reads the calendar day in Tbilisi, not in UTC', () => {
+  // What the reminder sweep compares deadline_date against: after 20:00 UTC
+  // the Tbilisi day has already turned.
+  assert.equal(MS.tbilisiToday('2026-09-01T19:30:00Z'), '2026-09-01');
+  assert.equal(MS.tbilisiToday('2026-09-01T20:30:00Z'), '2026-09-02');
+  assert.match(MS.tbilisiToday(), /^\d{4}-\d{2}-\d{2}$/);
+});
+
 // ── Who may act as the Document Owner ────────────────────────────────────────
 
 const MINISTER_DOC = { document_submitter_id: 5, document_submitter_role: 'MINISTER' };

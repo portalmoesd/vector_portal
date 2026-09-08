@@ -18,7 +18,12 @@ const PAGE = `<!doctype html><html><head><meta charset="utf-8"></head><body>
   window.I18n = { tr: k => k, t: k => k, getLocale: () => 'ka' };
   window.escapeHtml = s => String(s == null ? '' : s).replace(/&/g, '&amp;')
     .replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  window.toast = { warn: m => { window.__warn = m; }, error(){}, info(){} };
+  window.toast = {
+    warn: m => { window.__warn = m; },
+    error: m => { window.__error = m; },
+    success: m => { window.__success = m; },
+    info(){},
+  };
   window.Api = { get: async () => [], getUser: () => ({ id: 1, role: 'ADMIN' }) };
   window.formatDate = d => d;
   window.localizedCountryName = c => c.name_en;
@@ -229,6 +234,9 @@ test.describe('recording the meeting agenda', () => {
     await page.evaluate(({ d, id, fail, role }) => {
       window.__exported = null;
       window.__posted = null;
+      window.__recorded = null;
+      window.__success = null;
+      window.__error = null;
       window.Api.getUser = () => ({ id, role: role || 'SUPER_COLLABORATOR' });
       window.Api.get = async () => d;
       window.Api.post = async (path, body) => {
@@ -240,7 +248,7 @@ test.describe('recording the meeting agenda', () => {
         document: { write(html) { window.__exported = html; }, close() {} },
         print() {},
       });
-      LibraryDoc.exportPdf(d.eventId);
+      LibraryDoc.exportPdf(d.eventId, { onAgendaRecorded: out => { window.__recorded = out; } });
     }, { d: doc, id: viewerId, fail: !!opts.fail, role: opts.role || null });
     await page.waitForSelector('#exportConfirmBtn');
   }
@@ -271,6 +279,12 @@ test.describe('recording the meeting agenda', () => {
     expect(posted.body.points.map(p => p.dpId)).toEqual(['dp-2', 'dp-3']);
     expect(posted.body.points[0]).toMatchObject({ sectionId: 1, topic: 'Investments' });
     expect(posted.body.points[1]).toMatchObject({ sectionId: 2, topic: 'Tourism' });
+
+    // The owner is told the recording landed, and the host page gets its
+    // refresh callback. The fixture returns no `unsent` count, so the toast is
+    // the bare message — pinning that the count sentence is optional.
+    await page.waitForFunction(() => window.__recorded !== null);
+    expect(await page.evaluate(() => window.__success)).toBe('library.summary.agendaRecorded');
   });
 
   test('Protocol records for a Minister-owned document', async ({ page }) => {
@@ -313,6 +327,9 @@ test.describe('recording the meeting agenda', () => {
     await page.click('#exportConfirmBtn');
     await page.waitForFunction(() => window.__exported !== null);
     expect(await page.evaluate(() => window.__posted)).toBeNull();
+    // No recording means no toast and no refresh either.
+    expect(await page.evaluate(() => window.__success)).toBeNull();
+    expect(await page.evaluate(() => window.__recorded)).toBeNull();
   });
 
   test('a document that is not discussion points records nothing', async ({ page }) => {
@@ -330,5 +347,10 @@ test.describe('recording the meeting agenda', () => {
     // The file is still produced even though the recording threw.
     await page.waitForFunction(() => window.__exported !== null);
     expect(await page.evaluate(() => window.__exported)).toContain('Investments');
+    // ...but the owner hears about the failure instead of a silent console line.
+    await page.waitForFunction(() => window.__error !== null);
+    expect(await page.evaluate(() => window.__error)).toContain('library.summary.agendaRecordFailed');
+    expect(await page.evaluate(() => window.__recorded)).toBeNull();
+    expect(await page.evaluate(() => window.__success)).toBeNull();
   });
 });

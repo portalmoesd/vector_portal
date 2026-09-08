@@ -542,6 +542,11 @@ document card, and from the supervisor's own task panel.
 | `library.summary.unsent` | {n} discussion point(s) have not been sent for summaries yet. | {n} საკითხი ჯერ არ არის გაგზავნილი შესაჯამებლად. |  |
 | `library.summary.notSent` | {n} discussion point(s) are waiting for the document owner to send them. | {n} საკითხი ელოდება დოკუმენტის მფლობელის მიერ გაგზავნას. |  |
 | `library.summary.allSent` | Every discussion point has already been sent. | ყველა საკითხი უკვე გაგზავნილია. |  |
+| `library.summary.reassigned` | Re-assigned {n} point(s) to the responsible department heads. | {n} საკითხს მიენიჭა პასუხისმგებელი დეპარტამენტის ხელმძღვანელი. |  |
+| `library.summary.agendaRecorded` | Meeting agenda recorded. | შეხვედრის დღის წესრიგი დაფიქსირდა. |  |
+| `library.summary.agendaRecordedUnsent` | {n} point(s) ready to send for summaries. | {n} საკითხი მზადაა შესაჯამებლად გასაგზავნად. |  |
+| `library.summary.agendaRecordFailed` | Recording the meeting agenda failed: | შეხვედრის დღის წესრიგის დაფიქსირება ვერ მოხერხდა: |  |
+| `library.summary.sentBy` | Sent by {name} · {date} | გამგზავნი: {name} · {date} |  |
 
 The supervisor's task panel on the dashboard:
 
@@ -560,6 +565,8 @@ the two this feature adds are recorded here alongside it:
 | --- | --- | --- | --- |
 | `notif.summaryDue` | Meeting summary due: {event} | შესავსებია შეხვედრის შეჯამება: {event} |  |
 | `notif.summaryUnassigned` | {n} discussion point(s) in {event} have no responsible department head | {event}-ის {n} საკითხს არ ჰყავს პასუხისმგებელი დეპარტამენტის ხელმძღვანელი |  |
+| `notif.summaryDueSoon` | Meeting summary due {date}: {event} | შეხვედრის შეჯამების ვადაა {date}: {event} |  |
+| `notif.summaryOverdue` | Meeting summary overdue: {event} | ვადაგადაცილებულია შეხვედრის შეჯამება: {event} |  |
 
 The left-hand column reuses the discussion-point field labels held in
 `frontend/js/core/discussion-points.js` (see the table above), so a point reads the

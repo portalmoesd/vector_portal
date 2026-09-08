@@ -175,6 +175,24 @@ test.describe('the Summaries tab', () => {
     await expect(page.locator('.mn-list .empty-state')).toContainText('No meeting summaries');
   });
 
+  test('due-soon and overdue reminders route to the tab like summary_due', async ({ page }) => {
+    await openDashboard(page, { notifications: [
+      { id: 22, type: 'summary_due_soon', eventId: 1, sectionId: null,
+        meta: { eventTitle: 'Berlin Summit', deadlineDate: FUTURE, pointCount: 2 },
+        isRead: false, createdAt: '2026-03-01T10:00:00.000Z' },
+      { id: 23, type: 'summary_overdue', eventId: 1, sectionId: null,
+        meta: { eventTitle: 'Berlin Summit', deadlineDate: PAST, pointCount: 2 },
+        isRead: false, createdAt: '2026-03-02T10:00:00.000Z' },
+    ] });
+
+    await page.click('.mn-notifs .mn-notif[data-type="summary_overdue"]');
+    await expect(tab(page, 'summaries')).toHaveClass(/is-active/);
+
+    await page.click('.mn-notifs .mn-notif[data-type="summary_due_soon"]');
+    await expect(tab(page, 'summaries')).toHaveClass(/is-active/);
+    await expect(tab(page, 'summaries')).toBeVisible();
+  });
+
   test('finishing the last task never yanks the tab away mid-session', async ({ page }) => {
     await page.clock.install();
     const state = await openDashboard(page, { mine: [mineRow()] });

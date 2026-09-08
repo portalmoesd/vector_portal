@@ -43,6 +43,37 @@ async function countPending(handle, eventId) {
 }
 
 /**
+ * Summary rows that exist but nobody owns — opened at a time when no Supervisor
+ * covered the point's departments. A later send retries the assignment for
+ * these, so fixing the department setup actually rescues the row instead of
+ * leaving it orphaned forever.
+ */
+const UNASSIGNED_SQL = `
+  SELECT ms.id AS summary_id, ap.section_id, ap.topic_snapshot
+  FROM meeting_summaries ms
+  JOIN meeting_agenda_points ap ON ap.id = ms.agenda_point_id
+  WHERE ms.event_id = $1
+    AND ap.removed_at IS NULL
+    AND NOT EXISTS (
+      SELECT 1 FROM meeting_summary_assignees a WHERE a.summary_id = ms.id
+    )
+  ORDER BY ap.position
+`;
+
+/** How many already-open rows still have nobody assigned. */
+async function countUnassigned(handle, eventId) {
+  const { rows } = await handle.query(
+    `SELECT count(*)::int AS n
+     FROM meeting_summaries ms
+     JOIN meeting_agenda_points ap ON ap.id = ms.agenda_point_id
+     WHERE ms.event_id = $1 AND ap.removed_at IS NULL
+       AND NOT EXISTS (SELECT 1 FROM meeting_summary_assignees a WHERE a.summary_id = ms.id)`,
+    [eventId]
+  );
+  return rows[0] ? rows[0].n : 0;
+}
+
+/**
  * Open every not-yet-sent point of one event, in a single transaction.
  *
  * Notifications are written inside that transaction on purpose: sent after
@@ -57,13 +88,41 @@ async function sendForSummaries(eventId, actor, event, deadlineDate) {
   try {
     await client.query('BEGIN');
 
-    const { rows } = await client.query(PENDING_SQL, [eventId]);
-
     // Per supervisor, not per event: a supervisor who owns one point of five
     // must be told they owe one, not five.
     const pointsPerSupervisor = new Map();
     const unassignedTopics = [];
     let opened = 0;
+    let reassigned = 0;
+
+    // Retry rows that were opened with nobody assigned, BEFORE opening new
+    // ones: a point opened below that resolves to zero assignees would
+    // otherwise be swept up again here and its topic double-counted.
+    const { rows: orphans } = await client.query(UNASSIGNED_SQL, [eventId]);
+    for (const row of orphans) {
+      const ids = await resolveStepUserIds(client, eventId, row.section_id, 'SUPERVISOR');
+      if (ids.length) {
+        const values = ids.map((_, i) => `($1, $${i + 2})`).join(', ');
+        await client.query(
+          `INSERT INTO meeting_summary_assignees (summary_id, user_id)
+           VALUES ${values} ON CONFLICT DO NOTHING`,
+          [row.summary_id, ...ids]
+        );
+        // Deadlines are measured from the send so supervisors always get a
+        // full week — and this supervisor is only now receiving the task.
+        await client.query(
+          `UPDATE meeting_summaries SET deadline_date = $1, updated_at = now() WHERE id = $2`,
+          [deadlineDate, row.summary_id]
+        );
+        reassigned += 1;
+        ids.forEach((id) => pointsPerSupervisor.set(id, (pointsPerSupervisor.get(id) || 0) + 1));
+      } else {
+        // Still nobody: keep telling the owner rather than going quiet.
+        unassignedTopics.push(row.topic_snapshot || '');
+      }
+    }
+
+    const { rows } = await client.query(PENDING_SQL, [eventId]);
 
     for (const row of rows) {
       // UNIQUE (agenda_point_id) makes this the claim: if a concurrent send
@@ -99,7 +158,7 @@ async function sendForSummaries(eventId, actor, event, deadlineDate) {
       }
     }
 
-    if (opened) {
+    if (opened || reassigned) {
       const eventTitle = event.title || '';
 
       // Grouped by count so supervisors owing the same number share one insert.
@@ -127,10 +186,11 @@ async function sendForSummaries(eventId, actor, event, deadlineDate) {
 
     await client.query('COMMIT');
     console.log(`[meeting-summary] send event=${eventId} by=${actor.id} opened=${opened} ` +
-      `supervisors=${pointsPerSupervisor.size} unassigned=${unassignedTopics.length}`);
+      `reassigned=${reassigned} supervisors=${pointsPerSupervisor.size} unassigned=${unassignedTopics.length}`);
 
     return {
       opened,
+      reassigned,
       supervisors: pointsPerSupervisor.size,
       unassigned: unassignedTopics.length,
     };
@@ -163,4 +223,4 @@ async function unassignedRecipients(handle, actor, event) {
   return [...ids];
 }
 
-module.exports = { sendForSummaries, countPending, PENDING_SQL };
+module.exports = { sendForSummaries, countPending, countUnassigned, PENDING_SQL, UNASSIGNED_SQL };

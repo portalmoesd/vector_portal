@@ -254,7 +254,7 @@
    * Fire-and-forget: recording must never block or fail an export, so a
    * rejected or failed call is logged and swallowed.
    */
-  function recordMeetingAgenda(doc, sections) {
+  function recordMeetingAgenda(doc, sections, onRecorded) {
     if (!isDiscussionPoints(doc)) return;
     const viewer = (typeof Api !== 'undefined' && Api.getUser) ? Api.getUser() : null;
     if (!isOwnerOrProxy(doc, viewer)) return;
@@ -275,7 +275,22 @@
     if (!points.length) return;
 
     Api.post('/api/meeting-summaries/agenda', { eventId: doc.eventId, points })
-      .catch((e) => console.error('Recording the meeting agenda failed:', e && e.message));
+      .then((out) => {
+        // Older fixtures/servers may omit `unsent`; the count sentence is optional.
+        const unsent = out && typeof out.unsent === 'number' ? out.unsent : null;
+        let msg = I18n.tr('library.summary.agendaRecorded');
+        if (unsent !== null && unsent > 0) {
+          msg += ' ' + I18n.tr('library.summary.agendaRecordedUnsent').replace('{n}', String(unsent));
+        }
+        toast.success(msg);
+        if (typeof onRecorded === 'function') {
+          try { onRecorded(out); } catch (_) { /* a host refresh must not break the export */ }
+        }
+      })
+      .catch((e) => {
+        console.error('Recording the meeting agenda failed:', e && e.message);
+        toast.error(I18n.tr('library.summary.agendaRecordFailed') + ' ' + (e && e.message));
+      });
   }
 
   // ── Section selection modal helper ──────────────────────────────────────────
@@ -686,11 +701,11 @@
     });
   }
 
-  async function exportPdf(eventId) {
+  async function exportPdf(eventId, opts) {
     try {
       const doc = await Api.get(`/api/library/${eventId}/document`);
       showSectionSelectModal(doc, I18n.tr('library.export.pdfTitle'), async (sections) => {
-        recordMeetingAgenda(doc, sections);
+        recordMeetingAgenda(doc, sections, opts && opts.onAgendaRecorded);
         await exportHtmlAsPdf(doc, sections);
       });
     } catch (e) {
@@ -699,11 +714,11 @@
   }
 
   // ── Export Word ────────────────────────────────────────────────────────────
-  async function exportWord(eventId) {
+  async function exportWord(eventId, opts) {
     try {
       const doc = await Api.get(`/api/library/${eventId}/document`);
       showSectionSelectModal(doc, I18n.tr('library.export.wordTitle'), async (sections) => {
-        recordMeetingAgenda(doc, sections);
+        recordMeetingAgenda(doc, sections, opts && opts.onAgendaRecorded);
         try {
           // Include section comments so anchored ones export as native Word comments
           const mapped = await Promise.all(sections.map(async s => {
