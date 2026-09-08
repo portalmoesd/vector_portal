@@ -590,7 +590,7 @@ SectionHistory {
   id
   event_id: FK → Event
   section_id: FK → Section
-  action: enum [saved, submitted, returned, approved, asked_to_return]
+  action: enum [saved, submitted, returned, approved, asked_to_return, pushed, pulled]
   from_status: string (nullable)         // Status before action
   to_status: string                      // Status after action
   user_id: FK → User (nullable)
@@ -637,6 +637,69 @@ SectionContent {
 ```
 
 Unique constraint: `(event_id, section_id)`. See §20 for full status enum and workflow logic.
+
+### 8.17 Meeting Agenda Point
+
+What the Document Owner extracted for the meeting — a **snapshot** of each
+discussion point at export time, not a pointer into `SectionContent.html_content`
+(the owner can reopen and edit the document afterwards, so a pointer would rot).
+See §24.3.
+
+```
+MeetingAgendaPoint {
+  id
+  event_id: FK → Event
+  section_id: FK → Section
+  dp_id: string                          // the data-dp-id at extraction time
+  kind: string (default 'point')         // 'point' | 'initiative'
+  position: int                          // order within the agenda
+  topic_snapshot: text
+  context_snapshot: text
+  additional_snapshot: text
+  removed_at: timestamp (nullable)       // soft-removed by a later re-export
+  recorded_by_id: FK → User (nullable)   // audit: who exported/recorded
+  created_at / updated_at
+}
+```
+
+Unique constraint: `(event_id, section_id, dp_id)`. Removal is soft, never
+DELETE — a point that already carries a written summary must not lose it.
+
+### 8.18 Meeting Summary
+
+One shared row per sent agenda point. Either assigned supervisor may fill it
+and the last save wins, so the row records who wrote it and when. The row's
+existence means the task is open. See §24.4.
+
+```
+MeetingSummary {
+  id
+  agenda_point_id: FK → MeetingAgendaPoint (UNIQUE — the concurrency claim)
+  event_id: FK → Event
+  summary_html: text (default '')
+  status: enum [PENDING, SUBMITTED]      // SUBMITTED = non-blank text saved
+  deadline_date: date                    // a week from the send (Tbilisi day)
+  opened_at: timestamp
+  opened_by_user_id: FK → User (nullable) // audit: who sent — shown as
+                                          // "Sent by …" on the summary modal
+  last_edited_by_user_id: FK → User (nullable)
+  last_edited_at: timestamp (nullable)
+  created_at / updated_at
+}
+```
+
+### 8.19 Meeting Summary Assignee
+
+Which supervisors own a summary row. Resolved once when the task opens (or is
+retro-assigned, §24.4) and then frozen, so a supervisor who moves department
+keeps the task they were actually given.
+
+```
+MeetingSummaryAssignee {
+  summary_id: FK → MeetingSummary (PK part)
+  user_id: FK → User (PK part)
+}
+```
 
 ---
 
@@ -700,6 +763,26 @@ restores it if the request never landed.
 
 `GET /api/notifications` returns the recent window **plus every unread row however old**, so
 a notification pushed out of that window by newer traffic cannot silently drop its dot.
+
+#### Meeting Summary notifications
+
+The Meeting Summary feature (§24) adds four notification types that deliberately do **not**
+participate in the card-dot scheme above — the task lives in the summary modal, not on an
+event card, so its attention cue is the **red count badge on the dashboard's Summaries tab**
+(the number of points the user still owes; it clears as summaries are written).
+
+| Type | Recipient | When |
+|---|---|---|
+| `summary_due` | each assigned supervisor | the owner sends the agenda (one per event, with their point count) |
+| `summary_due_soon` | each assignee with pending work | the daily sweep, when their deadline is today or tomorrow (once per user+event) |
+| `summary_overdue` | each assignee with pending work | the daily sweep, once the deadline has passed (once per user+event) |
+| `summary_unassigned` | the sender, plus the owner and deputy (or all of Protocol for a Minister document) | a send leaves points with no responsible supervisor |
+
+Clicking any of the first three lands on the Summaries tab (revealing it if needed);
+`summary_unassigned` targets the owner and routes to the event card like other notifications.
+The due-soon/overdue reminders come from a daily in-process sweep (05:00 UTC / 09:00 Tbilisi,
+plus a boot catch-up) whose INSERTs dedup in SQL — at most one of each type per user and
+event — because the notifications table has no unique constraint.
 
 ---
 
@@ -1431,3 +1514,105 @@ Required environment variables (provided by the user from the Render dashboard):
 - Other deployment-specific configuration
 
 Build and start commands will be configured based on the final project structure.
+
+---
+
+## 24. Discussion Points & Meeting Summary
+
+### 24.1 Overview
+
+Some documents are not free-form prose but the **agenda of a meeting**: an ordered list of
+discussion points (and initiatives) prepared for the Minister or a Deputy. After the meeting,
+the responsible department heads write a **summary** against each point. The feature spans
+the whole lifecycle: a structured editor, agenda capture on export, an owner-driven send,
+supervisor tasks with deadlines and reminders, and a two-column summary view with its own
+exports.
+
+### 24.2 The Discussion Points document type
+
+- `Event.document_type` is `OTHER` (default) or `DISCUSSION_POINTS`, chosen at event
+  creation. A Discussion Points event requires a meeting date/time and pre-selects the
+  simple workflow.
+- Sections of such a document are authored in a dedicated editor
+  (`GCP.DiscussionPointsEditor`): an ordered, shared-numbered list of cards, each with a
+  plain-text title and two rich fields (the point body and Additional Information). A card
+  is either a **discussion point** or an **initiative** (`data-dp-kind="initiative"`) — same
+  structure, different labels; both mix freely in one list.
+- The whole list serialises into the one `SectionContent.html_content` string
+  (`<div data-dp-id>` cards with `data-dp-field` children), so the entire workflow — save,
+  submit, approve, return, history, comments, track changes, optimistic locking — is the
+  standard one and needed no changes. Serialisation is byte-stable (the autosave loop
+  string-compares), and the `data-dp-*` attributes are allowlisted by the server sanitizer.
+- Export labels (Discussion Point / Initiative / Additional Information, and the
+  "Point N" / "Initiative N" untitled fallbacks) follow the **document's** language
+  (KA / EN / RU), not the reader's UI locale.
+
+### 24.3 Recording the meeting agenda
+
+The owner's **export selection is the agenda of record**: exporting to PDF or Word from the
+section-select picker posts the chosen points (a snapshot: topic, both bodies, kind) to
+`POST /api/meeting-summaries/agenda`, which upserts `MeetingAgendaPoint` rows and
+soft-removes points dropped from a later selection (§8.17). Rules:
+
+- Only the Document Owner records — plus Protocol for a Minister-owned document. An Admin's
+  export deliberately does **not** rewrite someone else's agenda.
+- Recording is a non-blocking side effect: a failure never costs the user the exported file.
+  The owner gets a success/failure toast, and the Library list / dashboard card refresh so
+  the Meeting Summary and Send buttons appear immediately.
+
+### 24.4 Sending for summaries
+
+Sending is a **deliberate act, never scheduled**: the owner presses "Send for Meeting
+Summary" once the meeting is done (Protocol for a Minister document, an Admin as fallback —
+`canActAsOwner`). One transaction (`sendForSummaries`):
+
+1. **Retro-assign** — rows that exist with zero assignees are retried first: assignees are
+   re-resolved, and rescued rows get a fresh deadline (measured from this send). This is how
+   a point recorded before its departments had a supervisor stops being a dead end.
+2. **Open** — every live agenda point without a summary row gets one
+   (`ON CONFLICT (agenda_point_id) DO NOTHING` is the double-click/concurrency claim).
+3. **Assign** — assignees come from the workflow's own step resolver
+   (`resolveStepUserIds(…, 'SUPERVISOR')`): the section's departments plus the
+   country-assignment rule. Frozen after that (§8.19).
+4. **Notify** — `summary_due` per supervisor with their point count; `summary_unassigned`
+   to the owner's side for points that still resolve to nobody (§10.2).
+
+The deadline is **one week from the send** (Tbilisi-anchored calendar day) — measured from
+the send, not the meeting, so supervisors always get a full week. Re-sending is safe and
+expected: it opens only new points (a re-export top-up), retries unassigned ones, and
+disturbs no written summary. Points added by a later send carry their own, later deadline —
+the summary view shows per-row deadline chips when they differ.
+
+### 24.5 The supervisor's task: deadlines, reminders, the Summaries tab
+
+- Every dashboard injects a **Summaries tab** into the segmented control, hidden until
+  `GET /api/meeting-summaries/mine` returns rows (data-driven, not role-gated). A red badge
+  carries the number of points still owed. Cards list each event with pending/done chips and
+  deadline colouring; clicking one opens the summary modal. The tab never disappears
+  mid-session; fully-written events age off the `/mine` payload 30 days after they were last
+  touched, while anything pending stays forever.
+- A **daily reminder sweep** (§10.2) nags each assignee once when their deadline is
+  today/tomorrow and once when it has passed. There is no edit lock after the deadline —
+  late is better than never, and "Overdue" chips say what happened.
+
+### 24.6 The summary view and its exports
+
+`GET /api/meeting-summaries/:eventId` renders a two-column modal — the point snapshot on the
+left (with its section caption when the document spans several sections), the summary on the
+right. Reading it is exactly as wide as reading the document (the Library's own visibility
+rule; 404, not 403, when the viewer may not). Writing is per row, **assignees only**; a row
+is shared, last save wins, and the byline names who wrote last. `status` flips to
+`SUBMITTED` when the saved text is non-blank. The meta line shows progress
+("{done} of {total} written"), the shared deadline chip, and "Sent by … · date"
+(the `opened_by_user_id` audit trail).
+
+The modal exports **Summary PDF / Summary Word** — the two-column table in the document's
+language, named "Meeting Summary — {title}" so it never collides with the main document
+export, carrying the document's date line.
+
+### 24.7 Deliberately out of scope (for now)
+
+No review/approval step for written summaries (SUBMITTED simply means "non-blank text
+saved"); no un-send or re-open; no post-deadline edit lock; no manual assignee management
+beyond the send's retro-assignment. Each of these is a product decision to be taken
+explicitly, not an omission.

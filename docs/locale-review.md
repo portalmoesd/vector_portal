@@ -546,6 +546,7 @@ document card, and from the supervisor's own task panel.
 | `library.summary.agendaRecorded` | Meeting agenda recorded. | შეხვედრის დღის წესრიგი დაფიქსირდა. |  |
 | `library.summary.agendaRecordedUnsent` | {n} point(s) ready to send for summaries. | {n} საკითხი მზადაა შესაჯამებლად გასაგზავნად. |  |
 | `library.summary.agendaRecordFailed` | Recording the meeting agenda failed: | შეხვედრის დღის წესრიგის დაფიქსირება ვერ მოხერხდა: |  |
+| `library.summary.sentBy` | Sent by {name} · {date} | გამგზავნი: {name} · {date} |  |
 
 The supervisor's task panel on the dashboard:
 

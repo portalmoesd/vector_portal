@@ -27,6 +27,7 @@ const DOC = {
   eventId: 1, title: 'Trade meeting', language: 'EN',
   countryCode: 'TL', countryName: 'Testland', endedAt: null,
   hasMeetingTime: true, opened: true, canEditAny: true,
+  sentBy: 'Owner O', sentByKa: null, sentAt: '2026-08-25T10:00:00Z',
   progress: { done: 1, total: 2, unassigned: 1 },
   items: [
     { agendaPointId: 1, summaryId: 1, sectionId: 1, sectionTitle: 'Trade', dpId: 'dp-a',
@@ -90,6 +91,9 @@ test('meeting summary table renders and saves', async ({ page }) => {
   // The document spans two sections, so each point carries its section caption.
   await expect(page.locator('tr[data-row="0"] .ms-section')).toHaveText('Trade');
   await expect(page.locator('tr[data-row="1"] .ms-section')).toHaveText('Orphan');
+
+  // The meta line names who sent the tasks out — the opened_by audit trail.
+  await expect(page.locator('.ms-sentby')).toContainText('Owner O');
 
   // Editable row mounts the lightweight editor; read-only row does not.
   await expect(page.locator('tr[data-row="0"] .se-body')).toHaveCount(1);

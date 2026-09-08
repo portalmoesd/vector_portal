@@ -183,9 +183,10 @@
   /**
    * Sending assigns work to other people, so it is always confirmed first.
    *
-   * Falls back to the native confirm where GCP.ActionDialog is absent — the
-   * Archive page does not load every core module, and a missing dialog must
-   * not turn the button into a no-op.
+   * Falls back to the native confirm where GCP.ActionDialog is absent. Every
+   * page that can reach this today loads dialog.js, so the fallback is purely
+   * defensive — but a missing dialog must never turn the button into a silent
+   * no-op, which is exactly what happened once before the fallback existed.
    */
   function confirmSend(count) {
     var msg = tr('library.summary.sendConfirm',
@@ -297,6 +298,11 @@
           '<span data-progress>' + esc(tr('library.summary.progress', '{done} of {total} written')
             .replace('{done}', doc.progress.done).replace('{total}', doc.progress.total)) + '</span>' +
           deadlineChip(deadline) +
+          (doc.sentBy
+            ? '<span class="ms-sentby">' + esc(tr('library.summary.sentBy', 'Sent by {name} · {date}')
+                .replace('{name}', name(doc.sentBy, doc.sentByKa))
+                .replace('{date}', (typeof formatDate === 'function' && doc.sentAt) ? formatDate(doc.sentAt) : (doc.sentAt || ''))) + '</span>'
+            : '') +
         '</div>' +
         notes +
         (doc.items.length

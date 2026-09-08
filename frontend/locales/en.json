@@ -571,7 +571,8 @@
       "reassigned": "Re-assigned {n} point(s) to the responsible department heads.",
       "agendaRecorded": "Meeting agenda recorded.",
       "agendaRecordedUnsent": "{n} point(s) ready to send for summaries.",
-      "agendaRecordFailed": "Recording the meeting agenda failed:"
+      "agendaRecordFailed": "Recording the meeting agenda failed:",
+      "sentBy": "Sent by {name} · {date}"
     }
   },
   "editor": {

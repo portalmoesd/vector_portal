@@ -198,8 +198,9 @@ router.post('/:eventId/send', requireAuth, denyAnalyst, async (req, res) => {
 
 // ─── GET /api/meeting-summaries/mine ─────────────────────────────────────────
 // The current user's open summary rows, grouped by event, for the dashboard
-// panel and its badge.
-router.get('/mine', requireAuth, async (req, res) => {
+// Summaries tab and its badge. denyAnalyst for consistency with the rest of
+// the module — an analyst can never be an assignee anyway.
+router.get('/mine', requireAuth, denyAnalyst, async (req, res) => {
   try {
     const { rows } = await db.query(
       `SELECT e.id AS event_id, e.title, c.code AS country_code,
@@ -275,8 +276,9 @@ router.get('/:eventId', requireAuth, async (req, res) => {
               ap.dp_id, ap.kind, ap.position, ap.topic_snapshot,
               ap.context_snapshot, ap.additional_snapshot, ap.removed_at,
               ms.id AS summary_id, ms.summary_html, ms.status, ms.deadline_date,
-              ms.last_edited_at,
+              ms.last_edited_at, ms.opened_at,
               u.full_name AS last_edited_by, u.full_name_ka AS last_edited_by_ka,
+              ob.full_name AS opened_by, ob.full_name_ka AS opened_by_ka,
               EXISTS (SELECT 1 FROM meeting_summary_assignees a
                       WHERE a.summary_id = ms.id AND a.user_id = $2) AS mine,
               COALESCE((
@@ -291,6 +293,7 @@ router.get('/:eventId', requireAuth, async (req, res) => {
        JOIN sections s ON s.id = ap.section_id
        LEFT JOIN meeting_summaries ms ON ms.agenda_point_id = ap.id
        LEFT JOIN users u ON u.id = ms.last_edited_by_user_id
+       LEFT JOIN users ob ON ob.id = ms.opened_by_user_id
        WHERE ap.event_id = $1
        ORDER BY ap.position`,
       [eventId, req.user.id]
@@ -329,6 +332,14 @@ router.get('/:eventId', requireAuth, async (req, res) => {
     }));
 
     const counted = items.filter((i) => !i.removedFromAgenda);
+
+    // Who sent the tasks out, and when — the audit trail the opened_by_user_id
+    // column exists for, surfaced on the modal's meta line. The earliest send
+    // is the one named; a top-up does not rewrite history.
+    const firstOpened = rows
+      .filter((r) => r.opened_at)
+      .sort((a, b) => new Date(a.opened_at) - new Date(b.opened_at))[0];
+
     res.json({
       eventId: event.id,
       title: event.title,
@@ -342,6 +353,9 @@ router.get('/:eventId', requireAuth, async (req, res) => {
       eventDateTime: canSeeEventDateTime(req.user.role, req.user.id, event.document_submitter_id)
         ? event.event_datetime : null,
       opened: counted.some((i) => i.opened),
+      sentBy: firstOpened ? firstOpened.opened_by : null,
+      sentByKa: firstOpened ? firstOpened.opened_by_ka : null,
+      sentAt: firstOpened ? firstOpened.opened_at : null,
       canEditAny: items.some((i) => i.canEdit),
       // Whether this viewer may send, and how many points a send would open.
       // Both drive the button; the send endpoint re-checks the first.

@@ -146,10 +146,22 @@ test('the read route ships endedAt so the exports can print a date', async () =>
     removed_at: null, summary_id: 31, summary_html: '', status: 'PENDING',
     deadline_date: '2026-09-15', last_edited_at: null, last_edited_by: null,
     last_edited_by_ka: null, mine: true, assignees: [],
+    opened_at: '2026-09-01T10:00:00.000Z', opened_by: 'Owner O', opened_by_ka: null,
   }];
   const { status, body } = await call('GET', '/7');
   assert.equal(status, 200);
   assert.equal(body.endedAt, EVENT_ROW.ended_at);
   const q = queries.find(x => /FROM events e JOIN countries c/.test(x.text));
   assert.match(q.text, /e\.ended_at/);
+  // The opened_by audit columns surface as the "Sent by" meta line.
+  assert.equal(body.sentBy, 'Owner O');
+  assert.equal(body.sentAt, '2026-09-01T10:00:00.000Z');
+});
+
+test('/mine turns analysts away like every other route in the module', async () => {
+  const analystToken = jwt.sign({ id: 8, username: 'an', role: 'ANALYST' }, config.jwtSecret);
+  const res = await fetch(base + '/mine', {
+    headers: { Authorization: `Bearer ${analystToken}` },
+  });
+  assert.equal(res.status, 403);
 });
