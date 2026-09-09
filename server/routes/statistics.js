@@ -1326,6 +1326,7 @@ router.get('/fdi', async (req, res) => {
 const path = require('path');
 const fs = require('fs');
 const { upload, adminOnly, saveParsedAndRaw, loadParsed } = require('./admin-uploads');
+const { normalizeFdiSectorsUnits } = require('../helpers/fdi-sectors-units');
 
 // ── Serving the admin-uploaded snapshots ────────────────────────────────
 // Each admin dataset (fdi-annual, fdi-sectors, companies) is served from a
@@ -1924,11 +1925,11 @@ function parseFdiSectorsWorkbook(wb) {
     const s = String(v).replace(/,/g, '').replace(/\s/g, '').replace(/\u00A0/g, '');
     const n = parseFloat(s);
     if (isNaN(n)) return null;
-    // The uploaded file carries mln USD, which is also what every consumer
-    // displays — so values pass through exactly as uploaded. (This used to
-    // divide by 1,000 assuming Geostat's thousand-USD workbook; the file the
-    // ministry actually maintains is already in mln, and the division showed
-    // 0.02 where the file said 19.67.)
+    // Values are read as-is here; normalizeFdiSectorsUnits converts each
+    // period column to mln USD afterwards. (An unconditional /1000 here
+    // showed 0.02 where a mln-USD file said 19.67, and passing everything
+    // through showed 176,235.1 where a thousand-USD column meant 176.2 —
+    // the workbook has arrived in both units, sometimes within one file.)
     return n;
   }
 
@@ -1992,19 +1993,19 @@ function parseFdiSectorsWorkbook(wb) {
     if (!sectorNameMap[s]) sectorNameMap[s] = s;
   }
 
-  return {
+  return normalizeFdiSectorsUnits({
     uploadedAt: new Date().toISOString(),
     years,
     sectors: Array.from(sectorsSet),
     sectorNameMap,
     countries,
-  };
+  });
 }
 
 async function loadFdiSectorsFromDb() {
   const parsed = await loadParsed('fdi-sectors');
   if (parsed) {
-    fdiSectorsCache.data = parsed;
+    fdiSectorsCache.data = normalizeFdiSectorsUnits(parsed);
     console.log(`fdi-sectors: loaded from DB (${Object.keys(parsed.countries || {}).length} countries, years ${parsed.years?.join(',')})`);
   }
 }
@@ -2015,7 +2016,10 @@ loadFdiSectorsFromDb().catch((err) => console.warn('fdi-sectors load failed:', e
 router.get('/fdi-sectors', async (req, res) => {
   res.set('Cache-Control', 'no-store');
   await freshenSnapshot('fdi-sectors', fdiSectorsCache);
-  const data = fdiSectorsCache.data;
+  // The stored snapshot may predate per-column unit normalization (or was
+  // reloaded by freshenSnapshot, which is unit-agnostic) — the pass is
+  // idempotent, so applying it before serving is always safe.
+  const data = normalizeFdiSectorsUnits(fdiSectorsCache.data);
   if (!data) return res.json({ success: true, empty: true });
   res.json({
     success: true,
