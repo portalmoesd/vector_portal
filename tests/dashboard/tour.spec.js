@@ -35,7 +35,20 @@ test.afterAll(() => server && server.close());
 
 const SUPERVISOR = { id: 3, fullName: 'Supervisor Test', username: 'sv', role: 'SUPERVISOR', departmentId: 1 };
 
-async function preparePage(page, { resume = null } = {}) {
+// Minimal Geostat classificatory payload: enough for statistics.js to build
+// its country list. Served for both the direct Geostat URL and the proxy
+// (both carry /api/ in the path, so the same route matches them).
+const CLASSIFICATORY = {
+  success: true,
+  data: {
+    countries: [{ value: 156, label: '156 China' }, { value: 840, label: '840 USA' }],
+    months: [{ value: 8, label: 'August' }],
+    years: [{ value: 2026, label: '2026' }],
+    selected: { month: 8, year: 2026 },
+  },
+};
+
+async function preparePage(page, { resume = null, countries = false } = {}) {
   await page.addInitScript(({ u, resume }) => {
     localStorage.setItem('token', 'test-token');
     localStorage.setItem('user', JSON.stringify(u));
@@ -51,6 +64,12 @@ async function preparePage(page, { resume = null } = {}) {
     const json = (body) => route.fulfill({ status: 200, contentType: 'application/json', body: JSON.stringify(body) });
     if (url.pathname === '/api/auth/me') return json(SUPERVISOR);
     if (url.pathname === '/api/notifications') return json({ unreadCount: 0, notifications: [] });
+    if (countries && url.pathname.includes('/classificatory')) {
+      // Delayed on purpose: the tour's country pick must keep re-querying
+      // until the list arrives, not give up after one attempt.
+      await new Promise(r => setTimeout(r, 1500));
+      return json(CLASSIFICATORY);
+    }
     return json([]);
   });
 }
@@ -160,7 +179,31 @@ test('the create step opens the form, tours it, and returns to the dashboard tou
   await expect(title).toHaveText('Templates');
 });
 
-test('the generate step types the demo country and resumes past itself', async ({ page }) => {
+test('the generate step picks the country from the dropdown and generates the report', async ({ page }) => {
+  await preparePage(page, { countries: true });
+  await page.goto(`${origin}/pages/statistics.html`);
+  await page.waitForSelector('#helpBtn');
+  await page.click('#helpBtn');
+
+  const title = popover(page).locator('.driver-popover-title');
+  const next = popover(page).locator('.driver-popover-next-btn');
+  for (let i = 0; i < 8 && (await title.textContent()) !== 'Generate'; i++) {
+    await next.click();
+    await page.waitForTimeout(500);
+  }
+  await expect(title).toHaveText('Generate');
+
+  await next.click();
+  // The dropdown item must actually be picked — not just the text typed —
+  // which enables Generate; the click on it then opens the report container.
+  await expect(page.locator('#countrySearch')).toHaveValue('China');
+  await expect(page.locator('#generateBtn')).toBeEnabled({ timeout: 15000 });
+  await expect(page.locator('#statSections')).toBeVisible({ timeout: 15000 });
+  await expect(title).toHaveText('Report sections', { timeout: 15000 });
+});
+
+test('the generate step resumes past itself when no country data ever arrives', async ({ page }) => {
+  test.setTimeout(60000);
   await preparePage(page);
   await page.goto(`${origin}/pages/statistics.html`);
   await page.waitForSelector('#helpBtn');
@@ -175,13 +218,10 @@ test('the generate step types the demo country and resumes past itself', async (
   await expect(title).toHaveText('Generate');
 
   await next.click();
-  // The tour types the demo country into the search itself ('China' in the
-  // en locale, 'ჩინეთი' in ka)...
-  await expect(page.locator('#countrySearch')).toHaveValue('China');
-  // ...and since this harness serves no country data, it resumes past the
-  // generate step after its fallback deadline, skipping the hidden
-  // report-section steps.
-  await expect(title).toHaveText('Report sections', { timeout: 10000 });
+  // This harness serves no country data at all, so after the pick deadline
+  // the tour resumes past the generate step, skipping the hidden
+  // report-section steps rather than hanging.
+  await expect(title).toHaveText('Report sections', { timeout: 30000 });
 });
 
 test('a stale hand-off record is discarded, not resumed', async ({ page }) => {
