@@ -971,6 +971,26 @@
         "title": "Trade charts",
         "desc": "Turnover and dynamics are also drawn as charts — hover over them to inspect the values."
       },
+      "overview": {
+        "title": "Trade overview",
+        "desc": "Turnover, exports, imports and the balance — the previous year against the current period."
+      },
+      "exportTable": {
+        "title": "Exports by product",
+        "desc": "What Georgia exports to the country, by product group."
+      },
+      "exportMovers": {
+        "title": "Export movers",
+        "desc": "The product groups whose exports grew or fell the most."
+      },
+      "importTable": {
+        "title": "Imports by product",
+        "desc": "What Georgia imports from the country, by product group."
+      },
+      "importMovers": {
+        "title": "Import movers",
+        "desc": "The product groups whose imports grew or fell the most."
+      },
       "tourism": {
         "title": "Tourism",
         "desc": "Visitor numbers from the country, side by side as a table and a chart."
@@ -978,6 +998,10 @@
       "investments": {
         "title": "Investments",
         "desc": "Foreign direct investment by period, with the sector breakdown below."
+      },
+      "fdiSectors": {
+        "title": "Investment sectors",
+        "desc": "Which sectors the country's investments go into."
       },
       "companies": {
         "title": "Companies",
