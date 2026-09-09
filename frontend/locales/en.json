@@ -841,7 +841,7 @@
       },
       "create": {
         "title": "Create an event",
-        "desc": "Start a new event here: choose the participants, the document submitter and the schedule."
+        "desc": "Start a new event here: participants, the document submitter and the schedule. Click Next to open the form and walk through its fields."
       },
       "templates": {
         "title": "Templates",
@@ -866,6 +866,72 @@
       "gotoStats": {
         "title": "On to Statistics",
         "desc": "The Statistics page builds country reports — trade, tourism, investments and more. Click Next to go there and continue the tour."
+      }
+    },
+    "create": {
+      "welcome": {
+        "title": "Creating an event",
+        "desc": "This is the event creation form. Let's walk through each field — afterwards you can fill it in for real."
+      },
+      "title": {
+        "title": "Title",
+        "desc": "A short, clear name for the event — this is how it appears in lists and notifications."
+      },
+      "country": {
+        "title": "Country",
+        "desc": "The country the visit or meeting concerns."
+      },
+      "docType": {
+        "title": "Document type",
+        "desc": "Discussion Points is the default — it always leads to a meeting, so the meeting date becomes required. Choose Other for any other document."
+      },
+      "workflow": {
+        "title": "Workflow",
+        "desc": "Simple sends the document through a short chain; Advanced adds the full review chain."
+      },
+      "dsRole": {
+        "title": "Document submitter",
+        "desc": "Choose which role prepares the document; extra fields appear for picking the specific person."
+      },
+      "language": {
+        "title": "Language",
+        "desc": "The working language of the document."
+      },
+      "deadline": {
+        "title": "Deadline",
+        "desc": "The date the document must be ready."
+      },
+      "meetingTime": {
+        "title": "Meeting date & time",
+        "desc": "When the meeting takes place. Required for Discussion Points documents."
+      },
+      "curator": {
+        "title": "Curator",
+        "desc": "Whether a curator must be assigned to the document."
+      },
+      "task": {
+        "title": "Task",
+        "desc": "A free-form description of the assignment for the participants."
+      },
+      "attachment": {
+        "title": "Attachments",
+        "desc": "Attach reference files for the participants."
+      },
+      "template": {
+        "title": "Template",
+        "desc": "Start from a saved template to pre-fill the sections."
+      },
+      "sections": {
+        "title": "Sections",
+        "desc": "The document's sections and the departments responsible for each one. Add as many as needed."
+      },
+      "save": {
+        "title": "Create",
+        "desc": "When everything is filled in, this button creates the event and notifies the participants."
+      },
+      "finish": {
+        "title": "Back to the tour",
+        "desc": "That's the create-event form. We'll close it now and continue the tour."
       }
     },
     "stats": {

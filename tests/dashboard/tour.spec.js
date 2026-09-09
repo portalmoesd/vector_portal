@@ -41,6 +41,9 @@ async function preparePage(page, { resume = null } = {}) {
     localStorage.setItem('user', JSON.stringify(u));
     localStorage.setItem('locale', 'en');
     if (resume) sessionStorage.setItem('vp.tour', JSON.stringify(resume));
+    // The CDN stub below serves flatpickr as an empty file; the create-event
+    // form calls flatpickr() during init, so give it a minimal stand-in.
+    window.flatpickr = () => ({});
   }, { u: SUPERVISOR, resume });
   await page.route(/^https:\/\//, route => route.fulfill({ body: '', contentType: 'application/javascript' }));
   await page.route('**/api/**', async (route) => {
@@ -98,6 +101,49 @@ test('a hand-off record resumes the tour on statistics', async ({ page }) => {
   await expect(popover(page).locator('.driver-popover-title')).toHaveText('Statistics');
   // The record is consumed on resume, so a reload must not restart the tour.
   expect(await page.evaluate(() => sessionStorage.getItem('vp.tour'))).toBeNull();
+});
+
+test('the create-event form defaults to Discussion Points with a required meeting time', async ({ page }) => {
+  await preparePage(page);
+  await page.goto(`${origin}/pages/dashboard-supervisor.html`);
+  await page.click('.mn-createbtn');
+  await page.waitForSelector('#newTitle');
+
+  await expect(page.locator('#newDocumentType')).toHaveValue('DISCUSSION_POINTS');
+  await expect(page.locator('#eventDateTimeGroup')).toBeVisible();
+  await expect(page.locator('#eventDateTimeLabel')).toHaveText(/\*/);
+});
+
+test('the create step opens the form, tours it, and returns to the dashboard tour', async ({ page }) => {
+  await preparePage(page);
+  await page.goto(`${origin}/pages/dashboard-supervisor.html`);
+  await page.waitForSelector('#helpBtn');
+  await page.click('#helpBtn');
+
+  const title = popover(page).locator('.driver-popover-title');
+  const next = popover(page).locator('.driver-popover-next-btn');
+
+  // Walk to the "Create an event" step.
+  for (let i = 0; i < 12 && (await title.textContent()) !== 'Create an event'; i++) {
+    await next.click();
+  }
+  await expect(title).toHaveText('Create an event');
+
+  // Next opens the form and hands off to the create-form walkthrough.
+  await next.click();
+  await expect(page.locator('#ecModal')).toBeVisible();
+  await expect(title).toHaveText('Creating an event');
+
+  // Walk the form to its final step, then finish.
+  for (let i = 0; i < 20 && (await title.textContent()) !== 'Back to the tour'; i++) {
+    await next.click();
+  }
+  await expect(title).toHaveText('Back to the tour');
+  await next.click();
+
+  // The form closes and the dashboard tour resumes on the step after Create.
+  await expect(page.locator('#ecModal')).toBeHidden();
+  await expect(title).toHaveText('Templates');
 });
 
 test('a stale hand-off record is discarded, not resumed', async ({ page }) => {
