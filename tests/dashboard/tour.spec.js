@@ -134,9 +134,23 @@ test('the create step opens the form, tours it, and returns to the dashboard tou
   await expect(page.locator('#ecModal')).toBeVisible();
   await expect(title).toHaveText('Creating an event');
 
-  // Walk the form to its final step, then finish.
+  // Walk the form to its final step, then finish. Steps below the modal
+  // body's fold (Attachments onward) must be scrolled into its visible area —
+  // driver skips its own scroll for anchors clipped by a scroll container.
+  const anchorInModalView = () => page.evaluate(() => {
+    const body = document.getElementById('ecModalBody');
+    const el = document.querySelector('.driver-active-element');
+    if (!body || !el || !body.contains(el)) return true;
+    const pr = body.getBoundingClientRect();
+    const er = el.getBoundingClientRect();
+    return er.top >= pr.top - 1 && er.bottom <= pr.bottom + 1;
+  });
   for (let i = 0; i < 20 && (await title.textContent()) !== 'Back to the tour'; i++) {
     await next.click();
+    // Let driver's 400ms highlight transition finish before checking — a
+    // mid-transition click leaves the active-element marker on the old step.
+    await page.waitForTimeout(500);
+    await expect.poll(anchorInModalView).toBe(true);
   }
   await expect(title).toHaveText('Back to the tour');
   await next.click();
