@@ -152,22 +152,34 @@ window.VectorTour = (() => {
     };
     const input = document.getElementById('countrySearch');
     if (!input) { resume(); return; }
-    input.value = I18n.getLocale() === 'en' ? 'China' : 'ჩინეთი';
-    input.dispatchEvent(new Event('input', { bubbles: true }));
-    const pickBy = Date.now() + 4000;
+    // Dropdown labels follow the *report* language (statReportLocale), not
+    // the site language; if the first query never matches — wrong guess, or
+    // labels differ — the second one is tried after a few seconds.
+    const reportLoc = localStorage.getItem('statReportLocale') || I18n.getLocale() || 'ka';
+    const queries = reportLoc === 'en' ? ['China', 'ჩინეთი'] : ['ჩინეთი', 'China'];
+    const altAt = Date.now() + 8000;
+    const pickBy = Date.now() + 20000;
     (function pick() {
       if (gen !== _tourGen) return;
-      const item = document.querySelector('#countryDropdown .stat-dropdown__item');
+      // Re-fire the search every attempt: the country list loads from
+      // Geostat and renderDropdown only reacts to input events, so a single
+      // dispatch before the list arrives would leave "no results" up forever.
+      const q = Date.now() < altAt ? queries[0] : queries[1];
+      input.value = q;
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+      const items = Array.from(document.querySelectorAll('#countryDropdown .stat-dropdown__item'));
+      const item = items.find(i => i.textContent.trim().toLowerCase() === q.toLowerCase()) || items[0];
       if (item) {
         item.click();
         const btn = document.getElementById('generateBtn');
-        if (btn && !btn.disabled) btn.click();
-        waitForReport();
-      } else if (Date.now() < pickBy) {
-        setTimeout(pick, 200);
-      } else {
-        resume();
+        if (btn && !btn.disabled) {
+          btn.click();
+          waitForReport();
+          return;
+        }
       }
+      if (Date.now() < pickBy) setTimeout(pick, 300);
+      else resume();
     })();
     function waitForReport() {
       const by = Date.now() + 60000;
