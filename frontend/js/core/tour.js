@@ -31,15 +31,24 @@ window.VectorTour = (() => {
     { el: '.gp-nav__link[href="/pages/statistics.html"]', key: 'tour.dash.gotoStats', side: 'right', sidebar: true, handoff: '/pages/statistics.html' },
   ];
 
+  // The `generate` step's Next actually generates a demo report (China) and
+  // the tour then continues into the report's sections; report-section anchors
+  // are hidden until then, so a tour started before any report simply won't
+  // include them — the resume after generation rebuilds the step list.
   const STATS_STEPS = [
     { el: null, key: 'tour.stats.welcome' },
     { el: '#statModeSwitch', key: 'tour.stats.mode', side: 'bottom' },
     { el: '#countrySearch', key: 'tour.stats.country', side: 'bottom', align: 'start' },
     { el: '#reportLangToggle', key: 'tour.stats.reportLang', side: 'bottom' },
-    { el: '#generateBtn', key: 'tour.stats.generate', side: 'bottom', noInteract: true },
+    { el: '#generateBtn', key: 'tour.stats.generate', side: 'bottom', noInteract: true, statsGenerate: true },
     { el: '.stat-tabs', key: 'tour.stats.tabs', side: 'bottom' },
     { el: '.stat-controls__buttons', key: 'tour.stats.export', side: 'bottom', align: 'end', noInteract: true },
-    { el: '#statSections', key: 'tour.stats.sections', side: 'top' },
+    { el: '#tradeSummary', key: 'tour.stats.trade', side: 'bottom' },
+    { el: '#tradeChartsRow', key: 'tour.stats.tradeCharts', side: 'top' },
+    { el: '#tourismRow', key: 'tour.stats.tourism', side: 'top' },
+    { el: '#fdiRow', key: 'tour.stats.investments', side: 'top' },
+    { el: '#companiesSummary', key: 'tour.stats.companies', side: 'top' },
+    { el: '#appendixTable', key: 'tour.stats.appendix', side: 'top' },
     { el: null, key: 'tour.stats.finish' },
   ];
 
@@ -120,6 +129,58 @@ window.VectorTour = (() => {
   // Escape clears it: abandoning the sub-tour abandons the whole tour.
   let _afterCreate = null;
 
+  // Bumped on every tour start; pending async continuations (report
+  // generation, form polling) capture the value and bail out if a new tour
+  // was started in the meantime, so an impatient Help click can't stack a
+  // second driver instance on top of a delayed resume.
+  let _tourGen = 0;
+
+  // The stats `generate` step's Next runs the demo generation itself: type
+  // China into the country search, pick it from the dropdown, click Generate,
+  // wait for the report to finish loading, then resume the tour right after
+  // the generate step — now with the report-section steps available. Every
+  // wait has a deadline: if the country list or the report never arrives, the
+  // tour resumes anyway and the visibility filter drops the section steps.
+  function runStatsGenerate(d) {
+    const gen = ++_tourGen;
+    d.destroy();
+    clearBodyClasses();
+    const resume = () => {
+      if (gen !== _tourGen) return;
+      const tour = TOURS.find(tr => tr.match(window.location.pathname));
+      if (tour) startTour(tour, { afterKey: 'tour.stats.generate' });
+    };
+    const input = document.getElementById('countrySearch');
+    if (!input) { resume(); return; }
+    input.value = I18n.getLocale() === 'en' ? 'China' : 'ჩინეთი';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    const pickBy = Date.now() + 4000;
+    (function pick() {
+      if (gen !== _tourGen) return;
+      const item = document.querySelector('#countryDropdown .stat-dropdown__item');
+      if (item) {
+        item.click();
+        const btn = document.getElementById('generateBtn');
+        if (btn && !btn.disabled) btn.click();
+        waitForReport();
+      } else if (Date.now() < pickBy) {
+        setTimeout(pick, 200);
+      } else {
+        resume();
+      }
+    })();
+    function waitForReport() {
+      const by = Date.now() + 60000;
+      (function poll() {
+        if (gen !== _tourGen) return;
+        const s = document.getElementById('statSections');
+        const ready = s && !s.classList.contains('hidden') && !s.classList.contains('is-loading');
+        if (ready || Date.now() >= by) resume();
+        else setTimeout(poll, 400);
+      })();
+    }
+  }
+
   // Close the dashboard tour, open the create-event form through its real
   // button, and walk it; afterwards close the form and resume the dashboard
   // tour at the step following `create`.
@@ -135,8 +196,10 @@ window.VectorTour = (() => {
     const btn = document.querySelector('.mn-createbtn');
     if (btn) btn.click();
     else if (window.EventCreate) window.EventCreate.open({});
+    const gen = ++_tourGen;
     const deadline = Date.now() + 8000;
     (function poll() {
+      if (gen !== _tourGen) return;
       if (isVisible(document.querySelector(CREATE_TOUR.sentinel))) startTour(CREATE_TOUR, 0);
       else if (Date.now() < deadline) setTimeout(poll, 250);
       else _afterCreate = null;
@@ -154,6 +217,7 @@ window.VectorTour = (() => {
   function startTour(tour, startAt) {
     const driver = window.driver && window.driver.js && window.driver.js.driver;
     if (!driver) return;
+    _tourGen++;
 
     // Turn the declarative defs into driver.js steps, dropping unusable
     // anchors. Built here so step callbacks can close over the instance `d`.
@@ -182,6 +246,8 @@ window.VectorTour = (() => {
         step.popover.onNextClick = () => enterCreateSubtour(d);
       } else if (def.createFinish) {
         step.popover.onNextClick = () => finishCreateTour(d);
+      } else if (def.statsGenerate) {
+        step.popover.onNextClick = () => runStatsGenerate(d);
       }
       steps.push(step);
     });

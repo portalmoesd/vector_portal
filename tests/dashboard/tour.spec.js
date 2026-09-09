@@ -160,6 +160,30 @@ test('the create step opens the form, tours it, and returns to the dashboard tou
   await expect(title).toHaveText('Templates');
 });
 
+test('the generate step types the demo country and resumes past itself', async ({ page }) => {
+  await preparePage(page);
+  await page.goto(`${origin}/pages/statistics.html`);
+  await page.waitForSelector('#helpBtn');
+  await page.click('#helpBtn');
+
+  const title = popover(page).locator('.driver-popover-title');
+  const next = popover(page).locator('.driver-popover-next-btn');
+  for (let i = 0; i < 8 && (await title.textContent()) !== 'Generate'; i++) {
+    await next.click();
+    await page.waitForTimeout(500);
+  }
+  await expect(title).toHaveText('Generate');
+
+  await next.click();
+  // The tour types the demo country into the search itself ('China' in the
+  // en locale, 'ჩინეთი' in ka)...
+  await expect(page.locator('#countrySearch')).toHaveValue('China');
+  // ...and since this harness serves no country data, it resumes past the
+  // generate step after its fallback deadline, skipping the hidden
+  // report-section steps.
+  await expect(title).toHaveText('Report sections', { timeout: 10000 });
+});
+
 test('a stale hand-off record is discarded, not resumed', async ({ page }) => {
   await preparePage(page, {
     resume: { v: 1, tourId: 'grand', page: '/pages/statistics.html', step: 0, ts: Date.now() - 10 * 60 * 1000 },

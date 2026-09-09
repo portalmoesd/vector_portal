@@ -953,7 +953,7 @@
       },
       "generate": {
         "title": "Generate",
-        "desc": "Builds the full report with tables and charts for the selected country."
+        "desc": "Builds the full report with tables and charts. Click Next — the tour will pick China and generate a live report to explore."
       },
       "tabs": {
         "title": "Report sections",
@@ -963,9 +963,29 @@
         "title": "Export",
         "desc": "Download the generated report as a PDF or Word file to share it further."
       },
-      "sections": {
-        "title": "The report",
-        "desc": "The generated report appears here — summaries, tables and interactive charts."
+      "trade": {
+        "title": "Trade",
+        "desc": "The trade section opens with a summary — turnover, exports and imports with the selected country."
+      },
+      "tradeCharts": {
+        "title": "Trade charts",
+        "desc": "Turnover and dynamics are also drawn as charts — hover over them to inspect the values."
+      },
+      "tourism": {
+        "title": "Tourism",
+        "desc": "Visitor numbers from the country, side by side as a table and a chart."
+      },
+      "investments": {
+        "title": "Investments",
+        "desc": "Foreign direct investment by period, with the sector breakdown below."
+      },
+      "companies": {
+        "title": "Companies",
+        "desc": "How many companies from the country are registered and active in Georgia."
+      },
+      "appendix": {
+        "title": "Appendix",
+        "desc": "The detailed data tables behind the report."
       },
       "finish": {
         "title": "That's the tour!",
