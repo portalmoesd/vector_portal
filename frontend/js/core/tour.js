@@ -86,6 +86,24 @@ window.VectorTour = (() => {
     document.body.classList.remove('gp-sidebar-expanded', 'vp-tour-sidebar');
   }
 
+  // driver.js auto-scrolls only when the anchor is outside the *window*
+  // viewport. An anchor clipped inside a scrollable container — the create
+  // form's #ecModalBody — passes that check, so driver skips its scroll and
+  // highlights a hidden spot; and the viewer can't scroll manually because
+  // driver locks pointer events during a tour. Center such anchors in their
+  // scroll container ourselves, before driver measures them.
+  function scrollWithinScrollParent(el) {
+    for (let p = el.parentElement; p && p !== document.body; p = p.parentElement) {
+      if (!/(auto|scroll)/.test(window.getComputedStyle(p).overflowY)) continue;
+      const pr = p.getBoundingClientRect();
+      const er = el.getBoundingClientRect();
+      if (er.top < pr.top || er.bottom > pr.bottom) {
+        p.scrollTop += (er.top + er.bottom) / 2 - (pr.top + pr.bottom) / 2;
+      }
+      return;
+    }
+  }
+
   function writeHandoff(page) {
     try {
       sessionStorage.setItem(STORAGE_KEY, JSON.stringify({ v: 1, tourId: 'grand', page, step: 0, ts: Date.now() }));
@@ -189,6 +207,7 @@ window.VectorTour = (() => {
       prevBtnText: t('tour.ui.back'),
       doneBtnText: t('tour.ui.done'),
       onHighlightStarted: (el, step) => {
+        if (el) scrollWithinScrollParent(el);
         if (step && step.vpSidebar) {
           document.body.classList.add('gp-sidebar-expanded', 'vp-tour-sidebar');
         } else {
