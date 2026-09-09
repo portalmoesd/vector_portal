@@ -554,6 +554,30 @@
     }
   });
 
+  // ── Guided-tour hook (js/core/tour.js) ───────────────────────────────────
+  // The tour's demo generation selects the country through the page's own
+  // state instead of simulating keystrokes and dropdown clicks, which proved
+  // fragile against load-order timing. Kept tiny on purpose: readiness probe,
+  // selection by localized name, and the same Generate the button runs.
+  window.StatsPage = {
+    countriesReady: () => countries.length > 0,
+    selectCountry(name) {
+      const q = String(name).trim().toLowerCase();
+      const c = countries.find(x =>
+            (x.displayLabelKa || '').toLowerCase() === q
+            || (x.displayLabelEn || '').toLowerCase() === q)
+        || countries.find(x => (x.displayLabel || '').toLowerCase().includes(q));
+      if (!c) return false;
+      selectedCountry = c;
+      searchInput.value = c.displayLabel;
+      countryValue.value = c.value;
+      generateBtn.disabled = false;
+      dropdown.classList.add('hidden');
+      return true;
+    },
+    generate() { generateBtn.click(); },
+  };
+
   // ── Tab navigation (scroll-to-section) ───────────────────────────────────
 
   document.querySelectorAll('.stat-tab').forEach(tab => {

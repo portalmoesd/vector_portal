@@ -167,21 +167,35 @@ window.VectorTour = (() => {
     const pickBy = Date.now() + 20000;
     (function pick() {
       if (gen !== _tourGen) return;
-      // Re-fire the search every attempt: the country list loads from
-      // Geostat and renderDropdown only reacts to input events, so a single
-      // dispatch before the list arrives would leave "no results" up forever.
-      const q = Date.now() < altAt ? queries[0] : queries[1];
-      input.value = q;
-      input.dispatchEvent(new Event('input', { bubbles: true }));
-      const items = Array.from(document.querySelectorAll('#countryDropdown .stat-dropdown__item'));
-      const item = items.find(i => i.textContent.trim().toLowerCase() === q.toLowerCase()) || items[0];
-      if (item) {
-        item.click();
-        const btn = document.getElementById('generateBtn');
-        if (btn && !btn.disabled) {
-          btn.click();
+      // Preferred path: the StatsPage hook selects the country through the
+      // page's own state — no keystroke/dropdown simulation to race against.
+      const api = window.StatsPage;
+      if (api && api.countriesReady && api.countriesReady()) {
+        if (api.selectCountry(queries[0]) || api.selectCountry(queries[1])) {
+          api.generate();
           waitForReport();
-          return;
+        } else {
+          resume();
+        }
+        return;
+      }
+      // Fallback (statistics.js without the hook, e.g. cached): simulate the
+      // search. Re-fired every attempt — the country list loads from Geostat
+      // and renderDropdown only reacts to input events.
+      if (!api) {
+        const q = Date.now() < altAt ? queries[0] : queries[1];
+        input.value = q;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        const items = Array.from(document.querySelectorAll('#countryDropdown .stat-dropdown__item'));
+        const item = items.find(i => i.textContent.trim().toLowerCase() === q.toLowerCase()) || items[0];
+        if (item) {
+          item.click();
+          const btn = document.getElementById('generateBtn');
+          if (btn && !btn.disabled) {
+            btn.click();
+            waitForReport();
+            return;
+          }
         }
       }
       if (Date.now() < pickBy) setTimeout(pick, 300);

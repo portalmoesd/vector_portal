@@ -202,6 +202,27 @@ test('the generate step picks the country from the dropdown and generates the re
   await expect(title).toHaveText('Report sections', { timeout: 15000 });
 });
 
+test('the generate step still picks the country without the StatsPage hook', async ({ page }) => {
+  await preparePage(page, { countries: true });
+  await page.goto(`${origin}/pages/statistics.html`);
+  await page.waitForSelector('#helpBtn');
+  // A stale cached statistics.js would not define the hook; the tour then
+  // falls back to simulating the search and dropdown click.
+  await page.evaluate(() => { delete window.StatsPage; });
+  await page.click('#helpBtn');
+
+  const title = popover(page).locator('.driver-popover-title');
+  const next = popover(page).locator('.driver-popover-next-btn');
+  for (let i = 0; i < 8 && (await title.textContent()) !== 'Generate'; i++) {
+    await next.click();
+    await page.waitForTimeout(500);
+  }
+  await next.click();
+  await expect(page.locator('#generateBtn')).toBeEnabled({ timeout: 15000 });
+  await expect(page.locator('#statSections')).toBeVisible({ timeout: 15000 });
+  await expect(title).toHaveText('Report sections', { timeout: 15000 });
+});
+
 test('the generate step resumes past itself when no country data ever arrives', async ({ page }) => {
   test.setTimeout(60000);
   await preparePage(page);
