@@ -82,7 +82,7 @@
             <span class="stat-loading-label" data-i18n="common.loading">Loading...</span>
           </div>
           <div id="tradeSummary" class="card stat-summary hidden"></div>
-          <div class="card">
+          <div class="card" id="overviewCard">
             <div id="overviewHeader" class="stat-report__header"></div>
             <div id="overviewTable" class="table-wrap"></div>
           </div>
@@ -96,11 +96,11 @@
               <canvas id="dynamicsChart"></canvas>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="exportCard">
             <div id="exportHeader" class="stat-report__header"></div>
             <div id="exportTable" class="table-wrap"></div>
           </div>
-          <div class="stat-charts-row">
+          <div class="stat-charts-row" id="exportMoversRow">
             <div class="card stat-chart-card">
               <div id="exportIncreaseHeader" class="stat-report__header"></div>
               <div id="exportIncreaseTable" class="table-wrap"></div>
@@ -110,11 +110,11 @@
               <div id="exportDropTable" class="table-wrap"></div>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="importCard">
             <div id="importHeader" class="stat-report__header"></div>
             <div id="importTable" class="table-wrap"></div>
           </div>
-          <div class="stat-charts-row">
+          <div class="stat-charts-row" id="importMoversRow">
             <div class="card stat-chart-card">
               <div id="importIncreaseHeader" class="stat-report__header"></div>
               <div id="importIncreaseTable" class="table-wrap"></div>
@@ -133,7 +133,7 @@
             <div class="stat-spinner"></div>
             <span class="stat-loading-label" data-i18n="common.loading">Loading...</span>
           </div>
-          <div class="card">
+          <div class="card" id="tourismCard">
             <div id="tourismSummary" class="stat-summary hidden"></div>
             <div id="tourismChartHeader" class="stat-report__header"></div>
             <div id="tourismRow" class="stat-investments-row">
@@ -154,7 +154,7 @@
             <div class="stat-spinner"></div>
             <span class="stat-loading-label" data-i18n="common.loading">Loading...</span>
           </div>
-          <div class="card">
+          <div class="card" id="fdiCard">
             <div id="investmentsSummary" class="stat-summary hidden"></div>
             <div id="fdiChartHeader" class="stat-report__header"></div>
             <div id="fdiRow" class="stat-investments-row">
