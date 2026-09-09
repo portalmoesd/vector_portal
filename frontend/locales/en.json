@@ -23,6 +23,7 @@
     "countryComparison": "Country Comparison",
     "admin": "Admin Panel",
     "logout": "Log out",
+    "help": "Help",
     "language": "Language"
   },
   "auth": {
@@ -808,6 +809,102 @@
       "emptyReadonly": "No discussion points have been added yet.",
       "confirmDelete": "Delete this discussion point and all of its content?",
       "confirmDeleteInitiative": "Delete this initiative and all of its content?"
+    }
+  },
+  "tour": {
+    "ui": {
+      "next": "Next",
+      "back": "Back",
+      "done": "Finish",
+      "progress": "{{current}} / {{total}}"
+    },
+    "dash": {
+      "welcome": {
+        "title": "Welcome to Vector Portal",
+        "desc": "This short tour walks you through your workspace — from daily events and documents to statistics. Use Next to continue, or press Esc to exit at any time."
+      },
+      "nav": {
+        "title": "Navigation",
+        "desc": "Use the sidebar to move between your Dashboard and Statistics. Your profile and the language switch also live here."
+      },
+      "hero": {
+        "title": "Your day at a glance",
+        "desc": "A personal greeting, today's date and the current time in Tbilisi."
+      },
+      "calendar": {
+        "title": "Calendar",
+        "desc": "Your calendar lives here: days with scheduled events are highlighted — click a day to preview what is planned."
+      },
+      "upcoming": {
+        "title": "Overview panel",
+        "desc": "This side panel gathers your notifications and quick actions for the selected day."
+      },
+      "create": {
+        "title": "Create an event",
+        "desc": "Start a new event here: choose the participants, the document submitter and the schedule."
+      },
+      "templates": {
+        "title": "Templates",
+        "desc": "Reusable event templates save time when the same meeting format repeats."
+      },
+      "notifications": {
+        "title": "Notifications",
+        "desc": "New activity lands here — documents awaiting your action, returned sections and ready documents. The badge shows unread items."
+      },
+      "toggle": {
+        "title": "In progress vs completed",
+        "desc": "Switch between documents that are still in progress and those already completed."
+      },
+      "search": {
+        "title": "Search",
+        "desc": "Filter the list below by keyword — event titles, countries or participants."
+      },
+      "cards": {
+        "title": "Your events and documents",
+        "desc": "Each card is an event with its document. The coloured chips show the status: green — ready, yellow — in preparation, grey — not started. Click a card to open the document."
+      },
+      "gotoStats": {
+        "title": "On to Statistics",
+        "desc": "The Statistics page builds country reports — trade, tourism, investments and more. Click Next to go there and continue the tour."
+      }
+    },
+    "stats": {
+      "welcome": {
+        "title": "Statistics",
+        "desc": "Here you generate up-to-date economic reports for any country. Let's look at the controls."
+      },
+      "mode": {
+        "title": "Report mode",
+        "desc": "Choose between the latest single-country report, a country comparison, or product statistics."
+      },
+      "country": {
+        "title": "Pick a country",
+        "desc": "Start typing to search for a country and select it for the report."
+      },
+      "reportLang": {
+        "title": "Report language",
+        "desc": "Reports can be produced in Georgian or English, independently of the site language."
+      },
+      "generate": {
+        "title": "Generate",
+        "desc": "Builds the full report with tables and charts for the selected country."
+      },
+      "tabs": {
+        "title": "Report sections",
+        "desc": "Jump between trade, tourism, investments, companies and the appendix."
+      },
+      "export": {
+        "title": "Export",
+        "desc": "Download the generated report as a PDF or Word file to share it further."
+      },
+      "sections": {
+        "title": "The report",
+        "desc": "The generated report appears here — summaries, tables and interactive charts."
+      },
+      "finish": {
+        "title": "That's the tour!",
+        "desc": "You now know your way around Vector Portal. Click the “?” button in the sidebar any time to replay this tour."
+      }
     }
   }
 }

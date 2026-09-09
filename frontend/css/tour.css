@@ -1,0 +1,154 @@
+/* Guided tour (driver.js) — portal skin. Loaded after apple.css and
+   /vendor/driver/driver.css so these rules win the cascade. Everything is
+   scoped to the popoverClass `vp-tour` set in js/core/tour.js, plus the
+   sidebar Help button and the forced-expansion guard. */
+
+/* ── Popover ─────────────────────────────────────────────────────────────── */
+
+.driver-popover.vp-tour {
+  font-family: var(--font-primary);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+  min-width: 260px;
+  max-width: 340px;
+  padding: 18px 20px;
+  color: var(--text-primary);
+}
+
+.vp-tour .driver-popover-title {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.vp-tour .driver-popover-description {
+  font-family: var(--font-primary);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #475569;
+  margin-top: 6px;
+}
+
+.vp-tour .driver-popover-progress-text {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.vp-tour .driver-popover-arrow {
+  border-width: 7px;
+}
+.vp-tour .driver-popover-arrow-side-left { border-left-color: #fff; }
+.vp-tour .driver-popover-arrow-side-right { border-right-color: #fff; }
+.vp-tour .driver-popover-arrow-side-top { border-top-color: #fff; }
+.vp-tour .driver-popover-arrow-side-bottom { border-bottom-color: #fff; }
+
+.vp-tour .driver-popover-footer {
+  margin-top: 14px;
+  gap: 10px;
+}
+
+.vp-tour .driver-popover-footer-btn {
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.3;
+  border-radius: 999px;
+  padding: 7px 16px;
+  text-shadow: none;
+  border: 1px solid var(--border-color);
+  background: #fff;
+  color: var(--text-primary);
+  transition: background 0.16s ease, color 0.16s ease;
+}
+
+.vp-tour .driver-popover-prev-btn:hover,
+.vp-tour .driver-popover-prev-btn:focus {
+  background: var(--bg-hover);
+}
+
+.vp-tour .driver-popover-next-btn {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #fff;
+}
+
+.vp-tour .driver-popover-next-btn:hover,
+.vp-tour .driver-popover-next-btn:focus {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.vp-tour .driver-popover-close-btn {
+  color: #94a3b8;
+  font-size: 20px;
+  width: 34px;
+  height: 32px;
+  top: 4px;
+  right: 4px;
+}
+.vp-tour .driver-popover-close-btn:hover,
+.vp-tour .driver-popover-close-btn:focus {
+  color: var(--text-primary);
+}
+
+/* ── Stacking — above the event modal (9000) and .modal-overlay (200).
+      !important is required: driver sets the overlay's z-index inline (10000)
+      and the popover's in driver.css (1000000000). ─────────────────────────── */
+
+.driver-overlay { z-index: 9500 !important; }
+.driver-popover.vp-tour { z-index: 9501 !important; }
+
+/* ── Forced sidebar expansion while a sidebar step is highlighted.
+      tour.js adds body.vp-tour-sidebar alongside gp-sidebar-expanded; these
+      mirrors of sidebar.css's expanded rules keep the panel open even if the
+      hover mouseleave handler strips gp-sidebar-expanded mid-step. ────────── */
+
+body.gp-shell-ready.vp-tour-sidebar .sidebar.gp-sidebar {
+  width: var(--gp-sidebar-expanded);
+}
+body.gp-shell-ready.vp-tour-sidebar .gp-brand__text,
+body.gp-shell-ready.vp-tour-sidebar .gp-nav__label,
+body.gp-shell-ready.vp-tour-sidebar .gp-profile__text {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+body.gp-shell-ready.vp-tour-sidebar .gp-lang-switch {
+  width: auto;
+  margin: 4px 12px 8px;
+}
+body.gp-shell-ready.vp-tour-sidebar .gp-lang-switch__opt[aria-pressed="false"] {
+  display: block;
+}
+body.gp-shell-ready.vp-tour-sidebar .main {
+  margin-left: calc(var(--gp-sidebar-expanded) + 28px);
+}
+
+/* ── Sidebar Help button — mirrors .gp-logout from sidebar.css. ──────────── */
+
+body.gp-shell-ready .gp-help {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  width: 100%;
+  padding: 0 12px;
+  border-radius: 16px;
+  color: #4b5563;
+  border: 1px solid transparent;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  transition: background 0.16s ease, color 0.16s ease;
+}
+
+body.gp-shell-ready .gp-help:hover {
+  background: rgba(255, 255, 255, 0.56);
+  color: #1f3346;
+}

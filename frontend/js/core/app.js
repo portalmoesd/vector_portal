@@ -185,6 +185,11 @@ const App = {
         <div class="gp-sidebar__spacer"></div>
 
         <div class="gp-sidebar__footer">
+          ${window.VectorTour?.isAvailable?.() ? `
+          <button class="gp-help" id="helpBtn" type="button">
+            <span class="gp-nav__icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm.1 15.9a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4Zm1.6-5.5c-.7.5-.9.8-.9 1.6h-1.7c0-1.4.5-2.1 1.5-2.8.6-.5 1-.8 1-1.5 0-.8-.6-1.3-1.5-1.3-1 0-1.6.6-1.7 1.6H8.7c.1-2 1.5-3.3 3.5-3.3 1.9 0 3.3 1.1 3.3 2.9 0 1.3-.7 2-1.8 2.8Z"/></svg></span>
+            <span class="gp-nav__label" data-i18n="nav.help">Help</span>
+          </button>` : ''}
           <div class="gp-lang-switch" role="radiogroup" aria-label="Language">
             <button type="button" class="gp-lang-switch__opt" data-lang="en">EN</button>
             <button type="button" class="gp-lang-switch__opt" data-lang="ka">ქარ</button>
@@ -227,6 +232,7 @@ const App = {
       btn.addEventListener('click', () => this.setLang(btn.dataset.lang));
     });
     document.getElementById('logoutBtn')?.addEventListener('click', () => this.logout());
+    document.getElementById('helpBtn')?.addEventListener('click', () => window.VectorTour?.start());
   },
 
   _refreshLangSwitch() {
