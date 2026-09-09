@@ -251,25 +251,25 @@
 
     bodyEl.innerHTML = `
       <div class="ec-form-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0 20px;">
-        <div class="form-group">
+        <div class="form-group" id="titleGroup">
           <label class="form-label" data-i18n="calendar.form.title">Title *</label>
           <input class="form-input" id="newTitle" required />
         </div>
-        <div class="form-group">
+        <div class="form-group" id="countryGroup">
           <label class="form-label" data-i18n="calendar.form.country">Country *</label>
           <select class="form-select" id="newCountry">
             <option value="" data-i18n="calendar.form.selectPlaceholder">— Select —</option>
             ${countryOpts}
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="docTypeGroup">
           <label class="form-label" data-i18n="calendar.form.documentType">Document Type *</label>
           <select class="form-select" id="newDocumentType">
-            <option value="OTHER" selected data-i18n="calendar.docType.OTHER">Other</option>
-            <option value="DISCUSSION_POINTS" data-i18n="calendar.docType.DISCUSSION_POINTS">Discussion Points</option>
+            <option value="DISCUSSION_POINTS" selected data-i18n="calendar.docType.DISCUSSION_POINTS">Discussion Points</option>
+            <option value="OTHER" data-i18n="calendar.docType.OTHER">Other</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="workflowGroup">
           <label class="form-label" data-i18n="calendar.form.workflow">Workflow *</label>
           <select class="form-select" id="newWorkflowType">
             <option value="simple" selected data-i18n="calendar.form.workflowSimple">Simple</option>
@@ -310,7 +310,7 @@
             <option value="" data-i18n="calendar.form.selectSuperCollaborator">— Select Senior Editor —</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="languageGroup">
           <label class="form-label" data-i18n="calendar.form.language">Language</label>
           <select class="form-select" id="newLanguage">
             <option value="EN">English</option>
@@ -318,7 +318,7 @@
             <option value="RU">Русский</option>
           </select>
         </div>
-        <div class="form-group">
+        <div class="form-group" id="deadlineGroup">
           <label class="form-label" data-i18n="calendar.form.deadline">Deadline</label>
           <input class="form-input" type="text" id="newDeadline" placeholder="dd/mm/yyyy" />
         </div>
@@ -326,28 +326,28 @@
           <label class="form-label" id="eventDateTimeLabel" data-i18n="calendar.form.eventDateTime">Event date &amp; time</label>
           <input class="form-input" type="text" id="newEventDateTime" placeholder="dd/mm/yyyy, hh:mm" />
         </div>
-        <div class="form-group">
+        <div class="form-group" id="curatorGroup">
           <label class="form-label" data-i18n="calendar.form.curatorRequired">Curator Required</label>
           <select class="form-select" id="newCurator">
             <option value="yes" selected data-i18n="common.yes">Yes</option>
             <option value="no" data-i18n="common.no">No</option>
           </select>
         </div>
-        <div class="form-group" style="grid-column:1/-1;">
+        <div class="form-group" id="taskGroup" style="grid-column:1/-1;">
           <label class="form-label" data-i18n="calendar.form.task">Task</label>
           <div id="newOccasionWrap"></div>
         </div>
-        <div class="form-group" style="grid-column:1/-1;">
+        <div class="form-group" id="attachmentGroup" style="grid-column:1/-1;">
           <label class="form-label" data-i18n="calendar.form.attachment">Attachment</label>
           <input class="form-input" type="file" id="newAttachment" multiple />
         </div>
-        <div class="form-group" style="grid-column:1/-1;">
+        <div class="form-group" id="templateGroup" style="grid-column:1/-1;">
           <label class="form-label" data-i18n="calendar.form.template">Template</label>
           <select class="form-select" id="newTemplate">
             <option value="" data-i18n="calendar.form.selectTemplate">— Select Template —</option>
           </select>
         </div>
-        <div class="form-group" style="grid-column:1/-1;">
+        <div class="form-group" id="sectionsGroup" style="grid-column:1/-1;">
           <label class="form-label" style="font-weight:700;" data-i18n="calendar.form.sections">Sections</label>
           <div id="sectionRows"></div>
           <button class="btn btn-outline" type="button" id="addSectionRow" style="margin-top:8px;">${I18n.tr('calendar.form.addSection')}</button>

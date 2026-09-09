@@ -22,7 +22,7 @@ window.VectorTour = (() => {
     { el: '#mnHero', key: 'tour.dash.hero', side: 'bottom' },
     { el: '#miniCalendar', key: 'tour.dash.calendar', side: 'right', align: 'start' },
     { el: '#mnSide', key: 'tour.dash.upcoming', side: 'left' },
-    { el: '.mn-createbtn', key: 'tour.dash.create', side: 'bottom', noInteract: true },
+    { el: '.mn-createbtn', key: 'tour.dash.create', side: 'bottom', noInteract: true, subtour: 'create' },
     { el: '.mn-tplbtn', key: 'tour.dash.templates', side: 'bottom', noInteract: true },
     { el: '.mn-notifs', key: 'tour.dash.notifications', side: 'bottom', align: 'end', noInteract: true },
     { el: '.mn-toggle', key: 'tour.dash.toggle', side: 'bottom' },
@@ -43,10 +43,40 @@ window.VectorTour = (() => {
     { el: null, key: 'tour.stats.finish' },
   ];
 
+  // Walkthrough of the shared create-event form (EventCreate's #ecModal).
+  // Entered from the dashboard tour's `create` step (Next opens the form), or
+  // directly by clicking Help while the form is already open. Conditionally
+  // visible fields (role selects, meeting time) are covered by the same
+  // visibility filter as everywhere else.
+  const CREATE_STEPS = [
+    { el: null, key: 'tour.create.welcome' },
+    { el: '#titleGroup', key: 'tour.create.title', side: 'bottom' },
+    { el: '#countryGroup', key: 'tour.create.country', side: 'bottom' },
+    { el: '#docTypeGroup', key: 'tour.create.docType', side: 'bottom' },
+    { el: '#workflowGroup', key: 'tour.create.workflow', side: 'bottom' },
+    { el: '#dsRoleGroup', key: 'tour.create.dsRole', side: 'bottom' },
+    { el: '#languageGroup', key: 'tour.create.language', side: 'bottom' },
+    { el: '#deadlineGroup', key: 'tour.create.deadline', side: 'bottom' },
+    { el: '#eventDateTimeGroup', key: 'tour.create.meetingTime', side: 'bottom' },
+    { el: '#curatorGroup', key: 'tour.create.curator', side: 'bottom' },
+    { el: '#taskGroup', key: 'tour.create.task', side: 'top' },
+    { el: '#attachmentGroup', key: 'tour.create.attachment', side: 'top' },
+    { el: '#templateGroup', key: 'tour.create.template', side: 'top' },
+    { el: '#sectionsGroup', key: 'tour.create.sections', side: 'top' },
+    { el: '#ecSave', key: 'tour.create.save', side: 'top', align: 'end', noInteract: true },
+    { el: null, key: 'tour.create.finish', createFinish: true },
+  ];
+  const CREATE_TOUR = { steps: CREATE_STEPS, sentinel: '#newTitle' };
+
   const TOURS = [
     { match: p => /\/pages\/dashboard-[a-z-]+\.html$/.test(p), steps: DASHBOARD_STEPS, sentinel: '#cardList' },
     { match: p => p.endsWith('/pages/statistics.html'), steps: STATS_STEPS, sentinel: '#generateBtn' },
   ];
+
+  function isCreateModalOpen() {
+    const m = document.getElementById('ecModal');
+    return !!m && m.style.display !== 'none';
+  }
 
   function isVisible(el) {
     return !!el && el.getClientRects().length > 0 && !el.closest('.hidden');
@@ -66,12 +96,55 @@ window.VectorTour = (() => {
     try { sessionStorage.removeItem(STORAGE_KEY); } catch (_) {}
   }
 
-  // Turn the declarative defs into driver.js steps, dropping unusable anchors.
-  function buildSteps(defs) {
+  // Callback run when the create-form walkthrough finishes via its final
+  // step's button — set only when it was entered from the dashboard tour, so a
+  // directly-started form tour (Help while the form is open) just ends there.
+  // Escape clears it: abandoning the sub-tour abandons the whole tour.
+  let _afterCreate = null;
+
+  // Close the dashboard tour, open the create-event form through its real
+  // button, and walk it; afterwards close the form and resume the dashboard
+  // tour at the step following `create`.
+  function enterCreateSubtour(d) {
+    d.destroy();
+    clearBodyClasses();
+    _afterCreate = () => {
+      const cancel = document.getElementById('ecCancel');
+      if (cancel) cancel.click();
+      const tour = TOURS.find(tr => tr.match(window.location.pathname));
+      if (tour) startTour(tour, { afterKey: 'tour.dash.create' });
+    };
+    const btn = document.querySelector('.mn-createbtn');
+    if (btn) btn.click();
+    else if (window.EventCreate) window.EventCreate.open({});
+    const deadline = Date.now() + 8000;
+    (function poll() {
+      if (isVisible(document.querySelector(CREATE_TOUR.sentinel))) startTour(CREATE_TOUR, 0);
+      else if (Date.now() < deadline) setTimeout(poll, 250);
+      else _afterCreate = null;
+    })();
+  }
+
+  function finishCreateTour(d) {
+    const done = _afterCreate;
+    _afterCreate = null;
+    d.destroy();
+    clearBodyClasses();
+    if (done) done();
+  }
+
+  function startTour(tour, startAt) {
+    const driver = window.driver && window.driver.js && window.driver.js.driver;
+    if (!driver) return;
+
+    // Turn the declarative defs into driver.js steps, dropping unusable
+    // anchors. Built here so step callbacks can close over the instance `d`.
+    let d = null;
     const steps = [];
-    defs.forEach(def => {
+    tour.steps.forEach(def => {
       if (def.el && !isVisible(document.querySelector(def.el))) return;
       const step = {
+        vpKey: def.key,
         popover: {
           title: t(def.key + '.title'),
           description: t(def.key + '.desc'),
@@ -87,18 +160,23 @@ window.VectorTour = (() => {
           writeHandoff(def.handoff);
           window.location.href = def.handoff;
         };
+      } else if (def.subtour === 'create') {
+        step.popover.onNextClick = () => enterCreateSubtour(d);
+      } else if (def.createFinish) {
+        step.popover.onNextClick = () => finishCreateTour(d);
       }
       steps.push(step);
     });
-    return steps;
-  }
-
-  function startTour(tour, startIndex) {
-    const driver = window.driver && window.driver.js && window.driver.js.driver;
-    if (!driver) return;
-    const steps = buildSteps(tour.steps);
     if (!steps.length) return;
-    const d = driver({
+
+    let index = 0;
+    if (typeof startAt === 'number') {
+      index = Math.min(startAt, steps.length - 1);
+    } else if (startAt && startAt.afterKey) {
+      const i = steps.findIndex(s => s.vpKey === startAt.afterKey);
+      index = i >= 0 ? Math.min(i + 1, steps.length - 1) : 0;
+    }
+    d = driver({
       popoverClass: 'vp-tour',
       animate: true,
       overlayOpacity: 0.55,
@@ -122,6 +200,7 @@ window.VectorTour = (() => {
       // onDestroyStarted, which fires on every destroy attempt and expects us
       // to complete the teardown ourselves.
       onDestroyStarted: () => {
+        _afterCreate = null;
         clearBodyClasses();
         clearHandoff();
         d.destroy();
@@ -132,10 +211,12 @@ window.VectorTour = (() => {
       },
       steps,
     });
-    d.drive(Math.min(startIndex || 0, steps.length - 1));
+    d.drive(index);
   }
 
   function currentTour() {
+    // Help while the create-event form is open tours the form itself.
+    if (isCreateModalOpen()) return CREATE_TOUR;
     return TOURS.find(tr => tr.match(window.location.pathname)) || null;
   }
 
