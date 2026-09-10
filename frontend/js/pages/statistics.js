@@ -22,6 +22,10 @@
     en: 'Search country...',
   };
   const LOADING_LABEL = { ka: 'იტვირთება...', en: 'Loading...' };
+  const COUNTRIES_UNAVAILABLE_LABEL = {
+    ka: 'ქვეყნების სია მიუწვდომელია — სცადეთ მოგვიანებით',
+    en: 'Country list unavailable — try again later',
+  };
   // Mode-switch pill labels. Chrome, not report content — these follow the
   // site interface locale, like the page title and the Generate button.
   const MODE_LABELS = {
@@ -195,10 +199,26 @@
 
   // ── Geostat API helpers (direct + proxy fallback) ────────────────────────
 
+  // Direct-to-Geostat calls get a hard deadline. When Geostat is down it
+  // tends to accept the connection and then hang before resetting, so a
+  // plain fetch can block the page for tens of seconds before the proxy
+  // fallback (which serves from the backend's cache) ever gets a chance.
+  // GETs are the small classificatory payload; POSTs (/get_data) can
+  // legitimately be slow, so they get a longer deadline.
+  const DIRECT_GET_TIMEOUT_MS = 5_000;
+  const DIRECT_POST_TIMEOUT_MS = 15_000;
+
+  function fetchDirect(url, opts, timeoutMs) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    return fetch(url, { ...opts, signal: controller.signal })
+      .finally(() => clearTimeout(timer));
+  }
+
   async function geostatGet(path) {
     if (!useProxy) {
       try {
-        const res = await fetch(`${GEOSTAT_API}${path}`);
+        const res = await fetchDirect(`${GEOSTAT_API}${path}`, {}, DIRECT_GET_TIMEOUT_MS);
         if (res.ok) return res.json();
       } catch (_) { /* fall through to proxy */ }
       useProxy = true;
@@ -211,11 +231,11 @@
   async function geostatPost(path, body) {
     if (!useProxy) {
       try {
-        const res = await fetch(`${GEOSTAT_API}${path}`, {
+        const res = await fetchDirect(`${GEOSTAT_API}${path}`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(body),
-        });
+        }, DIRECT_POST_TIMEOUT_MS);
         if (res.ok) return res.json();
       } catch (_) { /* fall through to proxy */ }
       useProxy = true;
@@ -228,6 +248,60 @@
     if (!res.ok) throw new Error(`API error ${res.status}`);
     return res.json();
   }
+
+  // ── Country search dropdown ──────────────────────────────────────────────
+  // Wired up BEFORE any awaited network call so the input is never dead:
+  // when Geostat is down its endpoints accept the connection and hang, and
+  // the country-list load below can take many seconds to settle. Until it
+  // does, the dropdown shows a loading row instead of silently ignoring
+  // focus/typing.
+
+  let countriesLoading = true;
+  let countriesLoadFailed = false;
+
+  function renderDropdown(filter) {
+    const q = (filter || '').toLowerCase();
+    const filtered = q
+      ? countries.filter(c => c.displayLabel.toLowerCase().includes(q) || c.label.toLowerCase().includes(q))
+      : countries;
+    const shown = filtered.slice(0, 50);
+
+    if (shown.length === 0) {
+      const emptyLabel = countriesLoading
+        ? LOADING_LABEL[reportLocale]
+        : countriesLoadFailed
+          ? COUNTRIES_UNAVAILABLE_LABEL[reportLocale]
+          : I18n.tr('statistics.noResults');
+      dropdown.innerHTML = `<div class="stat-dropdown__empty">${escapeHtml(emptyLabel)}</div>`;
+    } else {
+      dropdown.innerHTML = shown.map(c =>
+        `<div class="stat-dropdown__item${selectedCountry && selectedCountry.value === c.value ? ' selected' : ''}" data-value="${c.value}">${escapeHtml(c.displayLabel)}</div>`
+      ).join('');
+    }
+    dropdown.classList.remove('hidden');
+  }
+
+  searchInput.addEventListener('focus', () => renderDropdown(searchInput.value));
+  searchInput.addEventListener('input', () => renderDropdown(searchInput.value));
+
+  dropdown.addEventListener('click', (e) => {
+    const item = e.target.closest('.stat-dropdown__item');
+    if (!item) return;
+    const val = Number(item.dataset.value);
+    selectedCountry = countries.find(c => c.value === val) || null;
+    if (selectedCountry) {
+      searchInput.value = selectedCountry.displayLabel;
+      countryValue.value = selectedCountry.value;
+      generateBtn.disabled = false;
+    }
+    dropdown.classList.add('hidden');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.stat-search-wrap')) {
+      dropdown.classList.add('hidden');
+    }
+  });
 
   // ── Load classificatory data ─────────────────────────────────────────────
   // Load BOTH Georgian and English classificatories up-front so the page
@@ -274,6 +348,12 @@
   } catch (err) {
     console.error('Failed to load classificatory data:', err);
   }
+
+  countriesLoading = false;
+  countriesLoadFailed = countries.length === 0;
+  // If the user opened the dropdown while the list was loading, refresh it
+  // now that the countries (or the failure state) are known.
+  if (!dropdown.classList.contains('hidden')) renderDropdown(searchInput.value);
 
   // Probe-forward: Geostat sometimes publishes a new month's data before
   // updating `selected.month` in the classificatory, which leaves the
@@ -512,47 +592,6 @@
       countryNameMap[englishName] = georgianCanonical;
     }
   }
-
-  // ── Country search dropdown ──────────────────────────────────────────────
-
-  function renderDropdown(filter) {
-    const q = (filter || '').toLowerCase();
-    const filtered = q
-      ? countries.filter(c => c.displayLabel.toLowerCase().includes(q) || c.label.toLowerCase().includes(q))
-      : countries;
-    const shown = filtered.slice(0, 50);
-
-    if (shown.length === 0) {
-      dropdown.innerHTML = `<div class="stat-dropdown__empty">${escapeHtml(I18n.tr('statistics.noResults'))}</div>`;
-    } else {
-      dropdown.innerHTML = shown.map(c =>
-        `<div class="stat-dropdown__item${selectedCountry && selectedCountry.value === c.value ? ' selected' : ''}" data-value="${c.value}">${escapeHtml(c.displayLabel)}</div>`
-      ).join('');
-    }
-    dropdown.classList.remove('hidden');
-  }
-
-  searchInput.addEventListener('focus', () => renderDropdown(searchInput.value));
-  searchInput.addEventListener('input', () => renderDropdown(searchInput.value));
-
-  dropdown.addEventListener('click', (e) => {
-    const item = e.target.closest('.stat-dropdown__item');
-    if (!item) return;
-    const val = Number(item.dataset.value);
-    selectedCountry = countries.find(c => c.value === val) || null;
-    if (selectedCountry) {
-      searchInput.value = selectedCountry.displayLabel;
-      countryValue.value = selectedCountry.value;
-      generateBtn.disabled = false;
-    }
-    dropdown.classList.add('hidden');
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('.stat-search-wrap')) {
-      dropdown.classList.add('hidden');
-    }
-  });
 
   // ── Guided-tour hook (js/core/tour.js) ───────────────────────────────────
   // The tour's demo generation selects the country through the page's own
