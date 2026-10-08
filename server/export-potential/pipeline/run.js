@@ -184,7 +184,20 @@ async function main() {
     log(`cohort ${cohort.key}: loading world figures from ${worldSet.length} reporters x ${cohort.window.length} years${quick ? ' (QUICK: partial world)' : ''}`);
     const acc = {};
     const loadWorld = async (codes, year, flow) => {
-      const { rows, truncated } = await comtrade.getTrade({ reporterCode: codes, period: year, flowCode: flow, partnerCode: 0, cmdCode: 'AG4' }, { budget });
+      let res;
+      try {
+        res = await comtrade.getTrade({ reporterCode: codes, period: year, flowCode: flow, partnerCode: 0, cmdCode: 'AG4' }, { budget });
+      } catch (err) {
+        if (err.timedOut && codes.length > 1) {
+          log(`server timeout on ${codes.length} reporters; splitting`);
+          const half = Math.ceil(codes.length / 2);
+          await loadWorld(codes.slice(0, half), year, flow);
+          await loadWorld(codes.slice(half), year, flow);
+          return;
+        }
+        throw err;
+      }
+      const { rows, truncated } = res;
       if (truncated && codes.length > 1) {
         const half = Math.ceil(codes.length / 2);
         await loadWorld(codes.slice(0, half), year, flow);
@@ -219,7 +232,20 @@ async function main() {
       if (!rep) { log(`${m.iso3}: skipped, no world-side rows`); continue; }
       const supplierRows = [];
       const loadSuppliers = async (years) => {
-        const { rows, truncated } = await comtrade.getTrade({ reporterCode: m.code, period: years, flowCode: 'M', cmdCode: gate1Codes }, { budget });
+        let res;
+        try {
+          res = await comtrade.getTrade({ reporterCode: m.code, period: years, flowCode: 'M', cmdCode: gate1Codes }, { budget });
+        } catch (err) {
+          if (err.timedOut && years.length > 1) {
+            log(`${m.iso3}: server timeout; splitting years`);
+            const half = Math.ceil(years.length / 2);
+            await loadSuppliers(years.slice(0, half));
+            await loadSuppliers(years.slice(half));
+            return;
+          }
+          throw err;
+        }
+        const { rows, truncated } = res;
         if (truncated && years.length > 1) {
           const half = Math.ceil(years.length / 2);
           await loadSuppliers(years.slice(0, half));

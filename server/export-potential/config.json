@@ -129,7 +129,7 @@
     "trackRecordYears": 5,
     "comtrade": {
       "dailyCallBudget": 480,
-      "worldChunkReporters": 32,
+      "worldChunkReporters": 16,
       "partnerYearsPerCall": 5
     },
     "cohorts": {

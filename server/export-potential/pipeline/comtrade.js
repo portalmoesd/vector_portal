@@ -97,7 +97,14 @@ async function getJson(url, { useKey = true, timeoutMs = 15 * 60 * 1000, retries
       throw new Error(`Comtrade ${r.status}: ${r.text.slice(0, 200)}`);
     }
     if (r.status === 429 || r.status >= 500) {
-      if (attempt > retries) throw new Error(`Comtrade ${r.status} after ${retries} retries: ${r.text.slice(0, 200)}`);
+      // "500 - The request timed out" is Comtrade giving up on a large
+      // request; a retry rarely helps, the caller should split it.
+      const timedOut = r.status === 500 && /request timed out/i.test(r.text);
+      if (timedOut || attempt > retries) {
+        const err = new Error(`Comtrade ${r.status}${timedOut ? ' (request timed out)' : ` after ${retries} retries`}: ${r.text.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 120)}`);
+        err.status = r.status; err.timedOut = timedOut;
+        throw err;
+      }
       const backoff = r.status === 429 ? 60000 : 15000 * attempt;
       log(`HTTP ${r.status}; waiting ${backoff / 1000}s then retry ${attempt}`);
       await sleep(backoff);
