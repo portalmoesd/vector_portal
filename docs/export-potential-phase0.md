@@ -20,10 +20,9 @@ HS4 product names in both languages. So:
   only reads files, it computes nothing at request time.
 - **Pipeline language (deviation from the proposed Python default):** Node.js. The
   portal, its tests and its deployment are Node-only; Python is not installed on the
-  server and would add a second runtime. The scoring engine is already written in Node
-  (`server/export-potential/scoring.js`) with every number in
-  `server/export-potential/config.json`, so the downloader (Phase 1) continues in Node.
-  Say so if you prefer Python anyway; the result-file contract is language-neutral.
+  server and would add a second runtime. The scoring engine and the pipeline
+  (`server/export-potential/pipeline/`) are in Node, with every number in
+  `server/export-potential/config.json`. The result-file contract is language-neutral.
 - **Interface language:** both English and Georgian, following the portal's site
   language switch. Product names come from the portal's existing HS4 name lists
   (`frontend/data/hs4-names-en.csv`, `hs4-names-ka.csv`), so no new source is needed
@@ -193,7 +192,14 @@ cohort C, or only partners above some trade threshold with Georgia?
 - BACI cohort scope (section 7).
 - Any partner countries to exclude or prioritise for the first download days.
 
-## 10. What is already built
+## 10. What is built
+
+Phase 1 ran on 2026-10-08 with the key you provided; the ratings per country are in
+`docs/export-potential-phase1-summary.md` and the result files are committed. Beyond the
+page shell listed below: `server/export-potential/pipeline/` (Comtrade and Geostat clients
+with an on-disk cache and daily budget, HS concordance, GeoDist table, orchestrator,
+partner prefetch, index and summary writers; see its README).
+
 
 - `server/export-potential/config.json` — every threshold, weight and year rule.
 - `server/export-potential/scoring.js` — gates, metrics, scoring, caps; pure functions.

@@ -1632,10 +1632,13 @@ screening result, not a forecast.
 
 ### 25.2 Architecture
 
-Precompute, never query live. A pipeline (Phase 1, not yet built) downloads UN Comtrade,
-Geostat, and optionally WITS and CEPII data, scores every product for every partner, and
+Precompute, never query live. The pipeline (`server/export-potential/pipeline/`, see its
+README) downloads UN Comtrade and Geostat data, uses the committed CEPII GeoDist distance
+table, scores every gate-1 product for every partner with a complete Comtrade window, and
 writes one result file per partner under `server/data/export-potential/results/<ISO3>.json`
-(contract in that folder's README). The server only reads those files:
+(contract in that folder's README) plus `index.json` beside it. The result files are
+committed: Render's disk is wiped on deploy, and the files are derived figures only. The
+server only reads them:
 
 | Endpoint | Returns |
 |---|---|
@@ -1657,8 +1660,8 @@ rating is recorded as `cap` plus a `cap_*` flag.
 
 ### 25.4 Sample partner
 
-Until real result files exist, `server/export-potential/sample.js` builds an invented
-partner (`SMP`) through the real engine. Its first product reproduces the brief's check
+Besides the real result files, `server/export-potential/sample.js` builds an invented
+partner (`SMP`) through the real engine, listed last in the country picker. Its first product reproduces the brief's check
 case (77 points, High, no cap); the others cover both caps, a new market, a Low rating, a
 missing-tariff flag and the watch list. It is marked `sample: true` and the page shows a
 yellow banner on it.
