@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vector Portal — Export Potential</title>
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/statistics.css" />
+  <link rel="stylesheet" href="/css/export-potential.css" />
+  <link rel="stylesheet" href="/css/georgian-fonts.css" />
+  <link rel="stylesheet" href="/css/apple.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar"></aside>
+    <main class="main ep-page">
+      <div class="topbar ep-topbar">
+        <div class="page-title" data-i18n="exportPotential.title">Export Potential</div>
+        <span class="pill pill-purple" data-i18n="exportPotential.adminPreview">Admin preview</span>
+      </div>
+
+      <div id="epSampleBanner" class="ep-banner hidden" role="status">
+        <strong data-i18n="exportPotential.sampleBannerTitle">Sample data.</strong>
+        <span data-i18n="exportPotential.sampleBanner">Every figure for this country is invented to preview the page. It is not a real rating.</span>
+      </div>
+
+      <!-- Controls: partner country, rating filter, product filter, methodology -->
+      <div class="card stat-controls">
+        <div class="stat-controls__row">
+          <div class="form-group stat-controls__country">
+            <label class="form-label" for="epCountrySearch" data-i18n="exportPotential.partnerCountry">Partner country</label>
+            <div class="stat-search-wrap">
+              <input type="text" id="epCountrySearch" class="form-input" autocomplete="off" data-i18n-placeholder="statistics.searchCountry" placeholder="Search country..." />
+              <div id="epCountryDropdown" class="stat-dropdown hidden"></div>
+            </div>
+          </div>
+          <div class="form-group ep-filter-group">
+            <label class="form-label" data-i18n="exportPotential.rating">Rating</label>
+            <div class="ep-filter" id="epRatingFilter" role="radiogroup" aria-label="Rating filter">
+              <button type="button" class="ep-filter__btn active" data-rating="all" data-i18n="common.all">All</button>
+              <button type="button" class="ep-filter__btn" data-rating="High" data-i18n="exportPotential.ratings.High">High</button>
+              <button type="button" class="ep-filter__btn" data-rating="Moderate" data-i18n="exportPotential.ratings.Moderate">Moderate</button>
+              <button type="button" class="ep-filter__btn" data-rating="Low" data-i18n="exportPotential.ratings.Low">Low</button>
+            </div>
+          </div>
+          <div class="form-group stat-controls__country ep-product-group">
+            <label class="form-label" for="epProductSearch" data-i18n="exportPotential.product">Product</label>
+            <input type="text" id="epProductSearch" class="form-input" autocomplete="off" data-i18n-placeholder="exportPotential.productFilterPlaceholder" placeholder="Product name or HS code..." />
+          </div>
+          <div class="form-group stat-controls__btn-wrap">
+            <label class="form-label">&nbsp;</label>
+            <button type="button" class="btn btn-outline" id="epMethodBtn" aria-expanded="false" aria-controls="epMethod" data-i18n="exportPotential.methodology">Methodology</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="epLoading" class="stat-report__loading hidden">
+        <div class="stat-spinner"></div>
+        <span class="stat-loading-label" data-i18n="common.loading">Loading...</span>
+      </div>
+
+      <div id="epEmpty" class="card empty-state">
+        <p data-i18n="exportPotential.pickCountry">Pick a partner country to see which Georgian products have export potential there.</p>
+      </div>
+
+      <div id="epError" class="card ep-error hidden"></div>
+
+      <div id="epResult" class="hidden">
+        <div class="ep-meta card" id="epMeta"></div>
+
+        <div class="ep-tiles" id="epTiles"></div>
+
+        <div class="card ep-products-card">
+          <div class="stat-report__header ep-card-header">
+            <span id="epProductsTitle" data-i18n="exportPotential.table.products">Products with export potential</span>
+            <span class="ep-card-header__count" id="epProductsCount"></span>
+          </div>
+          <div class="table-wrap">
+            <table class="ep-table" id="epTable">
+              <thead>
+                <tr>
+                  <th class="ep-th-code" data-i18n="exportPotential.table.code">HS code</th>
+                  <th data-i18n="exportPotential.table.product">Product</th>
+                  <th data-i18n="exportPotential.table.rating">Rating</th>
+                  <th class="ep-th-score" data-i18n="exportPotential.table.score">Score</th>
+                  <th class="ep-th-block" data-i18n="exportPotential.blocks.demandSize">Demand size</th>
+                  <th class="ep-th-block" data-i18n="exportPotential.blocks.demandGrowth">Demand growth</th>
+                  <th class="ep-th-block" data-i18n="exportPotential.blocks.competitionAccess">Competition and access</th>
+                  <th class="ep-th-block" data-i18n="exportPotential.blocks.georgiaPosition">Georgia's position</th>
+                  <th class="ep-th-chevron"></th>
+                </tr>
+              </thead>
+              <tbody id="epTableBody"></tbody>
+            </table>
+          </div>
+          <div id="epNoRows" class="empty-state hidden"><p data-i18n="statistics.noResults">No results</p></div>
+        </div>
+
+        <div class="card" id="epWatchCard">
+          <div class="stat-report__header ep-card-header">
+            <span data-i18n="exportPotential.watch.title">Markets to watch</span>
+            <span class="ep-card-header__count" id="epWatchCount"></span>
+          </div>
+          <p class="ep-card-intro" data-i18n="exportPotential.watch.intro">Products this market has imported for only one or two years. Not rated.</p>
+          <div class="table-wrap">
+            <table class="ep-table" id="epWatchTable">
+              <thead>
+                <tr>
+                  <th class="ep-th-code" data-i18n="exportPotential.table.code">HS code</th>
+                  <th data-i18n="exportPotential.table.product">Product</th>
+                  <th data-i18n="exportPotential.watch.years">Years with imports</th>
+                  <th data-i18n="exportPotential.watch.imports">Imports</th>
+                </tr>
+              </thead>
+              <tbody id="epWatchBody"></tbody>
+            </table>
+          </div>
+          <div id="epNoWatch" class="empty-state hidden"><p data-i18n="exportPotential.watch.none">No markets to watch for this country.</p></div>
+        </div>
+      </div>
+
+      <section id="epMethod" class="card ep-method hidden" aria-labelledby="epMethodTitle">
+        <div class="stat-report__header ep-card-header">
+          <span id="epMethodTitle" data-i18n="exportPotential.method.title">How the ratings are made</span>
+        </div>
+        <div id="epMethodBody"></div>
+      </section>
+
+      <footer class="ep-footer" id="epFooter"></footer>
+    </main>
+  </div>
+  <script src="/js/core/config.js"></script>
+  <script src="/js/core/api.js"></script>
+  <script src="/js/core/i18n.js"></script>
+  <script src="/js/core/utils.js"></script>
+  <script src="/js/core/app.js"></script>
+  <script src="/js/pages/export-potential.js"></script>
+</body>
+</html>

@@ -58,6 +58,13 @@ const App = {
       }
     }
 
+    // Export Potential is an ADMIN-only preview for now; everyone else
+    // bounces to their dashboard.
+    if (user.role !== 'ADMIN' && window.location.pathname.endsWith('/pages/export-potential.html')) {
+      window.location.href = dashboardUrl(user.role);
+      return;
+    }
+
 
     await I18n.init();
 
@@ -98,11 +105,13 @@ const App = {
       library: '<svg viewBox="0 0 350 350"><path d="M296.8,325H53.2c-15.4,0-27.8-12.5-27.8-27.8V172.6c0-15.4,12.5-27.8,27.8-27.8h243.6c15.4,0,27.8,12.5,27.8,27.8v124.5C324.6,312.5,312.1,325,296.8,325z"/><path d="M272,115.1H76.2c-7.9,0-14.3-6.4-14.3-14.3v-1.6c0-7.9,6.4-14.3,14.3-14.3H272c7.9,0,14.3,6.4,14.3,14.3v1.6C286.3,108.7,279.9,115.1,272,115.1z"/><path d="M234.5,55.2h-119c-7.9,0-14.3-6.4-14.3-14.3v-1.6c0-7.9,6.4-14.3,14.3-14.3h119.1c7.9,0,14.3,6.4,14.3,14.3v1.6C248.8,48.8,242.4,55.2,234.5,55.2z"/></svg>',
       admin: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
       statistics: '<svg viewBox="0 0 24 24"><path d="M3 3v18h18v-2H5V3H3zm4 12h2V9H7v6zm4 0h2V5h-2v10zm4 0h2V7h-2v8z"/></svg>',
+      potential: '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>',
       logout: '<svg viewBox="0 0 24 24"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>',
     };
 
     function navIcon(label) {
       const l = (label || '').toLowerCase();
+      if (l.includes('export potential')) return ICO.potential;
       if (l.includes('calendar')) return ICO.calendar;
       if (l.includes('library')) return ICO.library;
       if (l.includes('statistic')) return ICO.statistics;
@@ -139,6 +148,8 @@ const App = {
       }
       navItems.push({ href: '/pages/statistics.html', label: 'Statistics', i18n: 'nav.statistics', match: 'statistics' });
       if (user.role === 'ADMIN') {
+        // Export Potential is an admin-only preview for now (see the guard above).
+        navItems.push({ href: '/pages/export-potential.html', label: 'Export Potential', i18n: 'nav.exportPotential', match: 'export-potential' });
         navItems.push({ href: '/pages/admin.html', label: 'Admin Panel', i18n: 'nav.admin', match: 'admin' });
       }
     }

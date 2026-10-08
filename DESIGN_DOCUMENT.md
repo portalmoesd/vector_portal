@@ -1616,3 +1616,56 @@ No review/approval step for written summaries (SUBMITTED simply means "non-blank
 saved"); no un-send or re-open; no post-deadline edit lock; no manual assignee management
 beyond the send's retro-assignment. Each of these is a product decision to be taken
 explicitly, not an omission.
+
+---
+
+## 25. Export Potential (admin preview)
+
+### 25.1 Overview
+
+An admin-only page (`/pages/export-potential.html`) that, for a chosen partner country,
+lists the Georgian products with export potential there, each rated **High**, **Moderate**
+or **Low** on a fixed 100-point method, plus a separate "Markets to watch" list. The method
+(two gates, four scoring blocks, two caps) is specified in `docs/export-potential-brief.md`;
+the data-discovery findings are in `docs/export-potential-phase0.md`. A rating is a
+screening result, not a forecast.
+
+### 25.2 Architecture
+
+Precompute, never query live. A pipeline (Phase 1, not yet built) downloads UN Comtrade,
+Geostat, and optionally WITS and CEPII data, scores every product for every partner, and
+writes one result file per partner under `server/data/export-potential/results/<ISO3>.json`
+(contract in that folder's README). The server only reads those files:
+
+| Endpoint | Returns |
+|---|---|
+| `GET /api/export-potential/countries` | partners with a result file (plus the sample), with summary counts |
+| `GET /api/export-potential/countries/:iso3` | one partner's full result, product names filled from the HS4 name lists |
+| `GET /api/export-potential/config` | the method's configuration, rendered on the methodology panel |
+
+All three are `requireAuth + requireRole('ADMIN')`. The page is also guarded in `App.init`
+(non-admins bounce to their dashboard) and the sidebar entry is only built for ADMIN.
+
+### 25.3 Scoring engine
+
+`server/export-potential/scoring.js` is pure: `gate1`, `gate2`, `computeMetrics`,
+`scoreMetrics`, `rate`, `evaluate`. Every number (thresholds, points, years, bands, caps)
+lives in `server/export-potential/config.json`; a unit test fails if a threshold appears in
+the code. Missing data is never filled silently: each default is applied and recorded as a
+flag on the product (`tariff_missing`, `distance_missing`, …), and a cap that changed the
+rating is recorded as `cap` plus a `cap_*` flag.
+
+### 25.4 Sample partner
+
+Until real result files exist, `server/export-potential/sample.js` builds an invented
+partner (`SMP`) through the real engine. Its first product reproduces the brief's check
+case (77 points, High, no cap); the others cover both caps, a new market, a Low rating, a
+missing-tariff flag and the watch list. It is marked `sample: true` and the page shows a
+yellow banner on it.
+
+### 25.5 Publishing rule
+
+Only derived figures (scores, growth rates, shares, averages, indices) are stored and
+shown. Raw Comtrade records are never written to the results folder or offered for
+download. The footer credits UN Comtrade, Geostat and, where used, CEPII BACI, WITS /
+UNCTAD TRAINS and CEPII GeoDist, with the data year.
