@@ -164,6 +164,21 @@ async function getPartnerAreas() {
 // get({ reporterCode, period, flowCode, partnerCode, cmdCode }) -> rows
 // rows: { reporterCode, reporterISO, period, flowCode, partnerCode, partnerISO,
 //         cmdCode, classificationCode, primaryValue }
+// includeDesc=false leaves the ISO fields empty, so they are filled from the
+// public reference list (Comtrade's own codes: 842 USA, 251 France, ...).
+let isoByCode = null;
+async function withIso(rows) {
+  if (!isoByCode) {
+    isoByCode = new Map();
+    for (const a of await getPartnerAreas()) if (!isoByCode.has(a.code)) isoByCode.set(a.code, a.iso3);
+  }
+  for (const r of rows) {
+    if (!r.reporterISO) r.reporterISO = isoByCode.get(r.reporterCode) || String(r.reporterCode);
+    if (!r.partnerISO) r.partnerISO = isoByCode.get(r.partnerCode) || String(r.partnerCode);
+  }
+  return rows;
+}
+
 async function getTrade(params, { budget = Infinity } = {}) {
   const full = {
     typeCode: 'C', freqCode: 'A', clCode: 'HS',
@@ -176,7 +191,7 @@ async function getTrade(params, { budget = Infinity } = {}) {
   };
   const key = cacheKey({ trade: full });
   const cached = readCache('comtrade', key);
-  if (cached) return { rows: cached.rows, truncated: cached.truncated, fromCache: true };
+  if (cached) return { rows: await withIso(cached.rows), truncated: cached.truncated, fromCache: true };
 
   const b = readBudget();
   if (b.calls >= budget) throw new BudgetExhausted(`daily Comtrade budget reached (${b.calls} calls today)`);
@@ -203,7 +218,7 @@ async function getTrade(params, { budget = Infinity } = {}) {
   const truncated = (json.count || 0) >= RECORD_CAP || data.length >= RECORD_CAP;
   log(`  ${rows.length} rows in ${((Date.now() - t0) / 1000).toFixed(0)}s${truncated ? ' (TRUNCATED)' : ''}`);
   writeCache('comtrade', key, { params: full, fetchedAt: Date.now(), count: json.count, truncated, rows });
-  return { rows, truncated, fromCache: false };
+  return { rows: await withIso(rows), truncated, fromCache: false };
 }
 
 module.exports = { getDataAvailability, getPartnerAreas, getTrade, readBudget, BudgetExhausted, RECORD_CAP };
