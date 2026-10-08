@@ -194,6 +194,20 @@
     resultEl.classList.remove('hidden');
   }
 
+  // Flags carried by every product (e.g. "tariff data missing" in version 1)
+  // are said once above the table instead of on every row.
+  function commonFlagCodes() {
+    const products = (result && result.products) || [];
+    if (products.length < 2) return new Set();
+    let common = null;
+    for (const p of products) {
+      const codes = new Set((p.flags || []).map((f) => f.code));
+      common = common ? new Set([...common].filter((c) => codes.has(c))) : codes;
+      if (!common.size) break;
+    }
+    return common || new Set();
+  }
+
   function renderMeta() {
     const w = result.window || {};
     const items = [
@@ -203,7 +217,13 @@
       [t('exportPotential.meta.georgiaSource'), result.georgiaSource ? result.georgiaSource.label : '—'],
       [t('exportPotential.meta.runDate'), result.pipeline && result.pipeline.runDate ? fmtDate(result.pipeline.runDate) : '—'],
     ];
-    metaEl.innerHTML = items.map(([k, v]) => `<span class="ep-meta__item">${escapeHtml(k)}: <b>${escapeHtml(v)}</b></span>`).join('');
+    let html = items.map(([k, v]) => `<span class="ep-meta__item">${escapeHtml(k)}: <b>${escapeHtml(v)}</b></span>`).join('');
+    const common = commonFlagCodes();
+    if (common.size) {
+      const labels = [...common].map((code) => flagLabel({ code }));
+      html += `<span class="ep-meta__item ep-meta__flags">${escapeHtml(t('exportPotential.commonFlags'))} <span class="ep-flag ep-flag--missing">${labels.map(escapeHtml).join('</span> <span class="ep-flag ep-flag--missing">')}</span></span>`;
+    }
+    metaEl.innerHTML = html;
   }
 
   function renderTiles() {
@@ -268,9 +288,10 @@
     const total = (result.products || []).length;
     productsCount.textContent = t('exportPotential.table.shown', { shown: rows.length, total });
     noRowsEl.classList.toggle('hidden', rows.length > 0);
+    const common = commonFlagCodes();
     tableBody.innerHTML = rows.map((p) => {
       const open = expanded.has(p.hs4);
-      const flags = (p.flags || []).map((f) => `<span class="ep-flag ${flagClass(f)}">${escapeHtml(flagLabel(f))}</span>`).join('');
+      const flags = (p.flags || []).filter((f) => !common.has(f.code)).map((f) => `<span class="ep-flag ${flagClass(f)}">${escapeHtml(flagLabel(f))}</span>`).join('');
       const block = (key) => {
         const max = blockMax(key);
         return `<td class="ep-block-cell">${p.blocks[key]}${max != null ? `<small> / ${max}</small>` : ''}</td>`;

@@ -36,12 +36,15 @@ test.afterAll(() => server && server.close());
 const ADMIN = { id: 1, fullName: 'Admin Test', username: 'admin', role: 'ADMIN' };
 const DEPUTY = { id: 2, fullName: 'Deputy Test', username: 'dep', role: 'DEPUTY' };
 
-async function preparePage(page, { user = ADMIN, locale = 'en' } = {}) {
-  await page.addInitScript(({ u, locale }) => {
+// The page remembers the last partner; pin it so the tests see the sample
+// partner whatever real result files are committed.
+async function preparePage(page, { user = ADMIN, locale = 'en', country = 'SMP' } = {}) {
+  await page.addInitScript(({ u, locale, country }) => {
     localStorage.setItem('token', 'test-token');
     localStorage.setItem('user', JSON.stringify(u));
     localStorage.setItem('locale', locale);
-  }, { u: user, locale });
+    localStorage.setItem('exportPotentialCountry', country);
+  }, { u: user, locale, country });
   await page.route(/^https:\/\//, route => route.fulfill({ body: '', contentType: 'application/javascript' }));
   await page.route('**/api/**', async (route) => {
     const url = new URL(route.request().url());
@@ -147,4 +150,16 @@ test('non-admin roles are bounced to their dashboard and see no sidebar entry', 
   await page.goto(`${origin}/pages/export-potential.html`);
   await page.waitForURL(/dashboard-deputy\.html/);
   await expect(page.locator('.gp-nav__link', { hasText: 'Export Potential' })).toHaveCount(0);
+});
+
+test('a real result file renders without the sample banner and hoists flags shared by every product', async ({ page }) => {
+  test.skip(!results.listCountries().some((c) => c.code === 'TUR' && !c.sample), 'no real result file for TUR');
+  await preparePage(page, { country: 'TUR' });
+  await page.goto(`${origin}/pages/export-potential.html`);
+  await expect(page.locator('#epCountrySearch')).toHaveValue(/Turkey|Türkiye/);
+  await expect(page.locator('#epTableBody tr.ep-row').first()).toBeVisible();
+  await expect(page.locator('#epSampleBanner')).toBeHidden();
+  await expect(page.locator('#epMeta')).toContainText('UN Comtrade');
+  await expect(page.locator('#epMeta .ep-meta__flags')).toContainText('Tariff data missing');
+  await expect(page.locator('#epTableBody .ep-flag', { hasText: 'Tariff data missing' })).toHaveCount(0);
 });

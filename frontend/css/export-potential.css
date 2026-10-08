@@ -20,6 +20,8 @@
   font-size: 0.9rem;
 }
 
+.ep-banner.hidden { display: none; }
+
 .ep-error {
   color: var(--accent-red);
 }
@@ -309,3 +311,5 @@
 @media (max-width: 760px) {
   .ep-table th.ep-th-block, .ep-table td.ep-block-cell { display: none; }
 }
+
+.ep-meta__flags { display: inline-flex; flex-wrap: wrap; gap: 4px; align-items: center; }

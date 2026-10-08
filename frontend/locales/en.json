@@ -1079,6 +1079,7 @@
       "rca_missing": "RCA could not be computed",
       "headroom_missing": "Headroom could not be computed"
     },
+    "commonFlags": "Applies to every product:",
     "capNote": "The points gave {from}; the {cap} cap lowered the rating to {to}.",
     "caps": {
       "small_market": "small market",
