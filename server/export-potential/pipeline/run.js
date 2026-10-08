@@ -34,6 +34,8 @@ const { distanceKm } = require('./geodist');
 const { aggregateWorldRows, aggregateSupplierRows, buildInput } = require('./build');
 const { NEW_IN_HS2022 } = require('./concordance');
 
+module.exports = { roundDeep };
+
 function parseArgs(argv) {
   const out = {};
   for (let i = 2; i < argv.length; i++) {
@@ -48,6 +50,24 @@ function parseArgs(argv) {
 
 function log(msg) {
   process.stderr.write(`[pipeline ${new Date().toISOString().slice(11, 19)}] ${msg}\n`);
+}
+
+// Round the numbers in a result so the committed files stay small: money
+// and distances to whole units, ratios and rates to six decimals.
+function roundDeep(v) {
+  if (Array.isArray(v)) return v.map(roundDeep);
+  if (v && typeof v === 'object') {
+    const o = {};
+    for (const k of Object.keys(v)) o[k] = roundDeep(v[k]);
+    return o;
+  }
+  if (typeof v === 'number' && Number.isFinite(v)) {
+    // Money and distances are the only values that reach 1000; ratios,
+    // rates and shares stay well below it.
+    if (Math.abs(v) >= 1000) return Math.round(v);
+    return Math.round(v * 1e6) / 1e6;
+  }
+  return v;
 }
 
 function range(a, b) { const o = []; for (let y = a; y <= b; y++) o.push(y); return o; }
@@ -254,18 +274,23 @@ async function main() {
       };
       const counts = { High: 0, Moderate: 0, Low: 0 };
       for (const pr of products) counts[pr.rating]++;
-      fs.writeFileSync(path.join(outDir, `${m.iso3}.json`), JSON.stringify(result));
+      fs.writeFileSync(path.join(outDir, `${m.iso3}.json`), JSON.stringify(roundDeep(result)));
       summary.partners.push({ iso3: m.iso3, cohort: cohort.key, T: cohort.T, ...counts, watch: watch.length, georgiaExportsUsd: Math.round(geoExportsTo(m)) });
       log(`${m.iso3} (${result.partner.nameEn}): High ${counts.High}, Moderate ${counts.Moderate}, Low ${counts.Low}, watch ${watch.length}`);
     }
   }
 
+  if (!quick) {
+    const { writeIndex } = require('./write-index');
+    const idx = writeIndex(outDir);
+    log(`index: ${idx.count} countries in ${idx.dest}`);
+  }
   const summaryPath = path.join(outDir, '..', `summary-${asOf}${quick ? '-quick' : ''}.json`);
   fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2));
   log(`done: ${summary.partners.length} partners written to ${outDir}; summary at ${summaryPath}; Comtrade calls today: ${comtrade.readBudget().calls}`);
 }
 
-main().catch((err) => {
+if (require.main === module) main().catch((err) => {
   if (err instanceof comtrade.BudgetExhausted) {
     log(`${err.message}. Completed partners are written; re-run tomorrow to continue (cached calls are free).`);
     process.exit(0);

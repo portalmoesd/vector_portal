@@ -105,3 +105,33 @@ test('the API is admin-only', async () => {
     server.close();
   }
 });
+
+test('a real result file is listed from the index and served with names', () => {
+  const fs = require('fs');
+  const path = require('path');
+  const { writeIndex } = require('../../server/export-potential/pipeline/write-index');
+  const sample = buildSampleResult();
+  const fake = { ...sample, sample: false, partner: { iso3: 'ZZT', iso2: 'zz', nameEn: 'Testland', nameKa: 'ტესტლანდი' } };
+  const file = path.join(results.RESULTS_DIR, 'ZZT.json');
+  const hadIndex = fs.existsSync(results.INDEX_FILE);
+  const oldIndex = hadIndex ? fs.readFileSync(results.INDEX_FILE) : null;
+  try {
+    fs.writeFileSync(file, JSON.stringify(fake));
+    writeIndex(results.RESULTS_DIR);
+    const list = results.listCountries();
+    const entry = list.find((c) => c.code === 'ZZT');
+    assert.ok(entry, 'listed from the index');
+    assert.strictEqual(entry.sample, false);
+    assert.strictEqual(entry.summary.total, fake.products.length);
+    assert.strictEqual(list[list.length - 1].code, 'SMP');
+    const r = results.getCountry('zzt');
+    assert.strictEqual(r.partner.nameEn, 'Testland');
+    assert.strictEqual(r.products.find((p) => p.hs4 === '2204').name.en, 'Wine');
+    // A file removed after the index was written is not listed.
+    fs.unlinkSync(file);
+    assert.ok(!results.listCountries().some((c) => c.code === 'ZZT'));
+  } finally {
+    if (fs.existsSync(file)) fs.unlinkSync(file);
+    if (hadIndex) fs.writeFileSync(results.INDEX_FILE, oldIndex); else if (fs.existsSync(results.INDEX_FILE)) fs.unlinkSync(results.INDEX_FILE);
+  }
+});

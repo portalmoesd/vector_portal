@@ -32,6 +32,10 @@ returns for a rated product: `hs4`, `rating`, `ratingBeforeCap`, `cap`, `score`,
 `blocks`, `indicators` (raw value and points for every indicator), `gate1`, `gate2`,
 `window`, `flags` and `figures`.
 
-Until the pipeline exists, the loader also serves an invented partner (`SMP`, built
+`../index.json` (written by the pipeline, `pipeline/write-index.js`) lists every file with
+its rating counts; the portal lists countries from it and parses a result file only when
+that country is opened.
+
+The loader also serves an invented partner (`SMP`, built
 by `server/export-potential/sample.js`) so the page can be previewed. It is marked
 `sample: true` and the page shows a banner on it.

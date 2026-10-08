@@ -17,7 +17,11 @@ const path = require('path');
 const { buildSampleResult } = require('./sample');
 
 const RESULTS_DIR = path.join(__dirname, '../data/export-potential/results');
+const INDEX_FILE = path.join(__dirname, '../data/export-potential/index.json');
 const NAMES_DIR = path.join(__dirname, '../../frontend/data');
+// Parsed result files kept in memory (a file is a few hundred KB; 138 of
+// them would not be worth holding at once).
+const FILE_CACHE_MAX = 12;
 
 let namesCache = null;
 function loadNames() {
@@ -108,8 +112,28 @@ function readFile(file) {
     return null;
   }
   const result = { ...parsed, sample: !!parsed.sample };
+  fileCache.delete(code);
   fileCache.set(code, { mtimeMs: stat.mtimeMs, result });
+  while (fileCache.size > FILE_CACHE_MAX) fileCache.delete(fileCache.keys().next().value);
   return result;
+}
+
+// The pipeline writes index.json next to the results folder; it is used
+// when present and newer than every result file, otherwise files are scanned.
+let indexCache = null;
+function readIndex() {
+  let stat;
+  try { stat = fs.statSync(INDEX_FILE); } catch (_) { return null; }
+  if (indexCache && indexCache.mtimeMs === stat.mtimeMs) return indexCache.entries;
+  try {
+    const parsed = JSON.parse(fs.readFileSync(INDEX_FILE, 'utf8'));
+    const entries = (parsed.countries || []).filter((c) => c && typeof c.code === 'string' && Number.isInteger(c.dataYear));
+    indexCache = { mtimeMs: stat.mtimeMs, entries };
+    return entries;
+  } catch (err) {
+    console.warn('export-potential: index.json unreadable, scanning files:', err.message);
+    return null;
+  }
 }
 
 function listFiles() {
@@ -127,10 +151,19 @@ function sampleResult() {
 }
 
 function listCountries() {
+  const files = new Set(listFiles().map((f) => path.basename(f, '.json').toUpperCase()));
+  const indexed = readIndex();
   const out = [];
-  for (const f of listFiles()) {
-    const r = readFile(f);
-    if (r) out.push(countrySummary(r));
+  if (indexed) {
+    for (const c of indexed) {
+      if (!files.has(c.code.toUpperCase())) continue; // stale index entry
+      out.push({ code: c.code, iso2: c.iso2 || null, nameEn: c.nameEn, nameKa: c.nameKa || c.nameEn, dataYear: c.dataYear, tradeSource: c.tradeSource || null, sample: !!c.sample, summary: c.summary });
+    }
+  } else {
+    for (const f of listFiles()) {
+      const r = readFile(f);
+      if (r) out.push(countrySummary(r));
+    }
   }
   out.sort((a, b) => a.nameEn.localeCompare(b.nameEn));
   out.push(countrySummary(sampleResult()));
@@ -148,4 +181,4 @@ function getCountry(code) {
   return r ? enrich(r) : null;
 }
 
-module.exports = { RESULTS_DIR, listCountries, getCountry, enrich, productName, isValidResult };
+module.exports = { RESULTS_DIR, INDEX_FILE, listCountries, getCountry, enrich, productName, isValidResult };

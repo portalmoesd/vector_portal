@@ -85,3 +85,9 @@ test('cache keys differ per request and ignore property order', () => {
   assert.notStrictEqual(cacheKey({ trade: { reporterCode: 792, period: 2025 } }), cacheKey({ trade: { reporterCode: 792, period: 2024 } }));
   assert.strictEqual(canonical({ b: 1, a: [true, null, 'x'] }), '{"a":[true,null,"x"],"b":1}');
 });
+
+test('result rounding keeps ratios and rounds money and distances', () => {
+  const { roundDeep } = require('../../server/export-potential/pipeline/run');
+  assert.deepStrictEqual(roundDeep({ usd: 48718570.6, rca: 1.23456789, share: 0.0204029830891, km: 2707.96, growth: -0.312545241525, years: [2021], nested: { v: 0.5 } }),
+    { usd: 48718571, rca: 1.234568, share: 0.020403, km: 2708, growth: -0.312545, years: [2021], nested: { v: 0.5 } });
+});
