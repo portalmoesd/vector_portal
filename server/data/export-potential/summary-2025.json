@@ -1,0 +1,1425 @@
+{
+  "asOf": 2025,
+  "runDate": "2026-10-08T14:17:45.947Z",
+  "cohorts": {
+    "a": {
+      "T": 2025,
+      "window": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "worldReporters": 106,
+      "partialWorld": false
+    },
+    "b": {
+      "T": 2024,
+      "window": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "worldReporters": 32,
+      "partialWorld": false
+    }
+  },
+  "partners": [
+    {
+      "iso3": "CHN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 47,
+      "Moderate": 90,
+      "Low": 2,
+      "watch": 2,
+      "georgiaExportsUsd": 2575998887
+    },
+    {
+      "iso3": "TUR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 91,
+      "Moderate": 47,
+      "Low": 5,
+      "watch": 0,
+      "georgiaExportsUsd": 1791505990
+    },
+    {
+      "iso3": "BGR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 97,
+      "Moderate": 35,
+      "Low": 9,
+      "watch": 0,
+      "georgiaExportsUsd": 1582183156
+    },
+    {
+      "iso3": "USA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 83,
+      "Moderate": 59,
+      "Low": 1,
+      "watch": 0,
+      "georgiaExportsUsd": 850133793
+    },
+    {
+      "iso3": "ARM",
+      "cohort": "a",
+      "T": 2025,
+      "High": 67,
+      "Moderate": 57,
+      "Low": 12,
+      "watch": 3,
+      "georgiaExportsUsd": 784286240
+    },
+    {
+      "iso3": "AZE",
+      "cohort": "a",
+      "T": 2025,
+      "High": 79,
+      "Moderate": 46,
+      "Low": 11,
+      "watch": 2,
+      "georgiaExportsUsd": 708314463
+    },
+    {
+      "iso3": "CHE",
+      "cohort": "a",
+      "T": 2025,
+      "High": 90,
+      "Moderate": 47,
+      "Low": 6,
+      "watch": 0,
+      "georgiaExportsUsd": 559663601
+    },
+    {
+      "iso3": "ESP",
+      "cohort": "a",
+      "T": 2025,
+      "High": 110,
+      "Moderate": 33,
+      "Low": 0,
+      "watch": 0,
+      "georgiaExportsUsd": 392918792
+    },
+    {
+      "iso3": "KAZ",
+      "cohort": "a",
+      "T": 2025,
+      "High": 79,
+      "Moderate": 56,
+      "Low": 7,
+      "watch": 0,
+      "georgiaExportsUsd": 365196316
+    },
+    {
+      "iso3": "ITA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 104,
+      "Moderate": 37,
+      "Low": 2,
+      "watch": 0,
+      "georgiaExportsUsd": 339267851
+    },
+    {
+      "iso3": "DEU",
+      "cohort": "a",
+      "T": 2025,
+      "High": 108,
+      "Moderate": 35,
+      "Low": 0,
+      "watch": 0,
+      "georgiaExportsUsd": 317686742
+    },
+    {
+      "iso3": "FRA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 82,
+      "Moderate": 61,
+      "Low": 0,
+      "watch": 0,
+      "georgiaExportsUsd": 227862540
+    },
+    {
+      "iso3": "POL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 108,
+      "Moderate": 33,
+      "Low": 1,
+      "watch": 1,
+      "georgiaExportsUsd": 195901519
+    },
+    {
+      "iso3": "LTU",
+      "cohort": "a",
+      "T": 2025,
+      "High": 62,
+      "Moderate": 73,
+      "Low": 6,
+      "watch": 0,
+      "georgiaExportsUsd": 181176713
+    },
+    {
+      "iso3": "ROU",
+      "cohort": "a",
+      "T": 2025,
+      "High": 103,
+      "Moderate": 33,
+      "Low": 2,
+      "watch": 5,
+      "georgiaExportsUsd": 152660537
+    },
+    {
+      "iso3": "SAU",
+      "cohort": "a",
+      "T": 2025,
+      "High": 101,
+      "Moderate": 35,
+      "Low": 1,
+      "watch": 1,
+      "georgiaExportsUsd": 116327278
+    },
+    {
+      "iso3": "ISR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 86,
+      "Moderate": 47,
+      "Low": 5,
+      "watch": 0,
+      "georgiaExportsUsd": 97223252
+    },
+    {
+      "iso3": "NLD",
+      "cohort": "a",
+      "T": 2025,
+      "High": 86,
+      "Moderate": 57,
+      "Low": 0,
+      "watch": 0,
+      "georgiaExportsUsd": 79151846
+    },
+    {
+      "iso3": "IND",
+      "cohort": "a",
+      "T": 2025,
+      "High": 96,
+      "Moderate": 41,
+      "Low": 3,
+      "watch": 2,
+      "georgiaExportsUsd": 78521679
+    },
+    {
+      "iso3": "CZE",
+      "cohort": "a",
+      "T": 2025,
+      "High": 98,
+      "Moderate": 42,
+      "Low": 1,
+      "watch": 1,
+      "georgiaExportsUsd": 75276727
+    },
+    {
+      "iso3": "GBR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 101,
+      "Moderate": 39,
+      "Low": 2,
+      "watch": 0,
+      "georgiaExportsUsd": 74660131
+    },
+    {
+      "iso3": "EGY",
+      "cohort": "a",
+      "T": 2025,
+      "High": 49,
+      "Moderate": 76,
+      "Low": 11,
+      "watch": 3,
+      "georgiaExportsUsd": 72135133
+    },
+    {
+      "iso3": "GRC",
+      "cohort": "a",
+      "T": 2025,
+      "High": 108,
+      "Moderate": 31,
+      "Low": 4,
+      "watch": 0,
+      "georgiaExportsUsd": 67231340
+    },
+    {
+      "iso3": "JPN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 55,
+      "Moderate": 85,
+      "Low": 1,
+      "watch": 0,
+      "georgiaExportsUsd": 61287281
+    },
+    {
+      "iso3": "LVA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 66,
+      "Moderate": 57,
+      "Low": 16,
+      "watch": 1,
+      "georgiaExportsUsd": 56055292
+    },
+    {
+      "iso3": "KGZ",
+      "cohort": "a",
+      "T": 2025,
+      "High": 66,
+      "Moderate": 57,
+      "Low": 11,
+      "watch": 3,
+      "georgiaExportsUsd": 50284678
+    },
+    {
+      "iso3": "CAN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 82,
+      "Moderate": 59,
+      "Low": 2,
+      "watch": 0,
+      "georgiaExportsUsd": 46092971
+    },
+    {
+      "iso3": "TZA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 42,
+      "Moderate": 81,
+      "Low": 14,
+      "watch": 3,
+      "georgiaExportsUsd": 44246676
+    },
+    {
+      "iso3": "GHA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 25,
+      "Moderate": 93,
+      "Low": 22,
+      "watch": 2,
+      "georgiaExportsUsd": 39882200
+    },
+    {
+      "iso3": "MAR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 96,
+      "Moderate": 38,
+      "Low": 6,
+      "watch": 2,
+      "georgiaExportsUsd": 38062660
+    },
+    {
+      "iso3": "MDA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 70,
+      "Moderate": 53,
+      "Low": 9,
+      "watch": 3,
+      "georgiaExportsUsd": 37282198
+    },
+    {
+      "iso3": "EST",
+      "cohort": "a",
+      "T": 2025,
+      "High": 42,
+      "Moderate": 89,
+      "Low": 10,
+      "watch": 0,
+      "georgiaExportsUsd": 26650247
+    },
+    {
+      "iso3": "NAM",
+      "cohort": "a",
+      "T": 2025,
+      "High": 31,
+      "Moderate": 88,
+      "Low": 21,
+      "watch": 2,
+      "georgiaExportsUsd": 21172656
+    },
+    {
+      "iso3": "SVK",
+      "cohort": "a",
+      "T": 2025,
+      "High": 91,
+      "Moderate": 45,
+      "Low": 4,
+      "watch": 1,
+      "georgiaExportsUsd": 20881836
+    },
+    {
+      "iso3": "MLT",
+      "cohort": "a",
+      "T": 2025,
+      "High": 46,
+      "Moderate": 74,
+      "Low": 15,
+      "watch": 2,
+      "georgiaExportsUsd": 20383011
+    },
+    {
+      "iso3": "KOR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 66,
+      "Moderate": 71,
+      "Low": 3,
+      "watch": 1,
+      "georgiaExportsUsd": 19693260
+    },
+    {
+      "iso3": "SGP",
+      "cohort": "a",
+      "T": 2025,
+      "High": 61,
+      "Moderate": 72,
+      "Low": 8,
+      "watch": 0,
+      "georgiaExportsUsd": 18118056
+    },
+    {
+      "iso3": "HKG",
+      "cohort": "a",
+      "T": 2025,
+      "High": 42,
+      "Moderate": 88,
+      "Low": 9,
+      "watch": 2,
+      "georgiaExportsUsd": 17981091
+    },
+    {
+      "iso3": "PAN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 32,
+      "Moderate": 80,
+      "Low": 22,
+      "watch": 3,
+      "georgiaExportsUsd": 17637858
+    },
+    {
+      "iso3": "PRT",
+      "cohort": "a",
+      "T": 2025,
+      "High": 98,
+      "Moderate": 41,
+      "Low": 4,
+      "watch": 0,
+      "georgiaExportsUsd": 16342084
+    },
+    {
+      "iso3": "AUS",
+      "cohort": "a",
+      "T": 2025,
+      "High": 76,
+      "Moderate": 54,
+      "Low": 7,
+      "watch": 1,
+      "georgiaExportsUsd": 16216039
+    },
+    {
+      "iso3": "BRA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 84,
+      "Moderate": 50,
+      "Low": 5,
+      "watch": 1,
+      "georgiaExportsUsd": 15645925
+    },
+    {
+      "iso3": "COL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 76,
+      "Moderate": 50,
+      "Low": 10,
+      "watch": 2,
+      "georgiaExportsUsd": 15501921
+    },
+    {
+      "iso3": "KWT",
+      "cohort": "a",
+      "T": 2025,
+      "High": 62,
+      "Moderate": 65,
+      "Low": 5,
+      "watch": 4,
+      "georgiaExportsUsd": 13246679
+    },
+    {
+      "iso3": "BEL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 78,
+      "Moderate": 62,
+      "Low": 2,
+      "watch": 0,
+      "georgiaExportsUsd": 12985310
+    },
+    {
+      "iso3": "AUT",
+      "cohort": "a",
+      "T": 2025,
+      "High": 95,
+      "Moderate": 46,
+      "Low": 2,
+      "watch": 0,
+      "georgiaExportsUsd": 11656925
+    },
+    {
+      "iso3": "NOR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 73,
+      "Moderate": 64,
+      "Low": 3,
+      "watch": 1,
+      "georgiaExportsUsd": 11124525
+    },
+    {
+      "iso3": "PHL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 78,
+      "Moderate": 53,
+      "Low": 6,
+      "watch": 1,
+      "georgiaExportsUsd": 10135504
+    },
+    {
+      "iso3": "CHL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 64,
+      "Moderate": 65,
+      "Low": 11,
+      "watch": 2,
+      "georgiaExportsUsd": 10009156
+    },
+    {
+      "iso3": "MOZ",
+      "cohort": "a",
+      "T": 2025,
+      "High": 19,
+      "Moderate": 90,
+      "Low": 26,
+      "watch": 4,
+      "georgiaExportsUsd": 8138642
+    },
+    {
+      "iso3": "HUN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 67,
+      "Moderate": 70,
+      "Low": 3,
+      "watch": 1,
+      "georgiaExportsUsd": 7951350
+    },
+    {
+      "iso3": "CYP",
+      "cohort": "a",
+      "T": 2025,
+      "High": 81,
+      "Moderate": 41,
+      "Low": 10,
+      "watch": 4,
+      "georgiaExportsUsd": 6526796
+    },
+    {
+      "iso3": "MYS",
+      "cohort": "a",
+      "T": 2025,
+      "High": 95,
+      "Moderate": 46,
+      "Low": 2,
+      "watch": 0,
+      "georgiaExportsUsd": 6035492
+    },
+    {
+      "iso3": "SWE",
+      "cohort": "a",
+      "T": 2025,
+      "High": 76,
+      "Moderate": 64,
+      "Low": 1,
+      "watch": 0,
+      "georgiaExportsUsd": 5746414
+    },
+    {
+      "iso3": "FIN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 63,
+      "Moderate": 74,
+      "Low": 4,
+      "watch": 0,
+      "georgiaExportsUsd": 5437617
+    },
+    {
+      "iso3": "ARG",
+      "cohort": "a",
+      "T": 2025,
+      "High": 62,
+      "Moderate": 61,
+      "Low": 13,
+      "watch": 2,
+      "georgiaExportsUsd": 5021767
+    },
+    {
+      "iso3": "NGA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 30,
+      "Moderate": 84,
+      "Low": 20,
+      "watch": 7,
+      "georgiaExportsUsd": 4650888
+    },
+    {
+      "iso3": "UGA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 47,
+      "Moderate": 65,
+      "Low": 24,
+      "watch": 2,
+      "georgiaExportsUsd": 4650754
+    },
+    {
+      "iso3": "SVN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 82,
+      "Moderate": 53,
+      "Low": 5,
+      "watch": 1,
+      "georgiaExportsUsd": 4610867
+    },
+    {
+      "iso3": "KEN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 38,
+      "Moderate": 77,
+      "Low": 22,
+      "watch": 2,
+      "georgiaExportsUsd": 4579279
+    },
+    {
+      "iso3": "MEX",
+      "cohort": "a",
+      "T": 2025,
+      "High": 81,
+      "Moderate": 55,
+      "Low": 3,
+      "watch": 2,
+      "georgiaExportsUsd": 4282714
+    },
+    {
+      "iso3": "DNK",
+      "cohort": "a",
+      "T": 2025,
+      "High": 71,
+      "Moderate": 67,
+      "Low": 4,
+      "watch": 0,
+      "georgiaExportsUsd": 3245043
+    },
+    {
+      "iso3": "BIH",
+      "cohort": "a",
+      "T": 2025,
+      "High": 88,
+      "Moderate": 42,
+      "Low": 10,
+      "watch": 0,
+      "georgiaExportsUsd": 2939240
+    },
+    {
+      "iso3": "SRB",
+      "cohort": "a",
+      "T": 2025,
+      "High": 95,
+      "Moderate": 39,
+      "Low": 8,
+      "watch": 1,
+      "georgiaExportsUsd": 2933806
+    },
+    {
+      "iso3": "ZAF",
+      "cohort": "a",
+      "T": 2025,
+      "High": 71,
+      "Moderate": 61,
+      "Low": 11,
+      "watch": 0,
+      "georgiaExportsUsd": 2670693
+    },
+    {
+      "iso3": "THA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 84,
+      "Moderate": 53,
+      "Low": 5,
+      "watch": 0,
+      "georgiaExportsUsd": 2612989
+    },
+    {
+      "iso3": "HRV",
+      "cohort": "a",
+      "T": 2025,
+      "High": 96,
+      "Moderate": 40,
+      "Low": 5,
+      "watch": 0,
+      "georgiaExportsUsd": 2591916
+    },
+    {
+      "iso3": "URY",
+      "cohort": "a",
+      "T": 2025,
+      "High": 51,
+      "Moderate": 68,
+      "Low": 17,
+      "watch": 1,
+      "georgiaExportsUsd": 2207619
+    },
+    {
+      "iso3": "IDN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 73,
+      "Moderate": 62,
+      "Low": 6,
+      "watch": 0,
+      "georgiaExportsUsd": 1914328
+    },
+    {
+      "iso3": "IRL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 95,
+      "Moderate": 40,
+      "Low": 8,
+      "watch": 0,
+      "georgiaExportsUsd": 1722085
+    },
+    {
+      "iso3": "MNE",
+      "cohort": "a",
+      "T": 2025,
+      "High": 66,
+      "Moderate": 57,
+      "Low": 13,
+      "watch": 1,
+      "georgiaExportsUsd": 1523246
+    },
+    {
+      "iso3": "AGO",
+      "cohort": "a",
+      "T": 2025,
+      "High": 41,
+      "Moderate": 77,
+      "Low": 20,
+      "watch": 2,
+      "georgiaExportsUsd": 1324836
+    },
+    {
+      "iso3": "PAK",
+      "cohort": "a",
+      "T": 2025,
+      "High": 40,
+      "Moderate": 75,
+      "Low": 21,
+      "watch": 5,
+      "georgiaExportsUsd": 1072111
+    },
+    {
+      "iso3": "CIV",
+      "cohort": "a",
+      "T": 2025,
+      "High": 41,
+      "Moderate": 72,
+      "Low": 24,
+      "watch": 2,
+      "georgiaExportsUsd": 893292
+    },
+    {
+      "iso3": "DOM",
+      "cohort": "a",
+      "T": 2025,
+      "High": 65,
+      "Moderate": 60,
+      "Low": 11,
+      "watch": 3,
+      "georgiaExportsUsd": 712368
+    },
+    {
+      "iso3": "MKD",
+      "cohort": "a",
+      "T": 2025,
+      "High": 64,
+      "Moderate": 63,
+      "Low": 11,
+      "watch": 1,
+      "georgiaExportsUsd": 685804
+    },
+    {
+      "iso3": "OMN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 69,
+      "Moderate": 57,
+      "Low": 11,
+      "watch": 2,
+      "georgiaExportsUsd": 493339
+    },
+    {
+      "iso3": "LUX",
+      "cohort": "a",
+      "T": 2025,
+      "High": 47,
+      "Moderate": 88,
+      "Low": 4,
+      "watch": 1,
+      "georgiaExportsUsd": 365266
+    },
+    {
+      "iso3": "SUR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 15,
+      "Moderate": 83,
+      "Low": 22,
+      "watch": 6,
+      "georgiaExportsUsd": 364522
+    },
+    {
+      "iso3": "BLZ",
+      "cohort": "a",
+      "T": 2025,
+      "High": 8,
+      "Moderate": 84,
+      "Low": 33,
+      "watch": 4,
+      "georgiaExportsUsd": 263270
+    },
+    {
+      "iso3": "NER",
+      "cohort": "a",
+      "T": 2025,
+      "High": 4,
+      "Moderate": 61,
+      "Low": 61,
+      "watch": 5,
+      "georgiaExportsUsd": 199682
+    },
+    {
+      "iso3": "NZL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 31,
+      "Moderate": 94,
+      "Low": 11,
+      "watch": 3,
+      "georgiaExportsUsd": 165409
+    },
+    {
+      "iso3": "GTM",
+      "cohort": "a",
+      "T": 2025,
+      "High": 70,
+      "Moderate": 50,
+      "Low": 19,
+      "watch": 3,
+      "georgiaExportsUsd": 40117
+    },
+    {
+      "iso3": "BEN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 3,
+      "Moderate": 3,
+      "Low": 2,
+      "watch": 0,
+      "georgiaExportsUsd": 38021
+    },
+    {
+      "iso3": "ISL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 54,
+      "Moderate": 70,
+      "Low": 11,
+      "watch": 3,
+      "georgiaExportsUsd": 37197
+    },
+    {
+      "iso3": "MDV",
+      "cohort": "a",
+      "T": 2025,
+      "High": 39,
+      "Moderate": 67,
+      "Low": 20,
+      "watch": 1,
+      "georgiaExportsUsd": 34136
+    },
+    {
+      "iso3": "MAC",
+      "cohort": "a",
+      "T": 2025,
+      "High": 23,
+      "Moderate": 66,
+      "Low": 25,
+      "watch": 3,
+      "georgiaExportsUsd": 16556
+    },
+    {
+      "iso3": "MUS",
+      "cohort": "a",
+      "T": 2025,
+      "High": 47,
+      "Moderate": 70,
+      "Low": 17,
+      "watch": 2,
+      "georgiaExportsUsd": 6814
+    },
+    {
+      "iso3": "LKA",
+      "cohort": "a",
+      "T": 2025,
+      "High": 27,
+      "Moderate": 94,
+      "Low": 15,
+      "watch": 2,
+      "georgiaExportsUsd": 3476
+    },
+    {
+      "iso3": "TGO",
+      "cohort": "a",
+      "T": 2025,
+      "High": 22,
+      "Moderate": 71,
+      "Low": 30,
+      "watch": 5,
+      "georgiaExportsUsd": 499
+    },
+    {
+      "iso3": "PRY",
+      "cohort": "a",
+      "T": 2025,
+      "High": 54,
+      "Moderate": 63,
+      "Low": 18,
+      "watch": 2,
+      "georgiaExportsUsd": 161
+    },
+    {
+      "iso3": "AND",
+      "cohort": "a",
+      "T": 2025,
+      "High": 8,
+      "Moderate": 92,
+      "Low": 32,
+      "watch": 3,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "BMU",
+      "cohort": "a",
+      "T": 2025,
+      "High": 6,
+      "Moderate": 75,
+      "Low": 50,
+      "watch": 3,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "BOL",
+      "cohort": "a",
+      "T": 2025,
+      "High": 17,
+      "Moderate": 72,
+      "Low": 41,
+      "watch": 5,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "BRB",
+      "cohort": "a",
+      "T": 2025,
+      "High": 24,
+      "Moderate": 71,
+      "Low": 33,
+      "watch": 4,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "BRN",
+      "cohort": "a",
+      "T": 2025,
+      "High": 8,
+      "Moderate": 67,
+      "Low": 53,
+      "watch": 0,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "ECU",
+      "cohort": "a",
+      "T": 2025,
+      "High": 53,
+      "Moderate": 74,
+      "Low": 12,
+      "watch": 2,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "FJI",
+      "cohort": "a",
+      "T": 2025,
+      "High": 24,
+      "Moderate": 85,
+      "Low": 21,
+      "watch": 5,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "GUY",
+      "cohort": "a",
+      "T": 2025,
+      "High": 43,
+      "Moderate": 74,
+      "Low": 12,
+      "watch": 6,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "JAM",
+      "cohort": "a",
+      "T": 2025,
+      "High": 34,
+      "Moderate": 70,
+      "Low": 25,
+      "watch": 2,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "MDG",
+      "cohort": "a",
+      "T": 2025,
+      "High": 20,
+      "Moderate": 79,
+      "Low": 31,
+      "watch": 2,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "MMR",
+      "cohort": "a",
+      "T": 2025,
+      "High": 11,
+      "Moderate": 52,
+      "Low": 52,
+      "watch": 5,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "MWI",
+      "cohort": "a",
+      "T": 2025,
+      "High": 16,
+      "Moderate": 91,
+      "Low": 26,
+      "watch": 4,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "PYF",
+      "cohort": "a",
+      "T": 2025,
+      "High": 5,
+      "Moderate": 74,
+      "Low": 38,
+      "watch": 2,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "SLV",
+      "cohort": "a",
+      "T": 2025,
+      "High": 64,
+      "Moderate": 64,
+      "Low": 12,
+      "watch": 1,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "TTO",
+      "cohort": "a",
+      "T": 2025,
+      "High": 25,
+      "Moderate": 84,
+      "Low": 21,
+      "watch": 4,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "UKR",
+      "cohort": "b",
+      "T": 2024,
+      "High": 79,
+      "Moderate": 57,
+      "Low": 5,
+      "watch": 0,
+      "georgiaExportsUsd": 628023364
+    },
+    {
+      "iso3": "PER",
+      "cohort": "b",
+      "T": 2024,
+      "High": 47,
+      "Moderate": 75,
+      "Low": 17,
+      "watch": 0,
+      "georgiaExportsUsd": 309257921
+    },
+    {
+      "iso3": "UZB",
+      "cohort": "b",
+      "T": 2024,
+      "High": 74,
+      "Moderate": 60,
+      "Low": 8,
+      "watch": 1,
+      "georgiaExportsUsd": 162047941
+    },
+    {
+      "iso3": "JOR",
+      "cohort": "b",
+      "T": 2024,
+      "High": 56,
+      "Moderate": 70,
+      "Low": 10,
+      "watch": 2,
+      "georgiaExportsUsd": 19517839
+    },
+    {
+      "iso3": "MRT",
+      "cohort": "b",
+      "T": 2024,
+      "High": 17,
+      "Moderate": 79,
+      "Low": 26,
+      "watch": 7,
+      "georgiaExportsUsd": 13855952
+    },
+    {
+      "iso3": "TUN",
+      "cohort": "b",
+      "T": 2024,
+      "High": 44,
+      "Moderate": 74,
+      "Low": 16,
+      "watch": 2,
+      "georgiaExportsUsd": 11478742
+    },
+    {
+      "iso3": "S19",
+      "cohort": "b",
+      "T": 2024,
+      "High": 46,
+      "Moderate": 94,
+      "Low": 1,
+      "watch": 1,
+      "georgiaExportsUsd": 10663907
+    },
+    {
+      "iso3": "QAT",
+      "cohort": "b",
+      "T": 2024,
+      "High": 44,
+      "Moderate": 75,
+      "Low": 10,
+      "watch": 7,
+      "georgiaExportsUsd": 7988700
+    },
+    {
+      "iso3": "LBN",
+      "cohort": "b",
+      "T": 2024,
+      "High": 50,
+      "Moderate": 77,
+      "Low": 4,
+      "watch": 4,
+      "georgiaExportsUsd": 7949568
+    },
+    {
+      "iso3": "ZMB",
+      "cohort": "b",
+      "T": 2024,
+      "High": 26,
+      "Moderate": 83,
+      "Low": 30,
+      "watch": 2,
+      "georgiaExportsUsd": 3121583
+    },
+    {
+      "iso3": "BFA",
+      "cohort": "b",
+      "T": 2024,
+      "High": 23,
+      "Moderate": 68,
+      "Low": 35,
+      "watch": 7,
+      "georgiaExportsUsd": 2734739
+    },
+    {
+      "iso3": "SEN",
+      "cohort": "b",
+      "T": 2024,
+      "High": 22,
+      "Moderate": 83,
+      "Low": 29,
+      "watch": 3,
+      "georgiaExportsUsd": 2495317
+    },
+    {
+      "iso3": "ALB",
+      "cohort": "b",
+      "T": 2024,
+      "High": 66,
+      "Moderate": 35,
+      "Low": 1,
+      "watch": 26,
+      "georgiaExportsUsd": 1336207
+    },
+    {
+      "iso3": "CRI",
+      "cohort": "b",
+      "T": 2024,
+      "High": 71,
+      "Moderate": 51,
+      "Low": 12,
+      "watch": 1,
+      "georgiaExportsUsd": 958144
+    },
+    {
+      "iso3": "BHR",
+      "cohort": "b",
+      "T": 2024,
+      "High": 46,
+      "Moderate": 77,
+      "Low": 15,
+      "watch": 2,
+      "georgiaExportsUsd": 767322
+    },
+    {
+      "iso3": "HND",
+      "cohort": "b",
+      "T": 2024,
+      "High": 61,
+      "Moderate": 54,
+      "Low": 18,
+      "watch": 3,
+      "georgiaExportsUsd": 607582
+    },
+    {
+      "iso3": "ZWE",
+      "cohort": "b",
+      "T": 2024,
+      "High": 31,
+      "Moderate": 75,
+      "Low": 29,
+      "watch": 4,
+      "georgiaExportsUsd": 414270
+    },
+    {
+      "iso3": "COD",
+      "cohort": "b",
+      "T": 2024,
+      "High": 40,
+      "Moderate": 67,
+      "Low": 24,
+      "watch": 7,
+      "georgiaExportsUsd": 304336
+    },
+    {
+      "iso3": "COG",
+      "cohort": "b",
+      "T": 2024,
+      "High": 25,
+      "Moderate": 85,
+      "Low": 20,
+      "watch": 5,
+      "georgiaExportsUsd": 297166
+    },
+    {
+      "iso3": "KHM",
+      "cohort": "b",
+      "T": 2024,
+      "High": 48,
+      "Moderate": 79,
+      "Low": 10,
+      "watch": 4,
+      "georgiaExportsUsd": 26511
+    },
+    {
+      "iso3": "CYM",
+      "cohort": "b",
+      "T": 2024,
+      "High": 5,
+      "Moderate": 63,
+      "Low": 59,
+      "watch": 1,
+      "georgiaExportsUsd": 9139
+    },
+    {
+      "iso3": "SYC",
+      "cohort": "b",
+      "T": 2024,
+      "High": 26,
+      "Moderate": 86,
+      "Low": 15,
+      "watch": 5,
+      "georgiaExportsUsd": 8583
+    },
+    {
+      "iso3": "GMB",
+      "cohort": "b",
+      "T": 2024,
+      "High": 4,
+      "Moderate": 84,
+      "Low": 27,
+      "watch": 8,
+      "georgiaExportsUsd": 575
+    },
+    {
+      "iso3": "ATG",
+      "cohort": "b",
+      "T": 2024,
+      "High": 5,
+      "Moderate": 85,
+      "Low": 35,
+      "watch": 2,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "BHS",
+      "cohort": "b",
+      "T": 2024,
+      "High": 30,
+      "Moderate": 82,
+      "Low": 24,
+      "watch": 5,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "BWA",
+      "cohort": "b",
+      "T": 2024,
+      "High": 18,
+      "Moderate": 91,
+      "Low": 33,
+      "watch": 1,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "CAF",
+      "cohort": "b",
+      "T": 2024,
+      "High": 5,
+      "Moderate": 57,
+      "Low": 36,
+      "watch": 11,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "CPV",
+      "cohort": "b",
+      "T": 2024,
+      "High": 6,
+      "Moderate": 85,
+      "Low": 33,
+      "watch": 2,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "GRD",
+      "cohort": "b",
+      "T": 2024,
+      "High": 5,
+      "Moderate": 91,
+      "Low": 32,
+      "watch": 4,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "LSO",
+      "cohort": "b",
+      "T": 2024,
+      "High": 2,
+      "Moderate": 88,
+      "Low": 41,
+      "watch": 5,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "MSR",
+      "cohort": "b",
+      "T": 2024,
+      "High": 0,
+      "Moderate": 67,
+      "Low": 51,
+      "watch": 4,
+      "georgiaExportsUsd": 0
+    },
+    {
+      "iso3": "NIC",
+      "cohort": "b",
+      "T": 2024,
+      "High": 47,
+      "Moderate": 75,
+      "Low": 11,
+      "watch": 4,
+      "georgiaExportsUsd": 0
+    }
+  ],
+  "rcaTiers": {
+    "full": 10529,
+    "partial": 1831,
+    "none": 6158,
+    "missing": 0
+  },
+  "newHs2022Headings": [
+    "3827",
+    "8485",
+    "8524",
+    "8549",
+    "8806"
+  ]
+}
