@@ -57,24 +57,26 @@ Verified from the live API and the subscription page (uncomtrade.org/docs/subscr
 
 Georgia itself reports 2025. Major partners with 2025: EU members (DEU, FRA, ITA, ESP, NLD, POL, …), TUR, CHN, USA, GBR, ARM, AZE, KAZ, KGZ, MDA, UKR is **not** in the 2025 list (latest 2024), nor RUS (not in the feed at all for these years).
 
-**Call-count estimate.** Only the 144 gate-1 products (section 4) are needed at partner
-level. Per reporter-year: one call for imports of those products by supplier
-(cmdCode list of 144 codes, roughly 20k records), one for imports from the world at
-HS4 (all products, for world import growth), one for exports to the world at HS4
-(for RCA and headroom). Three calls per reporter-year:
+**Verified with the key (2026-10-08).** Four facts changed the plan:
 
-| Cohort | Reporters | Years | Calls |
-|---|---|---|---|
-| Complete 2021–2025 | 108 | 5 | 1,620 |
-| 2020–2024 only (T = 2024) | 31 | 5 | 465 |
-| Total | | | about 2,100 |
+- Without `partner2Code=0&customsCode=C00&motCode=0` one reporter-year comes back as
+  100,000 breakdown rows (second partner, customs procedure, mode of transport); with
+  them it is about 1,200 rows at HS4. The client always sends them.
+- One call may carry many reporters and years (`reporterCode=792,276,...`), so world
+  figures need only a few dozen calls, not one per reporter-year.
+- Comtrade does **not** convert an older dataset to HS2022 on request (`H6` in the path
+  returns no rows for an HS2017 year). Data are taken as reported and mapped at four
+  digits by a short concordance (`pipeline/concordance.js`): 8803→8807, 8107→8112,
+  2848→2853 for HS2017 rows, plus 6908→6907 and 8469→8472 for HS2012 rows. Headings
+  new in HS2022 (3827, 8485, 8524, 8549, 8806) start in 2022 and are listed in the run
+  summary. None of the 143 gate-1 products is affected.
+- Each call takes one to three minutes to answer whatever its size, so wall-clock time,
+  not the quota, is the constraint.
 
-At 500 calls a day that is **five days** of downloading, resumable from a disk cache.
-Proposed schedule: a nightly job that spends the daily quota and stops; the world
-aggregates are computed once every reporter-year in a cohort is cached. Big reporters
-(DEU 16.8M records in 2024 at all levels) stay under 100k records per call at HS4 with
-the product list, but the loader must check `count` and split the product list when a
-call is truncated.
+**Call count.** About 230 calls for both cohorts from an empty cache (world figures for
+138 reporters over five years at 32 reporters per call, plus one call per partner for
+its imports of the gate-1 products by supplier over the whole window). That is half a
+day of quota and about six hours of wall-clock time, resumable from the on-disk cache.
 
 **Proposed default, fixed reporter set for "world":** the 108 reporters with a complete
 2021–2025 window (for T = 2025 partners) and the 139 with a complete 2020–2024 window

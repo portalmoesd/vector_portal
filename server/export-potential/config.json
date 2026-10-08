@@ -16,18 +16,39 @@
   "demandSize": {
     "maxPoints": 30,
     "tiers": [
-      { "label": "over100m", "minUsd": 100000000, "exclusiveMin": true, "points": 30 },
-      { "label": "50to100m", "minUsd": 50000000, "points": 25 },
-      { "label": "10to50m", "minUsd": 10000000, "points": 20 },
-      { "label": "2to10m", "minUsd": 2000000, "points": 12 },
-      { "label": "under2m", "minUsd": 0, "points": 5 }
+      {
+        "label": "over100m",
+        "minUsd": 100000000,
+        "exclusiveMin": true,
+        "points": 30
+      },
+      {
+        "label": "50to100m",
+        "minUsd": 50000000,
+        "points": 25
+      },
+      {
+        "label": "10to50m",
+        "minUsd": 10000000,
+        "points": 20
+      },
+      {
+        "label": "2to10m",
+        "minUsd": 2000000,
+        "points": 12
+      },
+      {
+        "label": "under2m",
+        "minUsd": 0,
+        "points": 5
+      }
     ]
   },
   "demandGrowth": {
     "maxPoints": 25,
     "groupA": {
       "netChangeNonNegative": 25,
-      "declineThreshold": -0.10,
+      "declineThreshold": -0.1,
       "declineLessThanThreshold": 18,
       "declineAtOrBeyondThreshold": 8
     },
@@ -98,8 +119,40 @@
       "maxRating": "Moderate"
     },
     "steepDecline": {
-      "netChangeAtOrBelow": -0.10,
+      "netChangeAtOrBelow": -0.1,
       "maxRating": "Moderate"
+    }
+  },
+  "pipeline": {
+    "_comment": "Pipeline settings: cohorts, call budgets and chunk sizes. The as-of year is a command-line parameter.",
+    "georgiaLatestYears": 3,
+    "trackRecordYears": 5,
+    "comtrade": {
+      "dailyCallBudget": 480,
+      "worldChunkReporters": 32,
+      "partnerYearsPerCall": 5
+    },
+    "cohorts": {
+      "a": {
+        "_comment": "partners with a complete window ending at the as-of year",
+        "yearOffset": 0
+      },
+      "b": {
+        "_comment": "partners with a complete window ending one year earlier",
+        "yearOffset": -1
+      }
+    },
+    "distanceMeasure": "dist",
+    "excludedProducts": {
+      "_comment": "Geostat national codes with no HS counterpart",
+      "codes": [
+        "9801",
+        "9802",
+        "9803",
+        "9804",
+        "9805",
+        "9905"
+      ]
     }
   }
 }
