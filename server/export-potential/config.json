@@ -1,0 +1,158 @@
+{
+  "_comment": "Every threshold, weight, point value and year rule of the export potential method lives here. Values are starting values to be calibrated later; nothing in the scoring code carries a number of its own. Money values are US dollars; rates are fractions (0.10 = 10%); tariffs are percentage points.",
+  "version": 1,
+  "productLevel": "HS4",
+  "windowYears": 5,
+  "georgiaSupplierCode": 268,
+  "gate1": {
+    "years": 3,
+    "minAverageUsd": 1000000
+  },
+  "gate2": {
+    "establishedMinYears": 5,
+    "newMarketMinYears": 3,
+    "watchMinYears": 1
+  },
+  "demandSize": {
+    "maxPoints": 30,
+    "tiers": [
+      {
+        "label": "over100m",
+        "minUsd": 100000000,
+        "exclusiveMin": true,
+        "points": 30
+      },
+      {
+        "label": "50to100m",
+        "minUsd": 50000000,
+        "points": 25
+      },
+      {
+        "label": "10to50m",
+        "minUsd": 10000000,
+        "points": 20
+      },
+      {
+        "label": "2to10m",
+        "minUsd": 2000000,
+        "points": 12
+      },
+      {
+        "label": "under2m",
+        "minUsd": 0,
+        "points": 5
+      }
+    ]
+  },
+  "demandGrowth": {
+    "maxPoints": 25,
+    "groupA": {
+      "netChangeNonNegative": 25,
+      "declineThreshold": -0.1,
+      "declineLessThanThreshold": 18,
+      "declineAtOrBeyondThreshold": 8
+    },
+    "groupB": {
+      "positiveAboveAverage": 15,
+      "positiveAtOrBelowAverage": 8,
+      "nonPositive": 0
+    }
+  },
+  "competitionAccess": {
+    "maxPoints": 20,
+    "deficitLevel": {
+      "ratio": 2,
+      "importsAtLeastRatioOfExports": 4,
+      "neither": 2,
+      "exportsAtLeastRatioOfImports": 0
+    },
+    "deficitTrend": {
+      "currentYear": 1,
+      "previousYear": 1
+    },
+    "supplierConcentration": {
+      "lowMax": 0.4,
+      "midMax": 0.6,
+      "low": 6,
+      "mid": 3,
+      "high": 0
+    },
+    "tariff": {
+      "equalBandPercentagePoints": 0.5,
+      "lower": 6,
+      "equal": 3,
+      "higher": 0,
+      "missingDefault": "equal"
+    },
+    "distance": {
+      "fit": 2,
+      "noFit": 0,
+      "missingDefault": "noFit"
+    }
+  },
+  "georgiaPosition": {
+    "maxPoints": 25,
+    "rca": {
+      "years": 3,
+      "fullMin": 1.0,
+      "partialMin": 0.7,
+      "full": 10,
+      "partial": 5,
+      "none": 0
+    },
+    "trackRecord": {
+      "lookbackYears": 5,
+      "minYearsWithExports": 3,
+      "points": 8
+    },
+    "headroom": {
+      "points": 7
+    }
+  },
+  "rating": {
+    "highMin": 65,
+    "moderateMin": 40
+  },
+  "caps": {
+    "smallMarket": {
+      "averageImportsUnderUsd": 2000000,
+      "maxRating": "Moderate"
+    },
+    "steepDecline": {
+      "netChangeAtOrBelow": -0.1,
+      "maxRating": "Moderate"
+    }
+  },
+  "pipeline": {
+    "_comment": "Pipeline settings: cohorts, call budgets and chunk sizes. The as-of year is a command-line parameter.",
+    "georgiaLatestYears": 3,
+    "trackRecordYears": 5,
+    "comtrade": {
+      "dailyCallBudget": 480,
+      "worldChunkReporters": 16,
+      "partnerYearsPerCall": 5
+    },
+    "cohorts": {
+      "a": {
+        "_comment": "partners with a complete window ending at the as-of year",
+        "yearOffset": 0
+      },
+      "b": {
+        "_comment": "partners with a complete window ending one year earlier",
+        "yearOffset": -1
+      }
+    },
+    "distanceMeasure": "dist",
+    "excludedProducts": {
+      "_comment": "Geostat national codes with no HS counterpart",
+      "codes": [
+        "9801",
+        "9802",
+        "9803",
+        "9804",
+        "9805",
+        "9905"
+      ]
+    }
+  }
+}

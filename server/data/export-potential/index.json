@@ -1,0 +1,2903 @@
+{
+ "generatedAt": "2026-10-08T16:24:43.876Z",
+ "countries": [
+  {
+   "code": "ALB",
+   "iso2": "AL",
+   "nameEn": "Albania",
+   "nameKa": "ალბანეთი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ALB.json",
+   "summary": {
+    "High": 66,
+    "Moderate": 35,
+    "Low": 1,
+    "watch": 26,
+    "total": 102
+   }
+  },
+  {
+   "code": "AND",
+   "iso2": "AD",
+   "nameEn": "Andorra",
+   "nameKa": "ანდორა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "AND.json",
+   "summary": {
+    "High": 8,
+    "Moderate": 92,
+    "Low": 32,
+    "watch": 3,
+    "total": 132
+   }
+  },
+  {
+   "code": "AGO",
+   "iso2": "AO",
+   "nameEn": "Angola",
+   "nameKa": "ანგოლა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "AGO.json",
+   "summary": {
+    "High": 41,
+    "Moderate": 77,
+    "Low": 20,
+    "watch": 2,
+    "total": 138
+   }
+  },
+  {
+   "code": "ATG",
+   "iso2": "AG",
+   "nameEn": "Antigua and Barbuda",
+   "nameKa": "ანტიგუა და ბარბუდა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ATG.json",
+   "summary": {
+    "High": 5,
+    "Moderate": 85,
+    "Low": 35,
+    "watch": 2,
+    "total": 125
+   }
+  },
+  {
+   "code": "ARG",
+   "iso2": "AR",
+   "nameEn": "Argentina",
+   "nameKa": "არგენტინა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ARG.json",
+   "summary": {
+    "High": 62,
+    "Moderate": 61,
+    "Low": 13,
+    "watch": 2,
+    "total": 136
+   }
+  },
+  {
+   "code": "ARM",
+   "iso2": "AM",
+   "nameEn": "Armenia",
+   "nameKa": "სომხეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ARM.json",
+   "summary": {
+    "High": 67,
+    "Moderate": 57,
+    "Low": 12,
+    "watch": 3,
+    "total": 136
+   }
+  },
+  {
+   "code": "AUS",
+   "iso2": "AU",
+   "nameEn": "Australia",
+   "nameKa": "ავსტრალია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "AUS.json",
+   "summary": {
+    "High": 76,
+    "Moderate": 54,
+    "Low": 7,
+    "watch": 1,
+    "total": 137
+   }
+  },
+  {
+   "code": "AUT",
+   "iso2": "AT",
+   "nameEn": "Austria",
+   "nameKa": "ავსტრია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "AUT.json",
+   "summary": {
+    "High": 95,
+    "Moderate": 46,
+    "Low": 2,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "AZE",
+   "iso2": "AZ",
+   "nameEn": "Azerbaijan",
+   "nameKa": "აზერბაიჯანი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "AZE.json",
+   "summary": {
+    "High": 79,
+    "Moderate": 46,
+    "Low": 11,
+    "watch": 2,
+    "total": 136
+   }
+  },
+  {
+   "code": "BHS",
+   "iso2": "BS",
+   "nameEn": "Bahamas",
+   "nameKa": "ბაჰამები",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BHS.json",
+   "summary": {
+    "High": 30,
+    "Moderate": 82,
+    "Low": 24,
+    "watch": 5,
+    "total": 136
+   }
+  },
+  {
+   "code": "BHR",
+   "iso2": "BH",
+   "nameEn": "Bahrain",
+   "nameKa": "ბაჰრეინი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BHR.json",
+   "summary": {
+    "High": 46,
+    "Moderate": 77,
+    "Low": 15,
+    "watch": 2,
+    "total": 138
+   }
+  },
+  {
+   "code": "BRB",
+   "iso2": "BB",
+   "nameEn": "Barbados",
+   "nameKa": "ბარბადოსი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BRB.json",
+   "summary": {
+    "High": 24,
+    "Moderate": 71,
+    "Low": 33,
+    "watch": 4,
+    "total": 128
+   }
+  },
+  {
+   "code": "BEL",
+   "iso2": "BE",
+   "nameEn": "Belgium",
+   "nameKa": "ბელგია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BEL.json",
+   "summary": {
+    "High": 78,
+    "Moderate": 62,
+    "Low": 2,
+    "watch": 0,
+    "total": 142
+   }
+  },
+  {
+   "code": "BLZ",
+   "iso2": "BZ",
+   "nameEn": "Belize",
+   "nameKa": "ბელიზი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BLZ.json",
+   "summary": {
+    "High": 8,
+    "Moderate": 84,
+    "Low": 33,
+    "watch": 4,
+    "total": 125
+   }
+  },
+  {
+   "code": "BEN",
+   "iso2": "BJ",
+   "nameEn": "Benin",
+   "nameKa": "ბენინი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BEN.json",
+   "summary": {
+    "High": 3,
+    "Moderate": 3,
+    "Low": 2,
+    "watch": 0,
+    "total": 8
+   }
+  },
+  {
+   "code": "BMU",
+   "iso2": "BM",
+   "nameEn": "Bermuda",
+   "nameKa": "ბერმუდა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BMU.json",
+   "summary": {
+    "High": 6,
+    "Moderate": 75,
+    "Low": 50,
+    "watch": 3,
+    "total": 131
+   }
+  },
+  {
+   "code": "BOL",
+   "iso2": "BO",
+   "nameEn": "Bolivia",
+   "nameKa": "ბოლივია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BOL.json",
+   "summary": {
+    "High": 17,
+    "Moderate": 72,
+    "Low": 41,
+    "watch": 5,
+    "total": 130
+   }
+  },
+  {
+   "code": "BIH",
+   "iso2": "BA",
+   "nameEn": "Bosnia and Herzegovina",
+   "nameKa": "ბოსნია და ჰერცეგოვინა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BIH.json",
+   "summary": {
+    "High": 88,
+    "Moderate": 42,
+    "Low": 10,
+    "watch": 0,
+    "total": 140
+   }
+  },
+  {
+   "code": "BWA",
+   "iso2": "BW",
+   "nameEn": "Botswana",
+   "nameKa": "ბოტსვანა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BWA.json",
+   "summary": {
+    "High": 18,
+    "Moderate": 91,
+    "Low": 33,
+    "watch": 1,
+    "total": 142
+   }
+  },
+  {
+   "code": "BRA",
+   "iso2": "BR",
+   "nameEn": "Brazil",
+   "nameKa": "ბრაზილია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BRA.json",
+   "summary": {
+    "High": 84,
+    "Moderate": 50,
+    "Low": 5,
+    "watch": 1,
+    "total": 139
+   }
+  },
+  {
+   "code": "BRN",
+   "iso2": "BN",
+   "nameEn": "Brunei Darussalam",
+   "nameKa": "ბრუნეი-დარუსალამი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BRN.json",
+   "summary": {
+    "High": 8,
+    "Moderate": 67,
+    "Low": 53,
+    "watch": 0,
+    "total": 128
+   }
+  },
+  {
+   "code": "BGR",
+   "iso2": "BG",
+   "nameEn": "Bulgaria",
+   "nameKa": "ბულგარეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BGR.json",
+   "summary": {
+    "High": 97,
+    "Moderate": 35,
+    "Low": 9,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "BFA",
+   "iso2": "BF",
+   "nameEn": "Burkina Faso",
+   "nameKa": "ბურკინა-ფასო",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "BFA.json",
+   "summary": {
+    "High": 23,
+    "Moderate": 68,
+    "Low": 35,
+    "watch": 7,
+    "total": 126
+   }
+  },
+  {
+   "code": "KHM",
+   "iso2": "KH",
+   "nameEn": "Cambodia",
+   "nameKa": "კამბოჯა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "KHM.json",
+   "summary": {
+    "High": 48,
+    "Moderate": 79,
+    "Low": 10,
+    "watch": 4,
+    "total": 137
+   }
+  },
+  {
+   "code": "CAN",
+   "iso2": "CA",
+   "nameEn": "Canada",
+   "nameKa": "კანადა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CAN.json",
+   "summary": {
+    "High": 82,
+    "Moderate": 59,
+    "Low": 2,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "CPV",
+   "iso2": "CV",
+   "nameEn": "Cape Verde",
+   "nameKa": "კაბო-ვერდე",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CPV.json",
+   "summary": {
+    "High": 6,
+    "Moderate": 85,
+    "Low": 33,
+    "watch": 2,
+    "total": 124
+   }
+  },
+  {
+   "code": "CYM",
+   "iso2": "KY",
+   "nameEn": "Cayman Islands",
+   "nameKa": "კაიმანის კუნძულები",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CYM.json",
+   "summary": {
+    "High": 5,
+    "Moderate": 63,
+    "Low": 59,
+    "watch": 1,
+    "total": 127
+   }
+  },
+  {
+   "code": "CAF",
+   "iso2": "CF",
+   "nameEn": "Central African Republic",
+   "nameKa": "ცენტრალური აფრიკა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CAF.json",
+   "summary": {
+    "High": 5,
+    "Moderate": 57,
+    "Low": 36,
+    "watch": 11,
+    "total": 98
+   }
+  },
+  {
+   "code": "CHL",
+   "iso2": "CL",
+   "nameEn": "Chile",
+   "nameKa": "ჩილე",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CHL.json",
+   "summary": {
+    "High": 64,
+    "Moderate": 65,
+    "Low": 11,
+    "watch": 2,
+    "total": 140
+   }
+  },
+  {
+   "code": "CHN",
+   "iso2": "CN",
+   "nameEn": "China",
+   "nameKa": "ჩინეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CHN.json",
+   "summary": {
+    "High": 47,
+    "Moderate": 90,
+    "Low": 2,
+    "watch": 2,
+    "total": 139
+   }
+  },
+  {
+   "code": "COL",
+   "iso2": "CO",
+   "nameEn": "Colombia",
+   "nameKa": "კოლუმბია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "COL.json",
+   "summary": {
+    "High": 76,
+    "Moderate": 50,
+    "Low": 10,
+    "watch": 2,
+    "total": 136
+   }
+  },
+  {
+   "code": "COG",
+   "iso2": "CG",
+   "nameEn": "Congo",
+   "nameKa": "კონგო",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "COG.json",
+   "summary": {
+    "High": 25,
+    "Moderate": 85,
+    "Low": 20,
+    "watch": 5,
+    "total": 130
+   }
+  },
+  {
+   "code": "COD",
+   "iso2": "CD",
+   "nameEn": "Congo DR",
+   "nameKa": "კონგო, დემოკრატიული რესპუბლიკა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "COD.json",
+   "summary": {
+    "High": 40,
+    "Moderate": 67,
+    "Low": 24,
+    "watch": 7,
+    "total": 131
+   }
+  },
+  {
+   "code": "CRI",
+   "iso2": "CR",
+   "nameEn": "Costa Rica",
+   "nameKa": "კოსტა-რიკა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CRI.json",
+   "summary": {
+    "High": 71,
+    "Moderate": 51,
+    "Low": 12,
+    "watch": 1,
+    "total": 134
+   }
+  },
+  {
+   "code": "CIV",
+   "iso2": "CI",
+   "nameEn": "Cote divoire",
+   "nameKa": "კოტ-დივუარი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CIV.json",
+   "summary": {
+    "High": 41,
+    "Moderate": 72,
+    "Low": 24,
+    "watch": 2,
+    "total": 137
+   }
+  },
+  {
+   "code": "HRV",
+   "iso2": "HR",
+   "nameEn": "Croatia",
+   "nameKa": "ხორვატია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "HRV.json",
+   "summary": {
+    "High": 96,
+    "Moderate": 40,
+    "Low": 5,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "CYP",
+   "iso2": "CY",
+   "nameEn": "Cyprus",
+   "nameKa": "კვიპროსი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CYP.json",
+   "summary": {
+    "High": 81,
+    "Moderate": 41,
+    "Low": 10,
+    "watch": 4,
+    "total": 132
+   }
+  },
+  {
+   "code": "CZE",
+   "iso2": "CZ",
+   "nameEn": "Czech Republic",
+   "nameKa": "ჩეხეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CZE.json",
+   "summary": {
+    "High": 98,
+    "Moderate": 42,
+    "Low": 1,
+    "watch": 1,
+    "total": 141
+   }
+  },
+  {
+   "code": "DNK",
+   "iso2": "DK",
+   "nameEn": "Denmark",
+   "nameKa": "დანია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "DNK.json",
+   "summary": {
+    "High": 71,
+    "Moderate": 67,
+    "Low": 4,
+    "watch": 0,
+    "total": 142
+   }
+  },
+  {
+   "code": "DOM",
+   "iso2": "DO",
+   "nameEn": "Dominican Republic",
+   "nameKa": "დომინიკელთა რესპუბლიკა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "DOM.json",
+   "summary": {
+    "High": 65,
+    "Moderate": 60,
+    "Low": 11,
+    "watch": 3,
+    "total": 136
+   }
+  },
+  {
+   "code": "ECU",
+   "iso2": "EC",
+   "nameEn": "Ecuador",
+   "nameKa": "ეკვადორი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ECU.json",
+   "summary": {
+    "High": 53,
+    "Moderate": 74,
+    "Low": 12,
+    "watch": 2,
+    "total": 139
+   }
+  },
+  {
+   "code": "EGY",
+   "iso2": "EG",
+   "nameEn": "Egypt",
+   "nameKa": "ეგვიპტე",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "EGY.json",
+   "summary": {
+    "High": 49,
+    "Moderate": 76,
+    "Low": 11,
+    "watch": 3,
+    "total": 136
+   }
+  },
+  {
+   "code": "SLV",
+   "iso2": "SV",
+   "nameEn": "EL Salvador",
+   "nameKa": "სალვადორი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SLV.json",
+   "summary": {
+    "High": 64,
+    "Moderate": 64,
+    "Low": 12,
+    "watch": 1,
+    "total": 140
+   }
+  },
+  {
+   "code": "EST",
+   "iso2": "EE",
+   "nameEn": "Estonia",
+   "nameKa": "ესტონეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "EST.json",
+   "summary": {
+    "High": 42,
+    "Moderate": 89,
+    "Low": 10,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "FJI",
+   "iso2": "FJ",
+   "nameEn": "Fiji",
+   "nameKa": "ფიჯი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "FJI.json",
+   "summary": {
+    "High": 24,
+    "Moderate": 85,
+    "Low": 21,
+    "watch": 5,
+    "total": 130
+   }
+  },
+  {
+   "code": "FIN",
+   "iso2": "FI",
+   "nameEn": "Finland",
+   "nameKa": "ფინეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "FIN.json",
+   "summary": {
+    "High": 63,
+    "Moderate": 74,
+    "Low": 4,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "FRA",
+   "iso2": "FR",
+   "nameEn": "France",
+   "nameKa": "საფრანგეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "FRA.json",
+   "summary": {
+    "High": 82,
+    "Moderate": 61,
+    "Low": 0,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "PYF",
+   "iso2": "PF",
+   "nameEn": "French Polynesia",
+   "nameKa": "საფრანგეთის პოლინეზია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "PYF.json",
+   "summary": {
+    "High": 5,
+    "Moderate": 74,
+    "Low": 38,
+    "watch": 2,
+    "total": 117
+   }
+  },
+  {
+   "code": "GMB",
+   "iso2": "GM",
+   "nameEn": "Gambia",
+   "nameKa": "გამბია",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "GMB.json",
+   "summary": {
+    "High": 4,
+    "Moderate": 84,
+    "Low": 27,
+    "watch": 8,
+    "total": 115
+   }
+  },
+  {
+   "code": "DEU",
+   "iso2": "DE",
+   "nameEn": "Germany",
+   "nameKa": "გერმანია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "DEU.json",
+   "summary": {
+    "High": 108,
+    "Moderate": 35,
+    "Low": 0,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "GHA",
+   "iso2": "GH",
+   "nameEn": "Ghana",
+   "nameKa": "განა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "GHA.json",
+   "summary": {
+    "High": 25,
+    "Moderate": 93,
+    "Low": 22,
+    "watch": 2,
+    "total": 140
+   }
+  },
+  {
+   "code": "GRC",
+   "iso2": "GR",
+   "nameEn": "Greece",
+   "nameKa": "საბერძნეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "GRC.json",
+   "summary": {
+    "High": 108,
+    "Moderate": 31,
+    "Low": 4,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "GRD",
+   "iso2": "GD",
+   "nameEn": "Grenada",
+   "nameKa": "გრენადა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "GRD.json",
+   "summary": {
+    "High": 5,
+    "Moderate": 91,
+    "Low": 32,
+    "watch": 4,
+    "total": 128
+   }
+  },
+  {
+   "code": "GTM",
+   "iso2": "GT",
+   "nameEn": "Guatemala",
+   "nameKa": "გვატემალა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "GTM.json",
+   "summary": {
+    "High": 70,
+    "Moderate": 50,
+    "Low": 19,
+    "watch": 3,
+    "total": 139
+   }
+  },
+  {
+   "code": "GUY",
+   "iso2": "GY",
+   "nameEn": "Guyana",
+   "nameKa": "გაიანა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "GUY.json",
+   "summary": {
+    "High": 43,
+    "Moderate": 74,
+    "Low": 12,
+    "watch": 6,
+    "total": 129
+   }
+  },
+  {
+   "code": "HND",
+   "iso2": "HN",
+   "nameEn": "Honduras",
+   "nameKa": "ჰონდურასი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "HND.json",
+   "summary": {
+    "High": 61,
+    "Moderate": 54,
+    "Low": 18,
+    "watch": 3,
+    "total": 133
+   }
+  },
+  {
+   "code": "HKG",
+   "iso2": "HK",
+   "nameEn": "Hong Kong, SAR of China",
+   "nameKa": "ჰონ-კონგი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "HKG.json",
+   "summary": {
+    "High": 42,
+    "Moderate": 88,
+    "Low": 9,
+    "watch": 2,
+    "total": 139
+   }
+  },
+  {
+   "code": "HUN",
+   "iso2": "HU",
+   "nameEn": "Hungary",
+   "nameKa": "უნგრეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "HUN.json",
+   "summary": {
+    "High": 67,
+    "Moderate": 70,
+    "Low": 3,
+    "watch": 1,
+    "total": 140
+   }
+  },
+  {
+   "code": "ISL",
+   "iso2": "IS",
+   "nameEn": "Iceland",
+   "nameKa": "ისლანდია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ISL.json",
+   "summary": {
+    "High": 54,
+    "Moderate": 70,
+    "Low": 11,
+    "watch": 3,
+    "total": 135
+   }
+  },
+  {
+   "code": "IND",
+   "iso2": "IN",
+   "nameEn": "India",
+   "nameKa": "ინდოეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "IND.json",
+   "summary": {
+    "High": 96,
+    "Moderate": 41,
+    "Low": 3,
+    "watch": 2,
+    "total": 140
+   }
+  },
+  {
+   "code": "IDN",
+   "iso2": "ID",
+   "nameEn": "Indonesia",
+   "nameKa": "ინდონეზია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "IDN.json",
+   "summary": {
+    "High": 73,
+    "Moderate": 62,
+    "Low": 6,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "IRL",
+   "iso2": "IE",
+   "nameEn": "Ireland",
+   "nameKa": "ირლანდია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "IRL.json",
+   "summary": {
+    "High": 95,
+    "Moderate": 40,
+    "Low": 8,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "ISR",
+   "iso2": "IL",
+   "nameEn": "Israel",
+   "nameKa": "ისრაელი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ISR.json",
+   "summary": {
+    "High": 86,
+    "Moderate": 47,
+    "Low": 5,
+    "watch": 0,
+    "total": 138
+   }
+  },
+  {
+   "code": "ITA",
+   "iso2": "IT",
+   "nameEn": "Italy",
+   "nameKa": "იტალია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ITA.json",
+   "summary": {
+    "High": 104,
+    "Moderate": 37,
+    "Low": 2,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "JAM",
+   "iso2": "JM",
+   "nameEn": "Jamaica",
+   "nameKa": "იამაიკა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "JAM.json",
+   "summary": {
+    "High": 34,
+    "Moderate": 70,
+    "Low": 25,
+    "watch": 2,
+    "total": 129
+   }
+  },
+  {
+   "code": "JPN",
+   "iso2": "JP",
+   "nameEn": "Japan",
+   "nameKa": "იაპონია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "JPN.json",
+   "summary": {
+    "High": 55,
+    "Moderate": 85,
+    "Low": 1,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "JOR",
+   "iso2": "JO",
+   "nameEn": "Jordan",
+   "nameKa": "იორდანია",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "JOR.json",
+   "summary": {
+    "High": 56,
+    "Moderate": 70,
+    "Low": 10,
+    "watch": 2,
+    "total": 136
+   }
+  },
+  {
+   "code": "KAZ",
+   "iso2": "KZ",
+   "nameEn": "Kazakhstan",
+   "nameKa": "ყაზახეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "KAZ.json",
+   "summary": {
+    "High": 79,
+    "Moderate": 56,
+    "Low": 7,
+    "watch": 0,
+    "total": 142
+   }
+  },
+  {
+   "code": "KEN",
+   "iso2": "KE",
+   "nameEn": "Kenya",
+   "nameKa": "კენია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "KEN.json",
+   "summary": {
+    "High": 38,
+    "Moderate": 77,
+    "Low": 22,
+    "watch": 2,
+    "total": 137
+   }
+  },
+  {
+   "code": "KOR",
+   "iso2": "KR",
+   "nameEn": "Korea, Republic of",
+   "nameKa": "კორეა, რესპუბლიკა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "KOR.json",
+   "summary": {
+    "High": 66,
+    "Moderate": 71,
+    "Low": 3,
+    "watch": 1,
+    "total": 140
+   }
+  },
+  {
+   "code": "KWT",
+   "iso2": "KW",
+   "nameEn": "Kuwait",
+   "nameKa": "ქუვეითი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "KWT.json",
+   "summary": {
+    "High": 62,
+    "Moderate": 65,
+    "Low": 5,
+    "watch": 4,
+    "total": 132
+   }
+  },
+  {
+   "code": "KGZ",
+   "iso2": "KG",
+   "nameEn": "Kyrgyzstan",
+   "nameKa": "ყირგიზეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "KGZ.json",
+   "summary": {
+    "High": 66,
+    "Moderate": 57,
+    "Low": 11,
+    "watch": 3,
+    "total": 134
+   }
+  },
+  {
+   "code": "LVA",
+   "iso2": "LV",
+   "nameEn": "Latvia",
+   "nameKa": "ლატვია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "LVA.json",
+   "summary": {
+    "High": 66,
+    "Moderate": 57,
+    "Low": 16,
+    "watch": 1,
+    "total": 139
+   }
+  },
+  {
+   "code": "LBN",
+   "iso2": "LB",
+   "nameEn": "Lebanon",
+   "nameKa": "ლიბანი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "LBN.json",
+   "summary": {
+    "High": 50,
+    "Moderate": 77,
+    "Low": 4,
+    "watch": 4,
+    "total": 131
+   }
+  },
+  {
+   "code": "LSO",
+   "iso2": "LS",
+   "nameEn": "Lesotho",
+   "nameKa": "ლესოთო",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "LSO.json",
+   "summary": {
+    "High": 2,
+    "Moderate": 88,
+    "Low": 41,
+    "watch": 5,
+    "total": 131
+   }
+  },
+  {
+   "code": "LTU",
+   "iso2": "LT",
+   "nameEn": "Lithuania (Lietuva)",
+   "nameKa": "ლიეტუვა (ლიტვა)",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "LTU.json",
+   "summary": {
+    "High": 62,
+    "Moderate": 73,
+    "Low": 6,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "LUX",
+   "iso2": "LU",
+   "nameEn": "Luxembourg",
+   "nameKa": "ლუქსემბურგი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "LUX.json",
+   "summary": {
+    "High": 47,
+    "Moderate": 88,
+    "Low": 4,
+    "watch": 1,
+    "total": 139
+   }
+  },
+  {
+   "code": "MAC",
+   "iso2": "MO",
+   "nameEn": "Macau",
+   "nameKa": "მაკაუ",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MAC.json",
+   "summary": {
+    "High": 23,
+    "Moderate": 66,
+    "Low": 25,
+    "watch": 3,
+    "total": 114
+   }
+  },
+  {
+   "code": "MDG",
+   "iso2": "MG",
+   "nameEn": "Madagascar",
+   "nameKa": "მადაგასკარი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MDG.json",
+   "summary": {
+    "High": 20,
+    "Moderate": 79,
+    "Low": 31,
+    "watch": 2,
+    "total": 130
+   }
+  },
+  {
+   "code": "MWI",
+   "iso2": "MW",
+   "nameEn": "Malawi",
+   "nameKa": "მალავი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MWI.json",
+   "summary": {
+    "High": 16,
+    "Moderate": 91,
+    "Low": 26,
+    "watch": 4,
+    "total": 133
+   }
+  },
+  {
+   "code": "MYS",
+   "iso2": "MY",
+   "nameEn": "Malaysia",
+   "nameKa": "მალაიზია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MYS.json",
+   "summary": {
+    "High": 95,
+    "Moderate": 46,
+    "Low": 2,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "MDV",
+   "iso2": "MV",
+   "nameEn": "Maldives",
+   "nameKa": "მალდივები",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MDV.json",
+   "summary": {
+    "High": 39,
+    "Moderate": 67,
+    "Low": 20,
+    "watch": 1,
+    "total": 126
+   }
+  },
+  {
+   "code": "MLT",
+   "iso2": "MT",
+   "nameEn": "Malta",
+   "nameKa": "მალტა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MLT.json",
+   "summary": {
+    "High": 46,
+    "Moderate": 74,
+    "Low": 15,
+    "watch": 2,
+    "total": 135
+   }
+  },
+  {
+   "code": "MRT",
+   "iso2": "MR",
+   "nameEn": "Mauritania",
+   "nameKa": "მავრიტანია",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MRT.json",
+   "summary": {
+    "High": 17,
+    "Moderate": 79,
+    "Low": 26,
+    "watch": 7,
+    "total": 122
+   }
+  },
+  {
+   "code": "MUS",
+   "iso2": "MU",
+   "nameEn": "Mauritius",
+   "nameKa": "მავრიკი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MUS.json",
+   "summary": {
+    "High": 47,
+    "Moderate": 70,
+    "Low": 17,
+    "watch": 2,
+    "total": 134
+   }
+  },
+  {
+   "code": "MEX",
+   "iso2": "MX",
+   "nameEn": "Mexico",
+   "nameKa": "მექსიკა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MEX.json",
+   "summary": {
+    "High": 81,
+    "Moderate": 55,
+    "Low": 3,
+    "watch": 2,
+    "total": 139
+   }
+  },
+  {
+   "code": "MDA",
+   "iso2": "MD",
+   "nameEn": "Moldova",
+   "nameKa": "მოლდოვა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MDA.json",
+   "summary": {
+    "High": 70,
+    "Moderate": 53,
+    "Low": 9,
+    "watch": 3,
+    "total": 132
+   }
+  },
+  {
+   "code": "MNE",
+   "iso2": "ME",
+   "nameEn": "Montenegro",
+   "nameKa": "მონტენეგრო",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MNE.json",
+   "summary": {
+    "High": 66,
+    "Moderate": 57,
+    "Low": 13,
+    "watch": 1,
+    "total": 136
+   }
+  },
+  {
+   "code": "MSR",
+   "iso2": "MS",
+   "nameEn": "Montserrat",
+   "nameKa": "მონსერატი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MSR.json",
+   "summary": {
+    "High": 0,
+    "Moderate": 67,
+    "Low": 51,
+    "watch": 4,
+    "total": 118
+   }
+  },
+  {
+   "code": "MAR",
+   "iso2": "MA",
+   "nameEn": "Morocco",
+   "nameKa": "მაროკო",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MAR.json",
+   "summary": {
+    "High": 96,
+    "Moderate": 38,
+    "Low": 6,
+    "watch": 2,
+    "total": 140
+   }
+  },
+  {
+   "code": "MOZ",
+   "iso2": "MZ",
+   "nameEn": "Mozambique",
+   "nameKa": "მოზამბიკი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MOZ.json",
+   "summary": {
+    "High": 19,
+    "Moderate": 90,
+    "Low": 26,
+    "watch": 4,
+    "total": 135
+   }
+  },
+  {
+   "code": "MMR",
+   "iso2": "MM",
+   "nameEn": "Myanmar",
+   "nameKa": "მიანმარი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MMR.json",
+   "summary": {
+    "High": 11,
+    "Moderate": 52,
+    "Low": 52,
+    "watch": 5,
+    "total": 115
+   }
+  },
+  {
+   "code": "NAM",
+   "iso2": "NA",
+   "nameEn": "Namibia",
+   "nameKa": "ნამიბია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "NAM.json",
+   "summary": {
+    "High": 31,
+    "Moderate": 88,
+    "Low": 21,
+    "watch": 2,
+    "total": 140
+   }
+  },
+  {
+   "code": "NLD",
+   "iso2": "NL",
+   "nameEn": "Netherlands",
+   "nameKa": "ნიდერლანდები",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "NLD.json",
+   "summary": {
+    "High": 86,
+    "Moderate": 57,
+    "Low": 0,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "NZL",
+   "iso2": "NZ",
+   "nameEn": "New Zealand",
+   "nameKa": "ახალი ზელანდია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "NZL.json",
+   "summary": {
+    "High": 31,
+    "Moderate": 94,
+    "Low": 11,
+    "watch": 3,
+    "total": 136
+   }
+  },
+  {
+   "code": "NIC",
+   "iso2": "NI",
+   "nameEn": "Nicaragua",
+   "nameKa": "ნიკარაგუა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "NIC.json",
+   "summary": {
+    "High": 47,
+    "Moderate": 75,
+    "Low": 11,
+    "watch": 4,
+    "total": 133
+   }
+  },
+  {
+   "code": "NER",
+   "iso2": "NE",
+   "nameEn": "Niger",
+   "nameKa": "ნიგერი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "NER.json",
+   "summary": {
+    "High": 4,
+    "Moderate": 61,
+    "Low": 61,
+    "watch": 5,
+    "total": 126
+   }
+  },
+  {
+   "code": "NGA",
+   "iso2": "NG",
+   "nameEn": "Nigeria",
+   "nameKa": "ნიგერია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "NGA.json",
+   "summary": {
+    "High": 30,
+    "Moderate": 84,
+    "Low": 20,
+    "watch": 7,
+    "total": 134
+   }
+  },
+  {
+   "code": "MKD",
+   "iso2": "MK",
+   "nameEn": "North Macedonia",
+   "nameKa": "ჩრდილოეთ მაკედონია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "MKD.json",
+   "summary": {
+    "High": 64,
+    "Moderate": 63,
+    "Low": 11,
+    "watch": 1,
+    "total": 138
+   }
+  },
+  {
+   "code": "NOR",
+   "iso2": "NO",
+   "nameEn": "Norway",
+   "nameKa": "ნორვეგია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "NOR.json",
+   "summary": {
+    "High": 73,
+    "Moderate": 64,
+    "Low": 3,
+    "watch": 1,
+    "total": 140
+   }
+  },
+  {
+   "code": "OMN",
+   "iso2": "OM",
+   "nameEn": "Oman",
+   "nameKa": "ომანი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "OMN.json",
+   "summary": {
+    "High": 69,
+    "Moderate": 57,
+    "Low": 11,
+    "watch": 2,
+    "total": 137
+   }
+  },
+  {
+   "code": "PAK",
+   "iso2": "PK",
+   "nameEn": "Pakistan",
+   "nameKa": "პაკისტანი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "PAK.json",
+   "summary": {
+    "High": 40,
+    "Moderate": 75,
+    "Low": 21,
+    "watch": 5,
+    "total": 136
+   }
+  },
+  {
+   "code": "PAN",
+   "iso2": "PA",
+   "nameEn": "Panama",
+   "nameKa": "პანამა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "PAN.json",
+   "summary": {
+    "High": 32,
+    "Moderate": 80,
+    "Low": 22,
+    "watch": 3,
+    "total": 134
+   }
+  },
+  {
+   "code": "PRY",
+   "iso2": "PY",
+   "nameEn": "Paraguay",
+   "nameKa": "პარაგვაი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "PRY.json",
+   "summary": {
+    "High": 54,
+    "Moderate": 63,
+    "Low": 18,
+    "watch": 2,
+    "total": 135
+   }
+  },
+  {
+   "code": "PER",
+   "iso2": "PE",
+   "nameEn": "Peru",
+   "nameKa": "პერუ",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "PER.json",
+   "summary": {
+    "High": 47,
+    "Moderate": 75,
+    "Low": 17,
+    "watch": 0,
+    "total": 139
+   }
+  },
+  {
+   "code": "PHL",
+   "iso2": "PH",
+   "nameEn": "Philippines",
+   "nameKa": "ფილიპინები",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "PHL.json",
+   "summary": {
+    "High": 78,
+    "Moderate": 53,
+    "Low": 6,
+    "watch": 1,
+    "total": 137
+   }
+  },
+  {
+   "code": "POL",
+   "iso2": "PL",
+   "nameEn": "Poland",
+   "nameKa": "პოლონეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "POL.json",
+   "summary": {
+    "High": 108,
+    "Moderate": 33,
+    "Low": 1,
+    "watch": 1,
+    "total": 142
+   }
+  },
+  {
+   "code": "PRT",
+   "iso2": "PT",
+   "nameEn": "Portugal",
+   "nameKa": "პორტუგალია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "PRT.json",
+   "summary": {
+    "High": 98,
+    "Moderate": 41,
+    "Low": 4,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "QAT",
+   "iso2": "QA",
+   "nameEn": "Qatar",
+   "nameKa": "ყატარი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "QAT.json",
+   "summary": {
+    "High": 44,
+    "Moderate": 75,
+    "Low": 10,
+    "watch": 7,
+    "total": 129
+   }
+  },
+  {
+   "code": "ROU",
+   "iso2": "RO",
+   "nameEn": "Romania",
+   "nameKa": "რუმინეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ROU.json",
+   "summary": {
+    "High": 103,
+    "Moderate": 33,
+    "Low": 2,
+    "watch": 5,
+    "total": 138
+   }
+  },
+  {
+   "code": "SAU",
+   "iso2": "SA",
+   "nameEn": "Saudi Arabia",
+   "nameKa": "საუდების არაბეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SAU.json",
+   "summary": {
+    "High": 101,
+    "Moderate": 35,
+    "Low": 1,
+    "watch": 1,
+    "total": 137
+   }
+  },
+  {
+   "code": "SEN",
+   "iso2": "SN",
+   "nameEn": "Senegal",
+   "nameKa": "სენეგალი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SEN.json",
+   "summary": {
+    "High": 22,
+    "Moderate": 83,
+    "Low": 29,
+    "watch": 3,
+    "total": 134
+   }
+  },
+  {
+   "code": "SRB",
+   "iso2": "RS",
+   "nameEn": "Serbia",
+   "nameKa": "სერბეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SRB.json",
+   "summary": {
+    "High": 95,
+    "Moderate": 39,
+    "Low": 8,
+    "watch": 1,
+    "total": 142
+   }
+  },
+  {
+   "code": "SYC",
+   "iso2": "SC",
+   "nameEn": "Seychelles",
+   "nameKa": "სეიშელები",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SYC.json",
+   "summary": {
+    "High": 26,
+    "Moderate": 86,
+    "Low": 15,
+    "watch": 5,
+    "total": 127
+   }
+  },
+  {
+   "code": "SGP",
+   "iso2": "SG",
+   "nameEn": "Singapore",
+   "nameKa": "სინგაპური",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SGP.json",
+   "summary": {
+    "High": 61,
+    "Moderate": 72,
+    "Low": 8,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "SVK",
+   "iso2": "SK",
+   "nameEn": "Slovakia",
+   "nameKa": "სლოვაკეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SVK.json",
+   "summary": {
+    "High": 91,
+    "Moderate": 45,
+    "Low": 4,
+    "watch": 1,
+    "total": 140
+   }
+  },
+  {
+   "code": "SVN",
+   "iso2": "SI",
+   "nameEn": "Slovenia",
+   "nameKa": "სლოვენია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SVN.json",
+   "summary": {
+    "High": 82,
+    "Moderate": 53,
+    "Low": 5,
+    "watch": 1,
+    "total": 140
+   }
+  },
+  {
+   "code": "ZAF",
+   "iso2": "ZA",
+   "nameEn": "South Africa",
+   "nameKa": "სამხრეთი აფრიკა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ZAF.json",
+   "summary": {
+    "High": 71,
+    "Moderate": 61,
+    "Low": 11,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "ESP",
+   "iso2": "ES",
+   "nameEn": "Spain",
+   "nameKa": "ესპანეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ESP.json",
+   "summary": {
+    "High": 110,
+    "Moderate": 33,
+    "Low": 0,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "LKA",
+   "iso2": "LK",
+   "nameEn": "Sri Lanka",
+   "nameKa": "შრი-ლანკა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "LKA.json",
+   "summary": {
+    "High": 27,
+    "Moderate": 94,
+    "Low": 15,
+    "watch": 2,
+    "total": 136
+   }
+  },
+  {
+   "code": "SUR",
+   "iso2": "SR",
+   "nameEn": "Suriname",
+   "nameKa": "სურინამი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SUR.json",
+   "summary": {
+    "High": 15,
+    "Moderate": 83,
+    "Low": 22,
+    "watch": 6,
+    "total": 120
+   }
+  },
+  {
+   "code": "SWE",
+   "iso2": "SE",
+   "nameEn": "Sweden",
+   "nameKa": "შვედეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "SWE.json",
+   "summary": {
+    "High": 76,
+    "Moderate": 64,
+    "Low": 1,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "CHE",
+   "iso2": "CH",
+   "nameEn": "Switzerland",
+   "nameKa": "შვეიცარია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "CHE.json",
+   "summary": {
+    "High": 90,
+    "Moderate": 47,
+    "Low": 6,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "S19",
+   "iso2": null,
+   "nameEn": "Taiwan, Province of China",
+   "nameKa": "ტაივანი, ჩინეთის პროვინცია",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "S19.json",
+   "summary": {
+    "High": 46,
+    "Moderate": 94,
+    "Low": 1,
+    "watch": 1,
+    "total": 141
+   }
+  },
+  {
+   "code": "TZA",
+   "iso2": "TZ",
+   "nameEn": "Tanzania",
+   "nameKa": "ტანზანია",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "TZA.json",
+   "summary": {
+    "High": 42,
+    "Moderate": 81,
+    "Low": 14,
+    "watch": 3,
+    "total": 137
+   }
+  },
+  {
+   "code": "THA",
+   "iso2": "TH",
+   "nameEn": "Thailand",
+   "nameKa": "ტაილანდი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "THA.json",
+   "summary": {
+    "High": 84,
+    "Moderate": 53,
+    "Low": 5,
+    "watch": 0,
+    "total": 142
+   }
+  },
+  {
+   "code": "TGO",
+   "iso2": "TG",
+   "nameEn": "Togo",
+   "nameKa": "ტოგო",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "TGO.json",
+   "summary": {
+    "High": 22,
+    "Moderate": 71,
+    "Low": 30,
+    "watch": 5,
+    "total": 123
+   }
+  },
+  {
+   "code": "TTO",
+   "iso2": "TT",
+   "nameEn": "Trinidad and Tobago",
+   "nameKa": "ტრინიდადი და ტობაგო",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "TTO.json",
+   "summary": {
+    "High": 25,
+    "Moderate": 84,
+    "Low": 21,
+    "watch": 4,
+    "total": 130
+   }
+  },
+  {
+   "code": "TUN",
+   "iso2": "TN",
+   "nameEn": "Tunisia",
+   "nameKa": "ტუნისი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "TUN.json",
+   "summary": {
+    "High": 44,
+    "Moderate": 74,
+    "Low": 16,
+    "watch": 2,
+    "total": 134
+   }
+  },
+  {
+   "code": "TUR",
+   "iso2": "TR",
+   "nameEn": "Turkey",
+   "nameKa": "თურქეთი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "TUR.json",
+   "summary": {
+    "High": 91,
+    "Moderate": 47,
+    "Low": 5,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "UGA",
+   "iso2": "UG",
+   "nameEn": "Uganda",
+   "nameKa": "უგანდა",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "UGA.json",
+   "summary": {
+    "High": 47,
+    "Moderate": 65,
+    "Low": 24,
+    "watch": 2,
+    "total": 136
+   }
+  },
+  {
+   "code": "UKR",
+   "iso2": "UA",
+   "nameEn": "Ukraine",
+   "nameKa": "უკრაინა",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "UKR.json",
+   "summary": {
+    "High": 79,
+    "Moderate": 57,
+    "Low": 5,
+    "watch": 0,
+    "total": 141
+   }
+  },
+  {
+   "code": "GBR",
+   "iso2": "GB",
+   "nameEn": "United Kingdom",
+   "nameKa": "გაერთიანებული სამეფო",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "GBR.json",
+   "summary": {
+    "High": 101,
+    "Moderate": 39,
+    "Low": 2,
+    "watch": 0,
+    "total": 142
+   }
+  },
+  {
+   "code": "USA",
+   "iso2": "US",
+   "nameEn": "United States",
+   "nameKa": "აშშ",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "USA.json",
+   "summary": {
+    "High": 83,
+    "Moderate": 59,
+    "Low": 1,
+    "watch": 0,
+    "total": 143
+   }
+  },
+  {
+   "code": "URY",
+   "iso2": "UY",
+   "nameEn": "Uruguay",
+   "nameKa": "ურუგვაი",
+   "dataYear": 2025,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "URY.json",
+   "summary": {
+    "High": 51,
+    "Moderate": 68,
+    "Low": 17,
+    "watch": 1,
+    "total": 136
+   }
+  },
+  {
+   "code": "UZB",
+   "iso2": "UZ",
+   "nameEn": "Uzbekistan",
+   "nameKa": "უზბეკეთი",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "UZB.json",
+   "summary": {
+    "High": 74,
+    "Moderate": 60,
+    "Low": 8,
+    "watch": 1,
+    "total": 142
+   }
+  },
+  {
+   "code": "ZMB",
+   "iso2": "ZM",
+   "nameEn": "Zambia",
+   "nameKa": "ზამბია",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ZMB.json",
+   "summary": {
+    "High": 26,
+    "Moderate": 83,
+    "Low": 30,
+    "watch": 2,
+    "total": 139
+   }
+  },
+  {
+   "code": "ZWE",
+   "iso2": "ZW",
+   "nameEn": "Zimbabwe",
+   "nameKa": "ზიმბაბვე",
+   "dataYear": 2024,
+   "tradeSource": {
+    "id": "comtrade",
+    "label": "UN Comtrade",
+    "edition": "HS2022"
+   },
+   "sample": false,
+   "file": "ZWE.json",
+   "summary": {
+    "High": 31,
+    "Moderate": 75,
+    "Low": 29,
+    "watch": 4,
+    "total": 135
+   }
+  }
+ ]
+}

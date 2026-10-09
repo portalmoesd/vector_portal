@@ -29,6 +29,7 @@ app.use('/api/library', require('./routes/library'));
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/templates', require('./routes/templates'));
 app.use('/api/statistics', require('./routes/statistics'));
+app.use('/api/export-potential', require('./routes/export-potential'));
 app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/meeting-summaries', require('./routes/meeting-summaries'));
 

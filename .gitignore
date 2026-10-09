@@ -28,3 +28,6 @@ server/scripts/.migration-backup-*/
 test-results/
 playwright-report/
 tests/fixtures/.cache/
+
+# Export potential pipeline: raw source responses (Comtrade records must not be committed)
+server/export-potential/cache/
