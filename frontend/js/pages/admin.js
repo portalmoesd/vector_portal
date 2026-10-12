@@ -853,4 +853,55 @@
       failure: I18n.tr('admin.upload.failure'),
     },
   });
+
+  // ── Country Profiles sync status + manual trigger ───────────────────────
+  // Reads /api/country-profiles/status; the sync itself runs server-side
+  // (weekly schedule or this button) and never from the browser.
+  (function initCountryProfilesPanel() {
+    const statusEl = document.getElementById('cpSyncStatus');
+    const failedEl = document.getElementById('cpSyncFailed');
+    const btn = document.getElementById('cpSyncBtn');
+    const feedback = document.getElementById('cpSyncFeedback');
+    if (!statusEl || !btn) return;
+    const tr = (k, p) => I18n.tr(k, p);
+    const statusLabel = (s) => ({ ok: tr('admin.countryProfiles.statusOk'), partial: tr('admin.countryProfiles.statusPartial'), failed: tr('admin.countryProfiles.statusFailed') })[s] || s;
+
+    async function load() {
+      try {
+        const j = await Api.get('/api/country-profiles/status');
+        const lines = [tr('admin.countryProfiles.summary', { countries: j.countries, observations: Number(j.observations).toLocaleString() })];
+        const last = (j.runs || []).find((r) => r.status !== 'running');
+        if (j.running) lines.push(tr('admin.countryProfiles.running'));
+        if (last) {
+          lines.push(tr('admin.countryProfiles.lastRun', {
+            finished: last.finishedAt ? new Date(last.finishedAt).toLocaleString() : '—',
+            status: statusLabel(last.status), ok: last.okCount, failed: last.failedCount,
+          }));
+          const failed = (last.log || []).filter((e) => e.level === 'error').map((e) => `${e.step}: ${e.message}`);
+          failedEl.textContent = failed.length ? tr('admin.countryProfiles.failedItems', { items: failed.join(' · ') }) : '';
+        } else if (!j.running) {
+          lines.push(tr('admin.countryProfiles.never'));
+        }
+        statusEl.textContent = lines.join(' · ');
+        btn.disabled = !!j.running;
+      } catch (err) {
+        statusEl.textContent = err.message;
+      }
+    }
+
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      feedback.textContent = '';
+      try {
+        await Api.post('/api/country-profiles/sync', {});
+        feedback.textContent = tr('admin.countryProfiles.started');
+        setTimeout(load, 1500);
+      } catch (err) {
+        feedback.textContent = err.message;
+        btn.disabled = false;
+      }
+    });
+
+    load();
+  })();
 })();
