@@ -401,4 +401,77 @@ CREATE TABLE IF NOT EXISTS trade_cache (
   updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
+-- ─── Country profiles: statistical sources, indicators, observations ─────────
+-- Source-agnostic store for official statistics shown on the Country Profiles
+-- pages. World Bank WDI is the first source; IMF / UN Comtrade can be added
+-- as further stat_sources rows without changing the shape. Pages read only
+-- from these tables; the sync script (server/country-profiles/sync.js) is the
+-- only writer. Observations carry the source name/URL and retrieval date so
+-- every figure can be attributed on screen.
+
+CREATE TABLE IF NOT EXISTS stat_sources (
+  id          TEXT PRIMARY KEY,          -- e.g. 'worldbank-wdi'
+  name        TEXT NOT NULL,             -- e.g. 'World Bank, World Development Indicators'
+  url         TEXT NOT NULL,
+  license     TEXT,
+  created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS stat_indicators (
+  code          TEXT PRIMARY KEY,        -- source's own code, e.g. 'SP.POP.TOTL'
+  source_id     TEXT NOT NULL REFERENCES stat_sources(id),
+  name          TEXT NOT NULL,           -- name as the source gives it
+  unit          TEXT,                    -- display unit hint: 'count', 'usd', 'pct', 'sqkm', 'years'
+  section       TEXT,                    -- profile section: 'overview' | 'people' | 'economy' | 'trade'
+  display_order INT NOT NULL DEFAULT 0,
+  source_url    TEXT,                    -- the request URL the values were pulled from
+  updated_at    TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- Economies as the source lists them (aggregates excluded). Kept separate from
+-- the portal's own `countries` table, which drives event visibility.
+CREATE TABLE IF NOT EXISTS stat_countries (
+  iso3          CHAR(3) PRIMARY KEY,
+  iso2          CHAR(2),
+  slug          TEXT NOT NULL UNIQUE,
+  name          TEXT NOT NULL,
+  region_id     TEXT,
+  region_name   TEXT,
+  income_id     TEXT,
+  income_name   TEXT,
+  capital       TEXT,
+  longitude     DOUBLE PRECISION,
+  latitude      DOUBLE PRECISION,
+  source_id     TEXT NOT NULL REFERENCES stat_sources(id),
+  source_url    TEXT,
+  retrieved_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE TABLE IF NOT EXISTS stat_observations (
+  source_id       TEXT NOT NULL REFERENCES stat_sources(id),
+  indicator_code  TEXT NOT NULL REFERENCES stat_indicators(code),
+  iso3            CHAR(3) NOT NULL,
+  year            SMALLINT NOT NULL,
+  value           DOUBLE PRECISION NOT NULL,   -- nulls are not stored; "No data" is the absence of a row
+  source_name     TEXT NOT NULL,
+  source_url      TEXT NOT NULL,
+  retrieved_at    TIMESTAMPTZ NOT NULL,
+  PRIMARY KEY (source_id, indicator_code, iso3, year)
+);
+CREATE INDEX IF NOT EXISTS stat_observations_country_idx ON stat_observations (iso3, indicator_code, year DESC);
+
+-- One row per sync run, with a per-indicator outcome log, so a failed pull
+-- is visible to the admin and never silently replaced by old data.
+CREATE TABLE IF NOT EXISTS stat_sync_runs (
+  id            SERIAL PRIMARY KEY,
+  source_id     TEXT NOT NULL REFERENCES stat_sources(id),
+  trigger       TEXT NOT NULL,           -- 'cli' | 'scheduled' | 'boot' | 'admin'
+  started_at    TIMESTAMPTZ NOT NULL DEFAULT now(),
+  finished_at   TIMESTAMPTZ,
+  status        TEXT NOT NULL DEFAULT 'running',  -- 'running' | 'ok' | 'partial' | 'failed'
+  ok_count      INT NOT NULL DEFAULT 0,
+  failed_count  INT NOT NULL DEFAULT 0,
+  log           JSONB NOT NULL DEFAULT '[]'::jsonb
+);
+
 COMMIT;

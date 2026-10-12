@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vector Portal — Country Profiles</title>
+  <link rel="stylesheet" href="/css/variables.css" />
+  <link rel="stylesheet" href="/css/base.css" />
+  <link rel="stylesheet" href="/css/sidebar.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+  <link rel="stylesheet" href="/css/statistics.css" />
+  <link rel="stylesheet" href="/css/country-profiles.css" />
+  <link rel="stylesheet" href="/css/georgian-fonts.css" />
+  <link rel="stylesheet" href="/css/apple.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar"></aside>
+    <main class="main cp-page">
+      <div class="topbar cp-topbar">
+        <h1 class="page-title" data-i18n="countryProfiles.title">Country Profiles</h1>
+        <span class="pill pill-purple" data-i18n="countryProfiles.adminPreview">Admin preview</span>
+      </div>
+
+      <p class="cp-count" id="cpCount" aria-live="polite"></p>
+
+      <div class="card stat-controls cp-controls">
+        <div class="stat-controls__row cp-controls__row">
+          <div class="form-group cp-controls__search">
+            <label class="form-label" for="cpSearch" data-i18n="countryProfiles.searchLabel">Search countries</label>
+            <input type="search" id="cpSearch" class="form-input" autocomplete="off" data-i18n-placeholder="countryProfiles.searchPlaceholder" placeholder="Search by country name..." />
+          </div>
+          <div class="form-group cp-controls__region">
+            <label class="form-label" for="cpRegion" data-i18n="countryProfiles.region">Region</label>
+            <select id="cpRegion" class="form-select">
+              <option value="" data-i18n="countryProfiles.allRegions">All regions</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="cpLoading" class="stat-report__loading">
+        <div class="stat-spinner"></div>
+        <span class="stat-loading-label" data-i18n="common.loading">Loading...</span>
+      </div>
+
+      <div id="cpError" class="card cp-error hidden" role="alert"></div>
+
+      <div id="cpEmpty" class="card empty-state cp-empty hidden">
+        <p id="cpEmptyText" data-i18n="countryProfiles.noMatch">No countries match your filters.</p>
+        <button type="button" class="btn btn-outline" id="cpClear" data-i18n="countryProfiles.clearFilters">Clear filters</button>
+      </div>
+
+      <ul id="cpGrid" class="cp-grid" aria-label="Countries"></ul>
+
+      <footer class="cp-footer" id="cpFooter"></footer>
+    </main>
+  </div>
+  <script src="/js/core/config.js"></script>
+  <script src="/js/core/api.js"></script>
+  <script src="/js/core/i18n.js"></script>
+  <script src="/js/core/utils.js"></script>
+  <script src="/js/core/app.js"></script>
+  <script src="/assets/flags/flags.js"></script>
+  <script src="/js/pages/country-profiles-filter.js"></script>
+  <script src="/js/pages/country-profiles.js"></script>
+</body>
+</html>

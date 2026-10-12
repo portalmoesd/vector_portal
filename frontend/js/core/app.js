@@ -65,6 +65,12 @@ const App = {
       return;
     }
 
+    // Country Profiles is likewise an ADMIN-only section for now.
+    if (user.role !== 'ADMIN' && /\/pages\/country-profiles?\.html$/.test(window.location.pathname)) {
+      window.location.href = dashboardUrl(user.role);
+      return;
+    }
+
 
     await I18n.init();
 
@@ -106,12 +112,14 @@ const App = {
       admin: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
       statistics: '<svg viewBox="0 0 24 24"><path d="M3 3v18h18v-2H5V3H3zm4 12h2V9H7v6zm4 0h2V5h-2v10zm4 0h2V7h-2v8z"/></svg>',
       potential: '<svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>',
+      globe: '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.9 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.9 8ZM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96ZM4.26 14a8.1 8.1 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4H4.26Zm.84 2h2.95c.32 1.25.78 2.45 1.38 3.56A8 8 0 0 1 5.1 16Zm2.95-8H5.1a8 8 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.05 8ZM12 19.96A14 14 0 0 1 10.09 16h3.82A14 14 0 0 1 12 19.96ZM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4Zm.25 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56ZM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8.1 8.1 0 0 1 0 4h-3.38Z"/></svg>',
       logout: '<svg viewBox="0 0 24 24"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z"/></svg>',
     };
 
     function navIcon(label) {
       const l = (label || '').toLowerCase();
       if (l.includes('export potential')) return ICO.potential;
+      if (l.includes('country profiles')) return ICO.globe;
       if (l.includes('calendar')) return ICO.calendar;
       if (l.includes('library')) return ICO.library;
       if (l.includes('statistic')) return ICO.statistics;
@@ -150,6 +158,7 @@ const App = {
       if (user.role === 'ADMIN') {
         // Export Potential is an admin-only preview for now (see the guard above).
         navItems.push({ href: '/pages/export-potential.html', label: 'Export Potential', i18n: 'nav.exportPotential', match: 'export-potential' });
+        navItems.push({ href: '/pages/country-profiles.html', label: 'Country Profiles', i18n: 'nav.countryProfiles', match: 'country-profile' });
         navItems.push({ href: '/pages/admin.html', label: 'Admin Panel', i18n: 'nav.admin', match: 'admin' });
       }
     }

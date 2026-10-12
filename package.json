@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node server/index.js",
     "seed": "node server/seed.js",
+    "sync:country-profiles": "node server/country-profiles/sync.js",
     "dev": "node --watch server/index.js",
     "test": "npm run test:server && npm run test:editor",
     "test:server": "node --test tests/server/*.test.js",

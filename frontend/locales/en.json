@@ -21,6 +21,7 @@
     "library": "Archive",
     "statistics": "Statistics",
     "exportPotential": "Export Potential",
+    "countryProfiles": "Country Profiles",
     "countryComparison": "Country Comparison",
     "admin": "Admin Panel",
     "logout": "Log out",
@@ -476,6 +477,20 @@
       "title": "Data Status",
       "trade": "Trade data: current through {period} · new month detected {detected} · last checked {checked}",
       "tradeUnknown": "Trade data: publication not checked yet"
+    },
+    "countryProfiles": {
+      "title": "Country Profiles data",
+      "desc": "Official World Bank figures for the Country Profiles pages. The sync runs every Monday at 10:20 Tbilisi and can be started here; a failed pull keeps the previous values.",
+      "summary": "{countries} economies · {observations} values stored",
+      "never": "Not synced yet.",
+      "lastRun": "Last run: {finished} · {status} ({ok} ok, {failed} failed)",
+      "running": "A sync is running…",
+      "syncNow": "Sync now",
+      "started": "Sync started. It takes a few minutes; reload this tab to see the result.",
+      "failedItems": "Failed: {items}",
+      "statusOk": "completed",
+      "statusPartial": "partial",
+      "statusFailed": "failed"
     }
   },
   "library": {
@@ -1193,5 +1208,61 @@
       "limitRaw": "Only derived figures are shown. Raw trade records are not published or downloadable.",
       "limitScreening": "The point values and cut-offs are starting values that will be calibrated against how exports actually developed."
     }
+  },
+  "countryProfiles": {
+    "title": "Country Profiles",
+    "adminPreview": "Admin preview",
+    "showing": "Showing {n} countries",
+    "searchLabel": "Search countries",
+    "searchPlaceholder": "Search by country name...",
+    "region": "Region",
+    "allRegions": "All regions",
+    "noMatch": "No countries match your filters.",
+    "clearFilters": "Clear filters",
+    "noDataYet": "No country data has been synced yet. Run the sync from the Admin Panel (Data Uploads) or with npm run sync:country-profiles.",
+    "loadFailed": "Failed to load country data:",
+    "notFound": "Country not found.",
+    "flagAlt": "Flag of {name}",
+    "breadcrumb": {
+      "home": "Home",
+      "countries": "Countries"
+    },
+    "capital": "Capital",
+    "incomeLevel": "Income level",
+    "noData": "No data",
+    "noDataSource": "No value published by the source",
+    "onThisPage": "On this page",
+    "sections": {
+      "overview": "Overview",
+      "people": "People",
+      "economy": "Economy",
+      "trade": "Trade"
+    },
+    "indicators": {
+      "population": "Population",
+      "surfaceArea": "Surface area",
+      "gdp": "GDP (current US$)",
+      "gdpPerCapita": "GDP per capita (current US$)",
+      "gdpGrowth": "GDP growth",
+      "inflation": "Inflation",
+      "unemployment": "Unemployment",
+      "exports": "Exports of goods and services",
+      "imports": "Imports of goods and services",
+      "lifeExpectancy": "Life expectancy at birth",
+      "urbanPopulation": "Urban population"
+    },
+    "units": {
+      "years": "years"
+    },
+    "chart": {
+      "title": "GDP and population, last 20 years",
+      "gdp": "GDP (current US$)",
+      "population": "Population"
+    },
+    "source": "Source",
+    "countryListSource": "World Bank country list",
+    "retrieved": "retrieved",
+    "lastSync": "Data synced",
+    "latestYearNote": "Each figure shows the latest year the source has published."
   }
 }

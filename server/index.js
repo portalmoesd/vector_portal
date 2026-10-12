@@ -32,6 +32,17 @@ app.use('/api/statistics', require('./routes/statistics'));
 app.use('/api/export-potential', require('./routes/export-potential'));
 app.use('/api/notifications', require('./routes/notifications'));
 app.use('/api/meeting-summaries', require('./routes/meeting-summaries'));
+app.use('/api/country-profiles', require('./routes/country-profiles'));
+
+// Friendly URLs for the Country Profiles pages: /countries and
+// /countries/<slug> land on the static pages (the site has no client router).
+app.get('/countries', (req, res) => {
+  const qs = req.originalUrl.includes('?') ? req.originalUrl.slice(req.originalUrl.indexOf('?')) : '';
+  res.redirect(302, `/pages/country-profiles.html${qs}`);
+});
+app.get('/countries/:slug', (req, res) => {
+  res.redirect(302, `/pages/country-profile.html?country=${encodeURIComponent(req.params.slug)}`);
+});
 
 // Short add-to-calendar link used in event emails: /cal/:id redirects to the
 // Outlook web "add event" deeplink. Unauthenticated on purpose — recipients
