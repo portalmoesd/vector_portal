@@ -13,6 +13,15 @@ only from those tables.
 | `/countries` → `/pages/country-profiles.html` | Index | `?q=` search text, `?region=` World Bank region id; both shareable |
 | `/countries/<slug>` → `/pages/country-profile.html?country=<slug>` | Profile | slug = World Bank name, lower-cased and hyphenated (`georgia`, `hong-kong-sar-china`); ISO3 also accepted |
 
+Profile layout: a hero (flag, name, official names, region / income / continent
+pills, quick facts: capital, government type, national holiday, legislature),
+a "Key figures" strip of seven World Bank indicators, then the sections
+Introduction, Overview, People, Government, Economy (with the 20-year GDP and
+population chart) and Trade, each rendered only when it has data, with a sticky
+"On this page" nav. Every section uses the same table: label, value, and a
+year + source tag for each World Bank figure; Factbook rows sit under a
+"From the World Factbook" caption with one attribution line per section.
+
 Both pages are reachable only by the ADMIN role (sidebar entry "Country
 Profiles"; other roles bounce to their dashboard, the API returns 403).
 

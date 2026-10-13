@@ -1,11 +1,15 @@
 /**
  * Country profile page (admin preview).
  *
- * Renders one economy from /api/country-profiles/countries/:slug: header,
- * key-figure tiles, the Overview / People / Economy / Trade sections (only
- * those with data) with a sticky "On this page" nav, and a GDP + population
- * line chart when Chart.js is present. Every figure shows its data year and
- * links to its source; a missing value is shown as "No data", never filled.
+ * Renders one economy from /api/country-profiles/countries/:slug:
+ *   - hero: flag, name, official names, region / income pills, quick facts
+ *   - key figures: seven World Bank indicators, each with its data year
+ *   - sections with a sticky "On this page" nav: Introduction, Overview,
+ *     People, Government, Economy (with a 20-year GDP / population chart
+ *     when Chart.js is present) and Trade — only those with data
+ * Every figure shows its data year and links to its source; a missing
+ * value is shown as "No data", never filled. Factbook text is sanitized
+ * server-side at import time and rendered as HTML.
  */
 (async function () {
   await App.init();
@@ -21,8 +25,8 @@
 
   const slug = new URLSearchParams(window.location.search).get('country') || '';
 
-  // Short labels for tiles and rows; the source's own indicator name is
-  // shown underneath each figure so the wording of the source is preserved.
+  // Short labels for indicators; the source's own indicator name is kept as
+  // a tooltip / sub-label so the source wording is never lost.
   const LABEL = {
     'SP.POP.TOTL': 'population',
     'AG.SRF.TOTL.K2': 'surfaceArea',
@@ -36,7 +40,7 @@
     'SP.DYN.LE00.IN': 'lifeExpectancy',
     'SP.URB.TOTL.IN.ZS': 'urbanPopulation',
   };
-  const TILE_CODES = ['SP.POP.TOTL', 'AG.SRF.TOTL.K2', 'NY.GDP.MKTP.CD', 'NY.GDP.PCAP.CD', 'NY.GDP.MKTP.KD.ZG', 'FP.CPI.TOTL.ZG', 'SL.UEM.TOTL.ZS'];
+  const KEY_FIGURES = ['SP.POP.TOTL', 'AG.SRF.TOTL.K2', 'NY.GDP.MKTP.CD', 'NY.GDP.PCAP.CD', 'NY.GDP.MKTP.KD.ZG', 'FP.CPI.TOTL.ZG', 'SL.UEM.TOTL.ZS'];
   const SECTIONS = ['overview', 'people', 'economy', 'trade'];
 
   // ── Formatting ───────────────────────────────────────────────────────
@@ -60,7 +64,6 @@
   function fmtTick(v) {
     return fmtUsdCompact(v).replace(/\s*\$/g, '');
   }
-
   function fmtValue(ind, { compact = true } = {}) {
     if (ind.value == null) return null;
     const v = ind.value;
@@ -73,15 +76,87 @@
     }
   }
   const label = (code) => t(`countryProfiles.indicators.${LABEL[code] || code}`);
+  const noData = () => `<span class="cp-nodata">${escapeHtml(t('countryProfiles.noData'))}</span>`;
 
-  // Attribution line: "2024 · World Bank, WDI · retrieved 12/10/2026"
-  function sourceLine(ind) {
-    if (ind.value == null) return `<span class="cp-src cp-src--none">${escapeHtml(t('countryProfiles.noDataSource'))}</span>`;
-    const retrieved = ind.retrievedAt ? formatDate(ind.retrievedAt) : '';
-    return `<span class="cp-src"><span class="cp-src__year">${ind.year}</span> · <a href="${escapeHtml(ind.sourceUrl)}" target="_blank" rel="noopener" title="${escapeHtml(ind.name)}">${escapeHtml(ind.sourceName)}</a>${retrieved ? ` · ${escapeHtml(t('countryProfiles.retrieved'))} ${escapeHtml(retrieved)}` : ''}</span>`;
+  // Data-year + source tag shown next to every World Bank figure. The full
+  // source name and retrieval date sit in the tooltip; the section footer
+  // repeats them in full.
+  function sourceTag(ind) {
+    if (ind.value == null) return `<span class="cp-tag cp-tag--none">${escapeHtml(t('countryProfiles.noDataSource'))}</span>`;
+    const retrieved = ind.retrievedAt ? `${t('countryProfiles.retrieved')} ${formatDate(ind.retrievedAt)}` : '';
+    const title = `${ind.name} · ${ind.sourceName}${retrieved ? ` · ${retrieved}` : ''}`;
+    return `<a class="cp-tag" href="${escapeHtml(ind.sourceUrl)}" target="_blank" rel="noopener" title="${escapeHtml(title)}"><span class="cp-tag__year">${ind.year}</span><span class="cp-tag__src">${escapeHtml(t('countryProfiles.sourceShort'))}</span></a>`;
   }
 
-  // ── Rendering ────────────────────────────────────────────────────────
+  function wbAttribution(indicators) {
+    const withData = indicators.filter((i) => i.value != null);
+    const src = withData[0];
+    if (!src) return '';
+    const retrieved = src.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(src.retrievedAt)}` : '';
+    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> <a href="${escapeHtml(src.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(src.sourceName)}</a>${escapeHtml(retrieved)} · ${escapeHtml(t('countryProfiles.latestYearNote'))}</div>`;
+  }
+
+  function fbAttribution(src) {
+    if (!src) return '';
+    const when = src.dataDate ? t('countryProfiles.factbook.snapshot', { date: src.dataDate }) : '';
+    const ended = src.discontinued ? t('countryProfiles.factbook.discontinued', { date: formatDate(src.discontinued) }) : '';
+    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> <a href="${escapeHtml(src.url)}" target="_blank" rel="noopener">${escapeHtml(src.name)}</a>${when ? ` · ${escapeHtml(when)}` : ''}${ended ? ` · ${escapeHtml(ended)}` : ''}</div>`;
+  }
+
+  // ── Table rows (one visual language for every section) ──────────────
+  // A row is { attrs, label, sub, body, meta } where body is HTML.
+  function tr({ attrs = '', label: lbl, sub = '', body, meta = '', edited = false }) {
+    return `<div class="cp-tr" ${attrs}>
+      <div class="cp-tr__label">${escapeHtml(lbl)}${edited ? ` <span class="pill pill-blue">${escapeHtml(t('countryProfiles.factbook.edited'))}</span>` : ''}${sub ? `<small>${escapeHtml(sub)}</small>` : ''}</div>
+      <div class="cp-tr__value">${body}</div>
+      <div class="cp-tr__meta">${meta}</div>
+    </div>`;
+  }
+
+  function indicatorRow(ind) {
+    const v = fmtValue(ind, { compact: false });
+    return tr({
+      attrs: `data-code="${escapeHtml(ind.code)}"`,
+      label: label(ind.code), sub: ind.name,
+      body: v == null ? noData() : `<span class="cp-num">${escapeHtml(v)}</span>`,
+      meta: sourceTag(ind),
+    });
+  }
+
+  function factRow(labelText, value, attrs = '') {
+    return tr({ attrs, label: labelText, body: value ? escapeHtml(value) : noData() });
+  }
+
+  function itemsHtml(items) {
+    return `<dl class="cp-items">${items.map((it) => `<div class="cp-items__row"><dt>${escapeHtml(it.label)}</dt><dd>${it.text}</dd></div>`).join('')}</dl>`;
+  }
+
+  function textRow(row) {
+    const c = row.content || {};
+    const parts = [];
+    if (c.text) parts.push(`<div class="cp-prose cp-prose--cell">${c.text}</div>`);
+    if (c.items && c.items.length) parts.push(itemsHtml(c.items));
+    return tr({ attrs: `data-field="${escapeHtml(row.field)}"`, label: row.label || row.field, body: parts.join(''), edited: !!row.edited });
+  }
+
+  function groupCaption(text) {
+    return `<div class="cp-table__group">${escapeHtml(text)}</div>`;
+  }
+
+  function table(inner) {
+    return `<div class="cp-table">${inner}</div>`;
+  }
+
+  // ── Hero ─────────────────────────────────────────────────────────────
+  const fbItem = (rows, field, itemLabel) => {
+    const r = (rows || []).find((x) => x.field === field);
+    if (!r) return null;
+    if (itemLabel == null) return r.content && r.content.text;
+    const it = (r.content.items || []).find((i) => i.label === itemLabel);
+    return it ? it.text : null;
+  };
+  const plain = (html) => (html || '').replace(/<[^>]+>/g, '').trim();
+
   function renderBreadcrumb(c) {
     const name = isKa() && c.nameKa ? c.nameKa : c.name;
     const items = [
@@ -96,128 +171,153 @@
     document.title = `Vector Portal — ${name}`;
   }
 
-  function renderHeader(c) {
+  function renderHero(data) {
+    const c = data.country;
+    const gov = (data.texts && data.texts.sections && data.texts.sections.government) || [];
+    const ov = (data.texts && data.texts.sections && data.texts.sections.overview) || [];
     const name = isKa() && c.nameKa ? c.nameKa : c.name;
     const flag = c.iso2 ? flagUrl(c.iso2) : '';
     const img = flag
-      ? `<img class="cp-header__flag" src="${flag}" alt="${escapeHtml(t('countryProfiles.flagAlt', { name: c.name }))}" width="72" height="72" />`
-      : '<span class="cp-header__flag cp-header__flag--none" aria-hidden="true"></span>';
+      ? `<img class="cp-hero__flag" src="${flag}" alt="${escapeHtml(t('countryProfiles.flagAlt', { name: c.name }))}" width="96" height="96" />`
+      : '<span class="cp-hero__flag cp-hero__flag--none" aria-hidden="true"></span>';
+
+    // Official names from the Factbook; "none" means the source has no long form.
+    const longForm = plain(fbItem(gov, 'Country name', 'conventional long form'));
+    const localLong = plain(fbItem(gov, 'Country name', 'local long form'));
+    const localShort = plain(fbItem(gov, 'Country name', 'local short form'));
+    const official = longForm && longForm !== 'none' ? longForm : (localLong && localLong !== 'none' ? localLong : '');
+    const local = [localLong, localShort].filter((s) => s && s !== 'none' && s !== official && s !== c.name);
+    const subtitleParts = [];
+    if (isKa() && c.nameKa) subtitleParts.push(c.name);
+    if (official && official !== c.name) subtitleParts.push(official);
+    if (local.length) subtitleParts.push(local.join(' · '));
+
+    const continent = plain(fbItem(ov, 'Map references', null));
+    const pills = [
+      c.region.name ? `<a class="pill pill-blue cp-pill" href="/pages/country-profiles.html?region=${encodeURIComponent(c.region.id || '')}">${escapeHtml(c.region.name)}</a>` : '',
+      c.incomeLevel.name ? `<span class="pill pill-green cp-pill">${escapeHtml(c.incomeLevel.name)}</span>` : '',
+      continent ? `<span class="pill pill-gray cp-pill">${escapeHtml(continent)}</span>` : '',
+    ].filter(Boolean).join('');
+
     const facts = [
-      [t('countryProfiles.region'), c.region.name],
-      [t('countryProfiles.capital'), c.capital],
-      [t('countryProfiles.incomeLevel'), c.incomeLevel.name],
-    ];
-    $('cpHeader').innerHTML = `${img}
-      <div class="cp-header__text">
-        <h1 class="cp-header__name">${escapeHtml(name)}</h1>
-        ${isKa() && c.nameKa ? `<div class="cp-header__alt">${escapeHtml(c.name)}</div>` : ''}
-        <dl class="cp-header__facts">${facts.map(([k, v]) => `<div><dt>${escapeHtml(k)}</dt><dd>${v ? escapeHtml(v) : `<span class="cp-nodata">${escapeHtml(t('countryProfiles.noData'))}</span>`}</dd></div>`).join('')}</dl>
-        <div class="cp-header__src">${escapeHtml(t('countryProfiles.source'))}: <a href="${escapeHtml(c.sourceUrl || '#')}" target="_blank" rel="noopener">${escapeHtml(t('countryProfiles.countryListSource'))}</a>${c.retrievedAt ? ` · ${escapeHtml(t('countryProfiles.retrieved'))} ${escapeHtml(formatDate(c.retrievedAt))}` : ''}</div>
-      </div>`;
+      { k: t('countryProfiles.capital'), v: c.capital, attr: 'data-fact="capital"' },
+      { k: t('countryProfiles.hero.governmentType'), v: plain(fbItem(gov, 'Government type', null)) },
+      { k: t('countryProfiles.hero.nationalHoliday'), v: plain(fbItem(gov, 'National holiday', null)) },
+      { k: t('countryProfiles.hero.legislature'), v: legislatureSummary(gov) },
+    ].filter((f) => f.v || f.attr);
+    const factsHtml = facts.map((f) => `<div class="cp-hero__fact" ${f.attr || ''}><dt>${escapeHtml(f.k)}</dt><dd>${f.v ? escapeHtml(f.v) : noData()}</dd></div>`).join('');
+
+    const fb = data.texts && data.texts.source;
+    const srcLine = [
+      `<a href="${escapeHtml(c.sourceUrl || '#')}" target="_blank" rel="noopener">${escapeHtml(t('countryProfiles.countryListSource'))}</a>${c.retrievedAt ? ` (${escapeHtml(t('countryProfiles.retrieved'))} ${escapeHtml(formatDate(c.retrievedAt))})` : ''}`,
+      fb && gov.length ? `<a href="${escapeHtml(fb.url)}" target="_blank" rel="noopener">${escapeHtml(fb.name)}</a>${fb.dataDate ? ` (${escapeHtml(t('countryProfiles.factbook.snapshot', { date: fb.dataDate }))})` : ''}` : '',
+    ].filter(Boolean).join(' · ');
+
+    $('cpHeader').innerHTML = `
+      <div class="cp-hero__main">
+        ${img}
+        <div class="cp-hero__title">
+          <h1 class="cp-hero__name">${escapeHtml(name)}</h1>
+          ${subtitleParts.length ? `<div class="cp-hero__official">${escapeHtml(subtitleParts.join(' · '))}</div>` : ''}
+          <div class="cp-hero__pills">${pills}</div>
+        </div>
+      </div>
+      <dl class="cp-hero__facts">${factsHtml}</dl>
+      <div class="cp-hero__src"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${srcLine}</div>`;
   }
 
-  function tile(ind) {
+  // "Parliament · 150 seats" or "House · 630 / Senate · 69" from the kept
+  // Legislative branch entries.
+  function legislatureSummary(gov) {
+    const parts = [];
+    for (const field of ['Legislative branch', 'Legislative branch - lower chamber', 'Legislative branch - upper chamber']) {
+      const name = plain(fbItem(gov, field, 'chamber name') || fbItem(gov, field, 'legislature name'));
+      const seats = plain(fbItem(gov, field, 'number of seats'));
+      const seatNum = seats && seats.match(/^[\d,]+/);
+      if (name && seatNum) parts.push(`${name} · ${seatNum[0]} ${t('countryProfiles.hero.seats')}`);
+      else if (name) parts.push(name);
+    }
+    return parts.join(' / ');
+  }
+
+  // ── Key figures ──────────────────────────────────────────────────────
+  function kfItem(ind) {
     const v = fmtValue(ind);
-    return `<div class="cp-tile" data-code="${escapeHtml(ind.code)}">
-      <div class="cp-tile__label">${escapeHtml(label(ind.code))}</div>
-      <div class="cp-tile__value${v == null ? ' cp-tile__value--none' : ''}">${v == null ? escapeHtml(t('countryProfiles.noData')) : escapeHtml(v)}</div>
-      <div class="cp-tile__src">${sourceLine(ind)}</div>
+    return `<div class="cp-kf__item" data-code="${escapeHtml(ind.code)}">
+      <div class="cp-kf__label" title="${escapeHtml(ind.name)}">${escapeHtml(label(ind.code))}</div>
+      <div class="cp-kf__value${v == null ? ' cp-kf__value--none' : ''}">${v == null ? escapeHtml(t('countryProfiles.noData')) : escapeHtml(v)}</div>
+      <div class="cp-kf__meta">${sourceTag(ind)}</div>
     </div>`;
   }
 
-  function renderTiles(indicators) {
+  function renderKeyFigures(indicators) {
     const byCode = new Map(indicators.map((i) => [i.code, i]));
-    $('cpTiles').innerHTML = TILE_CODES.filter((c) => byCode.has(c)).map((c) => tile(byCode.get(c))).join('');
+    const list = KEY_FIGURES.filter((c) => byCode.has(c)).map((c) => byCode.get(c));
+    $('cpTiles').innerHTML = `<section class="card cp-kf" aria-labelledby="cpKfTitle">
+      <div class="cp-section__head"><h2 class="cp-section__title" id="cpKfTitle">${escapeHtml(t('countryProfiles.keyFigures'))}</h2></div>
+      <div class="cp-kf__grid">${list.map(kfItem).join('')}</div>
+      ${wbAttribution(list)}
+    </section>`;
   }
 
-  function row(ind) {
-    const v = fmtValue(ind, { compact: false });
-    return `<div class="cp-row" data-code="${escapeHtml(ind.code)}">
-      <div class="cp-row__label">${escapeHtml(label(ind.code))}<small>${escapeHtml(ind.name)}</small></div>
-      <div class="cp-row__value${v == null ? ' cp-nodata' : ''}">${v == null ? escapeHtml(t('countryProfiles.noData')) : escapeHtml(v)}</div>
-      <div class="cp-row__src">${sourceLine(ind)}</div>
-    </div>`;
-  }
-
-  function factRow(labelText, value) {
-    return `<div class="cp-row"><div class="cp-row__label">${escapeHtml(labelText)}</div>
-      <div class="cp-row__value${value ? '' : ' cp-nodata'}">${value ? escapeHtml(value) : escapeHtml(t('countryProfiles.noData'))}</div><div class="cp-row__src"></div></div>`;
-  }
-
-  // ── Factbook text blocks ─────────────────────────────────────────────
-  // Content is sanitized server-side at import time (a small tag
-  // vocabulary: br, p, em, strong, lists), so it is rendered as HTML here.
-  function textField(row) {
-    const c = row.content || {};
-    const items = (c.items || []).map((it) => `<div class="cp-text-item"><dt>${escapeHtml(it.label)}</dt><dd>${it.text}</dd></div>`).join('');
-    return `<div class="cp-text-field" data-field="${escapeHtml(row.field)}">
-      <div class="cp-text-field__label">${escapeHtml(row.label || row.field)}${row.edited ? ` <span class="pill pill-blue">${escapeHtml(t('countryProfiles.factbook.edited'))}</span>` : ''}</div>
-      <div class="cp-text-field__body">${c.text ? `<div class="cp-text-field__text">${c.text}</div>` : ''}${items ? `<dl class="cp-text-items">${items}</dl>` : ''}</div>
-    </div>`;
-  }
-
-  function factbookAttribution(src) {
-    if (!src) return '';
-    const when = src.dataDate ? t('countryProfiles.factbook.snapshot', { date: src.dataDate }) : '';
-    const ended = src.discontinued ? t('countryProfiles.factbook.discontinued', { date: formatDate(src.discontinued) }) : '';
-    return `<div class="cp-fb-note">${escapeHtml(t('countryProfiles.source'))}: <a href="${escapeHtml(src.url)}" target="_blank" rel="noopener">${escapeHtml(src.name)}</a>${when ? ` · ${escapeHtml(when)}` : ''}${ended ? ` · ${escapeHtml(ended)}` : ''}</div>`;
-  }
-
-  function textBlock(rows, src, { heading = null } = {}) {
-    if (!rows || !rows.length) return '';
-    return `<div class="cp-text-block">${heading ? `<h3 class="cp-text-block__title">${escapeHtml(heading)}</h3>` : ''}${rows.map(textField).join('')}${factbookAttribution(src)}</div>`;
-  }
-
+  // ── Sections ─────────────────────────────────────────────────────────
   function renderSections(data) {
     const { country: c, indicators, series } = data;
     const texts = (data.texts && data.texts.sections) || {};
     const fbSrc = data.texts && data.texts.source;
+    const txt = (id) => texts[id] || [];
     const bySection = {};
     for (const s of SECTIONS) bySection[s] = indicators.filter((i) => i.section === s);
     const hasData = (list) => list.some((i) => i.value != null);
     const parts = [];
     const toc = [];
 
-    const section = (id, inner) => {
+    const section = (id, inner, { lead = null } = {}) => {
       toc.push(id);
       parts.push(`<section class="card cp-section" id="section-${id}" aria-labelledby="h-${id}">
-        <h2 class="cp-section__title" id="h-${id}">${escapeHtml(t(`countryProfiles.sections.${id}`))}</h2>${inner}</section>`);
+        <div class="cp-section__head"><h2 class="cp-section__title" id="h-${id}">${escapeHtml(t(`countryProfiles.sections.${id}`))}</h2>${lead ? `<p class="cp-section__lead">${escapeHtml(lead)}</p>` : ''}</div>${inner}</section>`);
     };
 
-    // texts.sections is keyed by page section (introduction, overview,
-    // people, government) — the server decides where each field goes.
-    const txt = (id) => texts[id] || [];
-
-    // Introduction: the Factbook background text, when present.
+    // Introduction: the Factbook background, as prose.
     if (txt('introduction').length) {
-      section('introduction', textBlock(txt('introduction'), fbSrc));
+      const bg = txt('introduction').map((r) => `<div class="cp-prose" data-field="${escapeHtml(r.field)}">${r.edited ? `<span class="pill pill-blue">${escapeHtml(t('countryProfiles.factbook.edited'))}</span>` : ''}${(r.content && r.content.text) || ''}${r.content && r.content.items && r.content.items.length ? itemsHtml(r.content.items) : ''}</div>`).join('');
+      section('introduction', `${bg}${fbAttribution(fbSrc)}`);
     }
 
-    // Overview: header facts plus surface area (always has region/income),
-    // then the geography fields from the Factbook.
-    section('overview', `<div class="cp-rows">
-      ${factRow(t('countryProfiles.region'), c.region.name)}
-      ${factRow(t('countryProfiles.incomeLevel'), c.incomeLevel.name)}
-      ${factRow(t('countryProfiles.capital'), c.capital)}
-      ${bySection.overview.map(row).join('')}
-    </div>${textBlock(txt('overview'), fbSrc)}`);
+    // Overview: identity facts (World Bank list), surface area, then the
+    // geography fields from the Factbook.
+    const listSrc = { value: 1, year: null, sourceName: t('countryProfiles.countryListSource'), sourceUrl: c.sourceUrl, retrievedAt: c.retrievedAt, name: '' };
+    const listTag = `<a class="cp-tag" href="${escapeHtml(c.sourceUrl || '#')}" target="_blank" rel="noopener" title="${escapeHtml(`${listSrc.sourceName}${c.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(c.retrievedAt)}` : ''}`)}"><span class="cp-tag__src">${escapeHtml(t('countryProfiles.sourceShort'))}</span></a>`;
+    const overviewRows = [
+      tr({ attrs: 'data-fact="region"', label: t('countryProfiles.region'), body: c.region.name ? escapeHtml(c.region.name) : noData(), meta: listTag }),
+      tr({ attrs: 'data-fact="income"', label: t('countryProfiles.incomeLevel'), body: c.incomeLevel.name ? escapeHtml(c.incomeLevel.name) : noData(), meta: listTag }),
+      tr({ attrs: 'data-fact="capital"', label: t('countryProfiles.capital'), body: c.capital ? escapeHtml(c.capital) : noData(), meta: listTag }),
+      ...bySection.overview.map(indicatorRow),
+    ].join('');
+    const geoRows = txt('overview').map(textRow).join('');
+    section('overview', `${table(overviewRows + (geoRows ? groupCaption(t('countryProfiles.factbook.fromFactbook')) + geoRows : ''))}${geoRows ? fbAttribution(fbSrc) : ''}`);
 
-    // People: World Bank indicators first, then the Factbook fields.
+    // People: indicators, then Languages / Religions.
     if (hasData(bySection.people) || txt('people').length) {
-      section('people', `${hasData(bySection.people) ? `<div class="cp-rows">${bySection.people.map(row).join('')}</div>` : ''}${textBlock(txt('people'), fbSrc, { heading: hasData(bySection.people) ? t('countryProfiles.factbook.fromFactbook') : null })}`);
+      const wb = hasData(bySection.people) ? bySection.people.map(indicatorRow).join('') : '';
+      const fb = txt('people').map(textRow).join('');
+      section('people', `${table(wb + (fb ? (wb ? groupCaption(t('countryProfiles.factbook.fromFactbook')) : '') + fb : ''))}${wb ? wbAttribution(bySection.people) : ''}${fb ? fbAttribution(fbSrc) : ''}`);
     }
 
     if (txt('government').length) {
-      section('government', textBlock(txt('government'), fbSrc));
+      section('government', `${table(txt('government').map(textRow).join(''))}${fbAttribution(fbSrc)}`);
     }
 
-    for (const id of ['economy', 'trade']) {
-      if (!hasData(bySection[id])) continue;
-      let extra = '';
-      if (id === 'economy' && window.Chart && chartHasData(series)) {
-        extra = `<div class="cp-chart"><h3 class="cp-chart__title">${escapeHtml(t('countryProfiles.chart.title'))}</h3><div class="cp-chart__canvas"><canvas id="cpChart" role="img" aria-label="${escapeHtml(t('countryProfiles.chart.title'))}"></canvas></div><div class="cp-chart__src">${chartSourceLine(indicators)}</div></div>`;
+    if (hasData(bySection.economy)) {
+      let chart = '';
+      if (window.Chart && chartHasData(series)) {
+        chart = `<div class="cp-chart"><h3 class="cp-chart__title">${escapeHtml(t('countryProfiles.chart.title'))}</h3><div class="cp-chart__canvas"><canvas id="cpChart" role="img" aria-label="${escapeHtml(t('countryProfiles.chart.title'))}"></canvas></div></div>`;
       }
-      section(id, `<div class="cp-rows">${bySection[id].map(row).join('')}</div>${extra}`);
+      section('economy', `${table(bySection.economy.map(indicatorRow).join(''))}${chart}${wbAttribution(bySection.economy)}`);
+    }
+
+    if (hasData(bySection.trade)) {
+      section('trade', `<div class="cp-kf__grid cp-kf__grid--pair">${bySection.trade.map(kfItem).join('')}</div>${wbAttribution(bySection.trade)}`);
     }
 
     $('cpSections').innerHTML = parts.join('');
@@ -230,14 +330,6 @@
     return series && ((series['NY.GDP.MKTP.CD'] || []).length >= 2 || (series['SP.POP.TOTL'] || []).length >= 2);
   }
 
-  function chartSourceLine(indicators) {
-    const gdp = indicators.find((i) => i.code === 'NY.GDP.MKTP.CD');
-    const pop = indicators.find((i) => i.code === 'SP.POP.TOTL');
-    const src = gdp || pop;
-    if (!src) return '';
-    return `${escapeHtml(t('countryProfiles.source'))}: <a href="${escapeHtml(src.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(src.sourceName)}</a>`;
-  }
-
   let chart = null;
   function drawChart(series) {
     const gdp = series['NY.GDP.MKTP.CD'] || [];
@@ -248,6 +340,7 @@
     const blue = css.getPropertyValue('--accent-blue').trim() || '#3b82f6';
     const green = css.getPropertyValue('--accent-green').trim() || '#16a34a';
     const text = css.getPropertyValue('--text-secondary').trim() || '#64748b';
+    const grid = css.getPropertyValue('--border-color').trim() || '#e2e8f0';
     const font = css.getPropertyValue('--font-primary').trim();
     if (chart) chart.destroy();
     chart = new Chart(document.getElementById('cpChart'), {
@@ -255,8 +348,8 @@
       data: {
         labels: years,
         datasets: [
-          { label: t('countryProfiles.chart.gdp'), data: byYear(gdp), yAxisID: 'yGdp', borderColor: blue, backgroundColor: blue, tension: 0.25, pointRadius: 2, spanGaps: false },
-          { label: t('countryProfiles.chart.population'), data: byYear(pop), yAxisID: 'yPop', borderColor: green, backgroundColor: green, tension: 0.25, pointRadius: 2, spanGaps: false },
+          { label: t('countryProfiles.chart.gdp'), data: byYear(gdp), yAxisID: 'yGdp', borderColor: blue, backgroundColor: blue, borderWidth: 2, tension: 0.3, pointRadius: 0, pointHitRadius: 8, spanGaps: false },
+          { label: t('countryProfiles.chart.population'), data: byYear(pop), yAxisID: 'yPop', borderColor: green, backgroundColor: green, borderWidth: 2, borderDash: [5, 4], tension: 0.3, pointRadius: 0, pointHitRadius: 8, spanGaps: false },
         ],
       },
       options: {
@@ -264,12 +357,12 @@
         maintainAspectRatio: false,
         interaction: { mode: 'index', intersect: false },
         plugins: {
-          legend: { position: 'bottom', labels: { color: text, font: { family: font } } },
+          legend: { position: 'bottom', labels: { color: text, font: { family: font }, usePointStyle: true, boxWidth: 8 } },
           tooltip: { callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.dataset.yAxisID === 'yGdp' ? fmtUsdCompact(ctx.parsed.y) : fmtInt(ctx.parsed.y)}` } },
         },
         scales: {
-          x: { ticks: { color: text, font: { family: font } }, grid: { display: false } },
-          yGdp: { position: 'left', ticks: { color: text, font: { family: font }, maxTicksLimit: 6, callback: (v) => fmtTick(v) }, title: { display: true, text: t('countryProfiles.chart.gdp'), color: text } },
+          x: { ticks: { color: text, font: { family: font }, maxTicksLimit: 10 }, grid: { display: false } },
+          yGdp: { position: 'left', ticks: { color: text, font: { family: font }, maxTicksLimit: 6, callback: (v) => fmtTick(v) }, grid: { color: grid }, title: { display: true, text: t('countryProfiles.chart.gdp'), color: text } },
           yPop: { position: 'right', ticks: { color: text, font: { family: font }, maxTicksLimit: 6, callback: (v) => fmtTick(v) }, grid: { drawOnChartArea: false }, title: { display: true, text: t('countryProfiles.chart.population'), color: text } },
         },
       },
@@ -299,8 +392,8 @@
     if (!slug) throw Object.assign(new Error(t('countryProfiles.notFound')), { status: 404 });
     const data = await Api.get(`/api/country-profiles/countries/${encodeURIComponent(slug)}`);
     renderBreadcrumb(data.country);
-    renderHeader(data.country);
-    renderTiles(data.indicators);
+    renderHero(data);
+    renderKeyFigures(data.indicators);
     renderSections(data);
     renderFooter(data);
     profileEl.classList.remove('hidden');
