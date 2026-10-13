@@ -208,7 +208,7 @@ a.cp-pill:hover { filter: brightness(.95); }
   white-space: nowrap;
   background: var(--bg-card);
 }
-.cp-tag:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
+.cp-tag { cursor: default; }
 .cp-tag__year { padding: 4px 7px; font-weight: 700; color: var(--text-primary); background: var(--bg-hover); font-variant-numeric: tabular-nums; }
 .cp-tag__src { padding: 4px 8px; }
 .cp-tag--none { padding: 4px 8px; color: var(--text-muted); font-style: italic; border-style: dashed; }
