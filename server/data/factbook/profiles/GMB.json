@@ -1,0 +1,1112 @@
+{
+ "iso3": "GMB",
+ "gec": "ga",
+ "name": "The Gambia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "In the 10th century, Muslim merchants established some of The Gambia’s earliest large settlements as trans-Saharan trade hubs. These settlements eventually grew into major export centers sending slaves, gold, and ivory across the Sahara. Between the 16th and 17th centuries, European colonial powers began establishing trade with The Gambia. In 1664, the United Kingdom established a colony in The Gambia focused on exporting enslaved people across the Atlantic. During the roughly 300 years of the trans-Atlantic slave trade, the UK and other European powers may have exported as many as 3 million people from The Gambia. <br /><br />The Gambia gained its independence from the UK in 1965. Geographically surrounded by Senegal, it formed the short-lived confederation of Senegambia between 1982 and 1989. In 1994, Yahya JAMMEH led a military coup overthrowing the president and banning political activity. He subsequently won every presidential election until 2016, when he lost to Adama BARROW, who headed an opposition coalition during free and fair elections. BARROW won reelection in 2021. The Gambia is the only member of the Economic Community of West African States that does not have presidential term limits. Since the 2016 election, The Gambia and the US have enjoyed improved relations. US assistance to the country has supported democracy-strengthening activities, capacity building, economic development, and security sector education and training programs.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Western Africa, bordering the North Atlantic Ocean and Senegal",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "13 28 N, 16 34 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11,300 sq km"
+      },
+      {
+       "label": "land",
+       "text": "10,120 sq km"
+      },
+      {
+       "label": "water",
+       "text": "1,180 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than twice the size of Delaware",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "749 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Senegal 749 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "80 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "18 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "extent not specified"
+      },
+      {
+       "label": "exclusive fishing zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; hot, rainy season (June to November); cooler, dry season (November to May)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "flood plain of the Gambia River flanked by some low hills",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "unnamed elevation 63 m; 3 km southeast of the town of Sabi"
+      },
+      {
+       "label": "lowest point",
+       "text": "Atlantic Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "34 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "fish, clay, silica sand, titanium (rutile and ilmenite), tin, zircon",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "62.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 43.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 18.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "22% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "15.4% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "50 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Gambia river mouth (shared with Senegal and Guinea [s]) - 1,094 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 160,
+    "content": {
+     "text": "Senegalo-Mauritanian Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "settlements are found scattered along the Gambia River; the largest communities, including the capital of Banjul and the country's largest city, Serekunda, are found at the mouth of the Gambia River along the Atlantic coast, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "almost an enclave of Senegal; smallest country on the African mainland",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,523,327 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "1,250,490"
+      },
+      {
+       "label": "female",
+       "text": "1,272,837"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Gambian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Gambian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Mandinka/Jahanka 33.3%, Fulani/Tukulur/Lorobo 18.2%, Wolof 12.9%, Jola/Karoninka 11%, Serahuleh 7.2%, Serer 3.5%, other 4%, non-Gambian 9.9% (2019-20 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "English (official), Mandinka, Wolof, Fula, other indigenous vernaculars",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 96.4%, Christian 3.5%, other or none 0.1% (2019-20 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "38.2% (male 486,472/female 477,309)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "58.1% (male 723,360/female 743,127)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.7% (2024 est.) (male 40,658/female 52,401)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "72.1 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "65.7 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.3 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "15.8 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "19.8 years"
+      },
+      {
+       "label": "female",
+       "text": "20.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.09% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "26.49 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.53 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.04 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "settlements are found scattered along the Gambia River; the largest communities, including the capital of Banjul and the country's largest city, Serekunda, are found at the mouth of the Gambia River along the Atlantic coast, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "64.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.75% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "481,000 BANJUL (capital) (2023)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> includes the local government areas of Banjul and Kanifing"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.78 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.98 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "20.7 years (2019/20 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "354 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "35 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "39.1 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "32.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "68.4 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "66.7 years"
+      },
+      {
+       "label": "female",
+       "text": "70.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.39 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.67 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 90.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 76.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 85.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 9.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 23.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 14.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "3.2% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "7.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.09 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "1.2 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 74.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 32% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 59.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 25.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 68% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 40.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "10.3% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.67 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.21 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "2.44 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.6% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0.5% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "11.6% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "63% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "5.6% (2020)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "23.1% (2020)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "0.2% (2020)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "2.8% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "14.2% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "51.6% (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "65.3% (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "40.5% (2021 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of The Gambia"
+      },
+      {
+       "label": "conventional short form",
+       "text": "The Gambia"
+      },
+      {
+       "label": "etymology",
+       "text": "named for the Gambia River that flows through the country; Portuguese explorers in the 15th century derived the name for the river from its local name, Ba-Dimma, meaning \"the river\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Banjul"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "13 27 N, 16 34 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from a misunderstanding between Portuguese colonists and inhabitants in the 15th century; when asked what the area was called, the inhabitants thought they were being asked what they were doing and replied, \"<em>bangjulo,\" or</em> \"rope making\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "5 regions, 1 city*, and 1 municipality**; Banjul*, Central River, Kanifing**, Lower River, North Bank, Upper River, West Coast",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of English common law, Islamic law, and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1965 (Independence Act), 1970; latest adopted 8 April 1996, approved by referendum 8 August 1996, effective 16 January 1997"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the National Assembly; passage requires at least three-fourths majority vote by the Assembly membership in each of several readings and approval by the president of the republic; a referendum is required for amendments affecting national sovereignty, fundamental rights and freedoms, government structures and authorities, taxation, and public funding; passage by referendum requires participation of at least 50% of eligible voters and approval by at least 75% of votes cast"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in 2024, The Gambian government announced its commitment to adopting a new constitution"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "yes"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "yes"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by simple-majority popular vote for a 5-year term (no term limits); vice president appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4 December 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2021: </em>Adama BARROW reelected president; percent of vote - Adama BARROW (NPP) 53.2%, Ousainou DARBOE (UDP) 27.7%, Mamma KANDEH (GDC) 12.3%, other 6.8%<br /><br /><em>2016: </em>Adama BARROW elected president; percent of vote - Adama BARROW (Coalition 2016) 43.3%, Yahya JAMMEH (APRC) 39.6%, Mamma KANDEH (GDC) 17.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "58 (53 directly elected; 5 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/9/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "National People's Party (NPP) (18); United Democratic Party (UDP) (15); National Reconciliation Party (NRP) (4); Independents (12); Other (4)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "8.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "April 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of The Gambia (consists of the chief justice and 6 justices; court sessions held with 5 justices)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "justices appointed by the president after consultation with the Judicial Service Commission, a 6-member independent body of high-level judicial officials, a presidential appointee, and a National Assembly appointee; justices appointed for life or until mandatory retirement at age 75"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeal; High Court; Special Criminal Court; Khadis or Muslim courts; district tribunals; magistrates courts; cadi courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Alliance for Patriotic Reorientation and Construction or APRC <br />Gambia Democratic Congress or GDC <br />Gambia Moral Congress or GMC <br />National People's Party or NPP <br />People's Progressive Party or PPP <br />United Democratic Party or UDP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AU, ECOWAS, FAO, G-77, IBRD, ICAO, ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIC, OPCW, UN, UNAMID, UNCTAD, UNESCO, UNHRC, UNIDO, UNISFA, UNMIL, UNOCI, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "18 February 1965 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 18 February (1965)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of red (top), blue with white edges, and green<br /><br /><strong>meaning:</strong> red stands for the sun and the savannah, blue for the Gambia River, and green for forests and agriculture; the white stripes denote unity and peace",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, blue, green, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"For The Gambia, Our Homeland\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Virginia Julie HOWE/adapted by Jeremy Frederick HOWE"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1965; the music is an adaptation of the traditional Mandinka song \"Foday Kaba Dumbuya\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (both cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Kunta Kinteh Island and Related Sites; Stone Circles of Senegambia"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

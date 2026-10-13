@@ -1,0 +1,37 @@
+{
+  "source": {
+    "id": "cia-factbook",
+    "name": "CIA World Factbook",
+    "url": "https://github.com/factbook/factbook.json",
+    "license": "Public domain (US Government work); factbook.json conversion CC0 1.0"
+  },
+  "snapshotDate": "2026-01",
+  "upstream": {
+    "repo": "https://github.com/factbook/factbook.json",
+    "commit": "144d6977b2b01ac1cbd220de754c0a005616760b"
+  },
+  "discontinued": "2026-02-04",
+  "sections": [
+    "Introduction",
+    "Geography",
+    "People and Society",
+    "Government"
+  ],
+  "excludedFields": {
+    "Government": [
+      "Diplomatic representation in the US",
+      "Diplomatic representation from the US"
+    ]
+  },
+  "excludedItems": {
+    "Government": {
+      "Executive branch": [
+        "chief of state",
+        "head of government",
+        "cabinet"
+      ]
+    }
+  },
+  "extractedAt": "2026-10-13T09:51:13.615Z",
+  "profiles": 216
+}

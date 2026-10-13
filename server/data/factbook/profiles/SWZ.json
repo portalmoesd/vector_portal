@@ -1,0 +1,1098 @@
+{
+ "iso3": "SWZ",
+ "gec": "wz",
+ "name": "Eswatini",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "A Swazi kingdom was founded in the mid-18th century and ruled by a series of kings, including MSWATI II, a 19th century ruler whose name was adopted for the country and its predominant ethnic group. European countries defined the kingdom’s modern borders during the late-19th century, and Swaziland (as it became known) was administered as a UK high commission territory from 1903 until its independence in 1968. A new constitution that came into effect in 2005 included provisions for a more independent parliament and judiciary, but the legal status of political parties remains unclear, and the kingdom is still considered an absolute monarchy. King MSWATI III renamed the country from Swaziland to Eswatini in 2018 to reflect the name most commonly used by its citizens. <br /><br />In 2021, MSWATI III used security forces to suppress prodemocracy protests. A national dialogue and reconciliation process agreed to in the wake of violence has not materialized. In November 2023, King MSWATI III appointed a new prime minister following peaceful national elections.  Despite its classification as a lower-middle income country, Eswatini suffers from severe poverty, corruption, and high unemployment. Eswatini has the world's highest HIV/AIDS prevalence rate, although recent years have shown marked declines in new infections. Eswatini is the only country in Africa that recognizes Taiwan.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Africa, between Mozambique and South Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "26 30 S, 31 30 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17,364 sq km"
+      },
+      {
+       "label": "land",
+       "text": "17,204 sq km"
+      },
+      {
+       "label": "water",
+       "text": "160 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than New Jersey",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "546 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Mozambique 108 km; South Africa 438 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "varies from tropical to near temperate",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly mountains and hills; some moderately sloping plains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Emlembe 1,862 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Great Usutu River 21 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "305 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "asbestos, coal, clay, cassiterite, hydropower, forests, small gold and diamond deposits, quarry stone, and talc",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "69.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 10.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 58.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "25.4% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "5.2% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "500 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "because of its mountainous terrain, the population distribution is uneven throughout the country, concentrating primarily in valleys and plains as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "drought",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "landlocked; almost completely surrounded by South Africa",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,137,268 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "557,204"
+      },
+      {
+       "label": "female",
+       "text": "580,064"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "liSwati (singular), emaSwati (plural); note - former term, Swazi(s), still used among English speakers"
+      },
+      {
+       "label": "adjective",
+       "text": "Swati; note - former term, Swazi, still used among English speakers"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "<p>predominantly Swazi; smaller populations of other African ethnic groups, including the Zulu, as well as people of European ancestry</p>",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "English (official, used for government business), siSwati (official)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Christian 90% (Zionist - a blend of Christianity and traditional African religions - 40%, Roman Catholic 20%, other Christian 30% - includes Anglican, Methodist, Church of Jesus Christ, Jehovah's Witness), Muslim 2%, other 8% (includes Baha'i, Buddhist, Hindu, indigenous, Jewish) (2015 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "31.6% (male 180,328/female 179,840)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "64.3% (male 341,298/female 390,884)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4% (2024 est.) (male 16,974/female 28,765)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "52.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "44.7 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "7.5 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "13.3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "24.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "23.4 years"
+      },
+      {
+       "label": "female",
+       "text": "25.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.87% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "20.66 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.3 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-3.68 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "because of its mountainous terrain, the population distribution is uneven throughout the country, concentrating primarily in valleys and plains as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "24.8% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.42% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "68,000 MBABANE (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.87 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.59 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.9 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "118 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "38 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "40.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "32.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "60.7 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "58.7 years"
+      },
+      {
+       "label": "female",
+       "text": "62.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.64 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.3 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 65.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 73.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 34.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 26.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "7% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "11.3% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "0.56 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 250,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 92.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 84.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 86.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 7.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 15.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 13.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 260,
+    "content": {
+     "text": "16.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.68 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.45 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.06 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "5.17 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.5% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "1.2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 290,
+    "content": {
+     "text": "5% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 300,
+    "content": {
+     "text": "36.4% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 310,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.1% (2022)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "1.9% (2022)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "0% (2022)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "6% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "19.2% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "90.8% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "91.1% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "90.4% (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Kingdom of Eswatini"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Eswatini"
+      },
+      {
+       "label": "local long form",
+       "text": "Umbuso weSwatini"
+      },
+      {
+       "label": "local short form",
+       "text": "eSwatini"
+      },
+      {
+       "label": "former",
+       "text": "Swaziland"
+      },
+      {
+       "label": "etymology",
+       "text": "the country name derives from 19th century King MSWATI II, under whose rule Swati territory was expanded and unified"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> pronounced ay-swatini or eh-swatini"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "absolute monarchy",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Mbabane (administrative capital); Lobamba (royal and legislative capital)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "26 19 S, 31 08 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the name is unclear; it may come from the Mbabane River next to the city, whose name is said to derive from the word <em>lubabe</em>, a type of shrub; another theory cites a local chief, Mbabane KUNENE, as the source of the name"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "4 regions; Hhohho, Lubombo, Manzini, Shiselweni",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil, common, and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1968, 1978; latest signed by the king 26 July 2005, effective 8 February 2006"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed at a joint sitting of both houses of Parliament; passage requires majority vote by both houses and/or majority vote in a referendum, and assent of the king; passage of amendments affecting \"specially entrenched\" constitutional provisions requires at least three-fourths majority vote by both houses, passage by simple majority vote in a referendum, and assent of the king; passage of \"entrenched\" provisions requires at least two-thirds majority vote of both houses, passage in a referendum, and assent of the king"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "both parents must be citizens of Eswatini"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; prime minister appointed by the monarch from among members of the House of Assembly"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Libandla)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of Assembly"
+      },
+      {
+       "label": "number of seats",
+       "text": "74 (59 directly elected; 4 indirectly elected; 10 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9/29/2023"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "21.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2028"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> four women, one representing each region, elected by the members if representation of elected women is less than 30%"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate"
+      },
+      {
+       "label": "number of seats",
+       "text": "30 (10 indirectly elected; 20 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/6/2023"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "46.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chief justice and at least 4 justices) and the High Court (consists of the chief justice ex officio and 4 justices)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "justices of the Supreme Court and High Court appointed by the monarch on the advice of the Judicial Service Commission (JSC), a judicial advisory body consisting of the Supreme Court Chief Justice, 4 members appointed by the monarch, and the chairman of the Civil Service Commission; justices of both courts eligible for retirement at age 65 with mandatory retirement at age 75"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "magistrates' courts; National Swazi Courts for administering customary/traditional laws (jurisdiction restricted to customary law for Swazi citizens)"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the Supreme Court has jurisdiction in all constitutional matters"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "political parties exist but conditions for their operations, particularly in elections, are undefined, legally unclear, or culturally restricted; the following are considered political associations:<br />African United Democratic Party or AUDP <br />Ngwane National Liberatory Congress or NNLC <br />People's United Democratic Movement or PUDEMO <br />Swazi Democratic Party or SWADEPA",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, AU, C, COMESA, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OPCW, PCA, SACU, SADC, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "6 September 1968 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day (Somhlolo Day), 6 September (1968)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal bands of blue (top), red (triple-width), and blue; the red band is edged in yellow, with a large black-and-white shield in the center that covers two horizontal spears and a staff with feather tassels<br /><br /><strong>meaning:</strong> blue stands for peace and stability, red for past struggles, and yellow for the mineral resources of the country; the shield, spears, and staff symbolize protection from enemies, and the shield colors stand for ethnic groups living in peaceful coexistence",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "lion, elephant",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "blue, yellow, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 220,
+    "content": {
+     "text": "the national coat of arms was adopted in 1968 after independence from the United Kingdom; two national symbols, the lion (representing the king of Eswatini) and the elephant (representing the queen mother), support a traditional Nguni shield; above the shield is the king's <em>lidlabe</em>, or crown of feathers, and at the bottom is Eswatini's motto, <em>Siyinqaba</em>, or \"We are the fortress”",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Nkulunkulu Mnikati wetibusiso temaSwati\" (O God, Bestower of the Blessings of the Swazi)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Andrease Enoke Fanyana SIMELANE/David Kenneth RYCROFT"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1968; uses elements of both ethnic Swazi and Western music styles"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

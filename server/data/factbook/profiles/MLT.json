@@ -1,0 +1,1078 @@
+{
+ "iso3": "MLT",
+ "gec": "mt",
+ "name": "Malta",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "With a civilization that dates back thousands of years, Malta boasts some of the oldest megalithic sites in the world. Situated in the center of the Mediterranean, Malta’s islands have long served as a strategic military asset, with the islands at various times falling under the control of the Phoenicians, Carthaginians, Greeks, Romans, Byzantines, Moors, Normans, Sicilians, Spanish, Knights of St. John, and French. Most recently a British colony (since 1814), Malta gained its independence in 1964 and declared itself a republic 10 years later. While under British rule, the island staunchly supported the UK through both world wars. Since the mid-1980s, the island has transformed itself into a freight transshipment point, a financial center, and a tourist destination, as its key industries moved toward more service-oriented activities. Malta became an EU member in 2004 and joined the eurozone in 2008.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Europe, islands in the Mediterranean Sea, south of Sicily (Italy)",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "35 50 N, 14 35 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "316 sq km"
+      },
+      {
+       "label": "land",
+       "text": "316 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than twice the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "196.8 km (excludes 56 km for the island of Gozo)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      },
+      {
+       "label": "exclusive fishing zone",
+       "text": "25 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "Mediterranean; mild, rainy winters; hot, dry summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly low, rocky, flat to dissected plains; many coastal cliffs",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Ta'Dmejrek on Dingli Cliffs 253 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Mediterranean Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "limestone, salt, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "25.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 22.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 3.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0% (2022 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "1.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "66.4% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "39 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "most of the population lives on the eastern half of Malta, the largest of the three inhabited islands",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "occasional droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "the country is an archipelago, with only the three largest islands (Malta, Ghawdex or Gozo, and Kemmuna or Comino) inhabited; numerous bays provide good harbors",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "521,828 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "271,180"
+      },
+      {
+       "label": "female",
+       "text": "250,648"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Maltese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Maltese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Maltese (descendants of ancient Carthaginians and Phoenicians with strong elements of Italian and other Mediterranean stock)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Maltese (official) 90.1%, English (official) 6%, multilingual 3%, other 0.9% (2005 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic (official) more than 90% (2006 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "14.5% (male 35,034/female 33,181)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "62.4% (male 151,836/female 141,248)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "23.1% (2024 est.) (male 50,153/female 58,278)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "54.1 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "21.2 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "32.9 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "42.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "42.4 years"
+      },
+      {
+       "label": "female",
+       "text": "44.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.65% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "7.67 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.65 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "7.5 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of the population lives on the eastern half of Malta, the largest of the three inhabited islands",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "94.9% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.28% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "213,000 VALLETTA (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.86 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.02 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "29.3 years (2020 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data refers to the average of the different childbearing ages of first-order births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "8 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.6 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "4.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "4.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "83.6 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "81.5 years"
+      },
+      {
+       "label": "female",
+       "text": "85.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.18 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.57 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "10.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "16.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "7.86 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "4.4 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "28.9% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.07 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.8 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "2.34 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "2.51 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.42 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "23.9% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "20.2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "0.7% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "52% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.7% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "12.5% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "16 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "17 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Malta"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Malta"
+      },
+      {
+       "label": "local long form",
+       "text": "Repubblika ta' Malta"
+      },
+      {
+       "label": "local short form",
+       "text": "Malta"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin is unclear; the name may come from the ancient term <em>mel</em>, meaning \"high\" and probably referring to the island's rocks; the ancient Greeks called the island \"Melite,\" possibly from the Greek word <em>meli,</em> meaning \"honey\" and referring to the island's honey production"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Valletta"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "35 53 N, 14 30 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "named in honor of Jean Parizot de la VALETTE, the Grand Master of the Order of Saint John (crusader knights), who founded the city in 1566"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "68 localities (<em>Il-lokalita</em>); Attard, Balzan, Birgu, Birkirkara, Birzebbuga, Bormla, Dingli, Fgura, Floriana, Fontana, Ghajnsielem, Gharb, Gharghur, Ghasri, Ghaxaq, Gudja, Gzira, Hamrun, Iklin, Imdina, Imgarr, Imqabba, Imsida, Imtarfa, Isla, Kalkara, Kercem, Kirkop, Lija, Luqa, Marsa, Marsaskala, Marsaxlokk, Mellieha, Mosta, Munxar, Nadur, Naxxar, Paola, Pembroke, Pieta, Qala, Qormi, Qrendi, Rabat, Rabat (Ghawdex), Safi, San Giljan/Saint Julian, San Gwann/Saint John, San Lawrenz/Saint Lawrence, Sannat, San Pawl il-Bahar/Saint Paul's Bay, Santa Lucija/Saint Lucia, Santa Venera/Saint Venera, Siggiewi, Sliema, Swieqi, Tarxien, Ta' Xbiex, Valletta, Xaghra, Xewkija, Xghajra, Zabbar, Zebbug, Zebbug (Ghawdex), Zejtun, Zurrieq",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of English common law and civil law based on the Roman and Napoleonic civil codes; subject to European Union law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "many previous; latest adopted 21 September 1964"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposals (Acts of Parliament) require at least two-thirds majority vote by the House of Representatives; passage of Acts requires majority vote by referendum, followed by final majority vote by the House and assent of the president of the republic"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Malta"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age (16 in local council elections); universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by the House of Representatives for a single 5-year term; following legislative elections, the president usually appoints the leader of the majority party or majority coalition as prime minister for a 5-year term; deputy prime minister appointed by the president on the advice of the prime minister"
+      },
+      {
+       "label": "most recent election date",
+       "text": "27 March 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024:  </em>Myriam Spiteri DEBONO (PL) elected president; House of Representatives vote - unanimous<br /><em><br />2019:</em> George VELLA (PL) elected president; House of Representatives vote - unanimous"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "by March 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "House of Representatives (Il-Kamra Tad-Deputati)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "65 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "3/26/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Labour Party (LP) (44); Nationalist Party (PN) (35)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "29.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Appeal (consists of either 1 or 3 judges); Constitutional Court (consists of 3 judges); Court of Criminal Appeal (consists of either 1 or 3 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Court of Appeal and Constitutional Court judges appointed by the president, usually on the advice of the prime minister; judges of both courts serve until age 65"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Civil Court (divided into the General Jurisdiction Section, Family Section, and Voluntary Section); Criminal Court; Court of Magistrates; Gozo Courts (for the islands of Gozo and Comino)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "AD+PD or ADPD (formed from the merger of Democratic Alternative or AD and Democratic Party (Partit Demokratiku) or PD)<br />Labor Party (Partit Laburista) or PL <br />Nationalist Party (Partit Nazzjonalista) or PN",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "Australia Group, C, CD, CE, EAPC, EBRD, ECB, EIB, EMU, EU, FAO, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO (partner), NSG, OAS (observer), OPCW, OSCE, PCA, PFP, Schengen Convention, UN, UNCTAD, UNESCO, UNIDO, Union Latina (observer), UNWTO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "21 September 1964 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 21 September (1964); Republic Day, 13 December (1974)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> two equal vertical bands of white (left side) and red; in the upper-left corner is the George Cross, edged in red<br /><br /><strong>history:</strong> according to legend, the colors come from the red-and-white checkered banner of Count Roger of Sicily, who removed a bicolored corner and granted it to Malta in 1091, but the colors more likely come from the Knights of Saint John, who ruled Malta from 1530 to 1798; in 1942, Britain's King George VI awarded the George Cross to the islanders for their exceptional bravery and gallantry in World War II, and the George Cross bordered in red was added to the flag after independence in 1964",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Maltese eight-pointed cross",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "<p>Adopted in 1988, Malta’s coat of arms has a shield displaying the national flag, with olive and palm branches on each side symbolizing peace. On top of the shield is a golden crown in the shape of a fortification with five turrets, representing Malta's forts. The white ribbon below the shield displays the name <em>Repubblika ta' Malta</em> (<em>Republic of Malta</em>).</p>",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"L-Innu Malti\" (The Hymn of Malta)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Dun Karm PSAILA/Robert SAMMUT"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1945; written in the form of a prayer to bind together the political parties and the country"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "3 (all cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "City of Valletta; Ħal Saflieni Hypogeum; Megalithic Temples of Malta"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

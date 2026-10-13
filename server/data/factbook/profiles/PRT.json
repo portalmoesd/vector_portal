@@ -1,0 +1,1095 @@
+{
+ "iso3": "PRT",
+ "gec": "po",
+ "name": "Portugal",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>A global maritime power during the 15th and 16th centuries, Portugal lost much of its wealth and status with the destruction of Lisbon in a 1755 earthquake, occupation during the Napoleonic Wars, and the independence of Brazil, its wealthiest colony, in 1822. A revolution deposed the monarchy in 1910, and for most of the next six decades, repressive governments ran the country. In 1974, a left-wing military coup ushered in broad democratic reforms. The following year, Portugal granted independence to all its African colonies. Portugal is a founding member of NATO and entered the EC (now the EU) in 1986.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southwestern Europe, bordering the North Atlantic Ocean, west of Spain",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "39 30 N, 8 00 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "92,090 sq km"
+      },
+      {
+       "label": "land",
+       "text": "91,470 sq km"
+      },
+      {
+       "label": "water",
+       "text": "620 sq km"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> includes Azores and Madeira Islands"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Virginia",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,224 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Spain 1,224 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,793 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "maritime temperate; cool and rainy in north, warmer and drier in south",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "the west-flowing Tagus River divides the country: the north is mountainous toward the interior, while the south is characterized by rolling plains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Ponta do Pico (Pico or Pico Alto) on Ilha do Pico in the Azores 2,351 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Atlantic Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "372 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "fish, forests (cork), iron ore, copper, zinc, tin, tungsten, silver, gold, uranium, marble, clay, gypsum, salt, arable land, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "43.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 10.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 9.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 23.6% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "36.6% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "5.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "5,662 sq km (2019)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "concentrations are primarily along or near the Atlantic coast; both Lisbon and the second largest city, Porto, are coastal cities",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "Azores subject to severe earthquakes <br /><br /><strong>volcanism:</strong> limited volcanic activity in the Azores Islands; Fayal or Faial (1,043 m) last erupted in 1958; most volcanoes have not erupted in centuries; historically active volcanoes include Agua de Pau, Furnas, Pico, Picos Volcanic System, San Jorge, Sete Cidades, and Terceira",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "Azores and Madeira Islands occupy strategic locations along western sea approaches to Strait of Gibraltar; they are two of the four North Atlantic archipelagos that make up Macaronesia; the others are the Canary Islands (Spain) and Cabo Verde",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10,194,277 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "4,831,166"
+      },
+      {
+       "label": "female",
+       "text": "5,363,111"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Portuguese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Portuguese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Portuguese 95%; citizens from Portugal’s former colonies in Africa, Asia (Han Chinese), and South America (Brazilian) and other foreign born 5%",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Portuguese (official), Mirandese (official, but locally used)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Catholic 68.1%, not applicable 12.9%, no religion 12.0%, no response 2.2%, Protestant 1.8%, other 1.0%; less than 1%: other Christians, Orthodox, Muslim (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent population 15 years of age and older"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "12.7% (male 662,419/female 631,284)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "65% (male 3,264,766/female 3,371,087)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "22.3% (2024 est.) (male 908,578/female 1,369,043)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "54.3 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "19.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "35 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "2.9 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "46.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "44.3 years"
+      },
+      {
+       "label": "female",
+       "text": "48.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.11% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "8.03 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "10.92 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "1.78 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "concentrations are primarily along or near the Atlantic coast; both Lisbon and the second largest city, Porto, are coastal cities",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "67.9% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.44% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.001 million LISBON (capital), 1.325 million Porto (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.66 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.9 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "29.9 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "15 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "2.1 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "81.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "78.8 years"
+      },
+      {
+       "label": "female",
+       "text": "85.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.46 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.71 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 97.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 2.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.7% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "10.6% of GDP (2022)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "14.8% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "5.85 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "3.5 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "20.8% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10.37 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.62 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "6.04 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "1.34 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.37 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.7% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "26.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "0.9% (2016 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "50.6% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.6% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "10.4% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "18 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Portuguese Republic"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Portugal"
+      },
+      {
+       "label": "local long form",
+       "text": "Republica Portuguesa"
+      },
+      {
+       "label": "local short form",
+       "text": "Portugal"
+      },
+      {
+       "label": "etymology",
+       "text": "name derives from the Roman designation \"Portus Cale,\" meaning \"Port of Cale;\" Cale was located in present-day northern Portugal, and its name is said to come from the Latin word <em>calere </em>(to be warm) because the harbor never iced over"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Lisbon"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "38 43 N, 9 08 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "time zone note",
+       "text": "Portugal has two time zones, including the Azores (UTC-1)"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the name is unclear; some trace it back to the legendary Greek hero Ulysses; others claim a derivation from the Phoenician <em>alis-ubbo</em>, or \"joyful bay\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "18 districts (<em>distritos</em>, singular - <em>distrito</em>) and 2 autonomous regions* (<em>regioes autonomas</em>, singular - <em>regiao autonoma</em>); Aveiro, Acores (Azores)*, Beja, Braga, Braganca, Castelo Branco, Coimbra, Evora, Faro, Guarda, Leiria, Lisboa (Lisbon), Madeira*, Portalegre, Porto, Santarem, Setubal, Viana do Castelo, Vila Real, Viseu",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system; Constitutional Court reviews legislative acts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 2 April 1976, effective 25 April 1976"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Assembly of the Republic; adoption requires two-thirds majority vote of Assembly members"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Portugal"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years; 6 years if from a Portuguese-speaking country"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); following legislative elections, the president usually appoints the leader of the majority party or majority coalition as prime minister"
+      },
+      {
+       "label": "most recent election date",
+       "text": "24 January 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2021:</em> Marcelo REBELO DE SOUSA reelected president in the first round; percent of vote - Marcelo REBELO DE SOUSA (PSD) 60.7%, Ana GOMES (ran as an independent but is a member of PS) 13%, Andre VENTURA (CH) 11.9%, João FERREIRA (PCP-PEV) 4.3%, other 10.1%<br /><br /><em>2016:</em> Marcelo REBELO DE SOUSA elected president in the first round; percent of vote - Marcelo REBELO DE SOUSA (PSD) 52%, António SAMPAIO DA NOVOA (independent) 22.9%, Marisa MATIAS (BE) 10.1%, Maria DE BELEM ROSEIRA (PS) 4.2%, other 10.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "January 2026"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> there is also a Council of State that acts as a consultative body to the president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Assembly of the Republic (Assembleia da Republica)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "230 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/18/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Social Democratic Party (PPD/PSD) - Democratic and Social Centre - People's Party (CDS-PP) (88); Chega (CH) (60); Socialist Party (PS) (58); Other (24)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "35.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Supremo Tribunal de Justica (consists of 12 justices); Constitutional Court or Tribunal Constitucional (consists of 13 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court justices nominated by the president and appointed by the Assembly of the Republic; judges can serve for life; Constitutional Court judges - 10 elected by the Assembly and 3 elected by the other Constitutional Court judges; judges elected for 6-year nonrenewable terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Supreme Administrative Court (Supremo Tribunal Administrativo); Audit Court (Tribunal de Contas); appellate, district, and municipal courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Democratic Alliance or AD (2024 electoral alliance in the Azores, includes PSD, CDS-PP, PPM)<br />Democratic and Social Center/People's Party (Partido do Centro Democratico Social-Partido Popular) or CDS-PP<br />Ecologist Party \"The Greens\" or \"Os Verdes\" (Partido Ecologista-Os Verdes) or PEV<br />Enough (Chega)<br />Liberal Initiative (Iniciativa Liberal) or IL<br />LIVRE or L<br />People-Animals-Nature Party (Pessoas-Animais-Natureza) or PAN<br />People's Monarchist Party or PPM<br />Portuguese Communist Party (Partido Comunista Portugues) or PCP<br />Social Democratic Party (Partido Social Democrata) or PSD (formerly the Partido Popular Democratico or PPD)<br />Socialist Party (Partido Socialista) or PS<br />The Left Bloc (Bloco de Esquerda) or BE or O Bloco<br />Unitary Democratic Coalition (Coligacao Democratica Unitaria) or CDU (includes PCP and PEV) (2024)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ADB (nonregional member), AfDB (nonregional member), Australia Group, BIS, CD, CE, CERN, CPLP, EAPC, EBRD, ECB, EIB, EMU, ESA, EU, FAO, FATF, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OPCW, OSCE, Pacific Alliance (observer), Paris Club (associate), PCA, Schengen Convention, SELEC (observer), UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNOOSA, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "1143 (Kingdom of Portugal recognized); 1 December 1640 (independence reestablished after 60 years of Spanish rule); 5 October 1910 (republic proclaimed)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Portugal Day (Dia de Portugal), 10 June (1580)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> also called Camoes Day, the day that revered national poet Luis DE CAMOES (1524-80) died"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> two vertical bands of green (left side, two-fifths) and red (three-fifths), with the national coat of arms (armillary sphere and national shield) centered on the dividing line<br /><br /><strong>meaning:</strong> explanations for the color meanings are ambiguous, but a popular interpretation says that green symbolizes hope and red the blood of those defending the nation",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "armillary sphere (a spherical astrolabe for modeling objects in the sky)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"A Portugesa\" (The Song of the Portuguese)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Henrique LOPES DE MENDOCA/Alfredo KEIL"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1911; originally written to protest the Portuguese monarchy's acquiescence to the 1890 British ultimatum forcing Portugal to give up areas of Africa"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "17 (16 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Historic Évora (c); Central Zone of the Town of Angra do Heroismo in the Azores (c); Cultural Landscape of Sintra (c); Laurisilva of Madeira (n); Historic Guimarães (c); Monastery of the Hieronymites and Tower of Belém in Lisbon (c); Convent of Christ in Tomar (c); Prehistoric Rock Art Sites in the Côa Valley and Siega Verde (c); University of Coimbra – Alta and Sofia (c); Sanctuary of Bom Jesus do Monte in Braga (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

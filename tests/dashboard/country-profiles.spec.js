@@ -70,6 +70,21 @@ const GEORGIA = {
     'NY.GDP.MKTP.CD': [{ year: 2022, value: 24.6e9 }, { year: 2023, value: 30.5e9 }, { year: 2024, value: 33.3e9 }],
     'SP.POP.TOTL': [{ year: 2022, value: 3712500 }, { year: 2023, value: 3728282 }, { year: 2024, value: 3694600 }],
   },
+  texts: {
+    source: { name: 'CIA World Factbook', url: 'https://github.com/factbook/factbook.json/tree/abc', dataDate: '2026-01', retrievedAt: '2026-10-13T00:00:00Z', discontinued: '2026-02-04' },
+    sections: {
+      Introduction: [{ field: 'Background', content: { text: 'The region of present-day Georgia once contained the ancient kingdoms of Colchis.<br /><br />Second paragraph.', items: [] }, edited: false }],
+      Geography: [
+        { field: 'Location', content: { text: 'Southwestern Asia, bordering the Black Sea', items: [] }, edited: false },
+        { field: 'Area', content: { text: null, items: [{ label: 'total', text: '69,700 sq km' }, { label: 'land', text: '69,700 sq km' }] }, edited: false },
+      ],
+      'People and Society': [{ field: 'Languages', content: { text: null, items: [{ label: 'Languages', text: 'Georgian (official) 87.6%' }] }, edited: true }],
+      Government: [
+        { field: 'Government type', content: { text: 'parliamentary republic', items: [] }, edited: false },
+        { field: 'Executive branch', content: { text: null, items: [{ label: 'election/appointment process', text: 'president elected by a College of Electors' }] }, edited: false },
+      ],
+    },
+  },
 };
 
 async function preparePage(page, { user = ADMIN, locale = 'en' } = {}) {
@@ -154,9 +169,20 @@ test('profile: breadcrumb, header, tiles with year and source, only sections wit
   await expect(page.locator('.cp-tile[data-code="SL.UEM.TOTL.ZS"] .cp-tile__value')).toHaveText('No data');
 
   // Trade has no values at all, so the section and its nav entry are absent.
-  await expect(page.locator('.cp-section')).toHaveCount(3);
-  await expect(page.locator('#cpTocList a')).toHaveText(['Overview', 'People', 'Economy']);
+  await expect(page.locator('.cp-section')).toHaveCount(6);
+  await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'Geography', 'People', 'Government', 'Economy']);
   await expect(page.locator('#section-trade')).toHaveCount(0);
+
+  // Factbook text: HTML rendered, sub-items as a list, attribution with snapshot and discontinuation.
+  await expect(page.locator('#section-introduction .cp-text-field__text')).toContainText('kingdoms of Colchis');
+  await expect(page.locator('#section-introduction .cp-text-field__text br')).toHaveCount(2);
+  await expect(page.locator('#section-geography .cp-text-field[data-field="Area"] dt')).toHaveText(['total', 'land']);
+  await expect(page.locator('#section-geography .cp-fb-note')).toContainText('CIA World Factbook');
+  await expect(page.locator('#section-geography .cp-fb-note')).toContainText('snapshot 2026-01');
+  await expect(page.locator('#section-geography .cp-fb-note')).toContainText('publication discontinued on 04/02/2026');
+  await expect(page.locator('#section-people .cp-text-block__title')).toHaveText('From the World Factbook');
+  await expect(page.locator('#section-people .cp-text-field__label .pill')).toHaveText('edited');
+  await expect(page.locator('#section-government .cp-text-field')).toHaveCount(2);
   await expect(page.locator('#section-economy .cp-row[data-code="SL.UEM.TOTL.ZS"] .cp-row__value')).toHaveText('No data');
   await expect(page.locator('#section-people .cp-row[data-code="SP.DYN.LE00.IN"] .cp-row__value')).toHaveText('73.7 years');
   await expect(page.locator('#section-people .cp-row[data-code="SP.DYN.LE00.IN"] .cp-src__year')).toHaveText('2023');
@@ -182,7 +208,8 @@ test('pages are bilingual: Georgian names and labels in the ka locale', async ({
   await expect(page.locator('.cp-header__name')).toHaveText('საქართველო');
   await expect(page.locator('.cp-header__alt')).toHaveText('Georgia');
   await expect(page.locator('.cp-tile[data-code="SL.UEM.TOTL.ZS"] .cp-tile__value')).toHaveText('მონაცემები არ არის');
-  await expect(page.locator('#cpTocList a').first()).toHaveText('მიმოხილვა');
+  await expect(page.locator('#cpTocList a').first()).toHaveText('შესავალი');
+  await expect(page.locator('#cpTocList a').nth(1)).toHaveText('მიმოხილვა');
 });
 
 test('non-admin users are bounced to their dashboard', async ({ page }) => {

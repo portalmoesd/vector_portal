@@ -1,0 +1,1097 @@
+{
+ "iso3": "TON",
+ "gec": "tn",
+ "name": "Tonga",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "The first humans arrived in Tonga around 1000 B.C. The islands’ politics were highly centralized under the Tu’i Tonga, or Tongan king, by A.D. 950, and by 1200, the Tu’i Tonga had expanded his influence throughout Polynesia and into Melanesia and Micronesia. The Tongan Empire began to decline in the 1300s, with civil wars, a military defeat to Samoa, and internal political strife. By the mid-1500s, some Tu’i Tongans were ethnic Samoan, and day-to-day administration of Tonga was transferred to a new position occupied by ethnic Tongans.<br /><br />Dutch navigators explored the islands in the 1600s, followed by the British in the 1770s, who named them the Friendly Islands. Between 1799 and 1852 Tonga went through a period of war and disorder. In the 1830s, a low-ranking chief from Ha’apai began to consolidate control over the islands and was crowned King George TUPOU I in 1845, establishing the only still-extant Polynesian monarchy. During TUPOU's reign (1845–93), Tonga became a unified and independent country with a modern constitution (1875), legal code, and administrative structure. In separate treaties, Germany (1876), Great Britain (1879), and the US (1888) recognized Tonga’s independence. His son and successor, King George TUPOU II, agreed to enter a protectorate agreement with the UK in 1900 after rival Tongan chiefs tried to overthrow him. As a protectorate, Tonga never completely lost its indigenous governance, but it did become more isolated and the social hierarchy became more stratified between a group of nobles and a large class of commoners. Today, about one third of parliamentary seats are reserved for nobles.<br /><br />Tonga regained full control of domestic and foreign affairs and became a fully independent nation within the Commonwealth in 1970. A pro-democracy movement gained steam in the early 2000s, led by ‘Akilisi POHIVA, and in 2006, riots broke out in Nuku’alofa to protest the lack of progress on reform. To appease the activists, in 2008, King George TUPOU V announced he was relinquishing most of his powers leading up to parliamentary elections in 2010 and henceforth most of the monarch’s governmental decisions, except those relating to the judiciary, were to be made in consultation with the prime minister. The 2010 Legislative Assembly was called Tonga’s first democratically elected Parliament. King George TUPOU V died in 2012 and was succeeded by his brother Crown Prince Tupouto‘a Lavaka who ruled as George TUPOU VI. In 2015, ‘Akalisi POHIVA became Tonga’s first non-noble prime minister.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Oceania, archipelago in the South Pacific Ocean, about two-thirds of the way from Hawaii to New Zealand",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "20 00 S, 175 00 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Oceania",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "747 sq km"
+      },
+      {
+       "label": "land",
+       "text": "717 sq km"
+      },
+      {
+       "label": "water",
+       "text": "30 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "four times the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "419 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; modified by trade winds; warm season (December to May), cool season (May to December)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly flat islands with limestone bedrock formed from uplifted coral formation; others have limestone overlying volcanic rock",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Kao Volcano on Kao Island 1,046 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Pacific Ocean 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "arable land, fish",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "48.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 27.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 15.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 5.6% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "12.1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "39.3% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "0 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "over two thirds of the population lives on the island of Tongatapu; only 45 of the nation's 171 islands are occupied",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "cyclones (October to April); earthquakes and volcanic activity on Fonuafo'ou <br /><br /><strong>volcanism:</strong> moderate volcanic activity; Fonualei (180 m) has had frequent activity in recent years, and Niuafo'ou (260 m) has forced evacuations; other historically active volcanoes include Late and Tofua",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "the western islands (making up the Tongan Volcanic Arch) are all of volcanic origin; the eastern islands are nonvolcanic and are composed of coral limestone and sand",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "104,519 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "52,421"
+      },
+      {
+       "label": "female",
+       "text": "52,098"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Tongan(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Tongan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Tongan 96.5%, other (European, Fijian, Samoan, Indian, Chinese, other Pacific Islander, other Asian, other) 3.5% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Tongan only 85%, Tongan and other language 13.9%, Tongan not used at home 1.1% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent language use at home of persons aged 5 and older"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Protestant 63.9% (Free Wesleyan Church 34.2%, Free Church of Tonga 11.3%, Church of Tonga 6.8%, Seventh Day Adventist 2.5%, Assembly of God 2.5%, Tokaikolo/Maamafo'ou 1.5%, Constitutional Church of Tonga 1.2%, other Protestant 4%), Church of Jesus Christ 19.7%, Roman Catholic 13.7%, other 2.1%, none 0.6%, no answer 0.1% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "29.3% (male 15,627/female 15,142)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "63.2% (male 33,445/female 32,867)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "7.4% (2024 est.) (male 3,534/female 4,274)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "57.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "45.2 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "11.9 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "8.4 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "25.4 years"
+      },
+      {
+       "label": "female",
+       "text": "26.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.37% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "19.43 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "4.98 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-18.18 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "over two thirds of the population lives on the island of Tongatapu; only 45 of the nation's 171 islands are occupied",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "23.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.99% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "23,000 NUKU'ALOFA (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.83 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "24.9 years (2012 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "67 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11.5 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "10.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "78 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "76.4 years"
+      },
+      {
+       "label": "female",
+       "text": "79.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2.59 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.28 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 98.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 98.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 1.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 1.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6.3% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8.7% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "1.01 physicians/1,000 population (2021)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 99.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "48.2% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.31 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.03 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.17 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.11 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "30.5% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "46.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15.8% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "0.8% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "50.7% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.4% (2019)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "10.1% (2019)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "2.8% (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.3% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "9.3% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "91.1% (2019 est.)"
+      },
+      {
+       "label": "male",
+       "text": "83.8% (2019 est.)"
+      },
+      {
+       "label": "female",
+       "text": "97.6% (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18 years (2020 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16 years (2020 est.)"
+      },
+      {
+       "label": "female",
+       "text": "19 years (2020 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Kingdom of Tonga"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Tonga"
+      },
+      {
+       "label": "local long form",
+       "text": "Pule'anga Fakatu'i 'o Tonga"
+      },
+      {
+       "label": "local short form",
+       "text": "Tonga"
+      },
+      {
+       "label": "former",
+       "text": "Friendly Islands"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is of local origin and is said to mean \"island;\" the former name, the Friendly Islands, came from Captain James COOK in 1773, based on the welcome he received from the inhabitants"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "constitutional monarchy",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Nuku'alofa"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "21 08 S, 175 12 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+13 (18 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins first Sunday in November; ends second Sunday in January"
+      },
+      {
+       "label": "etymology",
+       "text": "name is said to be composed of the local words <em>nuku</em>, meaning \"residence or abode,\" and <em>alofa</em>, meaning \"love;\" it may also mean \"the south,\" describing Tonga's position in relation to most other Polynesian islands"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "5 island divisions; 'Eua, Ha'apai, Ongo Niua, Tongatapu, Vava'u",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "English common law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "adopted 4 November 1875, revised 1988, 2016"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Legislative Assembly; passage requires approval by the Assembly in each of three readings, the unanimous approval of the Privy Council (a high-level advisory body to the monarch), the Cabinet, and assent to by the monarch"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Tonga; if a child is born out of wedlock, the mother must be a citizen of Tonga"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "21 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; prime minister and deputy prime minister indirectly elected by the Legislative Assembly and appointed by the monarch"
+      },
+      {
+       "label": "most recent election date",
+       "text": "15 December 2025"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2025:  </em>Fatafehi FAKAFANUA elected prime minister by the Legislative Assembly; Fatafehi FAKAFANUA (Independent) 16 votes, Aisake Valu EKE (Independent) 10 votes<br /><em><br />2024: </em>Aisake Valu EKE elected prime minister by the Legislative Assembly; Aisake Valu EKE (Independent) 16 votes, Viliami LATU (Independent) 8<em><br /></em>"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> a Privy Council advises the monarch"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Legislative Assembly (Fale Alea)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "30 (17 directly elected; 9 indirectly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/20/2025"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "3.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2025"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Appeal (consists of the court president and a number of judges determined by the monarch)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judge appointments and tenures made by the King in Privy Council and subject to consent of the Legislative Assembly"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Supreme Court; Magistrates' Courts; Land Courts"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> appeals beyond the Court of Appeal are brought before the King in Privy Council, the monarch's advisory organ that has both judicial and legislative powers"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Democratic Party of the Friendly Islands or DPFI or PTOA <br />Tonga People's Party (Paati ʻa e Kakai ʻo Tonga) or PAK or TPPI",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, ADB, AOSIS, C, FAO, G-77, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, IHO, IMF, IMO, IMSO, Interpol, IOC, IPU, ITU, ITUC (NGOs), OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, UNIDO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "4 June 1970 (from UK protectorate status)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Official birthday of King TUPOU VI, 4 July (1959)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the monarch's actual birthday is 12 July 1959, 4 July (2015) is the day the king was crowned; Constitution Day (National Day), 4 November (1875)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> red with a red cross on a white rectangle in the upper-left corner<br /><br /><strong>meaning:</strong> the cross stands for Christianity in Tonga, red for Christ's blood and sacrifice, and white for purity",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "red cross on white field",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Ko e fasi 'o e tu'i 'o e 'Otu Tonga\" (Song of the King of the Tonga Islands)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Uelingatoni Ngu TUPOUMALOHI/Karl Gustavus SCHMITT"
+      },
+      {
+       "label": "history",
+       "text": "in use since 1874; more commonly known as \"Fasi Fakafonua\" (National Song)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

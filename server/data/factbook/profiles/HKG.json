@@ -1,0 +1,928 @@
+{
+ "iso3": "HKG",
+ "gec": "hk",
+ "name": "Hong Kong",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "The UK seized Hong Kong in 1841, and China formally ceded it the following year at the end of the First Opium War. The Kowloon Peninsula was added in 1860 at the end of the Second Opium War, and the UK obtained a 99-year lease of the New Territories in 1898. Pursuant to a UK-China agreement in 1984, Hong Kong became the Hong Kong Special Administrative Region (HKSAR) of the People's Republic of China as of 1 July 1997. In this agreement, China promised that, under its \"one country, two systems\" formula, China's socialist economic and strict political system would not be imposed on Hong Kong and that Hong Kong would enjoy a \"high degree of autonomy\" in all matters except foreign and defense affairs for the next 50 years. <br /><br />After the handover, Hong Kong continued to enjoy success as an international financial center. However, growing Chinese political influence and dissatisfaction with the Hong Kong Government in the 2010s became central issues and led to considerable civil unrest, including large-scale pro-democracy demonstrations in 2019 after the HKSAR attempted to revise a local ordinance to allow extraditions to mainland China. In response to the protests, the governments of the HKSAR and China reduced the city's autonomy and placed new restrictions on the rights of Hong Kong residents, moves that were widely criticized as contravening obligations under the Hong Kong Basic Law and the Sino-British Joint Declaration. Democratic lawmakers and political figures were arrested in a widespread crackdown, while others fled abroad. At the same time, dozens of civil society groups and several independent media outlets were closed or disbanded. In 2021, Beijing imposed a more restrictive electoral system, restructuring the Legislative Council (LegCo) and allowing only government-approved candidates to run for office. The changes ensured that virtually all seats in the 2021 LegCo election went to pro-establishment candidates and effectively ended political opposition to Beijing. In 2024, the LegCo passed a new national security law (Article 23 of the Basic Law) further expanding the Hong Kong Government's power to curb dissent.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Asia, bordering the South China Sea and China",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "22 15 N, 114 10 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Southeast Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,108 sq km"
+      },
+      {
+       "label": "land",
+       "text": "1,073 sq km"
+      },
+      {
+       "label": "water",
+       "text": "35 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "six times the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "33 km"
+      },
+      {
+       "label": "regional borders",
+       "text": "China 33 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "733 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "subtropical monsoon; cool and humid in winter, hot and rainy from spring through summer, warm and sunny in fall",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "hilly to mountainous with steep slopes; lowlands in north",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Tai Mo Shan 958 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "South China Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "outstanding deepwater harbor, feldspar",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "3.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 1.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "0% (2022 est.)"
+      },
+      {
+       "label": "other",
+       "text": "96.2% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "10 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "population fairly evenly distributed",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "occasional typhoons",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "consists of a mainland area (the New Territories) and over 200 islands",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7,305,556 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "3,367,222"
+      },
+      {
+       "label": "female",
+       "text": "3,938,334"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Chinese/Hong Konger"
+      },
+      {
+       "label": "adjective",
+       "text": "Chinese/Hong Kong"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Chinese 91.6%, Filipino 2.7%, Indonesian 1.9%, other 3.7% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Cantonese (official) 85.4%, English (official) 4.5%, Putonghua (official) 2.2%, other Chinese dialects 2.8%, other 2%, persons under 5 or mute 3.2% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "<p>世界概况, 必須擁有的基本資料参考书 (Cantonese)</p> <br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent population by usual spoken language"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Buddhist or Taoist 27.9%, Protestant 6.7%, Roman Catholic 5.3%, Muslim 4.2%, Hindu 1.4%, Sikh 0.2%, other or none 54.3% (2016 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> many people practice Confucianism, regardless of their religion or not having a religious affiliation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "13.2% (male 505,718/female 459,956)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "64.8% (male 2,123,216/female 2,609,102)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "21.9% (2024 est.) (male 738,878/female 860,951)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "56.7 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "20.8 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "35.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "2.8 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "47.6 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "45.3 years"
+      },
+      {
+       "label": "female",
+       "text": "48.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.09% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "7.45 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.16 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "1.64 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population fairly evenly distributed",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "100% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.58% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "7.685 million Hong Kong (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.1 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.81 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.86 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.86 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "29.8 years (2008 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "2.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "84 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "81.3 years"
+      },
+      {
+       "label": "female",
+       "text": "86.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.24 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.6 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: NA"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: NA"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 230,
+    "content": {
+     "text": "2.04 physicians/1,000 population (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 240,
+    "content": {
+     "text": "4.9 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 250,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 96.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 96.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 3.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 3.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 260,
+    "content": {
+     "text": "49.8% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.8% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "15.7% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "17 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Hong Kong Special Administrative Region"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Hong Kong"
+      },
+      {
+       "label": "local long form",
+       "text": "Heung Kong Takpit Hangching Ku (Eitel/Dyer-Ball)"
+      },
+      {
+       "label": "local short form",
+       "text": "Heung Kong (Eitel/Dyer-Ball)"
+      },
+      {
+       "label": "abbreviation",
+       "text": "HK"
+      },
+      {
+       "label": "etymology",
+       "text": "probably an imprecise phonetic rendering of the Cantonese name meaning \"fragrant harbor\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential limited democracy; a special administrative region of the People's Republic of China",
+     "items": []
+    }
+   },
+   {
+    "field": "Dependency status",
+    "order": 30,
+    "content": {
+     "text": "special administrative region of the People's Republic of China",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 40,
+    "content": {
+     "text": "mixed system of common law based on the English model and Chinese customary law (in matters of family and land tenure); China's imposition of National Security Law incorporates elements of Chinese civil law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 50,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous (governance documents while under British authority); latest drafted April 1988 to February 1989, approved March 1990, effective 1 July 1997 (Basic Law of the Hong Kong Special Administrative Region of the People's Republic of China serves as the constitution)"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Standing Committee of the National People’s Congress (NPC), the People’s Republic of China State Council, or the Special Administrative Region of Hong Kong; submittal of proposals to the NPC requires two-thirds majority vote by the Legislative Council of Hong Kong, approval by two thirds of Hong Kong’s deputies to the NPC, and approval by the Hong Kong chief executive; final passage requires approval by the NPC"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> since 1990, China's National People's Congress has interpreted specific articles of the Basic Law"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 60,
+    "content": {
+     "text": "see China",
+     "items": []
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 70,
+    "content": {
+     "text": "18 years of age in direct elections for 20 of the 90 Legislative Council seats and all of the seats in 18 district councils; universal for permanent residents living in the territory of Hong Kong for the past 7 years",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in indirect elections, suffrage is limited to about 220,000 members of functional constituencies for the other 70 legislature seats and a 1,500-member election committee for the chief executive drawn from broad sectoral groupings, central government bodies, municipal organizations, and elected Hong Kong officials"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by National People's Congress for a 5-year term (eligible for a second term); chief executive indirectly elected by the Election Committee and appointed by the PRC Government for a 5-year term (eligible for a second term)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "<em>president: </em>10 March 2023<em><br /><br />chief executive: </em>8 May 2022"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2022: </em>John LEE was the only candidate and won with over 99% of the vote by the Election Committee<em><br /><br /><em>2017</em>: </em>Carrie LAM elected; Election Committee vote - Carrie LAM (non-partisan) 777, John TSANG (non-partisan) 365, WOO Kwok-hing (non-partisan) 21, 23 ballots rejected (1,186 votes cast)"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "<em>president: </em>March 2028<em><br /><br />chief executive: </em>2027"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> electoral changes that Beijing imposed in March 2021 expanded the Election Committee to 1,500 members"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 90,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Legislative Council or LegCo"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "90"
+      },
+      {
+       "label": "electoral system",
+       "text": "20 members directly elected; 70 members indirectly elected"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full"
+      },
+      {
+       "label": "most recent election date",
+       "text": "7 December 2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Democratic Alliance for the Betterment and Progress of Hong Kong (DAB) 20, Federation of Hong Kong and Kowloon Trade Unions (HKFTU) 8, Business and Professionals Alliance for Hong Kong (BPA) 7,  Liberal (LP) 4, New People's Party (NPP) 3, Hong Kong Federation of Education Workers (HKFEW) 2, Federation of Hong Kong and Kowloon Labour Unions (HKFLU) 2, Professional Power (PP) 1, Roundtable (RT) 1, New Territories Association of Societies (NTAS) 1, Kowloon West New Dynamic (KWND) 1, Independents 40"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> all political candidates are evaluated by the Candidate Eligibility Review Committee (CERC), which was established in April 2022; CERC members are all appointed by the chief executive"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Final Appeal (consists of the chief justice, 3 permanent judges, and 20 non-permanent judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "all judges appointed by the Hong Kong Chief Executive on the recommendation of the Judicial Officers Recommendation Commission, an independent body consisting of the Secretary for Justice, other judges, and judicial and legal professionals; permanent judges serve until normal retirement at age 65, but term can be extended; non-permanent judges appointed for renewable 3-year terms without age limit"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Court (consists of the Court of Appeal and Court of First Instance); District Courts (includes Family and Land Courts); magistrates' courts; specialized tribunals"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 110,
+    "content": {
+     "text": "Business and Professionals Alliance for Hong Kong or BPA <br />Democratic Alliance for the Betterment and Progress of Hong Kong or DAB <br />Federation of Hong Kong and Kowloon Labour Unions or HKFLU <br />Hong Kong Federation of Education Workers or HKFEW <br />Hong Kong Federation of Trade Unions or HKFTU <br />Kowloon West New Dynamic or KWND<br />Liberal Party or LP <br />New People's Party or NPP<br />New Prospect for Hong Kong or NPHK <br />New Territories Association of Societies or NTAS <br />Professional Power or PP <br />Roundtable or RT",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> there is no political party ordinance, so there are no registered political parties; politically active groups register as societies or companies<br /><br /><strong>note 2:</strong> by the end of 2021, the leading pro-democracy figures in Hong Kong had been effectively removed from the political arena under the provisions of Beijing's 2021 electoral changes or via charges under the 2020 national security law; in addition, dozens of pro-democracy organizations, including political parties, unions, churches, civil rights groups, and media organizations have disbanded or closed; as of 2023, nearly all politically active groups were pro-Beijing"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 120,
+    "content": {
+     "text": "ADB, APEC, BIS, FATF, ICC (national committees), IHO, IMF, IMO (associate), Interpol (subbureau), IOC, ISO (correspondent), ITUC (NGOs), UNWTO (associate), UPU, WCO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 130,
+    "content": {
+     "text": "none (special administrative region of China)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 140,
+    "content": {
+     "text": "National Day (Anniversary of the Founding of the People's Republic of China), 1 October (1949)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 1 July (1997) is celebrated as Hong Kong Special Administrative Region Establishment Day"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 150,
+    "content": {
+     "text": "<strong>description:</strong> red with a stylized white Bauhinia flower with five petals in the center of the flag; each petal has a tiny five-pointed red star with a fine red line curving toward the center of the flower<br /><br /><strong>meaning:</strong> the red color is the same as the Chinese flag and represents the motherland, and the five stars also echo the Chinese flag; the Bauhinia flower was developed in Hong Kong the late 19th century and has come to symbolize the region",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 160,
+    "content": {
+     "text": "bauhinia flower",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 170,
+    "content": {
+     "text": "red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Yiyongjun Jinxingqu\" (The March of the Volunteers)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "TIAN Han/NIE Er"
+      },
+      {
+       "label": "history",
+       "text": "official anthem, as a Special Administrative Region of China"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

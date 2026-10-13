@@ -1,0 +1,1093 @@
+{
+ "iso3": "BWA",
+ "gec": "bc",
+ "name": "Botswana",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "In the early 1800s, multiple political entities in what is now Botswana were destabilized or destroyed by a series of conflicts and population movements in southern Africa. By the end of this period, the Tswana ethnic group, who also live across the border in South Africa, had become the most prominent group in the area. In 1852, Tswana forces halted the expansion of white Afrikaner settlers who were seeking to expand their territory northwards into what is now Botswana. In 1885, Great Britain claimed territory that roughly corresponds with modern day Botswana as a protectorate called Bechuanaland. Upon independence in 1966, the British protectorate of Bechuanaland adopted the new name of Botswana, which means \"land of the Tswana.\" <br /><br />More than five decades of uninterrupted civilian leadership, progressive social policies, and significant capital investment have created an enduring democracy and upper-middle-income economy. The ruling Botswana Democratic Party has won every national election since independence; President Mokgweetsi Eric Keabetswe MASISI assumed the presidency in 2018 after the retirement of former President Ian KHAMA due to constitutional term limits. MASISI won his first election as president in 2019, and he is Botswana’s fifth president since independence. Mineral extraction, principally diamond mining, dominates economic activity, though tourism is a growing sector due to the country's conservation practices and extensive nature preserves. Botswana has one of the world's highest rates of HIV/AIDS infection but also one of Africa's most progressive and comprehensive programs for dealing with the disease.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Africa, north of South Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "22 00 S, 24 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "581,730 sq km"
+      },
+      {
+       "label": "land",
+       "text": "566,730 sq km"
+      },
+      {
+       "label": "water",
+       "text": "15,000 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Texas; almost four times the size of Illinois",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,347.15 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Namibia 1,544 km; South Africa 1,969 km; Zambia 0.15 km; Zimbabwe 834 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "semiarid; warm winters and hot summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "predominantly flat to gently rolling tableland; Kalahari Desert in southwest",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Manyelanong Hill 1,495 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "junction of the Limpopo and Shashe Rivers 513 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,013 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "diamonds, copper, nickel, salt, soda ash, potash, coal, iron ore, silver",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "45.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 45.2% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "27.8% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "26.6% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "25 sq km (2014)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "<p>Zambezi (shared with Zambia [s]), Angola, Namibia, Zimbabwe, and Mozambique [m]) - 2,740 km; Limpopo (shared with South Africa [s], Zimbabwe, and Mozambique [m]) - 1,800 km; Okavango river mouth (shared with Angola [s], and Namibia) - 1,600 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth</p>",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Orange (941,351 sq km)"
+      },
+      {
+       "label": "Indian Ocean drainage",
+       "text": "Zambezi (1,332,412 sq km)"
+      },
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "Okavango Basin (863,866 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 170,
+    "content": {
+     "text": "Lower Kalahari-Stampriet Basin, Upper Kalahari-Cuvelai-Upper Zambezi Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "the population is primarily concentrated in the east, with a focus in and around the capital of Gaborone and the eastern city of Francistown; population density remains low in other areas in the country, especially in the Kalahari Desert to the west.",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "periodic droughts; seasonal August winds blow from the west, carrying sand and dust across the country, which can obscure visibility",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "landlocked; sparsely populated with most settlement concentrated in the southern and eastern parts of the country; geography dominated by the Kalahari Desert, which covers about 70% of the country, although the Okavango Delta brings considerable biodiversity as one of the largest inland deltas in the World",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,521,534 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "1,234,898"
+      },
+      {
+       "label": "female",
+       "text": "1,286,636"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Motswana (singular), Batswana (plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Motswana (singular), Batswana (plural)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Tswana (or Setswana) 79%, Kalanga 11%, Basarwa 3%, other, including Kgalagadi and people of European ancestry 7%",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Setswana 77.3%, Sekalanga 7.4%, Shekgalagadi 3.4%, English (official) 2.8%, Zezuru/Shona 2%, Sesarwa 1.7%, Sembukushu 1.6%, Ndebele 1%, other 2.8% (2011 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Christian 79.1%, Badimo 4.1%, other 1.4% (includes Baha'i, Hindu, Muslim, Rastafarian), none 15.2%, unspecified 0.3% (2011 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "28.7% (male 355,583/female 348,863)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "65.2% (male 759,210/female 837,752)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "6.1% (2024 est.) (male 59,513/female 89,747)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "60.9 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "52.1 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "8.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "11.4 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "25.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "26 years"
+      },
+      {
+       "label": "female",
+       "text": "28.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.32% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "21.16 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.8 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.14 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the population is primarily concentrated in the east, with a focus in and around the capital of Gaborone and the eastern city of Francistown; population density remains low in other areas in the country, especially in the Kalahari Desert to the west.",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "72.9% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.47% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "269,000 GABORONE (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.91 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.66 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.92 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "155 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "27.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "25.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "21.4 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "66.4 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "64.4 years"
+      },
+      {
+       "label": "female",
+       "text": "68.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.73 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.34 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 97.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 79.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 92.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 2.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 20.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 7.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6.3% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "14.6% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "0.38 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "2.2 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 94.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 63% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 86% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 5.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 37% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 14% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "18.9% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5.98 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.93 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.46 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.96 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "1.64 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "29.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "5.5% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 300,
+    "content": {
+     "text": "41.5% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 310,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "8.1% of GDP (2020 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "21.5% national budget (2020 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "12 years (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12 years (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "13 years (2021 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Botswana"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Botswana"
+      },
+      {
+       "label": "local long form",
+       "text": "Republic of Botswana"
+      },
+      {
+       "label": "local short form",
+       "text": "Botswana"
+      },
+      {
+       "label": "former",
+       "text": "Bechuanaland"
+      },
+      {
+       "label": "etymology",
+       "text": "the name Botswana means \"Land of the Tswana,\" referring to the country's largest ethnic group"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Gaborone"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "24 38 S, 25 54 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "named after GABORONE (ca. 1825-1931), a chief of the Tlokwa tribe, whose name means \"it is not unbecoming\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "10 districts and 6 town councils*; Central, Chobe, Francistown*, Gaborone*, Ghanzi, Jwaneng*, Kgalagadi, Kgatleng, Kweneng, Lobatse*, North East, North West, Selebi-Phikwe*, South East, Southern, Sowa Town*",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed legal system of civil law influenced by the Roman-Dutch model, including customary and common law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1960 (pre-independence); latest adopted March 1965, effective 30 September 1966"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the National Assembly; passage requires approval in two successive Assembly votes with at least two-thirds majority in the final vote; proposals to amend constitutional provisions on fundamental rights and freedoms, the structure and branches of government, and public services also requires approval by majority vote in a referendum and assent by the president of the republic"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Botswana"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by the National Assembly for a 5-year term (eligible for a second term); vice president appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "31 October 2024"
+      },
+      {
+       "label": "election results",
+       "text": "BOKO's UDC won 35 seats in the National Assembly, which then selected BOKO as president"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "chamber name",
+       "text": "National Assembly"
+      },
+      {
+       "label": "number of seats",
+       "text": "69 (61 directly elected; 6 indirectly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/30/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Umbrella for Democratic Change (UDC) (36); Botswana Congress Party (BCP) (15); Botswana Patriotic Front (BPF) (5); Botswana Democratic Party (BDP) (4); Other (1)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "9%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the House of Chiefs (Ntlo ya Dikgosi), an advisory body to the National Assembly, consists of 35 members -- 8 hereditary chiefs from Botswana's principal tribes, 22 indirectly elected by the chiefs, and 5 appointed by the president; the House of Chiefs consults on issues including powers of chiefs, customary courts, customary law, tribal property, and constitutional amendments"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Appeal, High Court (each consists of a chief justice and a number of other judges as prescribed by the Parliament)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Court of Appeal and High Court chief justices appointed by the president and other judges appointed by the president upon the advice of the Judicial Service Commission; all judges appointed to serve until age 70"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Industrial Court (with circuits scheduled monthly in the capital city and in 3 districts); Magistrates Courts (1 in each district); Customary Court of Appeal; Paramount Chief's Court/Urban Customary Court; Senior Chief's Representative Court; Chief's Representative’s Court; Headman's Court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Alliance of Progressives or AP <br />Botswana Congress Party or BCP <br />Botswana Democratic Party or BDP <br />Botswana National Front or BNF [Duma BOKO]Botswana Patriotic Front or BPF <br />Botswana Peoples Party or BPP <br />Botswana Republic Party or BRP <br />Umbrella for Democratic Change or UDC (various times the coalition has included the BPP, BCP, BNF and other parties)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AU, C, CD, FAO, G-77, IAEA, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, OPCW, SACU, SADC, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "30 September 1966 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day (Botswana Day), 30 September (1966)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> light blue with a horizontal white-edged black stripe across the middle<br /><br /><strong>meaning:</strong> the blue symbolizes rainwater, and the black and white bands represent racial harmony",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "zebra",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "light blue, white, black",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "the two zebras, the country’s national symbol, support an elephant tusk that represents the country's fauna and a head of sorghum that signifies agriculture; the three wavy blue bands stand for the country’s reliance on water, the cog wheels for industry, and the bull’s head for the cattle industry; the coat of arms also features the national colors of light blue, white, and black; the motto reflects the scarcity of rain in the country: <em>pula </em>means “let there be rain” in Setswana, the national language",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Fatshe leno la rona\" (Our Land)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Kgalemang Tumedisco MOTSETE"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1966"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (1 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Tsodilo Hills (c); Okavango Delta (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

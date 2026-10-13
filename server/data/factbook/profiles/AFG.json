@@ -1,0 +1,1115 @@
+{
+ "iso3": "AFG",
+ "gec": "af",
+ "name": "Afghanistan",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Ahmad Shah DURRANI unified the Pashtun tribes and founded Afghanistan in 1747. The country served as a buffer between the British and Russian Empires until it won independence from notional British control in 1919. A brief experiment in increased democracy ended in a 1973 coup and a 1978 communist countercoup. The Soviet Union invaded in 1979 to support the tottering Afghan communist regime, touching off a long and destructive war. Internationally supported anti-communist mujahidin rebels forced the USSR to withdraw in 1989. A series of subsequent civil wars saw Kabul finally fall in 1996 to the Taliban, a hardline Pakistani-sponsored movement. Following the 11 September 2001 terrorist attacks, a US and Allied military action toppled the Taliban for sheltering Usama BIN LADIN.</p> <p>A UN-sponsored Bonn Conference in 2001 established a process for political reconstruction that included the adoption of a new constitution, a presidential election in 2004, and National Assembly elections in 2005. In 2004, Hamid KARZAI became the first democratically elected president of Afghanistan, and he was reelected in 2009. Ashraf Ghani AHMADZAI succeeded him as president in 2014 following a disputed election. The Taliban conducted an insurgency for two decades against the Afghan Government and forces from the United States and other countries. In February 2020, the US and the Taliban signed an agreement that led to the withdrawal of international forces in exchange for commitments on counterterrorism and other assurances. The Taliban took over Afghanistan on 15 August 2021.<br /><br />The Taliban established an all-male interim leadership structure dominated by Pashtun clerics under the leadership of Haivatrullah AKHUNDZADA. The Taliban issued numerous edicts that constrained women's mobility, ability to study and work, and access to education beyond primary school. To date, no country has recognized the Taliban as the government of Afghanistan.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Asia, north and west of Pakistan, east of Iran",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "33 00 N, 65 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "652,230 sq km"
+      },
+      {
+       "label": "land",
+       "text": "652,230 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "almost six times the size of Virginia; slightly smaller than Texas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,987 km"
+      },
+      {
+       "label": "border countries",
+       "text": "China 91 km; Iran 921 km; Pakistan 2,670 km; Tajikistan 1,357 km; Turkmenistan 804 km; Uzbekistan 144 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "arid to semiarid; cold winters and hot summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly rugged mountains; plains in north and southwest",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Noshak 7,492 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Amu Darya 258 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,884 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "natural gas, petroleum, coal, copper, chromite, talc, barites, sulfur, lead, zinc, iron ore, salt, precious and semiprecious stones, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "58.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 12% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 46% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "1.9% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "39.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "24,930 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "salt water lake(s)",
+       "text": "Ab-e Istadah-ye Muqur (endorheic basin) - 520 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Amu Darya (shared with Tajikistan [s], Turkmenistan, and Uzbekistan [m]) - 2,620 km; Helmand river source (shared with Iran) - 1,130 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Indian Ocean drainage",
+       "text": "Indus (1,081,718 sq km)"
+      },
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "Amu Darya (534,739 sq km); Tarim Basin (1,152,448 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "populations tend to cluster in the foothills and periphery of the rugged Hindu Kush range; smaller groups are found in many of the country's interior valleys; in general, the east is more densely settled, while the south is sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "damaging earthquakes occur in Hindu Kush mountains; flooding; droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "landlocked; the Hindu Kush mountains that run northeast to southwest divide the northern provinces from the rest of the country; the highest peaks are in the northern Vakhan (Wakhan Corridor)",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "49,474,805 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "25,051,967"
+      },
+      {
+       "label": "female",
+       "text": "24,422,838"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Afghan(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Afghan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "current, reliable statistical data on ethnicity in Afghanistan are not available; Afghanistan's 2004 Constitution cited Pashtun, Tajik, Hazara, Uzbek, Turkman, Baluch, Pashaie, Nuristani, Aymaq, Arab, Qirghiz, Qizilbash, Gujur, and Brahwui ethnicities; Afghanistan has dozens of other small ethnic groups",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Afghan Persian or Dari (official, lingua franca) 77%, Pashto (official) 48%, Uzbeki 11%, English 6%, Turkmani 3%, Urdu 3%, Pashaie 1%, Nuristani 1%, Arabic 1%, Balochi 1%, other &lt;1% (2020 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "<p>کتاب حقایق جهان، مرجعی ضروری برای اطلاعات اولیە (Dari)</p> د دنیا د حقائېقو کتاب، بنیادی معلوماتو لپاره ضروری سرچینه- (Pashto)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> percentages sum to more than 100% because many people are multilingual <br /><br /><strong>note 2: </strong>Uzbeki, Turkmani, Pashaie, Nuristani, Balochi, and Pamiri are the third official languages in areas where the majority speaks them"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 99.7% (Sunni 84.7 - 89.7%, Shia 10 - 15%), other &lt;0.3% (2009 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "39.6% (male 8,062,407/female 7,818,897)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "57.5% (male 11,702,734/female 11,372,249)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "2.9% (2024 est.) (male 535,925/female 629,340)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "82.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "77 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.2 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "19 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "20 years"
+      },
+      {
+       "label": "female",
+       "text": "20.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.86% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "35.99 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.79 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.62 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "populations tend to cluster in the foothills and periphery of the rugged Hindu Kush range; smaller groups are found in many of the country's interior valleys; in general, the east is more densely settled, while the south is sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "26.9% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.34% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "4.589 million KABUL (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.85 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.02 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "19.9 years (2015 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "521 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "42 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "109.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "92.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "54.4 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "52.8 years"
+      },
+      {
+       "label": "female",
+       "text": "56.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "4.89 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "2.39 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 76.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 82.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 23.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 17.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "21.8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "1.1% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.32 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "0.4 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 93% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 58.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 68% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 41.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 32% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "5.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.8% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "36.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "5.2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "18.4% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "65.9% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "9.6% (2023)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "28.7% (2023)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "7.3% (2015)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.3% of GDP (2017 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "15.7% national budget (2017 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "37.3% (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "52.1% (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "26.6% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11 years (2018 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2018 est.)"
+      },
+      {
+       "label": "female",
+       "text": "8 years (2018 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Islamic Republic of Afghanistan (prior to 15 August 2021); current country name disputed"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Afghanistan"
+      },
+      {
+       "label": "local long form",
+       "text": "Jamhuri-ye Islami-ye Afghanistan (prior to 15 August 2021; current country name is disputed)"
+      },
+      {
+       "label": "local short form",
+       "text": "Afghanistan"
+      },
+      {
+       "label": "etymology",
+       "text": "the name \"Afghan\" originally referred to the Pashtun people, but today it is understood to include all the country's ethnic groups; the suffix \"-stan\" means \"place of\" or \"country,\" so Afghanistan literally means the \"Land of the Afghans\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "theocratic; the United States does not recognize the Taliban Government",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Kabul"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "34 31 N, 69 11 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+4.5 (9.5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "does not observe daylight savings time"
+      },
+      {
+       "label": "etymology",
+       "text": "named for the Kabul River, but the river's name is of unknown origin"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "34 provinces (<em>welayat</em>, singular - <em>welayat</em>); Badakhshan, Badghis, Baghlan, Balkh, Bamyan, Daykundi, Farah, Faryab, Ghazni, Ghor, Helmand, Herat, Jowzjan, Kabul, Kandahar, Kapisa, Khost, Kunar, Kunduz, Laghman, Logar, Nangarhar, Nimroz, Nuristan, Paktika, Paktiya, Panjshir, Parwan, Samangan, Sar-e Pul, Takhar, Uruzgan, Wardak, Zabul",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "the Taliban is implementing its own interpretation of Islamic law, which is partially based on the Hanifi school of Islamic jurisprudence and have enforced strict punishments; before the Taliban takeover, Afghanistan had a mixed legal system of civil, customary, and Islamic law (2021)",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest ratified in 2004, but not currently enforced by the Taliban"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; formerly accepted ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must have been born in - and continuously lived in - Afghanistan"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the 2004 Afghan constitution directed that the president should be elected by majority popular vote for a 5-year term (eligible for a second term); the Taliban have given no indication that they intend to reinstate elections or any other mechanism of democratic governance"
+      },
+      {
+       "label": "most recent election date",
+       "text": "28 September 2019"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the United States has not yet made a decision whether to recognize the Taliban or any other entity as the government of Afghanistan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": "<strong>note:</strong> Afghanistan’s bicameral National Assembly consisted of the House of Elders and House of the People but was dissolved after the Taliban took control of Afghanistan in August 2021",
+     "items": []
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "the Taliban are purported to have appointed clerics, including a \"Chief Justice,\" to Afghanistan's Supreme Court"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "provincial courts, religious courts, and specialty courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "the Taliban Government enforces an authoritarian state and has banned other political parties<br /><br />the Taliban have banned other political parties but have allowed some party leaders, including the head of Hezb-e-Islami, Gulbuddin Hekmatyar, to continue to live and work in Afghanistan; Hekmatyar likely continues to enjoy some political support from loyalists; leaders of other parties, including Jamiat-e-Islami’s Salahuddin Rabbani and Jumbesh’s Rashid Dostum, operate from abroad but likely also command some following within Afghanistan",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> before 15 August 2021, the Ministry of Justice had licensed 72 political parties as of April 2019"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "Afghanistan is a member of the following organizations but Taliban representatives do not participate: ADB, CICA, CP, ECO, EITI (candidate country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIC, OPCW, OSCE (partner), SAARC, SACEP, SCO (dialogue member), UN, UNAMA, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "19 August 1919 (from UK control over Afghan foreign affairs)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "previous: Independence Day, 19 August (1919); under the Taliban Government, 15 August (2022) is declared a national holiday, marking the anniversary of the victory of the Afghan jihad",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description: </strong>three equal vertical bands of black (left), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other bands; the emblem shows a mosque with a pulpit and flags on either side; below the mosque are Eastern Arabic numerals for the solar year 1298 (1919 in the Gregorian calendar, the year of Afghan independence from the UK); a border of wheat sheaves circles the mosque; above the mosque is an Arabic inscription of the Shahada (Muslim creed), with rays of the rising sun over the Takbir (Arabic expression meaning \"God is great\"); under the mosque is a scroll with the name Afghanistan<br /><br /><strong>meaning:</strong> black stands for the past, and red for the blood shed for independence; green can represent hope for the future, agricultural prosperity, or Islam<br /><br /><strong>history:</strong> Afghanistan had more changes to its national flag in the 20th century -- 19 by one count -- than any other country; the colors black, red, and green appeared on most of them",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the United States has not recognized the Taliban or any other entity as the government of Afghanistan and, accordingly, continues to display the flag of Afghanistan as set forth in the country's constitution of 2004"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, green, black",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Milli Surood\" (National Anthem)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Abdul Bari JAHANI/Babrak WASA"
+      },
+      {
+       "label": "history",
+       "text": "adopted 2006"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (both cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Minaret of Jam; Buddhas of Bamyan"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the monumental 6th- and 7th-century Buddha statues at Bamyan were destroyed by the Taliban in 2001"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,1211 @@
+{
+ "iso3": "CIV",
+ "gec": "iv",
+ "name": "Côte d'Ivoire",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Various small kingdoms ruled the area of Cote d'Ivoire between the 15th and 19th centuries, when European explorers arrived and then began to expand their presence. In 1844, France established a protectorate. During this period, many of these kingdoms and tribes fought to maintain their cultural identities -- some well into the 20th century. For example, the Sanwi kingdom -- originally founded in the 17th century -- tried to break away from Cote d’Ivoire and establish an independent state in 1969.  <br /><br />Cote d’Ivoire achieved independence from France in 1960 but has maintained close ties. Foreign investment and the export and production of cocoa drove economic growth that led Cote d’Ivoire to become one of the most prosperous states in West Africa. Then in 1999, a military coup overthrew the government, and a year later, junta leader Robert GUEI held rigged elections and declared himself the winner. Popular protests forced him to step aside, and Laurent GBAGBO was elected. Ivoirian dissidents and members of the military launched a failed coup in 2002 that developed into a civil war. In 2003, a cease-fire resulted in rebels holding the north, the government holding the south, and peacekeeping forces occupying a buffer zone in the middle. In 2007, President GBAGBO and former rebel leader Guillaume SORO signed an agreement in which SORO joined GBAGBO's government as prime minister. The two agreed to reunite the country by dismantling the buffer zone, integrating rebel forces into the national armed forces, and holding elections. <br /><br />In 2010, Alassane Dramane OUATTARA won the presidential election, but GBAGBO refused to hand over power, resulting in five months of violent conflict. Armed OUATTARA supporters and UN and French troops eventually forced GBAGBO to step down in 2011. OUATTARA won a second term in 2015 and a controversial third term in 2020 -- despite the two-term limit in the Ivoirian constitution -- in an election boycotted by the opposition. Through political compromise with OUATTARA, the opposition participated peacefully in 2021 legislative elections and won a substantial minority of seats. Also in 2021, the International Criminal Court in The Hague ruled on a final acquittal for GBAGBO, who was on trial for crimes against humanity, paving the way for GBAGBO’s return to Abidjan the same year. GBAGBO has publicly met with OUATTARA since his return as a demonstration of political reconciliation.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Western Africa, bordering the North Atlantic Ocean, between Ghana and Liberia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "8 00 N, 5 00 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "322,463 sq km"
+      },
+      {
+       "label": "land",
+       "text": "318,003 sq km"
+      },
+      {
+       "label": "water",
+       "text": "4,460 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than New Mexico",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3,458 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Burkina Faso 545 km; Ghana 720 km; Guinea 816 km; Liberia 778 km; Mali 599 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "515 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical along coast, semiarid in far north; three seasons - warm and dry (November to March), hot and dry (March to May), hot and wet (June to October)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly flat to undulating plains; mountains in northwest",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Monts Nimba 1,752 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Gulf of Guinea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "250 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, natural gas, diamonds, manganese, iron ore, cobalt, bauxite, copper, gold, nickel, tantalum, silica sand, clay, cocoa beans, coffee, palm oil, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "86.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 15.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 29.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 41.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "12.4% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "1.1% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "730 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "salt water lake(s)",
+       "text": "Lagune Aby - 780 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Niger (2,261,741 sq km), Volta (410,991 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "the population is primarily located in the forested south, with the highest concentration of people residing in and around the cities on the Atlantic coast; most of the northern savanna remains sparsely populated, with higher concentrations located along transportation corridors, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "coast has heavy surf and no natural harbors; during the rainy season torrential flooding is possible",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "most of the inhabitants live along the sandy coastal region; apart from the capital area, the forested interior is sparsely populated",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "31,855,971 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15,992,906"
+      },
+      {
+       "label": "female",
+       "text": "15,863,065"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Ivoirian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Ivoirian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Akan 38%, Voltaique or Gur 22%, Northern Mande 22%, Kru 9.1%, Southern Mande 8.6%, other 0.3% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "French (official), 60 native dialects of which Dioula is the most widely spoken"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 42.9%, Catholic 17.2%, Evangelical 11.8%, Methodist 1.7%, other Christian 3.2%, animist 3.6%, other religion 0.5%, none 19.1% (2014 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the majority of foreign migrant workers are Muslim (72.7%) and Christian (17.7%)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "36.1% (male 5,437,108/female 5,390,782)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "60.9% (male 9,200,957/female 9,060,748)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3% (2024 est.) (male 401,967/female 490,196)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "72.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "67.5 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "4.7 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "21.2 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.2 years"
+      },
+      {
+       "label": "female",
+       "text": "21.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.33% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "29.87 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.93 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0.39 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the population is primarily located in the forested south, with the highest concentration of people residing in and around the cities on the Atlantic coast; most of the northern savanna remains sparsely populated, with higher concentrations located along transportation corridors, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "53.1% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.38% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "231,000 YAMOUSSOUKRO (capital) (2018), 5.686 million ABIDJAN (seat of government) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.82 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "19.6 years (2011/12 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "359 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "52.3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "59.5 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "45.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "63.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "60.9 years"
+      },
+      {
+       "label": "female",
+       "text": "65.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.85 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.9 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 86.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 58% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 72.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 13.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 42% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 27.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "3.1% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "6.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.17 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 84.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 41.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 64.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 15.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 58.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 35.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "10.3% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.7 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "1.13 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.33 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.2 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.04 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.8% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14.9% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0.6% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "13.6% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "62.7% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "7.4% (2021)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "25.8% (2021)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.9% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.4% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "17.6% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "50% (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "60.2% (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "40.3% (2021 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "11 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "11 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Côte d'Ivoire"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Côte d'Ivoire"
+      },
+      {
+       "label": "local long form",
+       "text": "République de Côte d'Ivoire"
+      },
+      {
+       "label": "local short form",
+       "text": "Cote d'Ivoire"
+      },
+      {
+       "label": "former",
+       "text": "Ivory Coast"
+      },
+      {
+       "label": "etymology",
+       "text": "name, which means \"Ivory Coast\" in French, reflects the ivory trade in the region from the 15th to 17th centuries; the French version of the name has been used internationally since 1986, at the country's request"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> pronounced coat-div-whar"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Yamoussoukro (legislative capital), Abidjan (administrative and economic capital); note - the US Embassy is in Abidjan"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "6 49 N, 5 16 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "formerly a village named N'Gokro, Yamoussoukro is named after Queen YAMOUSSOU, who ruled during the early 20th century; Abidjan's name may have come from a misunderstanding when a French explorer asked a group of women the name of the village -- thinking it was a question about what they were doing, they replied \"t'chan m’bi djan,\" which in the Ebrie language means \"I return from cutting leaves,\" so the explorer recorded the name of the locale as Abidjan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "12 districts and 2 autonomous districts*; Abidjan*, Bas-Sassandra, Comoe, Denguele, Goh-Djiboua, Lacs, Lagunes, Montagnes, Sassandra-Marahoue, Savanes, Vallée du Bandama, Woroba, Yamoussoukro*, Zanzan",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the French civil code; Constitutional Chamber of the Supreme Court reviews legislation",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1960, 2000; latest draft completed 24 September 2016, approved by the National Assembly 11 October 2016, approved by referendum 30 October 2016, promulgated 8 November 2016"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or by Parliament; consideration of drafts or proposals requires an absolute majority vote by the parliamentary membership; passage of amendments affecting presidential elections, presidential term of office and vacancies, and amendment procedures requires approval by absolute majority in a referendum; passage of other proposals by the president requires at least four-fifths majority vote by Parliament; constitutional articles on the sovereignty of the state and its republican and secular form of government cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Cote d'Ivoire"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a single renewable 5-year term; vice president elected on same ballot as president; prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "October 2030"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2025: </em>Alassane OUATTARA reelected president; percent of vote - Alassane OUATTARA (RDR) 91.2%, Jean Louis BILLON (DC) 3.1%, Simone Gbagbo (MCG) 2.4%, Ahoua Don MELLO (Ind.) 2.0%, other 1.3% <br /><em><br />2020: </em>Alassane OUATTARA reelected president; percent of vote - Alassane OUATTARA (RDR) 94.3%, Kouadio Konan BERTIN (PDCI-RDA) 2.0%, other 3.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2030"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> because President OUATTARA promulgated the new constitution in 2016, he has claimed that the clock is reset on term limits, allowing him to run for up to two additional terms"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Parlement)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Assemblée nationale)"
+      },
+      {
+       "label": "number of seats",
+       "text": "255 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "3/6/2021 to 6/12/2021"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Rally of Houphouetists for Democracy and Peace (RHDP) (139); Democratic Party of Côte d'Ivoire-African Democratic Rally (PDCI-RDA)-Together for Democracy and Sovereignty (EDS) (49); Democratic Party of Côte d'Ivoire-African Democratic Rally (PDCI-RDA) (23); Independents (26); Other (18)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "13.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2025"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Sénat)"
+      },
+      {
+       "label": "number of seats",
+       "text": "99 (66 indirectly elected; 33 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9/16/2023"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "24.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Cour Supreme (organized into Judicial, Audit, Constitutional, and Administrative Chambers; consists of the court president, 3 vice presidents for the Judicial, Audit, and Administrative chambers, and 9 associate justices or magistrates)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges nominated by the Superior Council of the Magistrature, a 7-member body consisting of the national president (chairman), 3 \"bench\" judges, and 3 public prosecutors; judges appointed for life"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal (organized into civil, criminal, and social chambers); first instance courts; peace courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "African Peoples' Party-Cote d'Ivoire or PPA-CI <br />Democratic Party of Cote d'Ivoire or PDCI <br />Ivorian Popular Front or FPI <br />Liberty and Democracy for the Republic or LIDER <br />Movement of the Future Forces or MFA <br />Pan-African Congress for People's Justice and Equality or COJEP <br />Rally of Houphouetists for Democracy and Peace or RHDP <br />Rally of the Republicans or RDR<br />Together for Democracy and Sovereignty or EDS <br />Together to Build (UDPCI, FPI,and allies) <br />Union for Cote d'Ivoire or UPCI <br />Union for Democracy and Peace in Cote d'Ivoire or UDPCI",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, AU, ECOWAS, EITI (compliant country), Entente, FAO, FZ, G-24, G-77, IAEA, IBRD, ICAO, ICC, ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINUSCA, MONUSCO, NAM, OIC, OIF, OPCW, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNMISS, Union Latina, UNWTO, UPU, WADB (regional), WAEMU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "7 August 1960 (from France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 7 August (1960)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal vertical bands of orange (left side), white, and green<br /><br /><strong>meaning:</strong> orange stands for the savannah and fertility, white for peace and unity, green for the forests of the south and the hope for a bright future; design based on France's flag",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> similar to the flag of Ireland, which is wider and has the colors reversed -- green (left side), white, and orange; also similar to the flag of Italy, which is green (left side), white, and red"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "elephant",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "orange, white, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"L'Abidjanaise\" (Song of Abidjan)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Mathieu EKRA, Joachim BONY, and Pierre Marie COTY/Pierre Marie COTY and Pierre Michel PANGO"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1960; named after the former capital city of Abidjan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "5 (2 cultural, 3 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Comoé National Park (n); Historic Grand-Bassam (c); Mount Nimba Strict Nature Reserve (n); Sudanese-style Mosques (c); Taï National Park (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

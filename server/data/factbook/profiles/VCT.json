@@ -1,0 +1,922 @@
+{
+ "iso3": "VCT",
+ "gec": "vc",
+ "name": "Saint Vincent and the Grenadines",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Resistance from native Caribs prevented colonization on Saint Vincent until 1719. France and England disputed the island for most of the 18th century, but it was ceded to England in 1783. The British prized Saint Vincent because of its fertile soil, which allowed for thriving slave-run plantations of sugar, coffee, indigo, tobacco, cotton, and cocoa. In 1834, the British abolished slavery. Immigration of indentured servants eased the ensuing labor shortage, as did subsequent immigrant waves from Portugal and East India. Conditions remained harsh for both former slaves and immigrant agricultural workers, however, as depressed world sugar prices kept the economy stagnant until the early 1900s. The economy then went into a period of decline, with many landowners abandoning their estates and leaving the land to be cultivated by liberated slaves. <br /><br />Between 1960 and 1962, Saint Vincent and the Grenadines was a separate administrative unit of the Federation of the West Indies. Autonomy was granted in 1969 and independence in 1979. In 2021, the eruption of the La Soufrière volcano in the north of Saint Vincent destroyed much of Saint Vincent’s most productive agricultural lands. Unlike most of its tourism-dependent neighbors, the Vincentian economy is primarily agricultural.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Caribbean, islands between the Caribbean Sea and North Atlantic Ocean, north of Trinidad and Tobago",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "13 15 N, 61 12 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Central America and the Caribbean",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "389 sq km (Saint Vincent 344 sq km)"
+      },
+      {
+       "label": "land",
+       "text": "389 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "twice the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "84 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; little seasonal temperature variation; rainy season (May to November)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "volcanic, mountainous",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "La Soufriere 1,234 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Caribbean Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "hydropower, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "17.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 5.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 7.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 5.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "73.2% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "8.8% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "10 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "most of the population is concentrated in and around the capital of Kingstown",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "hurricanes; La Soufrière volcano on the island of Saint Vincent is a constant threat<br /><br /><strong>volcanism:</strong> La Soufrière (1,234 m) last erupted in 1979; the island of Saint Vincent is part of the volcanic-island arc of the Lesser Antilles that extends from Saba in the north to Grenada in the south",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "the administration of the islands of the Grenadines group is divided between Saint Vincent and the Grenadines and Grenada; Saint Vincent and the Grenadines is composed of 32 islands and cays",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "100,647 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "51,249"
+      },
+      {
+       "label": "female",
+       "text": "49,398"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Saint Vincentian(s) or Vincentian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Saint Vincentian or Vincentian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "African descent 71.2%, mixed 23%, Indigenous 3%, East Indian/Indian 1.1%, European 1.5%, other 0.2% (2012 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "English, Vincentian Creole English, French patois",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Protestant 75% (Pentecostal 27.6%, Anglican 13.9%, Seventh Day Adventist 11.6%,  Baptist 8.9%, Methodist 8.7%, Evangelical 3.8%, Salvation Army 0.3%, Presbyterian/Congregational 0.3%), Roman Catholic 6.3%,  Rastafarian 1.1%, Jehovah's Witness 0.8%, other 4.7%, none 7.5%, unspecified 4.7% (2012 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "18.8% (male 9,527/female 9,353)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.2% (male 35,401/female 33,288)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "13% (2024 est.) (male 6,321/female 6,757)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "46.5 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "27.5 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "19 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "5.3 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "38.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "37.7 years"
+      },
+      {
+       "label": "female",
+       "text": "37.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.15% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "11.72 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "7.75 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-5.43 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of the population is concentrated in and around the capital of Kingstown",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "54.3% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.94% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "27,000 KINGSTOWN (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.94 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.04 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "56 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "12 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "10.7 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "77.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "75.2 years"
+      },
+      {
+       "label": "female",
+       "text": "79.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.73 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.85 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "5.4% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8.6% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 230,
+    "content": {
+     "text": "0.66 physicians/1,000 population (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 240,
+    "content": {
+     "text": "4.2 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 250,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 90.2% of population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 260,
+    "content": {
+     "text": "23.7% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.48 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.52 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.24 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "4.48 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.23 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "6.5% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "12.6% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "15 years (2015 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14 years (2015 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15 years (2015 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Saint Vincent and the Grenadines"
+      },
+      {
+       "label": "etymology",
+       "text": "explorer Christopher COLUMBUS named the island after Saint VINCENT of Saragossa because 22 January 1498, the day of discovery, was the saint's feast day"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary democracy under a constitutional monarchy; a Commonwealth realm",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Kingstown"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "13 08 N, 61 13 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "6 parishes; Charlotte, Grenadines, Saint Andrew, Saint David, Saint George, Saint Patrick",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "English common law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1969, 1975; latest drafted 26 July 1979, effective 27 October 1979 (The Saint Vincent Constitution Order 1979)"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the House of Assembly; passage requires at least two-thirds majority vote of the Assembly membership and assent of the governor general; passage of amendments to constitutional sections on fundamental rights and freedoms, citizen protections, various government functions and authorities, and constitutional amendment procedures requires approval by the Assembly membership, approval in a referendum of at least two thirds of the votes cast, and assent of the governor general"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "yes"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Saint Vincent and the Grenadines"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; governor general appointed by the monarch; following legislative elections, the governor general usually appoints the leader of the majority party or majority coalition as prime minister; deputy prime minister also appointed by governor general on the advice of the prime minister"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "House of Assembly"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "22 (15 directly elected; 6 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/27/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "United Labour Party (ULP) (9); New Democratic Party (NDP) (6)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "21.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "the Eastern Caribbean Supreme Court (ECSC) is the superior court of the Organization of Eastern Caribbean States; the ECSC is headquartered on St. Lucia and consists of the Court of Appeal -- headed by the chief justice and 4 judges -- and the High Court with 18 judges; the Court of Appeal travels to member states on a schedule to hear appeals from the High Court and subordinate courts; Saint Vincent and the Grenadines is a member of the Caribbean Court of Justice"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "chief justice of Eastern Caribbean Supreme Court appointed by the British monarch; other justices and judges appointed by the Judicial and Legal Services Commission, an independent body of judicial officials; Court of Appeal justices appointed for life with mandatory retirement at age 65; High Court judges appointed for life with mandatory retirement at age 62"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "magistrates' courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "New Democratic Party or NDP<br />SVG Green Party or SVGP<br />Unity Labor Party or ULP (formed in 1994 by the coalition of Saint Vincent Labor Party or SVLP and the Movement for National Unity or MNU)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, ACS, AOSIS, C, Caricom, CDB, CELAC, FAO, G-77, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, ISO (subscriber), ITU, MIGA, NAM, OAS, OECS, OPANAL, OPCW, Petrocaribe, UN, UNCTAD, UNESCO, UNIDO, UPU, WFTU (NGOs), WHO, WIPO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "27 October 1979 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 27 October (1979)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three vertical bands of blue (left side), gold (double-width), and green; the gold band has three green diamonds arranged in a \"V\" pattern that stands for \"Vincent\" <br /><br /><strong>meaning:</strong> the diamonds represent the islands as \"the Gems of the Antilles\" and are set slightly lowered in the gold band to reflect the country's position in the Antilles; blue stands for the tropical sky and sea, yellow for the sand, and green for vegetation",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Saint Vincent parrot",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "blue, gold, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"God Save the King\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "unknown"
+      },
+      {
+       "label": "history",
+       "text": "in use since 1745"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

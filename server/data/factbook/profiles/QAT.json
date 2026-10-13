@@ -1,0 +1,1030 @@
+{
+ "iso3": "QAT",
+ "gec": "qa",
+ "name": "Qatar",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Ruled by the Al Thani family since the mid-1800s, Qatar within the last 60 years transformed itself from a poor British protectorate noted mainly for pearling into an independent state with significant hydrocarbon revenues. Former Amir HAMAD bin Khalifa Al Thani, who overthrew his father in a bloodless coup in 1995, ushered in wide-sweeping political and media reforms, unprecedented economic investment, and a growing Qatari regional leadership role, in part through the creation of the pan-Arab satellite news network Al-Jazeera and Qatar's mediation of some regional conflicts. In the 2000s, Qatar resolved its longstanding border disputes with both Bahrain and Saudi Arabia, and by 2007, Doha had attained the highest per capita income in the world. Qatar did not experience domestic unrest or violence like that seen in other Near Eastern and North African countries in 2011, due in part to its immense wealth and patronage network. In mid-2013, HAMAD peacefully abdicated, transferring power to his son, the current Amir TAMIM bin Hamad. TAMIM is popular with the Qatari public for his role in shepherding the country through an economic embargo from some other regional countries, for his efforts to improve the country's healthcare and education systems, and for his expansion of the country's infrastructure in anticipation of hosting international sporting events. Qatar became the first country in the Arab world to host the FIFA Men’s World Cup in 2022.</p> Following the outbreak of regional unrest in 2011, Doha prided itself on its support for many popular revolutions, particularly in Libya and Syria. This stance was to the detriment of Qatar’s relations with Bahrain, Egypt, Saudi Arabia, and the United Arab Emirates (UAE), which temporarily recalled their respective ambassadors from Doha in 2014. TAMIM later oversaw a warming of Qatar’s relations with Bahrain, Egypt, Saudi Arabia, and the UAE in November 2014 following Kuwaiti mediation and signing of the Riyadh Agreement. This reconciliation, however, was short-lived. In 2017, Bahrain, Egypt, Saudi Arabia, and the UAE (the \"Quartet\") cut diplomatic and economic ties with Qatar in response to alleged violations of the agreement, among other complaints. They restored ties in 2021 after signing a declaration at the Gulf Cooperation Council Summit in Al Ula, Saudi Arabia. In 2022, the United States designated Qatar as a major non-NATO ally. <p> </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Middle East, peninsula bordering the Persian Gulf and Saudi Arabia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "25 30 N, 51 15 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Middle East",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11,586 sq km"
+      },
+      {
+       "label": "land",
+       "text": "11,586 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "almost twice the size of Delaware; slightly smaller than Connecticut",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "87 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Saudi Arabia 87 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "563 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "as determined by bilateral agreements or the median line"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "arid; mild, pleasant winters; very hot, humid summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly flat and barren desert",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Tuwayyir al Hamir 103 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Persian Gulf 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "28 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, fish, natural gas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "6.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 1.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 4.4% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "0.1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "93.4% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "130 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 150,
+    "content": {
+     "text": "Arabian Aquifer System",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "most of the population is clustered in or around the capital of Doha on the eastern side of the peninsula",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "haze, dust storms, sandstorms common",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "the peninsula occupies a strategic location in the central Persian Gulf near major petroleum deposits",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,568,426 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "1,970,605"
+      },
+      {
+       "label": "female",
+       "text": "597,821"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Qatari(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Qatari"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "non-Qatari 88.4%, Qatari 11.6% (2015 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official), English commonly used as a second language"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 65.2%, Christian 13.7%, Hindu 15.9%, Buddhist 3.8%, folk religion &lt;0.1%, Jewish &lt;0.1%, other &lt;1%, unaffiliated &lt;1% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "13.1% (male 168,844/female 165,905)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "85.4% (male 1,767,294/female 411,977)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "1.5% (2024 est.) (male 24,997/female 13,071)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "17.3 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "15.4 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "1.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "54.4 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "34.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "35.7 years"
+      },
+      {
+       "label": "female",
+       "text": "28.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.57% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "9.19 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "1.42 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-2.09 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of the population is clustered in or around the capital of Doha on the eastern side of the peninsula",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "99.4% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.66% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "798,000 Ar-Rayyan, 658,000 DOHA (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "4.29 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "1.91 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "3.32 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "4 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6.2 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "5.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "80.3 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "78.2 years"
+      },
+      {
+       "label": "female",
+       "text": "82.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.9 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.94 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "2.9% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "7.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "3.02 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "1.1 beds/1,000 population (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "35.1% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.96 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.29 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.07 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.59 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "19.2% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "24.6% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "2.3% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "2.3% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "64.6% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.2% of GDP (2020 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "9.3% national budget (2020 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "State of Qatar"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Qatar"
+      },
+      {
+       "label": "local long form",
+       "text": "Dawlat Qatar"
+      },
+      {
+       "label": "local short form",
+       "text": "Qatar"
+      },
+      {
+       "label": "etymology",
+       "text": "the name may derive from the Arabic word <em>katran</em>, meaning \"tar\" or \"resin\" in reference to the area's oil and natural gas reserves"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> closest approximation of the native pronunciation is GAT-tar or COT-tar"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "absolute monarchy",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Doha"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "25 17 N, 51 32 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is derived from the Arabic <em>ad-dawha</em>, meaning \"the big tree,\" and probably referred to a large tree at the site of the original fishing village"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "8 municipalities (<em>baladiyat</em>, singular - <em>baladiyah</em>); Ad Dawhah, Al Khawr wa adh Dhakhirah, Al Wakrah, Ar Rayyan, Ash Shamal, Ash Shihaniyah, Az Za'ayin, Umm Salal",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil law and Islamic (sharia) law (in family and personal matters)",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1972 (provisional); latest drafted 2 July 2002, approved by referendum 29 April 2003, endorsed 8 June 2004, effective 9 June 2005"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Amir or by one third of Advisory Council members; passage requires two-thirds majority vote of Advisory Council members and approval and promulgation by the emir; articles pertaining to the rule of state and its inheritance, functions of the emir, and citizen rights and liberties cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Qatar"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "20 years; 15 years if an Arab national"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; prime minister appointed by the amir"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Shura Council (Majlis Al-Shura)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "49 (all appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/9/2025"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "6.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Court of Cassation (consists of the court president and several judges); Supreme Constitutional Court (consists of the chief justice and 6 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges nominated by the Supreme Judiciary Council, a 9-member independent body consisting of judiciary heads appointed by the amir; judges appointed for 3-year renewable terms; Supreme Constitutional Court members nominated by the Supreme Judiciary Council and appointed by the monarch; term of appointment NA"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; Administrative Court; Courts of First Instance; sharia courts; Courts of Justice; Qatar International Court and Dispute Resolution Center, established in 2009, provides dispute resolution services for institutions and bodies in Qatar, as well as internationally"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "political parties are banned",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ABEDA, AFESD, AMF, CAEU, CD, CICA (observer), EITI (implementing country), FAO, G-77, GCC, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM (observer), IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OAPEC, OAS (observer), OIC, OIF, OPCW, OPEC, PCA, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNIFIL, UNOOSA, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "3 September 1971 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "National Day, 18 December (1878), anniversary of Al Thani family accession to the throne; Independence Day, 3 September (1971)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> maroon with a broad, serrated white band on the left side<br /><br /><strong>meaning:</strong> maroon stands for the blood shed in Qatari wars, and white for peace; the nine-pointed serrated edge is a reference to Qatar's status as the ninth member of the \"reconciled emirates\" after the Qatari-British treaty of 1916 -- the other eight members are Bahrain and the seven that make up the UAE",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "a white serrated band with nine white points on top of a maroon field",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "maroon, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Al-Salam Al-Amiri\" (Peace be to the Emir)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Sheikh MUBARAK bin Saif al-Thani/Abdul Aziz Nasser OBAIDAN"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1996"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Al Zubarah Archaeological Site"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

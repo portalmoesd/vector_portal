@@ -1,0 +1,1161 @@
+{
+ "iso3": "MLI",
+ "gec": "ml",
+ "name": "Mali",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Present-day Mali is named after the Mali Empire that ruled the region between the 13th and 16th centuries. At its peak in the 14th century, it was the largest and wealthiest empire in West Africa and controlled an area about twice the size of modern-day France. Primarily a trading empire, Mali derived its wealth from gold and maintained several goldfields and trade routes in the Sahel. The empire also influenced West African culture through the spread of its language, laws, and customs, but by the 16th century, it had fragmented into mostly small chiefdoms. The Songhai Empire, previously a Mali dependency centered in Timbuktu, gained prominence in the 15th and 16th centuries. Under Songhai rule, Timbuktu became a large commercial center, well-known for its scholarship and religious teaching. Timbuktu remains a center of culture in West Africa today. In the late 16th century, the Songhai Empire fell to Moroccan invaders and disintegrated into independent sultanates and kingdoms.</p> <p>France, expanding from Senegal, seized control of the area in the 1890s and incorporated it into French West Africa as French Sudan. In 1960, French Sudan gained independence from France and became the Mali Federation. When Senegal withdrew after only a few months, the remaining area was renamed the Republic of Mali. Mali saw 31 years of dictatorship until 1991, when a military coup led by Amadou Toumani TOURE ousted the government, established a new constitution, and instituted a multi-party democracy. Alpha Oumar KONARE won Mali's first two democratic presidential elections in 1992 and 1997. In keeping with Mali's two-term constitutional limit, he stepped down in 2002 and was succeeded by Amadou Toumani TOURE, who won a second term in 2007.</p> <p>In 2012, rising ethnic tensions and an influx of fighters -- some linked to Al-Qa’ida -- from Libya led to a rebellion and military coup. Following the coup, rebels expelled the military from the country’s three northern regions, allowing terrorist organizations to develop strongholds in the area. With a 2013 French-led military intervention, the Malian government managed to retake most of the north. However, the government’s grasp in the region remains weak with local militias, terrorists, and insurgent groups competing for control. In 2015, the Malian Government and northern rebels signed an internationally mediated peace accord. Despite a 2017 target for implementation of the agreement, the signatories have made little progress. Terrorist groups were left out of the peace process, and terrorist attacks remain common.  </p> <p>Ibrahim Boubacar KEITA won the Malian presidential elections in 2013 and 2018. Aside from security and logistic shortfalls, international observers deemed these elections credible. Terrorism, banditry, ethnic-based violence, and extra-judicial military killings plagued the country during KEITA’s second term. In 2020, the military arrested KEITA, his prime minister, and other senior members of the government and established a military junta called the National Committee for the Salvation of the People (CNSP). The junta then established a transition government and appointed Bah N’DAW, a retired army officer and former defense minister, as interim president and Colonel Assimi GOITA, the coup leader and chairman of the CNSP, as interim vice president. The transition government’s charter allowed it to rule for up to 18 months before calling a general election.  <br /><br />In 2021, GOITA led a military takeover, arresting the interim president after a Cabinet shake-up removed GOITA’s key allies. GOITA was sworn in as transition president, and Choguel Kokalla MAIGA was sworn in as prime minister. In 2022, the Economic Community of West African States (ECOWAS) imposed sanctions on the transition government, and member states closed their borders with Mali after the transition government presented a five-year extension to the electoral calendar. The transition government and ECOWAS agreed to a new two-year timeline, which would have included presidential elections in February 2024, but the transition government postponed the elections indefinitely in September 2023 and withdrew from ECOWAS in January 2024.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "interior Western Africa, southwest of Algeria, north of Guinea, Cote d'Ivoire, and Burkina Faso, west of Niger",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "17 00 N, 4 00 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,240,192 sq km"
+      },
+      {
+       "label": "land",
+       "text": "1,220,190 sq km"
+      },
+      {
+       "label": "water",
+       "text": "20,002 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than twice the size of Texas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7,908 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Algeria 1,359 km; Burkina Faso 1,325 km; Cote d'Ivoire 599 km; Guinea 1,062 km; Mauritania 2,236 km; Niger 838 km, Senegal 489 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "subtropical to arid; hot and dry (February to June); rainy, humid, and mild (June to November); cool and dry (November to February)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly flat to rolling northern plains covered by sand; savanna in south, rugged hills in northeast",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Hombori Tondo 1,155 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Senegal River 23 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "343 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "gold, phosphates, kaolin, salt, limestone, uranium, gypsum, granite, hydropower",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>bauxite, iron ore, manganese, tin, and copper deposits are known but not exploited"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "35.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 6.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 28.4% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "8.8% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "55.8% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "3,780 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lac Faguibine - 590 sq km<br />note - the Niger River is the only source of water for the lake; in recent years the lake is dry"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Niger (shared with Guinea [s], Niger, and Nigeria [m]) - 4,200 km; Senegal (shared with Guinea [s], Senegal, and Mauritania [m]) - 1,641 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Niger (2,261,741 sq km), Senegal (456,397 sq km), Volta (410,991 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 180,
+    "content": {
+     "text": "Lullemeden-Irhazer Basin, Taodeni-Tanezrouft Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 190,
+    "content": {
+     "text": "the overwhelming majority of the population lives in the southern half of the country, with greater density along the border with Burkina Faso, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 200,
+    "content": {
+     "text": "hot, dust-laden harmattan haze common during dry seasons; recurring droughts; occasional Niger River flooding",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 210,
+    "content": {
+     "text": "landlocked; divided into three natural zones: the southern, cultivated Sudanese; the central, semiarid Sahelian; and the northern, arid Saharan",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22,634,423 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "10,999,331"
+      },
+      {
+       "label": "female",
+       "text": "11,635,092"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Malian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Malian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Bambara 33.3%, Fulani (Peuhl) 13.3%, Sarakole/Soninke/Marka 9.8%, Senufo/Manianka 9.6%, Malinke 8.8%, Dogon 8.7%, Sonrai 5.9%, Bobo 2.1%, Tuareg/Bella 1.7%, other Malian 6%, from members of Economic Community of West Africa 0.4%, other 0.3% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Bambara (official), French 17.2%, Peuhl/Foulfoulbe/Fulani 9.4%, Dogon 7.2%, Maraka/Soninke 6.4%, Malinke 5.6%, Sonrhai/Djerma 5.6%, Minianka 4.3%, Tamacheq 3.5%, Senoufo 2.6%, Bobo 2.1%, other 6.3%, unspecified 0.7% (2009 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Mali has 13 national languages in addition to its official language"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 93.9%, Christian 2.8%, animist 0.7%, none 2.5% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "46.8% (male 5,175,714/female 5,114,128)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "50.1% (male 5,178,742/female 5,842,456)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.1% (2024 est.) (male 334,299/female 345,268)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "98.5 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "92.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.2 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "16.2 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "16.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15.7 years"
+      },
+      {
+       "label": "female",
+       "text": "17.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.88% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "39.44 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "7.87 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-2.82 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the overwhelming majority of the population lives in the southern half of the country, with greater density along the border with Burkina Faso, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "46.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "4.57% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "2.929 million BAMAKO (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.89 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.95 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "19.2 years (2018 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "367 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "55.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "62.6 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "52 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "63.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "60.9 years"
+      },
+      {
+       "label": "female",
+       "text": "65.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "5.26 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "2.59 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 94.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 74.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 83.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 5.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 25.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 16.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "4.5% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "5.7% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.19 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "0.2 beds/1,000 population (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 88.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 49.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 67.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 11.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 50.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 32.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "8.6% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.6 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.49 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6.9% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0.6% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "15% (2024 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "79.2% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "15.9% (2018)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "53.7% (2018)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "2.1% (2018)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.2% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "17.8% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "35.5% (2018 est.)"
+      },
+      {
+       "label": "male",
+       "text": "46.2% (2018 est.)"
+      },
+      {
+       "label": "female",
+       "text": "25.7% (2018 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7 years (2017 est.)"
+      },
+      {
+       "label": "male",
+       "text": "8 years (2017 est.)"
+      },
+      {
+       "label": "female",
+       "text": "6 years (2017 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Mali"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Mali"
+      },
+      {
+       "label": "local long form",
+       "text": "République de Mali"
+      },
+      {
+       "label": "local short form",
+       "text": "Mali"
+      },
+      {
+       "label": "former",
+       "text": "French Sudan, Sudanese Republic, Mali Federation"
+      },
+      {
+       "label": "etymology",
+       "text": "name derives from the Mali Empire of the 13th to 16th centuries A.D.; the Mali name may come from a local ethnic group, the Malinke, whose name is derived from the words <em>ma</em>, meaning \"mother,\" and <em>dink</em>, meaning \"child\" -- a reference to the matrilinear descent of Malinke families"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Bamako"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "12 39 N, 8 00 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the name is unclear, but it comes from the Bambara language and can refer either to a crocodile or to a person's name"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "19 regions (<em>régions</em>, singular - <em>région</em>), 1 district*; Bamako*, Bandiagara, Bougouni, Dioila, Douentza, Gao, Kayes, Kidal, Kita, Koulikoro, Koutiala, Menaka, Mopti, Nara, Nioro, San, Segou, Sikasso, Taoudenni, Tombouctou (Timbuktu)",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the French civil law model and influenced by customary law; Constitutional Court reviews legislative acts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest drafted 13 October 2022 and submitted to Transition President Assimi GOITA; final draft completed 1 March 2023; approved by referendum 18 June 2023; validated by Constitutional Court 22 July 2023"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Mali"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "29 July 2018, with runoff on 12 August 2018"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2018</em>: Ibrahim Boubacar KEITA reelected president in second round; percent of vote in first round - Ibrahim Boubacar KEITA (RPM) 41.7%, Soumaila CISSE (URD) 17.8%, other 40.5%; percent of vote in second round - Ibrahim Boubacar KEITA 67.2%, Soumaila CISSE 32.8%"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in 2022, the transition government adopted a charter allowing transition authorities to rule for up to 5 years; in July 2025, the military-appointed National Transitional Council (CNT) unanimously adopted a revised transitional charter that granted transitional president General Assimi GOITA a five-year presidential mandate, renewable indefinitely, following the earlier dissolution of all political parties in May"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Transitional National Council (Conseil national de transition)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "chamber name",
+       "text": "Transitional National Council (Conseil national de transition)"
+      },
+      {
+       "label": "number of seats",
+       "text": "147 (all appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12/5/2020"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "30.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2030"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the National Assembly was dissolved on 18 August 2020 after a military coup; the transitional government created a Transitional National Council (CNT) that acts as the transitional government's legislative body; a new constitution was ratified in July 2023 that expanded the military junta's powers, and no plans for legislative elections have been announced<br /><strong>note 2:</strong> coup leaders appointed a president and vice president; the president then apportioned CNT seats to various groups and political parties"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Cour Suprême (consists of 19 judges organized into judicial, administrative, and accounting sections); Constitutional Court (consists of 9 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges appointed by the Ministry of Justice to serve 5-year terms; Constitutional Court judges selected - 3 each by the president, the National Assembly, and the Supreme Council of the Magistracy; members serve single renewable 7-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeal; High Court of Justice (jurisdiction limited to cases of high treason or criminal offenses by the president or ministers while in office); administrative courts (first instance and appeal); commercial courts; magistrate courts; labor courts; juvenile courts; special court of state security"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "African Solidarity for Democracy and Independence or SADI<br />Alliance for Democracy and Progress or ADP-Maliba<br />Alliance for Democracy in Mali-Pan-African Party for Liberty, Solidarity, and Justice or ADEMA-PASJ<br />Alliance for the Solidarity of Mali-Convergence of Patriotic Forces or ASMA-CFP<br />Convergence for the Development of Mali or CODEM <br />Democratic Alliance for Peace or ADP-Maliba<br />Movement for Mali or MPM<br />Party for National Renewal (also Rebirth or Renaissance or PARENA)<br />Rally for Mali or RPM <br />Social Democratic Convention or CDS<br />Union for Democracy and Development or UDD<br />Union for Republic and Democracy or URD<br />Yéléma",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:  </strong>only parties with 2 or more seats in the last National Assembly parliamentary elections (30 March and 19 April 2020) included<br /><strong><br />note 2:</strong>  the National Assembly was dissolved on 18 August 2020 following a military coup and replaced with a National Transition Council; currently 121 members, party affiliations unknown"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AU (suspended), CD, EITI (compliant country), FAO, FZ, G-77, IAEA, IBRD, ICAO, ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINUSCA, MONUSCO, NAM, OIC, OPCW, UN, UNCTAD, UNDP, UNESCO, UNFPA, UNHCR, UNIDO, UNOPS, UN Women, UNWTO, UPU, WADB (regional), WAEMU, World Bank Group, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "22 September 1960 (from France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 22 September (1960)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal vertical bands of green (left side), yellow, and red<br /><br /><strong>history:</strong> uses the colors of the Pan-African movement",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the colors from left to right are the same as those of neighboring Senegal (which has an additional green central star) and the reverse of the flag of neighboring Guinea"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Great Mosque of Djenne",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, yellow, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Le Mali\" (Mali)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Seydou Badian KOUYATE/Banzoumana SISSOKO"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1962"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "4 (3 cultural, 1 mixed)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Old Towns of Djenné (c); Timbuktu (c); Cliff of Bandiagara (Land of the Dogons) (m); Tomb of Askia (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,823 @@
+{
+ "iso3": "VGB",
+ "gec": "vi",
+ "name": "British Virgin Islands",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "First inhabited by Arawak and later by Carib Indians, the Virgin Islands were settled by the Dutch in 1648 and then annexed by the English in 1672. The islands were part of the British colony of the Leeward Islands (1872-1960); they were granted autonomy in 1967. The economy is closely tied to the larger and more populous US Virgin Islands to the west, and the US dollar is the legal currency. In 2017, Hurricane Irma devastated the island of Tortola. An estimated 80% of residential and business structures were destroyed or damaged, communications disrupted, and local roads rendered impassable.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Caribbean, between the Caribbean Sea and the North Atlantic Ocean, east of Puerto Rico",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "18 30 N, 64 30 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Central America and the Caribbean",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "151 sq km"
+      },
+      {
+       "label": "land",
+       "text": "151 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> comprised of 16 inhabited and more than 20 uninhabited islands; includes the islands of Tortola, Anegada, Virgin Gorda, Jost van Dyke"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about 0.9 times the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "80 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive fishing zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "subtropical; humid; temperatures moderated by trade winds",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "coral islands relatively flat; volcanic islands steep, hilly",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mount Sage 521 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Caribbean Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "NEGL; pleasant climate, beaches foster tourism",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "46.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 6.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 6.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 33.3% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "66.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "0% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "NA",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "a fairly even distribution throughout the inhabited islands, with the largest islands of Tortola, Anegada, Virgin Gorda, and Jost Van Dyke having the largest populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "hurricanes and tropical storms (July to October)",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "strong ties to nearby US Virgin Islands and Puerto Rico",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "40,102 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "19,042"
+      },
+      {
+       "label": "female",
+       "text": "21,060"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "British Virgin Islander(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "British Virgin Islander"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "African/Black 76.3%, Latino 5.5%, White 5.4%, mixed 5.3%, Indian 2.1%, East Indian 1.6%, other 3%, unspecified 0.8% (2010 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "English (official), Virgin Islands Creole",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Protestant 70.2% (Methodist 17.6%, Church of God 10.4%, Anglican 9.5%, Seventh Day Adventist 9.0%, Pentecostal 8.2%, Baptist 7.4%, New Testament Church of God 6.9%, other Protestant 1.2%), Roman Catholic 8.9%, Jehovah's Witness 2.5%, Hindu 1.9%, other 6.2%, none 7.9%, unspecified 2.4% (2010 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "16.6% (male 3,298/female 3,351)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "71.3% (male 13,455/female 15,152)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "12.1% (2024 est.) (male 2,289/female 2,557)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "40.2 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "23.2 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "16.9 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "5.9 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "38.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "38.1 years"
+      },
+      {
+       "label": "female",
+       "text": "38.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.78% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "10.8 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.58 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "12.54 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "a fairly even distribution throughout the inhabited islands, with the largest islands of Tortola, Anegada, Virgin Gorda, and Jost Van Dyke having the largest populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "49.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.73% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "15,000 ROAD TOWN (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "0.98 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.89 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.9 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.9 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "10.7 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "80.1 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "78.6 years"
+      },
+      {
+       "label": "female",
+       "text": "81.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 190,
+    "content": {
+     "text": "1.39 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 200,
+    "content": {
+     "text": "0.68 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.2% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "13.6% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "11 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "11 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "British Virgin Islands"
+      },
+      {
+       "label": "abbreviation",
+       "text": "BVI"
+      },
+      {
+       "label": "etymology",
+       "text": "the islets, cays, and rocks surrounding the major islands reminded explorer Christopher COLUMBUS in 1493 of Saint Ursula and her 11,000 virgin followers (Santa Ursula y las Once Mil Virgenes), which over time was shortened to the Virgins (las Virgenes)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "Overseas Territory of the UK with limited self-government; parliamentary democracy",
+     "items": []
+    }
+   },
+   {
+    "field": "Dependency status",
+    "order": 30,
+    "content": {
+     "text": "overseas territory of the UK; internal self-governing",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Road Town"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "18 25 N, 64 37 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "name refers to the nautical term \"roadstead\" or \"roads,\" a body of water less sheltered than a harbor but where ships can still lie at anchor"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "English common law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest effective 15 June 2007 (The Virgin Islands Constitution Order 2007)"
+      },
+      {
+       "label": "amendment process",
+       "text": "initiated by any elected member of the House of Assembly; passage requires simple majority vote by the elected members of the Assembly and assent by the governor on behalf of the monarch"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 70,
+    "content": {
+     "text": "see United Kingdom",
+     "items": []
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 80,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 90,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; governor appointed by the monarch; following legislative elections, the governor usually appoints the leader of the majority party or majority coalition as premier"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> on 5 May 2022, Premier Andrew FAHIE was removed from office by a no-confidence vote in the House of Assembly after his arrest on drug-trafficking and money-laundering charges; Premier Dr. Natalio WHEATLEY was sworn in as premier on 5 May 2022"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "House of Assembly"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "15 (directly elected and appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/24/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "VIP (6); NDP (3); PVIM (3); PU (1)"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "the Eastern Caribbean Supreme Court (ECSC) is the superior court of the Organization of Eastern Caribbean States; the ECSC is headquartered on St. Lucia and consists of the Court of Appeal -- headed by the chief justice and 4 judges -- and the High Court with 18 judges; the Court of Appeal travels to member states on a schedule to hear appeals from the High Court and subordinate courts"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Eastern Caribbean Supreme Court chief justice appointed by the British monarch; other justices and judges appointed by the Judicial and Legal Services Commission; Court of Appeal justices appointed for life with mandatory retirement at age 65; High Court judges appointed for life with mandatory retirement at age 62"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Magistrates' Courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 120,
+    "content": {
+     "text": "National Democratic Party or NDP<br />Progressive Virgin Islands Movement or PVIM<br />Progressives United or PU<br />Virgin Islands Party or VIP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 130,
+    "content": {
+     "text": "ACS (associate), Caricom (associate), CDB, Interpol (subbureau), IOC, OECS, UNESCO (associate), UPU",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 140,
+    "content": {
+     "text": "none (overseas territory of the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 150,
+    "content": {
+     "text": "Territory Day, 1 July (1956)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 160,
+    "content": {
+     "text": "<strong>description:</strong> blue with the UK flag in the upper-left quadrant and the Virgin Islander coat of arms centered on the right half of the flag; the coat of arms depicts a woman between two columns of six oil lamps, above a scroll with the Latin word VIGILATE (Be Watchful)<br /><br /><strong>meaning:</strong> Christopher COLUMBUS named the islands in 1493 in honor of Saint Ursula and her virgin followers, and the figure holding a lamp represents the saint, with the other lamps symbolizing her followers",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 170,
+    "content": {
+     "text": "zenaida dove, white cedar flower",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 180,
+    "content": {
+     "text": "yellow, green, red, white, blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"God Save the King\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "unknown"
+      },
+      {
+       "label": "history",
+       "text": "official anthem, as a UK overseas territory"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

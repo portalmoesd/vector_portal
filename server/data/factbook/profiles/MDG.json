@@ -1,0 +1,1163 @@
+{
+ "iso3": "MDG",
+ "gec": "ma",
+ "name": "Madagascar",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Madagascar was one of the last major habitable landmasses on earth to be settled by humans. While there is some evidence of human presence on the island in the millennia B.C., large-scale settlement began between A.D. 350 and 550 with settlers from present-day Indonesia. The island attracted Arab and Persian traders as early as the 7th century, and migrants from Africa arrived around A.D. 1000. Madagascar was a pirate stronghold during the late 17th and early 18th centuries and served as a slave trading center into the 19th century. From the 16th to the late 19th century, a native Merina Kingdom dominated much of Madagascar. The French conquered the island in 1896 and made it a colony; independence was regained in 1960. <br /><br />Free presidential and National Assembly elections were held in 1992-93, ending 17 years of single-party rule. In 1997, in the second presidential race, Didier RATSIRAKA, the leader during the 1970s and 1980s, returned to the presidency. The 2001 presidential election was contested between the followers of RATSIRAKA and Marc RAVALOMANANA, nearly causing half the country to secede. In 2002, the High Constitutional Court announced RAVALOMANANA the winner. He won a second term in 2006 but, following protests in 2009, handed over power to the military, which then conferred the presidency on the mayor of Antananarivo, Andry RAJOELINA, in what amounted to a coup d'etat. After a lengthy mediation process, Madagascar held UN-supported presidential and parliamentary elections in 2013. Former de facto finance minister Hery RAJAONARIMAMPIANINA won in a runoff and was inaugurated in 2014. In 2019, RAJOELINA was declared the winner against RAVALOMANANA. In 2023, RAJOELINA won another term in an election that most of the opposition boycotted, including RAJAONARIMAMPIANINA and RAVALOMANANA, who claimed it was rigged in favor of RAJOELINA. International observers, however, saw no evidence of systemic fraud, leading the international community to accept the election results.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Africa, island in the Indian Ocean, east of Mozambique",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "20 00 S, 47 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "587,041 sq km"
+      },
+      {
+       "label": "land",
+       "text": "581,540 sq km"
+      },
+      {
+       "label": "water",
+       "text": "5,501 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "almost four times the size of Georgia; slightly less than twice the size of Arizona",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "4,828 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm or 100 nm from the 2,500-m isobath"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical along coast, temperate inland, arid in south",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "narrow coastal plain, high plateau and mountains in center",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Maromokotro 2,876 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Indian Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "615 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "graphite, chromite, coal, bauxite, rare earth elements, salt, quartz, tar sands, semiprecious stones, mica, fish, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "70.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 5.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 64.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "17.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "12.2% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "10,860 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "most of population lives on the eastern half of the island; significant clustering is found in the central highlands and eastern coastline, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "periodic cyclones; drought; and locust infestation <br /><br /><strong>volcanism:</strong> Madagascar's volcanoes have not erupted in recorded history",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "world's fourth-largest island; strategic location along Mozambique Channel; despite Madagascar’s close proximity to the African continent, ocean currents isolate the island, resulting in high rates of endemic plant and animal species; approximately 90% of the flora and fauna on the island are found nowhere else",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "31,345,040 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15,647,362"
+      },
+      {
+       "label": "female",
+       "text": "15,697,678"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Malagasy (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Malagasy"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Malayo-Indonesian (Merina and related Betsileo), Cotiers (mixed African, Malayo-Indonesian, and Arab ancestry - Betsimisaraka, Tsimihety, Antaisaka, Sakalava), French, Indian, Creole, Comoran",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Malagasy (official) 99.9%, French (official) 23.6%, English 8.2%, other 0.6% (2018 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> shares sum to more than 100% because some respondents gave more than one answer on the census"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Church of Jesus Christ in Madagascar/Malagasy Lutheran Church/Anglican Church 34%, Roman Catholic 32.3%, other Christian 8.1%, traditional/Animist 1.7%, Muslim 1.4%, other 0.6%, none 21.9% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "37% (male 5,507,847/female 5,400,551)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "59.1% (male 8,720,012/female 8,673,880)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.9% (2024 est.) (male 532,642/female 617,782)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "73.4 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "66.9 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.5 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "15.3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.1 years"
+      },
+      {
+       "label": "female",
+       "text": "21.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.15% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "27.54 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.95 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.08 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of population lives on the eastern half of the island; significant clustering is found in the central highlands and eastern coastline, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "40.6% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "4.26% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.872 million ANTANANARIVO (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.86 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "19.5 years (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-29"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "445 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "38.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "40.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "34 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "68.8 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "67.3 years"
+      },
+      {
+       "label": "female",
+       "text": "70.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.47 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.71 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 79.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 36% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 53.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 20.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 64% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 46.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "3.5% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "5.7% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.17 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 53.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 25.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 36.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 46.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 74.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 63.3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "5.3% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.89 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.5 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.07 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.32 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "24.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "40.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "8.2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "22.6% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "62.3% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "12.7% (2021)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "38.8% (2021)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "11.2% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "18% national budget (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "74.7% (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "77.9% (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "71.8% (2021 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9 years (2019 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9 years (2019 est.)"
+      },
+      {
+       "label": "female",
+       "text": "9 years (2019 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Madagascar"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Madagascar"
+      },
+      {
+       "label": "local long form",
+       "text": "République de Madagascar/Repoblikan'i Madagasikara"
+      },
+      {
+       "label": "local short form",
+       "text": "Madagascar/Madagasikara"
+      },
+      {
+       "label": "former",
+       "text": "Malagasy Republic"
+      },
+      {
+       "label": "etymology",
+       "text": "a variant of the name was first used by 13th-century Venetian explorer Marco POLO when he confused the island with the Somali port of Mogadishu; the transliteration was later adopted as the official name"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Antananarivo"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "18 55 S, 47 31 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name means \"City of the Thousand,\" from the Malagasy <em>an</em>- (a prefix denoting a place name), <em>tanana </em>(town), and <em>arivo </em>(thousand); in the 17th century, King ADRIANJAKA named the original fortress after the 1,000 soldiers stationed there"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "6 provinces (<em>faritany</em>); Antananarivo, Antsiranana, Fianarantsoa, Mahajanga, Toamasina, Toliara",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the old French civil code and customary law in matters of marriage, family, and obligation",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1992; latest passed by referendum 17 November 2010, promulgated 11 December 2010"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic in consultation with the cabinet or supported by a least two thirds of both the Senate and National Assembly membership; passage requires at least three-fourths approval of both the Senate and National Assembly and approval in a referendum; constitutional articles, including the form and powers of government, the sovereignty of the state, and the autonomy of Madagascar’s collectivities, cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Madagascar; in the case of a child born out of wedlock, the mother must be a citizen"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "unknown"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); prime minister nominated by the National Assembly, appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "16 November 2023"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2023</em>: Andry RAJOELINA reelected president in first round; percent of vote - Andry RAJOELINA (TGV) 59.0%, Siteny Thierry RANDRIANASOLONIAIKO 14.4%, Marc RAVALOMANANA (TIM) 12.1%, other 14.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2028"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> on 14 October 2025 Col. Michael Randrianirina, commander of an elite unit of the country’s armed forces, announced the formation of a transitional government made up of civilians, which would rule for two years; the constitution, the country’s top court, and the electoral commission were suspended, and a referendum will be held to formulate a new constitution; the lower house of Parliament was not suspended and impeached former-President Andry RAJOELINA"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Antenimierampirenena)"
+      },
+      {
+       "label": "number of seats",
+       "text": "163 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12/11/2020"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Isika Rehetra Miaraka Amin’i Andry Rajoelina (IRMAR) (84); Firaisankina (22); Independents (50); Other (7)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "14.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Antenimierandoholona)"
+      },
+      {
+       "label": "number of seats",
+       "text": "18 (12 indirectly elected; 6 appointed)"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/29/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "IRMAR (10); MALAGASY MIARA-MIAINGA (2)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "11.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "31 December 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Cour Suprême (consists of 11 members; addresses judicial administration issues only); High Constitutional Court or Haute Cour Constitutionnelle (consists of 9 members); High Court of Justice (consists of 11 members; addresses cases brought against the president of Madagascar and senior officials for high treason, grave violations of the Constitution, or breach of duties incompatible with the exercise of the presidential mandate)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court heads elected by the president and judiciary officials to serve 3-year, single renewable terms; High Constitutional Court members appointed - 3 each by the president, by both legislative bodies, and by the Council of Magistrates; members serve single, 7-year terms; High Court of Justice members include: first president of the Supreme Court; 2 presidents from the Court of Cassation; 2 presidents from the Court of Appeal; 2 deputies  from the National Assembly; 2 senators from the Senate; 2 members from the High Council for the Defense of Democracy and the State of law"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; Court of Cassation; Courts of First Instance; military courts; traditional courts (dina); Trade Court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Group of Young Malagasy Patriots (Groupe des Jeunes Malgaches Patriotes) or GJMP<br />I Love Madagascar (Tiako I Madagasikara) or TIM<br />Isika Rehetra Miaraka amin'i Andry Rajoelina coalition or IRD<br />Malagasy Aware (Malagasy Tonga Saina) or MTS<br />Malagasy Tia Tanindrazana or MATITA or ANGADY<br />Movement for Democracy in Madagascar (Mouvement pour la Démocratie à Madagascar) or MDM<br />Rally for Democratic Socialism (Rassemblement pour Socialisme Démocratique - Nouveau) or RPSD Vaovao<br />Young Malagasies Determined (Tanora Malagasy Vonona) or TGV",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, AU, CD, COMESA, EITI (candidate country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, InOC, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIF, OPCW, PCA, SADC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "26 June 1960 (from France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 26 June (1960)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> two equal horizontal bands of red (top) and green, with a vertical white band on the left side<br /><br /><strong>meaning:</strong> red stands for sovereignty, green for hope, and white for purity",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "traveller's palm (ravenala), zebu",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, green, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Ry Tanindraza nay malala o\" (O Our Beloved Fatherland)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Pasteur RAHAJASON/Norbert RAHARISOA"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1959"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "3 (1 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Tsingy de Bemaraha Strict Nature Reserve (n); Ambohimanga Royal Hill (c); Atsinanana Rainforests  (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

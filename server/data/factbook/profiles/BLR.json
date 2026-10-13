@@ -1,0 +1,1189 @@
+{
+ "iso3": "BLR",
+ "gec": "bo",
+ "name": "Belarus",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "After seven decades as a constituent republic of the USSR, Belarus attained its independence in 1991. It has retained closer political and economic ties to Russia than any of the other former Soviet republics. In 1999, Belarus and Russia signed a treaty on a two-state union, envisioning greater political and economic integration. Although Belarus agreed to a framework to carry out the accord, serious implementation has yet to take place and negotiations on further integration have been contentious. Since taking office in 1994 as the country's first and only directly elected president, Alyaksandr LUKASHENKA has steadily consolidated his power through authoritarian means and a centralized economic system. Government restrictions on political and civil freedoms, freedom of speech and the press, peaceful assembly, and religion have remained in place. Restrictions on political freedoms have tightened in the wake of the disputed presidential election in 2020. The election results sparked large-scale protests as members of the opposition and civil society criticized the election’s validity. LUKASHENKA has remained in power as the disputed winner of the presidential election after quelling protests in 2020. Since 2022, Belarus has facilitated Russia's war in Ukraine, which was launched in part from Belarusian territory.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Europe, east of Poland",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "53 00 N, 28 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "207,600 sq km"
+      },
+      {
+       "label": "land",
+       "text": "202,900 sq km"
+      },
+      {
+       "label": "water",
+       "text": "4,700 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than twice the size of Kentucky; slightly smaller than Kansas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3,599 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Latvia 161 km; Lithuania 640 km; Poland 375 km; Russia 1,312 km; Ukraine 1,111 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "cold winters, cool and moist summers; transitional between continental and maritime",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "generally flat with much marshland",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Dzyarzhynskaya Hara 346 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Nyoman River 90 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "160 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "timber, peat deposits, small quantities of oil and natural gas, granite, dolomitic limestone, marl, chalk, sand, gravel, clay",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "39.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 27.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 11.7% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "44% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "16.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "260 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Dnyapro (Dnieper) (shared with Russia [s] and Ukraine [m]) - 2,287 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Black Sea) </em>Dnieper (533,966 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country, with urban areas attracting larger and denser populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "large tracts of marshy land",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "landlocked; glacial scouring accounts for the flatness of Belarusian terrain and for its 11,000 lakes",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9,460,972 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "4,414,771"
+      },
+      {
+       "label": "female",
+       "text": "5,046,201"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Belarusian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Belarusian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Belarusian 83.7%, Russian 8.3%, Polish 3.1%, Ukrainian 1.7%, other 2.4%, unspecified 0.9% (2009 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Russian (official) 71.4%, Belarusian (official) 26%, other 0.3% (includes small Polish- and Ukrainian-speaking minorities), unspecified 2.3% (2019 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Книга фактов о мире – незаменимый источник базовой информации. (Russian)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Orthodox 48.3%, Catholic 7.1%, other 3.5%, non-believers 41.1% (2011 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "16.1% (male 787,849/female 741,293)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "66.1% (male 3,073,507/female 3,204,088)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "17.8% (2024 est.) (male 572,483/female 1,122,231)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "52 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "24.1 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "27.9 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3.6 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "42.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "39.5 years"
+      },
+      {
+       "label": "female",
+       "text": "45 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.44% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "8.16 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "13.21 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0.67 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country, with urban areas attracting larger and denser populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "80.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.28% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "2.057 million MINSK (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.96 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.51 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.88 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "26.8 years (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "1 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.1 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2.5 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "1.7 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "74.7 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "69.8 years"
+      },
+      {
+       "label": "female",
+       "text": "80 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.45 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.7 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 98.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 1.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "12.3% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "4.72 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "9.7 beds/1,000 population (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 98.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 1.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "24.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10.57 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.26 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.98 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "4.67 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "2.66 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.4% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "44.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "11.6% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "62.4% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.1% (2019)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "4.7% (2019)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.6% (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "13.2% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "99.9% (2019 est.)"
+      },
+      {
+       "label": "male",
+       "text": "99.9% (2019 est.)"
+      },
+      {
+       "label": "female",
+       "text": "99.9% (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Belarus"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Belarus"
+      },
+      {
+       "label": "local long form",
+       "text": "Respublika Byelarus' (Belarusian)/ Respublika Belarus' (Russian)"
+      },
+      {
+       "label": "local short form",
+       "text": "Byelarus' (Belarusian)/ Belarus' (Russian)"
+      },
+      {
+       "label": "former",
+       "text": "Belorussian (Byelorussian) Soviet Socialist Republic"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is a compound of the Slavic words \"bel\" (white) and \"Rus\" (the Old East Slavic ethnic designation) to form the meaning White Rusian or White Ruthenian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic in name, although in fact a dictatorship",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Minsk"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "53 54 N, 27 34 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the name is disputed; it may be derived from the Menka River"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "6 regions (<em>voblastsi</em>, singular - <em>voblasts</em>') and 1 municipality* (<em>horad</em>); Brest, Homyel' (Gomel'), Horad Minsk* (Minsk City), Hrodna (Grodno), Mahilyow (Mogilev), Minsk, Vitsyebsk (Vitebsk)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> administrative divisions have the same names as their administrative centers; Russian spelling provided for reference when different from Belarusian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> nearly all major codes (civil, civil procedure, criminal, criminal procedure, family, and labor) were revised and came into force in 1999 and 2000"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest drafted between late 1991 and early 1994, signed 15 March 1994"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic through petition to the National Assembly or by petition of least 150,000 eligible voters; approval required by at least two-thirds majority vote in both chambers or by simple majority of votes cast in a referendum"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>one of several amendments passed in the February 2022 referendum -- the presidential 5-year, two-term limit -- will be imposed after the 2025 election"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Belarus"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (no term limits); prime minister and deputy prime ministers appointed by the president and approved by the National Assembly"
+      },
+      {
+       "label": "most recent election date",
+       "text": "first election held on 23 June and 10 July 1994; the 1994 constitution set the next election for 1999, but Alyaksandr LUKASHENKA extended his term to 2001 via a referendum; subsequent election held in 2001; a 2004 referendum ended presidential term limits and allowed LUKASHENKA to run and win a third term (19 March 2006), fourth term (19 December 2010), fifth term (11 October 2015), sixth term (9 August 2020), and seventh term (26 January 2025)"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2025: </em>Alyaksandr LUKASHENKA reelected president; percent of vote - Alyaksandr LUKASHENKA (independent) 86.8%, Sergey Syrankov (Communist Party) 3.2%, 3.6% voting against all<em><br /><br />2020:</em> Alyaksandr LUKASHENKA reelected president; percent of vote - Alyaksandr LUKASHENKA (independent) 80.1%, Svyatlana TSIKHANOWSKAYA (independent) 10.1%, other 9.8%; note - widespread street protests erupted following announcement of the election results amid allegations of voter fraud<br /><em><br />2015:</em> Alyaksandr LUKASHENKA elected president; percent of vote - Alyaksandr LUKASHENKA (independent) 84.1%, Tatsyana KARATKEVIC (BSDPH) 4.4%, Sergey GAYDUKEVICH (LDP) 3.3%, other 8.2%."
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Natsionalnoye Sobranie)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of Representatives (Palata Predstaviteley)"
+      },
+      {
+       "label": "number of seats",
+       "text": "110 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "2/25/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Belaya Rus party (51); Republican Party of Labour and Justice (8); Communist Party of Belarus (7); Non-partisans (40); Other (4)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "33.9%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "February 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Council of the Republic (Soviet Respubliki)"
+      },
+      {
+       "label": "number of seats",
+       "text": "65 (56 indirectly elected; 8 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/4/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "30.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chairman and deputy chairman and organized into several specialized panels, including economic and military; number of judges set by the president of the republic and the court chairman); Constitutional Court (consists of 12 judges, including a chairman and deputy chairman)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges appointed by the president with the consent of the Council of the Republic; judges initially appointed for 5 years and evaluated for life appointment; Constitutional Court judges - 6 appointed by the president and 6 elected by the Council of the Republic; the presiding judge directly elected by the president and approved by the Council of the Republic; judges can serve for 11 years with an age limit of 70"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "oblast courts; Minsk City Court; town courts; Minsk city and oblast economic courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Belaya Rus or BR<br />Republican Party of Labour and Justice or RPTS<br />Communist Party of Belarus or CBP<br />Liberal Democratic Party of Belarus or LDPB",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "BSEC (observer), CBSS (observer), CEI, CIS, CSTO, EAEC, EAEU, EAPC, EBRD, FAO, GCTU, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFC, IFRCS, ILO, IMF, IMSO, Interpol, IOC, IOM, IPU, ISO, ITU, ITUC (NGOs), MIGA, NAM, NSG, OPCW, OSCE, PCA, PFP, SCO (dialogue member), UN, UNCTAD, UNESCO, UNIDO, UNIFIL, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (observer), ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "25 August 1991 (from the Soviet Union)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 3 July (1944)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 3 July 1944 was the date Minsk was liberated from German troops, 25 August 1991 was the date of independence from the Soviet Union"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> red horizontal band (top), with a green horizontal band below that is half the width of the red band; a white vertical stripe on the left side has traditional Belarusian designs in red<br /><br /><strong>meaning:</strong> the red stands for past struggles to escape oppression, and the green for hope and the country's forests",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "no official symbol; the mounted knight known as Pahonia (the Chaser) is the traditional symbol",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "green, red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"My, Bielarusy\" (We Belarusians)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Mikhas KLIMKOVICH and Uladzimir KARYZNA/Nester SAKALOUSKI"
+      },
+      {
+       "label": "history",
+       "text": "music adopted 1955, lyrics adopted 2002; after the fall of the Soviet Union, Belarus kept the music of its Soviet-era anthem but adopted new lyrics; also known as \"Dziarzauny himn Respubliki Bielarus\" (State Anthem of the Republic of Belarus)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "4 (3 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Białowieża Forest (n); Mir Castle Complex (c); Architectural, Residential, and Cultural Complex of the Radziwill Family at Nesvizh (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

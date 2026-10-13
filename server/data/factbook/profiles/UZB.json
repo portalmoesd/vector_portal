@@ -1,0 +1,1202 @@
+{
+ "iso3": "UZB",
+ "gec": "uz",
+ "name": "Uzbekistan",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Uzbekistan is the geographic and population center of Central Asia, with a diverse economy and a relatively young population. Russia conquered and united the disparate territories of present-day Uzbekistan in the late 19th century. Stiff resistance to the Red Army after the Bolshevik Revolution was eventually suppressed and a socialist republic established in 1924. During the Soviet era, intensive production of \"white gold\" (cotton) and grain led to the overuse of agrochemicals and the depletion of water supplies, leaving the land degraded and the Aral Sea and certain rivers half-dry. Independent since the Union of Soviet Socialist Republics (USSR) dissolved in 1991, the country has diversified agricultural production while developing its mineral and petroleum export capacity and increasing its manufacturing base, although cotton remains a major part of its economy. Uzbekistan’s first president, Islom KARIMOV, led Uzbekistan for 25 years until his death in 2016. His successor, former Prime Minister Shavkat MIRZIYOYEV, has improved relations with Uzbekistan’s neighbors and introduced wide-ranging economic, judicial, and social reforms. MIRZIYOYEV was reelected in 2021 with 80% of the vote and again following a 2023 constitutional referendum with 87% of the vote.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Asia, north of Turkmenistan, south of Kazakhstan",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "41 00 N, 64 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "447,400 sq km"
+      },
+      {
+       "label": "land",
+       "text": "425,400 sq km"
+      },
+      {
+       "label": "water",
+       "text": "22,000 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about four times the size of Virginia; slightly larger than California",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6,893 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Afghanistan 144 km; Kazakhstan 2,330 km; Kyrgyzstan 1,314 km; Tajikistan 1,312 km; Turkmenistan 1,793 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (doubly landlocked)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Uzbekistan includes the southern portion of the Aral Sea with a 420 km shoreline"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (doubly landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "mostly mid-latitude desert, long, hot summers, mild winters; semiarid grassland in east",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly flat-to-rolling sandy desert with dunes; broad, flat intensely irrigated river valleys along course of Amu Darya, Syr Darya (Sirdaryo), and Zaravshan; Fergana Valley in east surrounded by mountainous Tajikistan and Kyrgyzstan; shrinking Aral Sea in west",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Xazrat Sulton Tog' 4,643 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Sariqamish Kuli -12 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "natural gas, petroleum, coal, gold, uranium, silver, copper, lead and zinc, tungsten, molybdenum",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "58.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 9.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 47.9% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "8.7% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "31.8% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "37,305 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Aral Sea (shared with Kazakhstan) - largely dried up"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Syr Darya (shared with Kyrgyzstan [s], Tajikistan, and Kazakhstan [m]) - 3,078 km; Amu Darya river mouth (shared with Tajikistan [s], Afghanistan, and Turkmenistan) - 2,620 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "<em>(Aral Sea basin)</em> Amu Darya (534,739 sq km), Syr Darya (782,617 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "most of the population is concentrated in the fertile Fergana Valley in the easternmost arm of the country; the south has significant clusters of people, but the central and western deserts are sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "earthquakes; floods; landslides or mudslides; avalanches; droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "along with Liechtenstein, one of the only two doubly landlocked countries in the world",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "37,015,151 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "18,576,048"
+      },
+      {
+       "label": "female",
+       "text": "18,439,103"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Uzbekistani"
+      },
+      {
+       "label": "adjective",
+       "text": "Uzbekistani"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Uzbek 83.8%, Tajik 4.8%, Kazakh 2.5%, Russian 2.3%, Karakalpak 2.2%, Tatar 1.5%, other 2.9% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Uzbek (official) 74.3%, Russian 14.2%, Tajik 4.4%, other 7.1%"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Jahon faktlari kitobi, asosiy ma'lumotlar uchun zaruriy manba. (Uzbek)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in the semi-autonomous Republic of Karakalpakstan, both the Karakalpak language and Uzbek have official status"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 88% (mostly Sunni), Eastern Orthodox 9%, other 3%",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "29.6% (male 5,597,947/female 5,213,403)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "63.7% (male 11,649,017/female 11,617,411)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "6.7% (2024 est.) (male 1,077,849/female 1,364,966)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "57.3 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "46.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "11.1 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "9 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "29.2 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "28.1 years"
+      },
+      {
+       "label": "female",
+       "text": "29.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.26% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "18.93 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.31 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of the population is concentrated in the fertile Fergana Valley in the easternmost arm of the country; the south has significant clusters of people, but the central and western deserts are sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "50.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.25% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "2.603 million TASHKENT (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.08 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.79 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "23.7 years (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "26 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17.6 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.1 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "15.1 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "76.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "73.6 years"
+      },
+      {
+       "label": "female",
+       "text": "79 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2.6 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.25 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 95.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 96.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 4.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 3.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "7.7% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "7.1% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "2.81 physicians/1,000 population (2021)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "4.9 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 98.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 98.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 1.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 1.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "16.6% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.45 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.18 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "2.19 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "15.4% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "30.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "1% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "1.8% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "74.7% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.2% (2022)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "3.4% (2022)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.5% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "22.1% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "100% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "100% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "100% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2024 est.)"
+      },
+      {
+       "label": "female",
+       "text": "13 years (2024 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Uzbekistan"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Uzbekistan"
+      },
+      {
+       "label": "local long form",
+       "text": "O'zbekiston Respublikasi"
+      },
+      {
+       "label": "local short form",
+       "text": "O'zbekiston"
+      },
+      {
+       "label": "former",
+       "text": "Uzbek Soviet Socialist Republic"
+      },
+      {
+       "label": "etymology",
+       "text": "the name comes from the local people, the Uzbeks, whose name is said to have originated with Mongol leader Ghiyath ad-Din Muhammad UZBEK; the Persian suffix -<em>stan </em>means \"country\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic; highly authoritarian",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Tashkent (Toshkent)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "41 19 N, 69 15 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+5 (10 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the current name of the ancient city was first used in the 11th century and comes from the Sogdian (Turkic) words <em>tash (</em>stone) and <em>kent</em> (town); the city was first recorded in the 5th or 4th century B.C. with the name of Chach or Shash"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "12 provinces (<em>viloyatlar</em>, singular - <em>viloyat</em>), 1 autonomous republic* (<em>avtonom respublikasi</em>), and 3 cities** (<em>shahar</em>); Andijon Viloyati, Buxoro Viloyati [Bukhara Province], Farg'ona Viloyati [Fergana Province], Jizzax Viloyati, Namangan Shahri, Namangan Viloyati, Navoiy Viloyati, Qashqadaryo Viloyati (Qarshi), Qoraqalpog'iston Respublikasi [Karakalpakstan Republic]* (Nukus), Samarqand Shahri [Samarkand City], Samarqand Viloyati [Samarkand Province], Sirdaryo Viloyati (Guliston), Surxondaryo Viloyati (Termiz), Toshkent Shahri [Tashkent City]**, Toshkent Viloyati [Nurafshon], Xorazm Viloyati (Urganch)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> administrative divisions show the same names as their administrative centers; exceptions show the administrative center name in parentheses"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in 2020, the criminal code, criminal procedure code, and code of administrative responsibility were reformed; a constitutional referendum in 2023 included additional criminal code reforms"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 8 December 1992"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Supreme Assembly or by referendum; passage requires two-thirds majority vote of both houses of the Assembly or passage in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Uzbekistan"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 7-year term (eligible for a second term); prime minister nominated by majority party in the Supreme Assembly but appointed along with the ministers and deputy ministers by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 July 2023"
+      },
+      {
+       "label": "election results",
+       "text": "2023: Shavkat MIRZIYOYEV reelected president in snap election; percent of vote - Shavkat MIRZIYOYEV (LDPU) 87.7%, Robaxon Maxmudova (Adolat) 4.5%, Ulugbek Inoyatov (PDP) 4%, Abdushukur Xamzayev (Ecological Party) 3.8%<br /><br />2021: Shavkat MIRZIYOYEV reelected president in first round; percent of vote - Shavkat MIRZIYOYEV (LDPU) 80.3%, Maqsuda VORISOVA (PDP) 6.7%, Alisher QODIROV (National Revival Democratic Party) 5.5%, Narzullo OBLOMURODOV (Ecological Party) 4.1%, Bahrom ABDUHALIMOV (Adolat) 3.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Supreme Assembly (Oliy Majlis)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Legislative Chamber (Qonunchilik palatasi)"
+      },
+      {
+       "label": "number of seats",
+       "text": "150 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/7/2024 to 11/12/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Movement of Entrepreneurs and Businesspeople - Liberal Democratic Party (UzLiDeP) (64); Milliy Tiklanish Democratic Party (O'zMTDP) (29); Social Democratic Party (\"Adolat\" SDP) (21); People's Democratic Party (XDP) (20); Ecological Party (O'EP) (16)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "38%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Senat)"
+      },
+      {
+       "label": "number of seats",
+       "text": "65 (56 indirectly elected; 9 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/27/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "24.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of 67 judges organized into administrative, civil, criminal, and economic sections); Constitutional Court (consists of 7 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges of the highest courts nominated by the president and confirmed by the Senate of the Oliy Majlis; judges appointed for a single 10-year term; the court chairman and deputies appointed for 10-year terms without the right to reelection. (Article 132 of the constitution)"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "regional, district, city, and town courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Ecological Party of Uzbekistan or EPU<br />Justice Social Democratic Party or ASDP<br />People's Democratic Party of Uzbekistan or PDP<br />Uzbekistan Liberal Democratic Party or UzLiDep<br />Uzbekistan National Revival Democratic Party or UzMTDP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ADB, CICA, CIS, EAEU (observer), EAPC, EBRD, ECO, EEU (observer), FAO, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, ISO, ITSO, ITU, MIGA, NAM, OIC, OPCW, OSCE, PFP, SCO, UN, UNCTAD, UNESCO, UNIDO, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (observer)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "1 September 1991 (from the Soviet Union)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 1 September (1991)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of blue (top), white, and green separated by narrow red stripes with a vertical white crescent moon and 12 five-pointed white stars in the left corner of the top band<br /><br /><strong>meaning:</strong> blue stands for the Turkic peoples and the sky, white for peace and the striving for purity in thoughts and deeds, and green for nature and Islam; the red stripes represent the vital force of all living organisms; the crescent stands for Islam, and the 12 stars for the months and constellations of the Uzbek calendar",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "khumo (mythical bird)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "blue, white, red, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"O'zbekiston Respublikasining Davlat Madhiyasi\" (National Anthem of the Republic of Uzbekistan)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Abdulla ARIPOV/Mutal BURHANOV"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1992; after the fall of the Soviet Union, Uzbekistan kept the music of its Soviet-era anthem but adopted new lyrics"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "7 (5 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Itchan Kala (c); Historic Bukhara (c); Historic Shakhrisyabz (c); Samarkand - Crossroad of Cultures (c); Western Tien Shan (n); Cold Winter Deserts of Turan (n); Silk Roads: Zarafshan-Karakum Corridor (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

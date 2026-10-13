@@ -1,0 +1,1117 @@
+{
+ "iso3": "ZMB",
+ "gec": "za",
+ "name": "Zambia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Bantu-speaking groups mainly from the Luba and Lunda Kingdoms in the Congo River Basin and from the Great Lakes region in East Africa settled in what is now Zambia beginning around A.D. 300, displacing and mixing with previous population groups in the region. The Mutapa Empire developed after the fall of Great Zimbabwe to the south in the 14th century and ruled the region, including large parts of Zambia, from the 14th to 17th century. The empire collapsed as a result of the growing slave trade and Portuguese incursions in the 16th and 17th centuries. The region was further influenced by migrants from the Zulu Kingdom to the south and the Luba and Lunda Kingdoms to the north, after invading colonial and African powers displaced local residents into the area around the Zambezi River, in what is now Zambia. In the 1880s, British companies began securing mineral and other economic concessions from local leaders. The companies eventually claimed control of the region and incorporated it as the protectorate of Northern Rhodesia in 1911. The UK took over administrative control from the British South Africa Company in 1924. During the 1920s and 1930s, advances in mining spurred British economic ventures and colonial settlement. <br /><br />Northern Rhodesia’s name was changed to Zambia upon independence from the UK in 1964, under independence leader and first President Kenneth KAUNDA. In the 1980s and 1990s, declining copper prices, economic mismanagement, and a prolonged drought hurt the economy. Elections in 1991 brought an end to one-party rule and propelled the Movement for Multiparty Democracy (MMD) into power. The subsequent vote in 1996, however, saw increasing harassment of opposition parties and abuse of state media and other resources. Administrative problems marked the election in 2001, with three parties filing a legal petition challenging the election of ruling party candidate Levy MWANAWASA. MWANAWASA was reelected in 2006 in an election that was deemed free and fair. Upon his death in 2008, he was succeeded by his vice president, Rupiah BANDA, who won a special presidential byelection later that year. BANDA and the MMD lost to Michael SATA and the Patriotic Front (PF) in the 2011 general elections. SATA, however, presided over a period of haphazard economic management and attempted to silence opposition to PF policies. SATA died in 2014 and was succeeded by his vice president, Guy SCOTT, who served as interim president until 2015, when Edgar LUNGU won the presidential byelection and completed SATA's term. LUNGU then won a full term in the 2016 presidential elections. Hakainde HICHILEMA was elected president in 2021.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Africa, east of Angola, south of the Democratic Republic of the Congo",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "15 00 S, 30 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "752,618 sq km"
+      },
+      {
+       "label": "land",
+       "text": "743,398 sq km"
+      },
+      {
+       "label": "water",
+       "text": "9,220 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "almost five times the size of Georgia; slightly larger than Texas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6,043.15 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Angola 1,065 km; Botswana 0.15 km; Democratic Republic of the Congo 2,332 km; Malawi 847 km; Mozambique 439 km; Namibia 244 km; Tanzania 353 km; Zimbabwe 763 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; modified by altitude; rainy season (October to April)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly high plateau with some hills and mountains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mafinga Central 2,330 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Zambezi river 329 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,138 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "copper, cobalt, zinc, lead, coal, emeralds, gold, silver, uranium, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "32.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 5.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 26.9% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "60.6% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "7.3% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "1,560 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lake Tanganyika (shared with Democratic Republic of Congo, Tanzania, and Burundi) - 32,000 sq km; Lake Mweru (shared with Democratic Republic of Congo) - 4,350 sq km; Lake Bangweulu - 4,000-15,000 sq km seasonal variation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "<p>Congo river source (shared with Angola, Republic of Congo, and Democratic Republic of Congo [m]) - 4,700 km; Zambezi river source (shared with Angola, Namibia, Botswana, Zimbabwe, and Mozambique [m]) - 2,740 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth</p>",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Congo (3,730,881 sq km)"
+      },
+      {
+       "label": "Indian Ocean drainage",
+       "text": "Zambezi (1,332,412 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 180,
+    "content": {
+     "text": "Upper Kalahari-Cuvelai-Upper Zambezi Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 190,
+    "content": {
+     "text": "one of the highest levels of urbanization in Africa; high density in the central area, particularly around the cities of Lusaka, Ndola, Kitwe, and Mufulira, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 200,
+    "content": {
+     "text": "periodic drought; tropical storms (November to April)",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 210,
+    "content": {
+     "text": "landlocked; the Zambezi forms a natural river boundary with Zimbabwe; Lake Kariba on the Zambia-Zimbabwe border forms the world's largest reservoir by volume (180 cu km; 43 cu mi)",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22,021,971 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "11,066,079"
+      },
+      {
+       "label": "female",
+       "text": "10,955,892"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Zambian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Zambian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Bemba 21%, Tonga 13.6%, Chewa 7.4%, Lozi 5.7%, Nsenga 5.3%, Tumbuka 4.4%, Ngoni 4%, Lala 3.1%, Kaonde 2.9%, Namwanga 2.8%, Lunda (north Western) 2.6%, Mambwe 2.5%, Luvale 2.2%, Lamba 2.1%, Ushi 1.9%, Lenje 1.6%, Bisa 1.6%, Mbunda 1.2%, other 13.8%, unspecified 0.4% (2010 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Bemba 33.4%, Nyanja 14.7%, Tonga 11.4%, Lozi 5.5%, Chewa 4.5%, Nsenga 2.9%, Tumbuka 2.5%, Lunda (North Western) 1.9%, Kaonde 1.8%, Lala 1.8%, Lamba 1.8%, English (official) 1.7%, Luvale 1.5%, Mambwe 1.3%, Namwanga 1.2%, Lenje 1.1%, Bisa 1%, other 9.7%, unspecified 0.2% (2010 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Zambia is said to have over 70 languages, although many of these may be considered dialects; all of Zambia's major languages are members of the Bantu family; Chewa and Nyanja are mutually intelligible dialects"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Protestant 75.3%, Roman Catholic 20.2%, other 2.7% (includes Muslim, Buddhist, Hindu, and Baha'i), none 1.8% (2010 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "42.1% (male 4,418,980/female 4,337,187)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "55.1% (male 5,726,265/female 5,736,732)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "2.8% (2024 est.) (male 262,008/female 317,944)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "75.8 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "71.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "4.5 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "22.3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "19 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "18.2 years"
+      },
+      {
+       "label": "female",
+       "text": "18.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.51% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "29.6 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "4.91 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0.4 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "one of the highest levels of urbanization in Africa; high density in the central area, particularly around the cities of Lusaka, Ndola, Kitwe, and Mufulira, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "46.3% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "4.15% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.181 million LUSAKA (capital), 763,000 Kitwe (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.82 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "19.2 years (2018 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "85 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "30.1 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "38.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "32.1 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "66.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "65.2 years"
+      },
+      {
+       "label": "female",
+       "text": "68.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.67 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.81 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 88.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 51.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 68.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 11.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 48.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 31.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8.9% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.32 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 78.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 40.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 57.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 21.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 59.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 42.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "8.1% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3.82 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "1.26 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.04 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.36 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "2.16 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11.7% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.4% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "2.4% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "11.8% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "55.7% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "5.2% (2018)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "29% (2018)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "2.8% (2018)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.1% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "14.5% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "71.1% (2018 est.)"
+      },
+      {
+       "label": "male",
+       "text": "81.7% (2018 est.)"
+      },
+      {
+       "label": "female",
+       "text": "62.2% (2018 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Zambia"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Zambia"
+      },
+      {
+       "label": "former",
+       "text": "Northern Rhodesia"
+      },
+      {
+       "label": "etymology",
+       "text": "name is derived from the Zambezi River, which flows through the western part of the country and forms the southern border with Zimbabwe"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Lusaka"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "15 25 S, 28 17 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "named after a village with a headman (chief) called LUSAAKAS"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "10 provinces; Central, Copperbelt, Eastern, Luapula, Lusaka, Muchinga, Northern, North-Western, Southern, Western",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of English common law and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 24 August 1991, promulgated 30 August 1991"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the National Assembly; passage requires two-thirds majority vote by the Assembly in two separate readings at least 30 days apart; passage of amendments affecting fundamental rights and freedoms requires approval by at least one half of votes cast in a referendum prior to consideration and voting by the Assembly"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "only if at least one parent is a citizen of Zambia"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "yes, if at least one parent was a citizen of Zambia"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years for those with an ancestor who was a citizen of Zambia, otherwise 10 years residency is required"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12 August 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2021</em>: Hakainde HICHILEMA elected president; percent of the vote - Hakainde HICHILEMA (UPND) 57.9%, Edgar LUNGU (PF) 37.3%, other 4.8%<br /><br /><em>2016</em>: Edgar LUNGU reelected president; percent of vote - Edgar LUNGU (PF) 50.4%, Hakainde HICHILEMA (UPND) 47.6%, other 2%; note - the president is both chief of state and head of government"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "167 (156 directly elected; 8 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "44420"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "United Party for National Development (UPND) (82); Patriotic Front (PF) (60); Independents (13); Other (1)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "15%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "August 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chief justice, deputy chief justice, and at least 11 judges); Constitutional Court (consists of the court president, vice president, and 11 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court and Constitutional Court judges appointed by the president of the republic upon the advice of the 9-member Judicial Service Commission, which is headed by the chief justice, and ratified by the National Assembly; judges normally serve until age 65"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeal; High Court; Industrial Relations Court; subordinate courts (3 levels, based on upper limit of money involved); Small Claims Court; local courts (2 grades, based on upper limit of money involved)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Alliance for Democracy and Development or ADD <br />Forum for Democracy and Development or FDD <br />Movement for Multiparty Democracy or MMD <br />Party of National Unity and Progress or PNUP <br />Patriotic Front or PF <br />United Party for National Development or UPND",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AU, C, COMESA, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, OPCW, PCA, SADC, UN, UNCTAD, UNDOF, UNESCO, UNHCR, UNIDO, UNISFA, UNMIL, UNMISS, UNOCI, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "24 October 1964 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 24 October (1964)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description: </strong>green field with a soaring orange eagle in the upper-right corner; a panel of three vertical bands is under the eagle, in red (left side), black, and orange<br /><br /><strong>meaning:</strong> green stands for the country's natural resources and vegetation, red for the struggle for freedom, black for the people, and orange for the country's mineral wealth; the eagle represents the people's ability to rise above the nation's problems",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "African fish eagle",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, red, black, orange",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Lumbanyeni Zambia\" (Stand and Sing of Zambia, Proud and Free)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "multiple/Enoch Mankayi SONTONGA"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1964; the melody, which comes from the popular song \"God Bless Africa,\" a popular song and anthem in southern Africa"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Mosi-oa-Tunya/Victoria Falls"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

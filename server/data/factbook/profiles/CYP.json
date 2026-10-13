@@ -1,0 +1,1146 @@
+{
+ "iso3": "CYP",
+ "gec": "cy",
+ "name": "Cyprus",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "A former British colony, Cyprus became independent in 1960 after years of resistance to British rule. Tensions between the Greek Cypriot majority and Turkish Cypriot minority came to a head in December 1963, when violence broke out in the capital of Nicosia. Despite the deployment of UN peacekeepers in 1964, sporadic intercommunal violence continued and forced most Turkish Cypriots into enclaves throughout the island. In 1974, a Greek Government-sponsored attempt to overthrow the elected president of Cyprus was met by military intervention from Turkey, which soon controlled more than a third of the island. In 1983, the Turkish Cypriot administered area declared itself the \"Turkish Republic of Northern Cyprus\" (TRNC), but it is recognized only by Turkey. A UN-mediated agreement to reunite Cyprus, the Annan Plan, failed to win approval from both communities in 2004. The most recent round of reunification negotiations was suspended in 2017 after failure to achieve a breakthrough. <br /><br />The entire island joined the EU in 2004, although the EU acquis -- the body of common rights and obligations -- applies only to the areas under the internationally recognized government and is suspended in the TRNC. However, individual Turkish Cypriots able to document their eligibility for Republic of Cyprus citizenship have the same legal rights accorded to citizens of other EU states.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Middle East, island in the Mediterranean Sea, south of Turkey; note - Cyprus views itself as part of Europe; geopolitically, it can be classified as falling within Europe, the Middle East, or both",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "35 00 N, 33 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Middle East",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9,251 sq km (of which 3,355 sq km are in north Cyprus)"
+      },
+      {
+       "label": "land",
+       "text": "9,241 sq km"
+      },
+      {
+       "label": "water",
+       "text": "10 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about 0.6 times the size of Connecticut",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "156 km"
+      },
+      {
+       "label": "border sovereign base areas",
+       "text": "Akrotiri 48 km; Dhekelia 108 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "648 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate; Mediterranean with hot, dry summers and cool winters",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "central plain with mountains to north and south; scattered but significant plains along southern coast",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mount Olympus 1,951 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Mediterranean Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "91 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "copper, pyrites, asbestos, gypsum, timber, salt, marble, clay earth pigment",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "14% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 10.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 3.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0.2% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "18.6% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "67.1% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "269 sq km (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "population concentrated in central Nicosia and in the major cities of the south: Paphos, Limassol, and Larnaca",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "moderate earthquake activity; droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "the third largest island in the Mediterranean Sea (after Sicily and Sardinia)",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,332,293 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "681,128"
+      },
+      {
+       "label": "female",
+       "text": "651,165"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Cypriot(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Cypriot"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Greek 98.8%, other 1% (includes Maronite, Armenian, Turkish-Cypriot), unspecified 0.2% (2011 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent only the Greek-Cypriot citizens in the Republic of Cyprus"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Greek (official) 80.9%, Turkish (official) 0.2%, English 4.1%, Romanian 2.9%, Russian 2.5%, Bulgarian 2.2%, Arabic 1.2%, Filipino 1.1%, other 4.3%, unspecified 0.6%  (2011 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Το Παγκόσμιο Βιβλίο Δεδομένων, η απαραίτητη πηγή βασικών πληροφοριών. (Greek)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent only the Republic of Cyprus"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Eastern Orthodox Christian 89.1%, Roman Catholic 2.9%, Protestant/Anglican 2%, Muslim 1.8%, Buddhist 1%, other (includes Maronite Catholic, Armenian Apostolic, Hindu) 1.4%, unknown 1.1%, none/atheist 0.6% (2011 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent only the government-controlled area of Cyprus"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "15.6% (male 105,533/female 100,099)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "70% (male 486,569/female 437,651)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "14.4% (2024 est.) (male 83,094/female 107,579)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "43.6 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "22.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "21.4 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "4.7 (2025 est.)"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent the whole country"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "39.9 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "38.2 years"
+      },
+      {
+       "label": "female",
+       "text": "41 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.89% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "9.95 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "7.11 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "6.04 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population concentrated in central Nicosia and in the major cities of the south: Paphos, Limassol, and Larnaca",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "67% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.76% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "269,000 NICOSIA (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.11 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.77 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.05 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "30 years (2020 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents only government-controlled areas"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "14 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.9 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "6.4 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "80.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "77.4 years"
+      },
+      {
+       "label": "female",
+       "text": "83.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.49 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.73 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 99.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "9.4% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "18.3% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "3.56 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "2.2 beds/1,000 population (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 98.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 1.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "21.8% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9.59 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.85 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "2.72 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "4.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "33.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "44.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "22.2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 310,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.7% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "12.5% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "16 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "17 years (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "People - note",
+    "order": 330,
+    "content": {
+     "text": "demographic data for Cyprus represent the population of the government-controlled area and the area administered by Turkish Cypriots, unless otherwise indicated",
+     "items": []
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Cyprus"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Cyprus"
+      },
+      {
+       "label": "local long form",
+       "text": "Kypriaki Dimokratia (Greek)/ Kibris Cumhuriyeti (Turkish)"
+      },
+      {
+       "label": "local short form",
+       "text": "Kypros (Greek)/ Kibris (Turkish)"
+      },
+      {
+       "label": "etymology",
+       "text": "the Greek name for the island is Kupros, which is probably derived from the Sumerian <em>kabar</em>, meaning \"copper\" or \"bronze;\" copper mines were located on the island in antiquity"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the Turkish Cypriot community, which administers the northern part of the island, refers to itself as the \"Turkish Republic of Northern Cyprus\" or \"TRNC\" (\"Kuzey Kibris Turk Cumhuriyeti\" or \"KKTC\")"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "Republic of Cyprus - presidential republic; self-declared \"Turkish Republic of Northern Cyprus\" (TRNC) - parliamentary republic with enhanced presidency",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> a separation of the two main ethnic communities inhabiting the island began following the outbreak of communal strife in 1963; this separation was further solidified when a Greek military-junta-supported coup attempt prompted the Turkish military intervention in July 1974 that gave the Turkish Cypriots de facto control in the north; Greek Cypriots control the only internationally recognized government on the island; on 15 November 1983, then Turkish Cypriot \"President\" Rauf DENKTAS declared independence and the formation of the \"TRNC,” which is recognized only by Turkey"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Nicosia (Lefkosia/Lefkosa)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "35 10 N, 33 22 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "may have been named after Nike, the Greek goddess of victory; the Greek name for the city, Lefkosia, and the Turkish name, Lefkosa, both mean \"White City\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "6 districts; Ammochostos (Famagusta; all but a small part located in the Turkish Cypriot community), Keryneia (Kyrenia; the only district located entirely in the Turkish Cypriot community), Larnaka (Larnaca; with a small part located in the Turkish Cypriot community), Lefkosia (Nicosia; a small part administered by Turkish Cypriots), Lemesos (Limassol), Pafos (Paphos)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the 5 \"districts\" of the \"Turkish Republic of Northern Cyprus\" are Gazimagusa (Famagusta), Girne (Kyrenia), Guzelyurt (Morphou), Iskele (Trikomo), Lefkosa (Nicosia)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of English common law and civil law, with European law supremacy",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "ratified 16 August 1960"
+      },
+      {
+       "label": "amendment process",
+       "text": "constitution of the Republic of Cyprus -- proposed by the House of Representatives; passage requires at least two-thirds majority vote of the total membership of the \"Greek Community\" and the \"Turkish Community\"; however, all seats of Turkish Cypriot members have remained vacant since 1964<br /><br />constitution of the “Turkish Republic of Northern Cyprus” -- proposed by at least 10 members of the \"Assembly of the Republic\"; passage requires at least two-thirds majority vote of the total Assembly membership and approval by referendum"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in 1963, the constitution was partly suspended as Turkish Cypriots withdrew from the government; Turkish-held territory in 1983 was declared the \"Turkish Republic of Northern Cyprus\" (\"TRNC\"); in 1985, the \"TRNC\" approved its own constitution"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Cyprus"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (limited to 2 consecutive terms)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5 February 2023, with a runoff on 12 February 2023"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2023: </em>Nikos CHRISTODOULIDIS elected president in second round; percent of vote in first round - Nikos CHRISTODOULIDIS (independent) 32%, Andreas MAVROGIANNIS (independent) 29.6%, Averof NEOFYTOU (DISY) 26.1%, Christos CHRISTOU (ELAM) 6%, other 6.3%; percent of vote in second round - Nikos CHRISTODOULIDS 52%, Andreas MAVROGIANNIS 48%<em><br /><br />2018: </em>Nikos ANASTASIADIS reelected president in second round; percent of vote in first round - Nikos ANASTASIADIS (DISY) 35.5%, Stavros MALAS (AKEL) 30.2%, Nicolas PAPADOPOULOS (DIKO) 25.7%, other 8.6%; percent of vote in second round - Nikos ANASTASIADIS 56%, Stavros MALAS 44%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2028"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> vice presidency reserved for a Turkish Cypriot, but the post has been vacant since 1974 because Turkish Cypriots do not participate in the Republic of Cyprus Government<br /><br /><strong>note 2: </strong>under the 1960 constitution, 3 ministerial posts are reserved for Turkish Cypriots, appointed by the vice president, but Greek Cypriots currently hold the positions"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "House of Representatives (Vouli Antiprosopon)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "80 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/30/2021"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Democratic Rally (DISY) (17); Progressive Party of the Working People (AKEL) (15); Democratic Party (DIKO) (9); National Popular Front (ELAM) (4); Movement of Social Democrats (EDEK) (4); Democratic Alignment (DIPA) (4); Cyprus Green Party (KOP) (3)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "14.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2026"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the area of Cyprus that Turkish Cypriots administer has a separate unicameral Assembly of the Republic, or Cumhuriyet Meclisi (50 seats); members are directly elected in multi-seat constituencies by proportional representation vote"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of Cyprus (consists of 13 judges, including the court president)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Republic of Cyprus Supreme Court judges appointed by the president of the republic on the recommendation of the Supreme Court judges; judges can serve until age 68; \"TRNC Supreme Court\" judges appointed by the \"Supreme Council of Judicature,\" a 12-member body of judges, the attorney general, appointees by the president of the \"TRNC,\" and by the \"Legislative Assembly,\" and members elected by the bar association; judge tenure NA"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Republic of Cyprus district courts; Assize Courts; Administrative Court; specialized courts for issues relating to family, industrial disputes, the military, and rent control; \"TRNC Assize Courts\"; \"TNRC district and family courts\""
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the highest court in the TRNC is the Supreme Court (consists of 8 judges, including the court president)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "<strong>area under government control:</strong> <br />Democratic Front or DIPA <br />Democratic Party or DIKO<br />Democratic Rally or DISY <br />Movement of Ecologists - Citizens' Alliance <br />Movement of Social Democrats EDEK<br />National Popular Front or ELAM <br />Progressive Party of the Working People or AKEL (Communist Party) <br />Solidarity Movement<br /><br /><strong>area administered by Turkish Cypriots:</strong> <br />Communal Democracy Party or TDP<br />Communal Liberation Party - New Forces or TKP-YG<br />Cyprus Socialist Party or KSP<br />Democratic Party or DP<br />National Democratic Party or NDP<br />National Unity Party or UBP <br />New Cyprus Party or YKP<br />People's Party or HP <br />Rebirth Party or YDP<br />Republican Turkish Party or CTP<br />United Cyprus Party or BKP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "Australia Group, C, CD, CE, EBRD, ECB, EIB, EMU, EU, FAO, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NAM, NSG, OAS (observer), OIF, OPCW, OSCE, PCA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "16 August 1960 (from the UK)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Turkish Cypriots proclaimed self-rule on 13 February 1975 and independence in 1983, but only Turkey recognizes these proclamations"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 1 October (1960)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Turkish Cypriots celebrate 15 November (1983) as \"Republic Day\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> a copper-colored silhouette of the island is centered on a white field above two crossed green olive branches<br /><br /><strong>meaning:</strong> the olive branches symbolize hope for peace and reconciliation between the Greek and Turkish communities",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> one of two national flags that uses a map as a design element; the flag of Kosovo is the other <br /><br /><strong>note 2:</strong> the \"Turkish Republic of Northern Cyprus\" flag retains the white field of the Cyprus national flag but has narrow horizontal red stripes near the top and bottom edges, with a red crescent and a five-pointed red star between them; the banner is modeled on the Turkish national flag, but with the colors reversed"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Cypriot mouflon (wild sheep), white dove",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "blue, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "<p>The coat of arms of Cyprus features a yellow shield representing the island’s copper deposits. A dove, one of the national symbols, holds an olive branch symbolizing peace, and olive branches encircle the shield.  The year 1960 on the shield is the date of Cyprus’s independence from the United Kingdom.</p> <p> </p>",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Ymnos eis tin Eleftherian\" (Hymn to Freedom)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Dionysios SOLOMOS/Nikolaos MANTZAROS"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1966; Cyprus uses the Greek national anthem; the Turkish Cypriot community in Cyprus uses Turkey's national anthem"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "3 (all cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Paphos; Painted Churches in the Troodos Region; Choirokoitia"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

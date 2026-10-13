@@ -1,0 +1,1116 @@
+{
+ "iso3": "BGR",
+ "gec": "bu",
+ "name": "Bulgaria",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "The Bulgars, a Central Asian Turkic tribe, merged with the local Slavic inhabitants in the late 7th century to form the first Bulgarian state. In succeeding centuries, Bulgaria struggled with the Byzantine Empire to assert its place in the Balkans, but by the end of the 14th century, the Ottoman Turks overran the country. Northern Bulgaria attained autonomy in 1878, and all of Bulgaria became independent from the Ottoman Empire in 1908. Having fought on the losing side in both World Wars, Bulgaria fell within the Soviet sphere of influence and became a People's Republic in 1946. Communist domination ended in 1990, when Bulgaria held its first multiparty election since World War II and began the contentious process of moving toward political democracy and a market economy while combating inflation, unemployment, corruption, and crime. The country joined NATO in 2004, the EU in 2007, and the Schengen Area for air and sea travel in 2024.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southeastern Europe, bordering the Black Sea, between Romania and Turkey",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "43 00 N, 25 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "110,879 sq km"
+      },
+      {
+       "label": "land",
+       "text": "108,489 sq km"
+      },
+      {
+       "label": "water",
+       "text": "2,390 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "almost identical in size to Virginia; slightly larger than Tennessee",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,806 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Greece 472 km; Macedonia 162 km; Romania 605 km; Serbia 344 km; Turkey 223 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "354 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate; cold, damp winters; hot, dry summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly mountains with lowlands in north and southeast",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Musala 2,925 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Black Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "472 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "bauxite, copper, lead, zinc, coal, timber, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "46.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 32.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 12.7% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "36.2% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "17.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "929 sq km (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Dunav (Danube) (shared with Germany [s], Austria, Slovakia, Hungary, Croatia, Serbia, Ukraine, Moldova, and Romania [m]) - 2,888 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Black Sea)</em> Danube (795,656 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country, with urban areas attracting larger populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "earthquakes; landslides",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "strategic location near Turkish Straits; controls key land routes from Europe to Middle East and Asia",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6,737,997 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "3,281,215"
+      },
+      {
+       "label": "female",
+       "text": "3,456,782"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Bulgarian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Bulgarian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Bulgarian 78.5%, Turkish 7.8%, Roma 4.1%, other 1.2%, unspecified 9.4% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Romani populations are usually underestimated in official statistics and may represent 9–11% of Bulgaria's population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Bulgarian (official) 77.3%, Turkish 7.9%, Romani 3.5%, other 1%, unspecified 10.4% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Светoвен Алманах, незаменимият източник за основна информация. (Bulgarian)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Christian 64.7%, Muslim 9.8%, other 0.1%, none 4.7%, unspecified 20.7% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "13.8% (male 479,586/female 453,423)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "65.2% (male 2,250,962/female 2,171,279)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "21% (2024 est.) (male 572,943/female 854,466)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "53.3 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "20.7 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "32.7 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3.1 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "45.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "43.3 years"
+      },
+      {
+       "label": "female",
+       "text": "47 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.66% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "7.88 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "14.18 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.3 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country, with urban areas attracting larger populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "76.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "-0.28% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.288 million SOFIA (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.67 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.95 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "26.4 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "6 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.5 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "8.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "6.6 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "76.1 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "72.9 years"
+      },
+      {
+       "label": "female",
+       "text": "79.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.52 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.74 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 97.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 2.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.9% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "8.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "11.6% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "4.33 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "7.8 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "25% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11.18 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "4.44 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "1.72 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "4.96 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.06 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "33.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "36.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "30.3% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "1.6% (2014)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "56.6% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.5% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "12% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "15 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "16 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Bulgaria"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Bulgaria"
+      },
+      {
+       "label": "local long form",
+       "text": "Republika Bulgaria"
+      },
+      {
+       "label": "local short form",
+       "text": "Bulgaria"
+      },
+      {
+       "label": "former",
+       "text": "Kingdom of Bulgaria, People's Republic of Bulgaria"
+      },
+      {
+       "label": "etymology",
+       "text": "named after the Bulgar tribes who settled the lower Balkan region in the 7th century A.D.; the tribal name may come from the Turkic word <em>bulga</em>, or \"mixed,\" referring to the blend of Turkic and Slavic ethnicities in the tribes"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Sofia"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "42 41 N, 23 19 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "named after the Church of Saint Sofia in the city, parts of which may date to the 4th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "28 provinces (<em>oblasti</em>, singular - <em>oblast</em>); Blagoevgrad, Burgas, Dobrich, Gabrovo, Haskovo, Kardzhali, Kyustendil, Lovech, Montana, Pazardzhik, Pernik, Pleven, Plovdiv, Razgrad, Ruse, Shumen, Silistra, Sliven, Smolyan, Sofia, Sofia-Grad (Sofia City), Stara Zagora, Targovishte, Varna, Veliko Tarnovo, Vidin, Vratsa, Yambol",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest drafted between late 1990 and early 1991, adopted 13 July 1991"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the National Assembly or by the president of the republic; passage requires three-fourths majority vote of National Assembly members in three ballots; signed by the National Assembly chairperson; note - under special circumstances, a \"Grand National Assembly\" is elected with the authority to write a new constitution and amend certain articles of the constitution, including those affecting basic civil rights and national sovereignty; passage requires at least two-thirds majority vote in each of several readings"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Bulgaria"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president and vice president elected on the same ballot by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); chairman of the Council of Ministers (prime minister) elected by the National Assembly; deputy prime ministers nominated by the prime minister, elected by the National Assembly"
+      },
+      {
+       "label": "most recent election date",
+       "text": "14 and 21 November 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2021</em>: Rumen RADEV reelected president in second round; percent of vote in the first round - Rumen RADEV (independent) 49.4%, Anastas GERDZHIKOV (independent) 22.8%, Mustafa KARADAYI (DPS) 11.6%, Kostadin KOSTADINOV (Revival) 3.9%, Lozan PANOV (independent) 3.7%, other 8.6%; percent of vote in the second round - Rumen RADEV 66.7%, Anastas GERDZHIKOV 31.8%, neither 1.5%<br /><br /><em>2016: </em>Rumen RADEV elected president in second round; percent of vote - Rumen RADEV (independent, supported by Bulgarian Socialist Party) 59.4%, Tsetska TSACHEVA (GERB) 36.2%, neither 4.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "fall 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Narodno sabranie)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "240 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/27/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Citizens for European Development of Bulgaria Party (GERB) - Union of Democratic Forces (UDF) (66); We Continue the Change - Democratic Bulgaria (36); Revival (Vuzrazhdane) (33); Movement for Rights and Freedoms (DPS) - New Beginning (29); Bulgarian Socialist Party (BSP) - United Left (19); Alliance for Rights and Freedoms (APS) (19); There is Such a People (PP-ITN) (17); Other (21)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "25%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of Cassation consists of a chairman and approximately 72 judges organized into penal, civil, and commercial colleges; Supreme Administrative Court is organized into 2 colleges with various panels of 5 judges each; Constitutional Court consists of 12 justices) and resides outside the judiciary"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court of Cassation and Supreme Administrative judges elected by the Supreme Judicial Council or SJC (consists of 25 members with extensive legal experience) and appointed by the president; judges can serve until mandatory retirement at age 65; Constitutional Court justices elected by the National Assembly and appointed by the president and the SJC; justices appointed for 9-year terms with renewal of 4 justices every 3 years"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "appeals courts; regional and district courts; administrative courts; courts martial"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "BSP for Bulgaria (electoral alliance of BSP, PKT, Ecoglasnost)<br />Bulgarian Rise or BV<br />Bulgarian Socialist Party or BSP<br />Citizens for the European Development of Bulgaria or GERB (alliance with SDS) <br />Democratic Bulgaria or DB (electoral alliance of Yes! Bulgaria, DSB, and The Greens) <br />Democrats for a Strong Bulgaria or DSB<br />Ecoglasnost<br />Green Movement or The Greens <br />Movement for Rights and Freedoms or DPS<br />Political Club Thrace or PKT<br />Revival<br />Stand Up.BG or IS.BG<br />There is Such a People or ITN<br />Union of Democratic Forces or SDS (alliance with GERB) <br />Yes! Bulgaria <br />We Continue the Change or PP <br />We Continue the Change and Democratic Bulgaria or PP-DB (electoral alliance of PP, DB, Yes! Bulgaria)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "Australia Group, BIS, BSEC, CD, CE, CEI, CERN, EAPC, EBRD, ECB, EIB, EU, FAO, G- 9, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFC, IFRCS, IHO (pending member), ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITU, ITUC (NGOs), MIGA, NATO, NSG, OAS (observer), OIF, OPCW, OSCE, PCA, SELEC, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNMIL, UNOOSA,  UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "3 March 1878 (as an autonomous principality within the Ottoman Empire); 22 September 1908 (complete independence from the Ottoman Empire)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Liberation Day, 3 March (1878)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of white (top), green, and red<br /><br /><strong>meaning:</strong> white stands for peace, love, and freedom; green for the country's agricultural wealth; red for the independence struggle and military courage<br /><br /><strong>history:</strong> originally adopted in 1879 as a modified version of the Russian tricolor flag, using green instead of blue; the communist coat of arms was added to the flag in various forms between 1948 and 1990, when it was removed after the communist government collapsed",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "white, green, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "Bulgaria’s coat of arms in the national colors of white, green, and red was adopted in 1997; the three lions are a national symbol for strength, courage, and leadership that was used during the country’s liberation movement in the 1870s and the kingdom period in the early 20th century; above the shield is the crown of Bulgaria (originally the crown of the medieval Bulgarian tsars) with a gold cross on top; a white scroll over the oak branches bears the Bulgarian national motto, “United we stand strong”",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "“Mila Rodino” (Dear Homeland)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Tsvetan RADOSLAVOV"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1964; composed in 1885 by a student en route to fight in the Serbo-Bulgarian War"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "10 (7 cultural, 3 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Boyana Church (c); Madara Rider (c); Thracian Tomb of Kazanlak (c); Rock-Hewn Churches of Ivanovo (c); Rila Monastery (c); Ancient City of Nessebar (c); Thracian Tomb of Sveshtari (c); Srebarna Nature Reserve (n); Pirin National Park (n); Primeval Beech Forests of the Carpathians (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

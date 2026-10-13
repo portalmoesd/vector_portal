@@ -1,0 +1,1016 @@
+{
+ "iso3": "PRI",
+ "gec": "rq",
+ "name": "Puerto Rico",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Populated for centuries by aboriginal peoples, Puerto Rico was claimed by the Spanish Crown in 1493 after Christopher COLUMBUS' second voyage to the Americas. In 1898, after 400 years of colonial rule that saw the indigenous population nearly exterminated and African slave labor introduced, Puerto Rico was ceded to the US as a result of the Spanish-American War. Puerto Ricans were granted US citizenship in 1917. Popularly elected governors have served since 1948. In 1952, a constitution was enacted that provided for internal self-government. In plebiscites held in 1967, 1993, and 1998, voters chose not to alter the existing political status with the US, but the results of a 2012 vote left open the possibility of American statehood. A referendum held in late 2020 showed a narrow preference for statehood.<br /><br />Economic recession on the island has led to a net population loss since about 2005, as large numbers of residents moved to the US mainland. In 2017, Hurricane Maria was the worst storm to hit the island in eight decades, and damage was estimated in the tens of billions of dollars.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Caribbean, island between the Caribbean Sea and the North Atlantic Ocean, east of the Dominican Republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "18 15 N, 66 30 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Central America and the Caribbean",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9,104 sq km"
+      },
+      {
+       "label": "land",
+       "text": "8,959 sq km"
+      },
+      {
+       "label": "water",
+       "text": "145 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than three times the size of Rhode Island",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "501 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical marine, mild; little seasonal temperature variation",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly mountains with coastal plain in north; precipitous mountains to the sea on west coast; sandy beaches along most coastal areas",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Cerro de Punta 1,338 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Caribbean Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "261 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "some copper and nickel; potential for onshore and offshore oil",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "19% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 5.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 11.6% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "50.3% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "30.6% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "220 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "population clusters tend to be found along the coast, with the largest of these in and around San Juan; an exception is a sizeable population located in the interior of the island immediately south of the capital around Caguas; most of the interior, particularly in the western half of the island, is dominated by the Cordillera Central mountains, where population density is low",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "periodic droughts; hurricanes",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "important location along the Mona Passage, a key shipping lane to the Panama Canal; San Juan is one of the biggest and best natural harbors in the Caribbean; many small rivers and high central mountains ensure land is well-watered; south coast relatively dry; fertile coastal plain belt in north",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,984,841 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "1,400,771"
+      },
+      {
+       "label": "female",
+       "text": "1,584,070"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Puerto Rican(s) (US citizens)"
+      },
+      {
+       "label": "adjective",
+       "text": "Puerto Rican"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "White 75.8%, Black/African American 12.4%, other 8.5% (includes American Indian, Alaskan Native, Native Hawaiian, other Pacific Islander, and others), mixed 3.3% (2010 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 99% of the population is Latino"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Spanish, English"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 56%, Protestant 33% (largely Pentecostal), other 2%, atheist 1%, none 7% (2014 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "12.5% (male 191,649/female 184,597)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "62.6% (male 904,406/female 986,778)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "24.9% (2024 est.) (male 322,698/female 429,322)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "60.7 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "19.4 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "41.2 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "2.4 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "46.7 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "44.2 years"
+      },
+      {
+       "label": "female",
+       "text": "47.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-1.1% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "7.78 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "10.48 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-8.35 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population clusters tend to be found along the coast, with the largest of these in and around San Juan; an exception is a sizeable population located in the interior of the island immediately south of the capital around Caguas; most of the interior, particularly in the western half of the island, is dominated by the Cordillera Central mountains, where population density is low",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "93.6% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "-0.12% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "2.440 million SAN JUAN (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.92 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.75 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.89 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "11 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5.7 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "6.4 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "5.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "82.1 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "78.9 years"
+      },
+      {
+       "label": "female",
+       "text": "85.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.27 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.62 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 230,
+    "content": {
+     "text": "3.06 physicians/1,000 population (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 250,
+    "content": {
+     "text": "40.9% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.3% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "16% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "92.4% (2017 est.)"
+      },
+      {
+       "label": "male",
+       "text": "92.4% (2017 est.)"
+      },
+      {
+       "label": "female",
+       "text": "92.4% (2017 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "18 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Commonwealth of Puerto Rico"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Puerto Rico"
+      },
+      {
+       "label": "abbreviation",
+       "text": "PR"
+      },
+      {
+       "label": "etymology",
+       "text": "Christopher COLUMBUS originally named the island San Juan Bautista (Saint John the Baptist) and the capital city and main port Cuidad de Puerto Rico (Rich Port City); over time, the names were shortened and transposed"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "unincorporated organized territory of the US with local self-government; republican form of territorial government with separate executive, legislative, and judicial branches; note - reference Puerto Rican Federal Relations Act, 2 March 1917, as amended by Public Law 600, 3 July 1950",
+     "items": []
+    }
+   },
+   {
+    "field": "Dependency status",
+    "order": 30,
+    "content": {
+     "text": "unincorporated organized territory of the US with commonwealth status; policy relations between Puerto Rico and the US conducted under the jurisdiction of the Office of the President",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "San Juan"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "18 28 N, 66 07 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "Spanish explorer Juan PONCE de Leon named the city in 1511 both for himself and for his name saint, Saint John"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 50,
+    "content": {
+     "text": "no first-order administrative divisions as defined by the US government, but 78 municipalities (<em>municipios</em>, singular - <em>municipio</em>) are considered second-order: Adjuntas, Aguada, Aguadilla, Aguas Buenas, Aibonito, Anasco, Arecibo, Arroyo, Barceloneta, Barranquitas, Bayamon, Cabo Rojo, Caguas, Camuy, Canovanas, Carolina, Catano, Cayey, Ceiba, Ciales, Cidra, Coamo, Comerio, Corozal, Culebra, Dorado, Fajardo, Florida, Guanica, Guayama, Guayanilla, Guaynabo, Gurabo, Hatillo, Hormigueros, Humacao, Isabela, Jayuya, Juana Diaz, Juncos, Lajas, Lares, Las Marias, Las Piedras, Loiza, Luquillo, Manati, Maricao, Maunabo, Mayaguez, Moca, Morovis, Naguabo, Naranjito, Orocovis, Patillas, Penuelas, Ponce, Quebradillas, Rincon, Rio Grande, Sabana Grande, Salinas, San German, San Juan, San Lorenzo, San Sebastian, Santa Isabel, Toa Alta, Toa Baja, Trujillo Alto, Utuado, Vega Alta, Vega Baja, Vieques, Villalba, Yabucoa, Yauco",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 60,
+    "content": {
+     "text": "civil law system based on the Spanish civil code, within the framework of the US federal system",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1900 (Organic Act, or Foraker Act); latest ratified by referendum 3 March 1952, approved 3 July 1952, effective 25 July 1952"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by a concurrent resolution of at least two-thirds majority by the total Legislative Assembly membership; approval requires at least two-thirds majority vote by the membership of both houses and approval by a majority of voters in a special referendum; if passed by at least three-fourths Assembly vote, the referendum can be held concurrently with the next general election; constitutional articles such as the republican form of government or the bill of rights cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": "see United States",
+     "items": []
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> residents are US citizens but do not vote in US presidential elections"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president and vice president indirectly elected on the same ballot by an Electoral College of electors chosen from each state; president and vice president serve a 4-year term (eligible for a second term); under the US Constitution, residents of Puerto Rico do not vote in elections for US president and vice president, but they can vote in Democratic and Republican party presidential primary elections; governor directly elected by simple-majority popular vote for a 4-year term (no term limits)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5 November 2024"
+      },
+      {
+       "label": "election results",
+       "text": "2024: Jenniffer GONZÁLEZ-COLÓN elected governor; percent of vote - Jenniffer GONZÁLEZ-COLÓN (PNP) 39.4%, Juan DALMAU Ramírez (PIP) 32.7%, Jesús Manuel ORTIZ (PPD) 21.1%, Javier JIMÉNEZ (PD) 6.7%, other 0.1%<em><br /><br />2020:</em> Pedro PIERLUISI elected governor; percent of vote - Pedro PIERLUISI (PNP) 32.9%, Carlos DELGADO (PPD) 31.6%, Alexandra LUGARO (independent) 14.2%, Juan DALMAU (PIP) 13.7%, other 7.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "7 November 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Legislative Assembly (Asamblea Legislativa)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Puerto Rico directly elects 1 member by simple majority vote to serve a 4-year term as a commissioner to the US House of Representatives; the commissioner can vote when serving on a committee and when the House meets as the Committee of the Whole House but not when legislation is submitted for a 'full floor' House vote; election of commissioner last held on 6 November 2018 (next to be held in November 2022)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of Representatives (Camara de Representantes)"
+      },
+      {
+       "label": "number of seats",
+       "text": "51 (directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/3/2020"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "PPD (26); PNP (21); MVC (2); PIP (1); PD (1)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "19.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2024"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Senado)"
+      },
+      {
+       "label": "number of seats",
+       "text": "30 (directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/3/2020"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "PPD (12); NP (10); MVC (2); PD (1); PIP (1); independent (1)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "48.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2024"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chief justice and 8 associate justices)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "justices appointed by the governor and confirmed by majority Senate vote; judges serve until compulsory retirement at age 70"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeals; First Instance Court comprised of superior and municipal courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Citizens' Victory Movement (Movimiento Victoria Ciudadana) or MVC<br />Democratic Party of Puerto Rico<br />New Progressive Party or PNP (pro-US statehood)<br />Popular Democratic Party or PPD (pro-commonwealth)<br />Project Dignity (Projecto Dignidad) or PD<br />Puerto Rican Independence Party or PIP (pro-independence)<br />Republican Party of Puerto Rico",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "AOSIS (observer), Caricom (observer), Interpol (subbureau), IOC, UNWTO (associate), UPU, WFTU (NGOs)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "none (territory of the US with commonwealth status)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "US Independence Day, 4 July (1776); Puerto Rico Constitution Day, 25 July (1952)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description: </strong>five equal horizontal bands of red alternating with white; a blue isosceles triangle based on the left side has a large five-pointed white star in the center<br /><br /><strong>meaning:</strong> the star stands for the country; the three sides of the triangle stand for the executive, legislative, and judicial branches of the government; blue stands for the sky and the coastal waters, red for the blood shed by warriors, and white for liberty, victory, and peace",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> design initially influenced by the US flag, but similar to the Cuban flag, with the colors of the bands and triangle reversed"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "Puerto Rican spindalis (bird), coqui (frog)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, white, blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"The Star-Spangled Banner\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Francis Scott KEY/John Stafford SMITH"
+      },
+      {
+       "label": "history",
+       "text": "official anthem, as a US commonwealth"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural); note - excerpted from the US entry"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "La Fortaleza and San Juan National Historic Site"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

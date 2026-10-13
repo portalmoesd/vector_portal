@@ -1,0 +1,1092 @@
+{
+ "iso3": "SVK",
+ "gec": "lo",
+ "name": "Slovakia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Slovakia traces its roots to the 9th century state of Great Moravia. The Slovaks then became part of the Hungarian Kingdom, where they remained for the next 1,000 years. After the formation of the dual Austro-Hungarian monarchy in 1867, language and education policies favoring the use of Hungarian (known as \"Magyarization\") led to a public backlash that boosted Slovak nationalism and strengthened Slovak cultural ties with the closely related Czechs, who fell administratively under the Austrian half of the empire. When the Austro-Hungarian Empire dissolved at the end of World War I, the Slovaks joined the Czechs to form Czechoslovakia. During the interwar period, Slovak nationalist leaders pushed for autonomy within Czechoslovakia, and in 1939, in the wake of Germany's annexation of the Sudetenland, the newly established Slovak Republic became a German client state for the remainder of World War II. <br /><br />After World War II, Czechoslovakia was reconstituted and came under communist rule within Soviet-dominated Eastern Europe. In 1968, Warsaw Pact troops invaded and ended the efforts of Czechoslovakia's leaders to liberalize communist rule and create \"socialism with a human face,\" ushering in a period of repression known as \"normalization.\" The peaceful Velvet Revolution swept the Communist Party from power at the end of 1989 and inaugurated a return to democratic rule and a market economy. On 1 January 1993, Czechoslovakia underwent a nonviolent \"velvet divorce\" into its two national components, Slovakia and the Czech Republic. Slovakia joined both NATO and the EU in 2004 and the euro zone in 2009.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Europe, south of Poland",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "48 40 N, 19 30 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "49,035 sq km"
+      },
+      {
+       "label": "land",
+       "text": "48,105 sq km"
+      },
+      {
+       "label": "water",
+       "text": "930 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about 1.5 times the size of Maryland; about twice the size of New Hampshire",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,587 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Austria 105 km; Czechia 241 km; Hungary 627 km; Poland 517 km; Ukraine 97 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate; cool summers; cold, cloudy, humid winters",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "rugged mountains in the central and northern part and lowlands in the south",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Gerlachovsky Stit 2,655 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Bodrok River 94 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "458 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "lignite, small amounts of iron ore, copper and manganese ore; salt; arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "38% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 27.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 10.4% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "40.3% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "21.4% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "259 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Dunaj (Danube) (shared with Germany [s], Austria, Hungary, Croatia, Serbia, Bulgaria, Ukraine, Moldova, and Romania [m]) - 2,888 km<br /><br /><strong>note</strong> – [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Black Sea)</em> Danube (795,656 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country; slightly larger concentration in the west in proximity to the Czech border",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "flooding",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "landlocked; most of the country is rugged and mountainous; the Tatra Mountains in the north are interspersed with many scenic lakes and valleys",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,563,649 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2,684,747"
+      },
+      {
+       "label": "female",
+       "text": "2,878,902"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Slovak(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Slovak"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Slovak 83.8%, Hungarian 7.8%, Romani 1.2%, other 1.8% (includes Czech, Ruthenian, Ukrainian, Russian, German, Polish), unspecified 5.4% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent population by nationality; Romani populations are usually underestimated in official statistics and may represent 7–11% of Slovakia's population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Slovak (official) 81.8%, Hungarian 8.5%, Roma 1.8%, other 2.2%, unspecified 5.7% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Svetova Kniha Faktov, nenahraditelny zdroj zakladnej informacie. (Slovak)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 55.8%, Evangelical Church of the Augsburg Confession 5.3%, Greek Catholic 4%, Reformed Christian 1.6%, other 3%, none 23.8%, unspecified 6.5% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "15.3% (male 444,033/female 408,902)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "66.5% (male 1,834,359/female 1,867,158)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "18.1% (2024 est.) (male 406,355/female 602,842)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "50.3 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "23 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "27.3 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3.7 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "43.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "41.3 years"
+      },
+      {
+       "label": "female",
+       "text": "44.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.07% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "9.77 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "11.18 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0.7 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country; slightly larger concentration in the west in proximity to the Czech border",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "54% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.17% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "441,000 BRATISLAVA (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.09 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.98 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.67 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.93 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "27.2 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "4 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "4.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "77.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "73.7 years"
+      },
+      {
+       "label": "female",
+       "text": "81 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.6 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.77 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "7.8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "14.6% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "3.7 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "5.7 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "20.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10.3 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "4.14 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "2.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "4.14 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "30.3% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "34.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "26.3% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "49.2% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.7% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "11% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "15 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "16 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Slovak Republic"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Slovakia"
+      },
+      {
+       "label": "local long form",
+       "text": "Slovenska republika"
+      },
+      {
+       "label": "local short form",
+       "text": "Slovensko"
+      },
+      {
+       "label": "etymology",
+       "text": "the country takes its name from the local Slav ethnic group; the origin of the group's name is unclear, although early forms were used in Medieval Latin (Sclavus) and Byzantine Greek (Sklabos)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Bratislava"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "48 09 N, 17 07 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "the meaning is unclear but has medieval Slavic origins; the name was adopted in 1919 after Czechoslovakia gained its independence, replacing the name Prešporok"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "8 regions (<em>kraje</em>, singular - <em>kraj</em>); Banska Bystrica, Bratislava, Kosice, Nitra, Presov, Trencin, Trnava, Zilina",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on Austro-Hungarian codes",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous (pre-independence); latest passed by the National Council 1 September 1992, signed 3 September 1992, effective 1 October 1992"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the National Council; passage requires at least three-fifths majority vote of Council members"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Slovakia"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); following National Council elections, the president designates a prime minister candidate, usually the leader of the party or coalition that wins the most votes, who must win a vote of confidence in the National Council"
+      },
+      {
+       "label": "most recent election date",
+       "text": "23 March 2024, with a runoff on 6 April 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024: </em>Peter PELLEGRINI elected president in the second round; percent of vote in second round Peter PELLEGRINI 53.1%; Ivan KORCOK 46.9%; percent of vote in first round - Ivan KORCOK (independent) 42.5%; Peter PELLEGRINI (Hlas-SD) 37%; Stefan HARABIN (independent) 11.7%, other 8.8%; <em><br /><br />2019:</em> Zuzana CAPUTOVA elected president in second round; percent of vote - Zuzana CAPUTOVA (PS) 58.4%, Maros SEFCOVIC (independent) 41.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Council (Narodna rada Slovenskej republiky)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "chamber name",
+       "text": "National Council (Národná rada)"
+      },
+      {
+       "label": "number of seats",
+       "text": "150 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9/30/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Smer - Social Democracy (Smer-SD) (42); Progressive Slovakia (PS) (32); Hlas (“Voice”) - SD (27); Coalition OĽaNO and Friends, 'For the People' and 'Christian Union' (16); Christian Democratic Movement (KDH) (12); Freedom and Solidarity (SaS) (11); Slovak National Party (SNS) (10)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "23.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of the Slovak Republic (consists of the court president, vice president, and approximately 80 judges organized into criminal, civil, commercial, and administrative divisions with 3- and 5-judge panels); Constitutional Court of the Slovak Republic (consists of 13 judges organized into 3-judge panels)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judge candidates nominated by the Judicial Council of the Slovak Republic, an 18-member self-governing body that includes the Supreme Court chief justice and presidential, governmental, parliamentary, and judiciary appointees; judges appointed by the president serve for life, subject to removal by the president at age 65; Constitutional Court judges nominated by the National Council of the Republic and appointed by the president; judges serve 12-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "regional and district civil courts; Special Criminal Court; Higher Military Court; military district courts; Court of Audit"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Direction - Social Democracy or SMER-SD<br />Freedom and Solidarity or SaS<br />Progressive Slovakia or PS<br />Republic<br />Slovakia<br />The Slovak National Party or SNS<br />The Christian Democratic Movement or KDH<br />Voice - Social Democracy or HLAS-SD",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "Australia Group, BIS, BSEC (observer), CBSS (observer), CD, CE, CEI, CERN, EAPC, EBRD, ECB, EIB, EMU, EU, FAO, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IEA, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITU, ITUC (NGOs), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OIF (observer), OPCW, OSCE, PCA, Schengen Convention, SELEC (observer), UN, UNCTAD, UNESCO, UNFICYP, UNIDO, UNOOSA, UNTSO, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "1 January 1993 (Czechoslovakia split into the Czech Republic and Slovakia)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Constitution Day, 1 September (1992)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of white (top), blue, and red; the national coat of arms (a red shield bordered in white, with a white double-barred cross of St. Cyril and St. Methodius on top of three blue hills) is centered over the bands but offset to the left<br /><br /><strong>meaning:</strong> white, blue, and red are the pan-Slav colors",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the pan-Slav colors were inspired by Russia's flag"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "double-barred cross (Cross of St. Cyril and St. Methodius) over three peaks",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "white, blue, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Nad Tatrou sa blyska\" (Storm Over the Tatras)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Janko MATUSKA/traditional"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1993;  music based on an 1843 Slovak folk song \"Kopala studienku\" (She Was Digging a Well)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "8 (6 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Historic Town of Banská Štiavnica (c); Levoča, Spišský Hrad, and the Associated Cultural Monuments (c); Vlkolínec (c); Caves of Aggtelek Karst and Slovak Karst (n); Bardejov Town (c); Ancient and Primeval Beech Forests of the Carpathians (n); Wooden Churches of the Slovak Carpathians (c); Frontiers of the Roman Empire - The Danube Limes (Western Segment) (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

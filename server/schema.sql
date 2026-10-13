@@ -474,4 +474,29 @@ CREATE TABLE IF NOT EXISTS stat_sync_runs (
   log           JSONB NOT NULL DEFAULT '[]'::jsonb
 );
 
+-- Descriptive country text (Introduction, Geography, People and Society,
+-- Government) imported once from the public-domain CIA World Factbook
+-- snapshot (server/data/factbook/). One row per field so each entry can be
+-- edited later: an edit sets edited_at/edited_by and a re-import never
+-- overwrites an edited row; original_content keeps the imported copy.
+CREATE TABLE IF NOT EXISTS stat_country_texts (
+  id               SERIAL PRIMARY KEY,
+  iso3             CHAR(3) NOT NULL,
+  section          TEXT NOT NULL,          -- 'Introduction' | 'Geography' | 'People and Society' | 'Government'
+  field            TEXT NOT NULL,          -- the source's field name, e.g. 'Land boundaries'
+  display_order    INT NOT NULL DEFAULT 0,
+  content          JSONB NOT NULL,         -- { text: html|null, items: [{ label, text }] }
+  original_content JSONB NOT NULL,
+  source_id        TEXT NOT NULL REFERENCES stat_sources(id),
+  source_name      TEXT NOT NULL,
+  source_url       TEXT NOT NULL,
+  data_date        TEXT,                   -- e.g. '2026-01' (snapshot month)
+  retrieved_at     TIMESTAMPTZ NOT NULL,
+  edited_at        TIMESTAMPTZ,
+  edited_by        INT REFERENCES users(id),
+  updated_at       TIMESTAMPTZ NOT NULL DEFAULT now(),
+  UNIQUE (iso3, section, field)
+);
+CREATE INDEX IF NOT EXISTS stat_country_texts_country_idx ON stat_country_texts (iso3, section, display_order);
+
 COMMIT;

@@ -1,0 +1,1210 @@
+{
+ "iso3": "BOL",
+ "gec": "bl",
+ "name": "Bolivia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Bolivia, named after independence fighter Simón BOLÍVAR, broke away from Spanish rule in 1825. Much of its subsequent history has consisted of a series of coups and countercoups, with the last coup occurring in 1980. Democratic civilian rule was established in 1982, but leaders have faced problems of deep-seated poverty, social unrest, and illegal drug production. <br /><br />In 2005, Bolivians elected Movement Toward Socialism leader Evo MORALES as president -- by the widest margin of any leader since 1982 -- after he ran on a promise to change the country's traditional political class and empower the poor and indigenous majority. In 2009 and 2014, MORALES easily won reelection, and his party maintained control of the legislative branch. In 2016, MORALES narrowly lost a referendum to approve a constitutional amendment that would have allowed him to compete in the 2019 presidential election. A subsequent Supreme Court ruling stating that term limits violate human rights provided the justification for MORALES to run despite the referendum, but rising violence, pressure from the military, and widespread allegations of electoral fraud ultimately forced him to flee the country. An interim government, led by President Jeanine AÑEZ Chávez, held new elections in 2020, and Luis Alberto ARCE Catacora was elected president.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central South America, southwest of Brazil",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "17 00 S, 65 00 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "South America",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,098,581 sq km"
+      },
+      {
+       "label": "land",
+       "text": "1,083,301 sq km"
+      },
+      {
+       "label": "water",
+       "text": "15,280 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than three times the size of Montana",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7,252 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Argentina 942 km; Brazil 3,403 km; Chile 942 km; Paraguay 753 km; Peru 1,212 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "varies with altitude; humid and tropical to cold and semiarid",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "rugged Andes Mountains with a highland plateau (Altiplano), hills, lowland plains of the Amazon Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Nevado Sajama 6,542 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Rio Paraguay 90 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,192 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "lithium, tin, natural gas, petroleum, zinc, tungsten, antimony, silver, iron, lead, gold, timber, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "35.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 5.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 30.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "50.6% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "13.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "2,972 sq km (2017)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lago Titicaca (shared with Peru) - 8,030 sq km"
+      },
+      {
+       "label": "salt water lake(s)",
+       "text": "Lago Poopo - 1,340 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Amazon (6,145,186 sq km), Paraná (2,582,704 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 170,
+    "content": {
+     "text": "Amazon Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "a high-altitude plain in the west between two cordillera of the Andes, known as the Altiplano, is the focal area for most of the population; a dense settlement pattern is also found in and around the city of Santa Cruz, located on the eastern side of the Andes",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "flooding in the northeast (March to April) <br /><br /><strong>volcanism:</strong> volcanic activity in Andes Mountains on the border with Chile; historically active volcanoes in this region are Irruputuncu (5,163 m), which last erupted in 1995, and the Olca-Paruma volcanic complex (5,762 m to 5,167 m)",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "landlocked; shares control of Lago Titicaca, world's highest navigable lake (elevation 3,805 m), with Peru",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "12,436,103 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "6,257,914"
+      },
+      {
+       "label": "female",
+       "text": "6,178,189"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Bolivian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Bolivian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Mestizo (mixed White and Indigenous ancestry) 68%, Indigenous 20%, White 5%, Cholo/Chola 2%, African descent 1%, other 1%, unspecified 3%; 44% other Indigenous group, predominantly Quechua or Aymara (2009 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> results among surveys vary based on the wording of the ethnicity question and the available response choices; the 2001 national census did not provide \"Mestizo\" as a response choice, resulting in a much higher proportion of respondents identifying themselves as belonging to one of the available indigenous ethnicity choices; the use of \"Mestizo\" and \"Cholo\" varies among response choices in surveys, with surveys using the terms interchangeably, providing one or the other as a response choice, or providing the two as separate response choices"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Spanish (official) 68.1%, Quechua (official) 17.2%, Aymara (official) 10.5%, Guarani (official) 0.6%, other 1.5%, unspecified 2.1%; note - Spanish and all Indigenous languages are official (2012 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 65%, Protestant 19.6% (Evangelical (non-specific) 11.9%, Evangelical Baptist 2.1%, Evangelical Pentecostal 1.8%, Evangelical Methodist 0.7%, Adventist 2.8%, Protestant (non-specific) 0.3%), Believer (not belonging to the church) 0.9%, other 4.8%, atheist 1.7%, agnostic 0.6%, none 6.1%, unspecified 1.3% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "28.5% (male 1,792,803/female 1,718,081)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "64.5% (male 4,002,587/female 3,937,953)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "7% (2024 est.) (male 397,384/female 463,166)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "54 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "42.9 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "11 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "9.1 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "27 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "26.2 years"
+      },
+      {
+       "label": "female",
+       "text": "27 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.01% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "17.02 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.99 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.95 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "a high-altitude plain in the west between two cordillera of the Andes, known as the Altiplano, is the focal area for most of the population; a dense settlement pattern is also found in and around the city of Santa Cruz, located on the eastern side of the Andes",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "71.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.87% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.936 million LA PAZ (capital), 1.820 million Santa Cruz, 1.400 million Cochabamba (2022); 278,000 Sucre (constitutional capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.86 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "21.1 years (2008 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "146 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22.1 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "24.5 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "20 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "72.5 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "71 years"
+      },
+      {
+       "label": "female",
+       "text": "74 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2.13 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.04 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 81% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 94.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 19% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 5.9% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "8.2% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "16.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "1.28 physicians/1,000 population (2021)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "1.4 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 51.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 85.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 48.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 14.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "20.2% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.98 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.22 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.14 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.54 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.08 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "18.9% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "3.2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "3.4% (2016 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "50.2% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "3.4% (2016)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "19.7% (2016)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "5.2% (2016)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "8.3% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "10.8% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "95.6% (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "97.8% (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "93.5% (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Plurinational State of Bolivia"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Bolivia"
+      },
+      {
+       "label": "local long form",
+       "text": "Estado Plurinacional de Bolivia"
+      },
+      {
+       "label": "local short form",
+       "text": "Bolivia"
+      },
+      {
+       "label": "former",
+       "text": "Upper Peru"
+      },
+      {
+       "label": "etymology",
+       "text": "the country is named in honor of Simón BOLÍVAR, a 19th-century leader in the South American wars for independence"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "La Paz (administrative capital); Sucre (constitutional [legislative and judicial] capital)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "16 30 S, 68 09 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "La Paz is a shortening of the original name of the city, Pueblo Nuevo de Nuestra Señora de La Paz (New Town of Our Lady of Peace); Sucre is named after Antonio José de SUCRE (1795-1830), the second president of Bolivia"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> at approximately 3,630 m above sea level, La Paz's elevation makes it the highest capital city in the world"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "9 departments (<em>departamentos</em>, singular - <em>departamento</em>); Beni, Chuquisaca, Cochabamba, La Paz, Oruro, Pando, Potosi, Santa Cruz, Tarija",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system with influences from Roman, Spanish, canon (religious), French, and ethnic groups' pre-colonial law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "many previous; latest drafted 6 August 2006 to 9 December 2008, approved by referendum 25 January 2009, effective 7 February 2009"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed through public petition by at least 20% of voters or by the Plurinational Legislative Assembly; passage requires approval by at least two-thirds majority vote of the total membership of the Assembly and approval in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "yes"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "yes"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal and compulsory",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president and vice president directly elected on the same ballot one of 3 ways: candidate wins at least 50% of the vote, or at least 40% of the vote and 10% more than the next highest candidate; otherwise, a second round is held and the winner determined by simple majority vote; president and vice president are elected by majority vote to serve a 5-year term; no term limits"
+      },
+      {
+       "label": "most recent election date",
+       "text": "17 August 2025"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2025:</em> Rodrigo PAZ Pereira elected president in second round; percent vote in first round - Rodrigo PAZ Pereira (PDC) 32.1%, Jorge<strong> </strong>Fernando QUIROGA<strong> </strong>Ramírez (LIBRE) 26.7%, Samuel DORIA MEDINA Auza (UN) 19.7%, Andrónico RODRÌGUEZ Ledezma<strong> </strong>(AP) 8.5%, Manfred REYES Villa (APB Súmate) 6.8%, Eduardo DEL CASTILLO (MAS) 3.2%, other 3%; percent of vote in second round - Rodrigo PAZ Pereira 55%, Jorge<strong> </strong>Fernando QUIROGA<strong> </strong>Ramírez 45%<em><br /><br />2020:</em> Luis Alberto ARCE Catacora elected president; percent of vote - Luis Alberto ARCE Catacora (MAS) 55.1%; Carlos Diego MESA Gisbert (CC) 28.8%; Luis Fernando CAMACHO Vaca (Creemos) 14%; other 2.1%<br /><br /><em>2019:</em> Juan Evo MORALES Ayma reelected president; percent of vote - Juan Evo MORALES Ayma (MAS) 61%; Samuel DORIA MEDINA Arana (UN) 24.5%; Jorge QUIROGA Ramirez (POC) 9.1%; other 5.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2030"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the president is both chief of state and head of government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Plurinational Legislative Assembly (Asamblea Legislativa Plurinacional)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Chamber of Deputies (Cámara de Diputados)"
+      },
+      {
+       "label": "number of seats",
+       "text": "130 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "8/17/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Christian Democratic Party (PDC) (49); LIBRE (39); Unity (26); Popular Alliance (8); Other (8)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "50.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "August 2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Chamber of Senators (Cámara de Senadores)"
+      },
+      {
+       "label": "number of seats",
+       "text": "36 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "8/17/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Christian Democratic Party (PDC) (16); LIBRE (12); Unity (7); Other (1)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "58.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "August 2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Tribunal Supremo de Justicia (consists of 12 judges<em> </em>organized into civil, penal, social, and administrative chambers); Plurinational Constitutional Tribunal (consists of 7 primary and 7 alternate magistrates); Plurinational Electoral Organ (consists of 7 members and 6 alternates); National Agro-Environment Court (consists of 5 primary and 5 alternate judges; Council of the Judiciary (consists of 3 primary and 3 alternate judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court, Plurinational Constitutional Tribunal, National Agro-Environmental Court, and Council of the Judiciary candidates pre-selected by the Plurinational Legislative Assembly and elected by direct popular vote; judges elected for 6-year terms; Plurinational Electoral Organ judges appointed - 6 by the Legislative Assembly and 1 by the president of the republic; members serve single 6-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "National Electoral Court; District Courts (in each of the 9 administrative departments); agro-environmental lower courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Autonomy for Bolivia – Súmate or APB Súmate<br />Christian Democratic Party or PDC<br />Community Citizen Alliance or ACC<br />Freedom and Democracy or LIBRE<br />Front for Victory or FPV<br />Movement Toward Socialism or MAS<br />National Unity or UN<br />Popular Alliance or AP<br />Revolutionary Left Front or FRI<br />Revolutionary Nationalist Movement or MNR<br />Social Democrat Movement or MDS<br />Third System Movement or MTS<br />We Believe or Creemos",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> We Believe or Creemos [Luis Fernando CAMACHO Vaca] is a coalition comprised of several opposition parties that participated in the 2020 election, which includes the Christian Democratic Party (PDC) and Solidarity Civic Unity (UCS)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "CAN, CD, CELAC, FAO, G-77, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, LAES, LAIA, Mercosur (associate), MIGA, MINUSTAH, MONUSCO, NAM, OAS, OPANAL, OPCW, PCA, UN, UN Security Council (temporary), UNAMID, UNASUR, UNCTAD, UNESCO, UNIDO, Union Latina, UNISFA, UNMIL, UNMISS, UNOCI, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "6 August 1825 (from Spain)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 6 August (1825)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of red (top), yellow, and green, with the coat of arms centered on the yellow band<br /><br /><strong>meaning:</strong> red stands for bravery and the blood of national heroes, yellow for the nation's mineral resources, and green for the land's fertility<br /><br /><strong>history: </strong>in 2009, a presidential decree made it mandatory for a <em>wiphala -</em>- a square, multi-colored flag representing the country's ethnic groups -- to be used alongside the national flag",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> similar to the flag of Ghana, which has a large, five-pointed black star centered in the yellow band"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "llama, Andean condor; two national flowers, the cantuta and the patuju",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, yellow, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Cancion Patriotica\" (Patriotic Song)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Jose Ignacio de SANJINES/Leopoldo Benedetto VINCENTI"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1852"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "7 (6 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "City of Potosi (c); El Fuerte de Samaipata (c); Historic Sucre (c); Jesuit Missions of Chiquitos (c); Noel Kempff Mercado National Park (n); Tiahuanacu (c); Qhapaq Ñan/Andean Road System (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

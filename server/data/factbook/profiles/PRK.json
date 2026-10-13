@@ -1,0 +1,1075 @@
+{
+ "iso3": "PRK",
+ "gec": "kn",
+ "name": "North Korea",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The first recorded kingdom (Choson) on the Korean Peninsula dates from approximately 2300 B.C. Over the subsequent centuries, three main kingdoms -- Kogoryo, Paekche, and Silla -- were established on the Peninsula. By the 5th century A.D., Kogoryo emerged as the most powerful, with control over much of the Peninsula and part of Manchuria (modern-day northeast China). However, Silla allied with the Chinese to create the first unified Korean state in 688. Following the collapse of Silla in the 9th century, Korea was unified under the Koryo (Goryeo; 918-1392) and the Chosen (Joseon; 1392-1910) dynasties. Korea became the object of intense imperialistic rivalry among the Chinese (its traditional benefactor), Japanese, and Russian empires in the latter half of the 19th and early 20th centuries. After the Sino-Japanese War (1894-95) and the Russo-Japanese War (1904-05), Korea was occupied by Imperial Japan. In 1910, Japan formally annexed the entire peninsula. After World War II, the northern half came under Soviet-sponsored communist control. <br /><br />In 1948, North Korea (formally known as the Democratic People's Republic of Korea or DPRK) was founded under President KIM Il Sung, who consolidated power and cemented autocratic one-party rule under the Korean Worker's Party (KWP). North Korea failed to conquer UN-backed South Korea (formally the Republic of Korea or ROK) during the Korean War (1950-53), after which a demilitarized zone separated the two Koreas. KIM's authoritarian rule included tight control over North Korean citizens and the demonization of the US as the central threat to North Korea's political and social system. In addition, he molded the country's economic, military, and political policies around the core objective of unifying Korea under Pyongyang's control. North Korea also declared a central ideology of <em>juche (\"</em>self-reliance\") as a check against outside influence, while continuing to rely heavily on China and the Soviet Union for economic support. KIM Il Sung's son, KIM Jong Il, was officially designated as his father's successor in 1980, and he assumed a growing political and managerial role until the elder KIM's death in 1994. Under KIM Jong Il's reign, North Korea continued developing nuclear weapons and ballistic missiles. KIM Jong Un was publicly unveiled as his father's successor in 2010. Following KIM Jong Il's death in 2011, KIM Jong Un quickly assumed power and has since occupied the regime's highest political and military posts. </p> <p>After the end of Soviet aid in 1991, North Korea faced serious economic setbacks that exacerbated decades of economic mismanagement and resource misallocation. Since the mid-1990s, North Korea has faced chronic food shortages and economic stagnation. In recent years, the North's domestic agricultural production has improved but still falls far short of producing sufficient food for its population. Starting in 2002, North Korea began to tolerate semi-private markets but has made few other efforts to meet its goal of improving the overall standard of living. New economic development plans in the 2010s failed to meet government-mandated goals for key industrial sectors, food production, or overall economic performance. At the onset of the COVID-19 pandemic in 2020, North Korea instituted a nationwide lockdown that severely restricted its economy and international engagement. Since then, KIM has repeatedly expressed concerns with the regime's economic failures and food problems, but in 2021, he vowed to continue \"self-reliant\" policies and has reinvigorated his pursuit of greater regime control of the economy. <br /><br />As of 2024, despite slowly renewing cross-border trade with China, North Korea remained one of the world's most isolated countries and one of Asia's poorest. In 2024, Pyongyang announced it was ending all economic cooperation with South Korea. The move followed earlier proclamations that it was scrapping a 2018 military pact with South Korea to de-escalate tensions along their militarized border, abandoning the country’s decades-long pursuit of peaceful unification with South Korea, and designating the South as North Korea’s “principal enemy.” </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Asia, northern half of the Korean Peninsula bordering the Korea Bay and the Sea of Japan, between China and South Korea",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "40 00 N, 127 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "120,538 sq km"
+      },
+      {
+       "label": "land",
+       "text": "120,408 sq km"
+      },
+      {
+       "label": "water",
+       "text": "130 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than Virginia; slightly smaller than Mississippi",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,607 km"
+      },
+      {
+       "label": "border countries",
+       "text": "China 1,352 km; South Korea 237 km; Russia 18 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,495 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> military boundary line 50 nm in the Sea of Japan and the exclusive economic zone limit in the Yellow Sea where all foreign vessels and aircraft without permission are banned"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate, with rainfall concentrated in summer; long, bitter winters",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly hills and mountains separated by deep, narrow valleys; wide coastal plains in west, discontinuous in east",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Paektu-san 2,744 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Sea of Japan 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "600 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "coal, iron ore, limestone, magnesite, graphite, copper, zinc, lead, precious metals, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "21.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 19.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 2.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0.4% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "64% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "14.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "14,600 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "population concentrated in the plains and lowlands; least-populated regions are the mountainous provinces adjacent to the Chinese border; largest concentrations are in the western provinces, particularly the municipal district of Pyongyang, and around Hungnam and Wonsan in the east",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "late spring droughts often followed by severe flooding; occasional typhoons during the early fall <br /><br /><strong>volcanism:</strong> P'aektu-san (2,744 m) (also known as Baitoushan, Baegdu, or Changbaishan), on the Chinese border, is considered historically active",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "strategic location bordering China, South Korea, and Russia; mountainous interior is isolated and sparsely populated",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26,402,841 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12,884,269"
+      },
+      {
+       "label": "female",
+       "text": "13,518,572"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Korean(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Korean"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "racially homogeneous; there is a small Chinese community and a few ethnic Japanese",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Korean"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "월드 팩트북, 필수적인 기본 정보 제공처 (Korean)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "traditionally Buddhist and Confucian, some Christian and syncretic Chondogyo (Religion of the Heavenly Way)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> autonomous religious activities now almost nonexistent; government-sponsored religious groups exist to provide illusion of religious freedom"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "19.9% (male 2,673,822/female 2,548,775)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.9% (male 9,054,771/female 9,066,447)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "11.2% (2024 est.) (male 1,099,676/female 1,855,175)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "45.6 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "28.8 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "16.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "6 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "36.2 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "34.5 years"
+      },
+      {
+       "label": "female",
+       "text": "37.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.4% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "12.99 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "9.01 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.04 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population concentrated in the plains and lowlands; least-populated regions are the mountainous provinces adjacent to the Chinese border; largest concentrations are in the western provinces, particularly the municipal district of Pyongyang, and around Hungnam and Wonsan in the east",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "63.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.85% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.158 million PYONGYANG (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.59 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.95 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "67 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14.7 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "13.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "73.5 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "70.2 years"
+      },
+      {
+       "label": "female",
+       "text": "77 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.8 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.87 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 96.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 88.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 93.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 3.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 11.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 6.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 230,
+    "content": {
+     "text": "3.63 physicians/1,000 population (2017)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 92.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 73.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 85.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 7.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 26.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 14.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 250,
+    "content": {
+     "text": "6.8% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3.61 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.12 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "3.48 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "16% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "32.6% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 280,
+    "content": {
+     "text": "9.3% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 290,
+    "content": {
+     "text": "68.2% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0% (2017)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "0.1% (2017)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "0% (2017)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 310,
+    "content": {
+     "text": "14.6% national budget (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "12 years (2018 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12 years (2018 est.)"
+      },
+      {
+       "label": "female",
+       "text": "12 years (2018 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Democratic People's Republic of Korea"
+      },
+      {
+       "label": "conventional short form",
+       "text": "North Korea"
+      },
+      {
+       "label": "local long form",
+       "text": "Choson-minjujuui-inmin-konghwaguk"
+      },
+      {
+       "label": "local short form",
+       "text": "Choson"
+      },
+      {
+       "label": "abbreviation",
+       "text": "DPRK"
+      },
+      {
+       "label": "etymology",
+       "text": "derived from the Chinese name for Goryeo, which was the Korean dynasty that united the peninsula in the 10th century A.D.; the North Korean name \"Choson\" means \"[Land of the] Morning Calm\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "dictatorship, single-party communist state",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Pyongyang"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "39 01 N, 125 45 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+9 (14 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "time zone note",
+       "text": "on 5 May 2018, North Korea reverted to UTC+9, the same time zone as South Korea"
+      },
+      {
+       "label": "etymology",
+       "text": "the name translates as \"flat land\" in Korean"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "9 provinces (<em>do</em>, singular and plural) and 4 special administration cities (<em>si</em>, singular and plural) <br /><br /><strong>provinces:</strong> Chagang, Hambuk (North Hamgyong), Hamnam (South Hamgyong), Hwangbuk (North Hwanghae), Hwangnam (South Hwanghae), Kangwon, P'yongbuk (North Pyongan), P'yongnam (South Pyongan), Ryanggang <br /><br /><strong>special administration cities:</strong> Kaesong, Nampo, P'yongyang, Rason",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> P'yongyang is considered a directly controlled city; Kaesong, Nampo, and Rason are designated as special cities"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the Prussian model; influenced by Japanese traditions and Communist legal theory",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1948, 1972; latest adopted 1998"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Supreme People’s Assembly (SPA); passage requires more than two-thirds majority vote of the total SPA membership"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of North Korea"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "unknown"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "17 years of age; universal and compulsory",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "chief of state and premier indirectly elected by the Supreme People's Assembly"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11 April 2019"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2019:</em> KIM Jong Un reelected unopposed"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2024"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> KIM Jong Un's titles include general secretary of the Workers' Party of Korea (KWP), chairman of the KWP Central Military Commission, president of the State Affairs Commission, and supreme commander of the Korean People's Army<br /><br /><strong>note 2:</strong> in the North Korean system, KIM Jong Un's role as chief of state is secondary to his role as general secretary of the Korean Workers' Party; chief of state is used to engage with non-communist countries such as the US; North Korea revised its constitution in 2019 to define \"the Chairman of the State Affairs Commission\" as \"the supreme leader who represents the state\"; functions as the commander-in-chief and chief executive; the specific titles associated with this office have changed multiple times under KIM's tenure, but KIM Jong Un has been supreme leader since his father's death in 2011<br /><br /><strong>note 3:</strong> the head of government functions as the technical head of state and performs related duties, such as receiving ambassadors' credentials"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Supreme People's Assembly (Choe Go In Min Hoe Ui)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "687 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "3/10/2019"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "17.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2025"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the SPA functions as a rubberstamp legislature; the Korean Workers' Party selects all candidates"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Central Court (consists of one judge and 2 \"People's Assessors\" or, for some cases, 3 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges elected by the Supreme People's Assembly for 5-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "lower provincial courts as determined by the Supreme People's Assembly"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "<strong>major parties:</strong><br />Korean Workers' Party or KWP (formally known as Workers' Party of Korea) <br />General Association of Korean Residents in Japan (Chongryon; under KWP control) <br /><strong>minor parties:</strong> <br />Chondoist Chongu Party (under KWP control)<br />Social Democratic Party or KSDP (under KWP control)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ARF, FAO, G-77, ICAO, ICRM, IFAD, IFRCS, IHO, IMO, IMSO, IOC, IPU, ISO, ITSO, ITU, NAM, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WFTU (NGOs), WHO, WIPO, WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "15 August 1945 (from Japan)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Founding of the Democratic People's Republic of Korea (DPRK), 9 September (1948)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal bands of blue (top), red (triple-width), and blue; the red band is edged in white; on the left side of the red band is a white disk with a red five-pointed star<br /><br /><strong>meaning:</strong> the red band stands for revolutionary traditions, the white for purity, strength, and dignity; blue for sovereignty, peace, and friendship; the red star represents socialism",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "red star, chollima (winged horse)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, white, blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Aegukka\" (Patriotic Song)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "PAK Se Yong/KIM Won Gyun"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1947; North Korea's and South Korea's anthems have the same name and a similar melody, but different lyrics; the North Korean anthem is also known as \"Ach'imun pinnara\" (Let Morning Shine)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (both cultural, one mixed)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Koguryo Tombs Complex; Historic Monuments and Sites in Kaesong; Mount Kumgang – Diamond Mountain from the Sea (m)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

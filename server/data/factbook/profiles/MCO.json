@@ -1,0 +1,950 @@
+{
+ "iso3": "MCO",
+ "gec": "mn",
+ "name": "Monaco",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "The Genoese built a fortress on the site of present-day Monaco in 1215. The current ruling GRIMALDI family first seized control in 1297 but was not able to permanently secure its holding until 1419. Economic development was spurred in the late 19th century with a railroad linkup to France and the opening of a casino. Since then, the principality's mild climate, coastal Mediterranean scenery, and gambling facilities have made Monaco world-famous as a tourist and recreation center.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Western Europe, bordering the Mediterranean Sea on the southern coast of France, near the border with Italy",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "43 44 N, 7 24 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2 sq km"
+      },
+      {
+       "label": "land",
+       "text": "2 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about three times the size of the National Mall in Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6 km"
+      },
+      {
+       "label": "border countries",
+       "text": "France 6 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "4.1 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "12 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "Mediterranean with mild, wet winters and hot, dry summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "hilly, rugged, rocky",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Chemin des Revoires on Mont Agel 162 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Mediterranean Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "none",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "0% (2022 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0% (2018 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1% (2018 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0% (2018 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "0% (2022 est.)"
+      },
+      {
+       "label": "other",
+       "text": "100% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "0 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "the second most densely populated country in the world (after Macau); its entire population lives on 2 sq km (0.8 sq mi)",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "none",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "second-smallest independent state in the world (after the Holy See); smallest country with a coastline; almost entirely urban",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "32,047 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15,467"
+      },
+      {
+       "label": "female",
+       "text": "16,580"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Monegasque(s) or Monacan(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Monegasque or Monacan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Monegasque 32.1%, French 19.9%, Italian 15.3%, British 5%, Belgian 2.3%, Swiss 2%, German 1.9%, Russian 1.8%, American 1.1%, Dutch 1.1%, Moroccan 1%, other 16.6% (2016 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent population by country of birth"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "French (official), English, Italian, Monegasque"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 90% (official), other 10%",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "9.1% (male 1,485/female 1,408)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "53.8% (male 8,620/female 8,490)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "37.1% (2024 est.) (male 5,261/female 6,549)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "88.7 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "16.6 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "72.1 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "1.4 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "57.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "55 years"
+      },
+      {
+       "label": "female",
+       "text": "58.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.76% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "6.46 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "11.36 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "12.48 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the second most densely populated country in the world (after Macau); its entire population lives on 2 sq km (0.8 sq mi)",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "100% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.5% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "39,000 MONACO (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.8 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.93 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "5 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.7 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "1.4 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "89.8 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "86 years"
+      },
+      {
+       "label": "female",
+       "text": "93.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.55 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.76 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "3.7% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "12% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "8.61 physicians/1,000 population (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 250,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "1.7% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "7.7% national budget (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "21 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "20 years (2024 est.)"
+      },
+      {
+       "label": "female",
+       "text": "22 years (2024 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Principality of Monaco"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Monaco"
+      },
+      {
+       "label": "local long form",
+       "text": "Principauté de Monaco"
+      },
+      {
+       "label": "local short form",
+       "text": "Monaco"
+      },
+      {
+       "label": "etymology",
+       "text": "founded as a Greek colony in the 6th century B.C., the name's origin is unclear; it could derive from the Greek term <em>monoikos</em> (solitary), the Ligurian word <em>monegu</em> (rock), or the Basque word <em>muno</em> (mountain)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "constitutional monarchy",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Monaco"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "43 44 N, 7 25 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "founded as a Greek colony in the 6th century B.C., the name's origin is unclear; it could derive from the Greek term <em>monoikos</em> (solitary), the Ligurian word <em>monegu</em> (rock), or the Basque word <em>muno</em> (mountain)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "no first-order administrative divisions as defined by the US government, but 4 quarters (<em>quartiers</em>, singular - <em>quartier</em>); Fontvieille, La Condamine, Monaco-Ville, Monte-Carlo",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Moneghetti, part of La Condamine, is sometimes called the fifth quarter of Monaco"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system influenced by French legal tradition",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1911 (suspended 1959); latest adopted 17 December 1962"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by joint agreement of the chief of state (the prince) and the National Council; passage requires two-thirds majority vote of National Council members"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Monaco; in the case of a child born out of wedlock, the mother must be a citizen and father unknown"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; minister of state appointed by the monarch from a list of three French national candidates presented by the French Government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Council (Conseil national)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "24 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "2/5/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Monegasque National Union - l’Union (24)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "45.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "February 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of 5 permanent members and 2 substitutes)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court members appointed by the monarch upon the proposals of the National Council, State Council, Crown Council, Court of Appeal, and Trial Court"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeal; Civil Court of First Instance"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Monegasque National Union (includes Horizon Monaco, Primo!, Union Monegasque)<br />Horizon Monaco <br />Priorite Monaco or Primo! <br />Union Monegasque",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "CD, CE, FAO, IAEA, ICAO, ICC (national committees), ICRM, IFRCS, IHO, IMO, IMSO, Interpol, IOC, IPU, ITSO, ITU, OAS (observer), OIF, OPCW, OSCE, Schengen Convention (de facto member), UN, UNCTAD, UNESCO, UNIDO, Union Latina, UNWTO, UPU, WHO, WIPO, WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "1419 (beginning of permanent rule by the House of GRIMALDI)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "National Day (Saint Rainier's Day), 19 November (1857)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> two equal horizontal bands of red (top) and white<br /><br /><strong>history:</strong> uses the colors of the ruling House of Grimaldi; colors have been in use since 1339, making it one of the world's oldest national flags",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> similar to the flags of Indonesia (longer) and Poland (colors reversed)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "red and white lozenges (diamond shapes)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"A Marcia de Muneghu\" (The March of Monaco)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Louis NOTARI/Charles ALBRECHT"
+      },
+      {
+       "label": "history",
+       "text": "music adopted 1867, lyrics adopted 1931; only the Monegasque lyrics are official; the French version is known as \"Hymne Monegasque\" (Monegasque Anthem); the words are usually only sung on official occasions"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

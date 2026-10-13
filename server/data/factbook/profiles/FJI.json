@@ -1,0 +1,1075 @@
+{
+ "iso3": "FJI",
+ "gec": "fj",
+ "name": "Fiji",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Austronesians settled Fiji around 1000 B.C., followed by successive waves of Melanesians starting around the first century A.D. Fijians traded with Polynesian groups in Samoa and Tonga, and by about 900, much of Fiji was in the Tu’i Tongan Empire’s sphere of influence. The Tongan influence declined significantly by 1200, while Melanesian seafarers continued to periodically arrive in Fiji, further mixing Melanesian and Polynesian cultural traditions. The first European spotted Fiji in 1643 and by the 1800s, European merchants, missionaries, traders, and whalers frequented the islands. Rival kings and chiefs competed for power, at times aided by Europeans, and in 1865, Seru Epenisa CAKOBAU united many groups into the Confederacy of Independent Kingdoms of Viti. The arrangement proved weak, however, and in 1871 CAKOBAU formed the Kingdom of Fiji in an attempt to centralize power. Fearing a hostile takeover by a foreign power as the kingdom’s economy began to falter, CAKOBAU ceded Fiji to the UK in 1874.<br /><br />The first British governor set up a plantation-style economy and brought in more than 60,000 Indians as indentured laborers, most of whom chose to stay in Fiji rather than return to India when their contracts expired. In the early 1900s, society was divided along ethnic lines, with iTaukei (indigenous Fijians), Europeans, and Indo-Fijians living in separate areas and maintaining their own languages and traditions. ITaukei fears of an Indo-Fijian takeover of government delayed independence through the 1960s; Fiji achieved independence in 1970 with agreements to allocate parliamentary seats by ethnic groups. After two coups in 1987, a new constitution in 1990 cemented iTaukei control of politics, leading thousands of Indo-Fijians to leave. A reformed constitution in 1997 was more equitable and led to the election of an Indo-Fijian prime minister in 1999, who was ousted in a coup the following year. In 2005, the new prime minister put forward a bill that would grant pardons to the coup perpetrators, leading Josaia Voreqe \"Frank\" BAINIMARAMA to launch a coup in 2006. BAINIMARAMA appointed himself prime minister in 2007 and retained the position after elections in 2014 and 2018 that international observers deemed credible. BAINIMARAMA's party lost control of the prime minister position after elections in 2022 with former opposition leader Sitiveni Ligamamada RABUKA winning the office by a narrow margin.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Oceania, island group in the South Pacific Ocean, about two-thirds of the way from Hawaii to New Zealand",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "18 00 S, 175 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Oceania",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18,274 sq km"
+      },
+      {
+       "label": "land",
+       "text": "18,274 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than New Jersey",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,129 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>measured from claimed archipelagic straight baselines"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical marine; only slight seasonal temperature variation",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly mountains of volcanic origin",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Tomanivi 1,324 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Pacific Ocean 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "timber, fish, gold, copper, offshore oil potential, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "17.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 4.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 3.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 9.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "61.7% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "21.2% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "40 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "approximately 70% of the population lives on the island of Viti Levu; roughly half of the population lives in urban areas",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "cyclonic storms can occur from November to January",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "consists of 332 islands, approximately 110 of which are inhabited, and more than 500 islets",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "951,611 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "482,304"
+      },
+      {
+       "label": "female",
+       "text": "469,307"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Fijian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Fijian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "iTaukei 56.8% (predominantly Melanesian with a Polynesian admixture), Indo-Fijian 37.5%, Rotuman 1.2%, other 4.5% (European, part European, other Pacific Islanders, Chinese) (2007 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> a 2010 law replaces 'Fijian' with 'iTaukei' when referring to the original and native settlers of Fiji"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "English (official), iTaukei (official), Fiji Hindi (official)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Protestant 45% (Methodist 34.6%, Assembly of God 5.7%, Seventh Day Adventist 3.9%, and Anglican 0.8%), Hindu 27.9%, other Christian 10.4%, Roman Catholic 9.1%, Muslim 6.3%, Sikh 0.3%, other 0.3%, none 0.8% (2007 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "24.7% (male 119,910/female 114,904)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "66.4% (male 323,339/female 308,921)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "8.9% (2024 est.) (male 39,055/female 45,482)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "50.5 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "37.1 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "13.4 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "7.5 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "32 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "31.4 years"
+      },
+      {
+       "label": "female",
+       "text": "31.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.38% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "15.63 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.58 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-5.3 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "approximately 70% of the population lives on the island of Viti Levu; roughly half of the population lives in urban areas",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "58.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.37% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "178,000 SUVA (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.86 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.03 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "30 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "11.1 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "8.1 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "74.8 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "72.2 years"
+      },
+      {
+       "label": "female",
+       "text": "77.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.18 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.06 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 91.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 95.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 8.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 4.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "5.4% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "10.3% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "0.81 physicians/1,000 population (2015)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "1.9 beds/1,000 population (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "30.2% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.71 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "1.64 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.29 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.79 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.8% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "40.8% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "12.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "4.6% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "59.2% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.2% (2021)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "4% (2021)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.7% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.2% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "13.8% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "female",
+       "text": "92.4% (2021 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Fiji"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Fiji"
+      },
+      {
+       "label": "local long form",
+       "text": "Republic of Fiji (English)/ Matanitu ko Viti (Fijian)"
+      },
+      {
+       "label": "local short form",
+       "text": "Fiji (English)/ Viti (Fijian)"
+      },
+      {
+       "label": "etymology",
+       "text": "the Fijians called their home Viti, but the neighboring Tongans called it Fisi; in the Anglicized spelling of the Tongan pronunciation -- promulgated by explorer Captain James COOK -- the designation became Fiji"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Suva (on Viti Levu)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "18 08 S, 178 25 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+12 (17 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name means \"little hill\" in the native Fijian language and may refer to a mound where a temple once stood"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "14 provinces and 1 dependency*; Ba, Bua, Cakaudrove, Kadavu, Lau, Lomaiviti, Macuata, Nadroga and Navosa, Naitasiri, Namosi, Ra, Rewa, Rotuma*, Serua, Tailevu",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "common law system based on the English model",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest signed into law 6 September 2013"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed as a bill by Parliament and supported by at least three quarters of its members, followed by referral to the president and then to the Electoral Commission, which conducts a referendum; passage requires approval by at least three-quarters of registered voters and assent by the president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Fiji"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "at least 5 years residency out of the 10 years preceding application"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president elected by Parliament for a 3-year term (eligible for a second term); prime minister endorsed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "31 October 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024: </em>Ratu Naiqama LALABALAVU elected president (People's Alliance) 35 votes, Meli Tora TAVAIQIA (Fiji First) 14 votes<em><br /><br />2021:</em> Ratu Wiliame KATONIVERE elected president; Wiliame KATONIVERE (People's Alliance) 28 votes, Teimumu KEPA (SODELPA) 23 votes"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "55 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12/14/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "FijiFirst (26); People's Alliance (21); National Federation Party (NFP) (5); Social Democratic Liberal Party (Soldelpa) (3)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "9.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chief justice, all justices of the Court of Appeal, and judges appointed specifically as Supreme Court judges); Court of Appeal (consists of the court president, all puisne judges of the High Court, and judges specifically appointed to the Court of Appeal); High Court (chaired by the chief justice and includes a minimum of 10 puisne judges; High Court organized into civil, criminal, family, employment, and tax divisions)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "chief justice appointed by the president of Fiji on the advice of the prime minister following consultation with the parliamentary leader of the opposition; judges of the Supreme Court, the president of the Court of Appeal, the justices of the Court of Appeal, and puisne judges of the High Court appointed by the president of Fiji on the nomination of the Judicial Service Commission after consulting with the cabinet minister and the House of Representatives committee responsible for the administration of justice; the chief justice, Supreme Court judges, and justices of Appeal generally required to retire at age 70, but this requirement may be waived for one or more sessions of the court; puisne judges appointed for not less than 4 years or more than 7 years, with mandatory retirement at age 65"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Magistrates' Court (organized into civil, criminal, juvenile, and small claims divisions)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Fiji First <br />Fiji Labor Party or FLP <br />Freedom Alliance (formerly Fiji United Freedom Party or FUFP)<br />National Federation Party or NFP <br />People's Alliance <br />Peoples Democratic Party or PDP <br />Social Democratic Liberal Party or SODELPA <br />Unity Fiji",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, ADB, AOSIS, C, CP, FAO, G-77, IAEA, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IOM, ISO, ITSO, ITU, ITUC (NGOs), MIGA, OPCW, PCA, PIF, Sparteca (suspended), SPC, UN, UNCTAD, UNDOF, UNESCO, UNIDO, UNISFA, UNMISS, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "10 October 1970 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Fiji (Independence) Day, 10 October (1970)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> light blue with the UK flag in the upper-left quadrant and the Fijian shield centered on the right half of the flag; the shield shows a yellow lion holding a coconut above a white field quartered by the cross of Saint George; the four quarters depict sugarcane, a palm tree, a banana bunch, and a white dove<br /><br /><strong>meaning:</strong> blue symbolizes the Pacific Ocean",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Fijian canoe",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "light blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"God Bless Fiji\" (Let Us Show Pride)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Michael Francis Alexander PRESCOTT/C. Austin MILES (adapted by Michael Francis Alexander PRESCOTT)"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1970; known in Fijian as \"Meda Dau Doka\" (Let Us Show Pride); adapted from the hymn, \"Dwelling in Beulah Land,\" the anthem's English lyrics are usually used, although they differ in meaning from the official Fijian lyrics"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Levuka Historical Port Town"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

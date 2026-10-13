@@ -1,0 +1,1210 @@
+{
+ "iso3": "NPL",
+ "gec": "np",
+ "name": "Nepal",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>During the late 18th and early 19th centuries, the principality of Gorkha united many of the other principalities and states of the sub-Himalayan region into a Nepali Kingdom. Nepal retained its independence after the Anglo-Nepalese War of 1814-16, and the subsequent peace treaty laid the foundations for two centuries of amicable relations between Britain and Nepal. In 1951, the Nepali monarch ended the century-old system of hereditary rule and instituted a cabinet system that brought political parties into the government. That arrangement lasted until 1960, when political parties were again banned, but it was reinstated in 1990 with the establishment of a multiparty democracy within the framework of a constitutional monarchy.</p> <p>A Maoist-led insurgency broke out in 1996. During the ensuing 10-year civil war between Maoist and government forces, the monarchy dissolved the cabinet and parliament. In 2001, Crown Prince DIPENDRA first massacred the royal family and then shot himself. His uncle GYANENDRA became king, and the monarchy reassumed absolute power the next year. A peace accord in 2006 led to the promulgation of an interim constitution in 2007. After a nationwide Constituent Assembly (CA) election in 2008, the newly formed CA declared Nepal a federal democratic republic, abolished the monarchy, and elected the country's first president. <br /><br />When the CA failed to draft a Supreme Court-mandated constitution, then-Prime Minister Baburam BHATTARAI dissolved the CA. An interim government held elections in 2013, in which the Nepali Congress (NC) won the largest share of seats. In 2014, NC formed a coalition government with the second-place Communist Party of Nepal-Unified Marxist-Leninist (UML). Nepal's new constitution came into effect in 2015, at which point the CA became the Parliament and Khagda Prasad Sharma OLI the first post-constitution prime minister (2015-16). He resigned ahead of a no-confidence motion, and Parliament elected Communist Party of Nepal-Maoist (CPN-M) leader Pushpa Kamal DAHAL as prime minister. <br /><br />The parties headed by OLI and DAHAL ran in coalition and swept the parliamentary elections in 2017, and OLI was sworn in as prime minister in 2018. OLI's efforts to dissolve parliament and hold elections were declared unconstitutional in 2021, and the opposition-supported NC leader Sher Bahadur DEUBA was named prime minister. The NC won a majority of seats in the parliamentary elections in 2022, but DAHAL then broke with the ruling coalition and partnered with OLI and the CPN-UML to become prime minister. DAHAL's first cabinet lasted about two months, until OLI withdrew his support over disagreements about ministerial assignments. In early 2023, DAHAL survived a vote of confidence and formed a coalition with the NC to remain prime minister.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Asia, between China and India",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "28 00 N, 84 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "147,181 sq km"
+      },
+      {
+       "label": "land",
+       "text": "143,351 sq km"
+      },
+      {
+       "label": "water",
+       "text": "3,830 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than New York State",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3,159 km"
+      },
+      {
+       "label": "border countries",
+       "text": "China 1,389 km; India 1,770 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "varies from cool summers and severe winters in north to subtropical summers and mild winters in south",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "Tarai or flat river plain of the Ganges in south; central hill region with rugged Himalayas in north",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mount Everest (highest peak in Asia and highest point on earth above sea level) 8,849 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Kanchan Kalan 70 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "2,565 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "quartz, water, timber, hydropower, scenic beauty, small deposits of lignite, copper, cobalt, iron ore",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "26.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 12.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 12.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "43.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "27.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "12,090 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Indian Ocean drainage",
+       "text": "Brahmaputra (651,335 sq km), Ganges (1,016,124 sq km), Indus (1,081,718 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 160,
+    "content": {
+     "text": "Indus-Ganges-Brahmaputra Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "most of the population is divided nearly equally between a concentration in the southern-most plains of the Tarai region and the central hilly region; overall density is low",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "severe thunderstorms; flooding; landslides; drought and famine depending on the timing, intensity, and duration of the summer monsoons",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "landlocked; strategic location between China and India; contains eight of world's 10 highest peaks, including Mount Everest and Kanchenjunga -- the world's tallest and third-tallest mountains -- on the borders with China and India, respectively",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "31,334,402 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15,352,706"
+      },
+      {
+       "label": "female",
+       "text": "15,981,696"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Nepali (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Nepali"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Chhettri 16.5%, Brahman-Hill 11.3%, Magar 6.9%, Tharu 6.2%, Tamang 5.6%, Bishwokarma 5%, Musalman 4.9%, Newar 4.6%, Yadav 4.2%, Rai 2.2%, Pariyar 1.9%, Gurung 1.9%, Thakuri 1.7%, Mijar 1.6%, Teli 1.5%, Yakthung/Limbu 1.4%, Chamar/Harijan/Ram 1.4%, Koiri/Kushwaha 1.2%, other 20% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 141 caste/ethnic groups were reported in the 2021 national census"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Nepali (official) 44.9%, Maithali 11.1%, Bhojpuri 6.2%, Tharu 5.9%, Tamang 4.9%, Bajjika 3.9%, Avadhi 3%, Nepalbhasha (Newari) 3%, Magar Dhut 2.8%, Doteli 1.7%, Urdu 1.4%, Yakthung/Limbu 1.2%, Gurung 1.1%, other 8.9% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "विश्व तथ्य पुस्तक,आधारभूत जानकारीको लागि अपरिहार्य स्रोत (Nepali)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 123 languages reported as mother tongue in 2021 national census; many in government and business also speak English"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Hindu 81.2%, Buddhist 8.2%, Muslim 5.1%, Kirat 3.2%, Christian 1.8%; less than 1%:  Prakriti, Bon, Jains, Sikh (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "25.8% (male 4,125,244/female 3,909,135)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "67.8% (male 10,153,682/female 10,957,011)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "6.4% (2024 est.) (male 961,717/female 1,015,598)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "46.8 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "37.2 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "9.6 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "10.4 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "28.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "26.5 years"
+      },
+      {
+       "label": "female",
+       "text": "28.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.66% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "16.66 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.62 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-4.46 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of the population is divided nearly equally between a concentration in the southern-most plains of the Tarai region and the central hilly region; overall density is low",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "21.9% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.09% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.571 million KATHMANDU (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.93 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.95 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.96 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "20.4 years (2016 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "142 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "23.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "25.2 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "22.7 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "73 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "72.2 years"
+      },
+      {
+       "label": "female",
+       "text": "73.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.82 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.88 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 90% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 91.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 91.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 10% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 8.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 8.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "5.4% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "1.01 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "0.4 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 96.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 89.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 90.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 3.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 10.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 9.3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "4.1% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.36 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.22 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.13 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22.9% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "40.3% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "7.6% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "18.3% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "75.1% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "5.8% (2022)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "34.9% (2022)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "7% (2022)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.7% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "10.8% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "68.7% (2019 est.)"
+      },
+      {
+       "label": "male",
+       "text": "79.8% (2019 est.)"
+      },
+      {
+       "label": "female",
+       "text": "59.4% (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "14 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Nepal"
+      },
+      {
+       "label": "local long form",
+       "text": "none"
+      },
+      {
+       "label": "local short form",
+       "text": "Nepal"
+      },
+      {
+       "label": "etymology",
+       "text": "the name probably comes from the Sanskrit term <em>nepala</em>, from the words for \"fly down\" and \"house,\" which would refer to the villages at the base of the mountains"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "federal parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Kathmandu"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "27 43 N, 85 19 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+5.75 (10.75 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name comes from the Nepalese words <em>kath </em>(wooden) and <em>mandu </em>(temple), referring to the local temples that are often still built from wood"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "7 provinces (<em>pradesh</em>, singular - <em>pradesh</em>); Bagmati, Gandaki, Karnali, Koshi, Lumbini, Madhesh, Sudurpashchim",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "English common law and Hindu legal concepts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest approved by the Second Constituent Assembly 16 September 2015, signed by the president and effective 20 September 2015"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed as a bill by either house of the Federal Parliament; bills affecting a state border or powers delegated to a state must be submitted to the affected state assembly; passage of such bills requires a majority vote of that state assembly membership; bills not requiring state assembly consent require at least two-thirds majority vote by the membership of both houses of the Federal Parliament; parts of the constitution on the sovereignty, territorial integrity, independence, and sovereignty vested in the people cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "yes"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "yes"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "15 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by an electoral college of the Federal Parliament and the state assemblies for a 5-year term (eligible for a second term)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 March 2023"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2023:</em> Ram Chandra POUDEL elected president; electoral college vote - Ram Chandra POUDEL (NC) 33,802, Subash Chandra NEMBANG (CPN-UML) 15,518"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "5 March 2026"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> KARKI was sworn in as interim prime minister on 12 September 2025 after Khadga Prasad Sharma OLI resigned on 9 September following violent protests; KARKI will serve until elections are held in March 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Federal Parliament (Sanghiya Sansad)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>violent student-led protests in early September 2025 led to the resignation of the Prime Minister; the President dissolved Parliament on 12 September 2015 following the swearing in of an interim prime minister and set elections for 5 March 2026; the major political parties have demanded reinstatement of the Parliament"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of Representatives (Pratinidhi Sabha)"
+      },
+      {
+       "label": "number of seats",
+       "text": "275 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/20/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Nepali Congress (NC) (89); Communist Party of Nepal (Unified Marxist-Leninist, UML) (78); Communist Party of Nepal-Maoist Centre (CPN-MC) (32); Rastriya Swatantra Party (20); Rastriya Prajatantra Party Nepal (RPP) (14); People's Socialist Party, Nepal (12); Communist Party of Nepal (Unified Socialist) (10); Janamat Party (6); Democratic Socialist Party, Nepal (4); People's Freedom Party (3); Nepal Workers Peasants Party (1); Rastriya Janamorcha (1); Independents (5)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "0%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "5 March 2026"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Parliament was dissolved by the President on 12 September following violent protests, the resignation of the Prime Minister, and the appointment of an interim prime minister with new elections set for March 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Rastriya Sabha)"
+      },
+      {
+       "label": "number of seats",
+       "text": "59 (56 indirectly elected; 3 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "partial renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "6 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "1/25/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "37.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "January 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chief justice and up to 20 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court chief justice appointed by the president on the recommendation of the Constitutional Council, a 5-member, high-level advisory body headed by the prime minister; other judges appointed by the president on the recommendation of the Judicial Council, a 5-member advisory body headed by the chief justice; the chief justice serves a 6-year term; judges serve until age 65"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Court; district courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Communist Party of Nepal (Maoist Centre) or CPN-MC<br />Communist Party of Nepal (Unified Marxist-Leninist) or CPN-UML<br />Communist Party of Nepal (Unified Socialist) or CPN-US<br />Janamat Party<br />Janata Samajbaadi Party or JSP<br />Loktantrik Samajwadi Party or LSP<br />Naya Shakti Party, Nepal<br />Nepali Congress or NC<br />Nepal Mazdoor Kisan Party (Nepal Workers' and Peasants' Party) or NWPP<br />Rastriya Janamorcha (National People's Front)<br />Rastriya Prajatantra Party (National Democratic Party) or RPP<br />Rastriya Swatantra Party or RSP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ADB, BIMSTEC, CD, CP, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINURSO, MINUSTAH, MONUSCO, NAM, OPCW, SAARC, SACEP, UN, UNAMID, UNCTAD, UNDOF, UNESCO, UNIDO, UNIFIL, UNISFA, UNMIL, UNMISS, UNOCI, UNSOM, UNTSO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "1768 (unified by Prithvi Narayan SHAH)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Constitution Day, 20 September (2015)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> replaces the previous Republic Day on 28 May as the official national day in Nepal; the Gregorian date fluctuates based on Nepal’s Hindu calendar"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> crimson red with a blue border, in the shape of two overlapping right triangles; the smaller upper triangle has a stylized white moon, and the larger lower triangle has a 12-pointed white sun<br /><br /><strong>meaning:</strong> red stands for the rhododendron (the national flower) and victory and bravery, and the blue border for peace and harmony; the two triangles are a combination of two pennants that originally symbolized the Himalaya Mountains, but today they refer to Hinduism and Buddhism, the country's two main religions; the moon stands for the serenity of the people, as well as Himalayan shade and cool weather, and the sun for the heat and higher temperatures in the rest of the country",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Nepal is the only country with a flag that is not rectangular or square"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "rhododendron blossom",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Sayaun Thunga Phool Ka\" (Hundreds of Flowers)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Pradeep Kumar RAI/Ambar GURUNG"
+      },
+      {
+       "label": "history",
+       "text": "adopted 2007"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "4 (2 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Kathmandu Valley (c); Sagarmatha National Park (n); Chitwan National Park (n); Lumbini, Buddha Birthplace (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

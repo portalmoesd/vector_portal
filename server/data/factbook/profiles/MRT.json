@@ -1,0 +1,1158 @@
+{
+ "iso3": "MRT",
+ "gec": "mr",
+ "name": "Mauritania",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The Amazigh and Bafour people were among the earliest settlers in what is now Mauritania and among the first in recorded history to convert from a nomadic to agricultural lifestyle. These groups account for roughly one third of Mauritania’s ethnic makeup. The remainder of Mauritania’s ethnic groups derive from Sub-Saharan ethnic groups originating mainly from the Senegal River Valley, including descendants of former enslaved peoples. These three groups are organized according to a strict caste system with deep ethnic divides that impact access to resources and power dynamics.<br /><br />A former French colony, Mauritania achieved independence from France in 1960. Mauritania initially began as a single-party, authoritarian regime and experienced 49 years of dictatorships, flawed elections, failed attempts at democracy, and military coups. Ould Abdel AZIZ led the last coup in 2008, was elected president in 2009, and was reelected in 2014. Mohamed Ould Cheikh GHAZOUANI was elected president in 2019, and his inauguration marked the first peaceful transition of power from one democratically elected president to another, solidifying the country's status as an emerging democracy. International observers recognized the elections as relatively free and fair. GHAZOUANI is seeking re-election in June 2024 for a second, and final, five-year term.</p> <p>The country is working to address vestigial practices of slavery and its hereditary impacts. Mauritania officially abolished slavery in 1981, but the practice was not criminalized until 2007. Between 2005 and 2011, Al-Qaeda in the Islamic Maghreb (AQIM) launched a series of attacks killing western tourists and aid workers, attacking diplomatic and government facilities, and ambushing Mauritanian soldiers and gendarmes. Although Mauritania has not seen an attack since 2011, AQIM and similar groups remain active in the Sahel region.</p> <p> </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Western Africa, bordering the North Atlantic Ocean, between Senegal and Western Sahara",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "20 00 N, 12 00 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,030,700 sq km"
+      },
+      {
+       "label": "land",
+       "text": "1,030,700 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than three times the size of New Mexico; about six times the size of Florida",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,002 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Algeria 460 km; Mali 2,236 km; Morocco 1,564 km; Senegal 742 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "754 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm or to the edge of the continental margin"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "desert; constantly hot, dry, dusty",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly barren, flat plains of the Sahara; some central hills",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Kediet Ijill 915 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Sebkhet Te-n-Dghamcha -5 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "276 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "iron ore, gypsum, copper, phosphate, diamonds, gold, oil, fish",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "38.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 38.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "60.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "450 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Senegal river mouth (shared with Guinea [s], Senegal and Mali) - 1,641 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Niger (2,261,741 sq km), Senegal (456,397 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 170,
+    "content": {
+     "text": "Senegalo-Mauritanian Basin, Taodeni-Tanzerouft Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "vast areas of the country, particularly in the central, northern, and eastern areas, are desert and lack sizeable population clusters; half the population lives in or around the coastal capital of Nouakchott; smaller clusters are found near the southern border with Mali and Senegal, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "hot, dry, dust/sand-laden sirocco wind primarily in March and April; periodic droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "Mauritania is considered part of both North Africa's Maghreb region and West Africa's Sahel region; most of the population is concentrated in the cities of Nouakchott and Nouadhibou and along the Senegal River in the southern part of the country",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,202,109 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2,578,114"
+      },
+      {
+       "label": "female",
+       "text": "2,623,995"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Mauritanian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Mauritanian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Black Moors (Haratines - Arabic-speaking descendants of African origin who are or were enslaved by White Moors) 40%, White Moors (of Arab-Amazigh descent, known as Beydane) 30%, Sub-Saharan Mauritanians (non-Arabic speaking, largely resident in or originating from the Senegal River Valley, including Halpulaar, Fulani, Soninke, Wolof, and Bambara ethnic groups) 30%",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official and national), Pular, Soninke, Wolof (all national languages), French"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the spoken Arabic in Mauritania differs considerably from Modern Standard Arabic; the Mauritanian dialect, which incorporates many Tamazight words, is referred to as Hassaniya"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim (official) 100%",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "35.7% (male 776,035/female 770,132)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "59.9% (male 1,227,347/female 1,363,938)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4.4% (2024 est.) (male 80,308/female 110,280)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "84.7 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "77.8 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "7 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "14.3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18.6 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.1 years"
+      },
+      {
+       "label": "female",
+       "text": "23.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.88% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "34.01 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.18 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "vast areas of the country, particularly in the central, northern, and eastern areas, are desert and lack sizeable population clusters; half the population lives in or around the coastal capital of Nouakchott; smaller clusters are found near the southern border with Mali and Senegal, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "57.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.84% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.492 million NOUAKCHOTT (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.9 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.73 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.93 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "21.8 years (2019/21)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "381 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "29.9 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "54.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "42.9 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "65.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "63.4 years"
+      },
+      {
+       "label": "female",
+       "text": "68.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "4.76 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "2.34 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 94.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 55.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 77.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 5.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 44.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 22.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "4.1% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "6.3% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.26 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 89.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 33.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 65.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 10.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 66.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 34.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "12.7% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.3% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "1.7% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "22.4% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "66.1% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "15.5% (2021)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "36.6% (2021)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.2% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.7% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "32% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "59.5% (2020 est.)"
+      },
+      {
+       "label": "male",
+       "text": "70.1% (2020 est.)"
+      },
+      {
+       "label": "female",
+       "text": "51.8% (2020 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8 years (2020 est.)"
+      },
+      {
+       "label": "male",
+       "text": "8 years (2020 est.)"
+      },
+      {
+       "label": "female",
+       "text": "8 years (2020 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Islamic Republic of Mauritania"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Mauritania"
+      },
+      {
+       "label": "local long form",
+       "text": "Al Jumhuriyah al Islamiyah al Muritaniyah"
+      },
+      {
+       "label": "local short form",
+       "text": "Muritaniyah"
+      },
+      {
+       "label": "etymology",
+       "text": "named for the ancient kingdom of Mauretania (3rd century B.C. to 1st century A.D.); its name derives from the Mauri (Moors) of northwest Africa"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Nouakchott"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "18 04 N, 15 58 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the meaning of the name is unclear; it may derive from the Berber <em>nawakshut</em>, meaning \"place of the winds;\" other variants could translate as \"the place where water appears in a new well,\" \"the land where shells abound,\" \"a place with pasture,\" \"a windy place,\" or \"without ears\" (the last referring to a local chieftain who could have been the place's namesake)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "15 regions (<em>wilayas</em>, singular - <em>wilaya</em>); Adrar, Assaba, Brakna, Dakhlet Nouadhibou, Gorgol, Guidimaka, Hodh ech Chargui, Hodh El Gharbi, Inchiri, Nouakchott Nord, Nouakchott Ouest, Nouakchott Sud, Tagant, Tiris Zemmour, Trarza",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of Islamic and French civil law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1964; latest adopted 12 July 1991"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or by Parliament; consideration of amendments by Parliament requires approval of at least one third of the membership; a referendum is held only if the amendment is approved by two-thirds majority vote; passage by referendum requires simple majority vote by eligible voters; passage of amendments proposed by the president can bypass a referendum if approved by at least three-fifths majority vote by Parliament"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Mauritania"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "29 June 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024:</em> Mohamed Ould Cheikh el GHAZOUANI reelected president in first round; percent of vote - Mohamed Ould Cheikh el GHAZOUANI (UPR) 56.1%, Biram Dah Ould ABEID (independent) 22.1%, Hamadi Sidi el MOKHTAR independent) 12.8%, other 9.0%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "June 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Barlamane)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Al Jamiya-Al-Wataniya)"
+      },
+      {
+       "label": "number of seats",
+       "text": "176 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/13/2023 to 5/27/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "El Insaf (107); Tawassoul (11); Other (58)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "23.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2028"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the early parliamentary elections in 2023 were the first to be held under President Mohamed Ould Cheikh El GHAZOUANI, elected in 2019 in the first peaceful transition of power; the elections followed the agreement between the government and parties in September 2022 to renew the Independent National Electoral Commission (CENI) and hold the elections in the first semester of 2023 for climatic and logistical reasons"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Cour Suprême (subdivided into 7 chambers: 2 civil, 2 labor, 1 commercial, 1 administrative, and 1 criminal, each with a chamber president and 2 councilors); Constitutional Council (consists of 9 members); High Court of Justice (consists of 9 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court president appointed by the president of the republic to serve a 5-year renewable term; Constitutional Council members appointed - 3 by the president of the republic, 2 by the president of the National Assembly, 1 by the prime minister, 1 by the leader of the democratic opposition, 1 by the largest opposition party in the National Assembly, and 1 by the second largest party in the National Assembly; members serve single, 9-year terms with one-third of membership renewed every 3 years; High Court of Justice members appointed by Parliament - 6 by the ruling Coalition of Majority Parties and 3 by opposition parties"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; courts of first instance, or wilya courts, are established in the regions' headquarters and include commercial and labor courts, criminal courts, Moughataa (district) Courts, and informal/customary courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Alliance for Justice and Democracy/Movement for Renewal or AJD/MR<br />El Insaf or Equity Party<br />El Islah or Reform Party<br />El Karama or Dignity Party<br />El Vadila or Virtue Party<br />Mauritanian Party of Union and Change or HATEM<br />National Democratic Alliance or AND<br />National Rally for Reform and Development or RNRD or TAWASSOUL<br />Nida El-Watan<br />Party for Conciliation and Prosperity or HIWAR<br />Party of the Mauritanian Masses or Hakam<br />Republican Front for Unity and Democracy or FRUD<br />Sawab Party<br />Union for Democracy and Progress or UDP<br />Union of Planning and Construction or UPC",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ABEDA, ACP, AfDB, AFESD, AIIB, AMF, AMU, AU, CAEU, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO (pending member), ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), LAS, MIGA, NAM, OIC, OIF, OPCW, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "28 November 1960 (from France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 28 November (1960)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> green with red stripes along the top and bottom edges; on the green field, a five-pointed yellow star is centered over a yellow, upward-pointing crescent moon<br /><br /><strong>meaning:</strong> the crescent, star, and color green are traditional symbols of Islam; green also represents hope for a bright future; yellow stands for the sands of the Sahara, and red for blood shed in the fight for independence",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "five-pointed star between the horns of a horizontal crescent moon",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"National Anthem of Mauritania\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "unknown/Rageh DAOUD"
+      },
+      {
+       "label": "history",
+       "text": "adopted 2017"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (1 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Ancient Ksour (Fortified Villages) of Ouadane, Chinguetti, Tichitt, and Oualata (c); Banc d'Arguin National Park (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

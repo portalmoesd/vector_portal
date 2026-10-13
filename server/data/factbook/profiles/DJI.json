@@ -1,0 +1,1036 @@
+{
+ "iso3": "DJI",
+ "gec": "dj",
+ "name": "Djibouti",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Present-day Djibouti was the site of the medieval Ifat and Adal Sultanates. In the late 19th century, the Afar sultans signed treaties with the French that allowed the latter to establish the colony of French Somaliland in 1862. The French signed additional treaties with the ethnic Somali in 1885. <br /><br />Tension between the ethnic Afar and Somali populations increased over time, as the ethnic Somalis perceived that the French unfairly favored the Afar and gave them disproportionate influence in local governance. In 1958, the French held a referendum that provided residents of French Somaliland the option to either continue their association with France or to join neighboring Somalia as it established its independence. Ethnic Somali protested the vote, because French colonial leaders did not recognize many Somali as residents, which gave the Afar outsized influence in the decision to uphold ties with France. After a second referendum in 1967, the French changed the territory’s name to the French Territory of the Afars and the Issas, in part to underscore their relationship with the ethnic Afar and downplay the significance of the ethnic Somalis. A final referendum in 1977 established Djibouti as an independent nation and granted ethnic Somalis Djiboutian nationality, formally resetting the balance of power between the majority ethnic Somalis and minority ethnic Afar residents. Upon independence, the country was named after its capital city of Djibouti. Hassan Gouled APTIDON, an ethnic Somali leader, installed an authoritarian one-party state and served as president until 1999. Unrest between the Afar minority and Somali majority culminated in a civil war during the 1990s that ended in 2001 with a peace accord between Afar rebels and the Somali Issa-dominated government. In 1999, Djibouti's first multiparty presidential election resulted in the election of Ismail Omar GUELLEH as president; he was reelected to a second term in 2005 and extended his tenure in office via a constitutional amendment, which allowed him to serve his third and fourth terms, and to begin a fifth term in 2021. <br /><br />Djibouti occupies a strategic geographic location at the intersection of the Red Sea and the Gulf of Aden. Its ports handle 95% of Ethiopia’s trade. Djibouti’s ports also service transshipments between Europe, the Middle East, and Asia. The government has longstanding ties to France, which maintains a military presence in the country, as do the US, Japan, Italy, Germany, Spain, and China.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Africa, bordering the Gulf of Aden and the Red Sea, between Eritrea and Somalia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "11 30 N, 43 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "23,200 sq km"
+      },
+      {
+       "label": "land",
+       "text": "23,180 sq km"
+      },
+      {
+       "label": "water",
+       "text": "20 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than New Jersey",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "528 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Eritrea 125 km; Ethiopia 342 km; Somalia 61 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "314 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "desert; torrid, dry",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "coastal plain and plateau separated by central mountains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Moussa Ali 2,021 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Lac Assal -155 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "430 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "potential geothermal power, gold, clay, granite, limestone, marble, salt, diatomite, gypsum, pumice, petroleum",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "73.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 73.3% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "0.3% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "26.2% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "10 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "salt water lake(s)",
+       "text": "Abhe Bad/Abhe Bid Hayk (shared with Ethiopia) - 780 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "most densely populated areas are in the east; the largest city is Djibouti, and the other cities in the country are a fraction of its size, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "earthquakes; droughts; occasional cyclonic disturbances from the Indian Ocean bring heavy rains and flash floods <br /><br /><strong>volcanism:</strong> experiences limited volcanic activity; Ardoukoba (298 m) last erupted in 1978; Manda-Inakir, located along the Ethiopian border, is also historically active",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "strategic location near world's busiest shipping lanes and close to Arabian oilfields; Lac Assal (Lake Assal) is the lowest point in Africa and the saltiest lake in the world",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,013,703 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "458,988"
+      },
+      {
+       "label": "female",
+       "text": "554,715"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Djiboutian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Djiboutian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Somali 60%, Afar 35%, other 5% (mostly Yemeni Arab, also French, Ethiopian, and Italian)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "French (official), Arabic (official), Somali, Afar",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Sunni Muslim 94% (nearly all Djiboutians), other 6% (mainly foreign-born residents - Shia Muslim, Christian, Hindu, Jewish, Baha'i, and atheist)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "28.4% (male 141,829/female 140,696)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "67.4% (male 290,654/female 379,778)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4.2% (2024 est.) (male 18,313/female 23,704)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "48.1 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "41.7 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.4 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "15.7 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.7 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "24.4 years"
+      },
+      {
+       "label": "female",
+       "text": "27.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.84% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "21.46 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "7 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "3.94 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most densely populated areas are in the east; the largest city is Djibouti, and the other cities in the country are a fraction of its size, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "78.6% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.56% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "600,000 DJIBOUTI (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.77 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.77 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.83 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "162 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "44.3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "52.1 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "38 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "65.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "63.4 years"
+      },
+      {
+       "label": "female",
+       "text": "68.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.09 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.03 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 84.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 47.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 76.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 15.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 52.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 23.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "2.9% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "5.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "0.21 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "1.4 beds/1,000 population (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 87.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 24.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 74% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 12.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 75.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 26% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "13.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.21 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.05 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.14 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 290,
+    "content": {
+     "text": "17.7% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 300,
+    "content": {
+     "text": "46.5% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 310,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "1.4% (2019)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "6.5% (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.8% of GDP (2018 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "14.5% national budget (2018 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Djibouti"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Djibouti"
+      },
+      {
+       "label": "local long form",
+       "text": "République de Djibouti (French)/ Jumhuriyat Jibuti (Arabic)"
+      },
+      {
+       "label": "local short form",
+       "text": "Djibouti (French)/ Jibuti (Arabic)"
+      },
+      {
+       "label": "former",
+       "text": "French Somaliland, French Territory of the Afars and Issas"
+      },
+      {
+       "label": "etymology",
+       "text": "the country name derives from the capital city of Djibouti"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Djibouti"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "11 35 N, 43 09 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is said to derive from the Afar word <em>gabouri</em>, meaning \"plate,\" in reference to a palm-fiber plate used for ceremonial purposes"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "6 districts (<em>cercles</em>, singular - <em>cercle</em>); Ali Sabieh, Arta, Dikhil, Djibouti, Obock, Tadjourah",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system based primarily on the French civil code (as it existed in 1997), Islamic religious law (in matters of family law and successions), and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "approved by referendum 4 September 1992"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or by the National Assembly; Assembly consideration of proposals requires assent of at least one third of the membership; passage requires a simple majority vote by the Assembly and approval by simple majority vote in a referendum; the president can opt to bypass a referendum if adopted by at least two-thirds majority vote of the Assembly; constitutional articles on the sovereignty of Djibouti, its republican form of government, and its pluralist form of democracy cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the mother must be a citizen of Djibouti"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term; prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 April 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2021:</em> Ismail Omar GUELLEH reelected president for a fifth term; percent of vote - Ismail Omar GUELLEH (RPP) 97.4%, Zakaria Ismael FARAH (MDEND) 2.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "April 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Assemblée nationale)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "65 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "2/24/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Union for the Presidential Majority (UMP) (58); Union for Democracy and Justice (UDJ) (7)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "26.2%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "February 2028"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> most opposition parties boycotted the 2023 polls, stating the elections were \"not free, not transparent, and not democratic\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Cour Suprême (consists of NA magistrates); Constitutional Council (consists of 6 magistrates)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court magistrates appointed by the president with the advice of the Superior Council of the Magistracy (CSM), a 10-member body consisting of 4 judges, 3 members (non-parliamentarians and judges) appointed by the president, and 3 appointed by the National Assembly president or speaker; magistrates appointed for life with retirement at age 65; Constitutional Council magistrate appointments - 2 by the president of the republic, 2 by the president of the National Assembly, and 2 by the CSM; magistrates appointed for 8-year, non-renewable terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Court of Appeal; Courts of First Instance; customary courts; State Court (replaced sharia courts in 2003)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Front for Restoration of Unity and Democracy (Front pour la Restauration de l'Unite Democratique) or FRUD<br />National Democratic Party or PND<br />People's Rally for Progress or RPP<br />Peoples Social Democratic Party or PPSD<br />Union for Democracy and Justice or UDJ<br />Union for the Presidential Majority coalition or UMP<br />Union of Reform Partisans or UPR",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AFESD, AMF, ATMIS, AU, CAEU (candidates), COMESA, FAO, G-77, IBRD, ICAO, ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, IGAD, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ITU, ITUC (NGOs), LAS, MIGA, MINURSO, NAM, OIC, OIF, OPCW, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "27 June 1977 (from France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 27 June (1977)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> two equal horizontal bands of light blue (top) and light green, with a white isosceles triangle based on the left side that has a five-pointed red star in the center<br /><br /><strong>meaning:</strong> blue stands for sea, sky, and the Issa Somali people, green for earth and the Afar people, and white for peace; the red star stands for the struggle for independence and unity",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "red star",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "light blue, green, white, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Jabuuti\" (Djibouti)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Aden ELMI/Abdi ROBLEH"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1977"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

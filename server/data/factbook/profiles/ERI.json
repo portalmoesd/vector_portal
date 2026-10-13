@@ -1,0 +1,977 @@
+{
+ "iso3": "ERI",
+ "gec": "er",
+ "name": "Eritrea",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Eritrea won independence from Italian colonial control in 1941, but the UN only established it as an autonomous region within the Ethiopian federation in 1952, after a decade of British administrative control. Ethiopia's full annexation of Eritrea as a province 10 years later sparked a violent 30-year conflict for independence that ended in 1991 with Eritrean fighters defeating government forces. Eritreans overwhelmingly approved independence in a 1993 referendum. ISAIAS Afwerki has been Eritrea's only president since independence; his rule, particularly since 2001, has been characterized by highly autocratic and repressive actions. His government has created a highly militarized society by instituting an unpopular program of mandatory conscription into national service -- divided between military and civilian service -- of indefinite length. <br /><br />A two-and-a-half-year border war with Ethiopia that erupted in 1998 ended under UN auspices in 2000. Ethiopia rejected a subsequent 2007 Eritrea-Ethiopia Boundary Commission (EEBC) demarcation. More than a decade of a tense “no peace, no war” stalemate ended in 2018 when the newly elected Ethiopian prime minister accepted the EEBC’s 2007 ruling, and the two countries signed declarations of peace and friendship. Eritrean leaders then engaged in intensive diplomacy around the Horn of Africa, bolstering regional peace, security, and cooperation, as well as brokering rapprochements between governments and opposition groups. In 2018, the UN Security Council lifted an arms embargo that had been imposed on Eritrea since 2009, after the UN Somalia-Eritrea Monitoring Group reported they had not found evidence of Eritrean support in recent years for al-Shabaab. The country’s rapprochement with Ethiopia led to a resumption of economic ties, but the level of air transport, trade, and tourism have remained roughly the same since late 2020. <br /><br />The Eritrean economy remains agriculture-dependent, and the country is still one of Africa’s poorest nations. Eritrea faced new international condemnation and US sanctions in mid-2021 for its participation in the war in Ethiopia’s Tigray Regional State, where Eritrean forces were found to have committed war crimes and crimes against humanity. As most Eritrean troops were departing northern Ethiopia in January 2023, ISAIAS began a series of diplomatic engagements aimed at bolstering Eritrea’s foreign partnerships and regional influence. Despite the country's improved relations with its neighbors, ISAIAS has not let up on repression, and conscription and militarization continue.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Africa, bordering the Red Sea, between Djibouti and Sudan",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "15 00 N, 39 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "117,600 sq km"
+      },
+      {
+       "label": "land",
+       "text": "101,000 sq km"
+      },
+      {
+       "label": "water",
+       "text": "16,600 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Pennsylvania",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,840 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Djibouti 125 km; Ethiopia 1,033 km; Sudan 682 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,234 km (mainland on Red Sea 1,151 km; islands in Red Sea 1,083 km)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "hot, dry desert strip along Red Sea coast; cooler and wetter in the central highlands (up to 61 cm of rainfall annually, heaviest June to September); semiarid in western hills and lowlands",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "dominated by extension of Ethiopian north-south trending highlands, descending on the east to a coastal desert plain, on the northwest to hilly terrain and on the southwest to flat-to-rolling plains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Soira 3,018 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "near Kulul within the Danakil Depression -75 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "853 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "gold, potash, zinc, copper, salt, possibly oil and natural gas, fish",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "62.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 5.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 56.9% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "12% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "25.3% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "210 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "density is highest in the center of the country, in and around the cities of Asmara (capital) and Keren; smaller settlements exist in the north and south, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "frequent droughts, rare earthquakes and volcanoes; locust swarms <br /><br /><strong>volcanism:</strong> Dubbi (1,625 m), which last erupted in 1861, was the country's only historically active volcano until Nabro (2,218 m) came to life in 2011",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "strategic geopolitical position along world's busiest shipping lanes",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6,416,435 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "3,158,281"
+      },
+      {
+       "label": "female",
+       "text": "3,258,154"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Eritrean(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Eritrean"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Tigrinya 50%, Tigre 30%, Saho 4%, Afar 4%, Kunama 4%, Bilen 3%, Hedareb/Beja 2%, Nara 2%, Rashaida 1% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent Eritrea's nine recognized ethnic groups"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Tigrinya (official), Arabic (official), English (official), Tigre, Kunama, Afar, other Cushitic languages",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Eritrean Orthodox, Roman Catholic, Evangelical Lutheran, Sunni Muslim",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "35.7% (male 1,138,382/female 1,123,925)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "60.3% (male 1,882,547/female 1,944,266)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4% (2024 est.) (male 101,504/female 153,332)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "64.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "57.6 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.6 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "15.1 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "21.7 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "20.8 years"
+      },
+      {
+       "label": "female",
+       "text": "21.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.16% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "25.92 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.43 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-7.95 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "density is highest in the center of the country, in and around the cities of Asmara (capital) and Keren; smaller settlements exist in the north and south, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "43.3% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.67% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.073 million ASMARA (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.66 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.97 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "21.3 years (2010 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-29"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "291 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "39 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "46.6 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "32.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "67.5 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "64.9 years"
+      },
+      {
+       "label": "female",
+       "text": "70.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.35 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.65 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "4.2% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "2.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "0.09 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "1 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 260,
+    "content": {
+     "text": "5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.93 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.42 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.51 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.5% (2020 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14.7% (2020 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0.2% (2020 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8 years (2015 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9 years (2015 est.)"
+      },
+      {
+       "label": "female",
+       "text": "7 years (2015 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "State of Eritrea"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Eritrea"
+      },
+      {
+       "label": "local long form",
+       "text": "Hagere Ertra"
+      },
+      {
+       "label": "local short form",
+       "text": "Ertra"
+      },
+      {
+       "label": "former",
+       "text": "Eritrea Autonomous Region in Ethiopia"
+      },
+      {
+       "label": "etymology",
+       "text": "the country name derives from the ancient Greek name <em>Erythra Thalassa</em>, meaning \"Red Sea,\" the body of water that borders the country"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "authoritarian",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Asmara"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "15 20 N, 38 56 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name's origin is unclear; according to Tigrinya oral tradition, the name is part of a phrase meaning \"the women made them unite,\" referring to a group of women who made four clans unite to defeat a common enemy; <em>asmara </em>also means \"flowery wood\" in the Tigrinya language"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "6 regions (<em>zobatat</em>, singular - <em>zoba</em>); 'Anseba, Debub (South), Debubawi K'eyyih Bahri (Southern Red Sea), Gash-Barka, Ma'ikel (Central), Semienawi K'eyyih Bahri (Northern Red Sea)",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil, customary, and Islamic religious law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "ratified by the Constituent Assembly 23 May 1997 (never implemented)"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of Eritrea or by assent of at least one half of the National Assembly membership; passage requires at least an initial three-quarters majority vote by the Assembly and, after one year, final passage by at least four-fifths majority vote by the Assembly"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Eritrea"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "20 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by the National Assembly for a 5-year term (eligible for a second term), according to the constitution"
+      },
+      {
+       "label": "most recent election date",
+       "text": "24 May 1993, following independence from Ethiopia"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />1993:</em> ISAIAS Afwerki elected president by the transitional National Assembly; percent of National Assembly vote - ISAIAS Afwerki (PFDJ) 95%, other 5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "postponed indefinitely"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1: </strong>Eritrea’s authoritarian regime is controlled entirely by the president, who heads the sole political party, which has ruled the country since 1991; national elections have not taken place since 1991 and the constitution has not been implemented.<strong><br /><br />note 2:</strong> the president is both chief of state and head of government and is head of the State Council and National Assembly"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Hagerawi Baito)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "150 (all indirectly elected)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "2/1/1994"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in 1997, after the new constitution was adopted, the government formed a Transitional National Assembly to serve as the country's legislative body until countrywide elections to form a National Assembly could be held; the constitution stipulates that once past the transition stage, all National Assembly members will be elected by secret ballot of all eligible voters; National Assembly elections scheduled for December 2001 were postponed indefinitely due to the war with Ethiopia; as of 2025, no sitting legislative body exists"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "High Court (consists of 20 judges and organized into civil, commercial, criminal, labor, administrative, and customary sections)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "High Court judges appointed by the president"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "regional/zonal courts; community courts; special courts; sharia courts (for issues dealing with Muslim marriage, inheritance, and family); military courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "People's Front for Democracy and Justice or PFDJ (the only party recognized by the government)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AU, COMESA, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), IDA, IFAD, IFC, IFRCS (observer), IGAD, ILO, IMF, IMO, Interpol, IOC, ISO (correspondent), ITU, ITUC (NGOs), LAS (observer), MIGA, NAM, OPCW, PCA, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "24 May 1993 (from Ethiopia)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 24 May (1991)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> a red isosceles triangle (based on the left side) divides the flag into two right triangles; the upper triangle is green, the lower is blue; a gold wreath around a gold olive branch is on the left side of the red triangle<br /><br /><strong>meaning:</strong> green stands for the country's agriculture economy, red for the blood shed in the fight for freedom, and blue for the sea's bounty; the shape of the red triangle mimics the country's shape",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> one of four national flags that reflect the country's shape in the flag design; the others are Bosnia and Herzegovina, Brazil, and Vanuatu"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "camel",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, red, blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "Eritrea adopted its coat of arms on May 24, 1993, when it won independence from Ethiopia; the camel was used to transport supplies and goods during the war, and it became a symbol of the country’s success; the olive wreath represents peace, reconciliation, and harmony; under the camel is name of the country in its three official languages: Tigrinya, English, and Arabic",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Ertra, Ertra, Ertra\" (Eritrea, Eritrea, Eritrea)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "SOLOMON Tsehaye Beraki/Isaac Abraham MEHAREZGI and ARON Tekle Tesfatsion"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1993, after gaining independence from Ethiopia"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Asmara: A Modernist African City"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

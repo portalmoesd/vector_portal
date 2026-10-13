@@ -1233,8 +1233,11 @@
     "noDataSource": "No value published by the source",
     "onThisPage": "On this page",
     "sections": {
+      "introduction": "Introduction",
       "overview": "Overview",
+      "geography": "Geography",
       "people": "People",
+      "government": "Government",
       "economy": "Economy",
       "trade": "Trade"
     },
@@ -1258,6 +1261,12 @@
       "title": "GDP and population, last 20 years",
       "gdp": "GDP (current US$)",
       "population": "Population"
+    },
+    "factbook": {
+      "fromFactbook": "From the World Factbook",
+      "snapshot": "snapshot {date}",
+      "discontinued": "publication discontinued on {date}",
+      "edited": "edited"
     },
     "source": "Source",
     "countryListSource": "World Bank country list",

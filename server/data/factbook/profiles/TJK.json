@@ -1,0 +1,1154 @@
+{
+ "iso3": "TJK",
+ "gec": "ti",
+ "name": "Tajikistan",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The Tajik people came under Russian imperial rule in the 1860s and 1870s, but Russia's hold on Central Asia weakened following the Revolution of 1917. At that time, bands of indigenous guerrillas (known as \"basmachi\") fiercely contested Bolshevik control of the area, which was not fully reestablished until 1925. Tajikistan was first established as an autonomous Soviet Socialist Republic within the Uzbek Soviet Socialist Republic in 1924, but in 1929 the Soviet Union made Tajikistan as a separate republic and transferred to it much of present-day Sughd Province. Ethnic Uzbeks form a substantial minority in Tajikistan, and ethnic Tajiks an even larger minority in Uzbekistan. Tajikistan became independent in 1991 after the breakup of the Soviet Union, and the country experienced a civil war among political, regional, and religious factions from 1992 to 1997.</p> <p>Despite Tajikistan's general elections for both the presidency (once every seven years) and legislature (once every five years), observers note an electoral system rife with irregularities and abuse, and results that are neither free nor fair. President Emomali RAHMON, who came to power in 1992 during the civil war and was first elected president in 1994, used an attack planned by a disaffected deputy defense minister in 2015 to ban the last major opposition party in Tajikistan. RAHMON further strengthened his position by having himself declared \"Founder of Peace and National Unity, Leader of the Nation,\" with limitless terms and lifelong immunity through constitutional amendments ratified in a referendum. The referendum also lowered the minimum age required to run for president from 35 to 30, which made RAHMON's first-born son Rustam EMOMALI, the mayor of the capital city of Dushanbe, eligible to run for president in 2020. RAHMON orchestrated EMOMALI's selection in 2020 as chairman of the Majlisi Milli (the upper chamber of Tajikistan's parliament), positioning EMOMALI as next in line of succession for the presidency. RAHMON opted to run in the presidential election later that year and received 91% of the vote.<br /><br />The country remains the poorest of the former Soviet republics. Tajikistan became a member of the WTO in 2013, but its economy continues to face major challenges, including dependence on remittances from Tajikistani migrant laborers in Russia and Kazakhstan, pervasive corruption, the opiate trade, and destabilizing violence emanating from neighboring Afghanistan. Tajikistan has endured several domestic security incidents since 2010, including armed conflict between government forces and local strongmen in the Rasht Valley and between government forces and informal leaders in Gorno-Badakhshan Autonomous Oblast. Tajikistan suffered its first ISIS-claimed attack in 2018, when assailants attacked a group of Western bicyclists, killing four. Friction between forces on the border between Tajikistan and the Kyrgyz Republic flared up in 2021, culminating in fatal clashes between border forces in 2021 and 2022.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Asia, west of China, south of Kyrgyzstan",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "39 00 N, 71 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "144,100 sq km"
+      },
+      {
+       "label": "land",
+       "text": "141,510 sq km"
+      },
+      {
+       "label": "water",
+       "text": "2,590 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Wisconsin",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,130 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Afghanistan 1,357 km; China 477 km; Kyrgyzstan 984 km; Uzbekistan 1,312 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "mid-latitude continental, hot summers, mild winters; semiarid to polar in Pamir Mountains",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mountainous region dominated by the Alay Mountains in the north and the Pamirs in the southeast; western Fergana Valley in north, Kofirnihon and Vakhsh Valleys in southwest",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Qullai Somoniyon 7,495 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Syr Darya (Sirdaryo) 300 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "3,186 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "hydropower, some petroleum, uranium, mercury, brown coal, lead, zinc, antimony, tungsten, silver, gold",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "27.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 6.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 20.4% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "3.1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "69% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "5,681 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Syr Darya (shared with Kyrgyzstan [s], Uzbekistan, and Kazakhstan [m]) - 3,078 km; Amu Darya river source (shared with Turkmenistan, Afghanistan, and Uzbekistan [m]) - 2,620 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "Tarim Basin (1,152,448 sq km), <em>(Aral Sea Basin)</em> Amu Darya (534,739 sq km), Syr Darya (782,617 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "the population is concentrated at lower elevations, with perhaps as many as 90% living in valleys; overall density increases from east to west",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "earthquakes; floods",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "landlocked; highest point, Qullai Ismoili Somoni (formerly Communism Peak), was the tallest mountain in the former USSR",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10,593,876 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5,322,920"
+      },
+      {
+       "label": "female",
+       "text": "5,270,956"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Tajikistani(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Tajikistani"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Tajik 84.3% (includes Pamiri and Yagnobi), Uzbek 13.8%, other 2% (includes Kyrgyz, Russian, Turkmen, Tatar, Arab) (2014 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Tajik (official) 84.4%, Uzbek 11.9%, Kyrgyz 0.8%, Russian 0.5%, other 2.4% (2010 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Китоби Фактҳои Ҷаҳонӣ, манбаи бебадали маълумоти асосӣ (Tajik)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Russian widely used in government and business"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 98% (Sunni 95%, Shia 3%) other 2% (2014 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "36.9% (male 1,953,472/female 1,877,192)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "59.3% (male 3,086,964/female 3,071,642)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.9% (2024 est.) (male 181,382/female 223,411)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "68.5 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "61.5 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.9 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "14.5 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "22.3 years"
+      },
+      {
+       "label": "female",
+       "text": "23.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.89% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "25.31 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "4.45 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.94 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the population is concentrated at lower elevations, with perhaps as many as 90% living in valleys; overall density increases from east to west",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "28.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.73% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "987,000 DUSHANBE (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.81 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "23.2 years (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "14 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "24.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "18.9 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "71.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "70.1 years"
+      },
+      {
+       "label": "female",
+       "text": "73.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.52 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.71 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 95.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 76.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 81.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 4.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 23.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 18.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "6.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "1.87 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "4.3 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 99.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "14.2% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.85 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.38 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.45 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "5.2% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "68% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.1% (2017)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "8.7% (2017)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.4% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "19.3% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "female",
+       "text": "94.6% (2017 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "12 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12 years (2024 est.)"
+      },
+      {
+       "label": "female",
+       "text": "11 years (2024 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Tajikistan"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Tajikistan"
+      },
+      {
+       "label": "local long form",
+       "text": "Jumhurii Tojikiston"
+      },
+      {
+       "label": "local short form",
+       "text": "Tojikiston"
+      },
+      {
+       "label": "former",
+       "text": "Tajik Soviet Socialist Republic"
+      },
+      {
+       "label": "etymology",
+       "text": "the Persian suffix -<em>ostan </em>means \"land,\" so the country name means \"Land of the Tajik [people];\" the name Tajik comes from the Sanskrit <em>tajika</em>, a name originally used to distinguish Arabs from Turks and derived from the Tay, an Arab people"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Dushanbe"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "38 33 N, 68 46 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+5 (10 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name means Monday in Persian; today's city was originally at the crossroads where a large bazaar was held on Mondays, or the second day (<em>du</em>) after Saturday (<em>shambe</em>)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "2 provinces (<em>viloyatho</em>, singular - <em>viloyat</em>), 1 autonomous province* (<em>viloyati mukhtor</em>), 1 capital region** (<em>viloyati poytakht</em>), and 1 area referred to as Districts Under Republic Administration***; Dushanbe**, Khatlon (Bokhtar), Kuhistoni Badakhshon [Gorno-Badakhshan]* (Khorugh), Nohiyahoi Tobei Jumhuri***, Sughd (Khujand)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the administrative center name follows in parentheses"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 6 November 1994"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or by at least one third of the total membership of both houses of the Supreme Assembly; adoption of any amendment requires a referendum, which includes approval of the president or approval by at least two-thirds majority of the Assembly of Representatives; passage in a referendum requires participation of an absolute majority of eligible voters and an absolute majority of votes; constitutional articles, including Tajikistan’s form of government, its territory, and its democratic nature, cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Tajikistan"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years or 3 years of continuous residence prior to application"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by simple-majority popular vote for a 7-year term (two-term limit), but as the \"Leader of the Nation,\" president has no term limit; prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11 October 2020"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2020</em>: Emomali RAHMON reelected president; percent of vote - Emomali RAHMON (PDPT) 92.1%, Rustam LATIFZODA (APT) 3.1%, other 4.8%<br /><br /><em>2013:</em> Emomali RAHMON reelected president; percent of vote - Emomali RAHMON (PDPT) 84%, Ismoil TALBAKOV CPT) 5%, other 11%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Supreme Council (Majlisi Oli)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of Representatives (Majlisi namoyandogon)"
+      },
+      {
+       "label": "number of seats",
+       "text": "63 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "3/2/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "People's Democratic Party of Tajikistan (PDPT) (49); Agrarian Party of Tajikistan (APT) (7); Party of Economic Reforms of Tajikistan (PERT) (5); Other (2)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "28.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Majlisi milli)"
+      },
+      {
+       "label": "number of seats",
+       "text": "33 (25 indirectly elected; 8 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "3/28/2025"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "30.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chairman, deputy chairmen, and 34 judges organized into civil, family, criminal, administrative offense, and military chambers); Constitutional Court (consists of the court chairman, deputy chairman, and 5 judges); High Economic Court (consists of 16 judicial positions)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court, Constitutional Court, and High Economic Court judges nominated by the president and approved by the National Assembly; judges of all 3 courts appointed for 10-year renewable terms with no term limits, but the last appointment must occur before the age of 65"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "regional and district courts; Dushanbe City Court; viloyat (province-level) courts; Court of Gorno-Badakhshan Autonomous Region"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Agrarian Party of Tajikistan or APT<br />Democratic Party or DPT<br />Party of Economic Reforms or PERT<br />People's Democratic Party of Tajikistan or PDPT<br />Socialist Party of Tajikistan or SPT",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ADB, CICA, CIS, CSTO, EAEC, EAPC, EBRD, ECO, EITI (candidate country), FAO, G-77, GCTU, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, MIGA, NAM (observer), OIC, OPCW, OSCE, PFP, SCO, UN, UNCTAD, UNESCO, UNIDO, UNISFA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "9 September 1991 (from the Soviet Union)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day (or National Day), 9 September (1991)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal stripes of red (top), a wider stripe of white, and green; a gold crown under seven five-pointed gold stars is in the center of the white stripe<br /><br /><strong>meaning:</strong> red stands for the sun, victory, and the unity of the nation; white for purity, cotton, and mountain snows; green for Islam and nature's bounty; the crown symbolizes the Tajik people; the stars represent the number seven, which is considered a symbol of perfection and the embodiment of happiness",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "arc of seven five-pointed stars over a crown, Marco Polo sheep",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, white, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Surudi milli\" (National Anthem)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Gulnazar KELDI/Sulaimon YUDAKOV"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1994; after the fall of the Soviet Union, Tajikistan kept the music of its Soviet-era anthem, but adopted new lyrics"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "5 (3 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Proto-urban Site of Sarazm (c); Tajik National Park (Mountains of the Pamirs) (n); Silk Roads: Zarafshan-Karakum Corridor (c); Tugay forests of the Tigrovaya Balka Nature Reserve (n); Cultural Heritage Sites of Ancient Khuttal (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

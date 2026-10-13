@@ -1,0 +1,1094 @@
+{
+ "iso3": "LBN",
+ "gec": "le",
+ "name": "Lebanon",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "As a result of its location at the crossroads of three continents, the area that is modern-day Lebanon is rich in cultural and religious diversity. This region was subject to various foreign conquerors for much of its history, including the Romans, Arabs, and Ottomans. Following World War I, France acquired a mandate over the northern portion of the former Ottoman Empire province of Syria. From it the French demarcated the region of Lebanon in 1920, and it gained independence in 1943. Lebanon subsequently experienced periods of political turmoil interspersed with prosperity built on its position as a regional center for finance and trade.<br /><br />The country's 1975-90 civil war, which resulted in an estimated 120,000 fatalities, was followed by years of social and political instability, and sectarianism remains a key element of Lebanese political life. The Israeli defense forces, which occupied parts of Lebanon during the civil war, did not completely withdraw until 2000. Neighboring Syria influenced Lebanon's foreign and domestic policies while its military occupied Lebanon from 1976 until 2005, but its influence diminished significantly after 2005. Over 1.5 million Syrian refugees fled to Lebanon after the start of the Syrian conflict in 2011. Hizballah -- a major Lebanese political party, militia, and US-designated foreign terrorist organization -- and Israel continued attacks and counterattacks against each other after Syria's withdrawal and fought a brief war in 2006. After HAMAS attacked Israel on 7 October 2023, the intensity and frequency of these cross-border attacks increased substantially into a cycle of hostilities, mostly limited to the border areas as of January 2024. Lebanon's borders with Syria and Israel remain unresolved.<br /><br />Lebanon's prosperity has significantly diminished since the beginning of the country's economic crisis in 2019, which has crippled its economy, shut down its previously lucrative banking sector, reduced the value of its currency, and caused many Lebanese to emigrate in search of better prospects.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Middle East, bordering the Mediterranean Sea, between Israel and Syria",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "33 50 N, 35 50 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Middle East",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10,400 sq km"
+      },
+      {
+       "label": "land",
+       "text": "10,230 sq km"
+      },
+      {
+       "label": "water",
+       "text": "170 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about one-third the size of Maryland",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "484 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Israel 81 km; Syria 403 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "225 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "Mediterranean; mild to cool, wet winters with hot, dry summers; the Lebanon Mountains experience heavy winter snows",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "narrow coastal plain; El Beqaa (Bekaa Valley) separates Lebanon and Anti-Lebanon Mountains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Qornet es Saouda 3,088 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Mediterranean Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,250 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "limestone, iron ore, salt, water-surplus state in a water-deficit region, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "65.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 13.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 13.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 39.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "13.8% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "20.3% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "1,040 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "the majority of people live on or near the Mediterranean coast, particularly in and around the capital of Beirut",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "earthquakes; dust storms, sandstorms",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "smallest country in continental Asia; Nahr el Litani is the only major river in Near East not crossing an international boundary",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,364,482 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2,678,543"
+      },
+      {
+       "label": "female",
+       "text": "2,685,939"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Lebanese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Lebanese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Arab 95%, Armenian 4%, other 1%",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> many Christian Lebanese do not identify as Arab but rather as descendants of the ancient Canaanites and prefer to be called Phoenicians"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official), French, English, Armenian"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 67.8% (31.9% Sunni, 31.2% Shia, smaller percentages of Alawites and Ismailis), Christian 32.4% (Maronite Catholics are the largest Christian group), Druze 4.5%, very small numbers of Jews, Baha'is, Buddhists, and Hindus (2020 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent the religious affiliation of the citizen population (data do not include Lebanon's sizable Syrian and Palestinian refugee populations); 18 religious sects recognized"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "18.9% (male 519,352/female 495,591)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "71.6% (male 1,939,311/female 1,900,574)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "9.5% (2024 est.) (male 219,880/female 289,774)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "50.3 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "39 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "11.3 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "8.8 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "29.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "35.6 years"
+      },
+      {
+       "label": "female",
+       "text": "36.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.77% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "16.73 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.23 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-18.23 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the majority of people live on or near the Mediterranean coast, particularly in and around the capital of Beirut",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "89.4% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "-1.23% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "2.421 million BEIRUT (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.76 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "15 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "7.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "6.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "79.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "77.8 years"
+      },
+      {
+       "label": "female",
+       "text": "80.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.2 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.07 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 92.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 7.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "10.1% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "15.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "2.68 physicians/1,000 population (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "2.7 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "32% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.14 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.38 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.21 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.53 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "34.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "43.8% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "25.4% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "5.1% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "52.4% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "1.4% (2016)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "6% (2016)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "1.2% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "8.6% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "92% (2019 est.)"
+      },
+      {
+       "label": "male",
+       "text": "94.8% (2019 est.)"
+      },
+      {
+       "label": "female",
+       "text": "89.5% (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12 years"
+      },
+      {
+       "label": "female",
+       "text": "11 years (2014)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Lebanese Republic"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Lebanon"
+      },
+      {
+       "label": "local long form",
+       "text": "Al Jumhuriyah al Lubnaniyah"
+      },
+      {
+       "label": "local short form",
+       "text": "Lubnan"
+      },
+      {
+       "label": "former",
+       "text": "Greater Lebanon"
+      },
+      {
+       "label": "etymology",
+       "text": "derives from the Semitic root <em>lbn, </em>meaning \"white,\" and probably refers to the country's snow-capped mountains"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary democratic republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Beirut"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "33 52 N, 35 30 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "derived from the Phoenician or Hebrew word <em>be'erot</em>, meaning \"the wells,\" which were the only source of water in the region"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "8 governorates (<em>mohafazat</em>, singular - <em>mohafazah</em>); Aakkar, Baalbek-Hermel, Beqaa (Bekaa), Beyrouth (Beirut), Liban-Nord (North Lebanon), Liban-Sud (South Lebanon), Mont-Liban (Mount Lebanon), Nabatiye",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil law based on the French civil code, Ottoman legal tradition, and religious laws covering personal status, marriage, divorce, and other family relations of the Jewish, Islamic, and Christian communities",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "drafted 15 May 1926, adopted 23 May 1926"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic and introduced as a government bill to the National Assembly or proposed by at least 10 members of the Assembly and agreed upon by two thirds of its members; if proposed by the National Assembly, review and approval by two-thirds majority of the Cabinet is required; if approved, the proposal is next submitted to the Cabinet for drafting as an amendment; Cabinet approval requires at least two-thirds majority, followed by submission to the National Assembly for discussion and vote; passage requires at least two-thirds majority vote of a required two-thirds quorum of the Assembly membership and promulgation by the president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Lebanon"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "unknown"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "21 years of age; authorized for all men and women regardless of religion; excludes persons convicted of felonies and other crimes or those imprisoned; excludes all military and security service personnel regardless of rank",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by a qualified majority of two-thirds of Parliament members in the first round and, if needed, a two-thirds quorum of members by simple-majority popular vote for a 6-year term (eligible for non-consecutive terms); prime minister appointed by the president in consultation with the National Assembly"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 January 2025"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2025: </em>Joseph AOUN elected president in second round; National Assembly vote - 99 of 128<br /><em><br />2016:</em> Michel AWN elected president in second round; National Assembly vote - Michel AWN (FPM) 83; the president elected in its 46th attempt on 31 October 2016"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2031"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Majlis Al-Nuwwab)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "128 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/15/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Strong Republic (19); Strong Lebanon (18); Development and Liberation (15); Loyalty to the Resistance (15); Independent Deputies (9); Democratic Gathering (8); Independents (20); Other (24)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "6.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2026"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> Lebanon’s constitution states that the Parliament cannot conduct regular business until it elects a president when the position is vacant <br /><strong><br />note 2:</strong> seats are apportioned evenly between Christians and Muslims"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Cassation or Supreme Court (organized into 8 chambers, each with a presiding judge and 2 associate judges); Constitutional Council (consists of 10 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Court of Cassation judges appointed by Supreme Judicial Council, a 10-member body headed by the chief justice, and includes other judicial officials; judge tenure NA; Constitutional Council members appointed - 5 by the Council of Ministers and 5 by parliament; members serve 5-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; Courts of First Instance; specialized tribunals, religious courts; military courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Al-Ahbash (Association of Islamic Charitable Projects) or AICP<br />Amal Movement (\"Hope Movement\")<br />Azm Movement<br />Ba’th Arab Socialist Party of Lebanon<br />Free Patriotic Movement or FPM<br />Future Movement Bloc or FM<br />Hizballah<br />Islamic Action Front or IAF<br />Kata'ib Party<br />Lebanese Democratic Party<br />Lebanese Forces or LF<br />Marada Movement<br />Progressive Socialist Party or PSP<br />Social Democrat Hunshaqian Party<br />Syrian Social Nationalist Party or SSNP<br />Tashnaq or Armenian Revolutionary Federation",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ABEDA, AFESD, AMF, CAEU, FAO, G-24, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OAS (observer), OIC, OIF, OPCW, PCA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNOOSA, UNRWA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (observer)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "22 November 1943 (from League of Nations mandate under French administration)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 22 November (1943)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal bands consisting of red (top), white (middle, double-width), and red (bottom), with a green cedar tree centered on the white band<br /><br /><strong>meaning:</strong> red stands for blood shed for liberation, and white for peace, the snow of the mountains, and purity; the green cedar tree is the national symbol and represents eternity, steadiness, happiness, and prosperity",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "cedar tree",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, white, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "<p> Lebanon has had many coats of arms since declaring independence in 1943, but none were officially adopted. The current version is a variation of the national flag. Red stands for the blood shed for liberation, and white for peace, purity, and mountain snow. The cedar tree is the national symbol, embodying eternity, steadiness, happiness, and prosperity.</p>",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Kulluna lil-watan\" (All of Us, For Our Country!)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Rachid NAKHLE/Wadih SABRA"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1927"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "6 (all cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Anjar; Baalbek; Byblos; Tyre; Ouadi Qadisha (the Holy Valley) and the Forest of the Cedars of God (Horsh Arz el-Rab); Rachid Karami International Fair-Tripoli"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

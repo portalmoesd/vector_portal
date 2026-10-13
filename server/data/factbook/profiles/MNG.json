@@ -1,0 +1,1150 @@
+{
+ "iso3": "MNG",
+ "gec": "mg",
+ "name": "Mongolia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The peoples of Mongolia have a long history under a number of nomadic empires dating back to the Xiongnu in the 4th century B.C., and the name Mongol goes back to at least the 11th century A.D. The most famous Mongol, TEMÜÜJIN (aka Genghis Khan), emerged as the ruler of all Mongols in the early 1200s. By the time of his death in 1227, he had created through conquest a Mongol Empire that extended across much of Eurasia. His descendants, including ÖGÖDEI and KHUBILAI (aka Kublai Khan), continued to conquer Eastern Europe, the Middle East, and the rest of China, where KHUBILAI established the Yuan Dynasty in the 1270s. The Mongols attempted to invade Japan and Java before their empire broke apart in the 14th century. In the 17th century, Mongolia fell under the rule of the Manchus of the Chinese Qing Dynasty. After Manchu rule collapsed in 1911, Mongolia declared independence, finally winning it in 1921 with help from the Soviet Union. Mongolia became a socialist state (the Mongolian People’s Republic) in 1924. Until the collapse of the Soviet Union in 1989, Mongolia was a Soviet satellite state and relied heavily on economic, military, and political assistance from Moscow. The period was also marked by purges, political repression, economic stagnation, and tensions with China. <br /><br />Mongolia peacefully transitioned to an independent democracy in 1990. In 1992, it adopted a new constitution and established a free-market economy. Since the country's transition, it has conducted a series of successful presidential and legislative elections. Throughout the period, the ex-communist Mongolian People's Revolutionary Party -- which took the name Mongolian People’s Party (MPP) in 2010 -- has competed for political power with the Democratic Party and several other smaller parties. For most of its democratic history, Mongolia has had a divided government, with the presidency and the parliamentary majority held by different parties but that changed in 2021, when the MPP won the presidency after having secured a supermajority in parliament in 2020. Mongolia’s June 2021 presidential election delivered a decisive victory for MPP candidate Ukhnaagiin KHURELSUKH. <br /><br />Mongolia maintains close cultural, political, and military ties with Russia, while China is its largest economic partner. Mongolia’s foreign relations are focused on preserving its autonomy by balancing relations with China and Russia, as well as its other major partners, Japan, South Korea, and the US.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Northern Asia, between China and Russia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "46 00 N, 105 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,564,116 sq km"
+      },
+      {
+       "label": "land",
+       "text": "1,553,556 sq km"
+      },
+      {
+       "label": "water",
+       "text": "10,560 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Alaska; more than twice the size of Texas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8,082 km"
+      },
+      {
+       "label": "border countries",
+       "text": "China 4,630 km; Russia 3,452 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "desert; continental (large daily and seasonal temperature ranges)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "vast semidesert and desert plains, grassy steppe, mountains in west and southwest; Gobi Desert in south-central",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Nayramadlin Orgil (Khuiten Peak) 4,374 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Hoh Nuur 560 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,528 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "oil, coal, copper, molybdenum, tungsten, phosphates, tin, nickel, zinc, fluorspar, gold, silver, iron",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "69% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 68.2% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "9.1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "21.9% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "796 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Hovsgol Nuur - 2,620 sq km; Har Us Nuur - 1,760 sq km;"
+      },
+      {
+       "label": "salt water lake(s)",
+       "text": "Uvs Nuur - 3,350 sq km; Hyargas Nuur - 1,360 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Amur (shared with China [s] and Russia [m]) - 4,444 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "population sparsely distributed throughout the country; the capital of Ulaanbaatar and the northern city of Darhan support the highest population densities",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "dust storms; grassland and forest fires; drought; \"zud,\" which is harsh winter conditions",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "landlocked; strategic location between China and Russia",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3,281,676 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "1,595,596"
+      },
+      {
+       "label": "female",
+       "text": "1,686,080"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Mongolian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Mongolian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Khalkh 83.8%, Kazak 3.8%, Durvud 2.6%, Bayad 2%, Buriad 1.4%, Zakhchin 1.2%, Dariganga 1.1%, other 4.1% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Mongolian 90% (official, Khalkha dialect is predominant), Turkic, Russian (1999)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Дэлхийн баримтат ном, үндсэн мэдээллийн зайлшгүй эх сурвалж. (Mongolian)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Buddhist 51.8%, no religion 40.6%, Muslim 3.2%, Shaman 2.5%, Christian 1.3%, Other 0.6% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "25.7% (male 429,867/female 412,943)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.4% (male 1,087,487/female 1,156,547)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "5.9% (2024 est.) (male 78,242/female 116,590)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "59.1 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "50.2 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "8.9 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "11.2 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "28.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "30.1 years"
+      },
+      {
+       "label": "female",
+       "text": "32.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.08% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "18.01 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.35 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.83 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population sparsely distributed throughout the country; the capital of Ulaanbaatar and the northern city of Darhan support the highest population densities",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "69.1% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.4% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.673 million ULAANBAATAR (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.94 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.67 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.95 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "20.5 years (2008 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 20-24"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "41 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.6 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "22.4 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "16.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "71.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "67.8 years"
+      },
+      {
+       "label": "female",
+       "text": "76.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2.6 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.27 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 94.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 59.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 83.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 5.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 40.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 16.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6.9% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "9.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "4.13 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "10.6 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 97.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 78.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 91.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 2.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 21.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 8.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "20.6% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5.46 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.18 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "1.46 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "1.82 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "28.9% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "51.9% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "7.2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "1.9% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "60.2% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.9% (2018)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "12% (2018)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "2.1% (2018)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.7% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "13.8% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "98.6% (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "98.3% (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "98.9% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "14 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Mongolia"
+      },
+      {
+       "label": "local long form",
+       "text": "none"
+      },
+      {
+       "label": "local short form",
+       "text": "Mongol Uls"
+      },
+      {
+       "label": "former",
+       "text": "Outer Mongolia, Mongolian People's Republic"
+      },
+      {
+       "label": "etymology",
+       "text": "name comes from the Mongol people, whose name derives from the Mongol root word <em>mengu </em>or <em>mongu</em>, meaning \"brave\" or \"unconquered;\" the Mongolian name Mongol Uls translates as \"Mongol State\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Ulaanbaatar"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "47 55 N, 106 55 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+8 (13 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Saturday in March; ends last Saturday in September"
+      },
+      {
+       "label": "time zone note",
+       "text": "Mongolia has two time zones - Ulaanbaatar Time (8 hours in advance of UTC) and Hovd Time (7 hours in advance of UTC)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name means \"red hero\" in Mongolian and honors national hero Damdin SUKHBAATAR, leader of the partisan army that, with Soviet help, liberated Mongolia from Chinese occupation in the early 1920s"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "21 provinces (<em>aymguud</em>, singular - <em>aymag</em>) and 1 municipality* (<em>hot</em>); Arhangay, Bayanhongor, Bayan-Olgiy, Bulgan, Darhan-Uul, Dornod, Dornogovi, Dundgovi, Dzavhan (Zavkhan), Govi-Altay, Govisumber, Hentiy, Hovd, Hovsgol, Omnogovi, Orhon, Ovorhangay, Selenge, Suhbaatar, Tov, Ulaanbaatar*, Uvs",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system influenced by Soviet and Romano-Germanic systems; constitution ambiguous on judicial review of legislative acts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 13 January 1992, effective 12 February 1992"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the State Great Hural, by the president of the republic, by the government, or by petition submitted to the State Great Hural by the Constitutional Court; conducting referenda on proposed amendments requires at least two-thirds majority vote of the State Great Hural; passage of amendments by the State Great Hural requires at least three-quarters majority vote; passage by referendum requires majority participation of qualified voters and a majority of votes"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "both parents must be citizens of Mongolia; one parent if born within Mongolia"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "presidential candidates nominated by political parties represented in the State Great Hural and directly elected by simple-majority popular vote for one 6-year term; following legislative elections, the State Great Hural usually elects the leader of the majority party or majority coalition as prime minister"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 June 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2021:</em> Ukhnaagiin KHURELSUKH elected president in first round; percent of vote - Ukhnaagiin KHURELSUKH (MPP) 68%, Dangaasuren ENKHBAT (RPEC) 20.1%, Sodnomzundui ERDENE (DP) 6%<br /><br /><em>2017: </em> Khaltmaa BATTULGA elected president in second round; percent of vote in first round - Khaltmaa BATTULGA (DP) 38.1%, Miyegombo ENKHBOLD (MPP) 30.3%, Sainkhuu GANBAATAR (MPRP) 30.2%, invalid 1.4%; percent of vote in second round - Khaltmaa BATTULGA 55.2%, Miyegombo ENKHBOLD 44.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "State Great Hural (Ulsiin Ih Hural)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "126 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "6/28/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Mongolian People's Party (MPP) (68); Democratic Party (DP) (42); HUN Party (8); Other (8)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "25.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "June 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the Chief Justice and 24 judges organized into civil, criminal, and administrative chambers); Constitutional Court or Tsets (consists of the chairman and 8 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court chief justice and judges appointed by the president on recommendation of the General Council of Courts -- a 14-member body of judges and judicial officials -- to the State Great Hural; appointment is for life; chairman of the Constitutional Court elected from among its members; members appointed from nominations by the State Great Hural - 3 each by the president, the State Great Hural, and the Supreme Court; appointment is 6 years; chairmanship limited to a single renewable 3-year term"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "aimag (provincial) and capital city appellate courts; soum, inter-soum, and district courts; Administrative Cases Courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Democratic Party or DP<br />Mongolian People's Party or MPP <br />National Coalition (consists of Mongolian Green Party or MGP and the Mongolian National Democratic Party or MNDP)<br />National Labor Party or HUN <br />Civil Will-Green Party or CWGP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ADB, ARF, CD, CICA, CP, EBRD, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC, MIGA, MINURSO, MONUSCO, NAM, OPCW, OSCE, SCO (observer), UN, UNAMID, UNCTAD, UNESCO, UNIDO, UNISFA, UNMISS, UNOOSA, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "29 December 1911 (independence declared from China; in actuality, autonomy attained); 11 July 1921 (from China)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Naadam (games) holiday, 11-15 July; Constitution Day, 26 November (1924)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the first holiday commemorates independence from China in the 1921 Revolution, and the second marks the date that the Mongolian People's Republic was created under a new constitution"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description: </strong>three equal vertical bands of red (left side), blue, and red; centered on the left-side red band is the national emblem in yellow, the <em>soyombo,</em> which is an abstract representation of fire, sun, moon, earth, water, and the yin-yang symbol<br /><br /><strong>meaning:</strong> blue stands for the sky, and red for progress and prosperity",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Soyombo character (from the Soyombo writing system)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, blue, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Mongol ulsyn toriin duulal\" (National Anthem of Mongolia)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Tsendiin DAMDINSUREN/Bilegiin DAMDINSUREN and Luvsanjamts MURJORJ"
+      },
+      {
+       "label": "history",
+       "text": "music adopted 1950, lyrics adopted 2006; lyrics altered on numerous occasions"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "6 (4 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Uvs Nuur Basin (n); Orkhon Valley Cultural Landscape (c); Petroglyphic Complexes of the Mongolian Altai (c); Great Burkhan Khaldun Mountain and surrounding sacred landscape (c); Landscapes of Dauria (n); Deer Stone Monuments and Related Bronze Age Sites (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

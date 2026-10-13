@@ -1,0 +1,1154 @@
+{
+ "iso3": "ECU",
+ "gec": "ec",
+ "name": "Ecuador",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "What is now Ecuador formed part of the northern Inca Empire until the Spanish conquest in 1533. Quito -- the traditional name for the area -- became a seat of Spanish colonial government in 1563 and part of the Viceroyalty of New Granada in 1717. The territories of the Viceroyalty -- New Granada (Colombia), Venezuela, and Quito -- gained their independence between 1819 and 1822 and formed a federation known as Gran Colombia. When Quito withdrew to become an independent republic in 1830, the traditional name was changed to the \"Republic of the Equator.\" Between 1904 and 1942, Ecuador lost territories in a series of conflicts with its neighbors. A border war with Peru that flared in 1995 was resolved in 1999. Although Ecuador has had nearly 50 years of civilian governance, the period has been marked by political instability.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Western South America, bordering the Pacific Ocean at the Equator, between Colombia and Peru",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "2 00 S, 77 30 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "South America",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "283,561 sq km"
+      },
+      {
+       "label": "land",
+       "text": "276,841 sq km"
+      },
+      {
+       "label": "water",
+       "text": "6,720 sq km"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> includes Galapagos Islands"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Nevada",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,237 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Colombia 708 km; Peru 1529 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,237 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Ecuador has declared its right to extend its continental shelf to 350 nm, measured from the baselines of the Galapagos Archipelago"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical along coast, becoming cooler inland at higher elevations; tropical in Amazonian jungle lowlands",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "coastal plain (costa), inter-Andean central highlands (sierra), and flat to rolling eastern jungle (oriente)",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Chimborazo 6,267"
+      },
+      {
+       "label": "lowest point",
+       "text": "Pacific Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,117 m"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> because the earth is not a perfect sphere and has an equatorial bulge, the highest point on the planet farthest from its center is Mount Chimborazo not Mount Everest, which is merely the highest peak above sea level"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, fish, timber, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "21.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 4.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 5.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 11.8% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "49.8% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "28.6% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "12,520 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Amazon (6,145,186 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "nearly half of the population is concentrated in the interior, with large concentrations also found along the western coastal strip; the rainforests of the east remain sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "frequent earthquakes; landslides; volcanic activity; floods; periodic droughts <br /><br /><strong>volcanism:</strong> volcanic activity concentrated along the Andes Mountains; Sangay (5,230 m) is mainland Ecuador's most active volcano; other historically active volcanoes in the Andes include Antisana, Cayambe, Chacana, Cotopaxi, Guagua Pichincha, Reventador, Sumaco, and Tungurahua; Fernandina (1,476 m), a shield volcano, is the most active of the many Galapagos volcanoes; other historically active Galapagos volcanoes include Wolf, Sierra Negra, Cerro Azul, Pinta, Marchena, and Santiago",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "Cotopaxi in the Andes is highest active volcano in world",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18,479,841 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9,097,614"
+      },
+      {
+       "label": "female",
+       "text": "9,382,227"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Ecuadorian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Ecuadorian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Mestizo (mixed Indigenous and White) 77.5%, Montubio 7.7%, Indigenous 7.7%, White 2.2%, Afroecuadorian 2%, Mulatto 1.4%, Black 1.3%, other 0.1% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Spanish (Castilian; official) 98.6%, indigenous 3.9% (Quechua 3.2%, other indigenous 0.7%), foreign 2.8%, other 0.6% (includes Ecuadorian sign language) (2022 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> shares sum to more than 100% because some respondents gave more than one answer on the census<br /><br /><strong>note 2:</strong> Quechua and Shuar are official languages of intercultural relations; other indigenous languages are in official use by indigenous peoples in the areas they inhabit"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 68.2%, Protestant 19% (Evangelical 18.3%, Adventist 0.6%, other Protestant 0.2%), Jehovah's Witness 1.4%, other 2.3%, none 8.2% don't know/no response 1% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "26.8% (male 2,505,729/female 2,395,198)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "64.1% (male 5,771,234/female 5,972,938)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "9.1% (2024 est.) (male 746,207/female 918,678)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "55.3 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "41 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "14.3 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "7 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "28.2 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "27 years"
+      },
+      {
+       "label": "female",
+       "text": "28.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.91% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "17.42 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "7.12 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.23 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "nearly half of the population is concentrated in the interior, with large concentrations also found along the western coastal strip; the rainforests of the east remain sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "64.8% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.62% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.142 million Guayaquil, 1.957 million QUITO (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.81 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.97 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "55 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11.2 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12.2 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "10.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "74.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "69.7 years"
+      },
+      {
+       "label": "female",
+       "text": "80.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.17 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.06 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 87.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 95.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 12.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 4.3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "8.3% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "11.9% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "2.31 physicians/1,000 population (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "1.3 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 98.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 1.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "19.9% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3.05 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.32 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.61 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.03 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9.7% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "2.4% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "4.9% (2024 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "45.3% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "3.8% (2018)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "22.2% (2018)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.9% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "15.5% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "96.3% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "96.8% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "95.7% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "15 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Ecuador"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Ecuador"
+      },
+      {
+       "label": "local long form",
+       "text": "República del Ecuador"
+      },
+      {
+       "label": "local short form",
+       "text": "Ecuador"
+      },
+      {
+       "label": "former",
+       "text": "Quito"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is the Spanish word for \"equator,\" referring to its geographic position"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Quito"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "0 13 S, 78 30 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-5 (same time as Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "time zone note",
+       "text": "Ecuador has two time zones, including the Galapagos Islands (UTC-6)"
+      },
+      {
+       "label": "etymology",
+       "text": "named after the Quitu, a Pre-Columbian people who lived in the area; the meaning of their name is unknown"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "24 provinces (<em>provincias</em>, singular - <em>provincia</em>); Azuay, Bolivar, Cañar, Carchi, Chimborazo, Cotopaxi, El Oro, Esmeraldas, Galapagos, Guayas, Imbabura, Loja, Los Rios, Manabí, Morona Santiago, Napo, Orellana, Pastaza, Pichincha, Santa Elena, Santo Domingo de los Tsachilas, Sucumbios, Tungurahua, Zamora Chinchipe",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law based on the Chilean civil code with modifications; traditional law in ethnic communities",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "many previous; latest approved 20 October 2008"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic through a referendum, by public petition of at least 1% of registered voters, or by agreement of at least one-third membership of the National Assembly; passage requires two separate readings a year apart and approval by at least two-thirds majority vote of the Assembly, and approval by absolute majority in a referendum; amendments such as changes to the structure of the state, constraints on personal rights and guarantees, or constitutional amendment procedures are not allowed"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "yes"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "yes"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18-65 years of age; universal and compulsory; voluntary for 16-18, over 65, and other eligible voters",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president and vice president directly elected on the same ballot by absolute-majority popular vote in 2 rounds, if needed, for a 4-year term (eligible for a second term)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 February 2025, with a runoff on 13 April 2025"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2025: </em>Daniel NOBOA Azin reelected president; percent of vote in the first round - Daniel NOBOA Azin (ADN) 44.2%, Luisa GONZÁLEZ Alcivar (MRC) 44%, Leonidas IZA (MUPP) 5.3%, other 6.5%; percent of vote in the second round - Daniel NOBOA Azin 55.6%, Luisa GONZÁLEZ Alcivar 44.4%<br /><em><br />2023:</em> Daniel NOBOA Azin elected president; percent of vote in the first round - Luisa GONZÁLEZ Alcivar (MRC) 33.6%, Daniel NOBOA Azin (ADN) 23.5%, Christian Gustavo ZURITA Ron (Construye) 16.4%, Jan Tomislav TOPIĆ Feraud (Por Un País Sin Miedo) 14.7%, Otto Ramón SONNENHOLZNER Sper (Avanza) 7.1%, other 4.7%; percent of vote in the second round - Daniel NOBOA Azin 51.8%, Luisa GONZÁLEZ Alcivar 48.2%<br /><br /><em>2021:</em> Guillermo LASSO Mendoza elected president; percent of vote in the first round - Andres ARAUZ (UNES) 32.7%, Guillermo LASSO Mendoza (CREO) 19.7%, Yaku PEREZ Guartambel (MUPP) 19.4%, Xavier HERVAS Mora (ID) 15.7%, other 12.5%; percent of vote in the second round - Guillermo LASSO Mendoza (CREO) 52.5%, Andres ARAUZ (UNES) 47.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "28 February 2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the president is both chief of state and head of government<br /><br /><strong>note 2:</strong> though eligible for a second term, former president Guillermo LASSO announced that he would not run in the 2023 election; President Daniel NOBOA Azin is serving out the remainder of the presidential term (2021–2025)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Asamblea Nacional)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "151 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "2/9/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Citizen Revolution Movement (RC) - Renewal Movement (RETO) (67); National Democratic Action (ADN) (66); Pachakutik (9); Other (9)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "45%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "February 2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> all Assembly members have alternates from the same party who cast votes when a primary member is absent, resigns, or is removed from office<br /><br /><strong>note 2:</strong> on 18 May 2023, Ecuador’s National Electoral Council announced that the legislative and presidential elections - originally scheduled for February 2025 - would be held on 20 August 2023 after President Guillermo LASSO dissolved the National Assembly by decree on 17 May 2023; a return to a regular election cycle will occur in February 2025"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "National Court of Justice or Corte Nacional de Justicia (consists of 21 judges, including the chief justice and organized into 5 specialized chambers); Constitutional Court or Corte Constitucional (consists of the court president and 8 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "candidates for the National Court of Justice evaluated and appointed justices by the Judicial Council, a 9-member independent body of law professionals; justices elected for 9-year, non-renewable terms, with one third of the membership renewed every 3 years; candidates for the Constitutional Court evaluated and appointed judges by a 6-member independent body of law professionals; judges appointed for 4-year renewable terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "provincial courts (one for each province except Galapagos); fiscal, criminal, and administrative tribunals; Election Dispute Settlement Courts; cantonal courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Actuemos Ecuador or Actuemos<br />AMIGO movement, Independent Mobilizing Action Generating Opportunities (Movimiento AMIGO (Acción Movilizadora Independiente Generando Oportunidades)) or AM16O<br />Avanza Party or AVANZA<br />Central Democratic Movement or CD<br />Citizen Revolution Movement or MRC or RC5<br />Creating Opportunities Movement or CREO<br />Democratic Left or ID<br />Democracy Yes Movement (Movimiento Democracia Si)<br />For A Country Without Fear (Por Un País Sin Miedo) (an alliance including PSC, CD, and PSP)<br />Green Movement (Movimiento Verde)<br />Movimiento Construye or Construye<br />National Democratic Action (Acción Democrática Nacional) or ADN<br />Pachakutik Plurinational Unity Movement or MUPP<br />Patriotic Society Party or PSP<br />People, Equality, and Democracy Party (Partido Pueblo, Igualdad y Democracia) or PID<br />Popular Unity Party (Partido Unidad Popular) or UP<br />Revolutionary and Democratic Ethical Green Movement (Movimiento Verde Ético Revolucionario y Democrático) or MOVER<strong><br /></strong>Social Christian Party or PSC<br />Socialist Party<br />Society United for More Action or SUMA<br />Total Renovation Movement (Movimiento Renovacion Total) or RETO",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "CAN, CD, CELAC, FAO, G-11, G-77, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAES, LAIA, Mercosur (associate), MIGA, MINUSTAH, NAM, OAS, OPANAL, OPCW, OPEC, Pacific Alliance (observer), PCA, PROSUR, SICA (observer), UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNISFA, UNMIL, UNMISS, UNOCI, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "24 May 1822 (from Spain)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day (independence of Quito), 10 August (1809)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal bands of yellow (top, double-width), blue, and red, with the coat of arms at the center of the flag<br /><br /><strong>meaning:</strong> yellow stands for sunshine, grain, and mineral wealth; blue for the sky, sea, and rivers; red for patriots' blood spilled in the struggle for freedom and justice",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> similar to the flag of Colombia, which is shorter and does not have a coat of arms"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Andean condor",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "yellow, blue, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Salve, O Patria!\" (We Salute You, Our Homeland)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Juan Leon MERA/Antonio NEUMANE"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1948; MERA wrote the lyrics in 1865; only the chorus and second verse are sung"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "5 (3 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Historic Quito (c); Galápagos Islands (n); Historic Cuenca (c); Qhapaq Ñan/Andean Road System (c); Sangay National Park (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

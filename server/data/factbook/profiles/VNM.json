@@ -1,0 +1,1152 @@
+{
+ "iso3": "VNM",
+ "gec": "vm",
+ "name": "Vietnam",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Vietnam's early history included periods of occupation by outside forces and eventual power consolidation under Vietnamese dynastic families. A succession of Han Chinese emperors ruled the area, which was centered on the Red River Valley, until approximately the 10th century. The Ly Dynasty (11th-13th century) created the first independent Vietnamese state, which was known as Dai Viet, and established their capital at Thang Long (Hanoi). Under the Tran Dynasty (13th-15th century), TRAN Hung Dao, one of Vietnam’s national heroes, led Dai Viet forces to fight off Mongol invaders in 1279. After a brief Chinese occupation in the early 1400s, Vietnamese resistance leader LE Thai To made himself emperor and established the Le Dynasty, which lasted until the late 18th century despite decades of political turmoil, civil war, and division. During this period, Dai Viet expanded southward to the Central Highlands and Mekong Delta, reaching the approximate boundaries of modern-day Vietnam by the 1750s. Dai Viet suffered additional civil war and division in the latter half of the 18th century, but it was reunited and renamed Vietnam under Emperor NGUYEN Phuc Anh (aka Gia Long) in 1802.<br /><br />France began its conquest of Vietnam in 1858 and made Vietnam part of French Indochina in 1887. Vietnam declared independence after World War II, but the French continued to rule until communist forces under Ho Chi MINH defeated them in 1954. Under the Geneva Accords of 1954, Vietnam was divided into the communist North and anti-communist South. Fighting erupted between the two governments shortly afterwards with the North supporting communist rebels in the South and eventually committing thousands of combat troops. The US provided to the South significant economic and military assistance, including large numbers of US military forces, which reached a peak strength of over 500,000 troops in 1968. US combat forces were withdrawn following a cease-fire agreement in 1973. Two years later, North Vietnamese forces overran the South, reuniting the country under communist rule. The conflict, known as the Second Indochina War (1955-1975), devastated Vietnam, spilled over into the neighboring countries of Cambodia and Laos, and is estimated to have resulted in the deaths of up to 3 million Vietnamese civilians and soldiers. It also caused more than 58,000 US combat and non-combat deaths and created deep domestic divisions in the US. <br /><br />Despite the return of peace, the country experienced little economic growth for over a decade because of its diplomatic isolation, leadership policies, and the persecution and mass exodus of citizens, many of them successful South Vietnamese merchants. However, since the enactment of Vietnam's \"doi moi\" (renovation) policy in 1986, the economy has seen strong growth, particularly in agricultural and industrial production, construction, exports, foreign investment, and tourism. Nevertheless, the Communist Party maintains tight political and social control of the country, and Vietnam faces many related challenges, such as rising income inequality and corruption.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southeastern Asia, bordering the Gulf of Thailand, Gulf of Tonkin, and South China Sea, as well as China, Laos, and Cambodia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "16 10 N, 107 50 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Southeast Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "331,210 sq km"
+      },
+      {
+       "label": "land",
+       "text": "310,070 sq km"
+      },
+      {
+       "label": "water",
+       "text": "21,140 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about three times the size of Tennessee; slightly larger than New Mexico",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,616 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Cambodia 1,158 km; China 1,297 km; Laos 2,161 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "3,444 km (excludes islands)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm or to the edge of the continental margin"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical in south; monsoonal in north with hot, rainy season (May to September) and warm, dry season (October to March)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "low, flat delta in south and north; central highlands; hilly, mountainous in far north and northwest",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Fan Si Pan 3,144 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "South China Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "398 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "antimony, phosphates, coal, manganese, rare earth elements, bauxite, chromate, offshore oil and gas deposits, timber, hydropower, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "39.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 21.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 15.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 2% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "47% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "13.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "46,000 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Sông Tiên Giang (Mekong) river mouth (shared with China [s], Burma, Laos, Thailand, Cambodia) - 4,350 km; Pearl river source (shared with China [m]) - 2,200 km; Red river mouth (shared with China [s]) - 1,149 km<br /><br /><strong>note: </strong>[s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Pacific Ocean drainage",
+       "text": "Mekong (805,604 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "though it has one of the highest population densities in the world, the population is not evenly dispersed; clustering is heaviest along the South China Sea and Gulf of Tonkin, with the Mekong Delta (in the south) and the Red River Valley (in the north) having the largest concentrations of people",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "occasional typhoons (May to January) with extensive flooding, especially in the Mekong River delta",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "<strong>note 1:</strong> extending 1,650 km (1,025 mi) north to south, the country is only 50 km (31 mi) across at its narrowest point <br /><br /><strong>note 2:</strong> Son Doong in Phong Nha-Ke Bang National Park is the world's largest cave (greatest cross-sectional area) and is the largest known cave passage in the world by volume at 38.5 million cu m (about 1.35 billion cu ft); it connects to Thoong cave, but not yet officially -- when recognized, it will add an additional 1.6 million cu m; it is so massive that it contains its own jungle, underground river, and localized weather system, with clouds forming inside the cave and spewing from its exits<strong><br /></strong>",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "106,688,169 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "53,597,784"
+      },
+      {
+       "label": "female",
+       "text": "53,090,385"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Vietnamese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Vietnamese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Kinh (Viet) 85.3%, Tay 1.9%, Thai 1.9%, Muong 1.5%, Khmer 1.4%, Mong 1.4%, Nung 1.1%, other 5.5% (2019 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 54 ethnic groups are recognized by the Vietnamese Government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Vietnamese (official); English (often as a second language); some French, Chinese, and Khmer; mountain-area languages (including Mon-Khmer and Malayo-Polynesian)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Dữ kiện thế giới, là nguồn thông tin cơ bản không thể thiếu. (Vietnamese)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Catholic 6.1%, Buddhist 5.8%, Protestant 1%, other 0.8%, none 86.3% (2019 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> most Vietnamese are culturally Buddhist"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "23.2% (male 12,953,719/female 11,579,690)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.5% (male 36,591,845/female 35,887,201)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "8.3% (2024 est.) (male 3,563,611/female 5,182,909)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "46.4 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "33.6 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "12.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "7.8 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "33.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "32 years"
+      },
+      {
+       "label": "female",
+       "text": "34.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.86% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "14.58 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.81 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.21 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "though it has one of the highest population densities in the world, the population is not evenly dispersed; clustering is heaviest along the South China Sea and Gulf of Tonkin, with the Mekong Delta (in the south) and the Red River Valley (in the north) having the largest concentrations of people",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "39.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.7% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "9.321 million Ho Chi Minh City, 5.253 million HANOI (capital), 1.865 million Can Tho, 1.423 million Hai Phong, 1.221 million Da Nang, 1.111 million Bien Hoa (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.1 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.12 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.69 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "48 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14.4 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "13.7 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "76.1 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "73.5 years"
+      },
+      {
+       "label": "female",
+       "text": "78.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.01 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.96 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 97.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 98% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 2.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "4.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "10.7% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "1.11 physicians/1,000 population (2021)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "2.6 beds/1,000 population (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 90.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 94.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 9.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 5.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "2.1% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3.41 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "3.18 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.21 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "43.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "2.1% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "9.7% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "72.8% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "1.1% (2021)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "14.6% (2021)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.9% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "2.9% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "15.4% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "96.1% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "97.2% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "95.1% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "14 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Socialist Republic of Vietnam"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Vietnam"
+      },
+      {
+       "label": "local long form",
+       "text": "Cong Hoa Xa Hoi Chu Nghia Viet Nam"
+      },
+      {
+       "label": "local short form",
+       "text": "Viet Nam"
+      },
+      {
+       "label": "former",
+       "text": "Democratic Republic of Vietnam (North Vietnam), Republic of Vietnam (South Vietnam)"
+      },
+      {
+       "label": "abbreviation",
+       "text": "SRV"
+      },
+      {
+       "label": "etymology",
+       "text": "the name translates as \"Viet south;\" <em>Viet </em>is an ethnic term of unknown origin that dates back to ancient times, and <em>nam </em>(south) refers to the country's location"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "communist party-led state",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Hanoi (Ha Noi)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "21 02 N, 105 51 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+7 (12 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name means \"inside the river,\" from the Vietnamese words <em>ha </em>(river) and <em>noi </em>(inside), and refers to its location in a bend of the Red River"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "58 provinces (<em>tinh</em>, singular and plural) and 5 municipalities (<em>thanh pho</em>, singular and plural) <br /><br /><strong>provinces:</strong> An Giang, Bac Giang, Bac Kan, Bac Lieu, Bac Ninh, Ba Ria-Vung Tau, Ben Tre, Binh Dinh, Binh Duong, Binh Phuoc, Binh Thuan, Ca Mau, Cao Bang, Dak Lak, Dak Nong, Dien Bien, Dong Nai, Dong Thap, Gia Lai, Ha Giang, Ha Nam, Ha Tinh, Hai Duong, Hau Giang, Hoa Binh, Hung Yen, Khanh Hoa, Kien Giang, Kon Tum, Lai Chau, Lam Dong, Lang Son, Lao Cai, Long An, Nam Dinh, Nghe An, Ninh Binh, Ninh Thuan, Phu Tho, Phu Yen, Quang Binh, Quang Nam, Quang Ngai, Quang Ninh, Quang Tri, Soc Trang, Son La, Tay Ninh, Thai Binh, Thai Nguyen, Thanh Hoa, Thua Thien-Hue, Tien Giang, Tra Vinh, Tuyen Quang, Vinh Long, Vinh Phuc, Yen Bai <br /><br /><strong>municipalities:</strong> Can Tho, Da Nang, Ha Noi (Hanoi), Hai Phong, Ho Chi Minh City (Saigon)",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system with European influences",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 28 November 2013, effective 1 January 2014"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president, by the National Assembly’s Standing Committee, or by at least two thirds of the National Assembly membership; a decision to draft an amendment requires approval by at least a two-thirds majority vote of the Assembly membership, followed by the formation of a constitutional drafting committee to write a draft and collect citizens’ opinions; passage requires at least two-thirds majority of the Assembly membership; the Assembly can opt to conduct a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Vietnam"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by the National Assembly from among its members for a single 5-year term; prime minister recommended by the president and confirmed by the National Assembly; deputy prime ministers appointed by the president and confirmed by the National Assembly"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>in August 2024, To LAM was elected general secretary of the Central Committee of the Communist Party of Vietnam, the country’s most powerful position"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Quoc-Hoi)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "500 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/23/2021"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Communist Party (485); Other (14)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "31.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme People's Court (consists of the chief justice and 13 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "chief justice elected by the National Assembly upon the recommendation of the president for a 5-year, renewable term; deputy chief justice appointed by the president from among the judges for a 5-year term; judges appointed by the president and confirmed by the National Assembly for 5-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Courts (administrative, civil, criminal, economic, labor, family, juvenile); provincial courts; district courts; Military Court"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the National Assembly Standing Committee can establish special tribunals on the recommendation of the chief justice"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Communist Party of Vietnam or CPV",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> other parties banned"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ADB, APEC, ARF, ASEAN, CICA, CP, EAS, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, MIGA, NAM, OIF, OPCW, PCA, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (2024)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "2 September 1945 (from France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day (National Day), 2 September (1945)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> red field with a five-pointed yellow star in the center<br /><br /><strong>meaning:</strong> red stands for revolution and blood, and the five-pointed star for the five elements of the populace -- peasants, workers, intellectuals, traders, and soldiers -- that unite to build socialism",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "five-pointed yellow star on a red field, lotus blossom",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Tien quan ca\" (The Song of the Marching Troops)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Nguyen Van CAO"
+      },
+      {
+       "label": "history",
+       "text": "adopted as the national anthem of the Democratic Republic of Vietnam in 1945; it became the national anthem of the unified Socialist Republic of Vietnam in 1976; only the first verse is used as the official anthem"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "9 (6 cultural, 2 natural, 1 mixed)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Complex of Hué Monuments (c); Ha Long Bay (n); Hoi An Ancient Town (c); My Son Sanctuary (c); Phong Nha-Ke Bang National Park (n); Imperial Citadel of Thang Long - Hanoi (c); Citadel of the Ho Dynasty (c); Trang An Landscape Complex (m); Yen Tu-Vinh Nghiem-Con Son, Kiep Bac Complex of Monuments and Landscapes (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

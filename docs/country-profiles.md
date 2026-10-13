@@ -50,6 +50,37 @@ Rules applied:
 - Flags: the bundled MIT-licensed circle-flags set under
   `frontend/assets/flags/`, keyed by ISO alpha-2. No hotlinking.
 
+## Descriptive text (CIA World Factbook snapshot)
+
+The CIA discontinued The World Factbook on 4 February 2026 and took the site
+down. The profile page shows four of its sections — Introduction, Geography,
+People and Society, Government — from the final public-domain snapshot
+republished by the factbook.json project (CC0), which is the data openfactbook.org
+is built on. It is static: nothing refreshes it, and every block on the page is
+labelled "snapshot 2026-01 · publication discontinued on 04/02/2026".
+
+- `server/data/factbook/gec-to-iso3.json` maps the Factbook's GEC codes to the
+  World Bank ISO3 list. 216 of 217 economies map; Channel Islands has no
+  Factbook entry (Jersey and Guernsey are separate there). West Bank and Gaza
+  maps to the Factbook's "West Bank" entry only.
+- `server/data/factbook/profiles/<ISO3>.json` holds the extracted sections
+  (committed, 6 MB). `meta.json` records the upstream commit and snapshot date.
+- Officials are excluded at extraction: the two "Diplomatic representation"
+  fields and the chief of state / head of government / cabinet entries of
+  "Executive branch". HTML is reduced to `br`, `p`, `em`, `strong`, lists.
+- `stat_country_texts` stores one row per field with `content`,
+  `original_content`, `edited_at` and `edited_by`, ready for an editor: an edit
+  sets `edited_at`, and a re-import updates only `original_content` on edited
+  rows, never `content`.
+
+```
+npm run import:factbook                                   # load the committed files into Postgres
+node server/country-profiles/import-factbook.js --extract /path/to/factbook.json --snapshot 2026-01
+                                                          # rebuild the committed files from an upstream checkout
+```
+
+The server also loads the files at boot when `stat_country_texts` is empty.
+
 ## Storage (Postgres, `server/schema.sql`)
 
 - `stat_sources` — one row per source (`worldbank-wdi` today; IMF, Comtrade later).
@@ -57,6 +88,7 @@ Rules applied:
 - `stat_countries` — the source's economy list with slug, region, income level, capital.
 - `stat_observations` — (source, indicator, iso3, year) → value, plus source name/URL and `retrieved_at`.
 - `stat_sync_runs` — one row per sync with status (`ok` / `partial` / `failed`) and a per-indicator log.
+- `stat_country_texts` — Factbook text per (iso3, section, field), with edit tracking.
 
 Adding a source means a new `stat_sources` row, its indicators in
 `stat_indicators`, and a fetcher that writes `stat_observations`; the tables
@@ -89,7 +121,7 @@ in-process schedule (e.g. when a Render cron job runs the CLI instead).
 ## API
 
 - `GET /api/country-profiles/countries` — economies, regions, source, last sync.
-- `GET /api/country-profiles/countries/:slug` — one profile: country facts, every indicator with its latest value/year/source, 20-year GDP and population series.
+- `GET /api/country-profiles/countries/:slug` — one profile: country facts, every indicator with its latest value/year/source, 20-year GDP and population series, and the Factbook text sections.
 - `GET /api/country-profiles/status` — counts and the last five runs.
 - `POST /api/country-profiles/sync` — start a sync (202; 409 if one is running).
 
@@ -97,4 +129,5 @@ in-process schedule (e.g. when a Render cron job runs the CLI instead).
 
 - `tests/server/country-profiles-sync.test.js` — parsing (aggregate exclusion, null handling, latest year, API error reporting, pagination, retries).
 - `tests/server/country-profiles-filter.test.js` — index search/region filtering.
+- `tests/server/country-profiles-factbook.test.js` — Factbook extraction (officials removed, HTML sanitized, snapshot coverage).
 - `tests/dashboard/country-profiles.spec.js` — Playwright smoke tests for both pages (mocked API).
