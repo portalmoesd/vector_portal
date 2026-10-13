@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Caribbean, island in the Caribbean Sea, north of Venezuela",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "12 30 N, 69 58 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "180 sq km"
-      },
-      {
-       "label": "land",
-       "text": "180 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly larger than Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,32 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "68.5 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical marine; little seasonal temperature variation",
      "items": []
@@ -115,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "flat with a few hills; scant vegetation",
      "items": []
@@ -123,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -140,56 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "NEGL; white sandy beaches foster tourism",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "11.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 11.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0% (2022 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0% (2022 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "2.7% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "86.2% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "NA",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "most residents live in or around Oranjestad and San Nicolaas; most settlements tend to be located on the less mountainous western side of the island",
      "items": []
@@ -197,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "hurricanes; lies outside the Caribbean hurricane belt and is rarely threatened",
      "items": []
@@ -205,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "a flat, riverless island known for its white sand beaches; its tropical climate is moderated by constant trade winds from the Atlantic Ocean; the temperature is almost constant at about 27 degrees Celsius (81 degrees Fahrenheit)",
      "items": []
@@ -214,59 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "125,063 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "59,101"
-      },
-      {
-       "label": "female",
-       "text": "65,962"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Aruban(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Aruban; Dutch"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Dutch 78.7%, Colombian 6.6%, Venezuelan 5.5%, Dominican 2.8%, Haitian 1.3%, other 5.1% (2020 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by nationality"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Papiamento (official) (a creole language that mixes Portuguese, Spanish, Dutch, English, French, African languages, and Arawak) 69.4%, Spanish 13.7%, English (widely spoken) 7.1%, Dutch (official) 6.1%, Chinese 1.5%, other 1.7%, unspecified 0.4% (2010 est.)",
      "items": []
@@ -274,271 +120,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 75.3%, Protestant 4.9% (includes Methodist 0.9%, Adventist 0.9%, Anglican 0.4%, other Protestant 2.7%), Jehovah's Witness 1.7%, other 12%, none 5.5%, unspecified 0.5% (2010 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "17.2% (male 10,815/female 10,747)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.7% (male 39,621/female 42,487)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "17.1% (2024 est.) (male 8,665/female 12,728)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "52.3 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "26.3 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "26.1 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.8 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "41.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "39.3 years"
-      },
-      {
-       "label": "female",
-       "text": "42.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.05% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "11.44 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "8.85 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "7.91 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most residents live in or around Oranjestad and San Nicolaas; most settlements tend to be located on the less mountainous western side of the island",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "44.3% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.77% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "30,000 ORANJESTAD (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.93 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.68 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.9 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.2 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15.6 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "7.3 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "78.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "75.4 years"
-      },
-      {
-       "label": "female",
-       "text": "81.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.82 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.9 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 98.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 220,
-    "content": {
-     "text": "46.8% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.6% of GDP (2021 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "11% national budget (2021 est.)"
-      }
-     ]
     }
    }
   ],
@@ -619,16 +204,8 @@
     }
    },
    {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system based on the Dutch civil code",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -640,24 +217,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 70,
-    "content": {
-     "text": "see the Netherlands",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 80,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 90,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -682,7 +243,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 100,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -691,84 +252,23 @@
        "text": "Legislature (Staten)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "21"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "6 December 2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "AVP (9); MEP (8); FUTURO (3); PPA (1)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "38.1%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "by December 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Joint Court of Justice of Aruba, Curacao, Sint Maarten, and of Bonaire, Sint Eustatius and Saba or \"Joint Court of Justice\" (sits as a 3-judge panel); final appeals heard by the Supreme Court in The Hague, Netherlands"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Joint Court judges appointed for life by the monarch"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court in First Instance"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 120,
+    "order": 80,
     "content": {
      "text": "Accion21<br />Aruban People's Party or AVP<br />Democratic Network or RED<br />FUTURO<br />Movimiento Aruba Soberano (Aruban Sovereignty Movement) or MAS<br />Partido Patriotico di Aruba (Aruban Patriotic Party) or APP<br />People's Electoral Movement Party or MEP<br />Pueblo Orguyoso y Respeta or POR<br />RAIZ (ROOTS)",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 130,
-    "content": {
-     "text": "ACS (associate), Caricom (observer), FATF, ILO, IMF, Interpol, IOC, ITUC (NGOs), UNESCO (associate), UNWTO (associate), UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 140,
+    "order": 90,
     "content": {
      "text": "none (part of the Kingdom of the Netherlands)",
      "items": []
@@ -776,7 +276,7 @@
    },
    {
     "field": "National holiday",
-    "order": 150,
+    "order": 100,
     "content": {
      "text": "National Anthem and Flag Day, 18 March (1976)",
      "items": []
@@ -784,7 +284,7 @@
    },
    {
     "field": "Flag",
-    "order": 160,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> blue, with two narrow, horizontal yellow stripes across the lower portion and a red four-pointed star outlined in white in the upper-left corner<br /><br /><strong>meaning:</strong> the star stands for Aruba's red soil and white beaches, and its four points for the major languages (Papiamento, Dutch, Spanish, English) and the points of a compass, to indicate that its inhabitants come from all over the world; blue symbolizes Caribbean waters and skies; the stripes represent the island's two main industries, tourism and mining",
      "items": []
@@ -792,7 +292,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 170,
+    "order": 120,
     "content": {
      "text": "Hooiberg (Haystack) Hill",
      "items": []
@@ -800,7 +300,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 180,
+    "order": 130,
     "content": {
      "text": "blue, yellow, red, white",
      "items": []
@@ -808,7 +308,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 190,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Oceania, continent between the Indian Ocean and the South Pacific Ocean",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "27 00 S, 133 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Oceania",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7,741,220 sq km"
-      },
-      {
-       "label": "land",
-       "text": "7,682,300 sq km"
-      },
-      {
-       "label": "water",
-       "text": "58,920 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> includes Lord Howe Island and Macquarie Island"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than the 48 contiguous US states",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "25,760 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or to the edge of the continental margin"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "generally arid to semiarid; temperate in south and east; tropical in north",
      "items": []
@@ -127,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly low plateau with deserts; fertile plain in southeast",
      "items": []
@@ -135,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,7 +82,7 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "alumina, coal, iron ore, copper, lithium, tin, gold, silver, uranium, nickel, tungsten, rare earth elements, mineral sands, lead, zinc, diamonds, opals, natural gas, petroleum",
      "items": [
@@ -168,49 +94,8 @@
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "47.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 43.1% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "17.3% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "35.4% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "19,450 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -227,7 +112,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "River Murray - 2,508 km; Darling River - 1,545 km; Murrumbidgee River - 1,485 km; Lachlan River - 1,339 km; Cooper Creek - 1,113 km; Flinders River - 1,004 km",
      "items": []
@@ -235,7 +120,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -252,7 +137,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Great Artesian Basin, Canning Basin",
      "items": []
@@ -260,7 +145,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "population is primarily located on the periphery, with the highest concentration of people residing in the east and southeast; a secondary population center is located in and around Perth in the west; of the states and territories, New South Wales has, by far, the largest population; the interior, or \"outback,\" has a very sparse population",
      "items": []
@@ -268,7 +153,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "cyclones along the coast; severe droughts; forest fires <br /><br /><strong>volcanism:</strong> volcanic activity on Heard and McDonald Islands",
      "items": []
@@ -276,7 +161,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "<strong>note 1:</strong> world's smallest continent but sixth-largest country; the largest country in Oceania, the largest country entirely in the Southern Hemisphere, and the largest country without land borders<br /><br /><strong>note 2:</strong> the Great Dividing Range that runs along eastern Australia is that continent’s longest mountain range and the third-longest land-based range in the world; the term \"Great Dividing Range\" refers to the fact that the mountains form a watershed crest from which all of the rivers of eastern Australia flow – east, west, north, and south<br /><br /><strong>note 3:</strong> Australia is the only continent without glaciers; it is the driest inhabited continent on earth; Perth on the west coast is home to the invigorating sea breeze known as the \"Fremantle Doctor,\" one of the most consistent winds in the world; Australia hosts 10% of the world's biodiversity, and a great number of its flora and fauna exist nowhere else in the world",
      "items": []
@@ -285,59 +170,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27,490,921 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13,685,935"
-      },
-      {
-       "label": "female",
-       "text": "13,804,986"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Australian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Australian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "English 33%, Australian 29.9%, Irish 9.5%, Scottish 8.6%, Chinese 5.5%, Italian 4.4%, German 4%, Indian 3.1%, Australian Aboriginal 2.9%, Greek 1.7%, unspecified 4.7% (2021 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent self-identified ancestry, with the option of reporting two ancestries"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "English 72%, Mandarin 2.7%, Arabic 1.4%, Vietnamese 1.3%, Cantonese 1.2%, other 15.7%, unspecified 5.7% (2021 est.)",
      "items": [
@@ -350,436 +184,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 20%, Protestant 18.1% (Anglican 9.8%, Uniting Church 2.6%, Presbyterian and Reformed 1.6%, Baptist 1.4%, Pentecostal 1%, other Protestant 1.7%), other Christian 3.5%, Muslim 3.2%, Hindu 2.7%, Buddhist 2.4%, Orthodox 2.3% (Eastern Orthodox 2.1%, Oriental Orthodox 0.2%), other 2.1%, none 38.4%, unspecified 7.3% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "18.3% (male 2,526,772/female 2,369,425)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64.7% (male 8,688,023/female 8,640,671)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "17% (2024 est.) (male 2,090,315/female 2,453,392)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "53.3 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "26.7 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "26.5 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.8 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "38.5 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "36.9 years"
-      },
-      {
-       "label": "female",
-       "text": "39.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.59% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "10.75 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.81 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "11.98 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population is primarily located on the periphery, with the highest concentration of people residing in the east and southeast; a secondary population center is located in and around Perth in the west; of the states and territories, New South Wales has, by far, the largest population; the interior, or \"outback,\" has a very sparse population",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "86.6% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.27% annual rate of change (2020-25 est.)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data include Christmas Island, Cocos Islands, and Norfolk Island"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "5.235 million Melbourne, 5.121 million Sydney, 2.505 million Brisbane, 2.118 million Perth, 1.367 million Adelaide, 472,000 CANBERRA (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.85 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.99 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "28.7 years (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "2 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3.2 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "2.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "83.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "81.3 years"
-      },
-      {
-       "label": "female",
-       "text": "85.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.5 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.73 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "10.5% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "20.2% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "4.09 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "3.8 beds/1,000 population (2016 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "29% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.51 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.71 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "3.67 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.32 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.81 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.4% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13.6% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "9.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "54% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "5.1% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "12.7% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "20 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "21 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -847,32 +255,16 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "6 states and 2 territories*; Australian Capital Territory*, New South Wales, Northern Territory*, Queensland, South Australia, Tasmania, Victoria, Western Australia",
-     "items": []
-    }
-   },
-   {
     "field": "Dependent areas",
-    "order": 50,
+    "order": 40,
     "content": {
      "text": "Ashmore and Cartier Islands, Christmas Island, Cocos (Keeling) Islands, Coral Sea Islands, Heard Island and McDonald Islands, Jervis Bay, Norfolk Island (7)",
      "items": []
     }
    },
    {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "common law system based on the English model",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -888,49 +280,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 80,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 90,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen or permanent resident of Australia"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 100,
-    "content": {
-     "text": "18 years of age; universal and compulsory",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -943,24 +294,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -971,41 +318,13 @@
       {
        "label": "number of seats",
        "text": "150 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "3 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/3/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Australian Labor Party (ALP) (94); Liberal National coalition (43); Independents (10); Other (3)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "46%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2028"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 140,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -1016,62 +335,13 @@
       {
        "label": "number of seats",
        "text": "76 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "partial renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "6 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/3/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Australian Labor Party (ALP) (16); Liberal (6); The Greens (6); Liberal/Nationals (4); Pauline Hanson's One Nation (3); Liberal National Party of Queensland (2); Other (3)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "56.6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 150,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "High Court of Australia (consists of 7 justices, including the chief justice); each of the 6 states, 2 territories, and Norfolk Island has a Supreme Court; the High Court is the final appellate court"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "justices appointed by the governor-general in council for life with mandatory retirement at age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "subordinate courts: <em>at the federal level:</em> Federal Court; Federal Circuit and Family Court of Australia;  <em>at the state and territory level:</em> Local Court - New South Wales; Magistrates' Courts – Victoria, Queensland, South Australia, Western Australia, Tasmania, Northern Territory, Australian Capital Territory; District Courts – New South Wales, Queensland, South Australia, Western Australia; County Court – Victoria; Family Court – Western Australia; Court of Petty Sessions – Norfolk Island"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "Australian Greens Party or The Greens <br />Australian Labor Party or ALP <br />Australia's Voice<br />Centre Alliance (formerly known as the Nick Xenophon Team or NXT)<br />Jacqui Lambie Network or JLN <br />Katter's Australian Party (KAP)<br />Liberal Party of Australia <br />The Nationals <br />Pauline Hanson's One Nation or ONP <br />United Australia Party",
      "items": [
@@ -1083,16 +353,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 170,
-    "content": {
-     "text": "ADB, ANZUS, APEC, ARF, ASEAN (dialogue partner), Australia Group, BIS, C, CD, CP, EAS, EBRD, EITI (implementing country), FAO, FATF, G-20, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NEA, NSG, OECD, OPCW, OSCE (partner), Pacific Alliance (observer), Paris Club, PCA, PIF, SAARC (observer), Quad, SICA (observer), Sparteca, SPC, UN, UNCTAD, UNESCO, UNHCR, UNMISS, UNMIT, UNOOSA, UNRWA, UNTSO, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "1 January 1901 (from the federation of UK colonies)",
      "items": []
@@ -1100,7 +362,7 @@
    },
    {
     "field": "National holiday",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "Australia Day (commemorates the arrival of the First Fleet of Australian settlers), 26 January (1788); ANZAC Day (commemorates the anniversary of the landing of troops of the Australian and New Zealand Army Corps during World War I at Gallipoli, Turkey), 25 April (1915)",
      "items": []
@@ -1108,7 +370,7 @@
    },
    {
     "field": "Flag",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "<strong>description:</strong> blue, with the UK flag in the upper-left quadrant and a large seven-pointed star in the lower-left quadrant; on the right half is a representation of the Southern Cross constellation in white, with one small five-pointed star and four larger seven-pointed stars<br /><br /><strong>meaning:</strong> the largest star is known as the Commonwealth or Federation Star and represents the federation of the Australian colonies in 1901; the star has one point for each of the six original states, plus one representing all of Australia's internal and external territories",
      "items": []
@@ -1116,7 +378,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "Commonwealth Star (seven-pointed Star of Federation), golden wattle tree (<em>Acacia pycnantha</em>), kangaroo, emu",
      "items": []
@@ -1124,7 +386,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": "green, gold",
      "items": []
@@ -1132,7 +394,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": "King George V of the United Kingdom granted the current Commonwealth Coat of Arms to Australia on 19 September 1912; the center of the shield has the symbols of Australia’s six states; the kangaroo and the emu symbolize a nation moving forward, since neither animal can move backward easily; the gold Commonwealth star sits above the shield, with six points representing the Australian states and the seventh representing the territories; the gold and blue in the wreath under the star are the livery, or identifying, colors for the coat of arms; Australia’s floral emblem, the golden wattle, frames the shield",
      "items": []
@@ -1140,7 +402,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 240,
+    "order": 170,
     "content": {
      "text": null,
      "items": [
@@ -1165,7 +427,7 @@
    },
    {
     "field": "National heritage",
-    "order": 250,
+    "order": 180,
     "content": {
      "text": null,
      "items": [

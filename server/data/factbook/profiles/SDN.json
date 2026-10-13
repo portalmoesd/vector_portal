@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "north-eastern Africa, bordering the Red Sea, between Egypt and Eritrea",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "15 00 N, 30 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,861,484 sq km"
-      },
-      {
-       "label": "land",
-       "text": "1,731,671 sq km"
-      },
-      {
-       "label": "water",
-       "text": "129,813 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly less than one-fifth the size of the US",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -90,36 +45,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "853 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "18 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200-m depth or to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "hot and dry; arid desert; rainy season varies by region (April to November)",
      "items": []
@@ -127,7 +61,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "generally flat, featureless plain; desert dominates the north",
      "items": []
@@ -135,7 +69,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +90,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "petroleum; small reserves of iron ore, copper, chromium ore, zinc, tungsten, mica, silver, gold; hydropower",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "60.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 11.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 49% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "12% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "27.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "15,504 sq km (2019)",
-     "items": []
-    }
-   },
-   {
     "field": "Major rivers (by length in km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "<p>An Nīl (Nile) (shared with Rwanda [s], Tanzania, Uganda, South Sudan, and Egypt [m]) - 6,650 km; Blue Nile river mouth (shared with Ethiopia [s]) - 1,600 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth</p>",
      "items": []
@@ -213,7 +106,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -230,7 +123,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Nubian Aquifer System, Sudd Basin (Umm Ruwaba Aquifer)",
      "items": []
@@ -238,7 +131,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "with the exception of a ribbon of settlement that corresponds to the banks of the Nile, northern Sudan is sparsely populated; sizeable areas of population are found around Khartoum, southeast between the Blue and White Nile Rivers, and throughout South Darfur, as shown on this population distribution map",
      "items": []
@@ -246,7 +139,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "dust storms and periodic persistent droughts",
      "items": []
@@ -254,7 +147,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "the Nile is Sudan's primary water source; its major tributaries, the White Nile and the Blue Nile, meet at Khartoum to form the River Nile, which flows northward through Egypt to the Mediterranean Sea",
      "items": []
@@ -263,433 +156,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "50,467,278 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25,335,092"
-      },
-      {
-       "label": "female",
-       "text": "25,132,186"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Sudanese (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Sudanese"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Sudanese Arab (approximately 70%), Fur, Beja, Nuba, Ingessana, Uduk, Fallata, Masalit, Dajo, Gimir, Tunjur, Berti; there are over 500 ethnic groups",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Arabic (official), English (official), Nubian, Ta Bedawie, Fur"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information. (English)"
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Sunni Muslim, small Christian minority",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "40.1% (male 10,278,453/female 9,949,343)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "56.7% (male 14,211,514/female 14,390,486)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "3.2% (2024 est.) (male 845,125/female 792,357)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "76.4 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "70.7 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "5.7 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "17.5 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "19.5 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "19 years"
-      },
-      {
-       "label": "female",
-       "text": "19.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2.54% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "32.95 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.55 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "with the exception of a ribbon of settlement that corresponds to the banks of the Nile, northern Sudan is sparsely populated; sizeable areas of population are found around Khartoum, southeast between the Blue and White Nile Rivers, and throughout South Darfur, as shown on this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "36.3% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.43% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "6.344 million KHARTOUM (capital), 1.057 million Nyala (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.99 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.01 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "256 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "39.7 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "46 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "34.8 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "67.8 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "65.5 years"
-      },
-      {
-       "label": "female",
-       "text": "70.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "4.41 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "2.15 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 74.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 59.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 64.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 25.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 40.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 35.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "2.8% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "6.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.25 physicians/1,000 population (2017)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "0.7 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 260,
-    "content": {
-     "text": "6.6% (2014)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.93 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.29 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "1.63 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 280,
-    "content": {
-     "text": "33% (2014)",
-     "items": []
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7 years (2015 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7 years (2015 est.)"
-      },
-      {
-       "label": "female",
-       "text": "7 years (2015 est.)"
-      }
-     ]
     }
    }
   ],
@@ -761,29 +245,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "18 states (<em>wilayat</em>, singular - <em>wilayah</em>); Blue Nile, Central Darfur, East Darfur, Gedaref, Gezira, Kassala, Khartoum, North Darfur, North Kordofan, Northern, Red Sea, River Nile, Sennar, South Darfur, South Kordofan, West Darfur, West Kordofan, White Nile",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>the peace agreement signed in 2020 included a provision to establish a system of governance to restructure the country's current 18 states into regions"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of Islamic law and English common law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -799,49 +262,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; withdrew acceptance of ICCt jurisdiction in 2008",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "the father must be a citizen of Sudan"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "17 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -865,42 +287,8 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong>  the Parliament of Sudan was dissolved after a coup in April 2019; the August 2019 Constitutional Declaration established Sudan's transitional government; a Transitional Legislative Council (TLC) was to have served as the national legislature during the transitional period until elections could be held, but the TLC has not been created"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "National Supreme Court (consists of 70 judges organized into panels of 3 judges and includes 4 circuits that operate outside the capital); a Constitutional Court was required in the 2019 Constitutional Declaration, but it has yet to be implemented"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "National Supreme Court and Constitutional Court judges selected by the Supreme Judicial Council"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Appeal; other national courts; public courts; district, town, and rural courts"
-      }
-     ]
-    }
-   },
-   {
     "field": "Political parties",
-    "order": 130,
+    "order": 60,
     "content": {
      "text": "Democratic Unionist Party<br />Democratic Unionist Party or DUP<br />Federal Umma Party<br />Muslim Brotherhood or MB<br />National Congress Party or NCP<br />National Umma Party or NUP<br />Popular Congress Party or PCP<br />Reform Movement Now<br />Sudan National Front<br />Sudanese Communist Party or SCP<br />Sudanese Congress Party or SCoP<br />Umma Party for Reform and Development<br />Unionist Movement Party or UMP",
      "items": [
@@ -912,16 +300,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ABEDA, ACP, AfDB, AFESD, AMF, AU (suspended), CAEU, COMESA, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IGAD, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OIC, OPCW, PCA, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (observer)",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 70,
     "content": {
      "text": "1 January 1956 (from Egypt and the UK)",
      "items": []
@@ -929,7 +309,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 80,
     "content": {
      "text": "Independence Day, 1 January (1956)",
      "items": []
@@ -937,7 +317,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 90,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of red (top), white, and black, with a green isosceles triangle based on the left side<br /><br /><strong>meaning:</strong> red stands for the struggle for freedom; white for peace, light, and love, black for the people; green for Islam, agriculture, and prosperity<br /><br /><strong>history:</strong> colors and design are based on the Arab Revolt flag of World War I",
      "items": []
@@ -945,7 +325,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 100,
     "content": {
      "text": "secretary bird",
      "items": []
@@ -953,7 +333,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 110,
     "content": {
      "text": "red, white, black, green",
      "items": []
@@ -961,7 +341,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 120,
     "content": {
      "text": null,
      "items": [
@@ -982,7 +362,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

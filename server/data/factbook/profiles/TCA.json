@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "two island groups in the North Atlantic Ocean, southeast of The Bahamas, north of Haiti; note - although the Turks and Caicos Islands do not border the Caribbean Sea, geopolitically they are often designated as being Caribbean",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "21 45 N, 71 35 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "948 sq km"
-      },
-      {
-       "label": "land",
-       "text": "948 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "2.5 times the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,32 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "389 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive fishing zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; marine; moderated by trade winds; sunny and relatively dry",
      "items": []
@@ -115,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "low, flat limestone; extensive marshes and mangrove swamps",
      "items": []
@@ -123,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -140,56 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "spiny lobster, conch",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "1.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 1.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0% (2022 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0% (2022 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "11.1% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "87.9% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "0 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "eight of the thirty islands are inhabited; the island of Providenciales is the most populated, but the most densely populated is Grand Turk",
      "items": []
@@ -197,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "frequent hurricanes",
      "items": []
@@ -205,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "include eight large islands and numerous smaller cays, islets, and reefs; only two of the Caicos Islands and six of the Turks group are inhabited",
      "items": []
@@ -214,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "60,439 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "30,389"
-      },
-      {
-       "label": "female",
-       "text": "30,050"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "none"
-      },
-      {
-       "label": "adjective",
-       "text": "none"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Black 87.6%, White 7.9%, mixed 2.5%, East Indian 1.3%, other 0.7% (2006 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "English (official)",
      "items": []
@@ -269,377 +120,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Protestant 72.8% (Baptist 35.8%, Church of God 11.7%, Anglican 10%, Methodist 9.3%, Seventh Day Adventist 6%), Roman Catholic 11.4%, Jehovah's Witness 1.8%, other 14% (2006 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "20.4% (male 6,288/female 6,056)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "73.2% (male 22,232/female 22,011)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "6.4% (2024 est.) (male 1,869/female 1,983)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "36.6 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "27.9 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.7 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "11.5 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "36.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "36.5 years"
-      },
-      {
-       "label": "female",
-       "text": "36.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.73% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "12.73 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "3.59 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "8.13 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "eight of the thirty islands are inhabited; the island of Providenciales is the most populated, but the most densely populated is Grand Turk",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "94.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.46% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "5,000 GRAND TURK (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.94 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.01 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13.9 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "8.1 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "81.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "78.5 years"
-      },
-      {
-       "label": "female",
-       "text": "84.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.7 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.83 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 91.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 98.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 8.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 98.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 97.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 98.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 2.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.3% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 230,
-    "content": {
-     "text": "0.4% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 240,
-    "content": {
-     "text": "59.3% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 250,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "0% (2020)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "23.3% (2020)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "5.1% (2020)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "2.9% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "9.8% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "14 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14 years (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "People - note",
-    "order": 280,
-    "content": {
-     "text": "destination and transit point for illegal Haitian immigrants bound for the Bahamas and the US",
      "items": []
     }
    }
@@ -716,16 +199,8 @@
     }
    },
    {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of English common law and civil law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -737,24 +212,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 70,
-    "content": {
-     "text": "see United Kingdom",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 80,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 90,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -767,7 +226,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 100,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -776,88 +235,23 @@
        "text": "House of Assembly"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "21 (directly elected or appointed)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/07/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "PNP (16); PDM (2); independents (1)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "27.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the chief justice and other judges, as determined by the governor); Court of Appeal (consists of the court president and 2 justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court and Appeals Court judges appointed by the governor in accordance with the Judicial Service Commission, a 3-member body of high-level judicial officials; Supreme Court judges serve until mandatory retirement at age 65, but terms can be extended to age 70; Appeals Court judge tenure determined by individual terms of appointment"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "magistrates' courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> appeals beyond the Supreme Court are referred to the Judicial Committee of the Privy Council (in London)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 120,
+    "order": 80,
     "content": {
      "text": "People's Democratic Movement or PDM<br />Progressive National Party or PNP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 130,
-    "content": {
-     "text": "Caricom (associate), CDB, Interpol (subbureau), UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 140,
+    "order": 90,
     "content": {
      "text": "none (overseas territory of the UK)",
      "items": []
@@ -865,7 +259,7 @@
    },
    {
     "field": "Flag",
-    "order": 150,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> blue with the UK flag in the upper-left quadrant and the colonial shield centered on the right half of the flag; the shield is yellow and displays a conch shell, a spiny lobster, and Turk's cap cactus",
      "items": []
@@ -873,7 +267,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 160,
+    "order": 110,
     "content": {
      "text": "conch shell, Turk's cap cactus",
      "items": []
@@ -881,7 +275,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 170,
+    "order": 120,
     "content": {
      "text": null,
      "items": [

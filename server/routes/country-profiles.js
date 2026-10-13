@@ -133,10 +133,14 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
        FROM stat_country_texts WHERE iso3 = $1 ORDER BY section, display_order`,
       [c.iso3]
     );
+    // Grouped by the page section each row is shown in (see DISPLAY in
+    // factbook.js); `field` is the source's name, `label` what the page shows.
     const texts = { sections: {}, source: null };
     for (const r of txt) {
-      if (!texts.sections[r.section]) texts.sections[r.section] = [];
-      texts.sections[r.section].push({ field: r.field, content: r.content, edited: !!r.edited_at });
+      const { page, label } = factbook.displayPlacement(r.section, r.field);
+      if (!page) continue;
+      if (!texts.sections[page]) texts.sections[page] = [];
+      texts.sections[page].push({ section: r.section, field: r.field, label, content: r.content, edited: !!r.edited_at });
       if (!texts.source) {
         texts.source = { name: r.source_name, url: r.source_url, dataDate: r.data_date, retrievedAt: r.retrieved_at, discontinued: '2026-02-04' };
       }

@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southeastern Asia, archipelago between the Philippine Sea and the South China Sea, east of Vietnam",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "13 00 N, 122 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Southeast Asia",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "300,000 sq km"
-      },
-      {
-       "label": "land",
-       "text": "298,170 sq km"
-      },
-      {
-       "label": "water",
-       "text": "1,830 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly less than twice the size of Georgia; slightly larger than Arizona",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,36 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "36,289 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "irregular polygon extending up to 100 nm from coastline as defined by 1898 treaty; since late 1970s has also claimed polygonal-shaped area in South China Sea as wide as 285 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical marine; northeast monsoon (November to April); southwest monsoon (May to October)",
      "items": []
@@ -119,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly mountains with narrow to extensive coastal lowlands",
      "items": []
@@ -127,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -148,56 +82,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "timber, petroleum, nickel, cobalt, silver, gold, salt, copper",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "42.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 18.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 18.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "24.7% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "32.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "16,270 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -210,7 +103,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "population concentrated in areas with good farmland; highest concentrations are northwest and south-central Luzon, the southeastern extension of Luzon, and the islands of the Visayan Sea, particularly Cebu and Negros; Manila is home to one eighth of the national population",
      "items": []
@@ -218,7 +111,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "astride typhoon belt, usually affected by several cyclonic storms each year; landslides; active volcanoes; destructive earthquakes; tsunamis <br /><br /><strong>volcanism:</strong> significant volcanic activity; Taal (311 m) has been deemed a Decade Volcano by the International Association of Volcanology and Chemistry of the Earth's Interior, worthy of study due to its explosive history and close proximity to human populations; Mayon (2,462 m), the country's most active volcano, erupted in 2009 and forced over 33,000 to be evacuated; other historically active volcanoes include Biliran, Babuyan Claro, Bulusan, Camiguin, Camiguin de Babuyanes, Didicas, Iraya, Jolo, Kanlaon, Makaturing, Musuan, Parker, Pinatubo, and Ragang; see note 2 under \"Geography - note\"",
      "items": []
@@ -226,7 +119,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "<strong>note 1:</strong> for decades, the Philippine archipelago was reported as having 7,107 islands; in 2016, the national mapping authority reported that hundreds of new islands had been discovered and increased the number of islands to 7,641, though not all of the new islands have been verified<br /><br /><strong>note 2:</strong> the Philippines is one of the countries along the Ring of Fire, which is a belt bordering the Pacific Ocean that contains about 75% of the world's volcanoes and up to 90% of the world's earthquakes<strong><br /><br />note 3:</strong> the Philippines sits on the Pacific typhoon belt, and an average of 9 typhoons make landfall on the islands each year, with about 5 being destructive; the country is the most exposed in the world to tropical storms",
      "items": []
@@ -235,64 +128,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "118,277,063 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "59,227,092"
-      },
-      {
-       "label": "female",
-       "text": "59,049,971"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Filipino(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Philippine"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Tagalog 26%, Bisaya/Binisaya 14.3%, Ilocano 8%, Cebuano 8%, Illonggo 7.9%, Bikol/Bicol 6.5%, Waray 3.8%, Kapampangan 3%, Maguindanao 1.9%, Pangasinan 1.9%, other local ethnicities 18.5%, foreign ethnicities 0.2% (2020 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Tagalog 39.9%, Bisaya/Binisaya 16%, Hiligaynon/Ilonggo 7.3%, Ilocano 7.1%, Cebuano 6.5%, Bikol/Bicol 3.9%, Waray 2.6%, Kapampangan 2.4%, Maguindanao 1.4%, Pangasinan/Panggalato 1.3%, other languages/dialects 11.2%, unspecified 0.4% (2020 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Ang World Factbook, ang mapagkukunan ng kailangang impormasyon. (Tagalog)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -303,506 +146,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 78.8%, Muslim 6.4%, Iglesia ni Cristo 2.6%, other Christian 3.9%, other 8.2%, none/unspecified &lt;0.1 (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "30.2% (male 18,234,279/female 17,462,803)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64.3% (male 38,381,583/female 37,613,294)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "5.6% (2024 est.) (male 2,611,230/female 3,973,874)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "55.6 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "47 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.7 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "11.5 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.1 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25.1 years"
-      },
-      {
-       "label": "female",
-       "text": "26.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.74% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "16.02 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.8 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-2.82 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population concentrated in areas with good farmland; highest concentrations are northwest and south-central Luzon, the southeastern extension of Luzon, and the islands of the Visayan Sea, particularly Cebu and Negros; Manila is home to one eighth of the national population",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "48.3% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.04% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "14.667 million MANILA (capital), 1.949 million Davao, 1.025 million Cebu City, 931,000 Zamboanga, 960,000 Antipolo, 803,000 Cagayan de Oro City, 803,000 Dasmarinas (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.66 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "23.6 years (2022 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "84 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18.5 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.4 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "19.6 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "70.8 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "67.3 years"
-      },
-      {
-       "label": "female",
-       "text": "74.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.94 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.94 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 92.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 94.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 7.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 5.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "5.1% of GDP (2022)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "9% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.79 physicians/1,000 population (2021)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "1 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 96.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 92.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 94.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 3.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 7.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 5.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "6.4% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.85 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "1.47 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.03 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "3.34 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "19.2% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "34.4% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "3.7% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "16.7% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "55.6% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "1.5% (2022)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "9.4% (2022)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.6% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "15.2% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "98.5% (2020 est.)"
-      },
-      {
-       "label": "male",
-       "text": "98.4% (2020 est.)"
-      },
-      {
-       "label": "female",
-       "text": "97% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "12 years (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12 years (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "13 years (2021 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "People - note",
-    "order": 370,
-    "content": {
-     "text": "one of only two predominantly Christian nations in Southeast Asia, the other being Timor-Leste",
      "items": []
     }
    }
@@ -871,24 +217,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "81 provinces and 38 chartered cities <br /><br /><strong>provinces:</strong> Abra, Agusan del Norte, Agusan del Sur, Aklan, Albay, Antique, Apayao, Aurora, Basilan, Bataan, Batanes, Batangas, Biliran, Benguet, Bohol, Bukidnon, Bulacan, Cagayan, Camarines Norte, Camarines Sur, Camiguin, Capiz, Catanduanes, Cavite, Cebu, Cotabato, Davao del Norte, Davao del Sur, Davao de Oro, Davao Occidental, Davao Oriental, Dinagat Islands, Eastern Samar, Guimaras, Ifugao, Ilocos Norte, Ilocos Sur, Iloilo, Isabela, Kalinga, Laguna, Lanao del Norte, Lanao del Sur, La Union, Leyte, Maguindanao, Marinduque, Masbate, Mindoro Occidental, Mindoro Oriental, Misamis Occidental, Misamis Oriental, Mountain, Negros Occidental, Negros Oriental, Northern Samar, Nueva Ecija, Nueva Vizcaya, Palawan, Pampanga, Pangasinan, Quezon, Quirino, Rizal, Romblon, Samar, Sarangani, Siquijor, Sorsogon, South Cotabato, Southern Leyte, Sultan Kudarat, Sulu, Surigao del Norte, Surigao del Sur, Tarlac, Tawi-Tawi, Zambales, Zamboanga del Norte, Zamboanga del Sur, Zamboanga Sibugay<br /><br /><strong>chartered cities:</strong> Angeles, Bacolod, Baguio, Butuan, Cagayan de Oro, Caloocan, Cebu, Cotabato, Dagupan, Davao, General Santos, Iligan, Iloilo, Lapu-Lapu, Las Pinas, Lucena, Makati, Malabon, Mandaluyong, Mandaue, Manila, Marikina, Muntinlupa, Naga, Navotas, Olongapo, Ormoc, Paranaque, Pasay, Pasig, Puerto Princesa, Quezon, San Juan, Santiago, Tacloban, Taguig, Valenzuela, Zamboanga",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of civil, common, Islamic (sharia), and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -904,49 +234,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; withdrew from the ICCt in March 2019",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of the Philippines"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -975,24 +264,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Congress (Kongreso)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -1003,41 +288,13 @@
       {
        "label": "number of seats",
        "text": "317 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "3 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/12/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Lakas-CMD party (103), National Unity Party (NUP) (32), Nationalist People's Coalition (NPC) 31, Partido Federal ng Pilipinas (PFP) (27), Nacionalista Party (NP) (22), Liberal Party (LP) (6), others (28), independents (11)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "28.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2028"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -1048,78 +305,21 @@
       {
        "label": "number of seats",
        "text": "24 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "partial renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "6 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/12/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Nationalist People's Coalition (NPC) (2); Nacionalista Party (NP) (3); Partido Demokratiko Pilipino-Laban (PDP-Laban) (2); Lakas- CMD party (1); Katipunan ng Nagkakaisang Pilipino (KANP) (1); Liberal Party (1); Independents (2)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "20.8%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of a chief justice and 14 associate justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "justices are appointed by the president on the recommendation of the Judicial and Bar Council, a constitutionally created, 6-member body that recommends Supreme Court nominees; justices serve until age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Appeals; Sandiganbayan (special court for corruption cases of government officials); Court of Tax Appeals; regional, metropolitan, and municipal trial courts; sharia courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Democratic Action (Aksyon Demokratiko) <br />Alliance for Change (Hugpong ng Pagbabago or HNP) <br />Katipunan ng Nagkakaisang Pilipino (KANP)<br />Lakas ng EDSA-Christian Muslim Democrats or Lakas-CMD<br />Liberal Party or LP<br />Nacionalista Party or NP<br />Nationalist People's Coalition or NPC<br />National Unity Party or NUP<br />Partido Demokratiko Pilipino-Lakas ng Bayan or PDP-Laban<br />Partido Federal ng Pilipinas or PFP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ADB, APEC, ARF, ASEAN, BIS, CD, CICA (observer), CP, EAS, FAO, G-24, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINUSTAH, NAM, OAS (observer), OPCW, PCA, PIF (partner), UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNMIL, UNMOGIP, UNOCI, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "4 July 1946 (from the US)",
      "items": []
@@ -1127,7 +327,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 12 June (1898)",
      "items": [
@@ -1140,7 +340,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> two equal horizontal bands of blue (top) and red; a white equilateral triangle is based on the left side; the center of the triangle has a yellow sun with eight rays, each split into smaller rays; the triangle's corners each have a small five-pointed yellow star<br /><br /><strong>meaning:</strong> blue stands for peace and justice, red for courage, and the triangle for equality; the rays represent the first eight provinces that sought independence from Spain, and the stars represent the country's three parts: Luzon, Visayas, and Mindanao<br /><br /><strong>history:</strong> the design dates to 1897",
      "items": [
@@ -1153,7 +353,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "three stars and sun, Philippine eagle",
      "items": []
@@ -1161,7 +361,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, white, blue, yellow",
      "items": []
@@ -1169,7 +369,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": "the coat of arms was adopted on 3 July 1946; the three gold stars represent the major island groups of Luzon, the Visayas, and Mindanao; the rays of the sun represent the provinces of the Philippines; the American eagle and lion of Spain represent the nation's colonial past",
      "items": []
@@ -1177,7 +377,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [
@@ -1198,7 +398,7 @@
    },
    {
     "field": "National heritage",
-    "order": 240,
+    "order": 170,
     "content": {
      "text": null,
      "items": [

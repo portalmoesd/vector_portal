@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Oceania, group of islands in the South Pacific Ocean, about halfway between Hawaii and New Zealand",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "14 20 S, 170 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Oceania",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "224 sq km"
-      },
-      {
-       "label": "land",
-       "text": "224 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> includes Rose Atoll and Swains Island"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly larger than Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,32 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "116 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical marine, moderated by southeast trade winds; annual rainfall averages about 3 m; rainy season (November to April), dry season (May to October); little seasonal temperature variation",
      "items": []
@@ -119,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "five volcanic islands with rugged peaks and limited coastal plains, two coral atolls (Rose Atoll, Swains Island)",
      "items": []
@@ -127,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -144,56 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "pumice, pumicite",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "14.8% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 5.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 9.6% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "79.2% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "6% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "0 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Natural hazards",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "cyclones common from December to March <br /><br /><strong>volcanism:</strong> limited volcanic activity on the Ofu and Olosega Islands; neither has erupted since the 19th century",
      "items": []
@@ -201,7 +94,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Pago Pago has one of the best natural deepwater harbors in the South Pacific Ocean, sheltered by shape from rough seas and protected by peripheral mountains from high winds; strategic location in the South Pacific Ocean",
      "items": []
@@ -210,59 +103,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "43,268 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "21,478"
-      },
-      {
-       "label": "female",
-       "text": "21,790"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "American Samoan(s) (US nationals)"
-      },
-      {
-       "label": "adjective",
-       "text": "American Samoan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Pacific Islander 88.7% (includes Samoan 83.2%, Tongan 2.2%, other 3.3%), Asian 5.8% (includes Filipino 3.4%, other 2.4%), mixed 4.4%, other 1.1% (2020 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by ethnic origin or race"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Samoan 87.9% (closely related to Hawaiian and other Polynesian languages), English 3.3%, Tongan 2.1%, other Pacific Islander 4.1%, Asian languages 2.1%, other 0.5% (2020 est.)",
      "items": [
@@ -275,262 +117,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 98.3%, other &lt;1%, unaffiliated &lt;1% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "25.3% (male 5,738/female 5,387)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "66% (male 14,291/female 14,679)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "8.7% (2024 est.) (male 1,775/female 2,025)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "51.3 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "37.5 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "13.8 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "7.2 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "30.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29.4 years"
-      },
-      {
-       "label": "female",
-       "text": "30.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-1.33% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "15.3 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.4 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-22.23 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "87.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.26% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 140,
-    "content": {
-     "text": "49,000 PAGO PAGO (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 150,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.97 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.88 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.99 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.5 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "11.7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "7.6 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "75.8 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.4 years"
-      },
-      {
-       "label": "female",
-       "text": "78.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 180,
-    "content": {
-     "text": "1.99 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 190,
-    "content": {
-     "text": "0.96 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.8% of population"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.2% of population (2020 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 98.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 220,
-    "content": {
-     "text": "47.4% (2020 est.)",
      "items": []
     }
    }
@@ -607,24 +196,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 50,
-    "content": {
-     "text": "no first-order administrative divisions as defined by the US government, but 3 districts and 2 islands* are considered second-order; Eastern, Manu'a, Rose Island*, Swains Island*, Western",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "mixed legal system of US common law and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -640,24 +213,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": "see United States<br /><strong>note:</strong> in accordance with US Code Title 8, Section 1408, persons born in American Samoa are US nationals but not US citizens",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -681,62 +238,16 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>American Samoa elects 1 member by simple majority popular vote to serve a 2-year term as a delegate to the US House of Representatives; the delegate can vote when serving on a committee and when the House meets as the Committee of the Whole House, but not when legislation is submitted for a “full floor” House vote"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "High Court of American Samoa (consists of the chief justice, associate chief justice, and 6 Samoan associate judges and organized into trial, family, drug, and appellate divisions)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "chief justice and associate chief justice appointed by the US Secretary of the Interior to serve for life; Samoan associate judges appointed by the governor to serve for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "district and village courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> American Samoa has no US federal courts"
-      }
-     ]
-    }
-   },
-   {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Democratic Party<br />Republican Party",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "AOSIS (observer), Interpol (subbureau), IOC, PIF (observer), SPC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "none (territory of the US)",
      "items": []
@@ -744,7 +255,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Flag Day, 17 April (1900)",
      "items": []
@@ -752,7 +263,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> a large white triangle edged in red is based on the right side and extends to the left side, and it is on a dark blue field; a bald eagle holding a Samoan war club (<em>fa'alaufa'i</em>) and a coconut-fiber fly whisk (<em>fue</em>) sits on the right side of the flag<br /><br /><strong>meaning: </strong>the war club and fly whisk are traditional Samoan symbols of authority; the eagle carrying two objects echoes the US Great Seal and reflects the relationship between the United States and American Samoa; the red, white, and blue colors are traditionally used by both countries",
      "items": []
@@ -760,7 +271,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "a <em>fue </em>(coconut fiber fly whisk that represents wisdom) crossed with a <em>to'oto'o</em> (staff that represents authority)",
      "items": []
@@ -768,7 +279,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, white, blue",
      "items": []
@@ -776,7 +287,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

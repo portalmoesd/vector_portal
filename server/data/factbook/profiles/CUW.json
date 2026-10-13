@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Caribbean, an island in the Caribbean Sea, 55 km off the coast of Venezuela",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "12 10 N, 69 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "444 sq km"
-      },
-      {
-       "label": "land",
-       "text": "444 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "more than twice the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,32 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "364 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical marine climate, ameliorated by northeast trade winds, results in mild temperatures; semiarid with average rainfall of 60 cm/year",
      "items": []
@@ -115,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "generally low, hilly terrain",
      "items": []
@@ -123,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -140,48 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "calcium phosphates, protected harbors, hot springs",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "0% (2022 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 10% (2018)"
-      },
-      {
-       "label": "forest",
-       "text": "0.2% (2022 est.)"
-      },
-      {
-       "label": "other",
-       "text": "99.8% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "NA",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "largest concentration on the island is Willemstad; smaller settlements near the coast can be found throughout the island, particularly in the northwest",
      "items": []
@@ -189,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Curacao is south of the Caribbean hurricane belt and is rarely threatened",
      "items": []
@@ -197,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Curaçao is a part of the Windward Islands (southern) group in the Lesser Antilles",
      "items": []
@@ -206,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "153,289 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73,755"
-      },
-      {
-       "label": "female",
-       "text": "79,534"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Curacaoan"
-      },
-      {
-       "label": "adjective",
-       "text": "Curacaoan; Dutch"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Curacaoan 75.4%, Dutch 6%, Dominican 3.6%, Colombian 3%, Bonairean, Sint Eustatian, Saban 1.5%, Haitian 1.2%, Surinamese 1.2%, Venezuelan 1.1%, Aruban 1.1%, other 5%, unspecified 0.9% (2011 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Papiamento (official) (a creole language that is a mixture of Portuguese, Spanish, Dutch, English, and, to a lesser extent, French, as well as elements of African languages and the language of the Arawak) 80%, Dutch (official) 8.8%, Spanish 5.6%, English (official) 3.1%, other 2.3%, unspecified 0.3% (2011 est.)",
      "items": [
@@ -266,236 +125,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 72.8%, Pentecostal 6.6%, Protestant 3.2%, Adventist 3%, Jehovah's Witness 2%, Evangelical 1.9%, other 3.8%, none 6%, unspecified 0.6% (2011 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "19.2% (male 15,069/female 14,337)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "62.3% (male 47,258/female 48,217)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "18.5% (2024 est.) (male 11,428/female 16,980)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "60.6 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "30.8 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "29.8 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.4 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "38.1 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "35.5 years"
-      },
-      {
-       "label": "female",
-       "text": "40.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.25% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "12.71 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "8.91 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.3 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "largest concentration on the island is Willemstad; smaller settlements near the coast can be found throughout the island, particularly in the northwest",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "89% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.57% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "144,000 WILLEMSTAD (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.98 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.67 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.93 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "8.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "6.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "79.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "77.6 years"
-      },
-      {
-       "label": "female",
-       "text": "82.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.95 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.95 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 210,
-    "content": {
-     "text": "7.4% of GDP (2020 est.)",
      "items": []
     }
    }
@@ -581,16 +213,8 @@
     }
    },
    {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "based on Dutch civil law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -602,24 +226,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 70,
-    "content": {
-     "text": "see the Netherlands",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 80,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 90,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -640,7 +248,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 100,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -649,84 +257,23 @@
        "text": "Parliament of Curacao"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "21 (directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "3/19/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "MFK (9); PAR (4); PNP (4); MAN (2); KEM (1); TPK (1)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "28.6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "2025"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Joint Court of Justice of Aruba, Curacao, Sint Maarten, and of Bonaire, Sint Eustatius and Saba or \"Joint Court of Justice\" (sits as a 3-judge panel); final appeals heard by the Supreme Court in The Hague, Netherlands"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Joint Court judges appointed by the monarch for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "first instance courts, appeals court; specialized courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 120,
+    "order": 80,
     "content": {
      "text": "Korsou di Nos Tur or KdnT<br />Korsou Esun Miho or KEM<br />Movementu Futuro Korsou or MFK<br />Movementu Progresivo or MP<br />Movishon Antia Nobo or MAN<br />Partido Antia Restruktura or PAR<br />Partido Inovashon Nashonal or PIN<br />Partido Nashonal di Pueblo or PNP<br />Pueblo Soberano or PS<br />Trabou pa Kòrsou or TPK<br />Un Korsou Hustu",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 130,
-    "content": {
-     "text": "ACS (associate), Caricom (observer), FATF, ILO, ITU, UNESCO (associate), UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 140,
+    "order": 90,
     "content": {
      "text": "none (part of the Kingdom of the Netherlands)",
      "items": []
@@ -734,7 +281,7 @@
    },
    {
     "field": "National holiday",
-    "order": 150,
+    "order": 100,
     "content": {
      "text": "King's Day (birthday of King WILLEM-ALEXANDER), 27 April (1967)",
      "items": [
@@ -747,7 +294,7 @@
    },
    {
     "field": "Flag",
-    "order": 160,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> on a blue field, a horizontal yellow band divides the flag below the center; two five-pointed white stars -- the smaller above and to the left of the larger -- appear in the upper left<br /><br /><strong>meaning:</strong> the blue stands for the sky and sea, and yellow for the sun; the stars symbolize Curacao and its uninhabited sister island of Klein Curacao (Little Curacao); the star points represent the five continents from which Curacao's inhabitants originate",
      "items": []
@@ -755,7 +302,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 170,
+    "order": 120,
     "content": {
      "text": "laraha (citrus tree)",
      "items": []
@@ -763,7 +310,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 180,
+    "order": 130,
     "content": {
      "text": "blue, yellow, white",
      "items": []
@@ -771,7 +318,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 190,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -792,7 +339,7 @@
    },
    {
     "field": "National heritage",
-    "order": 200,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

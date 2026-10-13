@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Oceania, islands in the South Pacific Ocean, east of Australia",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "21 30 S, 165 30 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Oceania",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18,575 sq km"
-      },
-      {
-       "label": "land",
-       "text": "18,275 sq km"
-      },
-      {
-       "label": "water",
-       "text": "300 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than New Jersey",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,32 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "2,254 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; modified by southeast trade winds; hot, humid",
      "items": []
@@ -115,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "coastal plains with interior mountains",
      "items": []
@@ -123,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -140,56 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "nickel, chrome, iron, cobalt, manganese, silver, gold, lead, copper",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "10.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 0.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 9.5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "48.8% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "41.1% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "100 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "most of the populace lives in the southern part of the main island, in and around the capital of Noumea",
      "items": []
@@ -197,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "cyclones, most frequent from November to March <br /><br /><strong>volcanism:</strong> Matthew and Hunter Islands are historically active",
      "items": []
@@ -205,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "consists of the main island of New Caledonia (one of the largest in the Pacific Ocean), the archipelago of Iles Loyauté, and numerous small, sparsely populated islands and atolls",
      "items": []
@@ -214,342 +111,23 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "307,612 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "153,036"
-      },
-      {
-       "label": "female",
-       "text": "154,576"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "New Caledonian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "New Caledonian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Kanak 39.1%, European 27.1%, Wallisian, Futunian 8.2%, Tahitian 2.1%, Indonesian 1.4%, Ni-Vanuatu 1%, Vietnamese 0.9%, other 17.7%, unspecified 2.5% (2014 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "French (official), 33 Melanesian-Polynesian dialects"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 85.2%, Muslim 2.8%, other 1.6%, unaffiliated 10.4% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "20.7% (male 32,238/female 30,858)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "68.4% (male 104,825/female 103,349)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "10.8% (2024 est.) (male 14,326/female 18,571)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "46.2 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "30 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "16.2 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "6.2 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "34.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "33.5 years"
-      },
-      {
-       "label": "female",
-       "text": "35.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.11% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "13.6 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "3.54 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most of the populace lives in the southern part of the main island, in and around the capital of Noumea",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "72.7% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.72% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "198,000 NOUMEA (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.77 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.99 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "5.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "3.9 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "79.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "75.4 years"
-      },
-      {
-       "label": "female",
-       "text": "83.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.82 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.89 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 220,
-    "content": {
-     "text": "0.24 physicians/1,000 population (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 240,
-    "content": {
-     "text": "46.4% (2019 est.)",
      "items": []
     }
    }
@@ -631,24 +209,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 50,
-    "content": {
-     "text": "3 provinces; Province Iles (Islands Province), Province Nord (North Province), and Province Sud (South Province)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "civil law system based on French civil law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -664,24 +226,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": "see France",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -706,7 +252,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -715,88 +261,23 @@
        "text": "Territorial Congress (Congrès du Territoire)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "54 (indirectly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/12/2019"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Future With Confidence 18, UNI 9, UC 9, CE 7, FLNKS 6, Oceanic Awakening 3, PT 1, LKS 1 (Anti-Independence 28, Pro-Independence 26)"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "December 2025"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note 1:</strong> the Customary Senate is the assembly of the various traditional councils of the Kanaks, the indigenous population; it rules on laws affecting Kanaks <br /><strong><br />note 2:</strong> New Caledonia indirectly elects 2 members to the French Senate and directly elects 2 members to the French National Assembly (see France entry for electoral details)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Appeal or Cour d'Appel; organized into civil, commercial, social, and pre-trial investigation chambers; court bench normally includes the court president and 2 counselors); Administrative Court (number of judges NA)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judge appointment and tenure based on France's judicial system"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of First Instance include: civil, juvenile, commercial, labor, police, criminal, assizes, and also a pre-trial investigation chamber; Joint Commerce Tribunal; administrative courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> final appeals beyond the Court of Appeal are referred to the Court of Cassation or Cour de Cassation (in Paris); final appeals beyond the Administrative Court are referred to the Administrative Court of Appeal (in Paris)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": "Caledonia Together or CE <br />Caledonian Union or UC <br />Future With Confidence or AEC <br />Kanak Socialist Front for National Liberation or FLNKS (alliance includes PALIKA, UNI, UC, and UPM) <br />Labor Party or PT <br />National Union for Independence or UNI <br />Oceanian Awakening <br />Party of Kanak Liberation or PALIKA <br />Socialist Kanak Liberation or LKS <br />The Republicans (formerly The Rally or UMP)",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ITUC (NGOs), PIF, SPC, UPU, WFTU (NGOs), WMO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "none (overseas collectivity of France)",
      "items": [
@@ -809,7 +290,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "Fête de la Fédération, 14 July (1790)",
      "items": [
@@ -822,7 +303,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> the country has two official flags with equal status, the flag of France and the Kanak (ethnic Melanesian) flag; the latter consists of three equal horizontal bands of blue (top), red, and green; a large yellow disk shifted slightly to the left side is edged in black and displays a black <em>fleche faîtière</em> symbol, a native rooftop adornment",
      "items": []
@@ -830,7 +311,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 120,
     "content": {
      "text": "flèche faîtière (native rooftop adornment), kagu bird",
      "items": []
@@ -838,7 +319,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 130,
     "content": {
      "text": "grey, red",
      "items": []
@@ -846,7 +327,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 140,
     "content": {
      "text": "the emblem features two symbols of the local Kanak people: the flèche faîtière, which is a common rooftop adornment on houses, and the nautilus shell, which represents the sea; the third part of the emblem is a stylized representation of a New Caledonia pine tree",
      "items": []
@@ -854,7 +335,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -875,7 +356,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

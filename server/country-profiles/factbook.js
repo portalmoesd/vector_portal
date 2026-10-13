@@ -34,12 +34,60 @@ const SOURCE = {
 
 const SECTIONS = ['Introduction', 'Geography', 'People and Society', 'Government'];
 
-// Officials are out of scope for the portal: these fields, or sub-entries,
-// are dropped at extraction time and never stored.
+// Fields dropped at extraction time and never stored: officials (out of
+// scope for the portal) and the geography detail the page does not show.
 const EXCLUDED_FIELDS = {
-  Government: ['Diplomatic representation in the US', 'Diplomatic representation from the US'],
+  Geography: [
+    'Location', 'Geographic coordinates', 'Area', 'Area - comparative', 'Maritime claims',
+    'Land use', 'Irrigated land',
+  ],
+  Government: [
+    'Diplomatic representation in the US', 'Diplomatic representation from the US',
+    'Administrative divisions', 'Legal system', 'International law organization participation',
+    'Citizenship', 'Suffrage', 'Judicial branch', 'International organization participation',
+  ],
 };
+
+// Sections reduced to an allow-list: every other field is dropped.
+const INCLUDED_FIELDS = {
+  'People and Society': ['Languages', 'Religions'],
+};
+
+// Fields reduced to an allow-list of sub-entries (their free text and
+// notes are dropped too). The unicameral "Legislative branch" calls the
+// chamber name "legislature name".
+const INCLUDED_ITEMS = {
+  Government: {
+    'Legislative branch': ['legislature name', 'chamber name', 'number of seats'],
+    'Legislative branch - lower chamber': ['chamber name', 'number of seats'],
+    'Legislative branch - upper chamber': ['chamber name', 'number of seats'],
+  },
+};
+
+// Where each stored section lands on the profile page. A field-level entry
+// overrides the section default and may rename the field for display; the
+// source's own field name stays in the database.
+const PAGE_SECTIONS = ['introduction', 'overview', 'people', 'government'];
+const DISPLAY = {
+  Introduction: { page: 'introduction' },
+  Geography: {
+    page: 'overview',
+    fields: { 'Map references': { label: 'Continent' } },
+  },
+  'People and Society': { page: 'people' },
+  Government: { page: 'government' },
+};
+
+// Resolve the page section and display label for one stored row.
+function displayPlacement(section, field) {
+  const d = DISPLAY[section] || { page: null };
+  const f = (d.fields || {})[field] || {};
+  return { page: f.page || d.page || null, label: f.label || field };
+}
 const EXCLUDED_ITEMS = {
+  // The "major-language sample(s)" entry is the Factbook's own slogan
+  // translated into the local language, not information about the country.
+  'People and Society': { Languages: ['major-language sample(s)'] },
   Government: { 'Executive branch': ['chief of state', 'head of government', 'cabinet'] },
 };
 
@@ -64,10 +112,12 @@ function normalizeField(section, field, value) {
   const out = { text: null, items: [] };
   if (!value || typeof value !== 'object') return out;
   const dropItems = (EXCLUDED_ITEMS[section] || {})[field] || [];
+  const keepItems = (INCLUDED_ITEMS[section] || {})[field] || null;
   for (const [rawKey, v] of Object.entries(value)) {
     const key = rawKey.trim();
-    if (key === 'text') { out.text = cleanText(v); continue; }
+    if (key === 'text') { if (!keepItems) out.text = cleanText(v); continue; }
     if (dropItems.includes(key)) continue;
+    if (keepItems && !keepItems.includes(key)) continue;
     const text = v && typeof v === 'object' ? cleanText(v.text) : cleanText(v);
     if (text) out.items.push({ label: key, text });
   }
@@ -84,10 +134,12 @@ function extractProfile(profile) {
     const src = profile && profile[section];
     if (!src || typeof src !== 'object') continue;
     const skip = EXCLUDED_FIELDS[section] || [];
+    const only = INCLUDED_FIELDS[section] || null;
     const rows = [];
     let order = 0;
     for (const [field, value] of Object.entries(src)) {
       if (skip.includes(field)) continue;
+      if (only && !only.includes(field)) continue;
       const content = normalizeField(section, field, value);
       if (!content.text && !content.items.length) continue;
       rows.push({ field, order: (order += 10), content });
@@ -139,7 +191,9 @@ function extractAll(upstreamDir, { snapshotDate, upstreamCommit } = {}) {
     discontinued: '2026-02-04',
     sections: SECTIONS,
     excludedFields: EXCLUDED_FIELDS,
+    includedFields: INCLUDED_FIELDS,
     excludedItems: EXCLUDED_ITEMS,
+    includedItems: INCLUDED_ITEMS,
     extractedAt: new Date().toISOString(),
     profiles: report.written,
   };
@@ -177,6 +231,7 @@ async function importFactbook(db, { log = () => {} } = {}) {
     ? `${meta.upstream.repo}/tree/${meta.upstream.commit}` : SOURCE.url;
   const client = await db.pool.connect();
   let rows = 0; let countries = 0;
+  const keepSet = new Set(); const keep = [];
   try {
     await client.query('BEGIN');
     for (const file of files) {
@@ -184,6 +239,8 @@ async function importFactbook(db, { log = () => {} } = {}) {
       countries++;
       for (const [section, list] of Object.entries(p.sections || {})) {
         for (const r of list) {
+          const k = `${section}\u0000${r.field}`;
+          if (!keepSet.has(k)) { keepSet.add(k); keep.push({ section, field: r.field }); }
           await client.query(
             `INSERT INTO stat_country_texts
                (iso3, section, field, display_order, content, original_content, source_id, source_name, source_url, data_date, retrieved_at)
@@ -200,7 +257,16 @@ async function importFactbook(db, { log = () => {} } = {}) {
         }
       }
     }
+    // Fields no longer shipped (excluded since the last import) are removed,
+    // unless an admin has edited them.
+    const { rowCount: removed } = await client.query(
+      `DELETE FROM stat_country_texts t WHERE t.source_id = $1 AND t.edited_at IS NULL
+         AND NOT EXISTS (SELECT 1 FROM unnest($2::text[], $3::text[]) AS k(section, field)
+                         WHERE k.section = t.section AND k.field = t.field)`,
+      [SOURCE.id, keep.map((k) => k.section), keep.map((k) => k.field)]
+    );
     await client.query('COMMIT');
+    if (removed) log(`factbook: ${removed} rows of excluded fields removed`);
   } catch (err) {
     await client.query('ROLLBACK');
     throw err;
@@ -213,6 +279,6 @@ async function importFactbook(db, { log = () => {} } = {}) {
 }
 
 module.exports = {
-  SOURCE, SECTIONS, EXCLUDED_FIELDS, EXCLUDED_ITEMS, DATA_DIR, PROFILES_DIR, META_FILE,
+  SOURCE, SECTIONS, EXCLUDED_FIELDS, INCLUDED_FIELDS, EXCLUDED_ITEMS, INCLUDED_ITEMS, PAGE_SECTIONS, DISPLAY, displayPlacement, DATA_DIR, PROFILES_DIR, META_FILE,
   cleanText, normalizeField, extractProfile, factbookName, extractAll, readMeta, listProfiles, importFactbook,
 };

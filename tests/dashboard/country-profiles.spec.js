@@ -72,16 +72,17 @@ const GEORGIA = {
   },
   texts: {
     source: { name: 'CIA World Factbook', url: 'https://github.com/factbook/factbook.json/tree/abc', dataDate: '2026-01', retrievedAt: '2026-10-13T00:00:00Z', discontinued: '2026-02-04' },
+    // Keyed by page section; `label` is what the page shows, `field` the source name.
     sections: {
-      Introduction: [{ field: 'Background', content: { text: 'The region of present-day Georgia once contained the ancient kingdoms of Colchis.<br /><br />Second paragraph.', items: [] }, edited: false }],
-      Geography: [
-        { field: 'Location', content: { text: 'Southwestern Asia, bordering the Black Sea', items: [] }, edited: false },
-        { field: 'Area', content: { text: null, items: [{ label: 'total', text: '69,700 sq km' }, { label: 'land', text: '69,700 sq km' }] }, edited: false },
+      introduction: [{ section: 'Introduction', field: 'Background', label: 'Background', content: { text: 'The region of present-day Georgia once contained the ancient kingdoms of Colchis.<br /><br />Second paragraph.', items: [] }, edited: false }],
+      overview: [
+        { section: 'Geography', field: 'Map references', label: 'Continent', content: { text: 'Asia', items: [] }, edited: false },
+        { section: 'Geography', field: 'Land boundaries', label: 'Land boundaries', content: { text: null, items: [{ label: 'total', text: '1,814 km' }, { label: 'border countries', text: 'Armenia 219 km; Azerbaijan 428 km' }] }, edited: false },
       ],
-      'People and Society': [{ field: 'Languages', content: { text: null, items: [{ label: 'Languages', text: 'Georgian (official) 87.6%' }] }, edited: true }],
-      Government: [
-        { field: 'Government type', content: { text: 'parliamentary republic', items: [] }, edited: false },
-        { field: 'Executive branch', content: { text: null, items: [{ label: 'election/appointment process', text: 'president elected by a College of Electors' }] }, edited: false },
+      people: [{ section: 'People and Society', field: 'Languages', label: 'Languages', content: { text: null, items: [{ label: 'Languages', text: 'Georgian (official) 87.6%' }] }, edited: true }],
+      government: [
+        { section: 'Government', field: 'Government type', label: 'Government type', content: { text: 'parliamentary republic', items: [] }, edited: false },
+        { section: 'Government', field: 'Executive branch', label: 'Executive branch', content: { text: null, items: [{ label: 'election/appointment process', text: 'president elected by a College of Electors' }] }, edited: false },
       ],
     },
   },
@@ -169,17 +170,20 @@ test('profile: breadcrumb, header, tiles with year and source, only sections wit
   await expect(page.locator('.cp-tile[data-code="SL.UEM.TOTL.ZS"] .cp-tile__value')).toHaveText('No data');
 
   // Trade has no values at all, so the section and its nav entry are absent.
-  await expect(page.locator('.cp-section')).toHaveCount(6);
-  await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'Geography', 'People', 'Government', 'Economy']);
+  await expect(page.locator('.cp-section')).toHaveCount(5);
+  await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'People', 'Government', 'Economy']);
   await expect(page.locator('#section-trade')).toHaveCount(0);
 
-  // Factbook text: HTML rendered, sub-items as a list, attribution with snapshot and discontinuation.
+  // Factbook text: HTML rendered, geography fields inside Overview with the
+  // display label, sub-items as a list, attribution with snapshot and discontinuation.
   await expect(page.locator('#section-introduction .cp-text-field__text')).toContainText('kingdoms of Colchis');
   await expect(page.locator('#section-introduction .cp-text-field__text br')).toHaveCount(2);
-  await expect(page.locator('#section-geography .cp-text-field[data-field="Area"] dt')).toHaveText(['total', 'land']);
-  await expect(page.locator('#section-geography .cp-fb-note')).toContainText('CIA World Factbook');
-  await expect(page.locator('#section-geography .cp-fb-note')).toContainText('snapshot 2026-01');
-  await expect(page.locator('#section-geography .cp-fb-note')).toContainText('publication discontinued on 04/02/2026');
+  await expect(page.locator('#section-overview .cp-text-field[data-field="Map references"] .cp-text-field__label')).toHaveText('Continent');
+  await expect(page.locator('#section-overview .cp-text-field[data-field="Map references"] .cp-text-field__text')).toHaveText('Asia');
+  await expect(page.locator('#section-overview .cp-text-field[data-field="Land boundaries"] dt')).toHaveText(['total', 'border countries']);
+  await expect(page.locator('#section-overview .cp-fb-note')).toContainText('CIA World Factbook');
+  await expect(page.locator('#section-overview .cp-fb-note')).toContainText('snapshot 2026-01');
+  await expect(page.locator('#section-overview .cp-fb-note')).toContainText('publication discontinued on 04/02/2026');
   await expect(page.locator('#section-people .cp-text-block__title')).toHaveText('From the World Factbook');
   await expect(page.locator('#section-people .cp-text-field__label .pill')).toHaveText('edited');
   await expect(page.locator('#section-government .cp-text-field')).toHaveCount(2);

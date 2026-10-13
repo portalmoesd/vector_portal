@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Caribbean, western one-third of the island of Hispaniola, between the Caribbean Sea and the North Atlantic Ocean, west of the Dominican Republic",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "19 00 N, 72 25 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27,750 sq km"
-      },
-      {
-       "label": "land",
-       "text": "27,560 sq km"
-      },
-      {
-       "label": "water",
-       "text": "190 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Maryland",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "1,771 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "to depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; semiarid where mountains in east cut off trade winds",
      "items": []
@@ -127,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly rough and mountainous",
      "items": []
@@ -135,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "bauxite, copper, calcium carbonate, gold, marble, hydropower, arable land",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "65.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 36.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 10.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 17.8% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "13.4% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "21.5% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "800 sq km (2013)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "fairly even distribution; largest concentrations located near coastal areas",
      "items": []
@@ -213,7 +102,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "lies in the middle of the hurricane belt and subject to severe storms from June to October; occasional flooding and earthquakes; periodic droughts",
      "items": []
@@ -221,7 +110,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "shares island of Hispaniola with Dominican Republic (western one-third is Haiti, eastern two-thirds is the Dominican Republic); it is the most mountainous nation in the Caribbean",
      "items": []
@@ -230,549 +119,27 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11,898,812 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "5,863,438"
-      },
-      {
-       "label": "female",
-       "text": "6,035,374"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Haitian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Haitian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Black 95%, mixed and White 5%",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "French (official), Creole (official)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, sous endispansab pou enfomasyon debaz. (Haitian Creole)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Catholic 55%, Protestant 29%, Vodou 2.1%, other 4.6%, none 10% (2018 est.)",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong> 50-80% of Haitians incorporate some elements of Vodou culture or practice in addition to another religion, most often Roman Catholicism; Vodou was recognized as an official religion in 2003"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "30.5% (male 1,790,061/female 1,794,210)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.3% (male 3,787,782/female 3,887,791)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4.2% (2024 est.) (male 214,600/female 279,499)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "52.3 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "45.8 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "6.5 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "15.4 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "25.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.7 years"
-      },
-      {
-       "label": "female",
-       "text": "25.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.22% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "20.76 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "7 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.54 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "fairly even distribution; largest concentrations located near coastal areas",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "59.7% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.47% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "2.987 million PORT-AU-PRINCE (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.97 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.77 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.97 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "22.4 years (2016/7 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "328 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "35 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "40.2 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "33.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "65.6 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "63.8 years"
-      },
-      {
-       "label": "female",
-       "text": "67.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.39 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.19 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 84.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 42.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 67.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 15.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 57.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 32.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3.5% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "4.1% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.29 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "4.8 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 82.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 42.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 66.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 17.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 57.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 33.7% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "22.7% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2.85 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.55 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.03 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "2.26 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.1% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12.4% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "2.1% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "10.7% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "53.6% (2017 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "2.1% (2017)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "14.9% (2017)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "1.6% (2017)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "1% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "13.2% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "68% (2017 est.)"
-      },
-      {
-       "label": "male",
-       "text": "72.9% (2017 est.)"
-      },
-      {
-       "label": "female",
-       "text": "63.9% (2017 est.)"
       }
      ]
     }
@@ -846,24 +213,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "10 departments (<em>départements</em>, singular - <em>département</em>); Artibonite, Centre, Grand'Anse, Nippes, Nord, Nord-Est, Nord-Ouest, Ouest, Sud, Sud-Est",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system strongly influenced by Napoleonic Code",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -883,49 +234,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a native-born citizen of Haiti"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -954,28 +264,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "National Assembly (Assemblée nationale)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note 1:</strong> when the two chambers meet collectively, it is known as the National Assembly (or L'Assemblée nationale) and is convened for specific purposes spelled out in the constitution<br /><strong><br />note 2:</strong> as of October 2024, the Senate and Chamber of Deputies were not functional"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -986,41 +288,13 @@
       {
        "label": "number of seats",
        "text": "119 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "8/9/2015 to 10/25/2015"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Haitian Tet Kale Party (PHTK) (9); Konvansyon Inite Demokratik (KID) (7); Ayiti an aksyon (AAA) (6); Fanmi Lavalas (6); Patriotic Unity Party (Inite Patriyotik) (4); People's Struggle Party (OPL) (7); Other (24)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "0%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "August 2026"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -1031,78 +305,21 @@
       {
        "label": "number of seats",
        "text": "30 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "partial renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "6 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "11/20/2016 to 1/29/2017"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Haitian Tet Kale Party (PHTK) (9); Truth (Vérité) (3); Konvansyon Inite Demokratik (KID) (2); Bouclier (2); Ayiti an aksyon (AAA) (2); Other (10)"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "August 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Cour de cassation (consists of 12 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges appointed by the president from candidate lists submitted by the Senate of the National Assembly"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of Appeal; Courts of First Instance; magistrate's courts; land, labor, and children's courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Superior Council of the Judiciary or Conseil Supérieur du Pouvoir Judiciaire is a 9-member body charged with the administration and oversight of the judicial branch of government<br /><br /><strong>note: </strong>Haiti is a member of the Caribbean Court of Justice, the Constitutional Court (called for in the 1987 constitution but not yet established), and the High Court of Justice, for trying high government officials (currently not functional)<br /><br /><strong>note</strong>: Article 174 of Haiti's constitution states that judges of the Supreme Court are appointed for 10 years, whereas Article 177 states that judges of the Supreme Court are appointed for life"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Alternative League for Haitian Progress and Emancipation (Ligue Alternative pour le Progrès et l’Emancipation Haïtienne) or LAPEH<br />Christian Movement for a New Haiti or MCNH or Mochrenha<br />Christian National Movement for the Reconstruction of Haiti or UNCRH<br />Combat of Peasant Workers to Liberate Haiti (Konbit Travaye Peyizan Pou Libere Ayiti) or Kontra Pep La <br />Convention for Democratic Unity or KID<br />Cooperative Action to Rebuild Haiti or KONBA<br />December 16 Platform or Platfom 16 Desanm<br />Democratic Alliance Party or ALYANS (coalition includes KID and PPRH)<br />Democratic Centers' National Council or CONACED<br />Democratic and Popular Sector (Secteur Démocratique et Populaire) or SDP<br />Democratic Unity Convention (Konvansyon Inite Demokratik) or KID<br />Dessalinian Patriotic and Popular Movement or MOPOD<br />Effort and Solidarity to Create an Alternative for the People or ESKAMP<br />Fanmi Lavalas or FL<br />Forward (En Avant)<br />Fusion of Haitian Social Democrats (Fusion Des Sociaux-Démocrates Haïtiens) or FHSD<br />G18 Policy Platform (Plateforme Politique G18)<br />Haiti in Action (Ayiti An Aksyon Haiti's Action) or AAA<br />Haitian Tet Kale Party (Parti Haitien Tet Kale) or PHTK<br />Independent Movement for National Reconciliation or MIRN<br />Lavni Organization or LAVNI<br />Lod Demokratik<br />Love Haiti (Renmen Ayiti) or RA<br />MTV Ayiti<br />National Consortium of Haitian Political Parties (Consortium National des Partis Politiques Haitiens) or CNPPH <br />National Shield Network (Reseau Bouclier National)<br />Organization of the People's Struggle (Oganizasyon Pep Kap Lite) or OPL<br />Patriotic Unity (Inite Patriyotik) or Inite<br />Platform Pitit Desalin (Politik Pitit Dessalines) or PPD<br />Political Party for Us All or Bridge (Pont) or Pou Nou Tout<br />Popular Patriotic Dessalinien Movement (Mouvement Patriotique Populaire Dessalinien) or MOPOD<br />Rally of Progressive National Democrats (Rassemblement des Démocrates Nationaux Progressistes) or RDNP<br />Respe (Respect)<br />Women and Families Political Parties (Defile Pati Politik Fanm Ak Fanmi)",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, ACS, AOSIS, Caricom, CD, CDB, CELAC, FAO, G-77, IADB, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ITSO, ITU, ITUC (NGOs), LAES, MIGA, NAM, OAS, OIF, OPANAL, OPCW, PCA, Petrocaribe, UN, UNCTAD, UNESCO, UNIDO, Union Latina, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "1 January 1804 (from France)",
      "items": []
@@ -1110,7 +327,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 1 January (1804)",
      "items": []
@@ -1118,7 +335,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> two equal horizontal bands of blue (top) and red; a centered white rectangle bears the coat of arms, which has a palm tree flanked by flags and two cannons above a scroll with the motto L'UNION FAIT LA FORCE (Union Makes Strength)<br /><br /><strong>meaning:</strong> the colors are taken from the French flag and represent the union of ethnic groups",
      "items": []
@@ -1126,7 +343,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "Hispaniolan trogon (bird), hibiscus flower",
      "items": []
@@ -1134,7 +351,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "blue, red",
      "items": []
@@ -1142,7 +359,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1163,7 +380,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southeastern Europe, between Serbia and Macedonia",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "42 35 N, 21 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10,887 sq km"
-      },
-      {
-       "label": "land",
-       "text": "10,887 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly larger than Delaware",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,23 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "0 km (landlocked)",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": "none (landlocked)",
-     "items": []
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "influenced by continental air masses resulting in relatively cold winters with heavy snowfall and hot, dry summers and autumns; Mediterranean and alpine influences create regional variation; maximum rainfall between October and December",
      "items": []
@@ -110,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "flat fluvial basin at an elevation of 400-700 m above sea level surrounded by several high mountain ranges with elevations of 2,000 to 2,500 m",
      "items": []
@@ -118,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -139,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "nickel, lead, zinc, magnesium, lignite, kaolin, chrome, bauxite",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "52.8% (2018 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 27.4% (2018 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 1.9% (2018 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 23.5% (2018 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "41.7% (2018 est.)"
-      },
-      {
-       "label": "other",
-       "text": "5.5% (2018 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "NA",
-     "items": []
-    }
-   },
-   {
     "field": "Major watersheds (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -201,7 +107,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "population clusters exist throughout the country, with the largest in the east in and around the capital of Pristina",
      "items": []
@@ -209,7 +115,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "the 41-km (25-mi) Nerodimka River divides into two branches, each of which flows into a different sea: the northern branch flows into the Sitnica River, which via the Ibar, Morava, and Danube Rivers ultimately flows into the Black Sea; the southern branch flows via the Lepenac and Vardar Rivers into the Aegean Sea",
      "items": []
@@ -218,73 +124,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,977,093 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "1,017,992"
-      },
-      {
-       "label": "female",
-       "text": "959,101"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Kosovan"
-      },
-      {
-       "label": "adjective",
-       "text": "Kosovan"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Kosovo, a neutral term, is sometimes also used as a noun or adjective as in Kosovo Albanian, Kosovo Serb, Kosovo minority, or Kosovo citizen"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Albanians 92.9%, Bosniaks 1.6%, Serbs 1.5%, Turk 1.1%, Ashkali 0.9%, Egyptian 0.7%, Gorani 0.6%, Romani 0.5%, other/unspecified 0.2% (2011 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> these estimates may under-represent Serb, Romani, and some other ethnic minorities because they are based on the 2011 Kosovo national census, which excluded northern Kosovo (a largely Serb-inhabited region) and was partially boycotted by Serb and Romani communities in southern Kosovo"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Albanian (official) 94.5%, Bosnian 1.7%, Serbian (official) 1.6%, Turkish 1.1%, other 0.9% (includes Romani), unspecified 0.1% (2011 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Libri i fakteve boterore, burimi i pazevendesueshem per informacione elementare (Albanian)<br /><br />Knjiga svetskih činjenica, neophodan izvor osnovnih informacija. (Serbian)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -295,7 +142,7 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 95.6%, Roman Catholic 2.2%, Orthodox 1.5%, other 0.1%, none 0.1%, unspecified 0.6% (2011 est.)",
      "items": [
@@ -304,224 +151,6 @@
        "text": "<strong>note:</strong> these estimates may under-represent Serb, Romani, and some other ethnic minorities because they are based on the 2011 Kosovo national census, which excluded northern Kosovo (a largely Serb-inhabited region) and was partially boycotted by Serb and Romani communities in southern Kosovo"
       }
      ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "22.7% (male 233,010/female 216,304)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "68.9% (male 712,403/female 649,932)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "8.4% (2024 est.) (male 72,579/female 92,865)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "45.1 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "33 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "12.1 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "8.2 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "32.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.7 years"
-      },
-      {
-       "label": "female",
-       "text": "32.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.73% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "14.16 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.88 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population clusters exist throughout the country, with the largest in the east in and around the capital of Pristina",
-     "items": []
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 140,
-    "content": {
-     "text": "218,782 PRISTINA (capital) (2020)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 150,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.08 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.08 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.1 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.78 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.06 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.2 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "21.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "73.1 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "71 years"
-      },
-      {
-       "label": "female",
-       "text": "75.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 180,
-    "content": {
-     "text": "1.85 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 190,
-    "content": {
-     "text": "0.89 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 200,
-    "content": {
-     "text": "0.2 physicians/1,000 population (2015)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 210,
-    "content": {
-     "text": "61.6% (2020 est.)",
-     "items": []
     }
    }
   ],
@@ -593,24 +222,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "38 municipalities (<em>komunat</em>, singular - <em>komuna </em>(Albanian); <em>opstine</em>, singular - <em>opstina </em>(Serbian)); Decan (Decani), Dragash (Dragas), Ferizaj (Urosevac), Fushe Kosove (Kosovo Polje), Gjakove (Dakovica), Gjilan (Gnjilane), Gllogovc (Glogovac), Gracanice (Gracanica), Hani i Elezit (Deneral Jankovic), Istog (Istok), Junik, Kacanik, Kamenice (Kamenica), Kline (Klina), Kllokot (Klokot), Leposaviq (Leposavic), Lipjan (Lipljan), Malisheve (Malisevo), Mamushe (Mamusa), Mitrovice e Jugut (Juzna Mitrovica) [South Mitrovica], Mitrovice e Veriut (Severna Mitrovica) [North Mitrovica], Novoberde (Novo Brdo), Obiliq (Obilic), Partesh (Partes), Peje (Pec), Podujeve (Podujevo), Prishtine (Pristina), Prizren, Rahovec (Orahovac), Ranillug (Ranilug), Shterpce (Strpce), Shtime (Stimlje), Skenderaj (Srbica), Suhareke (Suva Reka), Viti (Vitina), Vushtrri (Vucitrn), Zubin Potok, Zvecan",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -626,49 +239,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Kosovo"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -697,7 +269,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -706,92 +278,23 @@
        "text": "Assembly (Kuvendi i Kosoves/Skupstina Kosova)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "120 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/14/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Self-Determination Movement (LVV) (58), Democratic Party of Kosovo (PDK) (19), Democratic League of Kosovo (LDK) (15), Serb List (10), Alliance for the Future of Kosovo (AAK) (8), other (10)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "34%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "2025"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> 20 seats reserved for ethnic minorities -- 10 for Serbs and 10 for other minorities"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the court president and 18 judges and organized into Appeals Panel of the Kosovo Property Agency and Special Chamber); Constitutional Court (consists of the court president, vice president, and 7 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges nominated by the Kosovo Judicial Council, a 13-member independent body staffed by judges and lay members, and also responsible for overall administration of Kosovo's judicial system; judges appointed by the president of the Republic of Kosovo; judges appointed until mandatory retirement age; Constitutional Court judges nominated by the Kosovo Assembly and appointed by the president of the republic to serve single, 9-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Appeals (organized into 4 departments: General, Serious Crime, Commercial Matters, and Administrative Matters); Basic Court (located in 7 municipalities, each with several branches)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in 2015, the Kosovo Assembly approved a constitutional amendment that established the Kosovo Relocated Specialist Judicial Institution, also referred to as the Kosovo Specialist Chambers or \"Special Court\"; the court, located at the Hague in the Netherlands, began operating in 2016 and has jurisdiction to try crimes against humanity, war crimes, and other crimes under Kosovo law that occurred in the 1998-2000 period"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Alliance for the Future of Kosovo or AAK<br />Ashkali Party for Integration or PAI<br />Civic Initiative for Freedom, Justice, and Survival<br />Democratic League of Kosovo or LDK<br />Democratic Party of Kosovo or PDK<br />New Democratic Initiative of Kosovo or IRDK<br />New Democratic Party or NDS <br />Progressive Movement of Kosovar Roma or LPRK<br />Romani Initiative<br />Self-Determination Movement (Lëvizja Vetevendosje or Vetevendosie) or LVV or VV<br />Serb List or SL<br />Social Democratic Union or SDU<br />Turkish Democratic Party of Kosovo or KDTP<br />Unique Gorani Party or JGP<br />Vakat Coalition or VAKAT",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "FIFA, IBRD, IDA, IFC, IMF, IOC, ITUC (NGOs), MIGA, OIF (observer)",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "17 February 2008 (from Serbia)",
      "items": []
@@ -799,7 +302,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 17 February (2008)",
      "items": []
@@ -807,7 +310,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> a dark blue field with a gold-colored silhouette of Kosovo in the center, with six five-pointed white stars in a slight arc over it<br /><br /><strong>meaning: </strong>each star represents one of the major ethnic groups of Kosovo: Albanians, Serbs, Turks, Gorani, Roma, and Bosniaks",
      "items": [
@@ -820,7 +323,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "six five-pointed white stars",
      "items": []
@@ -828,7 +331,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, gold, white",
      "items": []
@@ -836,7 +339,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "uses the national colors of blue, gold, and white, and is featured on the country’s flag; the golden map symbolizes a rich and peaceful Kosovo, with a blue background that represents the country’s aspirations for Euro-Atlantic integration; the six white stars stand for the major ethnic groups in Kosovo: Albanians, Serbs, Bosniaks, Turks, Roma (including Ashkali and Egyptians), and Gorani",
      "items": []
@@ -844,7 +347,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -865,7 +368,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

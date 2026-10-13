@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Oceania, island in the South Pacific Ocean, south of the Marshall Islands",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "0 32 S, 166 55 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Oceania",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21 sq km"
-      },
-      {
-       "label": "land",
-       "text": "21 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "about 0.1 times the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,36 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "30 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical with a monsoonal pattern; rainy season (November to February)",
      "items": []
@@ -119,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "sandy beach rises to fertile ring around raised coral reefs with phosphate plateau in center",
      "items": []
@@ -127,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -144,56 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "phosphates, fish",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "20% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 0% (2022 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 20% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0% (2022 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "0% (2022 est.)"
-      },
-      {
-       "label": "other",
-       "text": "80% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "0 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "most people live in the fertile coastal areas, especially along the southwest coast",
      "items": []
@@ -201,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "periodic droughts",
      "items": []
@@ -209,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Nauru is the third-smallest country in the world behind the Holy See (Vatican City) and Monaco; it is the smallest country in the Pacific Ocean, the smallest country outside Europe, the world's smallest island country, and the world's smallest independent republic; situated just 53 km south of the equator, Nauru is one of the three great phosphate rock islands in the Pacific Ocean -- the others are Banaba (Ocean Island) in Kiribati and Makatea in French Polynesia",
      "items": []
@@ -218,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9,930 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "4,874"
-      },
-      {
-       "label": "female",
-       "text": "5,056"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Nauruan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Nauruan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Nauruan 94.6%, I-Kiribati 2.2%, Fijian 1.3%, other 1.9% (2021 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Nauruan 93% (official, a distinct Pacific Island language), English 2% (widely understood, spoken, and used for most government and commercial purposes), other 5% (includes Gilbertese 2% and Chinese 2%) (2011 est.)",
      "items": [
@@ -278,387 +125,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Protestant 60.4% (Nauruan Congregational 34.7%, Assemblies of God 11.6%, Pacific Light House 6.3%, Nauru Independent 3.6%, Baptist 1.5, Seventh Day Adventist 1.3%, other Protestant 1.4%), Roman Catholic 33.9%, other 4.2%, none 1.3%, no answer 0.3% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "29.6% (male 1,493/female 1,433)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "66% (male 3,220/female 3,309)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4.4% (2024 est.) (male 143/female 294)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "50.7 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "43.7 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "7 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "14.4 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "27.3 years"
-      },
-      {
-       "label": "female",
-       "text": "28.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.37% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "19.64 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.55 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-9.37 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most people live in the fertile coastal areas, especially along the southwest coast",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "100% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.18% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 150,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.97 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.49 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 160,
-    "content": {
-     "text": "273 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.5 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "9.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "5.3 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "68.6 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "65 years"
-      },
-      {
-       "label": "female",
-       "text": "72.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "2.52 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "1.24 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2020 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "13.1% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "11.8% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 230,
-    "content": {
-     "text": "1.27 physicians/1,000 population (2015)",
-     "items": []
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 240,
-    "content": {
-     "text": "61% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 250,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2.44 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.54 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.09 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.81 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "47.7% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "49.3% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "46.1% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 270,
-    "content": {
-     "text": "3.8% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 280,
-    "content": {
-     "text": "57.7% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "5.7% of GDP (2023 est.) NA"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "6.6% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "96.6% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "93.4% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "99.7% (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -722,24 +192,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "14 districts; Aiwo, Anabar, Anetan, Anibare, Baitsi, Boe, Buada, Denigomodu, Ewa, Ijuw, Meneng, Nibok, Uaboe, Yaren",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of common law based on the English model and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -755,24 +209,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 80,
-    "content": {
-     "text": "20 years of age; universal and compulsory",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 90,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -801,7 +239,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -810,84 +248,23 @@
        "text": "Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "19 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "Full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "3 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/11/2025"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "10.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the chief justice and several justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges appointed by the president to serve until age 65"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "District Court, Family Court"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in 2017, the Nauruan Government revoked the 1976 High Court Appeals Act, which had allowed appeals beyond the Nauruan Supreme Court, and in 2018, the government formed its own appeals court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "Nauru does not have formal political parties; alliances within the government are often formed based on extended family ties",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 130,
-    "content": {
-     "text": "ACP, ADB, AOSIS, C, FAO, G-77, ICAO, ICCt, IFAD, Interpol, IOC, IOM, ITU, OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, UPU, WHO, WMO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 140,
+    "order": 80,
     "content": {
      "text": "31 January 1968 (from the Australia-, NZ-, and UK-administered UN trusteeship)",
      "items": []
@@ -895,7 +272,7 @@
    },
    {
     "field": "National holiday",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Independence Day, 31 January (1968)",
      "items": []
@@ -903,7 +280,7 @@
    },
    {
     "field": "Flag",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> blue with a narrow horizontal gold stripe across the center and a large white 12-pointed star below the stripe on the left side<br /><br /><strong>meaning:</strong> blue stands for the Pacific Ocean; the star indicates the country's location in relation to the equator (the gold stripe), and the 12 points stand for the original tribes of Nauru; the star's white color represents phosphate, the basis of the island's wealth",
      "items": []
@@ -911,7 +288,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 170,
+    "order": 110,
     "content": {
      "text": "frigatebird, calophyllum flower",
      "items": []
@@ -919,7 +296,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 180,
+    "order": 120,
     "content": {
      "text": "blue, yellow, white",
      "items": []
@@ -927,7 +304,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 190,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

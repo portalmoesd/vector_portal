@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "East-Central Africa; south of Sudan, north of Uganda and Kenya, west of Ethiopia",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "8 00 N, 30 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "644,329 sq km"
-      },
-      {
-       "label": "land",
-       "text": "NA"
-      },
-      {
-       "label": "water",
-       "text": "NA"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "more than four times the size of Georgia; slightly smaller than Texas",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -90,23 +45,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "0 km (landlocked)",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": "none (landlocked)",
-     "items": []
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "hot with seasonal rainfall influenced by the annual shift of the Inter-Tropical Convergence Zone; rainfall heaviest in upland areas of the south and diminishes to the north",
      "items": []
@@ -114,7 +61,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "plains in the north and center rise to southern highlands along the border with Uganda and Kenya; the White Nile, flowing north out of the uplands of Central Africa, is the major geographic feature of the country; The Sudd (a name derived from floating vegetation that hinders navigation) is a large swampy area of more than 100,000 sq km fed by the waters of the White Nile that dominates the center of the country",
      "items": []
@@ -122,7 +69,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -139,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "hydropower, fertile agricultural land, gold, diamonds, petroleum, hardwoods, limestone, iron ore, copper, chromium ore, zinc, tungsten, mica, silver",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "44.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 3.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 40.8% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "11.3% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "43.8% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "1,000 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major rivers (by length in km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Nile (shared with Rwanda [s], Tanzania, Uganda, Sudan, and Egypt [m]) - 6,650 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -196,7 +102,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -209,7 +115,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "clusters found in urban areas, particularly in the western interior and around the White Nile, as shown in this population distribution map",
      "items": []
@@ -217,7 +123,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "landlocked; The Sudd is a vast swamp in the north central region of South Sudan, formed by the White Nile; its size is variable but can reach some 15% of the country's total area during the rainy season; it is one of the world's largest wetlands",
      "items": []
@@ -226,422 +132,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "12,703,714 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "6,476,341"
-      },
-      {
-       "label": "female",
-       "text": "6,227,373"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "South Sudanese (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "South Sudanese"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Dinka (Jieng) approximately 35-40%, Nuer (Naath) approximately 15%, Shilluk (Chollo), Azande, Bari, Kakwa, Kuku, Murle, Mandari, Didinga, Ndogo, Bviri, Lndi, Anuak, Bongo, Lango, Dungotona, Acholi, Baka, Fertit (2011 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>Figures are estimations due to population changes during South Sudan's civil war and the lack of updated demographic studies"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "English (official), Arabic (includes Juba and Sudanese variants), ethnic languages include Dinka, Nuer, Bari, Zande, Shilluk"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "The World Factbook, the indispensable source for basic information. (English)<br /><br />كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)"
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 60.5%, folk religion 32.9%, Muslim 6.2%, other &lt;1%, unaffiliated &lt;1% (2020 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "42.1% (male 2,725,520/female 2,619,035)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "55.3% (male 3,568,064/female 3,458,804)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "2.6% (2024 est.) (male 182,757/female 149,534)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "80.8 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "76.1 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "4.7 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "21.1 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18.7 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "18.7 years"
-      },
-      {
-       "label": "female",
-       "text": "18.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "4.52% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "35.68 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "8.65 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "18.2 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "clusters found in urban areas, particularly in the western interior and around the White Nile, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "21.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "4.12% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "459,000 JUBA (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "1.22 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.04 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "692 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "58.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "65.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "54.1 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "60.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "58.4 years"
-      },
-      {
-       "label": "female",
-       "text": "62.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "4.98 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "2.43 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 70% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 33.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 41.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 30% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 66.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 58.8% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "5.9% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "2.1% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.04 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 250,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 60.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 15.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 24.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 39.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 84.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 75.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 260,
-    "content": {
-     "text": "6.6% (2014)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "1.6% of GDP (2016 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "3.3% national budget (2015 est.)"
-      }
-     ]
     }
    }
   ],
@@ -701,21 +209,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "10 states; Central Equatoria, Eastern Equatoria, Jonglei, Lakes, Northern Bahr el Ghazal, Unity, Upper Nile, Warrap, Western Bahr el Ghazal, Western Equatoria",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in 2015, 28 new states were created, and 4 additional states in 2017; after the 2020 peace agreement, the country was again reorganized into the 10 original states, plus 2 administrative areas, Pibor and Ruweng, and 1 special administrative status area, Abyei (which is disputed between South Sudan and Sudan)"
-      }
-     ]
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 50,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -731,41 +226,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of South Sudan"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 70,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 80,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -794,24 +256,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 90,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Législature nationale (National Legislature)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 100,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -822,29 +280,13 @@
       {
        "label": "number of seats",
        "text": "550 (all appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/10/2021"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "32.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "December 2026"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 110,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -855,70 +297,21 @@
       {
        "label": "number of seats",
        "text": "100 (all appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "most recent election date",
-       "text": "8/2/2021"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "32.1%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "December 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of South Sudan (consists of a chief justice, deputy chief justice, and 5 additional justices); the 2011 Transitional Constitution of South Sudan calls for 9, rather than 5 additional justices"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "the 2011 Transitional Constitution of South Sudan calls for the establishment of a Judicial Service Council to recommend prospective justices to the president, and for the justices' tenures to be set by the National Legislature"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "national level - Courts of Appeal; High Courts; County Courts; state level - High Courts; County Courts; customary courts; other specialized courts and tribunals"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in mid-2022, the Government of South Sudan inaugurated an ad-hoc judiciary committee, a 12-member body led by two eminent jurists, that is charged with reviewing relevant laws, advising on judicial reform, and restructuring the judiciary"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 90,
     "content": {
      "text": "Democratic Change or DC<br />Democratic Forum or DF<br />Labour Party or LPSS<br />South Sudan Opposition Alliance or SSOA<br />Sudan African National Union or SANU<br />Sudan People's Liberation Movement or SPLM<br />Sudan People’s Liberation Movement-In Opposition or SPLM-IO<br />United Democratic Salvation Front or UDSF    <br />United South Sudan African Party or USSAP<br />United South Sudan Party or USSP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "AU, EAC, FAO, G-77, IBRD, ICAO, IDA, IFAD, IFC, IFRCS, IGAD, ILO, IMF, Interpol, IOM, IPU, ITU, MIGA, UN, UNCTAD, UNESCO, UPU, WCO, WHO, WMO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 100,
     "content": {
      "text": "9 July 2011 (from Sudan)",
      "items": []
@@ -926,7 +319,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 110,
     "content": {
      "text": "Independence Day, 9 July (2011)",
      "items": []
@@ -934,7 +327,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of black (top), red, and green; the red band is edged in white; a five-pointed gold star is in the middle of a blue isosceles triangle based on the left side<br /><br /><strong>meaning: </strong>black stands for the people, red for the blood shed in the struggle for freedom, green for the land, and blue for the Nile; the gold star represents the unity of the country's states",
      "items": [
@@ -947,7 +340,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 130,
     "content": {
      "text": "African fish eagle",
      "items": []
@@ -955,7 +348,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 140,
     "content": {
      "text": "red, green, blue, yellow, black, white",
      "items": []
@@ -963,7 +356,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Central Europe, bordering the Baltic Sea and the North Sea, between the Netherlands and Poland, south of Denmark",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "51 00 N, 9 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "357,022 sq km"
-      },
-      {
-       "label": "land",
-       "text": "348,672 sq km"
-      },
-      {
-       "label": "water",
-       "text": "8,350 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "three times the size of Pennsylvania; slightly smaller than Montana",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,36 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "2,389 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200-m depth or to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "temperate and marine; cool, cloudy, wet winters and summers; occasional warm mountain (foehn) wind",
      "items": []
@@ -123,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "lowlands in north, uplands in center, Bavarian Alps in south",
      "items": []
@@ -131,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -152,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "coal, lignite, natural gas, iron ore, copper, nickel, uranium, potash, salt, construction materials, timber, arable land",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "47.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 33.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.6% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 13.5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "32.8% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "15% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "5,065 sq km (2020)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -218,7 +111,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Donau (Danube) river source (shared with Austria, Slovakia, Hungary, Croatia, Serbia, Bulgaria, Ukraine, Moldova, and Romania [m]) - 2,888 km; Elbe river mouth (shared with Czechia [s]) - 1,252 km; Rhein (Rhine) (shared with Switzerland [s], France, and Netherlands [m]) - 1,233 km <br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -226,7 +119,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -239,7 +132,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "second most populous country in Europe; a fairly even distribution throughout most of the country, with urban areas attracting larger and denser populations, particularly in the far-western part of the industrial state of North Rhine-Westphalia",
      "items": []
@@ -247,7 +140,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "flooding",
      "items": []
@@ -255,7 +148,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "strategic location on North European Plain and along the entrance to the Baltic Sea; most major rivers in Germany -- the Rhine, Weser, Oder, Elbe -- flow northward; the Danube, which originates in the Black Forest, flows eastward",
      "items": []
@@ -264,525 +157,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "84,012,284 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "41,517,301"
-      },
-      {
-       "label": "female",
-       "text": "42,494,983"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "German(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "German"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "German 85.4%, Turkish 1.8%, Ukrainian 1.4%, Syrian 1.1%, Romanian 1%, Poland 1%, other/stateless/unspecified 8.3% (2022 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong>  data represent population by nationality"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "German (official); note - Danish, Frisian, Sorbian, and Romani are official minority languages; Low German, Danish, North Frisian, Sater Frisian, Lower Sorbian, Upper Sorbian, and Romani are recognized as regional languages"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Das World Factbook, die unverzichtbare Quelle für grundlegende Informationen. (German)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 24.8%, Protestant 22.6%, Muslim 3.7%, other 5.1%, none 43.8% (2022 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "13.8% (male 5,925,800/female 5,688,603)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "62.5% (male 26,705,657/female 25,875,865)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "23.7% (2024 est.) (male 8,941,245/female 10,981,930)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "61.3 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "22.4 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "38.9 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "2.6 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "46.9 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "45.5 years"
-      },
-      {
-       "label": "female",
-       "text": "48.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.13% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "8.87 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "11.96 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "1.79 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "second most populous country in Europe; a fairly even distribution throughout most of the country, with urban areas attracting larger and denser populations, particularly in the far-western part of the industrial state of North Rhine-Westphalia",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "77.8% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.13% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "3.574 million BERLIN (capital), 1.788 million Hamburg, 1.576 million Munich, 1.144 million Cologne, 796,000 Frankfurt (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.81 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.98 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "29.9 years (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "4 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3.5 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "2.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "81.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "79.6 years"
-      },
-      {
-       "label": "female",
-       "text": "84.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.59 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.77 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "12.7% of GDP (2022)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "20.5% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "4.53 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "7.8 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "22.3% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10.56 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "5.57 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "3.02 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.97 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "17.2% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "19.4% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "0.6% (2016 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "54.4% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "5.2% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "10.7% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "17 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "17 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "17 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -858,29 +250,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "16 states (<em>Laender</em>, singular - <em>Land</em>); Baden-Wuerttemberg, Bayern (Bavaria), Berlin, Brandenburg, Bremen, Hamburg, Hessen (Hesse), Mecklenburg-Vorpommern (Mecklenburg-Western Pomerania), Niedersachsen (Lower Saxony), Nordrhein-Westfalen (North Rhine-Westphalia), Rheinland-Pfalz (Rhineland-Palatinate), Saarland, Sachsen (Saxony), Sachsen-Anhalt (Saxony-Anhalt), Schleswig-Holstein, Thueringen (Thuringia)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Bayern, Sachsen, and Thueringen refer to themselves as free states (<em>Freistaaten</em>, singular - <em>Freistaat</em>), while Bremen calls itself a Free Hanseatic City (<em>Freie Hansestadt</em>) and Hamburg considers itself a Free and Hanseatic City (<em>Freie und Hansestadt</em>)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -896,49 +267,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a German citizen or a resident alien who has lived in Germany at least 8 years"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes, but requires prior permission from government"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal; age 16 for some state and municipal elections",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -962,25 +292,8 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> due to Germany's recognition of the concepts of \"overhang\" (when a party's share of the nationwide votes would entitle it to fewer seats than the number of individual constituency seats won in an election under Germany's mixed member proportional system) and \"leveling\" (whereby additional seats are elected to supplement the members directly elected by each constituency in order to ensure that each party's share of the total seats is roughly proportional to the party's overall shares of votes at the national level), the 20th Bundestag is the largest to date"
-      }
-     ]
-    }
-   },
-   {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -991,45 +304,13 @@
       {
        "label": "number of seats",
        "text": "630 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/23/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Christian Democratic Union (CDU) (164); Alternative for Germany (AfD) (152); Social Democratic Party (SPD) (120); Green Party (85); Left Party (Die Linke) (64); Christian Social Union of Bavaria (CSU) (44); Other (1)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "32.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "February 2029"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note 1:</strong> total seats can vary each electoral term; currently includes 4 seats for independent members; approximately one-half of members directly elected in multi-seat constituencies by proportional representation vote and approximately one-half directly elected in single-seat constituencies by simple majority vote; members' terms vary depending on the states they represent<br /><strong><br />note 2:</strong> the 20th Bundestag is the largest to date, due to Germany's recognition of \"overhang\" (when a party's share of the nationwide votes would entitle it to fewer seats than the number of individual constituency seats won in an election) and \"leveling\" (when additional seats are elected to supplement the members directly elected in order to ensure that each party's share of the total seats is roughly proportional to its overall share of votes at the national level)"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -1040,58 +321,21 @@
       {
        "label": "number of seats",
        "text": "69 (all appointed)"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "SPD 23; CDU 17; Green Party 15; Left Party 4; CSU 3; FW 3; FDP 2; other 2"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "34.8%"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Federal Court of Justice (court consists of 127 judges, including the court president, vice presidents, presiding judges, other judges; organized into 25 Senates subdivided into 12 civil panels, 5 criminal panels, and 8 special panels); Federal Constitutional Court or Bundesverfassungsgericht (consists of 2 Senates each subdivided into 3 chambers, each with a chairman and 8 members)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Federal Court of Justice judges selected by the Judges Election Committee, which consists of the Secretaries of Justice from each of the 16 federated states and 16 members appointed by the Federal Parliament; judges appointed by the president; judges serve until mandatory retirement at age 65; half of Federal Constitutional Court judges are elected by the House of Representatives and half by the Senate; judges appointed for 12-year terms with mandatory retirement at age 68"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Federal Administrative Court; Federal Finance Court; Federal Labor Court; Federal Social Court; each of the 16 federated states or Land has its own constitutional court and a hierarchy of ordinary (civil, criminal, family) and specialized (administrative, finance, labor, social) courts; two English-speaking commercial courts opened in 2020 in the state of Baden-Wuerttemberg -- the Stuttgart Commercial Court and the Mannheim Commercial Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Alliance '90/Greens <br />Alternative for Germany or AfD <br />Christian Democratic Union or CDU <br />Christian Social Union or CSU <br />Free Democratic Party or FDP <br />Free Voters or FW<br />The Left or Die Linke <br />Social Democratic Party or SPD",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ADB (nonregional member), AfDB (nonregional member), Arctic Council (observer), Australia Group, BIS, BSEC (observer), CBSS, CD, CDB, CE, CERN, EAPC, EBRD, ECB, EIB, EITI (implementing country), EMU, ESA, EU, FAO, FATF, G-5, G-7, G-8, G-10, G-20, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IGAD (partners), IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINURSO, NATO, NEA, NSG, OAS (observer), OECD, OPCW, OSCE, Pacific Alliance (observer), Paris Club, PCA, Schengen Convention, SELEC (observer), SICA (observer), UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNIFIL, UNMISS, UNOOSA, UNRWA, UNSOM, UNWTO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 90,
     "content": {
      "text": "18 January 1871 (establishment of the German Empire); divided into four zones of occupation (UK, US, USSR, and France) in 1945 after World War II; Federal Republic of Germany (FRG or West Germany) proclaimed on 23 May 1949 and included the former UK, US, and French zones; German Democratic Republic (GDR or East Germany) proclaimed on 7 October 1949 and included the former USSR zone; West Germany and East Germany unified on 3 October 1990, with all four powers formally relinquishing rights on 15 March 1991; notable earlier dates: 10 August 843 (Eastern Francia established from the division of the Carolingian Empire); 2 February 962 (crowning of OTTO I, recognized as the first Holy Roman Emperor)",
      "items": []
@@ -1099,7 +343,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 100,
     "content": {
      "text": "German Unity Day, 3 October (1990)",
      "items": []
@@ -1107,7 +351,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of black (top), red, and gold<br /><br /><strong>history:</strong> the colors can be traced back to the medieval banner of the Holy Roman Emperor -- a black eagle with red claws and beak on a gold field",
      "items": []
@@ -1115,7 +359,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 120,
     "content": {
      "text": "eagle",
      "items": []
@@ -1123,7 +367,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 130,
     "content": {
      "text": "black, red, yellow",
      "items": []
@@ -1131,7 +375,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 140,
     "content": {
      "text": "Germany’s coat of arms is the world’s oldest, said to date back to 1200, and uses the country’s national colors; it features the oldest European national symbol, an eagle known as the <em>Bundesadler</em> (Federal Eagle); the coat of arms has varied over time for military or political reasons, but the eagle has always been part of the design; the Federal Republic of Germany adopted this version in 1950",
      "items": []
@@ -1139,7 +383,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1160,7 +404,7 @@
    },
    {
     "field": "National heritage",
-    "order": 240,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

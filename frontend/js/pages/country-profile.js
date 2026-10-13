@@ -151,7 +151,7 @@
     const c = row.content || {};
     const items = (c.items || []).map((it) => `<div class="cp-text-item"><dt>${escapeHtml(it.label)}</dt><dd>${it.text}</dd></div>`).join('');
     return `<div class="cp-text-field" data-field="${escapeHtml(row.field)}">
-      <div class="cp-text-field__label">${escapeHtml(row.field)}${row.edited ? ` <span class="pill pill-blue">${escapeHtml(t('countryProfiles.factbook.edited'))}</span>` : ''}</div>
+      <div class="cp-text-field__label">${escapeHtml(row.label || row.field)}${row.edited ? ` <span class="pill pill-blue">${escapeHtml(t('countryProfiles.factbook.edited'))}</span>` : ''}</div>
       <div class="cp-text-field__body">${c.text ? `<div class="cp-text-field__text">${c.text}</div>` : ''}${items ? `<dl class="cp-text-items">${items}</dl>` : ''}</div>
     </div>`;
   }
@@ -184,31 +184,31 @@
         <h2 class="cp-section__title" id="h-${id}">${escapeHtml(t(`countryProfiles.sections.${id}`))}</h2>${inner}</section>`);
     };
 
+    // texts.sections is keyed by page section (introduction, overview,
+    // people, government) — the server decides where each field goes.
+    const txt = (id) => texts[id] || [];
+
     // Introduction: the Factbook background text, when present.
-    if (texts.Introduction && texts.Introduction.length) {
-      section('introduction', textBlock(texts.Introduction, fbSrc));
+    if (txt('introduction').length) {
+      section('introduction', textBlock(txt('introduction'), fbSrc));
     }
 
-    // Overview: header facts plus surface area; always has region/income.
+    // Overview: header facts plus surface area (always has region/income),
+    // then the geography fields from the Factbook.
     section('overview', `<div class="cp-rows">
       ${factRow(t('countryProfiles.region'), c.region.name)}
       ${factRow(t('countryProfiles.incomeLevel'), c.incomeLevel.name)}
       ${factRow(t('countryProfiles.capital'), c.capital)}
       ${bySection.overview.map(row).join('')}
-    </div>`);
-
-    if (texts.Geography && texts.Geography.length) {
-      section('geography', textBlock(texts.Geography, fbSrc));
-    }
+    </div>${textBlock(txt('overview'), fbSrc)}`);
 
     // People: World Bank indicators first, then the Factbook fields.
-    const peopleText = texts['People and Society'] || [];
-    if (hasData(bySection.people) || peopleText.length) {
-      section('people', `${hasData(bySection.people) ? `<div class="cp-rows">${bySection.people.map(row).join('')}</div>` : ''}${textBlock(peopleText, fbSrc, { heading: hasData(bySection.people) ? t('countryProfiles.factbook.fromFactbook') : null })}`);
+    if (hasData(bySection.people) || txt('people').length) {
+      section('people', `${hasData(bySection.people) ? `<div class="cp-rows">${bySection.people.map(row).join('')}</div>` : ''}${textBlock(txt('people'), fbSrc, { heading: hasData(bySection.people) ? t('countryProfiles.factbook.fromFactbook') : null })}`);
     }
 
-    if (texts.Government && texts.Government.length) {
-      section('government', textBlock(texts.Government, fbSrc));
+    if (txt('government').length) {
+      section('government', textBlock(txt('government'), fbSrc));
     }
 
     for (const id of ['economy', 'trade']) {
