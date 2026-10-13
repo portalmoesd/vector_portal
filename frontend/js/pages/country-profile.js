@@ -175,70 +175,37 @@
   function renderHero(data) {
     const c = data.country;
     const gov = (data.texts && data.texts.sections && data.texts.sections.government) || [];
-    const ov = (data.texts && data.texts.sections && data.texts.sections.overview) || [];
     const name = isKa() && c.nameKa ? c.nameKa : c.name;
     const flag = c.iso2 ? flagUrl(c.iso2) : '';
     const img = flag
-      ? `<img class="cp-hero__flag" src="${flag}" alt="${escapeHtml(t('countryProfiles.flagAlt', { name: c.name }))}" width="96" height="96" />`
+      ? `<img class="cp-hero__flag" src="${flag}" alt="${escapeHtml(t('countryProfiles.flagAlt', { name: c.name }))}" width="88" height="88" />`
       : '<span class="cp-hero__flag cp-hero__flag--none" aria-hidden="true"></span>';
 
-    // Official names from the Factbook; "none" means the source has no long form.
+    // One subtitle only: the official long-form name from the Factbook
+    // ("Kingdom of Belgium"); "none" means the source has no long form, in
+    // which case the local long form is used. Local-language variants are
+    // left to the Government section.
     const longForm = plain(fbItem(gov, 'Country name', 'conventional long form'));
     const localLong = plain(fbItem(gov, 'Country name', 'local long form'));
-    const localShort = plain(fbItem(gov, 'Country name', 'local short form'));
     const official = longForm && longForm !== 'none' ? longForm : (localLong && localLong !== 'none' ? localLong : '');
-    const local = [localLong, localShort].filter((s) => s && s !== 'none' && s !== official && s !== c.name);
-    const subtitleParts = [];
-    if (isKa() && c.nameKa) subtitleParts.push(c.name);
-    if (official && official !== c.name) subtitleParts.push(official);
-    if (local.length) subtitleParts.push(local.join(' · '));
+    const subtitle = [isKa() && c.nameKa ? c.name : '', official && official !== c.name ? official : ''].filter(Boolean).join(' · ');
 
-    const continent = plain(fbItem(ov, 'Map references', null));
     const pills = [
       c.region.name ? `<a class="pill pill-blue cp-pill" href="/pages/country-profiles.html?region=${encodeURIComponent(c.region.id || '')}">${escapeHtml(c.region.name)}</a>` : '',
       c.incomeLevel.name ? `<span class="pill pill-green cp-pill">${escapeHtml(c.incomeLevel.name)}</span>` : '',
-      continent ? `<span class="pill pill-gray cp-pill">${escapeHtml(continent)}</span>` : '',
     ].filter(Boolean).join('');
 
-    const facts = [
-      { k: t('countryProfiles.capital'), v: c.capital, attr: 'data-fact="capital"' },
-      { k: t('countryProfiles.hero.governmentType'), v: plain(fbItem(gov, 'Government type', null)) },
-      { k: t('countryProfiles.hero.nationalHoliday'), v: plain(fbItem(gov, 'National holiday', null)) },
-      { k: t('countryProfiles.hero.legislature'), v: legislatureSummary(gov) },
-    ].filter((f) => f.v || f.attr);
-    const factsHtml = facts.map((f) => `<div class="cp-hero__fact" ${f.attr || ''}><dt>${escapeHtml(f.k)}</dt><dd>${f.v ? escapeHtml(f.v) : noData()}</dd></div>`).join('');
-
-    const fb = data.texts && data.texts.source;
-    const srcLine = [
-      `${escapeHtml(t('countryProfiles.countryListSource'))}${c.retrievedAt ? ` (${escapeHtml(t('countryProfiles.retrieved'))} ${escapeHtml(formatDate(c.retrievedAt))})` : ''}`,
-      fb && gov.length ? `${escapeHtml(fb.name)}${fb.dataDate ? ` (${escapeHtml(t('countryProfiles.factbook.snapshot', { date: fb.dataDate }))})` : ''}` : '',
-    ].filter(Boolean).join(' · ');
-
     $('cpHeader').innerHTML = `
-      <div class="cp-hero__main">
-        ${img}
-        <div class="cp-hero__title">
-          <h1 class="cp-hero__name">${escapeHtml(name)}</h1>
-          ${subtitleParts.length ? `<div class="cp-hero__official">${escapeHtml(subtitleParts.join(' · '))}</div>` : ''}
+      ${img}
+      <div class="cp-hero__title">
+        <h1 class="cp-hero__name">${escapeHtml(name)}</h1>
+        ${subtitle ? `<div class="cp-hero__official">${escapeHtml(subtitle)}</div>` : ''}
+        <div class="cp-hero__meta">
           <div class="cp-hero__pills">${pills}</div>
+          <dl class="cp-hero__facts"><div class="cp-hero__fact" data-fact="capital"><dt>${escapeHtml(t('countryProfiles.capital'))}</dt><dd>${c.capital ? escapeHtml(c.capital) : noData()}</dd></div></dl>
         </div>
       </div>
-      <dl class="cp-hero__facts">${factsHtml}</dl>
-      <div class="cp-hero__src"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${srcLine}</div>`;
-  }
-
-  // "Parliament · 150 seats" or "House · 630 / Senate · 69" from the kept
-  // Legislative branch entries.
-  function legislatureSummary(gov) {
-    const parts = [];
-    for (const field of ['Legislative branch', 'Legislative branch - lower chamber', 'Legislative branch - upper chamber']) {
-      const name = plain(fbItem(gov, field, 'chamber name') || fbItem(gov, field, 'legislature name'));
-      const seats = plain(fbItem(gov, field, 'number of seats'));
-      const seatNum = seats && seats.match(/^[\d,]+/);
-      if (name && seatNum) parts.push(`${name} · ${seatNum[0]} ${t('countryProfiles.hero.seats')}`);
-      else if (name) parts.push(name);
-    }
-    return parts.join(' / ');
+      <div class="cp-hero__src">${escapeHtml(t('countryProfiles.source'))}: ${escapeHtml(t('countryProfiles.countryListSource'))}${c.retrievedAt ? ` · ${escapeHtml(t('countryProfiles.retrieved'))} ${escapeHtml(formatDate(c.retrievedAt))}` : ''}</div>`;
   }
 
   // ── Key figures ──────────────────────────────────────────────────────

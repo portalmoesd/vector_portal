@@ -1281,12 +1281,6 @@
     "lastSync": "Data synced",
     "latestYearNote": "Each figure shows the latest year the source has published.",
     "keyFigures": "Key figures",
-    "sourceShort": "World Bank",
-    "hero": {
-      "governmentType": "Government type",
-      "nationalHoliday": "National holiday",
-      "legislature": "Legislature",
-      "seats": "seats"
-    }
+    "sourceShort": "World Bank"
   }
 }
