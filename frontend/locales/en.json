@@ -1251,8 +1251,8 @@
     "indicators": {
       "population": "Population",
       "surfaceArea": "Surface area",
-      "gdp": "GDP (current US$)",
-      "gdpPerCapita": "GDP per capita (current US$)",
+      "gdp": "GDP",
+      "gdpPerCapita": "GDP per capita",
       "gdpGrowth": "GDP growth",
       "inflation": "Inflation",
       "unemployment": "Unemployment",
@@ -1279,6 +1279,14 @@
     "countryListSource": "World Bank country list",
     "retrieved": "retrieved",
     "lastSync": "Data synced",
-    "latestYearNote": "Each figure shows the latest year the source has published."
+    "latestYearNote": "Each figure shows the latest year the source has published.",
+    "keyFigures": "Key figures",
+    "sourceShort": "World Bank",
+    "hero": {
+      "governmentType": "Government type",
+      "nationalHoliday": "National holiday",
+      "legislature": "Legislature",
+      "seats": "seats"
+    }
   }
 }

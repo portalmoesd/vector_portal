@@ -81,6 +81,7 @@ const GEORGIA = {
       ],
       people: [{ section: 'People and Society', field: 'Languages', label: 'Languages', content: { text: null, items: [{ label: 'Languages', text: 'Georgian (official) 87.6%' }] }, edited: true }],
       government: [
+        { section: 'Government', field: 'Country name', label: 'Country name', content: { text: null, items: [{ label: 'conventional long form', text: 'none' }, { label: 'local long form', text: 'Republic of Georgia' }, { label: 'local short form', text: "Sak'art'velo" }] }, edited: false },
         { section: 'Government', field: 'Government type', label: 'Government type', content: { text: 'parliamentary republic', items: [] }, edited: false },
         { section: 'Government', field: 'Executive branch', label: 'Executive branch', content: { text: null, items: [{ label: 'election/appointment process', text: 'president elected by a College of Electors' }] }, edited: false },
       ],
@@ -147,49 +148,55 @@ test('index: filters are restored from a shared link', async ({ page }) => {
   await expect(page.locator('#cpGrid .cp-card__name')).toHaveText('Georgia');
 });
 
-test('profile: breadcrumb, header, tiles with year and source, only sections with data, "No data" never filled', async ({ page }) => {
+test('profile: breadcrumb, hero, key figures with year and source, only sections with data, "No data" never filled', async ({ page }) => {
   await preparePage(page);
   await page.goto(`${origin}/pages/country-profile.html?country=georgia`);
 
   const crumbs = page.locator('#cpBreadcrumb li');
   await expect(crumbs).toHaveText(['Home', 'Countries', 'Europe & Central Asia', 'Georgia']);
   await expect(crumbs.nth(2).locator('a')).toHaveAttribute('href', '/pages/country-profiles.html?region=ECS');
-  await expect(page.locator('.cp-header__name')).toHaveText('Georgia');
-  await expect(page.locator('.cp-header__flag')).toHaveAttribute('alt', 'Flag of Georgia');
-  await expect(page.locator('.cp-header__facts')).toContainText('Tbilisi');
-  await expect(page.locator('.cp-header__facts')).toContainText('Upper middle income');
 
-  const tiles = page.locator('.cp-tile');
-  await expect(tiles).toHaveCount(7);
-  const gdp = page.locator('.cp-tile[data-code="NY.GDP.MKTP.CD"]');
-  await expect(gdp.locator('.cp-tile__value')).toHaveText('$33.3B');
-  await expect(gdp.locator('.cp-src__year')).toHaveText('2024');
-  await expect(gdp.locator('.cp-src a')).toHaveAttribute('href', SRC_URL);
-  await expect(page.locator('.cp-tile[data-code="SP.POP.TOTL"] .cp-tile__value')).toHaveText('3,694,600');
-  await expect(page.locator('.cp-tile[data-code="AG.SRF.TOTL.K2"] .cp-tile__value')).toHaveText('69,700 km²');
-  await expect(page.locator('.cp-tile[data-code="SL.UEM.TOTL.ZS"] .cp-tile__value')).toHaveText('No data');
+  // Hero: name, flag alt, pills, quick facts drawn from both sources.
+  await expect(page.locator('.cp-hero__name')).toHaveText('Georgia');
+  await expect(page.locator('.cp-hero__flag')).toHaveAttribute('alt', 'Flag of Georgia');
+  await expect(page.locator('.cp-hero__pills .pill')).toHaveText(['Europe & Central Asia', 'Upper middle income', 'Asia']);
+  await expect(page.locator('.cp-hero__fact[data-fact="capital"] dd')).toHaveText('Tbilisi');
+  await expect(page.locator('.cp-hero__facts')).toContainText('parliamentary republic');
+
+  // Key figures: seven, each with its year tag linking to the source.
+  const kf = page.locator('.cp-kf .cp-kf__item');
+  await expect(kf).toHaveCount(7);
+  const gdp = page.locator('.cp-kf__item[data-code="NY.GDP.MKTP.CD"]');
+  await expect(gdp.locator('.cp-kf__value')).toHaveText('$33.3B');
+  await expect(gdp.locator('.cp-tag__year')).toHaveText('2024');
+  await expect(gdp.locator('.cp-tag')).toHaveAttribute('href', SRC_URL);
+  await expect(page.locator('.cp-kf__item[data-code="SP.POP.TOTL"] .cp-kf__value')).toHaveText('3,694,600');
+  await expect(page.locator('.cp-kf__item[data-code="AG.SRF.TOTL.K2"] .cp-kf__value')).toHaveText('69,700 km²');
+  await expect(page.locator('.cp-kf__item[data-code="SL.UEM.TOTL.ZS"] .cp-kf__value')).toHaveText('No data');
+  await expect(page.locator('.cp-kf .cp-attrib')).toContainText('World Bank, World Development Indicators');
 
   // Trade has no values at all, so the section and its nav entry are absent.
   await expect(page.locator('.cp-section')).toHaveCount(5);
   await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'People', 'Government', 'Economy']);
   await expect(page.locator('#section-trade')).toHaveCount(0);
 
-  // Factbook text: HTML rendered, geography fields inside Overview with the
-  // display label, sub-items as a list, attribution with snapshot and discontinuation.
-  await expect(page.locator('#section-introduction .cp-text-field__text')).toContainText('kingdoms of Colchis');
-  await expect(page.locator('#section-introduction .cp-text-field__text br')).toHaveCount(2);
-  await expect(page.locator('#section-overview .cp-text-field[data-field="Map references"] .cp-text-field__label')).toHaveText('Continent');
-  await expect(page.locator('#section-overview .cp-text-field[data-field="Map references"] .cp-text-field__text')).toHaveText('Asia');
-  await expect(page.locator('#section-overview .cp-text-field[data-field="Land boundaries"] dt')).toHaveText(['total', 'border countries']);
-  await expect(page.locator('#section-overview .cp-fb-note')).toContainText('CIA World Factbook');
-  await expect(page.locator('#section-overview .cp-fb-note')).toContainText('snapshot 2026-01');
-  await expect(page.locator('#section-overview .cp-fb-note')).toContainText('publication discontinued on 04/02/2026');
-  await expect(page.locator('#section-people .cp-text-block__title')).toHaveText('From the World Factbook');
-  await expect(page.locator('#section-people .cp-text-field__label .pill')).toHaveText('edited');
-  await expect(page.locator('#section-government .cp-text-field')).toHaveCount(2);
-  await expect(page.locator('#section-economy .cp-row[data-code="SL.UEM.TOTL.ZS"] .cp-row__value')).toHaveText('No data');
-  await expect(page.locator('#section-people .cp-row[data-code="SP.DYN.LE00.IN"] .cp-row__value')).toHaveText('73.7 years');
-  await expect(page.locator('#section-people .cp-row[data-code="SP.DYN.LE00.IN"] .cp-src__year')).toHaveText('2023');
+  // Tables: World Bank rows carry a year tag, Factbook rows sit under a group
+  // caption with the display label and sub-entries as a list.
+  await expect(page.locator('#section-economy .cp-tr[data-code="SL.UEM.TOTL.ZS"] .cp-tr__value')).toHaveText('No data');
+  await expect(page.locator('#section-people .cp-tr[data-code="SP.DYN.LE00.IN"] .cp-tr__value')).toHaveText('73.7 years');
+  await expect(page.locator('#section-people .cp-tr[data-code="SP.DYN.LE00.IN"] .cp-tag__year')).toHaveText('2023');
+  await expect(page.locator('#section-introduction .cp-prose')).toContainText('kingdoms of Colchis');
+  await expect(page.locator('#section-introduction .cp-prose br')).toHaveCount(2);
+  await expect(page.locator('#section-overview .cp-table__group')).toHaveText('From the World Factbook');
+  await expect(page.locator('#section-overview .cp-tr[data-field="Map references"] .cp-tr__label')).toHaveText('Continent');
+  await expect(page.locator('#section-overview .cp-tr[data-field="Map references"] .cp-tr__value')).toHaveText('Asia');
+  await expect(page.locator('#section-overview .cp-tr[data-field="Land boundaries"] dt')).toHaveText(['total', 'border countries']);
+  await expect(page.locator('#section-overview .cp-attrib')).toContainText('CIA World Factbook');
+  await expect(page.locator('#section-overview .cp-attrib')).toContainText('snapshot 2026-01');
+  await expect(page.locator('#section-overview .cp-attrib')).toContainText('publication discontinued on 04/02/2026');
+  await expect(page.locator('#section-people .cp-tr[data-field="Languages"] .cp-tr__label .pill')).toHaveText('edited');
+  await expect(page.locator('#section-government .cp-tr')).toHaveCount(3);
+  await expect(page.locator('.cp-hero__official')).toHaveText("Republic of Georgia · Sak'art'velo");
   // No chart without the chart library (stubbed in this harness).
   await expect(page.locator('#cpChart')).toHaveCount(0);
   await expect(page.locator('#cpFooter')).toContainText('latest year the source has published');
@@ -209,9 +216,9 @@ test('pages are bilingual: Georgian names and labels in the ka locale', async ({
   // Sorted by the Georgian label: თ (Türkiye) precedes ი (Japan) in the Georgian alphabet.
   await expect(page.locator('#cpGrid .cp-card__name').first()).toHaveText('თურქეთი');
   await page.goto(`${origin}/pages/country-profile.html?country=georgia`);
-  await expect(page.locator('.cp-header__name')).toHaveText('საქართველო');
-  await expect(page.locator('.cp-header__alt')).toHaveText('Georgia');
-  await expect(page.locator('.cp-tile[data-code="SL.UEM.TOTL.ZS"] .cp-tile__value')).toHaveText('მონაცემები არ არის');
+  await expect(page.locator('.cp-hero__name')).toHaveText('საქართველო');
+  await expect(page.locator('.cp-hero__official')).toContainText('Georgia');
+  await expect(page.locator('.cp-kf__item[data-code="SL.UEM.TOTL.ZS"] .cp-kf__value')).toHaveText('მონაცემები არ არის');
   await expect(page.locator('#cpTocList a').first()).toHaveText('შესავალი');
   await expect(page.locator('#cpTocList a').nth(1)).toHaveText('მიმოხილვა');
 });
