@@ -111,59 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "52,933 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "27,400"
-      },
-      {
-       "label": "female",
-       "text": "25,533"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Faroese (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Faroese"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Faroese 83.8% (Scandinavian and Anglo-Saxon descent), Danish 8.3%, Filipino 1.2%, other Nordic 0.9%, other 4.5% (includes Polish and Romanian) (2024 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent respondents by country of birth"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Faroese 93.8% (derived from Old Norse), Danish 3.2%, other 3% (2011 est.)",
      "items": [
@@ -176,285 +125,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 87% (predominantly Evangelical Lutheran), other 0.9%, none 3.7%, unspecified 8.9% (2011 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "20% (male 5,489/female 5,122)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "61.5% (male 17,188/female 15,346)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "18.5% (2024 est.) (male 4,723/female 5,065)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "62.7 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "32.6 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "30.1 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.3 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "37 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "36.9 years"
-      },
-      {
-       "label": "female",
-       "text": "36.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.62% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "14.76 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "8.58 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the island of Streymoy is by far the most populous with over 40% of the population; it has approximately twice as many inhabitants as Eysturoy, the second most populous island; seven of the inhabited islands have fewer than 100 people",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "43% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.89% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "21,000 TORSHAVN (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.12 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.93 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.07 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "6.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "5.1 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "81.7 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "79.2 years"
-      },
-      {
-       "label": "female",
-       "text": "84.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "2.26 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "1.09 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: NA"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: NA"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: NA"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: NA"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 220,
-    "content": {
-     "text": "2.62 physicians/1,000 population (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 230,
-    "content": {
-     "text": "52.3% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 240,
-    "content": {
-     "text": "7.6% of GDP (2019 est.)",
      "items": []
     }
    }
@@ -535,24 +208,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 50,
-    "content": {
-     "text": "29 first-order municipalities (<em>kommunur</em>, singular - <em>kommuna</em>) Eidhi, Eystur, Famjin, Fuglafjordhur, Fugloy, Hov, Husavik, Hvalba, Hvannasund, Klaksvik, Kunoy, Kvivik, Nes, Porkeri, Runavik, Sandur, Sjovar, Skalavik, Skopun, Skuvoy, Sorvagur, Sumba, Sunda, Torshavn, Tvoroyri, Vagar, Vagur, Vestmanna, Vidhareidhi",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "the laws of Denmark apply",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -568,24 +225,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": "see Denmark",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -606,7 +247,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -615,84 +256,23 @@
        "text": "Faroese Parliament (Logting)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "33 (directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "12/8/2022"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "JF (9); B (7); A (6); E (6); F (3); H (2)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "27.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "2026"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Faroe Islands elect 2 members to the Danish Parliament to serve 4-year terms"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Faroese Court or Raett (Rett in Danish) decides both civil and criminal cases; the Court is part of the Danish legal system"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of the First Instance or Tribunal de Première Instance; Court of Administrative Law or Tribunal Administratif; Mixed Commercial Court; Land Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": "Center Party or H (Midflokkurin) <br />People's Party or A (Folkaflokkurin) <br />Progress Party or F (Framsokn) <br />Republic or E (Tjodveldi)  (formerly the Republican Party)<br />Social Democratic Party or JF (Javnadarflokkurin) or JF <br />Union Party or B (Sambandsflokkurin)",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "Arctic Council, IMO (associate), NC, NIB, UNESCO (associate), UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "none (self-governing overseas administrative division of Denmark)",
      "items": []
@@ -700,7 +280,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "Olaifest (Olavsoka), 29 July (1030)",
      "items": [
@@ -713,7 +293,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> white with a red cross outlined in blue that extends to the edges of the flag; the cross is shifted toward the left side in the style of the Dannebrog (Danish flag)<br /><br /><strong>meaning:</strong> white represents waves breaking on the shore; red and blue are traditional Faroese colors<br /><br /><strong>history:</strong> the flag is referred to as Merkid, meaning \"the banner\" or \"the mark;\" a group of students designed it in 1919, although it wasn't officially adopted until 1940",
      "items": [
@@ -726,7 +306,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 120,
     "content": {
      "text": "ram",
      "items": []
@@ -734,7 +314,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 190,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

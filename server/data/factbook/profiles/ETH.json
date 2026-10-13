@@ -165,546 +165,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "121,372,632 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "60,461,406"
-      },
-      {
-       "label": "female",
-       "text": "60,911,226"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Ethiopian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Ethiopian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Oromo 35.8%, Amhara 24.1%, Somali 7.2%, Tigray 5.7%, Sidama 4.1%, Guragie 2.6%, Welaita 2.3%, Afar 2.2%, Silte 1.3%, Kefficho 1.2%, other 13.5% (2022 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Oromo (official regional working language) 33.8%, Amharic (official national language) 29.3%, Somali (official regional working language) 6.2%, Tigrigna (Tigrinya) (official regional working language) 5.9%, Sidamo 4%, Wolaytta 2.2%, Gurage 2%, Afar (official regional working language) 1.7%, Hadiyya 1.7%, Gamo 1.5%, Gedeo 1.3%, Opuuo 1.2%, Kafa 1.1%, other 8.1%, English (2007 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Kitaaba Addunyaa Waan Qabataamaatiif - Kan Madda Odeeffannoo bu’uraawaatiif baay’ee barbaachisaa ta’e. (Oromo)<br /><br />የአለም እውነታ መጽሐፍ፣ ለመሠረታዊ መረጃ እጅግ አስፈላጊ የሆነ ምንጭ። (Amharic)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Ethiopian Orthodox 43.8%, Muslim 31.3%, Protestant 22.8%, Catholic 0.7%, traditional 0.6%, other 0.8% (2016 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "38.7% (male 23,092,496/female 22,765,882)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "58% (male 34,175,328/female 34,536,238)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "3.4% (2024 est.) (male 1,794,269/female 2,186,085)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "71.7 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "65.8 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "5.9 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "17.1 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "20.2 years"
-      },
-      {
-       "label": "female",
-       "text": "20.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2.34% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "29.08 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.58 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.12 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "highest density is found in the highlands of the north and middle areas of the country, particularly around the centrally located capital city of Addis Ababa; the far east and southeast are sparsely populated, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "23.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "4.4% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "5.461 million ADDIS ABABA (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.99 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.82 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.99 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "19.3 years (2019 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "195 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "31.3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "37.4 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "27.6 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "67.7 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "65.4 years"
-      },
-      {
-       "label": "female",
-       "text": "70 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "3.77 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.86 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 83.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 42.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 51.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 16.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 57.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 48.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3.2% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "5.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.14 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "0.3 beds/1,000 population (2016 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 50.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 8.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 17.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 49.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 91.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 82.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "4.5% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.16 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.92 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.2 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.03 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7.7% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "1.4% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "21.2% (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "66.3% (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "14.1% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "40.3% (2016)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "5% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "2.3% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "16.7% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "60.5% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "71% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "50% (2022 est.)"
-      }
-     ]
     }
    }
   ],
@@ -780,24 +258,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "12 ethnically based regional states (<em>kililoch</em>, singular - <em>kilil</em>) and 2 chartered cities* (<em>astedader akabibiwach</em>, singular - <em>astedader akabibi</em>); Adis Abeba* (Addis Ababa), Afar, Amara (Amhara), Binshangul Gumuz, Dire Dawa*, Gambela Hizboch (Gambela), Hareri Hizb (Harari), Oromia, Sidama, Sumale, Tigray, YeDebub Biheroch Bihereseboch na Hizboch (Southern Nations, Nationalities and Peoples), YeDebub M'irab Ityop'iya Hizboch (Southwest Ethiopia Peoples), Southern Ethiopia Peoples",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -813,49 +275,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Ethiopia"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -875,25 +296,8 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the House of Federation is responsible for interpreting the constitution and federal-regional issues, and the House of People's Representatives is responsible for passing legislation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -904,45 +308,13 @@
       {
        "label": "number of seats",
        "text": "547 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "6/21/2021 to 9/30/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Prosperity Party (448); Other (22)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "41.9%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "June 2026"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> only 470 of the 547 seats in the House of People's Representatives were filled during the 2021 elections due to security issues in the Tigray State and other areas"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -953,74 +325,21 @@
       {
        "label": "number of seats",
        "text": "153 (all indirectly elected)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/4/2021"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "29.7%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Federal Supreme Court (consists of 11 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "president and vice president of Federal Supreme Court recommended by the prime minister and appointed by the House of People's Representatives; other Supreme Court judges nominated by the Federal Judicial Administrative Council (a 10-member body chaired by the president of the Federal Supreme Court) and appointed by the House of People's Representatives; judges serve until retirement at age 60"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "federal high courts and federal courts of first instance; state court systems (mirror structure of federal system); sharia courts and customary and traditional courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the House of Federation has jurisdiction for all constitutional issues"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Ethiopian Citizens for Social Justice and Democracy or EZEMA   <br />Gedeo People's Democratic Party<br />Independent<br />Kucha People Democratic Party <br />National Movement of Amhara or NAMA<br />Prosperity Party or PP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, AfDB, ATMIS, AU, BRICS, COMESA, EITI, FAO, G-24, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, IGAD, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NAM, OPCW, PCA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNMISS, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (accession candidate)",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 90,
     "content": {
      "text": "oldest independent country in Africa and one of the oldest in the world, at least 2,000 years; may be traced to the Aksumite Kingdom, which appeared in the first century B.C.",
      "items": []
@@ -1028,7 +347,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 100,
     "content": {
      "text": "Derg Downfall Day (defeat of MENGISTU regime), 28 May (1991)",
      "items": []
@@ -1036,7 +355,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of green (top), yellow, and red, with a light blue disk centered on the three bands; on the disk is a yellow pentagram with single yellow rays emanating from the angles between the points<br /><br /><strong>meaning:</strong> green stands for hope and the land's fertility, yellow for justice and harmony, and red for sacrifice and heroism; the blue of the disk symbolizes peace, and the pentagram represents the Ethiopian people's unity and equality<br /><br /><strong>history:</strong> the emblem in the center of the current flag was added in 1996",
      "items": [
@@ -1049,7 +368,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 120,
     "content": {
      "text": "Abyssinian lion (traditional), yellow pentagram with five rays of light on a blue field (promoted by government)",
      "items": []
@@ -1057,7 +376,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 130,
     "content": {
      "text": "green, yellow, red",
      "items": []
@@ -1065,7 +384,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 140,
     "content": {
      "text": "adopted in 1996, the coat of arms features the national symbol, a pentagram; the blue circle symbolizes peace, and the pentagram represents the unity and equality of the Ethiopian people",
      "items": []
@@ -1073,7 +392,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1094,7 +413,7 @@
    },
    {
     "field": "National heritage",
-    "order": 240,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

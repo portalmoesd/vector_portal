@@ -161,64 +161,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,419,316,933 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "730,902,574"
-      },
-      {
-       "label": "female",
-       "text": "688,414,359"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Indian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Indian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Indo-Aryan 72%, Dravidian 25%, and other 3% (2000)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Hindi 43.6%, Bengali 8%, Marathi 6.9%, Telugu 6.7%, Tamil 5.7%, Gujarati 4.6%, Urdu 4.2%, Kannada 3.6%, Odia 3.1%, Malayalam 2.9%, Punjabi 2.7%, Assamese 1.3%, Maithili 1.1%, other 5.6%;  English is the subsidiary official language but is the most important one for national, political, and commercial communication (2011 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "<p>विश्व फ़ैक्टबुक, आधारभूत जानकारी का एक अनिवार्य स्रोत (Hindi)</p> The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -229,503 +179,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Hindu 79.8%, Muslim 14.2%, Christian 2.3%, Sikh 1.7%, other and unspecified 2% (2011 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "24.5% (male 181,115,052/female 163,647,028)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "68.7% (male 500,568,593/female 467,593,781)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "6.8% (2024 est.) (male 44,101,180/female 52,102,662)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "45 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "35 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "10 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "10 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "30.1 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29.1 years"
-      },
-      {
-       "label": "female",
-       "text": "30.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.72% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "15.91 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "8.7 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0.03 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "a very high population density exists throughout most of the country, with the notable exception of the deserts in the northwest and the mountain fringe in the north; the core of the population is in the north along the banks of the Ganges, with other river valleys and southern coastal areas also having large population concentrations",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "36.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.33% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "32.941 million NEW DELHI (capital), 21.297 million Mumbai, 15.333 million Kolkata, 13.608 million Bangalore, 11.776 million Chennai, 10.801 million Hyderabad (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.1 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.11 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.85 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.06 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "21.2 years (2019/21)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "80 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "30.5 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "30 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "30.8 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "68.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "66.5 years"
-      },
-      {
-       "label": "female",
-       "text": "70.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.95 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 91.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 93.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 8.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 6.7% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3.3% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "4.5% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.72 physicians/1,000 population (2020)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "1.6 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 83% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 88.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 17% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 11.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "3.9% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3.09 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.23 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "2.85 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "34.1% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "8.9% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "31.5% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "72.3% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "4.8% (2021)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "23.3% (2021)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "2.6% (2021)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.1% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "14.2% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "81.7% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "88.3% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "74.9% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2024 est.)"
-      },
-      {
-       "label": "female",
-       "text": "13 years (2024 est.)"
-      }
-     ]
     }
    }
   ],
@@ -793,29 +250,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "28 states and 8 union territories*; Andaman and Nicobar Islands*, Andhra Pradesh, Arunachal Pradesh, Assam, Bihar, Chandigarh*, Chhattisgarh, Dadra and Nagar Haveli and Daman and Diu*, Delhi*, Goa, Gujarat, Haryana, Himachal Pradesh, Jammu and Kashmir*, Jharkhand, Karnataka, Kerala, Ladakh*, Lakshadweep*, Madhya Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland, Odisha, Puducherry*, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana, Tripura, Uttar Pradesh, Uttarakhand, West Bengal",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the official name of Delhi is National Capital Territory of Delhi, even though it is considered a union territory"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "common law system based on the English model; separate personal law codes apply to Muslims, Christians, and Hindus; judicial review of legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -831,49 +267,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of India"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -898,28 +293,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament (Sansad)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in September 2023, both Rajya Sabha and Lok Sabha passed a bill that reserves one third of the House seats for women; implementation could begin for the House election in 2029"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -930,41 +317,13 @@
       {
        "label": "number of seats",
        "text": "545 (543 directly elected; 2 appointed)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "4/19/2024 to 6/1/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Bharatiya Janata Party (BJP) (240); Indian National Congress (INC) (99); Samajwadi Party (SP) (37); All India Trinamool Congress (AITC) (29); Other (138)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "13.8%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "April 2029"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -975,70 +334,21 @@
       {
        "label": "number of seats",
        "text": "245 (233 indirectly elected; 12 appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "partial renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "6 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "1/12/2024 to 6/30/2024"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "16.7%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "January 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of 28 judges, including the chief justice)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "justices appointed by the president to serve until age 65"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "High Courts; District Courts; Labour Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Aam Aadmi Party or AAP<br />All India Trinamool Congress or AITC<br />Bahujan Samaj Party or BSP<br />Bharatiya Janata Party or BJP<br />Biju Janata Dal or BJD<br />Communist Party of India-Marxist or CPI(M)<br />Dravida Munnetra Khazhagam<br />Indian National Congress or INC<br />Nationalist Congress Party or NCP<br />Rashtriya Janata Dal or RJD<br />Samajwadi Party or SP<br />Shiromani Akali Dal or SAD<br />Shiv Sena or SS<br />Telegana Rashtra Samithi or TRS<br />Telugu Desam Party or TDP<br />YSR Congress or YSRCP or YCP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ADB, AfDB (nonregional member), Arctic Council (observer), ARF, ASEAN (dialogue partner), BIMSTEC, BIS, BRICS, C, CD, CERN (observer), CICA, CP, EAS, FAO, FATF, G-15, G-20, G-24, G-5, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAS (observer), MIGA, MINURSO, MONUSCO, NAM, OAS (observer), OECD, OPCW, Pacific Alliance (observer), PCA, PIF (partner), Quad, SAARC, SACEP, SCO (observer), UN, UNCTAD, UNDOF, UNESCO, UNHCR, UNHRC, UNIDO, UNIFIL, UNISFA, UNITAR, UNMISS, UNOCI, UNOOSA, UNSOM, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "15 August 1947 (from the UK)",
      "items": []
@@ -1046,7 +356,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Republic Day, 26 January (1950)",
      "items": []
@@ -1054,7 +364,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of saffron (top), white, and green, with a blue <em>chakra </em>(24-spoked wheel) centered in the white band<br /><br /><strong>meaning: </strong>saffron stands for courage, sacrifice, and the spirit of renunciation; white for purity and truth; green for faith and fertility; the chakra symbolizes the wheel of life in movement and death in stagnation",
      "items": [
@@ -1067,7 +377,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "the Lion Capital of Ashoka, which depicts four Asiatic lions standing back-to-back and mounted on a circular abacus (official); Bengal tiger and lotus flower (traditional)",
      "items": []
@@ -1075,7 +385,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "saffron, white, green",
      "items": []
@@ -1083,7 +393,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1104,7 +414,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

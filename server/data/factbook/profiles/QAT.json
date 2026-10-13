@@ -127,480 +127,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2,568,426 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "1,970,605"
-      },
-      {
-       "label": "female",
-       "text": "597,821"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Qatari(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Qatari"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "non-Qatari 88.4%, Qatari 11.6% (2015 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Arabic (official), English commonly used as a second language"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 65.2%, Christian 13.7%, Hindu 15.9%, Buddhist 3.8%, folk religion &lt;0.1%, Jewish &lt;0.1%, other &lt;1%, unaffiliated &lt;1% (2020 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "13.1% (male 168,844/female 165,905)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "85.4% (male 1,767,294/female 411,977)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "1.5% (2024 est.) (male 24,997/female 13,071)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "17.3 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "15.4 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "1.8 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "54.4 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "34.4 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "35.7 years"
-      },
-      {
-       "label": "female",
-       "text": "28.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.57% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "9.19 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "1.42 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-2.09 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most of the population is clustered in or around the capital of Doha on the eastern side of the peninsula",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "99.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.66% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "798,000 Ar-Rayyan, 658,000 DOHA (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "4.29 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "1.91 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "3.32 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "4 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.2 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "5.8 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "80.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "78.2 years"
-      },
-      {
-       "label": "female",
-       "text": "82.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "1.9 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "0.94 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "2.9% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "7.4% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "3.02 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "1.1 beds/1,000 population (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "35.1% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.96 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.29 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.07 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.59 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "19.2% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.6% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "2.3% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "2.3% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "64.6% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.2% of GDP (2020 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "9.3% national budget (2020 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12 years (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15 years (2022 est.)"
-      }
-     ]
     }
    }
   ],
@@ -672,24 +216,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "8 municipalities (<em>baladiyat</em>, singular - <em>baladiyah</em>); Ad Dawhah, Al Khawr wa adh Dhakhirah, Al Wakrah, Ar Rayyan, Ash Shamal, Ash Shihaniyah, Az Za'ayin, Umm Salal",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of civil law and Islamic (sharia) law (in family and personal matters)",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -705,49 +233,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "the father must be a citizen of Qatar"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "20 years; 15 years if an Arab national"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -760,7 +247,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -769,80 +256,23 @@
        "text": "Shura Council (Majlis Al-Shura)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "49 (all appointed)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/9/2025"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "6.1%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Court of Cassation (consists of the court president and several judges); Supreme Constitutional Court (consists of the chief justice and 6 members)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges nominated by the Supreme Judiciary Council, a 9-member independent body consisting of judiciary heads appointed by the amir; judges appointed for 3-year renewable terms; Supreme Constitutional Court members nominated by the Supreme Judiciary Council and appointed by the monarch; term of appointment NA"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of Appeal; Administrative Court; Courts of First Instance; sharia courts; Courts of Justice; Qatar International Court and Dispute Resolution Center, established in 2009, provides dispute resolution services for institutions and bodies in Qatar, as well as internationally"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "political parties are banned",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ABEDA, AFESD, AMF, CAEU, CD, CICA (observer), EITI (implementing country), FAO, G-77, GCC, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM (observer), IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OAPEC, OAS (observer), OIC, OIF, OPCW, OPEC, PCA, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNIFIL, UNOOSA, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "3 September 1971 (from the UK)",
      "items": []
@@ -850,7 +280,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "National Day, 18 December (1878), anniversary of Al Thani family accession to the throne; Independence Day, 3 September (1971)",
      "items": []
@@ -858,7 +288,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> maroon with a broad, serrated white band on the left side<br /><br /><strong>meaning:</strong> maroon stands for the blood shed in Qatari wars, and white for peace; the nine-pointed serrated edge is a reference to Qatar's status as the ninth member of the \"reconciled emirates\" after the Qatari-British treaty of 1916 -- the other eight members are Bahrain and the seven that make up the UAE",
      "items": []
@@ -866,7 +296,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "a white serrated band with nine white points on top of a maroon field",
      "items": []
@@ -874,7 +304,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "maroon, white",
      "items": []
@@ -882,7 +312,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -903,7 +333,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

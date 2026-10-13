@@ -148,443 +148,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6,097,665 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3,045,973"
-      },
-      {
-       "label": "female",
-       "text": "3,051,692"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Congolese (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Congolese or Congo"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Kongo (Bakongo) 40.5%, Teke 16.9%, Mbochi 13.1%, foreigner 8.2%, Sangha 5.6%, Mbere/Mbeti/Kele 4.4%, Punu 4.3%, Pygmy 1.6%, Oubanguiens 1.6%, Duma 1.5%, Makaa 1.3%, other and unspecified 1% (2014-15 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "French (official), French Lingala and Monokutuba (trade languages), many local languages and dialects (of which Kikongo is the most widespread)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Buku oyo ya bosembo ya Mokili Mobimba Ezali na Makanisi ya Liboso Mpenza. (Lingala)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 33.1%, Awakening Churches/Christian Revival 22.3%, Protestant 19.9%, Salutiste 2.2%, Muslim 1.6%, Kimbanguist 1.5%, other 8.1%, none 11.3% (2007 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "37.8% (male 1,162,298/female 1,143,668)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "57.8% (male 1,770,337/female 1,756,925)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4.3% (2024 est.) (male 113,338/female 151,099)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "72.9 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "65.4 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "7.5 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "13.3 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20.9 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "20.5 years"
-      },
-      {
-       "label": "female",
-       "text": "20.9 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2.36% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "28.34 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.64 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.08 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the population is primarily located in the south, in and around the capital of Brazzaville, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "69.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.19% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "2.638 million BRAZZAVILLE (capital), 1.336 million Pointe-Noire (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.75 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "19.6 years (2011/12 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "241 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "29.9 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "33.5 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "27.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "72.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "71.5 years"
-      },
-      {
-       "label": "female",
-       "text": "74.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "3.72 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.83 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3.9% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "3.5% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.17 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 250,
-    "content": {
-     "text": "9.6% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5.74 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "5.11 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.1 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.52 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "15.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "30% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "1.7% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 280,
-    "content": {
-     "text": "51.8% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "6.9% (2015)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "27.3% (2015)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "5.6% (2018 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.3% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "14.7% national budget (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -656,24 +237,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "15 departments; Bouenza, Brazzaville, Congo-Oubangui, Cuvette, Cuvette-Ouest, Djoue-Lefini, Kouilou, Lekoumou, Likouala, Niari, Nkeni-Alima, Plateaux, Pointe-Noire, Pool, Sangha",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of French civil law and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -689,49 +254,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of the Republic of the Congo"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -756,24 +280,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament (Parlement)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -784,41 +304,13 @@
       {
        "label": "number of seats",
        "text": "151 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "8/20/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Congolese Workers Party (PCT) (112); Other (39)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "14.6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "July 2026"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -829,74 +321,21 @@
       {
        "label": "number of seats",
        "text": "72 (all indirectly elected)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "6 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "7/10/2022 to 7/31/2022"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "31.9%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "August 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Cour Supreme (consists of NA judges); Constitutional Court (consists of 9 members)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges elected by Parliament and serve until age 65; Constitutional Court members appointed by the president of the republic - 3 directly by the president and 6 nominated by Parliament; members appointed for renewable 9-year terms with one third of the membership renewed every 3 years"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Audit and Budgetary Discipline; courts of appeal; regional and district courts; employment tribunals; juvenile courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> a High Court of Justice, outside the judicial authority, tries cases involving treason by the President of the Republic"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Alliance of the Presidential Majority or AMP<br />Action Movement for Renewal or MAR <br />Citizen's Rally or RC <br />Congolese Labour Party or PCT <br />Congolese Movement for Democracy and Integral Development or MCDDI <br />Congo on the Move or LCEM <br />Movement for Unity, Solidarity, and Work or MUST <br />Pan-African Union for Social Development or UPADS <br />Club 2002-Party for the Unity and the Republic or Club 2002 <br />Patriotic Union for Democracy and Progress or UPDP <br />Perspectives and Realities Club or CPR <br />Rally for Democracy and Social Progress or RDPS <br />Republican and Liberal Party or PRL <br />Union of Democratic Forces or UDF <br />Union for Democracy and Republic or UDR<br />Union of Humanist Democrats or UDH-YUKI <br />Union for the Republic or UR",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, AfDB, AU, BDEAC, CEMAC, EITI (compliant country), FAO, FZ, G-77, IAEA, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), LCBC (observer), MIGA, NAM, OIF, OPCW, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "15 August 1960 (from France)",
      "items": []
@@ -904,7 +343,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 15 August (1960)",
      "items": []
@@ -912,7 +351,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> divided diagonally from the lower-left side by a wide yellow band; the upper triangle (left side) is green, and the lower triangle is red<br /><br /><strong>meaning:</strong> green stands for agriculture and forests, and yellow for the people's friendship and nobility; the meaning of the red color is not noted but has been associated with the struggle for independence",
      "items": [
@@ -925,7 +364,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "lion, elephant",
      "items": []
@@ -933,7 +372,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "green, yellow, red",
      "items": []
@@ -941,7 +380,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -962,7 +401,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

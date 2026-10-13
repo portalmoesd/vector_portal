@@ -131,69 +131,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "47,280,433 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "23,069,327"
-      },
-      {
-       "label": "female",
-       "text": "24,211,106"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Spaniard(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Spanish"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Spanish 84.8%, Moroccan 1.7%, Romanian 1.2%, other 12.3% (2021 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by country of birth"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Castilian Spanish (official) 74%, Catalan (official in Catalonia, the Balearic Islands, and the Valencian Community) 17%, Galician (official in Galicia) 7%, Basque (official in the Basque Country and Navarre) 2%, Aranese (official in part of Catalonia) &lt;5,000 speakers"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -204,473 +149,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 58.2%, atheist 16.2%, agnostic 10.8%, other 2.7%, non-believer 10.5%, unspecified 1.7% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "13% (male 3,147,019/female 3,012,821)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "66.1% (male 15,662,492/female 15,585,138)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "20.9% (2024 est.) (male 4,259,816/female 5,613,147)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "51.3 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "19.7 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "31.6 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.2 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "47.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "45.7 years"
-      },
-      {
-       "label": "female",
-       "text": "47.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.12% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "7.16 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "9.98 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "3.98 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "with the notable exception of Madrid, Sevilla, and Zaragoza, the largest urban agglomerations are found along the Mediterranean and Atlantic coasts; numerous smaller cities are spread throughout the interior; very dense settlement around the capital of Madrid, as well as the port city of Barcelona",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "81.6% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.24% annual rate of change (2020-25 est.)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data include Canary Islands, Ceuta, and Melilla"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "6.751 million MADRID (capital), 5.687 million Barcelona, 838,000 Valencia (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.76 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.95 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "31.2 years (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "3 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "2.7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "2.1 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "83 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "80.3 years"
-      },
-      {
-       "label": "female",
-       "text": "85.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.32 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.65 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "10.7% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "15.2% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "4.29 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "2.9 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "23.8% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10.72 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "4.67 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "3.52 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "2.34 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.19 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "23.9% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25.8% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "22% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "50.2% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.6% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "9.9% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "99.7% (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "99.8% (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "99.6% (2021 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "17 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "18 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -746,29 +228,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "17 autonomous communities (<em>comunidades autonomas</em>, singular - <em>comunidad autonoma</em>) and 2 autonomous cities* (<em>ciudades autonomas</em>, singular - <em>ciudad autonoma</em>); Andalucia; Aragon; Asturias; Canarias (Canary Islands); Cantabria; Castilla-La Mancha; Castilla-Leon; Cataluña (Castilian), Catalunya (Catalan), Catalonha (Aranese) [Catalonia]; Ceuta*; Comunidad Valenciana (Castilian), Comunitat Valenciana (Valencian) [Valencian Community]; Extremadura; Galicia; Illes Baleares (Balearic Islands); La Rioja; Madrid; Melilla*; Murcia; Navarra (Castilian), Nafarroa (Basque) [Navarre]; Pais Vasco (Castilian), Euskadi (Basque) [Basque Country]",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Spain administers the autonomous cities of Ceuta and Melilla and the three small islands of Islas Chafarinas, Peñón de Alhucemas, and Peñón de Velez de la Gomera, which are all located along the coast of Morocco; they are collectively referred to as Places of Sovereignty (Plazas de Soberania)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system with regional variations",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -784,49 +245,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Spain"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "only with select Latin American countries"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years for persons with no ties to Spain"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -855,24 +275,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "The Cortes (Las Cortes Generales)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -883,41 +299,13 @@
       {
        "label": "number of seats",
        "text": "350 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "7/23/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "People's Party (PP) (136); Spanish Socialist Workers' Party (PSOE) (122); Vox (33); SUMAR (31); Other (28)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "44.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "July 2027"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -928,78 +316,21 @@
       {
        "label": "number of seats",
        "text": "265 (208 directly elected; 57 indirectly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "7/23/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "People's Party (PP) (120); Spanish Socialist Workers' Party (PSOE) (72); Other (16)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "42.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "July 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Tribunal Supremo (consists of the court president and organized into the Civil Room, with a president and 9 judges; the Penal Room, with a president and 14 judges; the Administrative Room, with a president and 32 judges; the Social Room, with a president and 12 judges; and the Military Room, with a president and 7 judges); Constitutional Court or Tribunal Constitucional de Espana (consists of 12 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges appointed by the monarch from candidates proposed by the General Council of the Judiciary Power, a 20-member governing board chaired by the monarch; judges can serve until age 70; Constitutional Court judges nominated by the National Assembly, executive branch, and the General Council of the Judiciary, and appointed by the monarch for 9-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "National High Court; High Courts of Justice (in each of the autonomous communities); provincial courts; courts of first instance"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Asturias Forum or FAC <br />Basque Country Unite (Euskal Herria Bildu) or EH Bildu (coalition of 4 Basque pro-independence parties)<br />Basque Nationalist Party or PNV or EAJ <br />Canarian Coalition or CC (coalition of 5 parties)<br />Ciudadanos Party (Citizens Party) or Cs <br />Compromis - Compromise Coalition <br />Navarrese People's Union or UPN <br />Together for Catalonia or Junts <br />People's Party or PP <br />Republican Left of Catalonia or ERC <br />Spanish Socialist Workers Party or PSOE <br />Teruel Existe or TE <br />Unidas (Unite) or Sumar (electoral coalition formed in March 2022) (formerly Unidas Podemos or UP)<br />Vox or VOX",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ADB (nonregional member), AfDB (nonregional member), Arctic Council (observer), Australia Group, BCIE, BIS, CABEI, CAN (observer), CBSS (observer), CD, CE, CERN, EAPC, EBRD, ECB, EIB, EITI (implementing country), EMU, ESA, EU, FAO, FATF, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OPCW, OSCE, Pacific Alliance (observer), Paris Club, PCA, PIF (partner), Schengen Convention, SELEC (observer), SICA (observer), UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, Union Latina, UNOCI, UNOOSA, UNRWA, UNWTO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "1492",
      "items": [
@@ -1012,7 +343,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "National Day (Hispanic Day), 12 October (1492)",
      "items": [
@@ -1025,7 +356,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three horizontal bands of red (top), yellow (double-width), and red, with the national coat of arms on the left side of the yellow band; the coat of arms shows the emblems of the area's former kingdoms (clockwise from upper left: Castile, Leon, Navarre, and Aragon), which also used red and yellow as their colors; the stylized pomegranate at the bottom of the shield represents Granada; the two columns represent the Pillars of Hercules, which are promontories (Gibraltar and Ceuta) on the Strait of Gibraltar; a red scroll bears the imperial motto of \"Plus Ultra\" (further beyond), referring to Spanish lands outside Europe",
      "items": []
@@ -1033,7 +364,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "Pillars of Hercules",
      "items": []
@@ -1041,7 +372,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, yellow",
      "items": []
@@ -1049,7 +380,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1070,7 +401,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

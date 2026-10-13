@@ -153,567 +153,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "17,230,333 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "8,362,224"
-      },
-      {
-       "label": "female",
-       "text": "8,868,109"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Cambodian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Cambodian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Khmer 95.4%, Cham 2.4%, Chinese 1.5%, other 0.7% (2019-20 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Khmer (official) 95.8%, minority languages 2.9%, Chinese 0.6%, Vietnamese 0.5%, other 0.2% (2019 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "សៀវភៅហេតុការណនៅលើពិភពលោក។ ទីតាំងពត៏មានមូលដានគ្រឹះយាងសំខាន់។. (Khmer)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Buddhist (official) 97.1%, Muslim 2%, Christian 0.3%, other 0.5% (2019 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "28.9% (male 2,497,056/female 2,436,618)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.8% (male 5,456,941/female 5,765,206)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "5.3% (2024 est.) (male 323,591/female 584,257)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "51.2 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "42.9 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.4 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "11.9 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "26.9 years"
-      },
-      {
-       "label": "female",
-       "text": "28.9 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.95% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.74 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.62 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-2.62 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population concentrated in the southeast, particularly in and around the capital of Phnom Penh; further distribution is linked closely to the Tonle Sap and Mekong Rivers",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "25.6% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.06% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "2.281 million PHNOM PENH (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.95 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.55 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.94 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "23.3 years (2021-22 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "137 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.2 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "24.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "71.4 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "69.6 years"
-      },
-      {
-       "label": "female",
-       "text": "73.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.14 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.05 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 93.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 72.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 78% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 6.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 27.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 22% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "7.5% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.21 physicians/1,000 population (2019)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "0.7 beds/1,000 population (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 79.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 84.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 20.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 15.3% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "3.9% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.56 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "4.12 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.03 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.41 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "14.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.9% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "4.7% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "16.3% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "67.2% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "1.9% (2022)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "17.9% (2022)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "3.3% (2022)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "2.2% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "11.6% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "71.9% (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "81.5% (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "63.6% (2021 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "11 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "11 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -785,24 +242,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "24 provinces (<em>khett</em>, singular and plural) and 1 municipality (<em>krong</em>, singular and plural) <br /><br /><strong>provinces:</strong> Banteay Meanchey, Battambang, Kampong Cham, Kampong Chhnang, Kampong Speu, Kampong Thom, Kampot, Kandal, Kep, Koh Kong, Kratie, Mondolkiri, Oddar Meanchey, Pailin, Preah Sihanouk, Preah Vihear, Prey Veng, Pursat, Ratanakiri, Siem Reap, Stung Treng, Svay Rieng, Takeo, Tbong Khmum <br /><br /><strong>municipalities:</strong> Phnom Penh (Phnum Penh)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system (influenced by the UN Transitional Authority in Cambodia), customary law, Communist legal theory, and common law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -818,49 +259,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Cambodia"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -877,24 +277,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -905,41 +301,13 @@
       {
        "label": "number of seats",
        "text": "125 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "7/23/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Cambodian People's Party (CPP) (120); United National Front for an Independent, Neutral, Peaceful and Co-operative Cambodia (FUNCINPEC) (5)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "13.6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "July 2028"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -950,54 +318,13 @@
       {
        "label": "number of seats",
        "text": "62 (60 indirectly elected; 2 appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "6 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/25/2024"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "19.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "February 2030"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Council (organized into 5- and 9-judge panels and includes a court chief and deputy chief); Constitutional Court (consists of 9 members)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court and Constitutional Council judge candidates recommended by the Supreme Council of Magistracy, a 17-member body chaired by the monarch and includes other high-level judicial officers; judges of both courts appointed by the monarch; Supreme Court judges appointed for life; Constitutional Council judges appointed for 9-year terms with one third of the court renewed every 3 years"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Appellate Court; provincial and municipal courts; Military Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Cambodian People's Party (CPP) <br />United National Front for an Independent, Neutral, Peaceful and Co-operative Cambodia (FUNCINPEC)",
      "items": [
@@ -1009,16 +336,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ADB, ARF, ASEAN, CICA, EAS, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, MIGA, NAM, OIF, OPCW, PCA, UN, UNAMID, UNCTAD, UNESCO, UNIDO, UNIFIL, UNISFA, UNMISS, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "9 November 1953 (from France)",
      "items": []
@@ -1026,7 +345,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 9 November (1953)",
      "items": []
@@ -1034,7 +353,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three horizontal bands of blue (top), red (double-width), and blue; a three-towered, stylized white temple outlined in black is in the center of the red band, representing Angkor Wat<br /><br /><strong>meaning:</strong> red and blue are traditional Cambodian colors",
      "items": [
@@ -1047,7 +366,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "Angkor Wat temple, kouprey (wild ox)",
      "items": []
@@ -1055,7 +374,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, blue",
      "items": []
@@ -1063,7 +382,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": "Cambodia’s coat of arms is also the Royal Arms of Cambodia; the lions symbolize strength, courage, and the divine protection of the monarchs; the lion on the left is a <em>gajasingha</em> (a lion with an elephant’s trunk), and the lion on the right is a <em>rajasingha</em> (royal lion); both hold five-tiered umbrellas representing the king and queen, and they stand on a blue ribbon that says “<em>Preah Chao Krung Kampuche”</em>' (King of the Kingdom of Cambodia); between the lions is a crown with the Unalome, the Buddhist and Hindu symbol for the spiritual path to enlightenment, under it and a ray of light on top",
      "items": []
@@ -1071,7 +390,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [
@@ -1092,7 +411,7 @@
    },
    {
     "field": "National heritage",
-    "order": 240,
+    "order": 170,
     "content": {
      "text": null,
      "items": [

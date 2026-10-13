@@ -119,477 +119,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "491,900 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "239,140"
-      },
-      {
-       "label": "female",
-       "text": "252,760"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Bruneian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Bruneian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Malay 67.4%, Chinese 9.6%, other 23% (2021 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Malay (Bahasa Melayu) (official), English, Chinese dialects"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Buku Fakta Dunia, sumber yang diperlukan untuk maklumat asas. (Malay)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim (official) 82.1%, Christian 6.7%, Buddhist 6.3%, other 4.9% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "21.7% (male 54,924/female 51,710)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "70.8% (male 166,289/female 182,011)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "7.5% (2024 est.) (male 17,927/female 19,039)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "41.2 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "30.6 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "10.6 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "9.4 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "32.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.4 years"
-      },
-      {
-       "label": "female",
-       "text": "33.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.37% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "15.58 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "3.96 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "2.09 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the vast majority of the population is found along the coast in the western part of Brunei, which is separated from the eastern portion by Malaysia; the largest population concentration is in the far north on the western side of the Brunei Bay, in and around the capital of Bandar Seri Begawan",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "79.1% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.44% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "266,682 BANDAR SERI BEGAWAN (capital) (2021)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the boundaries of the capital city were expanded in 2007, greatly increasing the city area; the population of the capital increased tenfold"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.91 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.94 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.95 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "36 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12.2 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "7.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "78.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "76.5 years"
-      },
-      {
-       "label": "female",
-       "text": "81.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "1.73 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "0.85 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.4% of population"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "2.2% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "6.4% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "1.89 physicians/1,000 population (2021)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "3.9 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "14.1% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.69 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.66 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.04 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "17% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.2% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "1.9% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.4% of GDP (2016 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "11.4% national budget (2016 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "14 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -657,29 +204,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "4 districts (<em>daerah-daerah</em>, singular - <em>daerah</em>); Belait, Brunei dan Muara, Temburong, Tutong",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed legal system based on English common law and Islamic law",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in 2019, sharia penal codes came into force and apply to Muslims and partly to non-Muslims in parallel with common law codes"
-      }
-     ]
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -699,49 +225,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICC",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "the father must be a citizen of Brunei"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "12 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age for village elections; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -758,7 +243,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -767,68 +252,15 @@
        "text": "Legislative Council (Majlis Mesyuarat Negara)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "45 (all appointed)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "1/20/2023"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "11.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "January 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the Court of Appeal and the High Court, each with a chief justice and 2 judges); Sharia Court (consists the Court of Appeals and the High Court)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges appointed by the monarch to serve until age 65, and older if approved by the monarch; Sharia Court judges appointed by the monarch for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Intermediate Court; Magistrates' Courts; Juvenile Court; small claims courts; lower sharia courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Brunei has a dual judicial system of secular and sharia (religious) courts; the Judicial Committee of Privy Council (in London) serves as the final appellate court for civil cases only"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "National Development Party or NDP",
      "items": [
@@ -840,16 +272,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ADB, APEC, ARF, ASEAN, C, CP, EAS, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, ISO (correspondent), ITSO, ITU, NAM, OIC, OPCW, UN, UNCTAD, UNESCO, UNIFIL, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "1 January 1984 (from the UK)",
      "items": []
@@ -857,7 +281,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "National Day, 23 February (1984)",
      "items": [
@@ -870,7 +294,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> yellow with a diagonal white band and second below it in black, both starting from the upper left; the national emblem in red is at the center; the state motto, \"Always render service with God's guidance,\" appears in yellow Arabic script on the emblem's crescent; a ribbon below the crescent reads \"Brunei, the Abode of Peace\"<br /><br /><strong>meaning:</strong> yellow symbolizes the sultanate, and the white and black bands stand for the chief ministers; the emblem includes a royal umbrella (the monarchy), two wings with four feathers (justice, tranquility, prosperity, and peace), two upraised hands (the government's pledge to preserve and promote the people's welfare), and the crescent moon of Islam (the state religion)",
      "items": []
@@ -878,7 +302,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "royal parasol",
      "items": []
@@ -886,7 +310,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "yellow, white, black",
      "items": []
@@ -894,7 +318,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

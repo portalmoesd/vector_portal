@@ -140,64 +140,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3,578,930 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "1,687,496"
-      },
-      {
-       "label": "female",
-       "text": "1,891,434"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Moldovan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Moldovan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Moldovan 75.1%, Romanian 7%, Ukrainian 6.6%, Gagauz 4.6%, Russian 4.1%, Bulgarian 1.9%, other 0.8% (2014 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Moldovan/Romanian 80.2% (official) (56.7% Moldovan; 23.5% Romanian), Russian 9.7%, Gagauz 4.2% (a Turkish language), Ukrainian 3.9%, Bulgarian 1.5%, Romani 0.3%, other 0.2% (2014)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Cartea informativa a lumii, sursa indispensabila pentru informatii de baza. (Moldovan/Romanian)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -208,448 +158,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Orthodox 90.1%, other Christian 2.6%, other 0.1%, agnostic &lt;0.1%, atheist 0.2%, unspecified 6.9% (2014 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "14.8% (male 266,493/female 266,166)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "70.2% (male 1,225,535/female 1,300,640)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "15% (2024 est.) (male 206,221/female 334,473)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "43 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "20.8 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "22.2 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "4.5 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "40.4 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "38.6 years"
-      },
-      {
-       "label": "female",
-       "text": "41.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.57% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "8.35 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "14.06 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "pockets of agglomeration exist throughout the country, with the largest in the center of the country around the capital of Chisinau, followed by Tiraspol and Balti",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "43.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.09% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "488,000 CHISINAU (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.94 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.62 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.89 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "25.2 years (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "19 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13.5 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "16 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "11.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "70.1 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "66.1 years"
-      },
-      {
-       "label": "female",
-       "text": "74.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.27 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.61 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 87.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 92% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 12.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 8% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "7.8% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "12.3% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "4.02 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "5.7 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 98.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 82.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 89.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 17.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 10.3% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "18.9% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.45 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "1.53 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "3.57 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "2.25 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.1 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28.7% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "54.2% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "6.4% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "68.7% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "6.6% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "16% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -729,24 +241,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "32 districts (<em>raioane</em>, singular - <em>raion</em>), 3 municipalities (<em>municipii</em>, singular - <em>municipiul</em>), 1 autonomous territorial unit (<em>unitatea teritoriala autonoma</em>), and 1 territorial unit (<em>unitatea teritoriala</em>) <br /><br /><strong>districts:</strong> Anenii Noi, Basarabeasca, Briceni, Cahul, Cantemir, Calarasi, Causeni, Cimislia, Criuleni, Donduseni, Drochia, Dubasari, Edinet, Falesti, Floresti, Glodeni, Hincesti, Ialoveni, Leova, Nisporeni, Ocnita, Orhei, Rezina, Riscani, Singerei, Soldanesti, Soroca, Stefan Voda, Straseni, Taraclia, Telenesti, Ungheni <br /><br /><strong>municipalities:</strong> Balti, Bender, Chisinau <br /><br /><strong>autonomous territorial unit:</strong> Gagauzia <br /><br /><strong>territorial unit:</strong> Stinga Nistrului (Transnistria)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system with Germanic law influences; Constitutional Court reviews legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -762,49 +258,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Moldova"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -829,7 +284,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -838,93 +293,23 @@
        "text": "Parliament (Parlament)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "101 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "9/28/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Action and Solidarity Party (PAS) (55); Electoral Bloc “Patriotic of Socialists, Communists, Heart and Future of Moldova” (26); Alternative Bloc (8); Our Party (6); Democracy at Home Party (6)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "37.6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Justice (consists of the chief judge, 3 deputy-chief judges, 45 judges, and 7 assistant judges); Constitutional Court (consists of the court president and 6 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court of Justice judges appointed by the president on the recommendation of the Superior Council of Magistracy, an 11-member body of judicial officials; all judges serve 4-year renewable terms; Constitutional Court judges appointed 2 each by Parliament, the president, and the Higher Council of Magistracy for 6-year terms; court president elected by other court judges for a 3-year term"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of Appeal; Court of Business Audit; municipal courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Constitutional Court is autonomous; it interprets the Constitution and reviews the constitutionality of parliamentary laws and decisions, decrees of the president, and acts of the government"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Common Action Party - Civil Congress or PAC-CC<br />Democracy at Home Party or PPDA<br />Future of Moldova Party or PVM<br />National Alternative Movement or MAN<br />Our Party or PN<br />Party of Action and Solidarity or PAS<br />Party of Communists of the Republic of Moldova or PCRM<br />Party of Development and Consolidation of Moldova or PDCM<br />Party of Socialists of the Republic of Moldova or PSRM",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "BSEC, CD, CE, CEI, CIS, EAEU (observer), EAPC, EBRD, FAO, GCTU, GUAM, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, ITUC (NGOs), MIGA, OIF, OPCW, OSCE, PFP, SELEC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNMIL, UNMISS, UNOCI, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note</strong>: Moldova is an EU candidate country whose satisfactory completion of accession criteria is required before being granted full EU membership"
-      }
-     ]
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "27 August 1991 (from the Soviet Union)",
      "items": []
@@ -932,7 +317,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 27 August (1991)",
      "items": []
@@ -940,7 +325,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> three equal vertical bands of Prussian blue (left side), chrome yellow, and vermilion red; the Moldavan coat of arms in the center is a dark gold Roman eagle outlined in black, with a red beak and talons; the eagle carries a yellow cross in its beak, a green olive branch in its right talons, and a yellow scepter in its left talons; on the eagle's breast is a red-and-blue shield divided horizontally, with a stylized aurochs head, star, rose, and crescent in black and outlined yellow; the reverse of the flag displays a mirror image of the coat of arms<br /><br /><strong>history:</strong> replaced the communist flag in 1990; the coat of arms is based on traditional designs",
      "items": [
@@ -953,7 +338,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "aurochs (type of wild cattle)",
      "items": []
@@ -961,7 +346,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, yellow, red",
      "items": []
@@ -969,7 +354,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -990,7 +375,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

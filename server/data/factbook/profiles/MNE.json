@@ -145,545 +145,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "599,849 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "294,482"
-      },
-      {
-       "label": "female",
-       "text": "305,367"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Montenegrin(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Montenegrin"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Montenegrin 45%, Serbian 28.7%, Bosniak 8.7%, Albanian 4.9%, Muslim 3.3%, Romani 1%, Croat 1%, other 2.6%, unspecified 4.9% (2011 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Serbian 42.9%, Montenegrin (official) 37%, Bosnian 5.3%, Albanian 5.3%, Serbo-Croat 2%, other 3.5%, unspecified 4% (2011 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Knjiga svetskih činjenica, neophodan izvor osnovnih informacija. (Serbian) <br /><br />Knjiga svjetskih činjenica, neophodan izvor osnovnih informacija. (Montenegrin/Bosnian)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Orthodox 72.1%, Muslim 19.1%, Catholic 3.4%, atheist 1.2%, other 1.5%, unspecified 2.6% (2011 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "17.7% (male 54,608/female 51,594)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64.4% (male 192,631/female 193,515)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "17.9% (2024 est.) (male 47,243/female 60,258)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "55.3 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "27.5 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "27.8 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.6 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "41.5 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "39.5 years"
-      },
-      {
-       "label": "female",
-       "text": "42.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.46% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "10.77 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "10.29 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-5.03 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "highest population density is concentrated in the south and southwest; the extreme eastern border is the least populated area",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "68.5% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.45% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "177,000 PODGORICA (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.78 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "26.3 years (2010 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "6 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3.1 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "2.7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "3.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "78.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "75.8 years"
-      },
-      {
-       "label": "female",
-       "text": "80.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.8 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.88 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 98.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 98.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 1.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "10.6% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "16.3% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "2.78 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "3.8 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 93.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 98.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 6.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "23.3% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.91 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.83 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "2.68 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "3.22 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.16 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "31.6% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29.9% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "33.1% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "3.7% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "57.6% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "1.9% (2018)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "5.8% (2018)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "3.2% (2018)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "98.5% (2018 est.)"
-      },
-      {
-       "label": "male",
-       "text": "99.2% (2018 est.)"
-      },
-      {
-       "label": "female",
-       "text": "97.9% (2018 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "16 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "16 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -763,24 +242,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "25 municipalities (<em>opstine</em>, singular - <em>opstina</em>); Andrijevica, Bar, Berane, Bijelo Polje, Budva, Cetinje, Danilovgrad, Gusinje, Herceg Novi, Kolasin, Kotor, Mojkovac, Niksic, Petnjica, Plav, Pljevlja, Pluzine, Podgorica, Rozaje, Savnik, Tivat, Tuzi, Ulcinj, Zabljak, Zeta",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -796,49 +259,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Montenegro"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -863,7 +285,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -872,89 +294,23 @@
        "text": "Parliament (Skupstina)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "81 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "6/11/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Europe now! (Evropa sad) (24); Together! For the future that belongs to you (DPS – SD – DUA – LP - UDSh) (21); For the future of Montenegro (New Serb Democracy; Democratic People’s Party of Montenegro, Labour Party) (13); Bravery counts! (HRABRO se broji!) (11); It’s clear! (Jasno je!) – Bosniak Party (6); Other (6)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "27.2%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "June 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Vrhovni Sud (consists of the court president, deputy president, and 15 judges); Constitutional Court or Ustavni Sud (consists of the court president and 7 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court president proposed by general session of the Supreme Court and elected by the Judicial Council, a 9-member body consisting of judges, lawyers designated by the Assembly, and the minister of judicial affairs; Supreme Court president elected for a single renewable, 5-year term; other judges elected by the Judicial Council for life; Constitutional Court judges - 2 proposed by the president of Montenegro and 5 by the Assembly, and elected by the Assembly; court president elected from among the court members; court president elected for a 3-year term, other judges serve 9-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Administrative Courts; Appellate Court; Commercial Courts; High Courts; basic courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Albanian Alliance (electoral coalition includes FORCA, PD, DSCG)<br />Albanian Alternative or AA<br />Albanian Democratic League or LDSH<br />Albanian Forum (electoral coalition includes AA, LDSH, UDSH)<br />Aleksa and Dritan - Count Bravely! (electoral coalition includes Democrats, URA)<br />Bosniak Party or BS <br />Civic Movement United Reform Action or United Reform Action or URA <br />Croatian Civic Initiative or HGI <br />Democratic Alliance or DEMOS <br />Democratic League in Montenegro or DSCG<br />Democratic Montenegro or Democrats<br />Democratic Party of Socialists or DPS <br />Democratic People's Party or DNP <br />Democratic Union of Albanians or UDSH<br />Europe Now!<br />For the Future of Montenegro or ZBCG (coalition includes NSD, DNP, RP)<br />Liberal Party or LP <br />New Democratic Power or FORCA<br />New Serb Democracy or NSD or NOVA <br />Social Democrats or SD<br />Socialist People's Party or SNP <br />Together! (electoral coalition includes DPS, SD, LP, UDSH)<br />United Montenegro or UCG (split from DEMOS)<br />Workers' Party or RP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "CE, CEI, EAPC, EBRD, FAO, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NATO, OAS (observer), OIF (observer), OPCW, OSCE, PCA, PFP, SELEC, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong><strong>note: </strong></strong>Montenegro is an EU candidate country whose satisfactory completion of accession criteria is required before being granted full EU membership"
-      }
-     ]
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "3 June 2006 (from the State Union of Serbia and Montenegro); notable earlier dates: 13 March 1852 (Principality of Montenegro established); 13 July 1878 (Congress of Berlin recognizes Montenegrin independence); 28 August 1910 (Kingdom of Montenegro established)",
      "items": []
@@ -962,7 +318,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Statehood Day, 13 July (1878, 1941)",
      "items": [
@@ -975,7 +331,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> a red field bordered with a narrow golden-yellow stripe; the Montenegrin coat of arms in the center is a double-headed golden eagle, with a crown above; the eagle holds a golden scepter in its right claw and a blue orb in its left; the eagle's breast shield shows a golden lion on a green field in front of a blue sky<br /><br /><strong>meaning:</strong> the eagle symbolizes the unity of church and state; the lion is a symbol of episcopal authority, a reference to the three-and-a-half centuries when Montenegro was ruled as a theocracy",
      "items": []
@@ -983,7 +339,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "double-headed eagle",
      "items": []
@@ -991,7 +347,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, gold",
      "items": []
@@ -999,7 +355,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -1020,7 +376,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

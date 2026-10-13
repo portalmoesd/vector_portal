@@ -127,536 +127,27 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3,969,824 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "2,130,080"
-      },
-      {
-       "label": "female",
-       "text": "1,839,744"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Omani(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Omani"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Arab, Baluchi, South Asian (Indian, Pakistani, Sri Lankan, Bangladeshi), African",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Arabic (official), English, Baluchi, Swahili, Urdu, Indian dialects"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 85.9%, Christian 6.4%, Hindu 5.7%, other and unaffiliated 2% (2020 est.)",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong> Omani citizens represent approximately 56.4% of the population and are overwhelming Muslim (Ibadhi and Sunni sects each constitute about 45% and Shia about 5%); Christians, Hindus, and Buddhists account for roughly 5% of Omani citizens"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "29.8% (male 594,909/female 566,682)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "66.2% (male 1,428,141/female 1,155,438)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4% (2024 est.) (male 73,076/female 83,746)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "50.8 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "44.6 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "6.2 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "16.2 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.5 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "28.1 years"
-      },
-      {
-       "label": "female",
-       "text": "26.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.7% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "20.65 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "3.17 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.49 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the vast majority of the population is located in and around the Al Hagar Mountains in the north; another smaller cluster is found around the city of Salalah in the far south; most of the country remains sparsely populated",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "88.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.32% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.650 million MUSCAT (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.24 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.87 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.16 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "13 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15.1 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "12.6 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "77.4 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "75.5 years"
-      },
-      {
-       "label": "female",
-       "text": "79.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.61 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.27 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 94.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 76.3% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 92.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 5.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 23.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 7.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "8.3% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "1.99 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "1.2 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "27% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.47 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.17 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.02 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.29 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.6% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "17.9% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "0.4% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "11.2% (2017 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "55.8% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.3% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "14.2% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "97.3% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "98.6% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "94.9% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14 years (2021 est.)"
       }
      ]
     }
@@ -730,24 +221,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "11 governorates (<em>muhafazat</em>, singular - <em>muhafaza</em>); Ad Dakhiliyah, Al Buraymi, Al Wusta, Az Zahirah, Janub al Batinah (Al Batinah South), Janub ash Sharqiyah (Ash Sharqiyah South), Masqat (Muscat), Musandam, Shamal al Batinah (Al Batinah North), Shamal ash Sharqiyah (Ash Sharqiyah North), Zufar (Dhofar)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of Anglo-Saxon law and Islamic law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -763,54 +238,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "the father must be a citizen of Oman"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "unknown"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "21 years of age; universal",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> members of the military and security forces by law cannot vote"
-      }
-     ]
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -823,24 +252,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Majles"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -851,37 +276,13 @@
       {
        "label": "number of seats",
        "text": "90 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "other systems"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "11/1/2023"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "0%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2027"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -892,70 +293,21 @@
       {
        "label": "number of seats",
        "text": "87 (all appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/29/2023"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "20.9%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "November 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of 5 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges nominated by the 9-member Supreme Judicial Council (chaired by the monarch) and appointed by the monarch; judges appointed for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of Appeal; Administrative Court; Courts of First Instance; sharia courts; magistrates' courts; military courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "<strong>note:</strong> organized political parties are banned in Oman, and loyalties tend to form around tribal affiliations",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ABEDA, AFESD, AMF, CAEU, FAO, G-77, GCC, IAEA, IBRD, ICAO, ICC (NGOs), IDA, IDB, IFAD, IFC, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OIC, OPCW, UN, UNCTAD, UNESCO, UNIDO, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "1650 (expulsion of the Portuguese)",
      "items": []
@@ -963,7 +315,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "National Day, 18 November",
      "items": [
@@ -976,7 +328,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of white (top), red, and green, with a vertical red band on the left side; the national emblem (a <em>khanjar</em> dagger in its sheath on top of crossed swords in scabbards) in white is centered near the top of the vertical band<br /><br /><strong>meaning:</strong> white stands for peace and prosperity, red for battles against foreign invaders, and green for the Jebel al Akhdar (Green Mountains) and fertility",
      "items": []
@@ -984,7 +336,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "khanjar dagger on top of two crossed swords",
      "items": []
@@ -992,7 +344,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, white, green",
      "items": []
@@ -1000,7 +352,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1021,7 +373,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

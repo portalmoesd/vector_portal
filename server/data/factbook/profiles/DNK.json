@@ -119,530 +119,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6,051,491 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3,001,698"
-      },
-      {
-       "label": "female",
-       "text": "3,049,793"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Dane(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Danish"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Danish (includes Greenlandic (who are predominantly Inuit) and Faroese) 84.2%, Turkish 1.1%, other 14.7% (largest groups are Polish, Romanian, Syrian, Ukrainian, German, and Iraqi) (2023 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by country of origin"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Danish, Faroese, Greenlandic (an Inuit dialect), German (small minority); note - English is the predominant second language"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Verdens Faktabog, den uundværlig kilde til grundlæggende oplysninger. (Danish)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Evangelical Lutheran (official) 71.4%, Muslim 4.3%, other/none/unspecified (denominations include Roman Catholic, Jehovah's Witness, Serbian Orthodox Christian, Jewish, Baptist, Buddhist, Church of Jesus Christ, Pentecostal, and nondenominational Christian) 24.3% (2024 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "16.2% (male 496,793/female 471,018)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "62.9% (male 1,903,315/female 1,856,615)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "20.8% (2024 est.) (male 575,153/female 670,242)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "57.2 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "24.5 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "32.7 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.1 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "42.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "41 years"
-      },
-      {
-       "label": "female",
-       "text": "43.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.64% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "9.81 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "10.56 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "7.12 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population centers tend to be along coastal areas, particularly in Copenhagen and the eastern side of the country's mainland",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "88.5% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.54% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.381 million COPENHAGEN (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.86 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.99 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "29.8 years (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "4 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3.1 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3.4 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "2.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "82.1 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "80.2 years"
-      },
-      {
-       "label": "female",
-       "text": "84.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.5 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.73 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "9.5% of GDP (2022)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "17.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "7.24 physicians/1,000 population (2021)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "2.5 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "19.7% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.16 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.42 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "4.08 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.66 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "14.3% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "14.4% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14.3% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "54.3% (2024 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 18",
-       "text": "0.7% (2021)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "6.4% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "14.2% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "18 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "19 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -714,24 +208,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "metropolitan Denmark - 5 regions (<em>regioner</em>, singular - <em>region</em>); Hovedstaden (Capital), Midtjylland (Central Jutland), Nordjylland (North Jutland), Sjaelland (Zealand), Syddanmark (Southern Denmark)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law; judicial review of legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -747,49 +225,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Denmark"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -806,7 +243,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -815,88 +252,27 @@
        "text": "Parliament (Folketinget)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "chamber name",
        "text": "The Danish Parliament (Folketinget)"
       },
       {
        "label": "number of seats",
        "text": "179 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "11/1/2022"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Social Democratic Party (50); Liberal Party (Venstre) (23); Moderates (M) (16); Socialist People's Party (SF) (15); Danish Democrats (Æ) (14); Liberal Alliance (14); Conservative People's Party (10); Unity List-Red-Green Alliance (9); Other (24)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "43.6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the court president and 18 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges appointed by the monarch upon the recommendation of the Minister of Justice, with the advice of the Judicial Appointments Council, a 6-member independent body of judges and lawyers; judges appointed for life with retirement at age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Special Court of Indictment and Revision; 2 High Courts; Maritime and Commercial Court; county courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "The Alternative or AP <br />Conservative People's Party or DKF or C <br />Danish People's Party or DF or O <br />Denmark Democrats or E <br />Green Left or SF or F (formerly Socialist People's Party or SF or F)<br />Liberal Alliance or LA or I <br />Liberal Party (Venstre) or V <br />Moderates or M <br />New Right Party or NB or D <br />Red-Green Alliance (Unity List) or EL <br />Social Democrats or SDP or A <br />Social Liberal Party or SLP or B",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ADB (nonregional member), AfDB (nonregional member), Arctic Council, Australia Group, BIS, CBSS, CD, CE, CERN, EAPC, EBRD, ECB, EIB, EITI (implementing country), ESA, EU, FAO, FATF, G-9, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IGAD (partners), IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NC, NEA, NIB, NSG, OAS (observer), OECD, OPCW, OSCE, Paris Club, PCA, Schengen Convention, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNMIL, UNMISS, UNOOSA, UNRWA, UNTSO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "ca. 965 (unified and Christianized under Harald I GORMSSON); 5 June 1849 (became a parliamentary constitutional monarchy)",
      "items": []
@@ -904,7 +280,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Constitution Day, 5 June (1849)",
      "items": [
@@ -917,7 +293,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> red field with a white cross that extends to the edges of the flag; the vertical part of the cross is shifted to the left<br /><br /><strong>history: </strong>referred to as the Dannebrog (Danish flag) and is one of the oldest national flags in the world; the origin of the design is unclear; one legend says that the banner fell from the sky during an early-13th-century battle and inspired the royal army to victory; in actuality, the flag may derive from a crusade banner",
      "items": [
@@ -930,7 +306,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "lion, mute swan",
      "items": []
@@ -938,7 +314,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, white",
      "items": []
@@ -946,7 +322,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "Denmark’s King Frederick VI adopted the national coat of arms in 1819; the crown of King Christian V, who ruled Denmark and Norway from 1670 to 1699,<em> </em>sits atop the shield, symbolizing royal and national authority; the three lions represent a strong and powerful country, with red lily pads in the shape of hearts that stand for strength, valor, and joy",
      "items": []
@@ -954,7 +330,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -979,7 +355,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

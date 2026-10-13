@@ -132,568 +132,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10,899,292 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "5,506,679"
-      },
-      {
-       "label": "female",
-       "text": "5,392,613"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Dominican(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Dominican"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "mixed 70.4% (Mestizo/Indio 58%, Mulatto 12.4%), Black 15.8%, White 13.5%, other 0.3% (2014 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> respondents self-identified their race; the term \"indio\" in the Dominican Republic is not associated with people of indigenous ancestry but people of mixed ancestry or skin color between light and dark"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Spanish (official)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Evangelical 50.2%, Roman Catholic 30.1%, none 18.5%, unspecified 1.2% (2023 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "25.5% (male 1,402,847/female 1,358,833)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "66.9% (male 3,667,584/female 3,563,848)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "7.6% (2024 est.) (male 395,345/female 427,400)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "49.6 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "37.8 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "11.8 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "8.5 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "29.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29.1 years"
-      },
-      {
-       "label": "female",
-       "text": "29.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.78% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.4 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.97 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-2.63 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "coastal development is significant, especially in the southern coastal plains and the Cibao Valley, where population density is highest; smaller population clusters exist in the interior mountains (Cordillera Central)",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "84.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.64% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "3.524 million SANTO DOMINGO (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.93 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.02 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "20.9 years (2013 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "124 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "19 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "72.6 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "71 years"
-      },
-      {
-       "label": "female",
-       "text": "74.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.17 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.06 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 91.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 96.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 8.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 3.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.9% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "14.4% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "2.43 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "1.4 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 91.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 96.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 8.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 3.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "27.6% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5.56 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.15 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.17 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "2.18 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.06 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.7% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13.5% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "5.9% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "3% (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "53.2% (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "9.4% (2019)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "31.5% (2019)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.8% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "20.9% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "94% (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "93.6% (2024 est.)"
-      },
-      {
-       "label": "female",
-       "text": "94.4% (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "14 years (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15 years (2022 est.)"
-      }
-     ]
     }
    }
   ],
@@ -765,24 +221,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "31 provinces (<em>provincias</em>, singular - <em>provincia</em>), 1 district* (<em>distrito</em>); Azua, Baoruco, Barahona, Dajabón, Distrito Nacional*, Duarte, Elías Piña, El Seibo, Espaillat, Hato Mayor, Hermanas Mirabal, Independencia, La Altagracia, La Romana, La Vega, María Trinidad Sánchez, Monseñor Nouel, Monte Cristi, Monte Plata, Pedernales, Peravia, Puerto Plata, Samaná, Sánchez Ramírez, San Cristóbal, San José de Ocoa, San Juan, San Pedro de Macorís, Santiago, Santiago Rodríguez, Santo Domingo, Valverde",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system based on the French civil code; Criminal Procedures Code modified in 2004 to include important elements of an accusatory system",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -798,54 +238,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of the Dominican Republic"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal and compulsory; married persons can vote, regardless of age",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> members of the armed forces and national police by law cannot vote"
-      }
-     ]
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -874,24 +268,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "National Congress of the Republic (Congreso Nacional de la República)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -902,41 +292,13 @@
       {
        "label": "number of seats",
        "text": "190 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/19/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Modern Revolutionary Party (PRM) and its allies (146); People’s Force (FP) and its allies (28); Other (16)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "37.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2028"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -947,78 +309,21 @@
       {
        "label": "number of seats",
        "text": "32 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/19/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Modern Revolutionary Party (PRM) and its allies (24); People’s Force (FP) and its allies (3); Other (5)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "12.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Justice or Suprema Corte de Justicia (consists of a minimum of 16 magistrates); Constitutional Court or Tribunal Constitucional (consists of 13 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court and Constitutional Court judges appointed by the National Council of the Judiciary composed of the president, the leaders of both chambers of congress, the president of the Supreme Court, and a non-governing party congressional representative; Supreme Court judges appointed for 7-year terms; Constitutional Court judges appointed for 9-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "courts of appeal; courts of first instance; justices of the peace; special courts for juvenile, labor, and land cases; Contentious Administrative Court for cases filed against the government"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Alliance for Democracy or APD<br />Broad Front (Frente Amplio)<br />Country Alliance or AP<br />Dominican Liberation Party or PLD<br />Dominican Revolutionary Party or PRD<br />Dominicans For Change or DXC<br />Independent Revolutionary Party or PRI<br />Institutional Social Democratic Bloc or BIS<br />Liberal Reformist Party or PRL (formerly the Liberal Party of the Dominican Republic or PLRD)<br />Modern Revolutionary Party or PRM<br />National Progressive Front or FNP<br />People's First Party or PPG<br />People's Force or FP<br />Social Christian Reformist Party or PRSC",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, ACS, AOSIS, BCIE, Caricom (observer), CD, CELAC, FAO, G-77, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), LAES, LAIA, MIGA, MINUSMA, NAM, OAS, OIF (observer), OPANAL, OPCW, Pacific Alliance (observer), PCA, Petrocaribe, SICA (associated member), UN, UNCTAD, UNESCO, UNHRC, UNIDO, Union Latina, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "27 February 1844 (from Haiti)",
      "items": []
@@ -1026,7 +331,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 27 February (1844)",
      "items": []
@@ -1034,7 +339,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> a centered white cross extends to the edges and divides the flag into four rectangles; the top ones are ultramarine blue (left side) and vermilion red, and the bottom ones are vermilion red (left side) and ultramarine blue; a small coat of arms with a shield supported by a laurel branch and a palm branch is at the center of the cross; above the shield, a blue ribbon displays the motto DIOS, PATRIA, LIBERTAD (God, Fatherland, Liberty); below the shield, REPUBLICA DOMINICANA is on a red ribbon; on the shield, a Bible is opened to a verse that reads \"Y la verdad nos hara libre\" (And the truth shall set you free)<br /><br /><strong>meaning:</strong> blue stands for liberty, white for salvation, and red for the blood of heroes",
      "items": []
@@ -1042,7 +347,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "palmchat (bird)",
      "items": []
@@ -1050,7 +355,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, white, blue",
      "items": []
@@ -1058,7 +363,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1079,7 +384,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

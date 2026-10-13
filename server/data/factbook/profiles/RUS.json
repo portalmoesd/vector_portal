@@ -182,69 +182,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "140,134,279 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "65,166,555"
-      },
-      {
-       "label": "female",
-       "text": "74,967,724"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Russian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Russian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Russian 77.7%, Tatar 3.7%, Ukrainian 1.4%, Bashkir 1.1%, Chuvash 1%, Chechen 1%, other 10.2%, unspecified 3.9% (2010 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> nearly 200 national and/or ethnic groups are represented in Russia's 2010 census"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Russian (official) 85.7%, Tatar 3.2%, Chechen 1%, other 10.1% (2010 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Книга фактов о мире – незаменимый источник базовой информации. (Russian)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -255,489 +200,13 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Russian Orthodox 15-20%, Muslim 10-15%, other Christian 2% (2006 est.)",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong> estimates are of practicing worshipers; Russia has large populations of non-practicing believers and non-believers, a legacy of over seven decades of official atheism under Soviet rule; Russia officially recognizes Orthodox Christianity, Islam, Judaism, and Buddhism as the country's traditional religions"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "16.5% (male 11,956,284/female 11,313,829)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.7% (male 45,007,073/female 47,518,221)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "17.8% (2024 est.) (male 8,533,448/female 16,491,955)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "52.6 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "24.7 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "27.9 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.6 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "42.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "39.4 years"
-      },
-      {
-       "label": "female",
-       "text": "44.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.49% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "8.27 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "13.93 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0.76 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population is heavily concentrated in the westernmost fifth of the country, extending from the Baltic Sea south to the Caspian Sea, and eastward parallel to the Kazakh border; elsewhere, sizeable population pockets are isolated and generally found in the south",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "75.3% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.11% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "12.680 million MOSCOW (capital), 5.561 million Saint Petersburg, 1.695 million Novosibirsk, 1.528 million Yekaterinburg, 1.292 million Kazan, 1.251 million Nizhniy Novgorod (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.95 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.52 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.87 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "25.2 years (2013 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "9 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7.2 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "5.8 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "72.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "67.4 years"
-      },
-      {
-       "label": "female",
-       "text": "77.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.52 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.74 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 98.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 91.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 97.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 8.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 2.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "7.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "13.8% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "5.11 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "7 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 71.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 89.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 28.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 10.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "23.1% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.29 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.04 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.97 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "3.16 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.12 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "26.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "40.2% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15.1% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "57.6% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "0.3% (2017)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "6.2% (2017)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.2% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "14.3% national budget (2018 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "99.9% (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "99.9% (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "99.9% (2021 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15 years (2023 est.)"
       }
      ]
     }
@@ -819,29 +288,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "46 provinces (<em>oblasti</em>, singular - <em>oblast</em>), 21 republics (<em>respubliki</em>, singular - <em>respublika</em>), 4 autonomous districts (<em>avtonomnyye okrugi</em>, singular - <em>avtonomnyy okrug</em>), 9 federal subjects (<em>kraya</em>, singular - <em>kray</em>), 2 federal cities (<em>goroda</em>, singular - <em>gorod</em>), and 1 autonomous province (<em>avtonomnaya oblast'</em>) <br /><br /><strong>oblasts:</strong> Amur (Blagoveshchensk), Arkhangelsk, Astrakhan, Belgorod, Bryansk, Chelyabinsk, Irkutsk, Ivanovo, Kaliningrad, Kaluga, Kemerovo, Kirov, Kostroma, Kurgan, Kursk, Leningrad (Gatchina), Lipetsk, Magadan, Moscow, Murmansk, Nizhniy Novgorod, Novgorod, Novosibirsk, Omsk, Orenburg, Orel, Penza, Pskov, Rostov, Ryazan, Sakhalin (Yuzhno-Sakhalinsk), Samara, Saratov, Smolensk, Sverdlovsk (Yekaterinburg), Tambov, Tomsk, Tula, Tver, Tyumen, Ulyanovsk, Vladimir, Volgograd, Vologda, Voronezh, Yaroslavl <br /><br /><strong>republics:</strong> Adygeya (Maykop), Altay (Gorno-Altaysk), Bashkortostan (Ufa), Buryatiya (Ulan-Ude), Chechnya (Groznyy), Chuvashiya (Cheboksary), Dagestan (Makhachkala), Ingushetiya (Magas), Kabardino-Balkariya (Nal'chik), Kalmykiya (Elista), Karachayevo-Cherkesiya (Cherkessk), Kareliya (Petrozavodsk), Khakasiya (Abakan), Komi (Syktyvkar), Mariy-El (Yoshkar-Ola), Mordoviya (Saransk), North Ossetia (Vladikavkaz), Sakha [Yakutiya] (Yakutsk), Tatarstan (Kazan), Tyva (Kyzyl), Udmurtiya (Izhevsk) <br /><br /><strong>autonomous districts:</strong> Chukotka (Anadyr'), Khanty-Mansi-Yugra (Khanty-Mansiysk), Nenets (Nar'yan-Mar), Yamalo-Nenets (Salekhard) <br /><br /><strong>federal subjects:</strong> Altay (Barnaul), Kamchatka (Petropavlovsk-Kamchatskiy), Khabarovsk, Krasnodar, Krasnoyarsk, Perm, Primorskiy [Maritime] (Vladivostok), Stavropol, Zabaykalsk [Transbaikal] (Chita) <br /><br /><strong>federal cities:</strong> Moscow [Moskva], Saint Petersburg [Sankt-Peterburg] <br /><br /><strong>autonomous province:</strong> Yevreyskaya [Jewish] (Birobidzhan)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note 1:</strong> administrative divisions have the same names as their administrative centers; exceptions show the administrative center name in parentheses <br /><br /><strong>note 2:</strong> the United States does not recognize Russia's annexation or renaming of Ukraine's Autonomous Republic of Crimea and the municipality of Sevastopol; it similarly does not recognize the annexation of the Ukrainian oblasts Donetsk, Luhansk, Zaporizhzhia, and Kherson"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system; judicial review of legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -857,49 +305,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Russia"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "3-5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -928,28 +335,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Federal Assembly (Federalnoye Sobraniye)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note 1:</strong> the State Duma now includes 3 representatives from the \"Republic of Crimea,\" while the Federation Council includes 2 each from the \"Republic of Crimea\" and the \"Federal City of Sevastopol,\" both regions that Russia occupied and attempted to annex from Ukraine and that the US does not recognize as part of Russia"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -960,41 +359,13 @@
       {
        "label": "number of seats",
        "text": "450 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "9/19/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "United Russia (326); Communist Party (KPRF) (57); A Just Russia (28); Liberal Democratic Party of Russia (LDPR) (23); Other (16)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "16.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2026"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -1005,54 +376,21 @@
       {
        "label": "number of seats",
        "text": "170 (all appointed)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "18.5%"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of the Russian Federation (consists of 170 members organized into the Judicial Panel for Civil Affairs, the Judicial Panel for Criminal Affairs, and the Military Panel); Constitutional Court (consists of 11 members, including the chairperson and deputy)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "all members of Russia's 3 highest courts nominated by the president and appointed by the Federation Council (the upper house of the legislature); members of all 3 courts appointed for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "regional (kray) and provincial (oblast) courts; Moscow and St. Petersburg city courts; autonomous province and district courts (the 21 Russian republics have court systems specified by their own constitutions)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "A Just Russia for Truth or SRZP<br />Civic Platform or CP<br />Communists of Russia or CPCR<br />Communist Party of the Russian Federation or CPRF<br />Cossack Party of the Russian Federation or CosPRF<br />Democratic Party of Russia or DPR<br />Green Alternative or GA<br />Liberal Democratic Party of Russia or LDPR<br />New People or NP<br />Party for Fairness! or PARZAS!<br />Party of Direct Democracy or PDD<br />Party of Progress or PP<br />Party of Pensioners or RPPSJ<br />Party of Russia's Rebirth or PRR<br />Party of Social Protection or PSP<br />Rodina<br />Russian Ecological Party or The Greens<br />Russian Party of Freedom and Justice or RPFJ<br />Russia United Democratic Party or Yabloko<br />United Russia or UR",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "APEC, Arctic Council, ARF, ASEAN (dialogue partner), BIS, BRICS, BSEC, CBSS, CD, CE, CERN (observer), CICA, CIS, CSTO, EAEC, EAEU, EAPC, EAS, EBRD, FAO, FATF, G-20, GCTU, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM (observer), IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, MINURSO, MONUSCO, NEA, NSG, OAS (observer), OIC (observer), OPCW, OSCE, Paris Club, PCA, PFP, SCO, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMIL, UNMISS, UNOCI, UNOOSA, UN Security Council (permanent), UNTSO, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "25 December 1991 (from the Soviet Union; Russian SFSR renamed Russian Federation); notable earlier dates: 1157 (Principality of Vladimir-Suzdal created); 16 January 1547 (Tsardom of Muscovy established); 22 October 1721 (Russian Empire proclaimed); 30 December 1922 (Soviet Union established)",
      "items": []
@@ -1060,7 +398,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Russia Day, 12 June (1990)",
      "items": [
@@ -1073,7 +411,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of white (top), blue, and red<br /><br /><strong>meaning:</strong> colors may have been based on the Dutch flag, but no official meaning is assigned<br /><br /><strong>history:</strong> created when Russia built its first naval vessels, and was used mostly as a naval flag until the 19th century",
      "items": [
@@ -1086,7 +424,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "bear, double-headed eagle",
      "items": []
@@ -1094,7 +432,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "white, blue, red",
      "items": []
@@ -1102,7 +440,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": "the current coat of arms of Russia was adopted by presidential decree on 30 November 1993; the double-headed eagle was adopted as a Russian symbol in 1472 when Ivan III married Sophia Palaiologina, niece of the last Byzantine emperor in Constantinople -- the eagle was her family's emblem",
      "items": []
@@ -1110,7 +448,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [
@@ -1131,7 +469,7 @@
    },
    {
     "field": "National heritage",
-    "order": 240,
+    "order": 170,
     "content": {
      "text": null,
      "items": [

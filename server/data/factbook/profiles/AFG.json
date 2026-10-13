@@ -157,64 +157,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "49,474,805 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25,051,967"
-      },
-      {
-       "label": "female",
-       "text": "24,422,838"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Afghan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Afghan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "current, reliable statistical data on ethnicity in Afghanistan are not available; Afghanistan's 2004 Constitution cited Pashtun, Tajik, Hazara, Uzbek, Turkman, Baluch, Pashaie, Nuristani, Aymaq, Arab, Qirghiz, Qizilbash, Gujur, and Brahwui ethnicities; Afghanistan has dozens of other small ethnic groups",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Afghan Persian or Dari (official, lingua franca) 77%, Pashto (official) 48%, Uzbeki 11%, English 6%, Turkmani 3%, Urdu 3%, Pashaie 1%, Nuristani 1%, Arabic 1%, Balochi 1%, other &lt;1% (2020 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "<p>کتاب حقایق جهان، مرجعی ضروری برای اطلاعات اولیە (Dari)</p> د دنیا د حقائېقو کتاب، بنیادی معلوماتو لپاره ضروری سرچینه- (Pashto)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -225,503 +175,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 99.7% (Sunni 84.7 - 89.7%, Shia 10 - 15%), other &lt;0.3% (2009 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "39.6% (male 8,062,407/female 7,818,897)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "57.5% (male 11,702,734/female 11,372,249)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "2.9% (2024 est.) (male 535,925/female 629,340)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "82.2 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "77 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "5.2 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "19 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18.4 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "20 years"
-      },
-      {
-       "label": "female",
-       "text": "20.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2.86% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "35.99 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.79 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.62 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "populations tend to cluster in the foothills and periphery of the rugged Hindu Kush range; smaller groups are found in many of the country's interior valleys; in general, the east is more densely settled, while the south is sparsely populated",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "26.9% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.34% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "4.589 million KABUL (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.85 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.02 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "19.9 years (2015 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "521 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "42 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "109.7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "92.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "54.4 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "52.8 years"
-      },
-      {
-       "label": "female",
-       "text": "56.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "4.89 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "2.39 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 76.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 82.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 23.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 17.8% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "21.8% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "1.1% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.32 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "0.4 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 93% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 58.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 68% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 41.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 32% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "5.5% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "36.5% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "5.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "18.4% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "65.9% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "9.6% (2023)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "28.7% (2023)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "7.3% (2015)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.3% of GDP (2017 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "15.7% national budget (2017 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "37.3% (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "52.1% (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "26.6% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11 years (2018 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2018 est.)"
-      },
-      {
-       "label": "female",
-       "text": "8 years (2018 est.)"
-      }
-     ]
     }
    }
   ],
@@ -793,24 +250,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "34 provinces (<em>welayat</em>, singular - <em>welayat</em>); Badakhshan, Badghis, Baghlan, Balkh, Bamyan, Daykundi, Farah, Faryab, Ghazni, Ghor, Helmand, Herat, Jowzjan, Kabul, Kandahar, Kapisa, Khost, Kunar, Kunduz, Laghman, Logar, Nangarhar, Nimroz, Nuristan, Paktika, Paktiya, Panjshir, Parwan, Samangan, Sar-e Pul, Takhar, Uruzgan, Wardak, Zabul",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "the Taliban is implementing its own interpretation of Islamic law, which is partially based on the Hanifi school of Islamic jurisprudence and have enforced strict punishments; before the Taliban takeover, Afghanistan had a mixed legal system of civil, customary, and Islamic law (2021)",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -822,49 +263,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; formerly accepted ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must have been born in - and continuously lived in - Afghanistan"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -884,33 +284,8 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": "<strong>note:</strong> Afghanistan’s bicameral National Assembly consisted of the House of Elders and House of the People but was dissolved after the Taliban took control of Afghanistan in August 2021",
-     "items": []
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "the Taliban are purported to have appointed clerics, including a \"Chief Justice,\" to Afghanistan's Supreme Court"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "provincial courts, religious courts, and specialty courts"
-      }
-     ]
-    }
-   },
-   {
     "field": "Political parties",
-    "order": 130,
+    "order": 60,
     "content": {
      "text": "the Taliban Government enforces an authoritarian state and has banned other political parties<br /><br />the Taliban have banned other political parties but have allowed some party leaders, including the head of Hezb-e-Islami, Gulbuddin Hekmatyar, to continue to live and work in Afghanistan; Hekmatyar likely continues to enjoy some political support from loyalists; leaders of other parties, including Jamiat-e-Islami’s Salahuddin Rabbani and Jumbesh’s Rashid Dostum, operate from abroad but likely also command some following within Afghanistan",
      "items": [
@@ -922,16 +297,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "Afghanistan is a member of the following organizations but Taliban representatives do not participate: ADB, CICA, CP, ECO, EITI (candidate country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIC, OPCW, OSCE (partner), SAARC, SACEP, SCO (dialogue member), UN, UNAMA, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 70,
     "content": {
      "text": "19 August 1919 (from UK control over Afghan foreign affairs)",
      "items": []
@@ -939,7 +306,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 80,
     "content": {
      "text": "previous: Independence Day, 19 August (1919); under the Taliban Government, 15 August (2022) is declared a national holiday, marking the anniversary of the victory of the Afghan jihad",
      "items": []
@@ -947,7 +314,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 90,
     "content": {
      "text": "<strong>description: </strong>three equal vertical bands of black (left), red, and green, with the national emblem in white centered on the red band and slightly overlapping the other bands; the emblem shows a mosque with a pulpit and flags on either side; below the mosque are Eastern Arabic numerals for the solar year 1298 (1919 in the Gregorian calendar, the year of Afghan independence from the UK); a border of wheat sheaves circles the mosque; above the mosque is an Arabic inscription of the Shahada (Muslim creed), with rays of the rising sun over the Takbir (Arabic expression meaning \"God is great\"); under the mosque is a scroll with the name Afghanistan<br /><br /><strong>meaning:</strong> black stands for the past, and red for the blood shed for independence; green can represent hope for the future, agricultural prosperity, or Islam<br /><br /><strong>history:</strong> Afghanistan had more changes to its national flag in the 20th century -- 19 by one count -- than any other country; the colors black, red, and green appeared on most of them",
      "items": [
@@ -960,7 +327,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 100,
     "content": {
      "text": "lion",
      "items": []
@@ -968,7 +335,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 110,
     "content": {
      "text": "red, green, black",
      "items": []
@@ -976,7 +343,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 120,
     "content": {
      "text": null,
      "items": [
@@ -997,7 +364,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

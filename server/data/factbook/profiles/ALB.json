@@ -145,570 +145,27 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2,551,837 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "1,229,151"
-      },
-      {
-       "label": "female",
-       "text": "1,322,686"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Albanian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Albanian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Albanian 82.6%, Greek 0.9%, other 1% (including Vlach, Romani, Macedonian, Montenegrin, and Egyptian), unspecified 15.5% (2011 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by ethnic and cultural affiliation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Albanian 98.8% (official - derived from Tosk dialect), Greek 0.5%, other 0.6% (including Macedonian, Romani, Vlach, Turkish, Italian, and Serbo-Croatian), unspecified 0.1% (2011 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Libri i fakteve boterore, burimi i pazevendesueshem per informacione elementare (Albanian)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 56.7%, Roman Catholic 10%, Orthodox 6.8%, atheist 2.5%, Bektashi (a Sufi order) 2.1%, other 5.7%, unspecified 16.2% (2011 est.)",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong> all mosques and churches were closed in 1967 and religious observances prohibited; in November 1990, Albania began allowing private religious practice"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "18% (male 292,296/female 267,052)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "66.9% (male 1,023,515/female 1,055,388)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "15.1% (2024 est.) (male 215,252/female 253,597)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "49 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "24.1 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "24.9 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "4 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "37.9 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "34.8 years"
-      },
-      {
-       "label": "female",
-       "text": "37.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-1.06% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "8.71 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "7.9 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-11.37 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "a fairly even distribution, with somewhat higher concentrations of people in the western and central parts of the country",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "64.6% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.29% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "520,000 TIRANA (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.09 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.97 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.85 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.97 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "26.6 years (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "7 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "11.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "9.2 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "79.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "77.3 years"
-      },
-      {
-       "label": "female",
-       "text": "82.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.09 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.52 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 94.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 95.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 5.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 4.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "7.3% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "9.2% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "1.88 physicians/1,000 population (2020)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "2.9 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "21.7% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.4 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "1.75 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "1.15 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.43 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.08 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21.4% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "37% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "6.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "1.5% (2017 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "65.7% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "1.4% (2018)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "11.8% (2018)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "1.2% (2018)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.1% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "10.9% national budget (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "97.7% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "98.2% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "97.2% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "14 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15 years (2023 est.)"
       }
      ]
     }
@@ -786,24 +243,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "12 counties (<em>qarqe</em>, singular - <em>qark</em>); Berat, Diber, Durres, Elbasan, Fier, Gjirokaster, Korce, Kukes, Lezhe, Shkoder, Tirane (Tirana), Vlore",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system except in the northern rural areas where customary law known as the \"Code of Leke\" is still present",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -819,49 +260,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Albania"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -886,7 +286,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -895,93 +295,27 @@
        "text": "Albanian Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "chamber name",
        "text": "Parliament (Kuvendi)"
       },
       {
        "label": "number of seats",
        "text": "140 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/11/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Socialist Party of Albania (PS) (83); Democratic Party - Alliance for a Greater Albania (PD-ASHM) (50); Other (7)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "35%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of 19 judges, including the chief justice); Constitutional Court (consists of 9 judges, including the chairman)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges appointed by the High Judicial Council with the consent of the president to serve single 9-year terms; Supreme Court chairman is elected for a single 3-year term by the court members; appointments of Constitutional Court judges are rotated among the president, Parliament, and Supreme Court from a list of pre-qualified candidates (each institution selects 3 judges), to serve single 9-year terms; candidates are pre-qualified by a randomly selected body of experienced judges and prosecutors; Constitutional Court chairman is elected by the court members for a single, renewable 3-year term"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of Appeal; Courts of First Instance; specialized courts: Court for Corruption and Organized Crime, Appeals Court for Corruption and Organized Crime (responsible for corruption, organized crime, and crimes of high officials)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Alliance for Change (electoral coalition led by PD)<br />Democratic Party or PD <br />Party for Justice, Integration and Unity or PDIU (part of the Alliance for Change)<br />Social Democratic Party or PSD<br />Freedom Party of Albania or PL (formerly the Socialist Movement for Integration or LSI)<br />Socialist Party or PS",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "BSEC, CD, CE, CEI, EAPC, EBRD, EITI (compliant country), FAO, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, ITUC (NGOs), MIGA, NATO, OAS (observer), OIC, OIF, OPCW, OSCE, PCA, SELEC, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note</strong>: Albania is an EU candidate country and must complete accession criteria before being granted full membership"
-      }
-     ]
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "28 November 1912 (from the Ottoman Empire)",
      "items": []
@@ -989,7 +323,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 28 November (1912), also known as Flag Day",
      "items": []
@@ -997,7 +331,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> red with a black two-headed eagle in the center<br /><br /><strong>meaning: </strong>Albanians traditionally see themselves as descendants of the eagle; they refer to themselves as \"Shqiptare,\" which translates as \"sons of the eagle\"<br /><br /><strong>history: </strong>the design is said to originate with 15th-century Albanian hero Georgi Kastrioti SKANDERBEG, who led a successful uprising against the Ottoman Turks",
      "items": []
@@ -1005,7 +339,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "black double-headed eagle",
      "items": []
@@ -1013,7 +347,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, black",
      "items": []
@@ -1021,7 +355,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "adopted in 1998 and features the national symbol, the double-headed black eagle, in the national colors of red and black; red represents the courage and strength of the Albanian people, and the golden border represents the country’s wealth; the helmet above the eagle is modeled on the helmet of Skanderbeg, a 15th-century Albanian military hero who led a rebellion against the Ottoman Empire; the goat on top of the helmet represents defiance and resistance",
      "items": []
@@ -1029,7 +363,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -1050,7 +384,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

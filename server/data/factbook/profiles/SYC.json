@@ -111,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "98,187 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "50,973"
-      },
-      {
-       "label": "female",
-       "text": "47,214"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Seychellois (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Seychellois"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "predominantly Creole (mainly of East African and Malagasy heritage); also French, Indian, Chinese, and Arab populations",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Seychellois Creole (official) 89.1%, English (official) 5.1%, French (official) 0.7%, other 3.8%, unspecified 1.4% (2010 est.)",
      "items": []
@@ -166,408 +120,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 76.2%, Protestant 10.5% (Anglican 6.1%, Pentecostal Assembly 1.5%, Seventh Day Adventist 1.2%, other Protestant 1.7%), other Christian 2.4%, Hindu 2.4%, Muslim 1.6%, other non-Christian 1.1%, unspecified 4.8%, none 0.9% (2010 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "17.7% (male 8,912/female 8,439)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "72.4% (male 37,841/female 33,210)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "10% (2024 est.) (male 4,220/female 5,565)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "38.2 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "24.4 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "13.8 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "7.3 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "39.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "38.2 years"
-      },
-      {
-       "label": "female",
-       "text": "39.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.53% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "11.59 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "7.02 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0.71 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "more than three quarters of the population lives on the main island of Mahe; Praslin is home to less than 10%, and a smaller percentage is on La Digue and the outer islands, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "58.8% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.99% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "28,000 VICTORIA (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.14 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.76 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.08 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "42 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "7.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "76.6 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "72.2 years"
-      },
-      {
-       "label": "female",
-       "text": "81.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "1.8 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "0.89 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 96.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 3.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "5.3% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "10.2% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "2.25 physicians/1,000 population (2019)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "3.2 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "14% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.48 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "4.11 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.49 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "4.62 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.25 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "34.2% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "5.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 300,
-    "content": {
-     "text": "44.6% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.5% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "10.7% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "15 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -635,24 +191,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "27 administrative districts; Anse aux Pins, Anse Boileau, Anse Etoile, Anse Royale, Au Cap, Baie Lazare, Baie Sainte Anne, Beau Vallon, Bel Air, Bel Ombre, Cascade, Glacis, Grand Anse Mahe, Grand Anse Praslin, Ile Persévérance I, Ile Persévérance II, La Digue, La Rivière Anglaise, Les Mamelles, Mont Buxton, Mont Fleuri, Plaisance, Pointe Larue, Port Glaud, Roche Caiman, Saint Louis, Takamaka",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of English common law, French civil law, and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -668,49 +208,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of the Seychelles"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -739,7 +238,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -748,84 +247,23 @@
        "text": "National Assembly"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "34 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "9/27/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "United Seychelles (US) (19); Seychelles Democratic Alliance (Linyon Demokratik Seselwa, LDS) (15)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "26.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2030"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Seychelles Court of Appeal (consists of the court president and 4 justices); Supreme Court of Seychelles (consists of the chief justice and 9 puisne judges); Constitutional Court (consists of 3 Supreme Court judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "all judges appointed by the president of the republic upon the recommendation of the Constitutional Appointments Authority, a 3-member body, with 1 member appointed by the president of the republic, 1 by the opposition leader in the National Assembly, and 1 by the other 2 appointees; judges serve until retirement at age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Magistrates' Courts of Seychelles; Family Tribunal for issues such as domestic violence, child custody, and maintenance; Employment Tribunal for labor-related disputes"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Seychelles Party for Social Justice and Democracy or SPSJD<br />Seychellois Democratic Alliance or LDS (Linyon Demokratik Seselwa/Union Démocratique Seychelloise)<br />Seychelles National Party or SNP<br />United Seychelles or US",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, AfDB, AOSIS, AU, C, CD, COMESA, EITI (candidate country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, InOC, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, MIGA, NAM, OIF, OPCW, SADC, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "29 June 1976 (from the UK)",
      "items": []
@@ -833,7 +271,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Constitution Day, 18 June (1993); Independence Day (National Day), 29 June (1976)",
      "items": []
@@ -841,7 +279,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> five expanding bands of blue, yellow, red, white, and green, radiating from the bottom left corner<br /><br /><strong>meaning:</strong> the bands symbolize a dynamic new country moving into the future; blue stands for the sky and sea, yellow for the sun giving light and life, red for the people's determination to work for the future in unity and love, white for social justice and harmony, and green for the land and natural environment",
      "items": []
@@ -849,7 +287,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "coco de mer (sea coconut)",
      "items": []
@@ -857,7 +295,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, yellow, red, white, green",
      "items": []
@@ -865,7 +303,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -886,7 +324,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

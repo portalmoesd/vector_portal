@@ -111,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "611,014 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "297,106"
-      },
-      {
-       "label": "female",
-       "text": "313,908"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Cabo Verdean(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Cabo Verdean"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Creole (Mulatto) 71%, African 28%, European 1%",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Portuguese (official), Crioulo (a Portuguese-based creole language with two main dialects)",
      "items": []
@@ -166,490 +120,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 72.5%, Protestant 4% (includes Adventist 1.9%, Nazarene 1.8%, Assembly of God 0.2%, God is Love 0.1%), Christian Rationalism 1.7%, Muslim 1.3%, Jehovah's Witness 1.2%, Church of Jesus Christ 1%, other Christian 1.3%, other 1.2%, none 15.6%, no response 0.4% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "26.4% (male 80,973/female 80,129)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "67.2% (male 201,084/female 209,676)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "6.4% (2024 est.) (male 15,049/female 24,103)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "48.8 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "39.2 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "9.5 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "10.5 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "29.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "27.9 years"
-      },
-      {
-       "label": "female",
-       "text": "29.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.12% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.51 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.73 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.56 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "among the nine inhabited islands, population distribution is variable; islands in the east are very dry and are only sparsely settled; the more southerly islands receive more precipitation and support larger populations; approximately half of the population lives on Sao Tiago Island, which is the location of the capital of Praia; Mindelo, on the northern island of Sao Vicente, also has a large urban population, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "68% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.83% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "168,000 PRAIA (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.62 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.95 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "40 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21.9 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "26.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "18.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "74.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "72 years"
-      },
-      {
-       "label": "female",
-       "text": "76.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.08 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.02 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 93.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 82.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 89.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 6.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 17.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 10.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "6.9% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "16.1% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.73 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "2 beds/1,000 population (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 77.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 89.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 22.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 10.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "11.8% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.7 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "2.28 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "1.82 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.6 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15.3% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "4.5% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "2.2% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "45% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "1.8% (2018)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "8.4% (2018)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "1.5% (2018)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.3% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "13.4% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "88.5% (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "92.9% (2024 est.)"
-      },
-      {
-       "label": "female",
-       "text": "84.1% (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2018 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2018 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14 years (2018 est.)"
-      }
-     ]
     }
    }
   ],
@@ -717,24 +191,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "22 municipalities (<em>concelhos</em>, singular - <em>concelho</em>); Boa Vista, Brava, Maio, Mosteiros, Paul, Porto Novo, Praia, Ribeira Brava, Ribeira Grande, Ribeira Grande de Santiago, Sal, Santa Catarina, Santa Catarina do Fogo, Santa Cruz, São Domingos, São Filipe, São Lourenco dos Orgaos, São Miguel, São Salvador do Mundo, São Vicente, Tarrafal, Tarrafal de São Nicolau",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system of Portugal",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -750,49 +208,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Cabo Verde"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -817,7 +234,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -826,84 +243,23 @@
        "text": "National Assembly (Assembleia Nacional)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "72 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "4/18/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Movement for Democracy (MpD) (38); African Party for the Independence of Cabo Verde (PAICV) (30); Union for an Independent Democratic Cape Verde (UCID) (4)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "44.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "April 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Justice (consists of the chief justice and at least 7 judges and organized into civil, criminal, and administrative sections)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judge appointments - 1 by the president of the republic, 1 elected by the National Assembly, and 3 by the Superior Judicial Council (SJC), a 16-member independent body chaired by the chief justice and includes the attorney general, 8 private citizens, 2 judges, 2 prosecutors, the senior legal inspector of the Attorney General's office, and a representative of the Ministry of Justice; chief justice appointed by the president of the republic from among peers of the Supreme Court of Justice and in consultation with the SJC; judges appointed for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "appeals courts, first instance (municipal) courts; audit, military, and fiscal and customs courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "African Party for Independence of Cabo Verde or PAICV <br />Democratic and Independent Cabo Verdean Union or UCID <br />Democratic Christian Party or PDC <br />Democratic Renewal Party or PRD <br />Movement for Democracy or MPD <br />Party for Democratic Convergence or PCD <br />Party of Work and Solidarity or PTS <br />Social Democratic Party or PSD",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, AfDB, AOSIS, AU, CD, CPLP, ECOWAS, FAO, G-77, IAEA, IBRD, ICAO, ICCt (signatory), ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIF, OPCW, UN, UNCTAD, UNESCO, UNIDO, Union Latina, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "5 July 1975 (from Portugal)",
      "items": []
@@ -911,7 +267,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 5 July (1975)",
      "items": []
@@ -919,7 +275,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> five unequal horizontal bands; the top band of blue is half the height of the flag; under it are three narrow bands of white, red, and white, and a bottom stripe of blue; a circle of 10 five-pointed yellow stars is centered on the red stripe and sits toward the left side of the flag<br /><br /><strong>meaning:</strong> blue stands for the sea and sky; the stripes symbolize the country's formation through peace (white) and effort (red); the stars represent the 10 major islands",
      "items": []
@@ -927,7 +283,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "ten five-pointed yellow stars",
      "items": []
@@ -935,7 +291,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, white, red, yellow",
      "items": []
@@ -943,7 +299,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "adopted in 1992, the coat of arms features the national symbol of ten stars that represent the country’s islands; the stylized torch and triangle at the center of the circle symbolize freedom and national unity, and the three blue lines represent the ocean and sky; the name of the country is written in Portuguese, the official language; the plumbob at the top of the circle -- used in construction to make accurate vertical lines -- represents justice, righteousness, and truth; the chain links symbolize a commitment to the people and their well-being",
      "items": []
@@ -951,7 +307,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -972,7 +328,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

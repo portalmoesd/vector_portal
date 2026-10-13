@@ -111,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "51,118 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "27,044"
-      },
-      {
-       "label": "female",
-       "text": "24,074"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "NA (US citizens)"
-      },
-      {
-       "label": "adjective",
-       "text": "NA"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Asian 50% (includes Filipino 35.3%, Chinese 6.8%, Korean 4.2%, and other Asian 3.7%), Native Hawaiian or other Pacific Islander 34.9% (includes Chamorro 23.9%, Carolinian 4.6%, and other Native Hawaiian or Pacific Islander 6.4%), other 2.5%, two or more ethnicities or races 12.7% (2010 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Philippine languages 32.8%, Chamorro (official) 24.1%, English (official) 17%, other Pacific island languages 10.1% (includes Carolinian (official), Chinese 6.8%, other Asian languages 7.3%, other 1.9% (2010 est.)",
      "items": []
@@ -166,270 +120,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian (Roman Catholic majority, although traditional beliefs and taboos may still be found)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "22.1% (male 6,066/female 5,231)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "67.7% (male 18,206/female 16,377)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "10.2% (2024 est.) (male 2,772/female 2,466)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "47.8 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "32.7 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "15.1 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "6.6 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "32.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.8 years"
-      },
-      {
-       "label": "female",
-       "text": "33.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.33% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "15.8 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.91 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-13.21 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "approximately 90% of the population lives on the island of Saipan",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "92.1% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.36% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "51,000 SAIPAN (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.17 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.16 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.11 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "1.12 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.12 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "14.4 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "9 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "77.1 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "75 years"
-      },
-      {
-       "label": "female",
-       "text": "79.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "2.53 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "1.17 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 230,
-    "content": {
-     "text": "38.2% (2020 est.)",
      "items": []
     }
    }
@@ -506,24 +199,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 50,
-    "content": {
-     "text": "no first-order administrative divisions as defined by the US government, but 4 municipalities are considered second-order: Northern Islands, Rota, Saipan, Tinian",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "the laws of the US apply, except for customs and some aspects of taxation",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -539,29 +216,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": "see United States",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> inhabitants are US citizens but do not vote in US presidential elections"
-      }
-     ]
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -585,62 +241,16 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>the Northern Mariana Islands delegate to the US House of Representatives can vote when serving on a committee and when the House meets as the \"Committee of the Whole House,\" but not when legislation is submitted for a “full floor” House vote"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of the Commonwealth of the Northern Mariana Islands (CNMI) (consists of the chief justice and 2 associate justices); US Federal District Court (consists of 1 judge)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "CNMI Supreme Court judges appointed by the governor and confirmed by the CNMI Senate; judges appointed for 8-year terms and another term if directly elected in a popular election; US Federal District Court judges appointed by the US president and confirmed by the US Senate; judges appointed for renewable 10-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Superior Court"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> US Federal District Court jurisdiction limited to US federal laws; appeals beyond the CNMI Supreme Court are referred to the US Supreme Court"
-      }
-     ]
-    }
-   },
-   {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Democratic Party<br />Republican Party",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "PIF (observer), SPC, UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "none (commonwealth in political union with the US)",
      "items": []
@@ -648,7 +258,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Commonwealth Day, 8 January (1978)",
      "items": []
@@ -656,7 +266,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> blue with a five-pointed white star on a gray latte stone (a traditional foundation stone) in the center, surrounded by a <em>mwáár </em>or head lei (wreath)<br /><br /><strong>meaning:</strong> blue stands for the Pacific Ocean, the star for the Commonwealth, and the latte stone and mwáár for Marianas culture; the mwáár is made from four kinds of flowers: flores mayo (<em>Plumeria</em>), ylang-ylang or langilang (<em>Cananga odorata</em>), angagha or peacock flower (<em>Caesalpinia pulcherrima</em>), and teibwo or Pacific basil (<em>Ocimum tenuiflorum</em>)",
      "items": []
@@ -664,7 +274,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "latte stone",
      "items": []
@@ -672,7 +282,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, white",
      "items": []
@@ -680,7 +290,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

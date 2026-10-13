@@ -119,542 +119,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5,304,932 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "2,654,314"
-      },
-      {
-       "label": "female",
-       "text": "2,650,618"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Costa Rican(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Costa Rican"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "White or Mestizo 83.6%, Mulatto 6.7%, Indigenous 2.4%, Black or African descent 1.1%, other 1.1%, none 2.9%, unspecified 2.2% (2011 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Spanish (official), English"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 47.5%, Evangelical and Pentecostal 19.8%, Jehovah's Witness 1.4%, other Protestant 1.2%, other 3.1%, none 27% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "18.8% (male 506,041/female 482,481)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "70.2% (male 1,862,872/female 1,832,024)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "11.1% (2024 est.) (male 266,568/female 315,589)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "42.7 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "26.2 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "16.5 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "6.1 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "36 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "34.9 years"
-      },
-      {
-       "label": "female",
-       "text": "36.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.75% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "10.86 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.24 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "1.89 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "roughly half of the nation's population resides in urban areas; the capital of San Jose is the largest city and home to approximately one fifth of the population",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "82.6% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.5% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.462 million SAN JOSE (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.84 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "24 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "6.3 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "80.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "77.7 years"
-      },
-      {
-       "label": "female",
-       "text": "82.9 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "1.45 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "0.71 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 99.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "7.6% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "25.8% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "2.69 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "1.2 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 97.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 98.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 2.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "25.7% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "3.07 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "2.17 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.15 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.36 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.39 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "8.1% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12.2% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "4.1% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "2.9% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "41.7% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "2% (2018)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "17.1% (2018)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "6.2% of GDP (2021 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "31.2% national budget (2021 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "female",
-       "text": "94.1% (2018 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "16 years (2019 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15 years (2019 est.)"
-      },
-      {
-       "label": "female",
-       "text": "16 years (2019 est.)"
-      }
-     ]
     }
    }
   ],
@@ -722,24 +204,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "7 provinces (<em>provincias</em>, singular - <em>provincia</em>); Alajuela, Cartago, Guanacaste, Heredia, Limon, Puntarenas, San Jose",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system based on Spanish civil code; Supreme Court reviews legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -755,49 +221,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "yes"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "yes"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal and compulsory",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -826,7 +251,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -835,84 +260,23 @@
        "text": "Legislative Assembly (Asamblea Legislativa)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "57 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/6/2022"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "National Liberation Party (PLN) (19); Democratic Social Progress Party (PPSD) (10); Christian Social Unity Party (USC) (9); New Republic Party (NR) (7); Broad Front (FA) (6); Progressive Liberal Party (LP) (6)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "49.1%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "February 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Justice (consists of 22 judges organized into 3 cassation chambers each with 5 judges and the Constitutional Chamber with 7 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court of Justice judges elected by the National Assembly for 8-year terms with renewal decided by the National Assembly"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "appellate courts; trial courts; first instance and justice of the peace courts; Superior Electoral Tribunal"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Accessibility Without Exclusion or PASE<br />Broad Front (Frente Amplio) or PFA<br />Citizen Action Party or PAC<br />Costa Rican Renewal Party or PRC<br />Here Costa Rica Commands Party or ACRM<br />Liberal Progressive Party or PLP <br />Libertarian Movement Party or ML<br />National Integration Party or PIN<br />National Liberation Party or PLN<br />National Restoration Party or PRN<br />New Generation or PNG<br />New Republic Party or PNR<br />Social Christian Republican Party or PRSC<br />Social Christian Unity Party or PUSC of UNIDAD<br />Social Democratic Progress Party or PPSD",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACS, BCIE, CACM, CD, CELAC, FAO, G-77, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAES, LAIA (observer), MIGA, NAM (observer), OAS, OIF (observer), OPANAL, OPCW, Pacific Alliance (observer), PCA, SICA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "15 September 1821 (from Spain)",
      "items": []
@@ -920,7 +284,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 15 September (1821)",
      "items": []
@@ -928,7 +292,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> five horizontal bands of blue (top), white, red (double-width), white, and blue, with the coat of arms in a white elliptical disk placed toward the left side of the red band<br /><br /><strong>meaning:</strong> the blue is said to stand for the sky, opportunity, and perseverance; the white for peace, happiness, and wisdom; and the red for the blood shed for freedom, as well as Costa Ricans' generosity and vibrancy<br /><br /><strong>history: </strong>Costa Rica retained the earlier blue-white-blue flag of Central America until 1848 when, in response to revolutions in Europe, it was decided to incorporate the French colors by adding a central red stripe",
      "items": [
@@ -941,7 +305,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "yiguirro (clay-colored thrush)",
      "items": []
@@ -949,7 +313,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, white, red",
      "items": []
@@ -957,7 +321,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "the Costa Rican coat of arms highlights the country’s natural beauty and history; three volcanoes, each topped with a white cloud, are surrounded with water, symbolizing the seaports of the Pacific and Atlantic Oceans; the rising sun in the background stands for the birth of a new nation, and the seven white stars for the country's provinces; the two merchant ships carrying Costa Rica’s flag are a reminder of the maritime trade that shaped the country's history",
      "items": []
@@ -965,7 +329,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -986,7 +350,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

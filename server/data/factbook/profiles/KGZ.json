@@ -153,537 +153,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6,219,751 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3,043,940"
-      },
-      {
-       "label": "female",
-       "text": "3,175,811"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Kyrgyzstani(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Kyrgyzstani"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Kyrgyz 73.8%, Uzbek 14.8%, Russian 5.1%, Dungan 1.1%, other 5.2% (includes Uyghur, Tajik, Turk, Kazakh, Tatar, Ukrainian, Korean, German) (2021 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Kyrgyz (state language) 71.4%, Uzbek 14.4%, Russian (official language) 9%, other 5.2% (2009 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Дүйнөлүк фактылар китеби, негизги маалыматтын маанилүү булагы. (Kyrgyz)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 90% (majority Sunni), Christian 7% (Russian Orthodox 3%), other 3% (includes Jewish, Buddhist, Baha'i) (2017 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "29.1% (male 922,086/female 873,245)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64% (male 1,935,200/female 2,013,733)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "6.9% (2024 est.) (male 164,032/female 263,805)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "56 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "44.6 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "11.4 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "8.8 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "26.9 years"
-      },
-      {
-       "label": "female",
-       "text": "29.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.75% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "18.26 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.99 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-4.75 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the vast majority of Kyrgyzstanis live in rural areas; densest population settlement is to the north in and around the capital, Bishkek, followed by Osh in the west; the least densely populated area is the east, in the Tien Shan mountains",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "37.8% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.05% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.105 million BISHKEK (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.62 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "22.6 years (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "42 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "24 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "28.6 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "20.2 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "72.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "68.9 years"
-      },
-      {
-       "label": "female",
-       "text": "77.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.43 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.18 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 85.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 90.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 14.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 9.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "5.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "7.6% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "1.85 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "4.2 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "16.6% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.02 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.43 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.23 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "3.35 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "26% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "50.7% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "3.1% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "2.9% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "57.4% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "0.3% (2018)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "12.9% (2018)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "6.8% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "19.6% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12 years (2024 est.)"
-      },
-      {
-       "label": "female",
-       "text": "13 years (2024 est.)"
-      }
-     ]
     }
    }
   ],
@@ -751,29 +238,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "7 provinces (<em>oblustar</em>, singular - <em>oblus</em>) and 2 cities* (<em>shaarlar</em>, singular - <em>shaar</em>); Batken Oblusu, Bishkek Shaary*, Chuy Oblusu (Bishkek), Jalal-Abad Oblusu, Naryn Oblusu, Osh Oblusu, Osh Shaary*, Talas Oblusu, Ysyk-Kol Oblusu (Karakol)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> administrative divisions have the same names as their administrative centers; exceptions show the administrative center name in parentheses"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system that includes features of French civil law and Russian Federation laws",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -789,49 +255,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Kyrgyzstan"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes, but only if a mutual treaty on dual citizenship is in force"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -860,7 +285,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -869,84 +294,23 @@
        "text": "Supreme Council (Jogorku Kenesh)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "90 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "other systems"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "11/30/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Ata-Jurt Kyrgyzstan (Fatherland) (15); Ishenim (Trust) (12); Yntymak (Harmony) (9); Alyans (Alliance) (7); Butun Kyrgyzstan (United) (6); Yiman Nuru (Ray of Faith) (5); Independents (34)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "22.2%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "November 2030"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of 25 judges); Constitutional Chamber of the Supreme Court (consists of the chairperson, deputy chairperson, and 9 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court and Constitutional Court judges appointed by the Supreme Council on the recommendation of the president; Supreme Court judges serve for 10 years, Constitutional Court judges serve for 15 years; mandatory retirement at age 70 for judges of both courts"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Higher Court of Arbitration; oblast (provincial) and city courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Afghan's Party<br />Alliance<br />Cohesion<br />Fatherland Kyrgyzstan<br />Ishenim<br />Light of Faith<br />Mekenchil<br />Social Democrats or SDK<br />United Kyrgyzstan",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ADB, CICA, CIS, CSTO, EAEU, EAPC, EBRD, ECO, EITI (compliant country), FAO, GCTU, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, MIGA, NAM (observer), OIC, OPCW, OSCE, PCA, PFP, SCO, UN, UNAMID, UNCTAD, UNESCO, UNIDO, UNISFA, UNMIL, UNMISS, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "31 August 1991 (from the Soviet Union)",
      "items": []
@@ -954,7 +318,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 31 August (1991)",
      "items": []
@@ -962,7 +326,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> red field with a yellow sun in the center that has 40 rays that run counterclockwise on the front of the flag and clockwise on the reverse; in the center of the sun is a red ring crossed by two sets of three lines in a stylized representation of a <em>tunduk,</em> the circular opening at the top of a traditional Kyrgyz yurt<br /><br /><strong>meaning:</strong> the sun's rays represent the Kyrgyz tribes; red stands for bravery and valor, and the sun for peace and wealth",
      "items": []
@@ -970,7 +334,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "white falcon",
      "items": []
@@ -978,7 +342,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, yellow",
      "items": []
@@ -986,7 +350,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "adopted in 1992, the coat of arms of Kyrgyzstan highlights two of its best-known geographic features, Issyk-Kul Lake and the Tien Shan mountain range; the falcon, the national symbol, stands for nobleness and purity, and light blue for courage and generosity; the word “Kyrgyz” appears at the top of the emblem, and “Republic” at the bottom; the wheat, cotton, and rising sun were symbols used during the Soviet era",
      "items": []
@@ -994,7 +358,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -1015,7 +379,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

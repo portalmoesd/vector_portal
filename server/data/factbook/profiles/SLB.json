@@ -111,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "738,774 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "377,067"
-      },
-      {
-       "label": "female",
-       "text": "361,707"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Solomon Islander(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Solomon Islander"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Melanesian 95.3%, Polynesian 3.1%, Micronesian 1.2%, other 0.3% (2009 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Melanesian pidgin (lingua franca in much of the country), English (official but spoken by only 1%-2% of the population), 120 indigenous languages",
      "items": []
@@ -166,421 +120,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Protestant 73.4% (Church of Melanesia 31.9%, South Sea Evangelical 17.1%, Seventh Day Adventist 11.7%, United Church 10.1%, Christian Fellowship Church 2.5%), Roman Catholic 19.6%, other Christian 2.9%, other 4%, unspecified 0.1% (2009 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "30.6% (male 114,246/female 108,020)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64.2% (male 238,708/female 227,636)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "5.3% (2024 est.) (male 18,016/female 20,173)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "55.1 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "46.7 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.4 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "12 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "25.5 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25 years"
-      },
-      {
-       "label": "female",
-       "text": "25.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.62% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "21.57 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "3.94 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.47 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most of the population lives along the coastal regions; about one in five live in urban areas, and of these about two thirds reside in Honiara, the largest town and chief port",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "26% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.57% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "82,000 HONIARA (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.89 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.04 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "22.6 years (2015 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-29"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "123 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "22.7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "15.2 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "77.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "74.6 years"
-      },
-      {
-       "label": "female",
-       "text": "80 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.72 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.33 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: rural",
-       "text": "rural: 59.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 73.1% of population"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 40.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.8% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "9.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.24 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: rural",
-       "text": "rural: 22.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 77.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 59.4% of population"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "22.5% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.19 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "1.1 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.06 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.02 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "36.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "54.5% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "18.8% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 300,
-    "content": {
-     "text": "64.5% (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "5.6% (2015)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "21.3% (2015)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "4.4% (2015)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "8.3% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "25.2% national budget (2024 est.)"
-      }
-     ]
     }
    }
   ],
@@ -652,24 +195,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "9 provinces and 1 city*; Central, Choiseul, Guadalcanal, Honiara*, Isabel, Makira and Ulawa, Malaita, Rennell and Bellona, Temotu, Western",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of English common law and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -685,49 +212,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of the Solomon Islands"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "21 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -740,7 +226,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -749,68 +235,15 @@
        "text": "National Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "50 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "4/17/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Ownership Unity and Responsibility (OUR Party) (15); Solomon Islands Democratic Party (SIDP) (11); Solomon Islands United Party (UP) (6); Solomon Islands People First Party (SIPFP) (3); Independents (11); Other (4)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "April 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Appeal (consists of the court president and ex officio members including the High Court chief justice and puisne judges); High Court (consists of the chief justice and puisne judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Court of Appeal and High Court president, chief justices, and puisne judges appointed by the governor general on recommendation of the Judicial and Legal Service Commission, chaired by the chief justice and includes 5 members, mostly judicial officials and legal professionals; all judges serve until retirement at age 60"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Magistrates' Courts; Customary Land Appeal Court; local courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Democratic Alliance Party or DAP<br />Kadere Party of Solomon Islands or KAD<br />Ownership, Unity, and Responsibility Party (OUR Party)<br />Solomon Islands People First Party or SIPFP<br />Solomon Islands Democratic Party or SIDP<br />Solomon Islands Party for Rural Advancement or SIPRA<br />Solomon Islands United Party or UP<br />United for Change Party or U4C<br />Coalition for Accountability Reform and Empowerment (CARE) (includes DAP, SIDP, and U4C)",
      "items": [
@@ -822,16 +255,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, ADB, AOSIS, C, EITI (candidate country), ESCAP, FAO, G-77, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IOC, ITU, MIGA, OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, UPU, WFTU, WHO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "7 July 1978 (from the UK)",
      "items": []
@@ -839,7 +264,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 7 July (1978)",
      "items": []
@@ -847,7 +272,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description: </strong>divided diagonally by a yellow stripe from the lower-left corner; the upper triangle (left side) is blue with five five-pointed white stars in an \"X\" pattern; the lower triangle is green<br /><br /><strong>meaning:</strong> blue stands for the ocean, green for the land, and yellow for sunshine; the five stars stand for the main island groups",
      "items": []
@@ -855,7 +280,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "blue, yellow, green, white",
      "items": []
@@ -863,7 +288,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": null,
      "items": [
@@ -884,7 +309,7 @@
    },
    {
     "field": "National heritage",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

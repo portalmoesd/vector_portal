@@ -107,310 +107,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "33,093 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15,825"
-      },
-      {
-       "label": "female",
-       "text": "17,268"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 20,
-    "content": {
-     "text": "Creole (Mulatto), Black, Guadeloupe Mestizo (French-East Asian), White, East Indian, other",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "French (official), Dutch, English, Guadeloupian Creole, Haitian Creole, Italian, Martiniquan Creole, Papiamento (dialect of Netherlands Antilles), Spanish"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 40,
+    "order": 20,
     "content": {
      "text": "Roman Catholic, Jehovah's Witness, Protestant, Hindu",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 50,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "24.7% (male 4,039/female 4,100)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64.5% (male 10,216/female 11,068)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "10.8% (2024 est.) (male 1,536/female 2,037)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "55.4 (2025 est.) N"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "38 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "17.4 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "5.7 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "34.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "33.4 years"
-      },
-      {
-       "label": "female",
-       "text": "34.9 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 80,
-    "content": {
-     "text": "0.29% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 90,
-    "content": {
-     "text": "13.78 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 100,
-    "content": {
-     "text": "4.83 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 110,
-    "content": {
-     "text": "-6.07 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 120,
-    "content": {
-     "text": "most of the population is found along the coast, with the largest concentration around the capital of Marigot, as well as Orleans and Grand-Case",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "0.99 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.92 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.75 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.92 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7.6 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "5.3 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 150,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "81 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "78 years"
-      },
-      {
-       "label": "female",
-       "text": "84.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 160,
-    "content": {
-     "text": "1.8 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 170,
-    "content": {
-     "text": "0.88 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.9% of GDP (2023 est.) NA"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "23% national budget (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -491,16 +205,8 @@
     }
    },
    {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "French civil law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -516,24 +222,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 70,
-    "content": {
-     "text": "see France",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 80,
-    "content": {
-     "text": "18 years of age, universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 90,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -558,7 +248,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 100,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -567,67 +257,23 @@
        "text": "Territorial Council"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "23 (directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "3/27/2022"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "RSM and Alternative (16); UD (5); HOPE, Saint Martin with You, and Future Saint Martin (2)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "43.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "March 2027"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> 1 senator is indirectly elected to the French Senate by an electoral college for a 6-year term, and 1 deputy (shared with Saint Barthelemy) is directly elected to the French National Assembly for a 5-year term"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 110,
+    "order": 80,
     "content": {
      "text": "Alternative<br />Future Saint Martin (Avenir Saint Martin)<br />Generation Hope or HOPE<br />Rassemblement Saint-Martinois or RSM (formerly Movement for Justice and Prosperity or MJP)<br />Saint Martin with You<br />Union for Democracy or UD",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 120,
-    "content": {
-     "text": "ACS (associate), UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 130,
+    "order": 90,
     "content": {
      "text": "none (overseas collectivity of France)",
      "items": []
@@ -635,7 +281,7 @@
    },
    {
     "field": "National holiday",
-    "order": 140,
+    "order": 100,
     "content": {
      "text": "Fête de la Fédération, 14 July (1790)",
      "items": [
@@ -648,7 +294,7 @@
    },
    {
     "field": "Flag",
-    "order": 150,
+    "order": 110,
     "content": {
      "text": "the flag of France is used",
      "items": []
@@ -656,7 +302,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 160,
+    "order": 120,
     "content": {
      "text": "brown pelican",
      "items": []
@@ -664,7 +310,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 170,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

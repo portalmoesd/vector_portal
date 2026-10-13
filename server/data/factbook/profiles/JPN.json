@@ -133,488 +133,27 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "123,201,945 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "59,875,269"
-      },
-      {
-       "label": "female",
-       "text": "63,326,676"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Japanese (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Japanese"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Japanese 97.5%, Chinese 0.6%, Vietnam 0.4%, South Korean 0.3%, other 1.2% (includes Filipino, Brazilian, Nepalese, Indonesian, American, and Taiwanese) (2022 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by nationality; up to 230,000 Brazilians of Japanese origin migrated to Japan in the 1990s to work in industries; some have returned to Brazil"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Japanese"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "必要不可欠な基本情報の源、ワールド・ファクトブック(Japanese)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Shintoism 48.6%, Buddhism 46.4%, Christianity 1.1%, other 4% (2021 est.)",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong> total adherents among persons claiming a religious affiliation"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "12.1% (male 7,701,196/female 7,239,389)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "58.4% (male 36,197,840/female 35,777,966)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "29.5% (2024 est.) (male 15,976,233/female 20,309,321)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "71.2 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "20.8 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "50.4 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "2 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "50.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "48.3 years"
-      },
-      {
-       "label": "female",
-       "text": "51.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.45% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "6.84 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "12.04 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0.73 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "all primary and secondary regions of high population density lie on the coast; one third of the population resides in and around Tokyo on the central plain (Kanto Plain)",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "92% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "-0.25% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "37.194 million TOKYO (capital), 19.013 million Osaka, 9.569 million Nagoya, 5.490 million Kitakyushu-Fukuoka, 2.937 million Shizuoka-Hamamatsu, 2.666 million Sapporo (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.79 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.95 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "30.7 years (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "3 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "2 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "1.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "85.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "82.3 years"
-      },
-      {
-       "label": "female",
-       "text": "88.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.41 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.68 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "10.8% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "23.4% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "2.65 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "12.7 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "4.3% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "8.36 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "1.35 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.29 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.63 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "5.09 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "15.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.4% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "7.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "50% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.3% of GDP (2021 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "7.5% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "16 years (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "16 years (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "16 years (2022 est.)"
       }
      ]
     }
@@ -684,24 +223,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "47 prefectures; Aichi, Akita, Aomori, Chiba, Ehime, Fukui, Fukuoka, Fukushima, Gifu, Gunma, Hiroshima, Hokkaido, Hyogo, Ibaraki, Ishikawa, Iwate, Kagawa, Kagoshima, Kanagawa, Kochi, Kumamoto, Kyoto, Mie, Miyagi, Miyazaki, Nagano, Nagasaki, Nara, Niigata, Oita, Okayama, Okinawa, Osaka, Saga, Saitama, Shiga, Shimane, Shizuoka, Tochigi, Tokushima, Tokyo, Tottori, Toyama, Wakayama, Yamagata, Yamaguchi, Yamanashi",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system based on German model; also reflects Anglo-American influence and Japanese traditions; Supreme Court reviews legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -717,49 +240,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Japan"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -780,24 +262,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "National Diet (Kokkai)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -808,41 +286,13 @@
       {
        "label": "number of seats",
        "text": "465 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "7/20/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Liberal Democratic Party (LDP) (191); Constitutional Democratic Party of Japan (148); Nippon Ishin (Japan Innovation Party) (38); Democratic Party for the People (28); Komeito (24); Other (36)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "15.7%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2028"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -853,82 +303,21 @@
       {
        "label": "number of seats",
        "text": "248 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "partial renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "6 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/27/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Liberal Democratic Party (LDP) (39); Constitutional Democratic Party of Japan (22); Democratic Party for the People (17); Sanseito (14); Komeito (8); Nippon Ishin (Japan Innovation Party) (7); Independents (8); Other (10)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "29.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "June 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Saiko saibansho (consists of the chief justice and 14 associate justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court chief justice designated by the Cabinet and appointed by the monarch; associate justices appointed by the Cabinet and confirmed by the monarch; all justices are reviewed in a popular referendum during the first general election of the House of Representatives after each judge's appointment and every 10 years afterward"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "8 High Courts (Koto-saiban-sho), each with a Family Court (Katei-saiban-sho); 50 District Courts (Chiho saibansho), with 203 additional branches; 438 Summary Courts (Kani saibansho)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Supreme Court has jurisdiction in constitutional issues"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Conservative Party of Japan or CPJ<br />Constitutional Democratic Party of Japan or CDP <br />Democratic Party for the People or DPFP or DPP <br />Japan Communist Party or JCP <br />Japan Innovation Party or Nippon Ishin no kai or Ishin <br />Komeito or Komei<br />Liberal Democratic Party or LDP <br />Okinawa Social Mass Party or Okinawa Whirlwind or OW<br />Party to Protect the People from NHK or NHK<br />Reiwa Shinsengumi <br />Sanseito Party<br />Social Democratic Party or SDP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ADB, AfDB (nonregional member), APEC, Arctic Council (observer), ARF, ASEAN (dialogue partner), Australia Group, BIS, CD, CE (observer), CERN (observer), CICA (observer), CP, CPLP (associate), EAS, EBRD, EITI (implementing country), FAO, FATF, G-5, G-7, G-8, G-10, G-20, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IGAD (partners), IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, NEA, NSG, OAS (observer), OECD, OPCW, OSCE (partner), Pacific Alliance (observer), Paris Club, PCA, PIF (partner), Quad, SAARC (observer), SELEC (observer), SICA (observer), UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNMISS, UNOOSA, UNRWA, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "3 May 1947 (current constitution adopted as amendment to Meiji Constitution); notable earlier dates: 11 February 660 B.C. (mythological date of Emperor JIMMU founding the nation); 29 November 1890 (Meiji Constitution provides for constitutional monarchy)",
      "items": []
@@ -936,7 +325,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Birthday of Emperor NARUHITO, 23 February (1960)",
      "items": [
@@ -949,7 +338,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> white with a large red disk that symbolizes the sun without rays, in the center<br /><br /><strong>history:</strong> the current flag was adopted in 1854, but a sun flag has been in use in Japan since at least 1184; the sun has long been a national symbol: according to tradition, the sun goddess Amaterasu founded the country in the 7th century B.C.",
      "items": []
@@ -957,7 +346,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "red sun disc, chrysanthemum",
      "items": []
@@ -965,7 +354,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, white",
      "items": []
@@ -973,7 +362,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": "the Kikumon is the Japanese emperor's family coat of arms and dates from 1183; the Imperial chrysanthemum emblem (菊の御紋, <em>kikunogomon</em>) is a yellow or orange chrysanthemum with black or red outlines and background; a central disc is surrounded by a front set of 16 petals; a rear set of 16 petals are half-staggered in relation to the front set and are visible at the edges of the flower",
      "items": []
@@ -981,7 +370,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [
@@ -1002,7 +391,7 @@
    },
    {
     "field": "National heritage",
-    "order": 240,
+    "order": 170,
     "content": {
      "text": null,
      "items": [

@@ -165,59 +165,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "244,344,065 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "123,511,557"
-      },
-      {
-       "label": "female",
-       "text": "120,832,508"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Nigerian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Nigerian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Hausa 30%, Yoruba 15.5%, Igbo (Ibo) 15.2%, Fulani 6%, Tiv 2.4%, Kanuri/Beriberi 2.4%, Ibibio 1.8%, Ijaw/Izon 1.8%, other 24.9% (2018 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Nigeria, Africa's most populous country, is composed of more than 250 ethnic groups"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "English (official), Hausa, Yoruba, Igbo (Ibo), Fulani, over 500 additional indigenous languages",
      "items": []
@@ -225,478 +174,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 53.5%, Roman Catholic 10.6%, other Christian 35.3%, other 0.6% (2018 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "40.4% (male 48,856,606/female 46,770,810)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "56.2% (male 66,897,900/female 66,187,584)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "3.4% (2024 est.) (male 3,759,943/female 4,274,287)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "78 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "72.2 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "5.9 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "17 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "19.4 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "19.1 years"
-      },
-      {
-       "label": "female",
-       "text": "19.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2.39% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "33.56 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "9.42 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.24 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "largest population of any African nation; significant population clusters are scattered throughout the country, with the highest density areas being in the south and southwest, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "54.3% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.92% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "15.946 million Lagos, 4.348 million Kano, 3.875 million Ibadan, 3.840 million ABUJA (capital), 3.480 million Port Harcourt, 1.905 million Benin City (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.88 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.02 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "20.4 years (2018 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "993 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "65.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "58.9 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "48.2 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "62.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "60.4 years"
-      },
-      {
-       "label": "female",
-       "text": "64.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "4.59 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "2.23 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 93.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 63.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 79.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 6.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 36.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 20.4% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.1% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "4.3% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.38 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 81.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 41.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 62.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 18.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 58.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 37.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "8.9% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.49 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.73 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.09 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.4 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "3.27 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2.6% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "4.8% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "0.3% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "24.4% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "67.6% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "12.3% (2021)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "30.3% (2021)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "1.6% (2021)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> due to prolonged insecurity concerns, some parts of states, including Borno state, were not sampled"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "0.3% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "3% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "63.2% (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.7% (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "53.3% (2021 est.)"
-      }
-     ]
     }
    }
   ],
@@ -756,24 +237,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "36 states and 1 territory*; Abia, Adamawa, Akwa Ibom, Anambra, Bauchi, Bayelsa, Benue, Borno, Cross River, Delta, Ebonyi, Edo, Ekiti, Enugu, Federal Capital Territory*, Gombe, Imo, Jigawa, Kaduna, Kano, Katsina, Kebbi, Kogi, Kwara, Lagos, Nasarawa, Niger, Ogun, Ondo, Osun, Oyo, Plateau, Rivers, Sokoto, Taraba, Yobe, Zamfara",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of English common law, Islamic law (in 12 northern states), and traditional law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -789,49 +254,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Nigeria"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "15 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -860,24 +284,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "National Assembly"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -888,41 +308,13 @@
       {
        "label": "number of seats",
        "text": "360 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/25/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "All Progressives Congress (APC) (180); People's Democratic Party (PDP) (116); Labour Party (LP) (35); New Nigeria Peoples Party (NNPP) (19); Other (10)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "4.2%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "February 2027"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -933,78 +325,21 @@
       {
        "label": "number of seats",
        "text": "109 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/25/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "All Progressives Congress (APC) (59); People's Democratic Party (PDP) (36); Labour Party (LP) (8); Other (6)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "3.7%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "February 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the chief justice and 15 justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges appointed by the president upon the recommendation of the National Judicial Council, a 23-member independent body of federal and state judicial officials; judge appointments confirmed by the Senate; judges serve until age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Appeal; Federal High Court; High Court of the Federal Capital Territory; Sharia Court of Appeal of the Federal Capital Territory; Customary Court of Appeal of the Federal Capital Territory; state court system similar in structure to federal system"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Accord Party or ACC <br />Africa Democratic Congress or ADC  <br />All Progressives Congress or APC <br />All Progressives Grand Alliance or APGA <br />Labor Party or LP <br />New Nigeria People’s Party or NNPP <br />Peoples Democratic Party or PDP <br />Young Progressive Party or YPP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, AfDB, ATMIS, AU, C, CD, D-8, ECOWAS, EITI (compliant country), FAO, G-15, G-24, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LCBC, MIGA, MINURSO, MNJTF, MONUSCO, NAM, OAS (observer), OIC, OPCW, OPEC, PCA, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNISFA, UNITAR, UNMIL, UNMISS, UNOCI, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "1 October 1960 (from the UK)",
      "items": []
@@ -1012,7 +347,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day (National Day), 1 October (1960)",
      "items": []
@@ -1020,7 +355,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three equal vertical bands of green (left side), white, and green<br /><br /><strong>meaning:</strong> green stands for the country's forests and natural resources, and white for peace and unity",
      "items": []
@@ -1028,7 +363,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "eagle",
      "items": []
@@ -1036,7 +371,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "green, white",
      "items": []
@@ -1044,7 +379,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1069,7 +404,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

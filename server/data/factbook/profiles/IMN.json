@@ -111,59 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "92,666 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "46,543"
-      },
-      {
-       "label": "female",
-       "text": "46,123"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Manxman (men), Manxwoman (women)"
-      },
-      {
-       "label": "adjective",
-       "text": "Manx"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "White 94.7%, Asian 3.1%, Mixed 1%, Black 0.6%, other 0.4% (2021 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by nationality"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "English, Manx Gaelic (about 2% of the population has some knowledge)",
      "items": []
@@ -171,271 +120,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 54.7%, Muslim 0.5%, Buddhist 0.5%, Hindu 0.4%, Jewish 0.2%, none 43.8% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "16% (male 7,701/female 7,100)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "61.9% (male 29,035/female 28,044)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "22.1% (2024 est.) (male 9,595/female 10,794)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "62.4 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "25.9 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "36.5 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "2.7 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "45.1 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "43.7 years"
-      },
-      {
-       "label": "female",
-       "text": "46.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.41% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "10.25 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "10.2 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "4.06 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most people concentrated in cities and large towns; Douglas, in the southeast, is the largest",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "53.5% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.97% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "27,000 DOUGLAS (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.08 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.08 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.89 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.01 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "4.4 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "3.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "82.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "80.7 years"
-      },
-      {
-       "label": "female",
-       "text": "84.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.87 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.9 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 99.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: NA"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: NA"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.) NA"
-      }
-     ]
     }
    }
   ],
@@ -515,24 +203,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 50,
-    "content": {
-     "text": "no first-order administrative divisions as defined by the US government, but 24 local authorities each hold elections",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "UK laws apply, as well as Manx statutes",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -548,24 +220,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": "see United Kingdom",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "16 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -590,28 +246,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Tynwald (High Court of Tynwald)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Legislative Council includes the President of Tynwald, 2 non-voting members (the Lord Bishop of Sodor and Man and the attorney general), and 8 members indirectly elected by the House of Keys"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -622,41 +270,13 @@
       {
        "label": "number of seats",
        "text": "24 (directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "9/23/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "independent (21); Manx Labour Party (2); Liberal Vannin (1)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "40%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2026"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -667,58 +287,13 @@
       {
        "label": "number of seats",
        "text": "11 (3 appointed, 8 indirectly elected)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "partial renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "3/14/2023"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "36.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "March 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Isle of Man High Court of Justice (consists of 3 permanent judges or \"deemsters\" and 1 judge of appeal; organized into the Staff of Government Division or Court of Appeal and the Civil Division); the Court of General Gaol Delivery (not formally part of the High Court but is administered as such) deals with serious criminal cases"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "deemsters appointed by the Lord Chancellor of England on the nomination of the lieutenant governor; deemsters can serve until age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "High Court; Court of Summary Gaol Delivery; Summary Courts; Magistrate's Court; specialized courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> appeals beyond the Court of Appeal are referred to the Judicial Committee of the Privy Council (in London)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 100,
     "content": {
      "text": "Green Party <br />Liberal Vannin Party or LVP <br />Manx Labor Party",
      "items": [
@@ -730,16 +305,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 110,
     "content": {
      "text": "none (British Crown dependency)",
      "items": []
@@ -747,7 +314,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 120,
     "content": {
      "text": "Tynwald Day, 5 July (1417); date Tynwald Day was first recorded",
      "items": []
@@ -755,7 +322,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 130,
     "content": {
      "text": "<strong>description:</strong> red with the Three Legs of Man emblem (triskelion) in the center; the three legs are joined at the thigh and bent at the knee; a two-sided emblem is used to allow the toes to point clockwise on both sides of the flag <br /><br /><strong>history:</strong> the flag is based on the coat of arms of the last recognized Norse King of Mann, MAGNUS III (r. 1252-65); the triskelion has its roots in an early Celtic sun symbol",
      "items": []
@@ -763,7 +330,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 140,
     "content": {
      "text": "triskelion (a motif of three legs)",
      "items": []
@@ -771,7 +338,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 150,
     "content": {
      "text": "red, white",
      "items": []
@@ -779,7 +346,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 160,
     "content": {
      "text": "Queen Elizabeth II of the United Kingdom granted the Isle of Man’s coat of arms on July 12, 1996; the triskelion (three conjoined legs) on the shield represents resilience, resourcefulness, and hope; the Latin motto means “Wherever you throw it, it will stand,” a reference to the islanders’ ability to stand strong; the peregrine falcon represents the two falcons that the Isle of Man has paid to the UK monarch on Coronation Day since 1406, and the raven symbolizes the island’s former status as a Viking colony; the crown represents the UK monarch’s status as the Lord of Mann, although the island is self-governing",
      "items": []
@@ -787,7 +354,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 170,
     "content": {
      "text": null,
      "items": [

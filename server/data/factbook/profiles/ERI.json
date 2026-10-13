@@ -119,59 +119,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6,416,435 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3,158,281"
-      },
-      {
-       "label": "female",
-       "text": "3,258,154"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Eritrean(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Eritrean"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Tigrinya 50%, Tigre 30%, Saho 4%, Afar 4%, Kunama 4%, Bilen 3%, Hedareb/Beja 2%, Nara 2%, Rashaida 1% (2021 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent Eritrea's nine recognized ethnic groups"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Tigrinya (official), Arabic (official), English (official), Tigre, Kunama, Afar, other Cushitic languages",
      "items": []
@@ -179,362 +128,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Eritrean Orthodox, Roman Catholic, Evangelical Lutheran, Sunni Muslim",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "35.7% (male 1,138,382/female 1,123,925)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "60.3% (male 1,882,547/female 1,944,266)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4% (2024 est.) (male 101,504/female 153,332)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "64.2 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "57.6 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "6.6 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "15.1 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21.7 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "20.8 years"
-      },
-      {
-       "label": "female",
-       "text": "21.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.16% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "25.92 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.43 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-7.95 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "density is highest in the center of the country, in and around the cities of Asmara (capital) and Keren; smaller settlements exist in the north and south, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "43.3% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.67% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.073 million ASMARA (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.97 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.66 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.97 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "21.3 years (2010 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-29"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "291 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "39 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "46.6 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "32.8 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "67.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "64.9 years"
-      },
-      {
-       "label": "female",
-       "text": "70.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "3.35 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.65 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.2% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "2.4% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.09 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "1 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 260,
-    "content": {
-     "text": "5% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.93 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.42 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.51 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.5% (2020 est.)"
-      },
-      {
-       "label": "male",
-       "text": "14.7% (2020 est.)"
-      },
-      {
-       "label": "female",
-       "text": "0.2% (2020 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "8 years (2015 est.)"
-      },
-      {
-       "label": "male",
-       "text": "9 years (2015 est.)"
-      },
-      {
-       "label": "female",
-       "text": "7 years (2015 est.)"
-      }
-     ]
     }
    }
   ],
@@ -606,24 +203,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "6 regions (<em>zobatat</em>, singular - <em>zoba</em>); 'Anseba, Debub (South), Debubawi K'eyyih Bahri (Southern Red Sea), Gash-Barka, Ma'ikel (Central), Semienawi K'eyyih Bahri (Northern Red Sea)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of civil, customary, and Islamic religious law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -639,49 +220,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Eritrea"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "20 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -710,7 +250,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -719,72 +259,23 @@
        "text": "National Assembly (Hagerawi Baito)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "150 (all indirectly elected)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/1/1994"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in 1997, after the new constitution was adopted, the government formed a Transitional National Assembly to serve as the country's legislative body until countrywide elections to form a National Assembly could be held; the constitution stipulates that once past the transition stage, all National Assembly members will be elected by secret ballot of all eligible voters; National Assembly elections scheduled for December 2001 were postponed indefinitely due to the war with Ethiopia; as of 2025, no sitting legislative body exists"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "High Court (consists of 20 judges and organized into civil, commercial, criminal, labor, administrative, and customary sections)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "High Court judges appointed by the president"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "regional/zonal courts; community courts; special courts; sharia courts (for issues dealing with Muslim marriage, inheritance, and family); military courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "People's Front for Democracy and Justice or PFDJ (the only party recognized by the government)",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, AfDB, AU, COMESA, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), IDA, IFAD, IFC, IFRCS (observer), IGAD, ILO, IMF, IMO, Interpol, IOC, ISO (correspondent), ITU, ITUC (NGOs), LAS (observer), MIGA, NAM, OPCW, PCA, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "24 May 1993 (from Ethiopia)",
      "items": []
@@ -792,7 +283,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 24 May (1991)",
      "items": []
@@ -800,7 +291,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> a red isosceles triangle (based on the left side) divides the flag into two right triangles; the upper triangle is green, the lower is blue; a gold wreath around a gold olive branch is on the left side of the red triangle<br /><br /><strong>meaning:</strong> green stands for the country's agriculture economy, red for the blood shed in the fight for freedom, and blue for the sea's bounty; the shape of the red triangle mimics the country's shape",
      "items": [
@@ -813,7 +304,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "camel",
      "items": []
@@ -821,7 +312,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "green, red, blue",
      "items": []
@@ -829,7 +320,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "Eritrea adopted its coat of arms on May 24, 1993, when it won independence from Ethiopia; the camel was used to transport supplies and goods during the war, and it became a symbol of the country’s success; the olive wreath represents peace, reconciliation, and harmony; under the camel is name of the country in its three official languages: Tigrinya, English, and Arabic",
      "items": []
@@ -837,7 +328,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -858,7 +349,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

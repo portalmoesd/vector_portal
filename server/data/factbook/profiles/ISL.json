@@ -115,59 +115,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "364,036 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "182,268"
-      },
-      {
-       "label": "female",
-       "text": "181,768"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Icelander(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Icelandic"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Icelandic 78.7%, Polish 5.8%, Danish 1%, Ukrainian 1%, other 13.5% (2024 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note</strong>: data represent population by country of birth"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Icelandic, English, Polish, Nordic languages, German",
      "items": []
@@ -175,448 +124,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Evangelical Lutheran Church of Iceland (official) 58.6% Roman Catholic 3.8%, Independent Congregation of Reykjavik 2.6%, Independent Congregation of Hafnarfjordur 1.9%, pagan worship 1.5%, Icelandic Ethical Humanist Association 1.4%, other (includes Zuist and Pentecostal) or unspecified 18.7%, none 7.7% (2024 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "19.8% (male 36,692/female 35,239)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "63.2% (male 116,210/female 113,810)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "17.1% (2024 est.) (male 29,366/female 32,719)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "58.3 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "31.3 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "27 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.7 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "38.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "37.4 years"
-      },
-      {
-       "label": "female",
-       "text": "38.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.82% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "12.47 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.62 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "2.3 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "Iceland is almost entirely urban, with half of the population located in and around the capital of Reykjavik; smaller clusters are primarily found along the coast in the north and west",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "94% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.74% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "216,000 REYKJAVIK (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.9 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "28.7 years (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "3 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "1.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "1.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "84 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "81.8 years"
-      },
-      {
-       "label": "female",
-       "text": "86.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.93 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.94 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "8.6% of GDP (2022)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "16.5% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "4.37 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "2.8 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "21.9% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.72 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "4.39 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "2.11 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.22 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7.9% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "8% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "48.5% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "7.3% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "15.7% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "19 years (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "18 years (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "20 years (2022 est.)"
-      }
-     ]
     }
    }
   ],
@@ -684,24 +195,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "64 municipalities (<em>sveitarfelog</em>, singular - <em>sveitarfelagidh</em>); Akranes, Akureyri, Arneshreppur, Asahreppur, Blaskogabyggdh, Bolungarvik, Borgarbyggdh, Dalabyggdh, Dalvikurbyggdh, Eyjafjardharsveit, Eyja-og Miklaholtshreppur, Fjallabyggdh, Fjardhabyggdh, Fljotsdalshreppur, Floahreppur, Gardhabaer, Grimsnes-og Grafningshreppur, Grindavikurbaer, Grundarfjardharbaer, Grytubakkahreppur, Hafnarfjordhur, Horgarsveit, Hrunamannahreppur, Hunathing Vestra, Hunabyggdh, Hvalfjardharsveit, Hveragerdhi, Isafjardharbaer, Kaldrananeshreppur, Kjosarhreppur, Kopavogur, Langanesbyggdh, Mosfellsbaer, Mulathing, Myrdalshreppur, Nordhurthing, Rangarthing Eystra, Rangarthing Ytra, Reykholahreppur, Reykjanesbaer, Reykjavik, Seltjarnarnes, Skaftarhreppur, Skagabyggdh, Skagafjordhur, Skeidha-og Gnupverjahreppur, Skorradalshreppur, Snaefellsbaer, Strandabyggdh, Stykkisholmur, Sudhavikurhreppur, Sudhurnesjabaer, Svalbardhsstrandarhreppur, Sveitarfelagidh Arborg, Sveitarfelagidh Hornafjordhur, Sveitarfelagidh Olfus, Sveitarfelagidh Skagastrond, Sveitarfelagidh Vogar, Talknafjardharhreppur, Thingeyjarsveit, Tjorneshreppur, Vestmannaeyjar, Vesturbyggdh, Vopnafjardharhreppur",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system influenced by the Danish model",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -717,49 +212,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Iceland"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "3 to 7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -784,7 +238,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -793,84 +247,23 @@
        "text": "Parliament (Althingi)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "63 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "11/30/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Social Democratic Alliance (SDA) (15); Independence Party (IP) (14); Liberal Reform Party (11); People’s Party (10); Center Party (8); Progressive Party (PP) (5)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "46%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "November 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Haestirettur (consists of 7 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges proposed by Ministry of Interior selection committee and appointed by the president for an indefinite period"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Appellate Court or Landsrettur; 8 district courts; Labor Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Center Party or M <br />Independence Party or D <br />Liberal Reform Party or C<br />People's Party or F<br />Progressive Party or B <br />Social Democratic Alliance or S",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "Arctic Council, Australia Group, BIS, CBSS, CD, CE, EAPC, EBRD, EFTA, FAO, FATF, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NC, NEA, NIB, NSG, OAS (observer), OECD, OPCW, OSCE, PCA, Schengen Convention, UN, UNCTAD, UNESCO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "1 December 1918 (became a sovereign state under the Danish Crown); 17 June 1944 (from Denmark; birthday of Jon SIGURDSSON, leader of Iceland's 19th-century independence movement)",
      "items": []
@@ -878,7 +271,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 17 June (1944)",
      "items": []
@@ -886,7 +279,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> blue with a red cross outlined in white extending to the edges of the flag; the cross is shifted to the left in the style of the Dannebrog (Danish flag)<br /><br /><strong>meaning:</strong> red stands for the island's volcanic fires, white for the snow and ice fields, and blue for the ocean",
      "items": []
@@ -894,7 +287,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "gyrfalcon",
      "items": []
@@ -902,7 +295,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, white, red",
      "items": []
@@ -910,7 +303,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "Iceland’s coat of arms is derived from a 13th-century folktale about four guardians who protect the four corners of the nation; the bull protects the northwest, the eagle the northeast, the dragon the southeast, and the rock-giant the southwest; the shield displays the national flag, with red standing for Iceland’s volcanic fires, white for its snow and ice fields, and blue for the ocean",
      "items": []
@@ -918,7 +311,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -939,7 +332,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

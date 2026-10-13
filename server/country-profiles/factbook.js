@@ -41,7 +41,27 @@ const EXCLUDED_FIELDS = {
     'Location', 'Geographic coordinates', 'Area', 'Area - comparative', 'Maritime claims',
     'Land use', 'Irrigated land',
   ],
-  Government: ['Diplomatic representation in the US', 'Diplomatic representation from the US'],
+  Government: [
+    'Diplomatic representation in the US', 'Diplomatic representation from the US',
+    'Administrative divisions', 'Legal system', 'International law organization participation',
+    'Citizenship', 'Suffrage', 'Judicial branch', 'International organization participation',
+  ],
+};
+
+// Sections reduced to an allow-list: every other field is dropped.
+const INCLUDED_FIELDS = {
+  'People and Society': ['Languages', 'Religions'],
+};
+
+// Fields reduced to an allow-list of sub-entries (their free text and
+// notes are dropped too). The unicameral "Legislative branch" calls the
+// chamber name "legislature name".
+const INCLUDED_ITEMS = {
+  Government: {
+    'Legislative branch': ['legislature name', 'chamber name', 'number of seats'],
+    'Legislative branch - lower chamber': ['chamber name', 'number of seats'],
+    'Legislative branch - upper chamber': ['chamber name', 'number of seats'],
+  },
 };
 
 // Where each stored section lands on the profile page. A field-level entry
@@ -65,6 +85,9 @@ function displayPlacement(section, field) {
   return { page: f.page || d.page || null, label: f.label || field };
 }
 const EXCLUDED_ITEMS = {
+  // The "major-language sample(s)" entry is the Factbook's own slogan
+  // translated into the local language, not information about the country.
+  'People and Society': { Languages: ['major-language sample(s)'] },
   Government: { 'Executive branch': ['chief of state', 'head of government', 'cabinet'] },
 };
 
@@ -89,10 +112,12 @@ function normalizeField(section, field, value) {
   const out = { text: null, items: [] };
   if (!value || typeof value !== 'object') return out;
   const dropItems = (EXCLUDED_ITEMS[section] || {})[field] || [];
+  const keepItems = (INCLUDED_ITEMS[section] || {})[field] || null;
   for (const [rawKey, v] of Object.entries(value)) {
     const key = rawKey.trim();
-    if (key === 'text') { out.text = cleanText(v); continue; }
+    if (key === 'text') { if (!keepItems) out.text = cleanText(v); continue; }
     if (dropItems.includes(key)) continue;
+    if (keepItems && !keepItems.includes(key)) continue;
     const text = v && typeof v === 'object' ? cleanText(v.text) : cleanText(v);
     if (text) out.items.push({ label: key, text });
   }
@@ -109,10 +134,12 @@ function extractProfile(profile) {
     const src = profile && profile[section];
     if (!src || typeof src !== 'object') continue;
     const skip = EXCLUDED_FIELDS[section] || [];
+    const only = INCLUDED_FIELDS[section] || null;
     const rows = [];
     let order = 0;
     for (const [field, value] of Object.entries(src)) {
       if (skip.includes(field)) continue;
+      if (only && !only.includes(field)) continue;
       const content = normalizeField(section, field, value);
       if (!content.text && !content.items.length) continue;
       rows.push({ field, order: (order += 10), content });
@@ -164,7 +191,9 @@ function extractAll(upstreamDir, { snapshotDate, upstreamCommit } = {}) {
     discontinued: '2026-02-04',
     sections: SECTIONS,
     excludedFields: EXCLUDED_FIELDS,
+    includedFields: INCLUDED_FIELDS,
     excludedItems: EXCLUDED_ITEMS,
+    includedItems: INCLUDED_ITEMS,
     extractedAt: new Date().toISOString(),
     profiles: report.written,
   };
@@ -250,6 +279,6 @@ async function importFactbook(db, { log = () => {} } = {}) {
 }
 
 module.exports = {
-  SOURCE, SECTIONS, EXCLUDED_FIELDS, EXCLUDED_ITEMS, PAGE_SECTIONS, DISPLAY, displayPlacement, DATA_DIR, PROFILES_DIR, META_FILE,
+  SOURCE, SECTIONS, EXCLUDED_FIELDS, INCLUDED_FIELDS, EXCLUDED_ITEMS, INCLUDED_ITEMS, PAGE_SECTIONS, DISPLAY, displayPlacement, DATA_DIR, PROFILES_DIR, META_FILE,
   cleanText, normalizeField, extractProfile, factbookName, extractAll, readMeta, listProfiles, importFactbook,
 };

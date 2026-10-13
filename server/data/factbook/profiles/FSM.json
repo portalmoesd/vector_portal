@@ -111,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "99,603 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "48,708"
-      },
-      {
-       "label": "female",
-       "text": "50,895"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Micronesian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Micronesian; Chuukese, Kosraen(s), Pohnpeian(s), Yapese"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Chuukese/Mortlockese 49.3%, Pohnpeian 29.8%, Kosraean 6.3%, Yapese 5.7%, Yap outer islanders 5.1%, Polynesian 1.6%, Asian 1.4%, other 0.8% (2010 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "English (official and common language), Chuukese, Kosrean, Pohnpeian, Yapese, Ulithian, Woleaian, Nukuoro, Kapingamarangi",
      "items": []
@@ -166,337 +120,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 54.7%, Protestant 41.1% (includes Congregational 38.5%, Baptist 1.1%, Seventh Day Adventist 0.8%, Assembly of God 0.7%), Church of Jesus Christ 1.5%, other 1.9%, none 0.7%, unspecified 0.1% (2010 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "27% (male 13,673/female 13,239)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "67.3% (male 32,527/female 34,487)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "5.7% (2024 est.) (male 2,508/female 3,169)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "48.6 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "40.2 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.5 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "11.8 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28.7 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "27.3 years"
-      },
-      {
-       "label": "female",
-       "text": "29.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.77% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.55 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.23 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-20.98 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the majority of the population lives in the coastal areas of the high islands; the mountainous interior is largely uninhabited; less than half of the population lives in urban areas",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "23.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.52% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "7,000 PALIKIR (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.94 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.79 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "129 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "23.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "17.8 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "75 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "72.9 years"
-      },
-      {
-       "label": "female",
-       "text": "77.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.17 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.06 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "11% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "1.9% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 230,
-    "content": {
-     "text": "0.97 physicians/1,000 population (2020)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 88.3% of population"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 250,
-    "content": {
-     "text": "45.8% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.59 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.92 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.13 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.52 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 270,
-    "content": {
-     "text": "51.7% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "11.6% of GDP (2020 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "18.6% national budget (2020 est.)"
-      }
-     ]
     }
    }
   ],
@@ -576,24 +203,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "4 states; Chuuk (Truk), Kosrae (Kosaie), Pohnpei (Ponape), Yap",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of common and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -613,49 +224,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of FSM"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -680,7 +250,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -689,80 +259,23 @@
        "text": "Congress"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "14 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "partial renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "2 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "3/4/2025"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "21.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "March 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Federated States of Micronesia Supreme Court (consists of the chief justice and not more than 5 associate justices and organized into appellate and criminal divisions)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "justices appointed by the FSM president with the approval of two-thirds of Congress; justices appointed for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "the highest state-level courts are: Chuuk Supreme Court; Korsae State Court; Pohnpei State Court; Yap State Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "no formal parties",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, ADB, AOSIS, FAO, G-77, IBRD, ICAO, ICRM, IDA, IFC, IFRCS, IMF, IOC, IOM, IPU, ITSO, ITU, MIGA, OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, WHO, WMO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "3 November 1986 (from the US-administered UN trusteeship)",
      "items": []
@@ -770,7 +283,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Constitution Day, 10 May (1979)",
      "items": []
@@ -778,7 +291,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> light blue with four five-pointed white stars centered and arranged in a diamond pattern<br /><br /><strong>meaning:</strong> blue stands for the Pacific Ocean, and the stars for the four island groups of Chuuk, Kosrae, Pohnpei, and Yap",
      "items": []
@@ -786,7 +299,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "four five-pointed white stars on a light blue field, hibiscus flower",
      "items": []
@@ -794,7 +307,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "light blue, white",
      "items": []
@@ -802,7 +315,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -823,7 +336,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

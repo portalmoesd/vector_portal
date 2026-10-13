@@ -12,7 +12,10 @@ const profile = {
     'Empty field': {},
   },
   'People and Society': {
+    Population: { total: { text: '4,900,961 (2024 est.)' } },
     Languages: { Languages: { text: 'Georgian (official) 87.6%' }, 'major-language sample(s)': { text: '<br>სატესტო<br><br>The World Factbook' } },
+    Religions: { text: 'Orthodox (official) 83.4%' },
+    'Age structure': { '0-14 years': { text: '18%' } },
   },
   Government: {
     'Country name': { 'conventional short form': { text: 'Georgia' }, 'conventional long form': { text: 'none' } },
@@ -23,6 +26,18 @@ const profile = {
       'election/appointment process': { text: 'elected by a College of Electors' },
     },
     'Diplomatic representation in the US': { 'chief of mission': { text: 'Ambassador Z' } },
+    'Legal system': { text: 'civil law system' },
+    Citizenship: { 'citizenship by birth': { text: 'no' } },
+    Suffrage: { text: '18 years of age; universal' },
+    'Legislative branch': {
+      'legislature name': { text: 'Parliament (Sakartvelos Parlamenti)' },
+      'legislative structure': { text: 'unicameral' },
+      'number of seats': { text: '150 (all directly elected)' },
+      'most recent election date': { text: '10/26/2024' },
+      note: { text: 'some note' },
+    },
+    'Judicial branch': { 'highest court(s)': { text: 'Supreme Court' } },
+    'International organization participation': { text: 'UN, WTO' },
     'National holiday': { text: 'Independence Day, 26 May (1918)' },
   },
   Economy: { 'Economic overview': { text: 'ignored here' } },
@@ -35,11 +50,19 @@ test('extractProfile keeps the four sections, drops officials and empty fields, 
   assert.deepStrictEqual(sections.Geography.map((r) => r.field), ['Map references', 'Climate']);
   assert.deepStrictEqual(sections.Geography.map((r) => r.order), [10, 20]);
   const gov = sections.Government;
-  assert.deepStrictEqual(gov.map((r) => r.field), ['Country name', 'Executive branch', 'National holiday']);
+  assert.deepStrictEqual(gov.map((r) => r.field), ['Country name', 'Executive branch', 'Legislative branch', 'National holiday']);
   const exec = gov.find((r) => r.field === 'Executive branch');
   assert.deepStrictEqual(exec.content.items.map((i) => i.label), ['election/appointment process']);
-  assert.ok(!JSON.stringify(sections).includes('Ambassador Z'));
-  assert.ok(!JSON.stringify(sections).includes('President X'));
+  // Legislative branch keeps only the chamber name and the number of seats.
+  const leg = gov.find((r) => r.field === 'Legislative branch');
+  assert.deepStrictEqual(leg.content.items.map((i) => i.label), ['legislature name', 'number of seats']);
+  assert.strictEqual(leg.content.text, null);
+  // People and Society is an allow-list of Languages and Religions.
+  assert.deepStrictEqual(sections['People and Society'].map((r) => r.field), ['Languages', 'Religions']);
+  assert.deepStrictEqual(sections['People and Society'][0].content.items.map((i) => i.label), ['Languages']);
+  for (const gone of ['Ambassador Z', 'President X', 'Supreme Court', 'civil law system', 'UN, WTO', 'unicameral', 'some note', '4,900,961', 'The World Factbook']) {
+    assert.ok(!JSON.stringify(sections).includes(gone), gone);
+  }
 });
 
 test('displayPlacement sends geography to Overview with Map references shown as Continent', () => {
@@ -60,8 +83,8 @@ test('normalizeField trims sub-keys, sanitizes HTML and strips leading/trailing 
   assert.deepStrictEqual(area.items.map((i) => i.label), ['total', 'land', 'water']);
   const bg = fb.normalizeField('Introduction', 'Background', profile.Introduction.Background);
   assert.strictEqual(bg.text, 'Once upon a time.<br /><br />Then later.');
-  const lang = fb.normalizeField('People and Society', 'Languages', profile['People and Society'].Languages);
-  assert.strictEqual(lang.items[1].text, 'სატესტო<br /><br />The World Factbook');
+  const sample = fb.normalizeField('Geography', 'Sample', { note: { text: '<br>სატესტო<br><br>The World Factbook<br>' } });
+  assert.strictEqual(sample.items[0].text, 'სატესტო<br /><br />The World Factbook');
 });
 
 test('cleanText decodes entities and removes disallowed tags but keeps emphasis and lists', () => {
@@ -91,8 +114,14 @@ test('the committed snapshot covers the mapped economies and contains no officia
   const geoFields = geo.sections.Geography.map((r) => r.field);
   assert.ok(!geoFields.includes('Location') && !geoFields.includes('Area') && !geoFields.includes('Land use'));
   assert.ok(geoFields.includes('Map references') && geoFields.includes('Climate') && geoFields.includes('Natural resources'));
+  assert.deepStrictEqual(geo.sections['People and Society'].map((r) => r.field), ['Languages', 'Religions']);
   const govFields = geo.sections.Government.map((r) => r.field);
   assert.ok(!govFields.includes('Diplomatic representation in the US'));
+  for (const f of ['Administrative divisions', 'Legal system', 'International law organization participation', 'Citizenship', 'Suffrage', 'Judicial branch', 'International organization participation']) {
+    assert.ok(!govFields.includes(f), f);
+  }
+  const leg = geo.sections.Government.find((r) => r.field === 'Legislative branch');
+  assert.deepStrictEqual(leg.content.items.map((i) => i.label), ['legislature name', 'number of seats']);
   const exec = geo.sections.Government.find((r) => r.field === 'Executive branch');
   assert.ok(!exec.content.items.some((i) => ['chief of state', 'head of government', 'cabinet'].includes(i.label)));
   assert.strictEqual(fb.readMeta().snapshotDate, '2026-01');

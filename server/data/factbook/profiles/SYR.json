@@ -145,457 +145,27 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "24,261,882 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12,183,128"
-      },
-      {
-       "label": "female",
-       "text": "12,078,754"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Syrian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Syrian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Arab ~50%, Alawite ~15%, Kurd ~10%, Levantine ~10%, other ~15% (includes Druze, Ismaili, Imami, Nusairi, Assyrian, Turkoman, Armenian)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Arabic (official), Kurdish, Armenian, Aramaic, Circassian, French, English"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />ڕاستییەکانی جیهان، باشترین سەرچاوەیە بۆ زانیارییە بنەڕەتییەکان (Kurdish)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 87% (official; includes Sunni 74% and Alawi, Ismaili, and Shia 13%), Christian 10% (includes Orthodox, Uniate, and Nestorian), Druze 3%",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong>  the Christian population may be considerably smaller as a result of Christians fleeing the country during the ongoing civil war"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "33% (male 4,037,493/female 3,828,777)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "62.8% (male 7,475,355/female 7,522,797)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4.2% (2024 est.) (male 468,730/female 532,271)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "58.1 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "51.2 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "6.9 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "14.5 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "24.5 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "23.6 years"
-      },
-      {
-       "label": "female",
-       "text": "24.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.63% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "21.26 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "3.97 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.03 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "significant population density along the Mediterranean coast; larger concentrations found in the major cities of Damascus, Aleppo (the country's largest city), and Hims (Homs); more than half of the population lives in the coastal plain, the province of Halab, and the Euphrates River valley",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the recent civil war has altered the population distribution"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "57.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "5.38% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "2.585 million DAMASCUS (capital), 2.203 million Aleppo, 1.443 million Hims (Homs), 996,000 Hamah (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.99 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.88 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.01 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "20 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "14.7 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "16.6 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "13.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "74.8 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.4 years"
-      },
-      {
-       "label": "female",
-       "text": "76.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.64 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.28 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 92.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 94.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 7.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 5.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": "7.8% of national budget (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "1.52 physicians/1,000 population (2021)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "1.4 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 99.3% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.4% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "27.8% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.13 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.02 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.11 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "94.4% (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "97.2% (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "91.8% (2021 est.)"
       }
      ]
     }
@@ -669,24 +239,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "14 provinces (<em>muhafazat</em>, singular - <em>muhafazah</em>); Al Hasakah, Al Ladhiqiyah (Latakia), Al Qunaytirah, Ar Raqqah, As Suwayda', Dar'a, Dayr az Zawr, Dimashq (Damascus), Halab (Aleppo), Hamah, Hims (Homs), Idlib, Rif Dimashq (Damascus Countryside), Tartus",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of civil and Islamic (sharia) law (for family courts)",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -698,49 +252,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICC",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "the father must be a citizen of Syria; if the father is unknown or stateless, the mother must be a citizen of Syria"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -765,7 +278,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -774,80 +287,23 @@
        "text": "People's Assembly (Majlis Al-Chaab)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "210 (140 indirectly elected; 70 appointed)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/5/2025"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "9.6%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "March 2030"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Cassation (organized into civil, criminal, religious, and military divisions, each with 3 judges); Supreme Constitutional Court (consists of 7 members)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Court of Cassation judges appointed by the Supreme Judicial Council (SJC), a judicial management body headed by the minister of justice with 7 members, including the national president; judge tenure NA; Supreme Constitutional Court judges nominated by the president and appointed by the SJC; judges serve 4-year renewable terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "courts of first instance; magistrates' courts; religious and military courts; Economic Security Court; Counterterrorism Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "<strong>legal parties/alliances:<br /></strong> Arab Socialist Ba'ath Party<br />Arab Socialist (Ba'ath) Party – Syrian Regional<br />Arab Socialist Ba'ath Party – Syrian Regional Branch, Socialist Unionist Democratic Party<br />Arab Socialist Union of Syria or ASU<br />Democratic Arab Socialist Union<br />National Progressive Front or NPF<br />Socialist Unionist Democratic Party<br />Socialist Unionist Party<br />Syrian Communist Party (two branches)<br />Syrian Social Nationalist Party or SSNP<br />Unionist Socialist Party<br /><strong><br />major political organizations:<br /></strong>Kurdish Democratic Union Party or PYD<br />Kurdish National Council or KNC<br />Syriac Union Party<br />Syrian Democratic Council or SDC<br />Syrian Democratic Party<br />Syrian Opposition Coalition<br /><br /><strong>de facto governance entities:<br /></strong>Democratic Autonomous Administration of Northeast Syria or DAANES <br />Syrian Interim Government or SIG<br />Syrian Salvation Government or SSG",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ABEDA, AFESD, AMF, CAEU, FAO, G-24, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICRM, ICSID, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OAPEC, OIC, OPCW, UN, UNCTAD, UNESCO, UNIDO, UNOOSA, UNRWA, UNWTO, UPU, WBG, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (observer)",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "17 April 1946 (from League of Nations mandate under French administration)",
      "items": []
@@ -855,7 +311,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day (Evacuation Day), 17 April (1946)",
      "items": [
@@ -868,7 +324,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of green (top), white, and black; three five-pointed red stars in a horizontal line, centered on the white band<br /><br /><strong>meaning:</strong> the design is the same as a previous Syrian national flag (in use 1932-58 and 1961-63), but it is still unclear if the elements will retain the same meanings; the bands formerly represented Syria’s past rulers: white (Umayyad Caliphate), black (Abbasid Caliphate), and green (Rashidun Caliphate); the first star represented Damascus, Aleppo, and Deir ez-Zor, the three administrative subdivisions in Syria in the 1930s; the second star stood for Jabal Druze (the Mountain of the Druze), and the third star for the Alawite Mountains <br /><br /><strong>history:</strong> in 2011, opponents to the Asad regime adopted the flag; in 2025, it became the new national flag, replacing the two-star design",
      "items": []
@@ -876,7 +332,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "northern bald ibis",
      "items": []
@@ -884,7 +340,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, white, black, green",
      "items": []
@@ -892,7 +348,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -913,7 +369,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

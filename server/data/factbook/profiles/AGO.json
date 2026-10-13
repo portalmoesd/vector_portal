@@ -156,54 +156,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "38,984,796 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "19,115,781"
-      },
-      {
-       "label": "female",
-       "text": "19,869,015"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Angolan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Angolan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Ovimbundu 37%, Kimbundu 25%, Bakongo 13%, Mestico (mixed European and native African) 2%, European 1%, other 22%",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Portuguese 71.2% (official), Umbundu 23%, Kikongo 8.2%, Kimbundu 7.8%, Chokwe 6.5%, Nhaneca 3.4%, Nganguela 3.1%, Fiote 2.4%, Kwanhama 2.3%, Muhumbi 2.1%, Luvale 1%, other 3.6%  (2014 est.)",
      "items": [
@@ -216,453 +170,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 41.1%, Protestant 38.1%, other 8.6%, none 12.3% (2014 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "46.9% (male 8,752,419/female 8,701,422)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "50.7% (male 9,076,080/female 9,795,035)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "2.4% (2024 est.) (male 367,559/female 509,546)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "95.1 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "90 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "5.1 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "19.6 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "16.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15.8 years"
-      },
-      {
-       "label": "female",
-       "text": "16.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "3.32% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "39.75 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.73 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0.14 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most people live in the western half of the country; urban areas account for the highest concentrations of people, particularly the capital of Luanda",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "68.7% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "4.04% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "9.292 million LUANDA (capital), 959,000 Lubango, 905,000 Cabinda, 809,000 Benguela, 783,000 Malanje  (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.93 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.72 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "19.4 years (2015/16 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "183 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "46.1 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "60.7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "50.3 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "62.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "60.8 years"
-      },
-      {
-       "label": "female",
-       "text": "65.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "5.45 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "2.68 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 71.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 27.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 57.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 28.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 72.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 42.3% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "6.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.24 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "0.8 beds/1,000 population (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 93.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 30.3% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 73.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 6.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 69.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 26.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "8.2% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5.84 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.78 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.72 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.27 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.08 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 300,
-    "content": {
-     "text": "57.2% (2016 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "7.9% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "30.3% (2016)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "6% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "2.5% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "6.5% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "66.2% (2015 est.)"
-      },
-      {
-       "label": "male",
-       "text": "83.8% (2015 est.)"
-      },
-      {
-       "label": "female",
-       "text": "51.9% (2015 est.)"
-      }
-     ]
     }
    }
   ],
@@ -738,24 +249,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "21 provinces (<em>provincias</em>, singular - <em>provincia</em>); Bengo, Benguela, Bie, Cabinda, Cuando, Cubango, Cuanza-Norte, Cuanza-Sul, Cunene, Huambo, Huila, Icolo e Bengo, Luanda, Lunda-Norte, Lunda-Sul, Malanje, Moxico, Moxico Leste, Namibe, Uige, Zaire",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil legal system based on Portuguese civil law; no judicial review of legislation",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -771,49 +266,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Angola"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -838,7 +292,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -847,84 +301,23 @@
        "text": "National Assembly (Assembleia nacional)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "220 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "8/24/2022"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Popular Movement for the Liberation of Angola (MPLA) (124); National Union for the Total Independence of Angola (UNITA) (90); Other (6)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "39.1%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "August 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Tribunal Supremo (consists of the court president, vice president, and a minimum of 16 judges); Constitutional Court or Tribunal Constitucional (consists of 11 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges appointed by the president on recommendation of the Supreme Judicial Council, an 18-member body chaired by the president; judge tenure NA; Constitutional Court judges - 4 nominated by the president, 4 elected by National Assembly, 2 elected by Supreme National Council, 1 elected by competitive submission of curricula; judges serve single 7-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "provincial and municipal courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Broad Convergence for the Salvation of Angola Electoral Coalition or CASA-CE <br />Humanist Party of Angola or PHI <br />National Front for the Liberation of Angola or FNLA; note - party has two factions<br />National Union for the Total Independence of Angola or UNITA (largest opposition party)<br />Popular Movement for the Liberation of Angola or MPLA; note- ruling party in power since 1975<br />Social Renewal Party or PRS",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, AfDB, AU, CEMAC, CPLP, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OAS (observer), SADC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNMISS, Union Latina, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "11 November 1975 (from Portugal)",
      "items": []
@@ -932,7 +325,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 11 November (1975)",
      "items": []
@@ -940,7 +333,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> two equal horizontal bands of red (top) and black with a centered yellow emblem of a five-pointed star inside half a cogwheel, crossed by a machete (in the style of a hammer and sickle)<br /><br /><strong>meaning:</strong> red stands for liberty and black for the African continent; the emblem symbolizes workers and peasants",
      "items": []
@@ -948,7 +341,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "giant black sable antelope (<em>Palanca negra gigante</em>)",
      "items": []
@@ -956,7 +349,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, black, yellow",
      "items": []
@@ -964,7 +357,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -985,7 +378,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

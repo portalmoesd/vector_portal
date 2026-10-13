@@ -140,559 +140,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7,953,556 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3,966,320"
-      },
-      {
-       "label": "female",
-       "text": "3,987,236"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Lao(s) or Laotian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Lao or Laotian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Lao 53.2%, Khmou 11%, Hmong 9.2%, Phouthay 3.4%, Tai 3.1%, Makong 2.5%, Katong 2.2%, Lue 2%, Akha 1.8%, other 11.6% (2015 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Laos Government officially recognizes 49 ethnic groups, but the total number of ethnic groups is estimated to be well over 200"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Lao (official), French, English, various ethnic languages"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "ແຫລ່ງທີ່ຂາດບໍ່ໄດ້ສຳລັບຂໍ້ມູນຕົ້ນຕໍ່” (Lao)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Buddhist 64.7%, Christian 1.7%, none 31.4%, other/not stated 2.1% (2015 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "30.1% (male 1,214,429/female 1,181,845)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65% (male 2,573,668/female 2,599,957)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4.8% (2024 est.) (male 178,223/female 205,434)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "53.7 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "46.3 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "7.4 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "13.5 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "25.8 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25 years"
-      },
-      {
-       "label": "female",
-       "text": "25.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.22% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "19.22 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.07 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.93 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most densely populated area is in and around the capital city of Vientiane; large communities are primarily found along the Mekong River along the southwestern border; overall density is considered one of the lowest in Southeast Asia",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "38.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.99% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "721,000 VIENTIANE (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.99 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.87 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "112 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "34.2 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "39.1 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "31.6 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "69 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "67.4 years"
-      },
-      {
-       "label": "female",
-       "text": "70.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.19 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.07 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 78.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 85.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 21.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 14.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "2.7% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "4.3% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.33 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "1.3 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 72% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 82.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 28% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 17.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "5.3% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "8.15 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.62 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.07 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "4.46 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "24.1% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "41% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "7.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "24.3% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "61.6% (2017 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "7.1% (2017)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "32.7% (2017)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "10.8% (2017)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "1.2% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "8.2% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "75.6% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "85.1% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "66.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "9 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "9 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -764,24 +229,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "17 provinces (<em>khoueng</em>, singular and plural) and 1 prefecture* (<em>kampheng nakhon</em>); Attapu, Bokeo, Bolikhamxay, Champasak, Houaphanh, Khammouan, Louangnamtha, Louangphabang (Luang Prabang), Oudomxai, Phongsali, Salavan, Savannakhet, Viangchan (Vientiane)*, Viangchan, Xaignabouli, Xaisomboun, Xekong, Xiangkhouang",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system similar in form to the French system",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -797,49 +246,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Laos"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -868,7 +276,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -877,68 +285,15 @@
        "text": "National Assembly (Sapha Heng Xat)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "164 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "2/21/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Lao People's Revolutionary Party (LPRP) (158); Other (6)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "22%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "February 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "People's Supreme Court (consists of the court president and organized into criminal, civil, administrative, commercial, family, and juvenile chambers, each with a vice president and several judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "president of People's Supreme Court appointed by the National Assembly upon the recommendation of the president of the republic for a 5-year term; vice presidents of the People's Supreme Court appointed by the president of the republic upon the recommendation of the National Assembly; appointment of chamber judges NA; tenure of court vice presidents and chamber judges NA"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "appellate courts; provincial, municipal, district, and military courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Lao People's Revolutionary Party or LPRP",
      "items": [
@@ -950,16 +305,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ADB, ARF, ASEAN, CP, EAS, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IPU, ISO (subscriber), ITU, MIGA, NAM, OIF, OPCW, PCA, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "19 July 1949 (from France); 22 October 1953 (Franco-Lao Treaty recognizes full independence)",
      "items": []
@@ -967,7 +314,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Republic Day (National Day), 2 December (1975)",
      "items": []
@@ -975,7 +322,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> three horizontal bands of red (top), blue (double-width), and red, with a large white disk centered in the blue band<br /><br /><strong>meaning:</strong> red stands for the blood shed for liberation, and blue for the Mekong River and prosperity; the white disk represents the full moon over the Mekong River and the unity of the people under the Lao People's Revolutionary Party, as well as the country's bright future",
      "items": []
@@ -983,7 +330,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "elephant",
      "items": []
@@ -991,7 +338,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, white, blue",
      "items": []
@@ -999,7 +346,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -1020,7 +367,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

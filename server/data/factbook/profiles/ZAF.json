@@ -153,69 +153,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "61,089,926 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29,989,969"
-      },
-      {
-       "label": "female",
-       "text": "31,099,957"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "South African(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "South African"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Black African 80.9%, Colored 8.8%, White 7.8%, Indian/Asian 2.6%  (2021 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Colored is a term used in South Africa, including on the national census, for persons of mixed race ancestry who developed a distinct cultural identity over several hundred years"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "isiZulu or Zulu (official) 25.3%, isiXhosa or Xhosa (official) 14.8%, Afrikaans (official) 12.2%, Sepedi or Pedi (official) 10.1%, Setswana or Tswana (official) 9.1%, English (official) 8.1%, Sesotho or Sotho (official) 7.9%, Xitsonga or Tsonga (official) 3.6%, siSwati or Swati (official) 2.8%, Tshivenda or Venda (official) 2.5%, isiNdebele or Ndebele (official) 1.6%, other (includes South African sign language (official) and Khoi or Khoisan or Khoe languages) 2% (2018 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Die Wereld Feite Boek, n’ onontbeerlike bron vir basiese informasie. (Afrikaans)<br /><br />The World Factbook, the indispensable source for basic information. (English)"
       },
       {
        "label": "note",
@@ -226,482 +171,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 86%, ancestral, tribal, animist, or other traditional African religions 5.4%, Muslim 1.9%, other 1.5%, nothing in particular 5.2% (2015 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "27.2% (male 8,227,690/female 8,194,392)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.3% (male 19,524,873/female 19,947,839)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "7.5% (2024 est.) (male 1,911,825/female 2,636,028)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "53 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "41.1 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "11.8 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "8.4 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "30.7 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "30.1 years"
-      },
-      {
-       "label": "female",
-       "text": "30.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.06% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.21 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.56 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.07 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the population is concentrated along the southern and southeastern coast, and inland around Pretoria; the eastern half of the country is more densely populated than the west, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "68.8% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.72% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "10.316 million Johannesburg (includes Ekurhuleni), 4.890 million Cape Town (legislative capital), 3.228 million Durban, 2.818 million PRETORIA (administrative capital), 1.296 million Port Elizabeth, 934,000 West Rand (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.98 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.73 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "118 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "19.7 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "23.9 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "20 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "71.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "70.3 years"
-      },
-      {
-       "label": "female",
-       "text": "73.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.23 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.1 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 84.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 94.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 15.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 5.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "8.3% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "16.9% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.79 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 250,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 81.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 91.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 18.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 8.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 260,
-    "content": {
-     "text": "28.3% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.21 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.99 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "1.21 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.31 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.7 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20.1% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "35.3% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "6% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 290,
-    "content": {
-     "text": "4.9% (2017 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 300,
-    "content": {
-     "text": "33.6% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "0.9% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "3.6% (2016)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "0.6% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "6% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "19.1% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "91.2% (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "91.5% (2024 est.)"
-      },
-      {
-       "label": "female",
-       "text": "90.8% (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "14 years (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "14 years (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14 years (2022 est.)"
-      }
-     ]
     }
    }
   ],
@@ -769,24 +242,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "9 provinces; Eastern Cape, Free State, Gauteng, KwaZulu-Natal, Limpopo, Mpumalanga, Northern Cape, North West, Western Cape",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of Roman-Dutch civil law, English common law, and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -802,49 +259,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of South Africa"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes, but requires prior permission of the government"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 year"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -873,24 +289,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -901,37 +313,13 @@
       {
        "label": "number of seats",
        "text": "400 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "6/15/2024"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "44.7%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2029"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -942,74 +330,21 @@
       {
        "label": "number of seats",
        "text": "90 (all appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/29/2024"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "44.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "June 2029"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Council has special powers to protect regional interests, including safeguarding cultural and linguistic traditions among ethnic minorities"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Appeals (consists of the court president, deputy president, and 21 judges); Constitutional Court (consists of the chief and deputy chief justices and 9 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court of Appeals president and vice president appointed by the national president after consultation with the Judicial Services Commission (JSC), a 23-member body chaired by the chief justice; other Supreme Court judges appointed by the national president on the advice of the JSC and hold office until discharged from active service by an Act of Parliament; Constitutional Court chief and deputy chief justices appointed by the president of South Africa after consultation with the JSC and with heads of the National Assembly; other Constitutional Court judges appointed by the national president after consultation with the chief justice and leaders of the National Assembly; Constitutional Court judges serve 12-year nonrenewable terms or until age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "High Courts; Magistrates' Courts; labor courts; land claims courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "African Christian Democratic Party or ACDP <br />African Independent Congress or AIC <br />African National Congress or ANC <br />African People's Convention or APC <br />Agang SA <br />Congress of the People or COPE <br />Democratic Alliance or DA <br />Economic Freedom Fighters or EFF <br />Freedom Front Plus or FF+ <br />GOOD <br />Inkatha Freedom Party or IFP <br />National Freedom Party or NFP <br />Pan-Africanist Congress of Azania or PAC <br />United Christian Democratic Party or UCDP <br />United Democratic Movement or UDM",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, AfDB, AIIB, AU, BIS, BRICS, C, CD, FAO, FATF, G-20, G-24, G-5, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, NSG, OECD (enhanced engagement), OPCW, Paris Club (associate), PCA, SACU, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNITAR, UNOOSA, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "31 May 1910 (Union of South Africa formed from four British colonies: Cape Colony, Natal, Transvaal, and Orange Free State); 22 August 1934 (Status of the Union Act); 31 May 1961 (republic declared); 27 April 1994 (majority rule)",
      "items": []
@@ -1017,7 +352,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Freedom Day, 27 April (1994)",
      "items": []
@@ -1025,7 +360,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> two equal-width horizontal bands of red (top) and blue separated by a central green band that splits into a horizontal Y; a black isosceles triangle is in the Y, with narrow yellow bands around it; the red and blue bands are bordered by narrow white stripes<br /><br /><strong>meaning:</strong> the colors have no official meaning, but the Y stands for \"the convergence of diverse elements within South African society, taking the road ahead in unity\"",
      "items": [
@@ -1038,7 +373,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "springbok (antelope), king protea flower",
      "items": []
@@ -1046,7 +381,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, green, blue, yellow, black, white",
      "items": []
@@ -1054,7 +389,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1075,7 +410,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

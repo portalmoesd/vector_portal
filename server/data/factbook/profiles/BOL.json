@@ -157,551 +157,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "12,436,103 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "6,257,914"
-      },
-      {
-       "label": "female",
-       "text": "6,178,189"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Bolivian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Bolivian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Mestizo (mixed White and Indigenous ancestry) 68%, Indigenous 20%, White 5%, Cholo/Chola 2%, African descent 1%, other 1%, unspecified 3%; 44% other Indigenous group, predominantly Quechua or Aymara (2009 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> results among surveys vary based on the wording of the ethnicity question and the available response choices; the 2001 national census did not provide \"Mestizo\" as a response choice, resulting in a much higher proportion of respondents identifying themselves as belonging to one of the available indigenous ethnicity choices; the use of \"Mestizo\" and \"Cholo\" varies among response choices in surveys, with surveys using the terms interchangeably, providing one or the other as a response choice, or providing the two as separate response choices"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Spanish (official) 68.1%, Quechua (official) 17.2%, Aymara (official) 10.5%, Guarani (official) 0.6%, other 1.5%, unspecified 2.1%; note - Spanish and all Indigenous languages are official (2012 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 65%, Protestant 19.6% (Evangelical (non-specific) 11.9%, Evangelical Baptist 2.1%, Evangelical Pentecostal 1.8%, Evangelical Methodist 0.7%, Adventist 2.8%, Protestant (non-specific) 0.3%), Believer (not belonging to the church) 0.9%, other 4.8%, atheist 1.7%, agnostic 0.6%, none 6.1%, unspecified 1.3% (2023 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "28.5% (male 1,792,803/female 1,718,081)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64.5% (male 4,002,587/female 3,937,953)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "7% (2024 est.) (male 397,384/female 463,166)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "54 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "42.9 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "11 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "9.1 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "26.2 years"
-      },
-      {
-       "label": "female",
-       "text": "27 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.01% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.02 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.99 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.95 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "a high-altitude plain in the west between two cordillera of the Andes, known as the Altiplano, is the focal area for most of the population; a dense settlement pattern is also found in and around the city of Santa Cruz, located on the eastern side of the Andes",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "71.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.87% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.936 million LA PAZ (capital), 1.820 million Santa Cruz, 1.400 million Cochabamba (2022); 278,000 Sucre (constitutional capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.86 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.01 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "21.1 years (2008 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "146 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "22.1 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.5 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "20 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "72.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "71 years"
-      },
-      {
-       "label": "female",
-       "text": "74 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.13 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.04 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 81% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 94.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 19% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 5.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "8.2% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "16.4% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "1.28 physicians/1,000 population (2021)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "1.4 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 51.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 85.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 48.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 14.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "20.2% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2.98 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "2.22 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.14 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.54 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.08 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "18.9% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "3.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "3.4% (2016 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "50.2% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "3.4% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "19.7% (2016)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "5.2% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "8.3% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "10.8% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "95.6% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "97.8% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "93.5% (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -777,24 +250,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "9 departments (<em>departamentos</em>, singular - <em>departamento</em>); Beni, Chuquisaca, Cochabamba, La Paz, Oruro, Pando, Potosi, Santa Cruz, Tarija",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system with influences from Roman, Spanish, canon (religious), French, and ethnic groups' pre-colonial law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -810,49 +267,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "yes"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "yes"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal and compulsory",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -881,24 +297,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Plurinational Legislative Assembly (Asamblea Legislativa Plurinacional)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -909,41 +321,13 @@
       {
        "label": "number of seats",
        "text": "130 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "8/17/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Christian Democratic Party (PDC) (49); LIBRE (39); Unity (26); Popular Alliance (8); Other (8)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "50.8%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "August 2030"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -954,62 +338,13 @@
       {
        "label": "number of seats",
        "text": "36 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "8/17/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Christian Democratic Party (PDC) (16); LIBRE (12); Unity (7); Other (1)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "58.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "August 2030"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Tribunal Supremo de Justicia (consists of 12 judges<em> </em>organized into civil, penal, social, and administrative chambers); Plurinational Constitutional Tribunal (consists of 7 primary and 7 alternate magistrates); Plurinational Electoral Organ (consists of 7 members and 6 alternates); National Agro-Environment Court (consists of 5 primary and 5 alternate judges; Council of the Judiciary (consists of 3 primary and 3 alternate judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court, Plurinational Constitutional Tribunal, National Agro-Environmental Court, and Council of the Judiciary candidates pre-selected by the Plurinational Legislative Assembly and elected by direct popular vote; judges elected for 6-year terms; Plurinational Electoral Organ judges appointed - 6 by the Legislative Assembly and 1 by the president of the republic; members serve single 6-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "National Electoral Court; District Courts (in each of the 9 administrative departments); agro-environmental lower courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Autonomy for Bolivia – Súmate or APB Súmate<br />Christian Democratic Party or PDC<br />Community Citizen Alliance or ACC<br />Freedom and Democracy or LIBRE<br />Front for Victory or FPV<br />Movement Toward Socialism or MAS<br />National Unity or UN<br />Popular Alliance or AP<br />Revolutionary Left Front or FRI<br />Revolutionary Nationalist Movement or MNR<br />Social Democrat Movement or MDS<br />Third System Movement or MTS<br />We Believe or Creemos",
      "items": [
@@ -1021,16 +356,8 @@
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "CAN, CD, CELAC, FAO, G-77, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, LAES, LAIA, Mercosur (associate), MIGA, MINUSTAH, MONUSCO, NAM, OAS, OPANAL, OPCW, PCA, UN, UN Security Council (temporary), UNAMID, UNASUR, UNCTAD, UNESCO, UNIDO, Union Latina, UNISFA, UNMIL, UNMISS, UNOCI, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "6 August 1825 (from Spain)",
      "items": []
@@ -1038,7 +365,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 6 August (1825)",
      "items": []
@@ -1046,7 +373,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of red (top), yellow, and green, with the coat of arms centered on the yellow band<br /><br /><strong>meaning:</strong> red stands for bravery and the blood of national heroes, yellow for the nation's mineral resources, and green for the land's fertility<br /><br /><strong>history: </strong>in 2009, a presidential decree made it mandatory for a <em>wiphala -</em>- a square, multi-colored flag representing the country's ethnic groups -- to be used alongside the national flag",
      "items": [
@@ -1059,7 +386,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "llama, Andean condor; two national flowers, the cantuta and the patuju",
      "items": []
@@ -1067,7 +394,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, yellow, green",
      "items": []
@@ -1075,7 +402,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1096,7 +423,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

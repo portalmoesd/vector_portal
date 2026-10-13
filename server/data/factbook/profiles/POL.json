@@ -153,69 +153,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "38,746,310 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "18,441,415"
-      },
-      {
-       "label": "female",
-       "text": "20,304,895"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Pole(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Polish"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Polish 96.9%, Silesian 1.1%, German 0.2%, Ukrainian 0.1%, other and unspecified 1.7% (2011 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> represents ethnicity declared first"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Polish (official) 98.2%, Silesian 1.4%, other 1.1%, unspecified 1.2% (2011 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Księga Faktów Świata, niezbędne źródło podstawowych informacji. (Polish)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -226,456 +171,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 70.7%, refused to answer 20.9%, no religion 6.9%; less than 1 percent: Orthodox, Jehovah Witness, Evangelic of Augsburg, Greek Catholic, Pentecostal, other Protestant, not stated, old Catholic Mariavite Church, other Christians, Islam, Buddhist, Polish Catholic Church, other, Baptist Union of Poland, Pagan, Seventh Day Adventist, Hindu, other Catholic (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "14.2% (male 2,830,048/female 2,676,300)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.9% (male 12,513,402/female 13,036,977)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "19.8% (2024 est.) (male 3,097,965/female 4,591,618)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "51.6 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "21.6 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "30.1 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.3 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "43.4 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "41.5 years"
-      },
-      {
-       "label": "female",
-       "text": "44.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.98% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "8.03 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "11.56 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-6.26 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population concentrated in the southern area around Krakow and the central area around Warsaw and Lodz, with an extension to the northern coastal city of Gdansk",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "60.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "-0.16% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.798 million WARSAW (capital), 769,000 Krakow (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.67 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.91 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "27.9 years (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "2 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.6 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "5.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "4.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "76.7 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "72.8 years"
-      },
-      {
-       "label": "female",
-       "text": "80.9 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.33 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.65 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 82.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 90.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 17.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 9.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "6.7% of GDP (2022)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "10.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "4.03 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "6.1 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "23.1% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10.96 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "5.72 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.88 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "4.36 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21.6% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25.6% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "17.8% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "0.7% (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "58.6% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.3% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "10% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "17 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "16 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "18 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -751,24 +250,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "16 provinces or voivodships (<em>wojewodztwa</em>, singular - <em>wojewodztwo</em>); Dolnoslaskie (Lower Silesia), Kujawsko-Pomorskie (Kuyavia-Pomerania), Lodzkie (Lodz), Lubelskie (Lublin), Lubuskie (Lubusz), Malopolskie (Lesser Poland), Mazowieckie (Masovia), Opolskie (Opole), Podkarpackie (Subcarpathia), Podlaskie, Pomorskie (Pomerania), Slaskie (Silesia), Swietokrzyskie (Holy Cross), Warminsko-Mazurskie (Warmia-Masuria), Wielkopolskie (Greater Poland), Zachodniopomorskie (West Pomerania)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system; judicial review of legislative, administrative, and other governmental acts; constitutional law rulings of the Constitutional Tribunal are final",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -784,49 +267,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "both parents must be citizens of Poland"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -850,25 +292,8 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the designation \"National Assembly\" (or Zgromadzenie Narodowe) is only used on those rare occasions when the two houses meet jointly"
-      }
-     ]
-    }
-   },
-   {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -879,41 +304,13 @@
       {
        "label": "number of seats",
        "text": "460 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/15/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Law and Justice (PiS) (194); Civic Coalition (KO) (157); The Third Way (65); The New Left (Nowa Lewica) (26); Other (18)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "31.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2027"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -924,78 +321,21 @@
       {
        "label": "number of seats",
        "text": "100 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/15/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Civic Coalition (KO) (41); Law and Justice (PiS) (34); The Third Way (11); The New Left (Nowa Lewica) (9); Independents (5)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "19%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Sad Najwyzszy (consists of the first president of the Supreme Court and 120 justices organized in criminal, civil, labor and social insurance, and extraordinary appeals and public affairs and disciplinary chambers); Constitutional Tribunal (consists of 15 judges, including the court president and vice president)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "president of the Supreme Court nominated by the General Assembly of the Supreme Court and selected by the president of Poland; other judges nominated by the 25-member National Judicial Council and appointed by the president of Poland; judges serve until retirement, usually at age 65, but tenure can be extended; Constitutional Tribunal judges chosen by the Sejm for single 9-year terms"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "administrative courts; military courts; local, regional and appellate courts subdivided into military, civil, criminal, labor, and family courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Civic Coalition<br />Confederation<br />Free Republicans<br />Polish Coalition or PSL<br />The Left<br />United Right or PiS",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "Arctic Council (observer), Australia Group, BIS, BSEC (observer), CBSS, CD, CE, CEI, CERN, EAPC, EBRD, ECB, EIB, ESA, EU, FAO, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NATO, NEA, NSG, OAS (observer), OECD, OIF (observer), OPCW, OSCE, PCA, Schengen Convention, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNMIL, UNMISS, UNOCI, UNOOSA, UN Security Council (temporary), UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 90,
     "content": {
      "text": "11 November 1918 (republic proclaimed); notable earlier dates: 14 April 966 (adoption of Christianity, traditional founding date), 1 July 1569 (Polish-Lithuanian Commonwealth created)",
      "items": []
@@ -1003,7 +343,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 100,
     "content": {
      "text": "Constitution Day, 3 May (1791)",
      "items": []
@@ -1011,7 +351,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 110,
     "content": {
      "text": "<strong>description: </strong>two equal horizontal bands of white (top) and red<br /><br /><strong>meaning:</strong> colors derive from the Polish emblem, a white eagle on a red field",
      "items": [
@@ -1024,7 +364,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 120,
     "content": {
      "text": "white crowned eagle",
      "items": []
@@ -1032,7 +372,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 130,
     "content": {
      "text": "white, red",
      "items": []
@@ -1040,7 +380,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 220,
+    "order": 140,
     "content": {
      "text": "<p>Poland’s coat of arms was designed in 1927 by noted Polish graphic artist and educator Zygmunt Kaminski. The white crowned eagle is the national symbol, and white and red are the national colors, with white representing purity and truth and red symbolizing courage and the blood shed for freedom.</p>",
      "items": []
@@ -1048,7 +388,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 230,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1069,7 +409,7 @@
    },
    {
     "field": "National heritage",
-    "order": 240,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

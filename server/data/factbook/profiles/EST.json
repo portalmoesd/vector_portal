@@ -132,54 +132,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,340,478 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "634,988"
-      },
-      {
-       "label": "female",
-       "text": "705,490"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Estonian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Estonian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Estonian 69.1%, Russian 23.7%, Ukrainian 2.1%, other 4.6%, unspecified 0.5% (2021 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Estonian (official) 67.2%, Russian 28.5%, other 3.7%, unspecified 0.6% (2021est.)",
      "items": []
@@ -187,448 +141,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Orthodox 16.5%, Protestant 9.2% (Lutheran 7.7%, other Protestant 1.5%), other 3% (includes Roman Catholic, Muslim, Jehovah's Witness, Pentecostal, Buddhist, and Taara Believer), none 58.4%, unspecified 12.9% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "15.2% (male 92,980/female 88,753)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "62.2% (male 373,989/female 368,113)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "22.6% (2024 est.) (male 96,110/female 173,846)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "57.5 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "24.8 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "32.7 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.1 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "42.9 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "41.9 years"
-      },
-      {
-       "label": "female",
-       "text": "48.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.47% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "7.86 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "12.57 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "a fairly even distribution throughout most of the country, with urban areas attracting larger and denser populations",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "69.8% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "-0.03% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "454,000 TALLINN (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.55 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.89 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "28.2 years (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "5 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "3.2 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "3.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "78.4 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.8 years"
-      },
-      {
-       "label": "female",
-       "text": "83.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.36 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.66 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.) NA"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.) NA"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "6.9% of GDP (2022)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "13.2% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "3.47 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "4.5 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "21.2% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.65 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "4 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "1.92 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "4.6 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "1.13 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "23.7% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29.9% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "18.3% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "54.1% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "5.2% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "13% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "16 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "16 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -704,24 +220,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "15 urban municipalities (<em>linnad</em>, singular - <em>linn</em>), 64 rural municipalities (<em>vallad</em>, singular - <em>vald</em>)<br /><br /><strong>urban municipalities:</strong> Haapsalu, Keila, Kohtla-Jarve, Loksa, Maardu, Narva, Narva-Joesuu, Paide, Parnu, Rakvere, Sillamae, Tallinn, Tartu, Viljandi, Voru<br /><br /><strong>rural municipalities:</strong> Alutaguse, Anija, Antsla, Elva, Haademeeste, Haljala, Harku, Hiiumaa, Jarva, Joelahtme, Jogeva, Johvi, Kadrina, Kambja, Kanepi, Kastre, Kehtna, Kihnu, Kiili, Kohila, Kose, Kuusalu, Laane-Harju, Laane-Nigula, Laaneranna, Luganuse, Luunja, Marjamaa, Muhu, Mulgi, Mustvee, Noo, Otepaa, Peipsiaare, Pohja-Parnumaa, Pohja-Sakala, Poltsamaa, Polva, Raasiku, Rae, Rakvere, Räpina, Rapla, Rouge, Ruhnu, Saarde, Saaremaa, Saku, Saue, Setomaa, Tapa, Tartu, Toila, Tori, Torva, Turi, Vaike-Maarja, Valga, Viimsi, Viljandi, Vinni, Viru-Nigula, Vormsi, Voru",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -737,49 +237,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Estonia"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal; age 16 for local elections",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -804,7 +263,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -813,84 +272,23 @@
        "text": "The Estonian Parliament (Riigikogu)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "101 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "3/5/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Reform Party (37); Conservative People's Party (EKRE) (17); Centre Party (16); Estonia 200 (Eesti 200) (14); Social Democratic Party (9); Pro Patria (Isamaa) (8)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "28.7%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "March 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of 19 justices, including the chief justice, and organized into civil, criminal, administrative, and constitutional review chambers)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "the chief justice is proposed by the president of the republic and appointed by the Riigikogu; other justices proposed by the chief justice and appointed by the Riigikogu; justices appointed for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "circuit (appellate) courts; administrative, county, city, and specialized courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Conservative People's Party of Estonia (Konservatiivne Rahvaerakond) or EKRE<br />Estonia 200 or E200<br />Estonia Centre Party of (Keskerakond) or EK<br />Estonian Free Party or VAP<br />Estonian Freedom Party - Farmers' Assembly or V-PK<br />Estonian Greens or EER<br />Estonian Nationalists and Conservatives or ERK <br />Estonian Reform Party (Reformierakond) or RE<br />Fatherland or I<br />Left Alliance or VL<br />Social Democratic Party or SDE<br />The Right or PP<br />TOGETHER organization points to sovereignty or KOOS",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "Australia Group, BA, BIS, CBSS, CD, CE, EAPC, EBRD, ECB, EIB, EMU, ESA (cooperating state), EU, FAO, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NIB, NSG, OAS (observer), OECD, OIF (observer), OPCW, OSCE, PCA, Schengen Convention, UN, UNCTAD, UNESCO, UNHCR, UNTSO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "24 February 1918 (from Soviet Russia); 20 August 1991 (declared from the Soviet Union); 6 September 1991 (recognized by the Soviet Union)",
      "items": []
@@ -898,7 +296,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 24 February (1918)",
      "items": [
@@ -911,7 +309,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> three equal horizontal bands of blue (top), black, and white<br /><br /><strong>meaning:</strong> blue stands for faith, loyalty, and devotion, and also the sky, sea, and lakes; black for the country's soil and the Estonian people's past suffering; white for striving for enlightenment and virtue and also for birch bark, snow, and summer nights illuminated by the midnight sun",
      "items": []
@@ -919,7 +317,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "barn swallow, cornflower",
      "items": []
@@ -927,7 +325,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, black, white",
      "items": []
@@ -935,7 +333,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -956,7 +354,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

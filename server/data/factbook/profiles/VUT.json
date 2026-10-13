@@ -111,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "318,007 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "157,932"
-      },
-      {
-       "label": "female",
-       "text": "160,075"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Ni-Vanuatu (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Ni-Vanuatu"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Ni-Vanuatu 99%, other 1% (European, Asian, other Melanesian, Polynesian, Micronesian, other) (2020 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "indigenous languages (more than 100) 82.6%, Bislama (official; creole) 14.5%, English (official) 2.1%, French (official) 0.8% (2020 est.)",
      "items": [
@@ -171,432 +125,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Protestant 39.9% (Presbyterian 27.2%, Seventh Day Adventist 14.8%, Anglican 12%, Churches of Christ 5%, Assemblies of God 4.9%, Neil Thomas Ministry/Inner Life Ministry 3.2%), Roman Catholic 12.1%, Apostolic 2.3%, Church of Jesus Christ 1.8%, customary beliefs (including Jon Frum cargo cult) 3.1%, other 12%, none 1.4%, unspecified 0.1% (2020 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "31.1% (male 50,584/female 48,475)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "63.8% (male 99,496/female 103,425)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "5% (2024 est.) (male 7,852/female 8,175)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "56.7 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "48.8 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "7.9 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "12.7 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "24.9 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.1 years"
-      },
-      {
-       "label": "female",
-       "text": "25 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.51% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "20.36 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.02 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.24 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "three quarters of the population lives in rural areas; the urban populace lives primarily in two cities, Port-Vila and Lugenville; the three largest islands -- Espiritu Santo, Malakula, and Efate -- accommodate over half of the populace",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "26% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.55% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "53,000 PORT-VILA (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.99 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "100 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "12.3 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "75.7 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "74 years"
-      },
-      {
-       "label": "female",
-       "text": "77.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.46 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.2 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 88.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 91.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 11.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 8.7% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "3.9% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.16 physicians/1,000 population (2019)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 250,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 94% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 66.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 73.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 33.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 26.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 260,
-    "content": {
-     "text": "25.2% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.6 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.34 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.39 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.87 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "17.8% (2020 est.)"
-      },
-      {
-       "label": "male",
-       "text": "33% (2020 est.)"
-      },
-      {
-       "label": "female",
-       "text": "2.6% (2020 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 290,
-    "content": {
-     "text": "68.6% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "7.6% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "20.1% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "88% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "87.7% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "88.2% (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -668,24 +200,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "6 provinces; Malampa, Penama, Sanma, Shefa, Tafea, Torba",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of English common law, French law, and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -701,49 +217,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "both parents must be citizens of Vanuatu; in the case of only one parent, it must be the father who is a citizen"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -772,7 +247,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -781,84 +256,23 @@
        "text": "Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "52 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "1/16/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Leaders Party of Vanuatu (LPV) (9); Vanua'aku Pati (VP) (7); Iauko Group (IG) (6); Union of Moderate Parties (UMP) (6); Rural Development Party (RDP) (6); Graon mo Jastis Pati (Land and Justice Party, GJP) (5); Reunification Movement for Change (RMC) (5); Other (8)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "1.9%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "January 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Appeal (consists of 2 or more judges of the Supreme Court designated by the chief justice); Supreme Court (consists of the chief justice and 6 puisne judges -- 3 local and 3 expatriate)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court chief justice appointed by the president after consultation with the prime minister and the leader of the opposition; other judges appointed by the president on the advice of the Judicial Service Commission, a 4-member advisory body; judges serve until the age of retirement"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Magistrates Courts; Island Courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Iauko Group (Eagle Party) or IG <br />Land and Justice Party (Graon mo Jastis Pati or GJP) <br />Leaders Party of Vanuatu or LPV <br />Rural Development Party or RDP <br />Reunification of Movement for Change or RMC <br />Union of Moderate Parties or UMP<br />Vanua'aku Pati (Our Land Party) or VP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, ADB, AOSIS, C, FAO, G-77, IBRD, ICAO, ICRM, IDA, IFC, IFRCS, ILO, IMF, IMO, IMSO, IOC, IOM, ITU, ITUC (NGOs), MIGA, NAM, OAS (observer), OIF, OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "30 July 1980 (from France and the UK)",
      "items": []
@@ -866,7 +280,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 30 July (1980)",
      "items": []
@@ -874,7 +288,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description: </strong>two equal horizontal bands of red (top) and green with a black isosceles triangle (based on the left side); a black-edged yellow stripe in the shape of a horizontal \"Y\" faces the left side and encloses the triangle; a boar's tusk in the triangle circles two crossed namele fern fronds, all in yellow<br /><br /><strong>meaning:</strong> red stands for unity and the blood of men and boars, green for the richness of the islands, and black for the ni-Vanuatu people; the yellow \"Y\" reflects the islands' layout in the Pacific Ocean and symbolizes the light of the Gospel; the boar's tusk is a symbol of prosperity; the ferns represent peace",
      "items": [
@@ -887,7 +301,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "boar's tusk with crossed fern fronds",
      "items": []
@@ -895,7 +309,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, black, green, yellow",
      "items": []
@@ -903,7 +317,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -924,7 +338,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

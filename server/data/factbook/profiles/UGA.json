@@ -149,54 +149,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "50,863,850 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24,835,513"
-      },
-      {
-       "label": "female",
-       "text": "26,028,337"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Ugandan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Ugandan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Baganda 16.5%, Banyankole 9.6%, Basoga 8.8%, Bakiga 7.1%, Iteso 7%, Langi 6.3%, Bagisu 4.9%, Acholi 4.4%, Lugbara 3.3%, other 32.1% (2014 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "English (official), Ganda or Luganda (most widely used of the Niger-Congo languages and the language used most often in the capital), other Niger-Congo languages, Nilo-Saharan languages, Swahili (official), Arabic",
      "items": []
@@ -204,495 +158,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Protestant 45.1% (Anglican 32.0%, Pentecostal/Born Again/Evangelical 11.1%, Seventh Day Adventist 1.7%, Baptist .3%), Roman Catholic 39.3%, Muslim 13.7%, other 1.6%, none 0.2% (2014 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "47% (male 11,747,745/female 11,427,932)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "50.6% (male 11,788,483/female 13,131,051)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "2.4% (2024 est.) (male 504,332/female 683,498)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "96.9 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "92.1 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "4.8 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "20.8 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "16.4 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15.5 years"
-      },
-      {
-       "label": "female",
-       "text": "17.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "3.13% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "38.91 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.61 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-2.96 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population density is relatively high in comparison to other African nations; most of the population is concentrated in the central and southern parts of the country, particularly along the shores of Lake Victoria and Lake Albert; the northeast is least populated, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "26.8% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "5.41% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "3.846 million KAMPALA (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.9 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.74 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.95 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "19.4 years (2016 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "170 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.5 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "25.1 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "69.7 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "67.5 years"
-      },
-      {
-       "label": "female",
-       "text": "72 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "5.08 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "2.5 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 80.3% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 51.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 59.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 19.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 48.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 40.7% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.7% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "4.9% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.19 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 67.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 27.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 38.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 32.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 72.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 61.8% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "5.3% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.82 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.85 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.5 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "5.46 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "4.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7.8% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "1.5% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "9.7% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "57.8% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "7.3% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "34% (2016)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "5.5% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "2.6% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "8.5% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "69.1% (2016 est.)"
-      },
-      {
-       "label": "male",
-       "text": "78.5% (2016 est.)"
-      },
-      {
-       "label": "female",
-       "text": "61% (2016 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9 years (2016 est.)"
-      },
-      {
-       "label": "male",
-       "text": "10 years (2016 est.)"
-      },
-      {
-       "label": "female",
-       "text": "9 years (2016 est.)"
-      }
-     ]
     }
    }
   ],
@@ -752,24 +221,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "134 districts and 1 capital city*; Abim, Adjumani, Agago, Alebtong, Amolatar, Amudat, Amuria, Amuru, Apac, Arua, Budaka, Bududa, Bugiri, Bugweri, Buhweju, Buikwe, Bukedea, Bukomansimbi, Bukwo, Bulambuli, Buliisa, Bundibugyo, Bunyangabu, Bushenyi, Busia, Butaleja, Butambala, Butebo, Buvuma, Buyende, Dokolo, Gomba, Gulu, Hoima, Ibanda, Iganga, Isingiro, Jinja, Kaabong, Kabale, Kabarole, Kaberamaido, Kagadi, Kakumiro, Kalaki, Kalangala, Kaliro, Kalungu, Kampala*, Kamuli, Kamwenge, Kanungu, Kapchorwa, Kapelebyong, Karenga, Kasese, Kasanda, Katakwi, Kayunga, Kazo, Kibaale, Kiboga, Kibuku, Kikuube, Kiruhura, Kiryandongo, Kisoro, Kitagwenda, Kitgum, Koboko, Kole, Kotido, Kumi, Kwania, Kween, Kyankwanzi, Kyegegwa, Kyenjojo, Kyotera, Lamwo, Lira, Luuka, Luwero, Lwengo, Lyantonde, Madi-Okollo, Manafwa, Maracha, Masaka, Masindi, Mayuge, Mbale, Mbarara, Mitooma, Mityana, Moroto, Moyo, Mpigi, Mubende, Mukono, Nabilatuk, Nakapiripirit, Nakaseke, Nakasongola, Namayingo, Namisindwa, Namutumba, Napak, Nebbi, Ngora, Ntoroko, Ntungamo, Nwoya, Obongi, Omoro, Otuke, Oyam, Pader, Pakwach, Pallisa, Rakai, Rubanda, Rubirizi, Rukiga, Rukungiri, Rwampara, Sembabule, Serere, Sheema, Sironko, Soroti, Tororo, Wakiso, Yumbe, Zombo",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of English common law and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -785,49 +238,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent or grandparent must be a native-born citizen of Uganda"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "an aggregate of 20 years and continuously for the last 2 years prior to applying for citizenship"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -852,7 +264,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -861,84 +273,23 @@
        "text": "Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "529 (499 directly elected; 30 indirectly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "1/14/2021 to 1/18/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "National Resistance Movement (NRM) (336); National Unity Platform (NUP) (57); Forum for Democratic Change (FDC) (32); Independents (74); Other (30)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "34.1%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "January 2026"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Uganda (consists of the chief justice and at least 6 justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "justices appointed by the president of the republic in consultation with the Judicial Service Commission, an 8-member independent advisory body, and approved by the National Assembly; justices serve until mandatory retirement at age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Appeal (also acts as the Constitutional Court); High Court (includes 12 High Court Circuits and 8 High Court Divisions); Industrial Court; Chief Magistrate Grade One and Grade Two Courts throughout the country; qadhis courts; local council courts; family and children courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Democratic Party or DP<br />Forum for Democratic Change or FDC<br />Justice Forum or JEEMA<br />National Resistance Movement or NRM<br />National Unity Platform<br />People's Progressive Party or PPP<br />Uganda People's Congress or UPC",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, AfDB, ATMIS, AU, C, COMESA, EAC, EADB, FAO, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICCt, IDA, IDB, IFAD, IFC, IFRCS, IGAD, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITC, ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIC, OPCW, PCA, UN, UNCDF, UNCTAD, UNECA, UNDP, UNFPA, UNESCO, UNHCR, UNICEF, UNIDO, UNISFA, UNOCI, UNOPS, UNSOM, UNWTO, UPU, WCO, WFP, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "9 October 1962 (from the UK)",
      "items": []
@@ -946,7 +297,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 9 October (1962)",
      "items": []
@@ -954,7 +305,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> six equal horizontal bands of black (top), yellow, red, black, yellow, and red; a white disk is at the center and shows a grey crowned crane (the national symbol)<br /><br /><strong>meaning:</strong> black stands for the African people, yellow for sunshine and vitality, and red for African brotherhood",
      "items": []
@@ -962,7 +313,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "grey crowned crane",
      "items": []
@@ -970,7 +321,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "black, yellow, red",
      "items": []
@@ -978,7 +329,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -999,7 +350,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

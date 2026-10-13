@@ -145,562 +145,27 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "31,855,971 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "15,992,906"
-      },
-      {
-       "label": "female",
-       "text": "15,863,065"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Ivoirian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Ivoirian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Akan 38%, Voltaique or Gur 22%, Northern Mande 22%, Kru 9.1%, Southern Mande 8.6%, other 0.3% (2021 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "French (official), 60 native dialects of which Dioula is the most widely spoken"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 42.9%, Catholic 17.2%, Evangelical 11.8%, Methodist 1.7%, other Christian 3.2%, animist 3.6%, other religion 0.5%, none 19.1% (2014 est.)",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong> the majority of foreign migrant workers are Muslim (72.7%) and Christian (17.7%)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "36.1% (male 5,437,108/female 5,390,782)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "60.9% (male 9,200,957/female 9,060,748)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "3% (2024 est.) (male 401,967/female 490,196)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "72.2 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "67.5 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "4.7 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "21.2 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "20 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "21.2 years"
-      },
-      {
-       "label": "female",
-       "text": "21.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2.33% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "29.87 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.93 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0.39 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the population is primarily located in the forested south, with the highest concentration of people residing in and around the cities on the Atlantic coast; most of the northern savanna remains sparsely populated, with higher concentrations located along transportation corridors, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "53.1% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.38% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "231,000 YAMOUSSOUKRO (capital) (2018), 5.686 million ABIDJAN (seat of government) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.82 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.01 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "19.6 years (2011/12 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "359 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "52.3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "59.5 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "45.2 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "63.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "60.9 years"
-      },
-      {
-       "label": "female",
-       "text": "65.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "3.85 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.9 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 86.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 58% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 72.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 13.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 42% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 27.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3.1% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "6.2% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.17 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 84.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 41.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 64.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 15.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 58.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 35.8% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "10.3% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.7 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "1.13 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.33 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.2 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.04 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "14.9% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "0.6% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "13.6% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "62.7% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "7.4% (2021)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "25.8% (2021)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "1.9% (2021)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.4% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "17.6% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "50% (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "60.2% (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "40.3% (2021 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "11 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "11 years (2023 est.)"
       }
      ]
     }
@@ -778,24 +243,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "12 districts and 2 autonomous districts*; Abidjan*, Bas-Sassandra, Comoe, Denguele, Goh-Djiboua, Lacs, Lagunes, Montagnes, Sassandra-Marahoue, Savanes, Vallée du Bandama, Woroba, Yamoussoukro*, Zanzan",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system based on the French civil code; Constitutional Chamber of the Supreme Court reviews legislation",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -811,49 +260,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Cote d'Ivoire"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -882,24 +290,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament (Parlement)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -910,41 +314,13 @@
       {
        "label": "number of seats",
        "text": "255 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "3/6/2021 to 6/12/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Rally of Houphouetists for Democracy and Peace (RHDP) (139); Democratic Party of Côte d'Ivoire-African Democratic Rally (PDCI-RDA)-Together for Democracy and Sovereignty (EDS) (49); Democratic Party of Côte d'Ivoire-African Democratic Rally (PDCI-RDA) (23); Independents (26); Other (18)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "13.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "December 2025"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -955,70 +331,21 @@
       {
        "label": "number of seats",
        "text": "99 (66 indirectly elected; 33 appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "9/16/2023"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "24.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Cour Supreme (organized into Judicial, Audit, Constitutional, and Administrative Chambers; consists of the court president, 3 vice presidents for the Judicial, Audit, and Administrative chambers, and 9 associate justices or magistrates)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges nominated by the Superior Council of the Magistrature, a 7-member body consisting of the national president (chairman), 3 \"bench\" judges, and 3 public prosecutors; judges appointed for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of Appeal (organized into civil, criminal, and social chambers); first instance courts; peace courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "African Peoples' Party-Cote d'Ivoire or PPA-CI <br />Democratic Party of Cote d'Ivoire or PDCI <br />Ivorian Popular Front or FPI <br />Liberty and Democracy for the Republic or LIDER <br />Movement of the Future Forces or MFA <br />Pan-African Congress for People's Justice and Equality or COJEP <br />Rally of Houphouetists for Democracy and Peace or RHDP <br />Rally of the Republicans or RDR<br />Together for Democracy and Sovereignty or EDS <br />Together to Build (UDPCI, FPI,and allies) <br />Union for Cote d'Ivoire or UPCI <br />Union for Democracy and Peace in Cote d'Ivoire or UDPCI",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, AfDB, AU, ECOWAS, EITI (compliant country), Entente, FAO, FZ, G-24, G-77, IAEA, IBRD, ICAO, ICC, ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINUSCA, MONUSCO, NAM, OIC, OIF, OPCW, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNMISS, Union Latina, UNWTO, UPU, WADB (regional), WAEMU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "7 August 1960 (from France)",
      "items": []
@@ -1026,7 +353,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 7 August (1960)",
      "items": []
@@ -1034,7 +361,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three equal vertical bands of orange (left side), white, and green<br /><br /><strong>meaning:</strong> orange stands for the savannah and fertility, white for peace and unity, green for the forests of the south and the hope for a bright future; design based on France's flag",
      "items": [
@@ -1047,7 +374,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "elephant",
      "items": []
@@ -1055,7 +382,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "orange, white, green",
      "items": []
@@ -1063,7 +390,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1084,7 +411,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

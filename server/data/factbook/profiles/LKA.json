@@ -115,54 +115,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "22,050,561 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "10,668,528"
-      },
-      {
-       "label": "female",
-       "text": "11,382,033"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Sri Lankan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Sri Lankan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Sinhalese 74.9%, Sri Lankan Tamil 11.2%, Sri Lankan Moors 9.2%, Indian Tamil 4.2%, other 0.5% (2012 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Sinhala (official) 87%, Tamil (official) 28.5%, English 23.8% (2012 est.)",
      "items": [
@@ -175,499 +129,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Buddhist (official) 70.2%, Hindu 12.6%, Muslim 9.7%, Roman Catholic 6.1%, other Christian 1.3%, other 0.05% (2012 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "22.6% (male 2,537,918/female 2,423,615)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65% (male 6,954,869/female 7,336,897)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "12.4% (2024 est.) (male 1,149,256/female 1,580,053)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "53.9 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "34.2 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "19.7 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "5.1 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "34.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "32.2 years"
-      },
-      {
-       "label": "female",
-       "text": "35.8 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.22% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "14.38 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "7.65 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-4.5 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the population is primarily concentrated within a broad wet zone in the southwest, urban centers along the eastern coast, and on the Jaffna Peninsula in the north",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "19.2% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.22% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "103,000 Sri Jayewardenepura Kotte (legislative capital) (2018), 633,000 COLOMBO (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.95 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.73 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.94 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "25.6 years (2016 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 30-34"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "18 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "7.5 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "6.1 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "76.8 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.7 years"
-      },
-      {
-       "label": "female",
-       "text": "79.9 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.12 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.03 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 98.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 87.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 89.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 12.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 10.7% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "4.1% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "9.5% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "1.14 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "4 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 99.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "5.2% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2.58 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.22 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "2.32 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.03 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18.2% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "36.3% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "17.1% (2024 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "66.3% (2016 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "0.9% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "9.8% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "1.8% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "7.2% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "92.7% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "93.4% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "92% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -739,24 +204,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "9 provinces; Central, Eastern, North Central, Northern, North Western, Sabaragamuwa, Southern, Uva, Western",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of Roman-Dutch civil law, English common law, Jaffna Tamil customary law, and Muslim personal law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -772,49 +221,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Sri Lanka"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no, except in cases where the government rules it is to the benefit of Sri Lanka"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -843,7 +251,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -852,84 +260,23 @@
        "text": "Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "225 (196 directly elected; 29 indirectly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "11/14/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "National People's Power (Jathika Jana Balawegaya, NPP) (159); Samagi Jana Balawegaya (SJB) (40); Other (26)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "9.8%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "November 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of the Republic (consists of the chief justice and 9 justices); has exclusive jurisdiction to review legislation"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "chief justice nominated by the Constitutional Council (CC), a 9-member high-level advisory body, and appointed by the president; other justices nominated by the CC and appointed by the president on the advice of the chief justice; all justices can serve until age 65"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Appeals; High Courts; Magistrates' Courts; municipal and primary courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Crusaders for Democracy or CFD<br />Eelam People's Democratic Party or EPDP<br />Eelam People's Revolutionary Liberation Front or EPRLF<br />Illankai Tamil Arasu Kachchi or ITAK<br />Janatha Vimukthi Peramuna or JVP<br />Jathika Hela Urumaya or JHU<br />National People's Power or NPP (also known as Jathika Jana Balawegaya or JJB)<br />People's Liberation Organisation of Tamil Eelam or PLOTE<br />Samagi Jana Balawegaya or SJB<br />Sri Lanka Freedom Party or SLFP<br />Sri Lanka Muslim Congress or SLMC<br />Sri Lanka People's Freedom Alliance or SLPFA (includes SLPFP, SLPP, and several smaller parties)<br />Sri Lanka Podujana Peramuna (Sri Lanka's People's Front) or SLPP<br />Tamil Eelam Liberation Organization or TELO<br />Tamil National Alliance or TNA (includes ITAK, PLOTE, TELO)<br />Tamil National People's Front or TNPF<br />Tamil People's National Alliance or TPNA<br />United National Front for Good Governance or UNFGG (coalition includes JHU, UNP)<br />United National Party or UNP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ABEDA, ADB, ARF, BIMSTEC, C, CD, CICA (observer), CP, FAO, G-11, G-15, G-24, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINURSO, MINUSTAH, MONUSCO, NAM, OAS (observer), OPCW, PCA, SAARC, SACEP, SCO (dialogue member), UN, UNCTAD, UNESCO, UNIDO, UNIFIL, UNISFA, UNMISS, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "4 February 1948 (from the UK)",
      "items": []
@@ -937,7 +284,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day (National Day), 4 February (1948)",
      "items": []
@@ -945,7 +292,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> yellow with two panels; the smaller panel on the left has two equal vertical bands of green (left side) and orange; the larger panel has a yellow lion holding a sword on a maroon field, with a yellow bo leaf in each corner<br /><br /><strong>meaning:</strong> the sword stands for national sovereignty; the lion for Sinhalese ethnicity, the strength of the nation, and bravery; the four bo leaves for Buddhism and the four virtues of kindness, friendliness, happiness, and equanimity; orange stands for Tamils, green for Moors, and maroon for the Sinhalese majority; yellow represents other ethnic groups",
      "items": [
@@ -958,7 +305,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "lion, water lily",
      "items": []
@@ -966,7 +313,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "maroon, yellow",
      "items": []
@@ -974,7 +321,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -995,7 +342,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

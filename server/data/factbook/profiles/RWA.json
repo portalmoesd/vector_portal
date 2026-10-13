@@ -153,567 +153,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13,623,302 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "6,684,655"
-      },
-      {
-       "label": "female",
-       "text": "6,938,647"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Rwandan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Rwandan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Hutu, Tutsi, Twa",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Kinyarwanda (official, universal Bantu vernacular) 93.2%, French (official) &lt;0.1%, English (official) &lt;0.1%, Swahili/Kiswahili (official, used in commercial centers) &lt;0.1%, more than one language, other 6.3%, unspecified 0.3% (2002 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Inkoranya nzimbuzi y'isi, isoko fatizo y'amakuru y'ibanze. (Kinyarwanda)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Catholic 39.9%, Pentecostal 21.3%, Protestant 14.6%, Adventist 12.2%, other Christians 4.2%, no religion 3.0%, Muslim 2.0%, other religions 2.0%; less than 1%: Jehovah Witness, not specified, Animist  (2022 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "37.2% (male 2,561,884/female 2,508,218)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "59.7% (male 3,954,608/female 4,179,844)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "3.1% (2024 est.) (male 168,163/female 250,585)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "67.5 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "62.3 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "5.1 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "19.4 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "21.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "20.1 years"
-      },
-      {
-       "label": "female",
-       "text": "21.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "25.05 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.87 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-0.13 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "one of Africa's most densely populated countries; large concentrations tend to be in the central regions and along the shore of Lake Kivu in the west, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "17.9% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.07% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.248 million KIGALI (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.95 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.67 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "23 years (2019/20 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "229 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "27.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "22.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "66.6 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "64.6 years"
-      },
-      {
-       "label": "female",
-       "text": "68.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "3.2 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.58 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 88.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 60.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 65.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 11.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 39.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 34.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "7.3% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "9.5% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.09 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "0.7 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 91.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 87% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 87.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 8.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 13% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 12.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "5.8% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.35 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.23 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.03 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.09 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "6 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.4% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "17% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "6.3% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "7.7% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "49.9% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "0.3% (2020)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "5.5% (2020)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "0.4% (2020)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.7% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "13.9% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "78.8% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "81% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "76.7% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "13 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "13 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -785,24 +242,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "4 provinces (<em>provinces</em>, singular - <em>province </em>(French); <em>intara </em>for singular and plural (Kinyarwanda)) and 1 city* (<em>ville </em>(French); <em>umujyi </em>(Kinyarwanda)); Est (Eastern), Kigali*, Nord (Northern), Ouest (Western), Sud (Southern)",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of civil law, based on German and Belgian models, and customary law; Supreme Court reviews legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -818,49 +259,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "the father must be a citizen of Rwanda; if the father is stateless or unknown, the mother must be a citizen"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -889,24 +289,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parlement (Parliament)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -917,45 +313,13 @@
       {
        "label": "number of seats",
        "text": "80 (53 directly elected; 27 indirectly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "7/15/2024 to 7/16/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Rwandan Patriotic Front (FPR) and its allies (37); Liberal Party (PL) (5); Social Democratic Party (PSD) (5); Other (6)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "63.8%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "July 2029"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> 24 women are selected for seats by special-interest groups, and 3 members are selected by youth and disability organizations"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -966,70 +330,21 @@
       {
        "label": "number of seats",
        "text": "26 (18 indirectly elected; 8 appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "9/16/2024 to 9/16/2024"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "53.8%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the chief and deputy chief justices and 5 judges; normally organized into 3-judge panels); High Court (consists of the court president, vice president, and a minimum of 24 judges and organized into 5 chambers)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court judges nominated by the president after consultation with the Cabinet and the Superior Council of the Judiciary (SCJ), a 27-member body of judges, other judicial officials, and legal professionals, and approved by the Senate; chief and deputy chief justices appointed for 8-year nonrenewable terms; tenure of judges NA; High Court president and vice president appointed by the president of the republic upon approval by the Senate; judges appointed by the Supreme Court chief justice upon approval of the SCJ; judge tenure NA"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "High Court of the Republic; commercial courts including the High Commercial Court; intermediate courts; primary courts; and military specialized courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Democratic Green Party of Rwanda or DGPR <br />Liberal Party or PL <br />Party for Progress and Concord or PPC <br />Rwandan Patriotic Front or RPF <br />Rwandan Patriotic Front Coalition (includes RPF, PPC, PSP, UDPR, PDI, PSR, PDC) <br />Social Democratic Party or PSD <br />Social Party Imberakuri or PS-Imberakuri",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, AfDB, AU, CEPGL, COMESA, EAC, EADB, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINUSMA, NAM, OIF, OPCW, PCA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMISS, UNOOSA, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "1 July 1962 (from Belgium-administered UN trusteeship)",
      "items": []
@@ -1037,7 +352,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 1 July (1962)",
      "items": []
@@ -1045,7 +360,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> three horizontal bands of sky blue (top, double-width), yellow, and green, with a golden sun with 24 rays on the right end of the blue band<br /><br /><strong>meaning:</strong> blue stands for happiness and peace, yellow for economic development and mineral wealth, and green for hope for prosperity and natural resources; the sun symbolizes unity and enlightenment",
      "items": []
@@ -1053,7 +368,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "traditional woven basket with peaked lid",
      "items": []
@@ -1061,7 +376,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "blue, yellow, green",
      "items": []
@@ -1069,7 +384,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1090,7 +405,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

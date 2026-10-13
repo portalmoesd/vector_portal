@@ -124,64 +124,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5,509,733 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "2,780,972"
-      },
-      {
-       "label": "female",
-       "text": "2,728,761"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Norwegian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Norwegian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Norwegian 81.5% (includes about 60,000 Sami), other European 8.9%, other 9.6% (2021 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Bokmal Norwegian (official), Nynorsk Norwegian (official), small Sami- and Finnish-speaking minorities"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Verdens Faktabok, den essensielle kilden for grunnleggende informasjon. (Norwegian)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -192,478 +142,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Church of Norway (Evangelical Lutheran - official) 67.5%, Muslim 3.1%, Roman Catholic 3.1%, other Christian 3.8%, other 2.6%, unspecified 19.9% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "16.3% (male 461,979/female 438,243)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "64.5% (male 1,820,692/female 1,734,818)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "19.1% (2024 est.) (male 498,301/female 555,700)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "55 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "25.3 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "29.6 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "3.4 (2024 est.)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data include Svalbard and Jan Mayen Islands"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "41 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "40.1 years"
-      },
-      {
-       "label": "female",
-       "text": "41.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.57% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "10.35 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "8.6 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "3.98 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most people live in the south; population clusters are found along the North Sea coast in the southwest and Skaggerak in the southeast; the interior areas of the north remain sparsely populated",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "84% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.32% annual rate of change (2020-25 est.)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data include Svalbard and Jan Mayen Islands"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "1.086 million OSLO (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.9 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.02 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "29.8 years (2020 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data is calculated based on actual age at first births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "1 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "2.1 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "1.5 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "82.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "81.3 years"
-      },
-      {
-       "label": "female",
-       "text": "84.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.58 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.77 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "8.1% of GDP (2022)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "17.8% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "4.98 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "3.4 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 100% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "23.1% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.05 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "2.63 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "2.23 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.19 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "12% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12.6% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "11.3% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "57.4% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "0% (2022)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "0% (2022)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "5.5% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "14.5% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "19 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "18 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "20 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -735,32 +217,16 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "12 counties (<em>fylker</em>, singular - <em>fylke</em>); Agder, Innlandet, More og Romsdal, Nordland, Oslo, Rogaland, Romsdal, Troms og Finnmark, Trondelag, Vestfold og Telemark, Vestland, Viken (2024)",
-     "items": []
-    }
-   },
-   {
     "field": "Dependent areas",
-    "order": 50,
+    "order": 40,
     "content": {
      "text": "Bouvet Island, Jan Mayen, Svalbard (3)",
      "items": []
     }
    },
    {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "mixed system of civil, common, and customary law; Supreme Court can advise on legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -776,49 +242,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 80,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 90,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Norway"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 100,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -831,7 +256,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -840,88 +265,23 @@
        "text": "Parliament (Stortinget)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "169 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "9/8/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Labour Party (53); Progress Party (47); Conservative Party (24); Socialist Left Party (9); Center Party (9); Red Party (9); Other (18)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "40.2%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "September 2029"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court or Hoyesterett (consists of the chief justice and 18 associate justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "justices appointed by the monarch (King in Council) on the recommendation of the Judicial Appointments Board; justices can serve until mandatory retirement at age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Courts of Appeal or Lagmennsrett; regional and district courts; Conciliation Boards; ordinary and special courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> in addition to professionally trained judges, elected lay judges sit on the bench with professional judges in the Courts of Appeal and district courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 140,
+    "order": 80,
     "content": {
      "text": "Center Party or Sp <br />Christian Democratic Party or KrF <br />Conservative Party or H <br />Green Party or MDG <br />Labor Party or Ap <br />Liberal Party or V<br />Patient Focus or PF <br />Progress Party or FrP <br />Red Party or R <br />Socialist Left Party or SV",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 150,
-    "content": {
-     "text": "ADB (nonregional member), AfDB (nonregional member), Arctic Council, Australia Group, BIS, CBSS, CD, CE, CERN, EAPC, EBRD, EFTA, EITI (implementing country), ESA, FAO, FATF, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IGAD (partners), IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NC, NEA, NIB, NSG, OAS (observer), OECD, OPCW, OSCE, Paris Club, PCA, Schengen Convention, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNITAR, UNMISS, UNOOSA, UNRWA, UNTSO, UNWTO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO, ZC",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "7 June 1905 (union with Sweden declared dissolved); 26 October 1905 (Sweden agreed to the repeal of the union); notable earlier dates: ca. 872 (traditional unification of Norwegian kingdoms by HARALD Fairhair); 1397 (Kalmar Union of Denmark, Norway, and Sweden); 1524 (Denmark-Norway); 17 May 1814 (Norwegian constitution adopted); 4 November 1814 (Sweden-Norway union confirmed)",
      "items": []
@@ -929,7 +289,7 @@
    },
    {
     "field": "National holiday",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Constitution Day, 17 May (1814)",
      "items": []
@@ -937,7 +297,7 @@
    },
    {
     "field": "Flag",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> red with a blue cross outlined in white that extends to the edges of the flag; the the cross is shifted to the left side in the style of the Dannebrog (Danish flag)<br /><br /><strong>meaning:</strong> the colors represent Norway's past political unions with Denmark (red and white) and Sweden (blue)",
      "items": []
@@ -945,7 +305,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "lion",
      "items": []
@@ -953,7 +313,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "red, white, blue",
      "items": []
@@ -961,7 +321,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -986,7 +346,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

@@ -161,54 +161,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2,852,777 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "1,402,136"
-      },
-      {
-       "label": "female",
-       "text": "1,450,641"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Namibian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Namibian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Ovambo 50%, Kavangos 9%, Herero 7%, Damara 7%, mixed European and African ancestry 6.5%, European 6%, Nama 5%, Caprivian 4%, San 3%, Baster 2%, Tswana 0.5%",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Oshiwambo languages 49.7%, Nama/Damara 11%, Kavango languages 10.4%, Afrikaans 9.4%, Herero languages 9.2%, Zambezi languages 4.9%, English (official) 2.3%, other African languages 1.5%, other European languages 0.7%, other 1% (2016 est.)",
      "items": [
@@ -221,445 +175,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 97.5%, other 0.6% (includes Muslim, Baha'i, Jewish, Buddhist), unaffiliated 1.9% (2020 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "34.1% (male 482,790/female 473,306)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "62% (male 846,810/female 890,099)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "3.9% (2024 est.) (male 47,686/female 62,969)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "60.5 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "54 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "6.5 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "15.5 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "23.1 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "22.1 years"
-      },
-      {
-       "label": "female",
-       "text": "23.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.76% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "23.93 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.36 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population density is very low, with the largest clusters found in the extreme north-central area along the border with Angola, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "54.9% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.64% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "477,000 WINDHOEK (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.95 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.76 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.97 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "21.6 years (2013 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "139 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.1 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "24.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "65.9 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "64.2 years"
-      },
-      {
-       "label": "female",
-       "text": "67.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.85 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.4 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 96.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 73.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 85.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 3.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 26.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 14.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "9.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "11.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.55 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 70.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 23.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 49% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 29.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 76.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 51% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "17.2% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2.38 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "1.37 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.16 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.53 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.32 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "20.5% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "3.9% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 300,
-    "content": {
-     "text": "33.7% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "9.1% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "24.6% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "87.6% (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "87.9% (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "87.4% (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -731,29 +250,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "14 regions; Erongo, Hardap, //Karas, Kavango East, Kavango West, Khomas, Kunene, Ohangwena, Omaheke, Omusati, Oshana, Oshikoto, Otjozondjupa, Zambezi",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>the Karas region was renamed //Karas in 2013 to include the alveolar lateral click of the Khoekhoegowab language"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of uncodified civil law based on Roman-Dutch law and customary law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -769,49 +267,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Namibia"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -840,24 +297,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -868,41 +321,13 @@
       {
        "label": "number of seats",
        "text": "104 (96 directly elected; 8 appointed)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "11/27/2024 to 11/30/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "SWAPO Party (51); Independent Patriots of Change (IPC) (20); Affirmative Repositioning (AR) (6); Landless People's Movement (LPM) (5); Popular Democratic Movement (PDM) (5); Other (9)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "42.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "November 2029"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -913,74 +338,21 @@
       {
        "label": "number of seats",
        "text": "42 (all indirectly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "12/15/2020"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "14.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "December 2025"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Council primarily reviews legislation passed and referred by the National Assembly"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the chief justice and at least 3 judges in quorum sessions)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges appointed by the president of Namibia on the recommendation of the Judicial Service Commission; judges serve until age 65, but terms can be extended by the president until age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "High Court; Electoral Court, Labor Court; regional and district magistrates' courts; community courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "All People's Party or APP <br />Christian Democratic Voice or CDV <br />Landless People's Movement or LPM <br />National Unity Democratic Organization or NUDO <br />Namibian Economic Freedom Fighters or NEFF <br />Popular Democratic Movement or PDM (formerly Democratic Turnhalle Alliance or DTA) <br />Rally for Democracy and Progress or RDP <br />Republican Party or RP<br />South West Africa National Union or SWANU <br />South West Africa People's Organization or SWAPO <br />United Democratic Front or UDF <br />United People's Movement or UPM",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, AfDB, AU, C, CD, CPLP (associate observer), FAO, G-77, IAEA, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NAM, OPCW, SACU, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNISFA, UNMIL, UNMISS, UNOCI, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "21 March 1990 (from South African mandate)",
      "items": []
@@ -988,7 +360,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Independence Day, 21 March (1990)",
      "items": []
@@ -996,7 +368,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> a wide red stripe edged with narrow white stripes divides the flag diagonally from lower-left corner to upper-right corner; the upper triangle is blue and has a golden-yellow, 12-ray sunburst, and the lower triangle is green<br /><br /><strong>meaning:</strong> red stands for the heroism of the people and their determination to build a future of equal opportunity; white stands for peace, unity, tranquility, and harmony; blue stands for the sky and the Atlantic Ocean, the sun for power and existence, and green for vegetation and agricultural resources",
      "items": []
@@ -1004,7 +376,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "oryx (antelope)",
      "items": []
@@ -1012,7 +384,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "blue, red, green, white, yellow",
      "items": []
@@ -1020,7 +392,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1041,7 +413,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

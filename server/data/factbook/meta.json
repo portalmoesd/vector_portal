@@ -29,10 +29,28 @@
     ],
     "Government": [
       "Diplomatic representation in the US",
-      "Diplomatic representation from the US"
+      "Diplomatic representation from the US",
+      "Administrative divisions",
+      "Legal system",
+      "International law organization participation",
+      "Citizenship",
+      "Suffrage",
+      "Judicial branch",
+      "International organization participation"
+    ]
+  },
+  "includedFields": {
+    "People and Society": [
+      "Languages",
+      "Religions"
     ]
   },
   "excludedItems": {
+    "People and Society": {
+      "Languages": [
+        "major-language sample(s)"
+      ]
+    },
     "Government": {
       "Executive branch": [
         "chief of state",
@@ -41,6 +59,23 @@
       ]
     }
   },
-  "extractedAt": "2026-10-13T10:10:34.239Z",
+  "includedItems": {
+    "Government": {
+      "Legislative branch": [
+        "legislature name",
+        "chamber name",
+        "number of seats"
+      ],
+      "Legislative branch - lower chamber": [
+        "chamber name",
+        "number of seats"
+      ],
+      "Legislative branch - upper chamber": [
+        "chamber name",
+        "number of seats"
+      ]
+    }
+  },
+  "extractedAt": "2026-10-13T10:17:52.851Z",
   "profiles": 216
 }

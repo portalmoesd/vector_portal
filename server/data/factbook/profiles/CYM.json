@@ -111,59 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "66,653 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "32,379"
-      },
-      {
-       "label": "female",
-       "text": "34,274"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Caymanian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Caymanian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Cayman Islander 35.4%, Jamaican 24.8%, Filipino 5.5%, British 5.3%, American 5.2%, Honduran 4.2%, Canadian 3.3%, Indian 2.1%, Cuban 1.6%, Nicaraguan 1%, other 11.1%, unspecified 0.5% (2021 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>data represent population by country of birth"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "English (official) 88.8%, Spanish 3.9%, Filipino 3.8%, other 2.8%, unspecified 0.7% (2021 est.)",
      "items": [
@@ -176,296 +125,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Protestant 60.8% (includes Church of God 19.5%, Seventh Day Adventist 8.7%, non-denominational 8.3%, Baptist 6.9%, Pentecostal 6.8%, Presbyterian/United Church 5.7%, Anglican 2.8%, Wesleyan Holiness 1.5%, Methodist 0.5%), Roman Catholic 13.6%, Hindu 1.7%, Jehovah's Witness 0.9%, other 4.8%, none 16.7%, unspecified 1.4% (2021 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "17.4% (male 5,845/female 5,767)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.9% (male 21,480/female 22,456)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "16.7% (2024 est.) (male 5,054/female 6,051)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "51.7 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "26.4 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "25.3 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "4 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "41.3 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "40.3 years"
-      },
-      {
-       "label": "female",
-       "text": "42 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.71% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "11.41 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.24 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "11.91 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "majority of the population resides on Grand Cayman",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "100% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "1.13% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "35,000 GEORGE TOWN (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.01 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.84 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.95 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.1 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "8.8 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "5.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "82.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "79.8 years"
-      },
-      {
-       "label": "female",
-       "text": "85.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.81 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.9 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 95.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 95.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 4.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 4.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 93.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 93.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 6.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 6.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "1.6% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "15% national budget (2019 est.)"
-      }
-     ]
     }
    }
   ],
@@ -533,24 +196,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 50,
-    "content": {
-     "text": "6 districts; Bodden Town, Cayman Brac and Little Cayman, East End, George Town, North Side, West Bay",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "English common law and local statutes",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -562,24 +209,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": "see United Kingdom",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -592,7 +223,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -601,84 +232,23 @@
        "text": "Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "21 (directly elected and appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "4/14/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "independent (12); PPM (7)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "23.8%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "2025"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Appeal (consists of the court president and at least 2 judges); Grand Court (consists of the court president and at least 2 judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Court of Appeal and Grand Court judges appointed by the governor on the advice of the Judicial and Legal Services Commission, an 8-member independent body consisting of governor appointees, Court of Appeal president, and attorneys; Court of Appeal judges' tenure based on their individual instruments of appointment; Grand Court judges normally appointed until retirement at age 65 but can be extended until age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Summary Court"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> appeals beyond the Court of Appeal are heard by the Judicial Committee of the Privy Council (in London)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": "Cayman Islands Peoples Party or CIPP<br />People's Progressive Movement or PPM",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "Caricom (associate), CDB, Interpol (subbureau), IOC, UNESCO (associate), UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "none (overseas territory of the UK)",
      "items": []
@@ -686,7 +256,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "Constitution Day, the first Monday in July (1959)",
      "items": []
@@ -694,7 +264,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> a blue field with the UK flag in the upper-left quadrant and the Caymanian coat of arms centered on the right half of the flag; the coat of arms has a pineapple, a turtle, a shield with a golden lion and three green stars, and a scroll below the shield with the motto HE HATH FOUNDED IT UPON THE SEAS<br /><br /><strong>meaning:</strong> the pineapple represents ties to Jamaica; the turtle represents the Caymans' seafaring tradition; the lion symbolizes Great Britain; the green stars represent the three islands; the white and blue wavy lines on the coat of arms represent the sea",
      "items": []
@@ -702,7 +272,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 120,
     "content": {
      "text": "green sea turtle",
      "items": []
@@ -710,7 +280,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 190,
+    "order": 130,
     "content": {
      "text": "the Queen of England approved the Cayman Islands' coat of arms -- which was designed with input from the public -- in 1958; the shield features the<em> </em>lion of England and three green stars that symbolize the three islands of Grand Cayman, Cayman Brac, and Little Cayman; the green turtle stands for the islands’ seafaring history, the rope under it for the thatch-rope industry, and the pineapple for historical ties with Jamaica; the motto comes from Psalms 24, acknowledging the Caymans’ Christian heritage",
      "items": []
@@ -718,7 +288,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

@@ -156,54 +156,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "2,521,534 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "1,234,898"
-      },
-      {
-       "label": "female",
-       "text": "1,286,636"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Motswana (singular), Batswana (plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Motswana (singular), Batswana (plural)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Tswana (or Setswana) 79%, Kalanga 11%, Basarwa 3%, other, including Kgalagadi and people of European ancestry 7%",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Setswana 77.3%, Sekalanga 7.4%, Shekgalagadi 3.4%, English (official) 2.8%, Zezuru/Shona 2%, Sesarwa 1.7%, Sembukushu 1.6%, Ndebele 1%, other 2.8% (2011 est.)",
      "items": []
@@ -211,440 +165,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 79.1%, Badimo 4.1%, other 1.4% (includes Baha'i, Hindu, Muslim, Rastafarian), none 15.2%, unspecified 0.3% (2011 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "28.7% (male 355,583/female 348,863)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "65.2% (male 759,210/female 837,752)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "6.1% (2024 est.) (male 59,513/female 89,747)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "60.9 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "52.1 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.8 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "11.4 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "25.8 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "26 years"
-      },
-      {
-       "label": "female",
-       "text": "28.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.32% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "21.16 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.8 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-1.14 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the population is primarily concentrated in the east, with a focus in and around the capital of Gaborone and the eastern city of Francistown; population density remains low in other areas in the country, especially in the Kalahari Desert to the west.",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "72.9% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.47% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "269,000 GABORONE (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.91 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.66 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.92 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "155 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.8 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "25.9 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "21.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "66.4 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "64.4 years"
-      },
-      {
-       "label": "female",
-       "text": "68.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.73 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.34 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 79.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 92.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 20.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 7.4% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "6.3% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "14.6% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.38 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "2.2 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 94.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 63% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 86% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 5.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 37% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 14% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "18.9% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5.98 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "2.93 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.46 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.96 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "1.64 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "17.1% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29.2% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "5.5% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 300,
-    "content": {
-     "text": "41.5% (2017 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "8.1% of GDP (2020 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "21.5% national budget (2020 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "12 years (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12 years (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "13 years (2021 est.)"
-      }
-     ]
     }
    }
   ],
@@ -716,24 +240,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "10 districts and 6 town councils*; Central, Chobe, Francistown*, Gaborone*, Ghanzi, Jwaneng*, Kgalagadi, Kgatleng, Kweneng, Lobatse*, North East, North West, Selebi-Phikwe*, South East, Southern, Sowa Town*",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed legal system of civil law influenced by the Roman-Dutch model, including customary and common law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -749,49 +257,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Botswana"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -816,7 +283,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -825,92 +292,27 @@
        "text": "Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "chamber name",
        "text": "National Assembly"
       },
       {
        "label": "number of seats",
        "text": "69 (61 directly elected; 6 indirectly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/30/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Umbrella for Democratic Change (UDC) (36); Botswana Congress Party (BCP) (15); Botswana Patriotic Front (BPF) (5); Botswana Democratic Party (BDP) (4); Other (1)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "9%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2029"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the House of Chiefs (Ntlo ya Dikgosi), an advisory body to the National Assembly, consists of 35 members -- 8 hereditary chiefs from Botswana's principal tribes, 22 indirectly elected by the chiefs, and 5 appointed by the president; the House of Chiefs consults on issues including powers of chiefs, customary courts, customary law, tribal property, and constitutional amendments"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Appeal, High Court (each consists of a chief justice and a number of other judges as prescribed by the Parliament)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Court of Appeal and High Court chief justices appointed by the president and other judges appointed by the president upon the advice of the Judicial Service Commission; all judges appointed to serve until age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Industrial Court (with circuits scheduled monthly in the capital city and in 3 districts); Magistrates Courts (1 in each district); Customary Court of Appeal; Paramount Chief's Court/Urban Customary Court; Senior Chief's Representative Court; Chief's Representative’s Court; Headman's Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Alliance of Progressives or AP <br />Botswana Congress Party or BCP <br />Botswana Democratic Party or BDP <br />Botswana National Front or BNF [Duma BOKO]Botswana Patriotic Front or BPF <br />Botswana Peoples Party or BPP <br />Botswana Republic Party or BRP <br />Umbrella for Democratic Change or UDC (various times the coalition has included the BPP, BCP, BNF and other parties)",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, AfDB, AU, C, CD, FAO, G-77, IAEA, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, OPCW, SACU, SADC, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "30 September 1966 (from the UK)",
      "items": []
@@ -918,7 +320,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day (Botswana Day), 30 September (1966)",
      "items": []
@@ -926,7 +328,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> light blue with a horizontal white-edged black stripe across the middle<br /><br /><strong>meaning:</strong> the blue symbolizes rainwater, and the black and white bands represent racial harmony",
      "items": []
@@ -934,7 +336,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "zebra",
      "items": []
@@ -942,7 +344,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "light blue, white, black",
      "items": []
@@ -950,7 +352,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "the two zebras, the country’s national symbol, support an elephant tusk that represents the country's fauna and a head of sorghum that signifies agriculture; the three wavy blue bands stand for the country’s reliance on water, the cog wheels for industry, and the bull’s head for the cattle industry; the coat of arms also features the national colors of light blue, white, and black; the motto reflects the scarcity of rain in the country: <em>pula </em>means “let there be rain” in Setswana, the national language",
      "items": []
@@ -958,7 +360,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -979,7 +381,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

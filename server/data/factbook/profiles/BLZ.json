@@ -119,69 +119,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "421,960 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "208,844"
-      },
-      {
-       "label": "female",
-       "text": "213,116"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Belizean(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Belizean"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Mestizo 52.9%, Creole 25.9%, Maya 11.3%, Garifuna 6.1%, East Indian 3.9%, Mennonite 3.6%, White 1.2%, Asian 1%, other 1.2%, unknown 0.3% (2010 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> percentages add up to more than 100% because respondents were able to identify more than one ethnic origin"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "English 62.9% (official), Spanish 56.6%, Creole 44.6%, Maya 10.5%, German 3.2%, Garifuna 2.9%, other 1.8%, unknown 0.5% (2010 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "The World Factbook, the indispensable source for basic information. (English)<br /><br />La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)"
       },
       {
        "label": "note",
@@ -192,482 +137,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Roman Catholic 40.1%, Protestant 31.5% (includes Pentecostal 8.4%, Seventh Day Adventist 5.4%, Anglican 4.7%, Mennonite 3.7%, Baptist 3.6%, Methodist 2.9%, Nazarene 2.8%), Jehovah's Witness 1.7%, other 10.5% (includes Baha'i, Buddhist, Hindu, Church of Jesus Christ, Muslim, Rastafarian, Salvation Army), unspecified 0.6%, none 15.5% (2010 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "27.7% (male 58,529/female 56,811)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "66.7% (male 135,903/female 141,503)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "5.5% (2024 est.) (male 11,463/female 11,580)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "49.4 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "40.8 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.6 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "11.6 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "26.4 years"
-      },
-      {
-       "label": "female",
-       "text": "27.2 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.47% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.44 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.87 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "2.17 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "approximately 25% to 30% of the population lives in the former capital, Belize City; over half of the overall population is rural; population density is slightly higher in the north and east",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "46.6% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.3% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "23,000 BELMOPAN (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.99 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.98 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "67 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12.4 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "10.1 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "74.3 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "72.6 years"
-      },
-      {
-       "label": "female",
-       "text": "76.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.02 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "0.99 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 98.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 98% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 98.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "5% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "11.5% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "1.09 physicians/1,000 population (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "1 beds/1,000 population (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 95.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 97.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 4.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 2.7% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "24.1% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5.93 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "3.88 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.68 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "1.19 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.17 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "8.3% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "14.8% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "1.8% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "4.6% (2015/16)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "6.3% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "33.5% (2016)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "22.2% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.6% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "18.9% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "87.9% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "87.9% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "87.9% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "12 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "12 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -731,24 +204,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "6 districts; Belize, Cayo, Corozal, Orange Walk, Stann Creek, Toledo",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "English common law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -764,49 +221,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "yes"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "yes"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -819,28 +235,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "National Assembly"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
-      },
-      {
-       "label": "note",
-       "text": "<strong> </strong>"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -851,41 +259,13 @@
       {
        "label": "number of seats",
        "text": "32 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "3/12/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "People's United Party (PUP) (26); United Democratic Party (UDP) (5)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "12.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "March 2030"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -896,70 +276,21 @@
       {
        "label": "number of seats",
        "text": "13 (all appointed)"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/9/2025"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "35.7%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2030"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Judicature (consists of the Court of Appeal with the court president and 3 justices, and the Supreme Court with the chief justice and 10 justices); the Caribbean Court of Justice is the final court of appeal"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Court of Appeal president and justices appointed by the governor-general upon advice of the prime minister after consultation with the National Assembly opposition leader; justices' tenures vary by terms of appointment; Supreme Court chief justice appointed by the governor-general upon the advice of the prime minister and the National Assembly opposition leader; other judges appointed by the governor-general upon the advice of the Judicial and Legal Services Section of the Public Services Commission and with the concurrence of the prime minister after consultation with the National Assembly opposition leader; judges can be appointed beyond age 65 but must retire by age 75"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Magistrates' Courts; Family Court"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Belize People’s Front or BPF<br />Belize Progressive Party or BPP (formed in 2015 from a merger of the People's National Party, elements of the Vision Inspired by the People, and other smaller political groups)<br />People's United Party or PUP<br />United Democratic Party or UDP<br />Vision Inspired by the People or VIP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ACP, ACS, AOSIS, C, Caricom, CD, CDB, CELAC, FAO, G-77, IADB, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, ITU, LAES, MIGA, NAM, OAS, OPANAL, OPCW, PCA, Petrocaribe, SICA, UN, UNCTAD, UNESCO, UNIDO, UPU, WCO, WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "21 September 1981 (from the UK)",
      "items": []
@@ -967,7 +298,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Battle of St. George's Caye Day (National Day), 10 September (1798); Independence Day, 21 September (1981)",
      "items": []
@@ -975,7 +306,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> royal blue with a narrow red stripe along the top and the bottom edges; the coat of arms is on a large white disk at the center and shows a shield flanked by two workers in front of a mahogany tree, with the motto SUB UMBRA FLOREO (I Flourish in the Shade) on a scroll at the bottom; a green garland of 50 mahogany leaves rings the coat of arms<br /><br /><strong>meaning:</strong> the figures, the mahogany tree, and the garland refer to the logging industry that led the British to settle Belize; blue and red are the colors of the two main political parties",
      "items": [
@@ -988,7 +319,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "Baird's tapir (a large forest-dwelling mammal), keel-billed toucan, black orchid",
      "items": []
@@ -996,7 +327,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "red, blue",
      "items": []
@@ -1004,7 +335,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [
@@ -1025,7 +356,7 @@
    },
    {
     "field": "National heritage",
-    "order": 230,
+    "order": 160,
     "content": {
      "text": null,
      "items": [

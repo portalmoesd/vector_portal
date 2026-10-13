@@ -161,570 +161,27 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "69,145,464 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "34,597,449"
-      },
-      {
-       "label": "female",
-       "text": "34,548,015"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Tanzanian(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Tanzanian"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "mainland - African 99% (of which 95% are Bantu consisting of more than 130 tribes), other 1% (consisting of Asian, European, and Arab); Zanzibar - Arab, African, mixed Arab and African",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Kiswahili or Swahili (official), Kiunguja (name for Swahili in Zanzibar), English (official, primary language of commerce, administration, and higher education), Arabic, many local languages"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "The World Factbook, Chanzo cha Lazima Kuhusu Habari ya Msingi. (Kiswahili)<br /><br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Christian 63.1%, Muslim 34.1%, folk religion 1.1%, Buddhist &lt;1%, Hindu &lt;1%, Jewish &lt;1%, other &lt;1%, unspecified 1.6% (2020 est.)",
      "items": [
       {
        "label": "note",
        "text": "<strong>note:</strong> Zanzibar is almost entirely Muslim"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "41.2% (male 14,039,292/female 13,740,439)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "55.4% (male 18,677,388/female 18,708,390)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "3.4% (2024 est.) (male 975,224/female 1,321,388)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "81.8 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "76 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "5.8 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "17.3 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18.8 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "18.8 years"
-      },
-      {
-       "label": "female",
-       "text": "19.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "2.85% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "33.45 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.96 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the largest and most populous East African country; population distribution is extremely uneven, but greater population clusters occur in the northern half of country and along the east coast, as shown in this population distribution map",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "37.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "4.89% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "262,000 Dodoma (legislative capital) (2018), 7.776 million DAR ES SALAAM (administrative capital), 1.311 million Mwanza, 800,000 Zanzibar (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.02 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.74 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "19.9 years (2022 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 15-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "276 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "32.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "26.9 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "70.8 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "69 years"
-      },
-      {
-       "label": "female",
-       "text": "72.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "4.45 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "2.19 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 81.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 49% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 60.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 18.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 51% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 39.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "5.1% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.13 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "0.6 beds/1,000 population (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 89.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 27.2% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 50.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 10.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 72.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 49.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "8.4% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.81 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.74 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.09 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.38 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "6.6 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "6.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "11.3% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "11.4% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "59.2% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "5.2% (2022)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "29.1% (2022)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "3.5% (2022)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.2% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "13.4% national budget (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "78.2% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "84.2% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "73.1% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9 years (2021 est.)"
-      },
-      {
-       "label": "male",
-       "text": "9 years (2021 est.)"
-      },
-      {
-       "label": "female",
-       "text": "9 years (2021 est.)"
       }
      ]
     }
@@ -798,24 +255,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "31 regions; Arusha, Dar es Salaam, Dodoma, Geita, Iringa, Kagera, Kaskazini Pemba (Pemba North), Kaskazini Unguja (Zanzibar North), Katavi, Kigoma, Kilimanjaro, Kusini Pemba (Pemba South), Kusini Unguja (Zanzibar Central/South), Lindi, Manyara, Mara, Mbeya, Mjini Magharibi (Zanzibar Urban/West), Morogoro, Mtwara, Mwanza, Njombe, Pwani (Coast), Rukwa, Ruvuma, Shinyanga, Simiyu, Singida, Songwe, Tabora, Tanga",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "English common law; judicial review of legislative acts limited to matters of interpretation",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -831,49 +272,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Tanzania; if a child is born abroad, the father must be a citizen of Tanzania"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -902,7 +302,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -911,88 +311,23 @@
        "text": "National Assembly (Bunge)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "403 (272 directly elected; 120 indirectly elected; 10 appointed; 1 other)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "10/29/2025"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Revolutionary Party of Tanzania (CCM) (383); ACT-Wazalendo (2)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "39.5%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "October 2030"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note</strong>: the Attorney General fills the \"other\" seat as an ex-officio member"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Appeal of the United Republic of Tanzania (consists of the chief justice and 14 justices); High Court of the United Republic for Mainland Tanzania (consists of the principal judge and 30 judges organized into commercial, land, and labor courts); High Court of Zanzibar (consists of the chief justice and 10 justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Court of Appeal and High Court justices appointed by the national president after consultation with the Judicial Service Commission for Tanzania, a judicial body of high-level judges and 2 members appointed by the national president; Court of Appeal and High Court judges serve until mandatory retirement at age 60, but terms can be extended; High Court of Zanzibar judges appointed by the national president after consultation with the Judicial Commission of Zanzibar; judges can serve until mandatory retirement at age 65"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Resident Magistrates Courts; Kadhi courts (for Islamic family matters); district and primary courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Alliance for Change and Transparency (Wazalendo) or ACT-Wazalendo<br />Civic United Front (Chama Cha Wananchi) or CUF<br />Party of Democracy and Development (Chama Cha Demokrasia na Maendeleo) or CHADEMA<br />Revolutionary Party of Tanzania (Chama Cha Mapinduzi) or CCM",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, AfDB, AU, C, CD, EAC, EADB, EITI, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, OPCW, SADC, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNISFA, UNMISS, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "26 April 1964 (Tanganyika united with Zanzibar to form the United Republic of Tanganyika and Zanzibar); 29 October 1964 (renamed United Republic of Tanzania); notable earlier dates: 9 December 1961 (Tanganyika became independent from UK-administered UN trusteeship); 10 December 1963 (Zanzibar became independent from UK)",
      "items": []
@@ -1000,7 +335,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Union Day (Tanganyika and Zanzibar), 26 April (1964)",
      "items": []
@@ -1008,7 +343,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> divided diagonally by a yellow-edged black band, from the lower left corner to the upper right corner; the upper triangle (left side) is green, and the lower is blue<br /><br /><strong>meaning:</strong> colors come from the flags of Tanganyika and Zanzibar; green stands for natural vegetation, gold for rich mineral deposits, black for the Swahili people, and blue for lakes and rivers, as well as the Indian Ocean",
      "items": []
@@ -1016,7 +351,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Uhuru (freedom) torch, giraffe",
      "items": []
@@ -1024,7 +359,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "green, yellow, blue, black",
      "items": []
@@ -1032,7 +367,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -1053,7 +388,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

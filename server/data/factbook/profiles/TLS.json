@@ -115,54 +115,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,404,785 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "693,940"
-      },
-      {
-       "label": "female",
-       "text": "710,845"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Timorese"
-      },
-      {
-       "label": "adjective",
-       "text": "Timorese"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Austronesian (Malayo-Polynesian) (includes Tetun, Mambai, Tokodede, Galoli, Kemak, Baikeno), Melanesian-Papuan (includes Bunak, Fataluku, Bakasai), small Chinese minority",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Tetun Prasa 30.6%, Mambai 16.6%, Makasai 10.5%, Tetun Terik 6.1%, Baikenu 5.9%, Kemak 5.8%, Bunak 5.5%, Tokodede 4%, Fataluku 3.5%, Waima'a 1.8%, Galoli 1.4%, Naueti 1.4%, Idate 1.2%, Midiki 1.2%, other 4.5% (2015 est.)",
      "items": [
@@ -175,481 +129,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Catholic 90.7%, other 7.1%, Protestant Evangelical 1.9%; less than 1%: Islam, Buddhist, Hindu (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "38.7% (male 299,929/female 283,416)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "56.8% (male 418,493/female 437,727)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "4.5% (2024 est.) (male 32,243/female 35,101)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "62 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "54.3 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "7.7 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "12.9 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "23 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "19.8 years"
-      },
-      {
-       "label": "female",
-       "text": "21.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "1.28% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "23.39 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.86 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-3.73 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "most of the population is concentrated in the western third of the country, particularly around Dili",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "32.5% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "3.31% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "281,000 DILI (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.96 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.92 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.99 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "23 years (2016 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "192 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "41.9 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "35.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "28.9 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "70.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "68.9 years"
-      },
-      {
-       "label": "female",
-       "text": "72.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "2.79 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "1.35 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 98.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 81.6% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 87% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 18.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 13% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "11.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "8.9% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "0.75 physicians/1,000 population (2020)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 94.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 64% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 73.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 5.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 36% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 26.3% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "3.8% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.41 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.27 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.09 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.05 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "36.1% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "62.6% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "8.9% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "31.9% (2020 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "56.4% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "2.6% (2016)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "14.9% (2016)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "1.2% (2016)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "5.2% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "4.3% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "72.5% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.1% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "71.8% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "People - note",
-    "order": 350,
-    "content": {
-     "text": "one of only two predominantly Christian nations in Southeast Asia, the other being the Philippines",
      "items": []
     }
    }
@@ -722,29 +204,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "12 municipalities (<em>municipios</em>, singular - <em>municipio</em>) and 1 special adminstrative region* (<em>regiao administrativa especial</em>); Aileu, Ainaro, Baucau, Bobonaro (Maliana), Covalima (Suai), Dili, Ermera (Gleno), Lautem (Lospalos), Liquica, Manatuto, Manufahi (Same), Oe-Cusse Ambeno* (Pante Macassar), Viqueque",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> administrative divisions have the same names as their administrative centers; exceptions show the administrative center name in parentheses"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system based on the Portuguese model",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -760,49 +221,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Timor-Leste"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "17 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -831,7 +251,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -840,84 +260,23 @@
        "text": "National Parliament"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "65 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/21/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "National Congress for the Reconstruction of Timor-Leste (CNRT) (31); Revolutionary Front for an independent East Timor (FRETILIN) (19); Democratic Party (PD) (6); Kmanek Haburas Unidade Nasional Timor Oan (KHUNTO) (5); People's Liberation Party (PLP) (4)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "35.4%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Court of Appeals (consists of the court president and NA judges)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "court president appointed by the president of the republic from among the other court judges to serve a 4-year term; other court judges appointed - 1 by the Parliament and the others by the Supreme Council for the Judiciary, a body chaired by the court president and that includes mostly presidential and parliamentary appointees; other judges serve for life"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Appeal; High Administrative, Tax, and Audit Court; district courts; magistrates' courts; military courts"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Democratic Party or PD <br />National Congress for Timorese Reconstruction or CNRT <br />National Unity of the Sons of Timor (Haburas Unidade Nasional Timor Oan or KHUNTO) <br />People's Liberation Party or PLP <br />Revolutionary Front of Independent Timor-Leste or FRETILIN",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACP, ADB, AOSIS, ARF, ASEAN, CPLP, EITI (compliant country), FAO, G-77, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ITU, MIGA, NAM, OPCW, PIF (observer), UN, UNCTAD, UNESCO, UNIDO, Union Latina, UNWTO, UPU, WCO, WHO, WMO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "28 November 1975 (from Portugal); 20 May 2002 (from Indonesia)",
      "items": []
@@ -925,7 +284,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Restoration of Independence Day, 20 May (2002); Proclamation of Independence Day, 28 November (1975)",
      "items": []
@@ -933,7 +292,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> red with a black isosceles triangle (based on the left side) on a slightly longer yellow arrowhead that extends to the center of the flag; a white star is in the center of the black triangle<br /><br /><strong>meaning:</strong> yellow stands for past colonialism, black for obscurantism that needs to be overcome, and red for the struggle for freedom; the white star represents peace and a guiding light",
      "items": []
@@ -941,7 +300,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Mount Ramelau",
      "items": []
@@ -949,7 +308,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "red, yellow, black, white",
      "items": []
@@ -957,7 +316,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [

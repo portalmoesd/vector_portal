@@ -140,560 +140,24 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "174,370,536 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "83,908,720"
-      },
-      {
-       "label": "female",
-       "text": "90,461,816"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Bangladeshi(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Bangladeshi"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Bengali at least 99%, other indigenous ethnic groups 1% (2022 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Bangladesh's government recognizes 27 indigenous ethnic groups under the 2010 Cultural Institution for Small Anthropological Groups Act; other sources estimate there are about 75 ethnic groups"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Bangla 98.8% (official, also known as Bengali), other 1.2% (2011 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "<p><br />বিশ্ব ফ্যাক্টবুক, মৌলিক তথ্যের অপরিহার্য উৎস (Bangla)</p> <br />The World Factbook, the indispensable source for basic information."
       }
      ]
     }
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Muslim 91%, Hindu 8%, other 1% (2022 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "25.1% (male 21,540,493/female 20,800,712)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "67.1% (male 55,071,592/female 58,180,322)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "7.8% (2024 est.) (male 6,096,167/female 7,007,898)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "54.6 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "43.5 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "11.1 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "9 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "27.8 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "28.7 years"
-      },
-      {
-       "label": "female",
-       "text": "30.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.91% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "19.45 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "6.05 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-4.28 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "40.5% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.88% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 140,
-    "content": {
-     "text": "23.210 million DHAKA (capital), 5.380 million Chittagong, 955,000 Khulna, 962,000 Rajshahi, 964,000 Sylhet, 906,000 Bogra (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 150,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.95 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.87 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.96 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 160,
-    "content": {
-     "text": "18.6 years (2017/18 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 170,
-    "content": {
-     "text": "115 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "22 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.3 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "26.3 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "75.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.1 years"
-      },
-      {
-       "label": "female",
-       "text": "77.5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 200,
-    "content": {
-     "text": "2.25 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 210,
-    "content": {
-     "text": "1.1 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 98.3% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 98.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 98.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 1.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 1.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 1.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "2.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "1.2% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 240,
-    "content": {
-     "text": "0.72 physicians/1,000 population (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 250,
-    "content": {
-     "text": "0.9 beds/1,000 population (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 260,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 90.3% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 81.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 84.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 9.7% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 18.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 15.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 270,
-    "content": {
-     "text": "3.6% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "29.7% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "47.6% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "12.5% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 300,
-    "content": {
-     "text": "21.7% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 310,
-    "content": {
-     "text": "80.6% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "15.5% (2019)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "51.4% (2019)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "2% of GDP (2024 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "11.9% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "79% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "81.4% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "76.5% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "11 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "12 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -765,24 +229,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "8 divisions; Barishal, Chattogram, Dhaka, Khulna, Mymensingh, Rajshahi, Rangpur, Sylhet",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "common law, incorporating elements of English common law; since independence, statutory law has been the primary form of legislation; Islamic law applies to Muslims in family and inheritance laws, with Hindu personal law applying to Hindus and Buddhists",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -798,49 +246,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Bangladesh"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes, but limited to select countries"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -868,62 +275,16 @@
     }
    },
    {
-    "field": "Legislative branch",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "expected date of next election",
-       "text": "February 2026"
-      },
-      {
-       "label": "note",
-       "text": "<strong><strong>note: </strong></strong>the Parliament (House of the Nation) was dissolved on 6 August 2024 by President Mohammad SHAHABUDDIN Chuppi following the resignation of Prime Minister Sheikh HASINA Wazed on 5 August 2024; new national elections will be held in February 2026<strong><strong><br /></strong></strong>"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Bangladesh (organized into the Appellate Division with 7 justices and the High Court Division with 99 justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "chief justice and justices appointed by the president; justices serve until retirement at age 67"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "civil courts include: Assistant Judge's Court; Joint District Judge's Court; Additional District Judge's Court; District Judge's Court; criminal courts include: Court of Sessions; Court of Metropolitan Sessions; Metropolitan Magistrate Courts; Magistrate Court; special courts/tribunals"
-      }
-     ]
-    }
-   },
-   {
     "field": "Political parties",
-    "order": 130,
+    "order": 60,
     "content": {
      "text": "Awami League or AL<br />Bangladesh Jamaat-i-Islami or JIB<br />Bangladesh Nationalist Party or BNP<br />Islami Andolan Bangladesh<br />Jatiya Party or JP (Ershad faction)<br />Jatiya Party or JP (Manju faction)<br />National Socialist Party (Jatiya Samajtantrik Dal) or JSD<br />Workers Party or WP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ADB, ARF, BIMSTEC, C, CD, CICA (observer), CP, D-8, FAO, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINURSO, MINUSCA, MONUSCO, NAM, OIC, OPCW, PCA, SAARC, SACEP, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNIFIL, UNMISS, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 70,
     "content": {
      "text": "16 December 1971 (from Pakistan)",
      "items": []
@@ -931,7 +292,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 80,
     "content": {
      "text": "Independence Day, 26 March (1971); Victory Day, 16 December (1971)",
      "items": [
@@ -944,7 +305,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 90,
     "content": {
      "text": "<strong>description:</strong> green field with a large red disk shifted slightly to the left<br /><br /><strong>meaning:</strong> the red disk represents the rising sun and the sacrifice to achieve independence; the green field symbolizes the lush vegetation of Bangladesh",
      "items": []
@@ -952,7 +313,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 100,
     "content": {
      "text": "Bengal tiger, water lily",
      "items": []
@@ -960,7 +321,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 110,
     "content": {
      "text": "green, red",
      "items": []
@@ -968,7 +329,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 120,
     "content": {
      "text": "the water lily is the national flower and symbolizes promise, aesthetics, and elegance; the water under the lily, the rice sheaves on the sides, and the jute leaves at the top represent the Bangladeshi landscape and economy; the four stars represent the aims and ambition of the nation",
      "items": []
@@ -976,7 +337,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -997,7 +358,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 140,
     "content": {
      "text": null,
      "items": [

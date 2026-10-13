@@ -65,11 +65,20 @@ labelled "snapshot 2026-01 · publication discontinued on 04/02/2026".
   maps to the Factbook's "West Bank" entry only.
 - `server/data/factbook/profiles/<ISO3>.json` holds the extracted sections
   (committed, 6 MB). `meta.json` records the upstream commit and snapshot date.
-- Excluded at extraction (never stored): officials — the two "Diplomatic
-  representation" fields and the chief of state / head of government / cabinet
-  entries of "Executive branch" — and the geography detail Location, Geographic
-  coordinates, Area, Area - comparative, Maritime claims, Land use, Irrigated
-  land. HTML is reduced to `br`, `p`, `em`, `strong`, lists.
+- What is kept is configured in `factbook.js` and applied at extraction, so
+  dropped content is never stored:
+  - Introduction: Background.
+  - Geography: everything except Location, Geographic coordinates, Area,
+    Area - comparative, Maritime claims, Land use, Irrigated land.
+  - People and Society: only Languages (without the "major-language sample")
+    and Religions.
+  - Government: everything except the two "Diplomatic representation" fields,
+    Administrative divisions, Legal system, International law organization
+    participation, Citizenship, Suffrage, Judicial branch, International
+    organization participation; "Executive branch" loses chief of state, head
+    of government and cabinet; the "Legislative branch" fields keep only the
+    chamber (or legislature) name and the number of seats.
+  - HTML is reduced to `br`, `p`, `em`, `strong`, lists.
 - Placement on the page is configured in `DISPLAY` (`factbook.js`): Introduction
   → Introduction; the remaining Geography fields → Overview, with "Map references"
   shown as "Continent"; People and Society → People (below the World Bank

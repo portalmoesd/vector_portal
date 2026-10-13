@@ -111,54 +111,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "892,877 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "461,679"
-      },
-      {
-       "label": "female",
-       "text": "431,198"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Bhutanese (singular and plural)"
-      },
-      {
-       "label": "adjective",
-       "text": "Bhutanese"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Ngalop (also known as Bhote) 50%, ethnic Nepali 35% (predominantly Lhotshampas), indigenous or migrant tribes 15%",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Sharchopkha 28%, Dzongkha (official) 24%, Lhotshamkha 22%, other 26% (includes foreign languages) (2005 est.)",
      "items": []
@@ -166,461 +120,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Lamaistic Buddhist 75.3%, Indian- and Nepali-influenced Hinduism 22.1%, other 2.6% (2005 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "23.1% (male 104,771/female 99,981)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "70.2% (male 322,497/female 298,324)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "6.7% (2024 est.) (male 30,397/female 28,576)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "42.1 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "32.4 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "9.7 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "10.3 (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "31.2 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "31.1 years"
-      },
-      {
-       "label": "female",
-       "text": "30.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.93% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "15.05 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "5.75 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "0 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "44.4% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.52% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 140,
-    "content": {
-     "text": "203,000 THIMPHU (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 150,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.08 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "1.06 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.07 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 160,
-    "content": {
-     "text": "47 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "23 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.6 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "23.9 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "73.7 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "72.5 years"
-      },
-      {
-       "label": "female",
-       "text": "75 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.75 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.85 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 98.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 1.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.9% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 220,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "3.8% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "6.7% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 230,
-    "content": {
-     "text": "0.55 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 240,
-    "content": {
-     "text": "2.2 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 250,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 91.1% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 85.5% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 87.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 8.9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 14.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 12.1% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 260,
-    "content": {
-     "text": "6.4% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "0.07 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.05 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 280,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18.5% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "26.1% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "9.8% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 290,
-    "content": {
-     "text": "8.7% (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 300,
-    "content": {
-     "text": "62% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "5.8% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "22.2% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "64.9% (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "73.4% (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "57% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13 years (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "12 years (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "14 years (2022 est.)"
-      }
-     ]
     }
    }
   ],
@@ -688,24 +191,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "20 districts (<em>dzongkhag</em>, singular and plural); Bumthang, Chhukha, Dagana, Gasa, Haa, Lhuentse, Mongar, Paro, Pemagatshel, Punakha, Samdrup Jongkhar, Samtse, Sarpang, Thimphu, Trashigang, Trashi Yangtse, Trongsa, Tsirang, Wangdue Phodrang, Zhemgang",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law based on Buddhist religious law",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -721,49 +208,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "the father must be a citizen of Bhutan"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "no"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "10 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -776,24 +222,20 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
       {
        "label": "legislature name",
        "text": "Parliament (Chi Tshog)"
-      },
-      {
-       "label": "legislative structure",
-       "text": "bicameral"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - lower chamber",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -804,41 +246,13 @@
       {
        "label": "number of seats",
        "text": "47 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "1/9/2024"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "People's Democratic Party (PDP) (30); Bhutan Tendrel Party (BTP) (17)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "4.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "January 2029"
       }
      ]
     }
    },
    {
     "field": "Legislative branch - upper chamber",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -849,82 +263,21 @@
       {
        "label": "number of seats",
        "text": "25 (20 directly elected; 5 appointed)"
-      },
-      {
-       "label": "electoral system",
-       "text": "plurality/majority"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "0 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "4/20/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "N/A; note - the National Council is not party-based"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "12%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "April 2028"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court (consists of the chief justice and 4 associate justices)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court chief justice appointed by the monarch on the advice of the National Judicial Commission, a 4-member body to include the Legislative Committee of the National Assembly, the attorney general, the Chief Justice of Bhutan and the senior Associate Justice of the Supreme Court; other judges (drangpons) appointed by the monarch from among the High Court judges selected by the National Judicial Commission; chief justice serves a 5-year term or until reaching age 65 years, whichever is earlier; the 4 other judges serve 10-year terms or until age 65, whichever is earlier"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "High Court (first appellate court); District or Dzongkhag Courts; sub-district or Dungkhag Courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the Supreme Court has sole jurisdiction in constitutional matters"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "Bhutan Peace and Prosperity Party (Druk Phuensum Tshogpa) or DPT<br />Bhutan Tendrel Party or BTP<br />Druk Thuendrel Tshogpa or DTT<br />People's Democratic Party or PDP<br />United Party of Bhutan (Druk Nyamrup Tshogpa) or DNT",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 160,
-    "content": {
-     "text": "ADB, BIMSTEC, CP, FAO, G-77, IBRD, ICAO, IDA, IFAD, IFC, IMF, Interpol, IOC, IOM (observer), IPU, ISO (correspondent), ITSO, ITU, MIGA, NAM, OPCW, SAARC, SACEP, UN, UNCTAD, UNESCO, UNIDO, UNISFA, UNTSO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO (observer)",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "17 December 1907 (became a unified kingdom under its first hereditary king); 8 August 1949 (Treaty of Friendship with India maintains Bhutanese independence)",
      "items": []
@@ -932,7 +285,7 @@
    },
    {
     "field": "National holiday",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "National Day (Ugyen WANGCHUCK became first hereditary king), 17 December (1907)",
      "items": []
@@ -940,7 +293,7 @@
    },
    {
     "field": "Flag",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "<strong>description:</strong> divided diagonally from the lower-left corner to the upper-right corner; the upper triangle is yellow, and the lower triangle is dark orange; centered along the dividing line is a large, stylized black-and-white dragon facing to the right; the dragon is called the Druk (Thunder Dragon) and is the national emblem<br /><br /><strong>meaning:</strong> white stands for purity, and the jewels in the dragon's claws symbolize wealth; the background colors represent the spiritual and secular powers in Bhutan, with orange standing for Buddhism and yellow for the ruling dynasty",
      "items": []
@@ -948,7 +301,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "mythical thunder dragon (<em>druk</em>)",
      "items": []
@@ -956,7 +309,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "orange, yellow",
      "items": []
@@ -964,7 +317,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

@@ -115,59 +115,8 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "57,751 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "29,843"
-      },
-      {
-       "label": "female",
-       "text": "27,908"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Greenlander(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Greenlandic"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Greenlandic 88.1%, Danish 7.1%, Filipino 1.6%, other Nordic peoples 0.9%, and other 2.3% (2024 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent population by country of birth"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": "Greenlandic, Danish, English",
      "items": [
@@ -180,294 +129,9 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Evangelical Lutheran, traditional Inuit spiritual beliefs",
-     "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "20.4% (male 5,964/female 5,798)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "67.1% (male 20,050/female 18,711)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "12.5% (2024 est.) (male 3,829/female 3,399)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "49 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "30.3 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "18.6 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "5.4 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "35.6 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "35.9 years"
-      },
-      {
-       "label": "female",
-       "text": "34.7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "-0.08% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "13.32 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "9.29 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-4.82 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "settlement concentrated on the southwest shoreline, with limited settlements scattered along the remaining coast; interior is uninhabited",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "87.9% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.41% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "18,000 NUUK (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.03 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.07 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "1.13 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.07 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 170,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "8.3 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "9.9 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "6.9 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 180,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "74.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "71.8 years"
-      },
-      {
-       "label": "female",
-       "text": "77.3 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 190,
-    "content": {
-     "text": "1.87 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 200,
-    "content": {
-     "text": "0.91 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 210,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 100% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 220,
-    "content": {
-     "text": "1.87 physicians/1,000 population (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: total",
-       "text": "total: 62.5% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0% of population"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0% of population"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 37.5% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 240,
-    "content": {
-     "text": "38.8% (2022 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 250,
-    "content": {
-     "text": "10.2% of GDP (2019 est.)",
      "items": []
     }
    }
@@ -552,29 +216,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 50,
-    "content": {
-     "text": "5 municipalities (<em>kommuner</em>, singular - <em>kommune</em>); Avannaata, Kujalleq, Qeqertalik, Qeqqata, Sermersooq",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Northeast Greenland National Park (Kalaallit Nunaanni Nuna Eqqissisimatitaq) and the Pituffik Space Base (formerly known as Thule Air Base) in northwest Greenland are two unincorporated areas; the national park's 972,000 sq km -- about 46% of the island -- makes it the largest national park in the world and also the most northerly"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 60,
-    "content": {
-     "text": "Denmark's laws apply in some areas, and Greenland's law for the remainder",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 70,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -586,24 +229,8 @@
     }
    },
    {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": "see Denmark",
-     "items": []
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -620,7 +247,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 70,
     "content": {
      "text": null,
      "items": [
@@ -629,92 +256,23 @@
        "text": "Parliament (Inatsisartut)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "31 (directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "4/6/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "IA (12); S (10); N (4); D (3); A (2)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "35%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "2025"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Greenland elects 2 members to the Danish Parliament to serve 4-year terms"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "High Court of Greenland (consists of the presiding professional judge and 2 lay assessors)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "judges appointed by the monarch on the recommendation of the Judicial Appointments Council, a 6-member independent body of judges and lawyers; judges appointed for life with retirement at age 70"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Court of Greenland; 18 district or magistrates' courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> appeals beyond the High Court of Greenland can be heard by the Supreme Court (in Copenhagen)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": "Democrats Party (Demokraatit) or D <br />Fellowship Party (Atassut) or A <br />Forward Party (Siumut) or S <br />Inuit Community (Inuit Ataqatigiit) or IA <br />Signpost Party (Naleraq) or N (formerly Partii Naleraq)",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "Arctic Council, ICC, NC, NIB, UPU",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "none (extensive self-rule as part of the Kingdom of Denmark)",
      "items": []
@@ -722,7 +280,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "National Day, June 21",
      "items": [
@@ -735,7 +293,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 110,
     "content": {
      "text": "<strong>description:</strong> two equal horizontal bands of white (top) and red, with a large disk set slightly to the left; the top half of the disk is red, and the bottom is white<br /><br /><strong>meaning:</strong> the design represents the sun reflecting off a field of ice; the colors are the same as the Danish flag and symbolize Greenland's links to the Kingdom of Denmark",
      "items": []
@@ -743,7 +301,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 120,
     "content": {
      "text": "polar bear",
      "items": []
@@ -751,7 +309,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 130,
     "content": {
      "text": "red, white",
      "items": []
@@ -759,7 +317,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -780,7 +338,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

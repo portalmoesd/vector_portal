@@ -119,69 +119,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,332,293 (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "681,128"
-      },
-      {
-       "label": "female",
-       "text": "651,165"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Cypriot(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Cypriot"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Greek 98.8%, other 1% (includes Maronite, Armenian, Turkish-Cypriot), unspecified 0.2% (2011 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent only the Greek-Cypriot citizens in the Republic of Cyprus"
-      }
-     ]
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Greek (official) 80.9%, Turkish (official) 0.2%, English 4.1%, Romanian 2.9%, Russian 2.5%, Bulgarian 2.2%, Arabic 1.2%, Filipino 1.1%, other 4.3%, unspecified 0.6%  (2011 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "Το Παγκόσμιο Βιβλίο Δεδομένων, η απαραίτητη πηγή βασικών πληροφοριών. (Greek)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -192,7 +137,7 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Eastern Orthodox Christian 89.1%, Roman Catholic 2.9%, Protestant/Anglican 2%, Muslim 1.8%, Buddhist 1%, other (includes Maronite Catholic, Armenian Apostolic, Hindu) 1.4%, unknown 1.1%, none/atheist 0.6% (2011 est.)",
      "items": [
@@ -201,453 +146,6 @@
        "text": "<strong>note:</strong> data represent only the government-controlled area of Cyprus"
       }
      ]
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "15.6% (male 105,533/female 100,099)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "70% (male 486,569/female 437,651)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "14.4% (2024 est.) (male 83,094/female 107,579)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "43.6 (2025 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "22.3 (2025 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "21.4 (2025 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "4.7 (2025 est.)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represent the whole country"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "39.9 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "38.2 years"
-      },
-      {
-       "label": "female",
-       "text": "41 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.89% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "9.95 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "7.11 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "6.04 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "population concentrated in central Nicosia and in the major cities of the south: Paphos, Limassol, and Larnaca",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "67% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "0.76% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "269,000 NICOSIA (capital) (2018)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "1.11 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.77 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "1.05 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "30 years (2020 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents only government-controlled areas"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "14 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7.9 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "9.7 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "6.4 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "80.2 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "77.4 years"
-      },
-      {
-       "label": "female",
-       "text": "83.1 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.49 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.73 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 99.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 0.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "9.4% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "18.3% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "3.56 physicians/1,000 population (2022)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "2.2 beds/1,000 population (2019 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 99.7% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 98.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 99.4% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 0.3% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 1.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 0.6% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "21.8% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9.59 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "2.85 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "2.72 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "4.02 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "33.1% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "44.1% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "22.2% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 310,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "4.7% of GDP (2022 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "12.5% national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 320,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "16 years (2022 est.)"
-      },
-      {
-       "label": "male",
-       "text": "16 years (2022 est.)"
-      },
-      {
-       "label": "female",
-       "text": "17 years (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "People - note",
-    "order": 330,
-    "content": {
-     "text": "demographic data for Cyprus represent the population of the government-controlled area and the area administered by Turkish Cypriots, unless otherwise indicated",
-     "items": []
     }
    }
   ],
@@ -728,29 +226,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "6 districts; Ammochostos (Famagusta; all but a small part located in the Turkish Cypriot community), Keryneia (Kyrenia; the only district located entirely in the Turkish Cypriot community), Larnaka (Larnaca; with a small part located in the Turkish Cypriot community), Lefkosia (Nicosia; a small part administered by Turkish Cypriots), Lemesos (Limassol), Pafos (Paphos)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the 5 \"districts\" of the \"Turkish Republic of Northern Cyprus\" are Gazimagusa (Famagusta), Girne (Kyrenia), Guzelyurt (Morphou), Iskele (Trikomo), Lefkosa (Nicosia)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "mixed system of English common law and civil law, with European law supremacy",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -770,49 +247,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "no"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "at least one parent must be a citizen of Cyprus"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "7 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": []
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -841,7 +277,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -850,92 +286,23 @@
        "text": "House of Representatives (Vouli Antiprosopon)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "80 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "proportional representation"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "5 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "5/30/2021"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Democratic Rally (DISY) (17); Progressive Party of the Working People (AKEL) (15); Democratic Party (DIKO) (9); National Popular Front (ELAM) (4); Movement of Social Democrats (EDEK) (4); Democratic Alignment (DIPA) (4); Cyprus Green Party (KOP) (3)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "14.3%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "May 2026"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the area of Cyprus that Turkish Cypriots administer has a separate unicameral Assembly of the Republic, or Cumhuriyet Meclisi (50 seats); members are directly elected in multi-seat constituencies by proportional representation vote"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Cyprus (consists of 13 judges, including the court president)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Republic of Cyprus Supreme Court judges appointed by the president of the republic on the recommendation of the Supreme Court judges; judges can serve until age 68; \"TRNC Supreme Court\" judges appointed by the \"Supreme Council of Judicature,\" a 12-member body of judges, the attorney general, appointees by the president of the \"TRNC,\" and by the \"Legislative Assembly,\" and members elected by the bar association; judge tenure NA"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Republic of Cyprus district courts; Assize Courts; Administrative Court; specialized courts for issues relating to family, industrial disputes, the military, and rent control; \"TRNC Assize Courts\"; \"TNRC district and family courts\""
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> the highest court in the TRNC is the Supreme Court (consists of 8 judges, including the court president)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "<strong>area under government control:</strong> <br />Democratic Front or DIPA <br />Democratic Party or DIKO<br />Democratic Rally or DISY <br />Movement of Ecologists - Citizens' Alliance <br />Movement of Social Democrats EDEK<br />National Popular Front or ELAM <br />Progressive Party of the Working People or AKEL (Communist Party) <br />Solidarity Movement<br /><br /><strong>area administered by Turkish Cypriots:</strong> <br />Communal Democracy Party or TDP<br />Communal Liberation Party - New Forces or TKP-YG<br />Cyprus Socialist Party or KSP<br />Democratic Party or DP<br />National Democratic Party or NDP<br />National Unity Party or UBP <br />New Cyprus Party or YKP<br />People's Party or HP <br />Rebirth Party or YDP<br />Republican Turkish Party or CTP<br />United Cyprus Party or BKP",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "Australia Group, C, CD, CE, EBRD, ECB, EIB, EMU, EU, FAO, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NAM, NSG, OAS (observer), OIF, OPCW, OSCE, PCA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "16 August 1960 (from the UK)",
      "items": [
@@ -948,7 +315,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 1 October (1960)",
      "items": [
@@ -961,7 +328,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> a copper-colored silhouette of the island is centered on a white field above two crossed green olive branches<br /><br /><strong>meaning:</strong> the olive branches symbolize hope for peace and reconciliation between the Greek and Turkish communities",
      "items": [
@@ -974,7 +341,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Cypriot mouflon (wild sheep), white dove",
      "items": []
@@ -982,7 +349,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, white",
      "items": []
@@ -990,7 +357,7 @@
    },
    {
     "field": "National coat of arms",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "<p>The coat of arms of Cyprus features a yellow shield representing the island’s copper deposits. A dove, one of the national symbols, holds an olive branch symbolizing peace, and olive branches encircle the shield.  The year 1960 on the shield is the date of Cyprus’s independence from the United Kingdom.</p> <p> </p>",
      "items": []
@@ -998,7 +365,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
@@ -1019,7 +386,7 @@
    },
    {
     "field": "National heritage",
-    "order": 220,
+    "order": 150,
     "content": {
      "text": null,
      "items": [

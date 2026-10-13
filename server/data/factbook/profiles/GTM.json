@@ -132,64 +132,14 @@
   ],
   "People and Society": [
    {
-    "field": "Population",
-    "order": 10,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "18,255,216 (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "9,050,684"
-      },
-      {
-       "label": "female",
-       "text": "9,204,532"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Nationality",
-    "order": 20,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "noun",
-       "text": "Guatemalan(s)"
-      },
-      {
-       "label": "adjective",
-       "text": "Guatemalan"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Ethnic groups",
-    "order": 30,
-    "content": {
-     "text": "Mestizo (mixed Indigenous-Spanish - in local Spanish called Ladino) 56%, Maya 41.7%, Xinca (Indigenous, non-Maya) 1.8%, African descent 0.2%, Garifuna (mixed West and Central African, Island Carib, and Arawak) 0.1%, foreign 0.2% (2018 est.)",
-     "items": []
-    }
-   },
-   {
     "field": "Languages",
-    "order": 40,
+    "order": 10,
     "content": {
      "text": null,
      "items": [
       {
        "label": "Languages",
        "text": "Spanish (official) 69.9%, Maya languages 29.7% (Q'eqchi' 8.3%, K'iche 7.8%, Mam 4.4%, Kaqchikel 3%, Q'anjob'al 1.2%, Poqomchi' 1%, other 4%), other 0.4% (includes Xinca and Garifuna) (2018 est.)"
-      },
-      {
-       "label": "major-language sample(s)",
-       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
       },
       {
        "label": "note",
@@ -200,503 +150,10 @@
    },
    {
     "field": "Religions",
-    "order": 50,
+    "order": 20,
     "content": {
      "text": "Evangelical 45.7%, Roman Catholic 42.4%, none 11%, unspecified 0.9% (2023 est.)",
      "items": []
-    }
-   },
-   {
-    "field": "Age structure",
-    "order": 60,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "0-14 years",
-       "text": "31.5% (male 2,925,079/female 2,819,927)"
-      },
-      {
-       "label": "15-64 years",
-       "text": "63.2% (male 5,688,500/female 5,839,958)"
-      },
-      {
-       "label": "65 years and over",
-       "text": "5.4% (2024 est.) (male 437,105/female 544,647)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Dependency ratios",
-    "order": 70,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total dependency ratio",
-       "text": "58.3 (2024 est.)"
-      },
-      {
-       "label": "youth dependency ratio",
-       "text": "49.8 (2024 est.)"
-      },
-      {
-       "label": "elderly dependency ratio",
-       "text": "8.5 (2024 est.)"
-      },
-      {
-       "label": "potential support ratio",
-       "text": "11.7 (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Median age",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "26.7 years (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "24.2 years"
-      },
-      {
-       "label": "female",
-       "text": "25.4 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Population growth rate",
-    "order": 90,
-    "content": {
-     "text": "0.99% (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Birth rate",
-    "order": 100,
-    "content": {
-     "text": "17.12 births/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Death rate",
-    "order": 110,
-    "content": {
-     "text": "4.99 deaths/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Net migration rate",
-    "order": 120,
-    "content": {
-     "text": "-2.22 migrant(s)/1,000 population (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Population distribution",
-    "order": 130,
-    "content": {
-     "text": "the vast majority of the populace resides in the southern half of the country, particularly in the mountainous regions; more than half of the population lives in rural areas",
-     "items": []
-    }
-   },
-   {
-    "field": "Urbanization",
-    "order": 140,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "urban population",
-       "text": "53.1% of total population (2023)"
-      },
-      {
-       "label": "rate of urbanization",
-       "text": "2.59% annual rate of change (2020-25 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Major urban areas - population",
-    "order": 150,
-    "content": {
-     "text": "3.095 million GUATEMALA CITY (capital) (2023)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sex ratio",
-    "order": 160,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "at birth",
-       "text": "1.05 male(s)/female"
-      },
-      {
-       "label": "0-14 years",
-       "text": "1.04 male(s)/female"
-      },
-      {
-       "label": "15-64 years",
-       "text": "0.97 male(s)/female"
-      },
-      {
-       "label": "65 years and over",
-       "text": "0.8 male(s)/female"
-      },
-      {
-       "label": "total population",
-       "text": "0.98 male(s)/female (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Mother's mean age at first birth",
-    "order": 170,
-    "content": {
-     "text": "20.6 years (2014/15 est.)",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Maternal mortality ratio",
-    "order": 180,
-    "content": {
-     "text": "94 deaths/100,000 live births (2023 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Infant mortality rate",
-    "order": 190,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "23.4 deaths/1,000 live births (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "28.1 deaths/1,000 live births"
-      },
-      {
-       "label": "female",
-       "text": "21.7 deaths/1,000 live births"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Life expectancy at birth",
-    "order": 200,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "73.5 years (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "71.5 years"
-      },
-      {
-       "label": "female",
-       "text": "75.6 years"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Total fertility rate",
-    "order": 210,
-    "content": {
-     "text": "1.97 children born/woman (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Gross reproduction rate",
-    "order": 220,
-    "content": {
-     "text": "0.96 (2025 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Drinking water source",
-    "order": 230,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 97.8% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 91% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 94.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 2.2% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 9% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 5.4% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Health expenditure",
-    "order": 240,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Health expenditure (as % of GDP)",
-       "text": "6.9% of GDP (2021)"
-      },
-      {
-       "label": "Health expenditure (as % of national budget)",
-       "text": "16.9% of national budget (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Physician density",
-    "order": 250,
-    "content": {
-     "text": "1.28 physicians/1,000 population (2020)",
-     "items": []
-    }
-   },
-   {
-    "field": "Hospital bed density",
-    "order": 260,
-    "content": {
-     "text": "0.4 beds/1,000 population (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Sanitation facility access",
-    "order": 270,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "improved: urban",
-       "text": "urban: 91.4% of population (2022 est.)"
-      },
-      {
-       "label": "improved: rural",
-       "text": "rural: 68.9% of population (2022 est.)"
-      },
-      {
-       "label": "improved: total",
-       "text": "total: 80.8% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: urban",
-       "text": "urban: 8.6% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: rural",
-       "text": "rural: 31.1% of population (2022 est.)"
-      },
-      {
-       "label": "unimproved: total",
-       "text": "total: 19.2% of population (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Obesity - adult prevalence rate",
-    "order": 280,
-    "content": {
-     "text": "21.2% (2016)",
-     "items": []
-    }
-   },
-   {
-    "field": "Alcohol consumption per capita",
-    "order": 290,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1.63 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "beer",
-       "text": "0.9 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "wine",
-       "text": "0.05 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "spirits",
-       "text": "0.68 liters of pure alcohol (2019 est.)"
-      },
-      {
-       "label": "other alcohols",
-       "text": "0.01 liters of pure alcohol (2019 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Tobacco use",
-    "order": 300,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11.8% (2025 est.)"
-      },
-      {
-       "label": "male",
-       "text": "22.5% (2025 est.)"
-      },
-      {
-       "label": "female",
-       "text": "1.5% (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Children under the age of 5 years underweight",
-    "order": 310,
-    "content": {
-     "text": "14.4% (2021 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Currently married women (ages 15-49)",
-    "order": 320,
-    "content": {
-     "text": "56.2% (2018 est.)",
-     "items": []
-    }
-   },
-   {
-    "field": "Child marriage",
-    "order": 330,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "women married by age 15",
-       "text": "6.2% (2015)"
-      },
-      {
-       "label": "women married by age 18",
-       "text": "29.5% (2015)"
-      },
-      {
-       "label": "men married by age 18",
-       "text": "9.6% (2015)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Education expenditure",
-    "order": 340,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "Education expenditure (% GDP)",
-       "text": "3.1% of GDP (2023 est.)"
-      },
-      {
-       "label": "Education expenditure (% national budget)",
-       "text": "17.3% national budget (2025 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Literacy",
-    "order": 350,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total population",
-       "text": "82.1% (2024 est.)"
-      },
-      {
-       "label": "male",
-       "text": "86.9% (2024 est.)"
-      },
-      {
-       "label": "female",
-       "text": "78.5% (2024 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "School life expectancy (primary to tertiary education)",
-    "order": 360,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "11 years (2023 est.)"
-      },
-      {
-       "label": "male",
-       "text": "10 years (2023 est.)"
-      },
-      {
-       "label": "female",
-       "text": "11 years (2023 est.)"
-      }
-     ]
     }
    }
   ],
@@ -764,24 +221,8 @@
     }
    },
    {
-    "field": "Administrative divisions",
-    "order": 40,
-    "content": {
-     "text": "22 departments (<em>departamentos</em>, singular - <em>departamento</em>); Alta Verapaz, Baja Verapaz, Chimaltenango, Chiquimula, El Progreso, Escuintla, Guatemala, Huehuetenango, Izabal, Jalapa, Jutiapa, Peten, Quetzaltenango, Quiche, Retalhuleu, Sacatepéquez, San Marcos, Santa Rosa, Sololá, Suchitepéquez, Totonicapán, Zacapa",
-     "items": []
-    }
-   },
-   {
-    "field": "Legal system",
-    "order": 50,
-    "content": {
-     "text": "civil law system; judicial review of legislative acts",
-     "items": []
-    }
-   },
-   {
     "field": "Constitution",
-    "order": 60,
+    "order": 40,
     "content": {
      "text": null,
      "items": [
@@ -797,54 +238,8 @@
     }
    },
    {
-    "field": "International law organization participation",
-    "order": 70,
-    "content": {
-     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
-     "items": []
-    }
-   },
-   {
-    "field": "Citizenship",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "citizenship by birth",
-       "text": "yes"
-      },
-      {
-       "label": "citizenship by descent only",
-       "text": "yes"
-      },
-      {
-       "label": "dual citizenship recognized",
-       "text": "yes"
-      },
-      {
-       "label": "residency requirement for naturalization",
-       "text": "5 years with no absences of six consecutive months or longer or absences totaling more than a year"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Suffrage",
-    "order": 90,
-    "content": {
-     "text": "18 years of age; universal",
-     "items": [
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> active-duty members of the armed forces and police by law cannot vote and are restricted to their barracks on election day"
-      }
-     ]
-    }
-   },
-   {
     "field": "Executive branch",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -873,7 +268,7 @@
    },
    {
     "field": "Legislative branch",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -882,88 +277,23 @@
        "text": "Congress of the Republic (Congreso de la República)"
       },
       {
-       "label": "legislative structure",
-       "text": "unicameral"
-      },
-      {
        "label": "number of seats",
        "text": "160 (all directly elected)"
-      },
-      {
-       "label": "electoral system",
-       "text": "mixed system"
-      },
-      {
-       "label": "scope of elections",
-       "text": "full renewal"
-      },
-      {
-       "label": "term in office",
-       "text": "4 years"
-      },
-      {
-       "label": "most recent election date",
-       "text": "6/25/2023"
-      },
-      {
-       "label": "parties elected and seats per party",
-       "text": "Let’s Go for a Different Guatemala (Vamos) (39); National Unity of Hope Party (UNE) (28); Seed Movement (Semilla) (23); Cabal (18); Vision with Values (VIVA) (11); Other (41)"
-      },
-      {
-       "label": "percentage of women in chamber",
-       "text": "20%"
-      },
-      {
-       "label": "expected date of next election",
-       "text": "June 2027"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Judicial branch",
-    "order": 120,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "highest court(s)",
-       "text": "Supreme Court of Justice or Corte Suprema de Justicia (consists of 13 magistrates, including the court president and organized into 3 chambers)"
-      },
-      {
-       "label": "judge selection and term of office",
-       "text": "Supreme Court magistrates elected by the Congress of the Republic from candidates proposed by the Postulation Committee, an independent body of deans of the country's university law schools, representatives of the country's law associations, and representatives of the Courts of Appeal; magistrates elected for concurrent, renewable 5-year terms; Constitutional Court judges - 1 elected by the Congress of the Republic, 1 by the Supreme Court, 1 by the president of the republic, 1 by the (public) University of San Carlos, and 1 by the Assembly of the College of Attorneys and Notaries; judges elected for renewable, consecutive 5-year terms; the presidency of the court rotates among the magistrates for a single 1-year term"
-      },
-      {
-       "label": "subordinate courts",
-       "text": "Appellate Courts of Accounts, Contentious Administrative Tribunal, courts of appeal, first instance courts, child and adolescence courts, minor or peace courts"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note 1: </strong>the Supreme Court of Justice president also supervises trial judges countrywide<br /><br /><strong>note 2:</strong> the Constitutional Court or Corte de Constitucionalidad of Guatemala resides outside the country's judicial system; its sole purpose is the interpretation of the constitution and to see that the laws and regulations are not superior to the constitution (consists of 5 titular magistrates and 5 substitute magistrates)"
       }
      ]
     }
    },
    {
     "field": "Political parties",
-    "order": 130,
+    "order": 70,
     "content": {
      "text": "Bienestar Nacional or BIEN<br />Blue Party (Partido Azul) or Blue<br />CABAL<br />Cambio<br />Citizen Prosperity or PC<br />Commitment, Renewal, and Order or CREO<br />Elephant Community (Comunidad Elefante) or Elephant<br />Everyone Together for Guatemala or TODOS<br />Guatemalan National Revolutionary Unity or URNG-MAIZ or URNG<br />Humanist Party of Guatemala or PHG<br />Movement for the Liberation of Peoples or MLP<br />Movimiento Semilla or SEMILLA<br />National Advancement Party or PAN<br />National Convergence Front or FCN-NACION<br />National Unity for Hope or UNE<br />Nationalist Change Union or UCN (dissolved 16 December 2021)<br />Nosotros or PPN<br />PODEMOS<br />Political Movement Winaq or Winaq<br />TODOS<br />Value or VALOR<br />Vamos por una Guatemala Diferente or VAMOS<br />Victory or VICTORIA<br />Vision with Values or VIVA<br />Will, Opportunity and Solidarity (Voluntad, Oportunidad y Solidaridad) or VOS",
      "items": []
     }
    },
    {
-    "field": "International organization participation",
-    "order": 140,
-    "content": {
-     "text": "ACS, BCIE, CACM, CD, CELAC, EITI (compliant country), FAO, G-24, G-77, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt (signatory), ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), LAES, LAIA (observer), MIGA, MINUSTAH, MONUSCO, NAM, OAS, OPANAL, OPCW, Pacific Alliance (observer), PCA, Petrocaribe, SICA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, Union Latina, UNISFA, UNITAR, UNMISS, UNOCI, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
-     "items": []
-    }
-   },
-   {
     "field": "Independence",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "15 September 1821 (from Spain)",
      "items": []
@@ -971,7 +301,7 @@
    },
    {
     "field": "National holiday",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Independence Day, 15 September (1821)",
      "items": []
@@ -979,7 +309,7 @@
    },
    {
     "field": "Flag",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "<strong>description:</strong> three equal vertical bands of light blue (left side), white, and light blue, with the coat of arms centered in the white band; the coat of arms includes a green-and-red quetzal (the national bird), a scroll with the inscription LIBERTAD 15 DE SEPTIEMBRE DE 1821 (the original date of independence from Spain), a pair of crossed rifles, and a pair of crossed swords; a laurel wreath frames the objects<br /><br /><strong>meaning:</strong> the rifles stand for Guatemala's willingness to defend itself, the swords for honor, and the laurel wreath for victory; blue stands for the Pacific Ocean and Caribbean Sea, and white for peace and purity",
      "items": [
@@ -992,7 +322,7 @@
    },
    {
     "field": "National symbol(s)",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "quetzal (bird)",
      "items": []
@@ -1000,7 +330,7 @@
    },
    {
     "field": "National color(s)",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "blue, white",
      "items": []
@@ -1008,7 +338,7 @@
    },
    {
     "field": "National anthem(s)",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": null,
      "items": [
@@ -1029,7 +359,7 @@
    },
    {
     "field": "National heritage",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": null,
      "items": [
