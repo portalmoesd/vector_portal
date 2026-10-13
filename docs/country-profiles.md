@@ -79,6 +79,9 @@ labelled "snapshot 2026-01 · publication discontinued on 04/02/2026".
     of government and cabinet; the "Legislative branch" fields keep only the
     chamber (or legislature) name and the number of seats.
   - HTML is reduced to `br`, `p`, `em`, `strong`, lists.
+- The same keep rules are applied again when the API reads the rows, so a
+  database still holding rows from an earlier, wider snapshot shows exactly
+  what a freshly imported one shows; the import only tidies the table.
 - Placement on the page is configured in `DISPLAY` (`factbook.js`): Introduction
   → Introduction; the remaining Geography fields → Overview, with "Map references"
   shown as "Continent"; People and Society → People (below the World Bank

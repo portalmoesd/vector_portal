@@ -137,10 +137,15 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
     // factbook.js); `field` is the source's name, `label` what the page shows.
     const texts = { sections: {}, source: null };
     for (const r of txt) {
+      // The keep rules are applied here too, so rows left over from an
+      // earlier, wider snapshot never reach the page.
+      if (!factbook.isFieldKept(r.section, r.field)) continue;
+      const content = factbook.filterContent(r.section, r.field, r.content);
+      if (!content) continue;
       const { page, label } = factbook.displayPlacement(r.section, r.field);
       if (!page) continue;
       if (!texts.sections[page]) texts.sections[page] = [];
-      texts.sections[page].push({ section: r.section, field: r.field, label, content: r.content, edited: !!r.edited_at });
+      texts.sections[page].push({ section: r.section, field: r.field, label, content, edited: !!r.edited_at });
       if (!texts.source) {
         texts.source = { name: r.source_name, url: r.source_url, dataDate: r.data_date, retrievedAt: r.retrieved_at, discontinued: '2026-02-04' };
       }

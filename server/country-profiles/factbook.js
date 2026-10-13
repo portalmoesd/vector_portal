@@ -104,6 +104,38 @@ function cleanText(raw) {
   return s || null;
 }
 
+// ── Keep rules ───────────────────────────────────────────────────────────
+// Applied twice: at extraction (so dropped content is never stored) and
+// again when the API reads rows, so a database that still holds rows from
+// an earlier, wider snapshot shows exactly the same thing as a fresh one.
+
+function isFieldKept(section, field) {
+  if (!SECTIONS.includes(section)) return false;
+  if ((EXCLUDED_FIELDS[section] || []).includes(field)) return false;
+  const only = INCLUDED_FIELDS[section] || null;
+  return !only || only.includes(field);
+}
+
+function isItemKept(section, field, label) {
+  if (((EXCLUDED_ITEMS[section] || {})[field] || []).includes(label)) return false;
+  const keep = (INCLUDED_ITEMS[section] || {})[field] || null;
+  return !keep || keep.includes(label);
+}
+
+// Whether a field's own free text is shown; fields reduced to an item
+// allow-list drop it.
+function isTextKept(section, field) {
+  return !((INCLUDED_ITEMS[section] || {})[field]);
+}
+
+// Apply the item rules to stored content. Returns null when nothing is left.
+function filterContent(section, field, content) {
+  if (!content || typeof content !== 'object') return null;
+  const text = isTextKept(section, field) ? (content.text || null) : null;
+  const items = (content.items || []).filter((it) => it && isItemKept(section, field, it.label));
+  return text || items.length ? { text, items } : null;
+}
+
 /**
  * Normalize one Factbook field: {text} or {sub: {text}, ...} (optionally
  * with its own "note") into { text, items: [{label, text}] }.
@@ -111,13 +143,10 @@ function cleanText(raw) {
 function normalizeField(section, field, value) {
   const out = { text: null, items: [] };
   if (!value || typeof value !== 'object') return out;
-  const dropItems = (EXCLUDED_ITEMS[section] || {})[field] || [];
-  const keepItems = (INCLUDED_ITEMS[section] || {})[field] || null;
   for (const [rawKey, v] of Object.entries(value)) {
     const key = rawKey.trim();
-    if (key === 'text') { if (!keepItems) out.text = cleanText(v); continue; }
-    if (dropItems.includes(key)) continue;
-    if (keepItems && !keepItems.includes(key)) continue;
+    if (key === 'text') { if (isTextKept(section, field)) out.text = cleanText(v); continue; }
+    if (!isItemKept(section, field, key)) continue;
     const text = v && typeof v === 'object' ? cleanText(v.text) : cleanText(v);
     if (text) out.items.push({ label: key, text });
   }
@@ -133,13 +162,10 @@ function extractProfile(profile) {
   for (const section of SECTIONS) {
     const src = profile && profile[section];
     if (!src || typeof src !== 'object') continue;
-    const skip = EXCLUDED_FIELDS[section] || [];
-    const only = INCLUDED_FIELDS[section] || null;
     const rows = [];
     let order = 0;
     for (const [field, value] of Object.entries(src)) {
-      if (skip.includes(field)) continue;
-      if (only && !only.includes(field)) continue;
+      if (!isFieldKept(section, field)) continue;
       const content = normalizeField(section, field, value);
       if (!content.text && !content.items.length) continue;
       rows.push({ field, order: (order += 10), content });
@@ -310,5 +336,6 @@ async function needsImport(db) {
 
 module.exports = {
   SOURCE, SECTIONS, EXCLUDED_FIELDS, INCLUDED_FIELDS, EXCLUDED_ITEMS, INCLUDED_ITEMS, PAGE_SECTIONS, DISPLAY, displayPlacement, DATA_DIR, PROFILES_DIR, META_FILE,
+  isFieldKept, isItemKept, isTextKept, filterContent,
   cleanText, normalizeField, extractProfile, factbookName, extractAll, readMeta, listProfiles, importFactbook, needsImport,
 };
