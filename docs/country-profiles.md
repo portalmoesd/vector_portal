@@ -95,7 +95,11 @@ node server/country-profiles/import-factbook.js --extract /path/to/factbook.json
                                                           # rebuild the committed files from an upstream checkout
 ```
 
-The server also loads the files at boot when `stat_country_texts` is empty.
+The server also loads the files at boot whenever the database does not yet
+carry the committed snapshot (table empty, or no successful import recorded
+for the current `meta.json` `extractedAt`). So after a re-extract that changes
+what is kept, a deploy or restart applies it; the CLI is only needed to apply
+it without restarting. Edited rows are never touched by either path.
 
 ## Storage (Postgres, `server/schema.sql`)
 

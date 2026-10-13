@@ -177,7 +177,16 @@ router.get('/status', ...adminOnly, async (req, res) => {
               (SELECT count(*)::int FROM stat_observations WHERE source_id = $1) AS observations`,
       [SOURCE.id]
     );
-    res.json({ source: SOURCE, running: isRunning(), countries: counts.countries, observations: counts.observations, runs: rows.map(runRow) });
+    const { rows: [fbRow] } = await db.query(
+      `SELECT (SELECT count(*)::int FROM stat_country_texts) AS fields,
+              (SELECT count(DISTINCT iso3)::int FROM stat_country_texts) AS countries,
+              (SELECT count(*)::int FROM stat_country_texts WHERE edited_at IS NOT NULL) AS edited`
+    );
+    const fbMeta = factbook.readMeta();
+    res.json({
+      source: SOURCE, running: isRunning(), countries: counts.countries, observations: counts.observations, runs: rows.map(runRow),
+      factbook: { ...fbRow, snapshotDate: fbMeta && fbMeta.snapshotDate, extractedAt: fbMeta && fbMeta.extractedAt, pending: await factbook.needsImport(db) },
+    });
   } catch (err) {
     console.error('country-profiles status error:', err);
     res.status(500).json({ error: 'Internal server error' });
@@ -220,11 +229,13 @@ async function bootCheck() {
   } catch (err) {
     console.warn('country-profiles: boot check skipped:', err.message);
   }
-  // The Factbook text ships with the repository; load it once into the
-  // database so it can be edited there later.
+  // The Factbook text ships with the repository; load it into the database
+  // (where it can be edited later) whenever the committed snapshot changed.
   try {
-    const { rows: [{ count }] } = await db.query('SELECT count(*)::int AS count FROM stat_country_texts');
-    if (count === 0) await factbook.importFactbook(db, { log: (m) => console.log(`country-profiles: ${m}`) });
+    if (await factbook.needsImport(db)) {
+      console.log('country-profiles: factbook snapshot not yet imported, loading it');
+      await factbook.importFactbook(db, { log: (m) => console.log(`country-profiles: ${m}`), trigger: 'boot' });
+    }
   } catch (err) {
     console.warn('country-profiles: factbook import skipped:', err.message);
   }
