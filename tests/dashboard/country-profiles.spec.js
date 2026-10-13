@@ -159,9 +159,13 @@ test('profile: breadcrumb, hero, key figures with year and source, only sections
   // Hero: name, flag alt, pills, quick facts drawn from both sources.
   await expect(page.locator('.cp-hero__name')).toHaveText('Georgia');
   await expect(page.locator('.cp-hero__flag')).toHaveAttribute('alt', 'Flag of Georgia');
-  await expect(page.locator('.cp-hero__pills .pill')).toHaveText(['Europe & Central Asia', 'Upper middle income', 'Asia']);
+  await expect(page.locator('.cp-hero__pills .pill')).toHaveText(['Europe & Central Asia', 'Upper middle income']);
   await expect(page.locator('.cp-hero__fact[data-fact="capital"] dd')).toHaveText('Tbilisi');
-  await expect(page.locator('.cp-hero__facts')).toContainText('parliamentary republic');
+  // The hero shows the official name only; local-language variants and
+  // government detail stay in the Government section.
+  await expect(page.locator('.cp-hero__official')).toHaveText('Republic of Georgia');
+  await expect(page.locator('.cp-hero')).not.toContainText("Sak'art'velo");
+  await expect(page.locator('.cp-hero')).not.toContainText('parliamentary republic');
 
   // Key figures: seven, each with its year tag linking to the source.
   const kf = page.locator('.cp-kf .cp-kf__item');
@@ -199,7 +203,6 @@ test('profile: breadcrumb, hero, key figures with year and source, only sections
   await expect(page.locator('#section-overview .cp-attrib')).toContainText('publication discontinued on 04/02/2026');
   await expect(page.locator('#section-people .cp-tr[data-field="Languages"] .cp-tr__label .pill')).toHaveText('edited');
   await expect(page.locator('#section-government .cp-tr')).toHaveCount(3);
-  await expect(page.locator('.cp-hero__official')).toHaveText("Republic of Georgia · Sak'art'velo");
   // No chart without the chart library (stubbed in this harness).
   await expect(page.locator('#cpChart')).toHaveCount(0);
   await expect(page.locator('#cpFooter')).toContainText('latest year the source has published');
