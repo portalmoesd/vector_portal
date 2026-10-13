@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Oceania, group of islands in the South Pacific Ocean, east of Papua New Guinea",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "8 00 S, 159 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Oceania",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28,896 sq km"
-      },
-      {
-       "label": "land",
-       "text": "27,986 sq km"
-      },
-      {
-       "label": "water",
-       "text": "910 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Maryland",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,40 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "5,313 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>measured from claimed archipelagic baselines"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical monsoon; few temperature and weather extremes",
      "items": []
@@ -123,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly rugged mountains with some low coral atolls",
      "items": []
@@ -131,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -148,56 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "fish, forests, gold, bauxite, phosphates, lead, zinc, nickel",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "3.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 0.8% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 2.8% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0.3% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "89.9% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "6.2% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "0 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "most of the population lives along the coastal regions; about one in five live in urban areas, and of these about two thirds reside in Honiara, the largest town and chief port",
      "items": []
@@ -205,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "tropical cyclones, but rarely destructive; geologically active region with frequent earthquakes, tremors, and volcanic activity; tsunamis <br /><br /><strong>volcanism:</strong> Tinakula (851 m) has frequent eruption activity, and an eruption of Savo (485 m) could affect the capital Honiara on nearby Guadalcanal",
      "items": []
@@ -213,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "strategic location on sea routes between the South Pacific Ocean, the Solomon Sea, and the Coral Sea; Rennell Island, the southernmost in the Solomon Islands chain, is one of the world’s largest raised coral atolls; the island’s Lake Tegano, formerly a lagoon on the atoll, is the largest lake in the insular Pacific (15,500 hectares; 38,300 acres)",
      "items": []

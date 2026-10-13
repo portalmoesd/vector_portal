@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Caribbean, islands between the Caribbean Sea and the North Atlantic Ocean, northeast of Venezuela",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "11 00 N, 61 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "5,128 sq km"
-      },
-      {
-       "label": "land",
-       "text": "5,128 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Delaware",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,44 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "362 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or to the outer edge of the continental margin"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>measured from claimed archipelagic baselines"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; rainy season (June to December)",
      "items": []
@@ -127,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly plains with some hills and low mountains",
      "items": []
@@ -135,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +82,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "petroleum, natural gas, asphalt",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "10.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 4.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 4.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 1.4% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "44.2% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "45.2% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "70 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "population on Trinidad is concentrated in the western half of the island, on Tobago in the southern half",
      "items": []
@@ -213,7 +98,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "outside usual path of hurricanes and other tropical storms",
      "items": []
@@ -221,7 +106,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Pitch Lake, on Trinidad's southwestern coast, is the world's largest natural reservoir of asphalt",
      "items": []

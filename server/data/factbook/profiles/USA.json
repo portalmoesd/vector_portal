@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "North America, bordering both the North Atlantic Ocean and the North Pacific Ocean, between Canada and Mexico",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "38 00 N, 97 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "North America",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "9,833,517 sq km"
-      },
-      {
-       "label": "land",
-       "text": "9,147,593 sq km"
-      },
-      {
-       "label": "water",
-       "text": "685,924 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> includes only the 50 states and District of Columbia, no overseas territories"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "about half the size of Russia; about three-tenths the size of Africa; about half the size of South America (or slightly larger than Brazil); slightly larger than China; more than twice the size of the European Union",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -94,40 +45,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "19,924 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "not specified"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "mostly temperate, but tropical in Hawaii and Florida, arctic in Alaska, semiarid in the great plains west of the Mississippi River, and arid in the Great Basin of the southwest; low winter temperatures in the northwest are ameliorated occasionally in January and February by warm chinook winds from the eastern slopes of the Rocky Mountains",
      "items": [
@@ -140,7 +66,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "vast central plain, mountains in west, hills and low mountains in east; rugged mountains and broad river valleys in Alaska; rugged, volcanic topography in Hawaii",
      "items": []
@@ -148,7 +74,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -173,7 +99,7 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "coal, copper, lead, molybdenum, phosphates, rare earth elements, uranium, bauxite, gold, iron, mercury, nickel, potash, silver, tungsten, zinc, petroleum, natural gas, timber, arable land",
      "items": [
@@ -185,49 +111,8 @@
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "46.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 16.6% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 29.2% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "33.8% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "18.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "234,782 sq km (2017)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -244,7 +129,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "<p>Missouri - 3,768 km; Mississippi - 3,544 km; Yukon river mouth (shared with Canada [s]) - 3,190 km; Saint Lawrence (shared with Canada) - 3,058 km; Rio Grande river source (mouth shared with Mexico) - 3,057 km; Colorado river source (shared with Mexico [m]) - 2,333 km; Arkansas - 2,348 km; Columbia river mouth (shared with Canada [s]) - 2,250 km; Red - 2,188 km; Ohio - 2,102 km); Snake - 1,670 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth</p>",
      "items": []
@@ -252,7 +137,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -273,7 +158,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Northern Great Plains Aquifer, Cambrian-Ordovician Aquifer System, Californian Central Valley Aquifer System, Ogallala Aquifer (High Plains), Atlantic and Gulf Coastal Plains Aquifer",
      "items": []
@@ -281,7 +166,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "large urban clusters are spread throughout the eastern half of the US (particularly the Great Lakes area, northeast, east, and southeast) and the western-tier states; mountainous areas such as the Rocky Mountains and Appalachians, deserts in the southwest, the dense boreal forests in the extreme north, and the central prairie states are less densely populated; Alaska's population is concentrated along its southern coast, particularly around Anchorage, and Hawaii's is centered on the island of Oahu",
      "items": []
@@ -289,7 +174,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "tsunamis; volcanoes; earthquake activity around Pacific Basin; hurricanes along the Atlantic and Gulf of America coasts; tornadoes in the Midwest and Southeast; mud slides in California; forest fires in the west; flooding; permafrost in northern Alaska is a major impediment to development <br /><br /><strong>volcanism:</strong> volcanic activity in the Hawaiian Islands, Western Alaska, the Pacific Northwest, and in the Northern Mariana Islands; Mauna Loa (4,170 m) in Hawaii and Mount Rainier (4,392 m) in Washington have been deemed Decade Volcanoes by the International Association of Volcanology and Chemistry of the Earth's Interior, worthy of study due to their explosive history and close proximity to human populations; Pavlof (2,519 m) is the most active volcano in Alaska's Aleutian Arc and poses a significant threat to intercontinental air travel; St. Helens (2,549 m), famous for the devastating 1980 eruption, remains active today; other historically active volcanoes are mostly concentrated in the Aleutian arc and Hawaii, including (in Alaska) Aniakchak, Augustine, Chiginagak, Fourpeaked, Iliamna, Katmai, Kupreanof, Martin, Novarupta, Redoubt, Spurr, Wrangell, Trident, Ugashik-Peulik, Ukinrek Maars, Veniaminof, (in Hawaii) Haleakala, Kilauea, Loihi, (in the Northern Mariana Islands) Anatahan, (in the Pacific Northwest) Mount Baker, and Mount Hood; see note 2 under \"Geography - note\"",
      "items": []
@@ -297,7 +182,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "<strong>note 1:</strong> world's third-largest country by size (after Russia and Canada) and by population (after China and India); Mt. McKinley is the highest point (6,190 m; 20,308 ft) in North America, and Death Valley is the lowest point (-86 m; -282 ft) <br /><br /><strong>note 2:</strong> the western US coast and the southern coast of Alaska lie along the Ring of Fire, which is a belt bordering the Pacific Ocean that contains about 75% of the world's volcanoes and up to 90% of the world's earthquakes<br /><br /><strong>note 3:</strong> the Aleutian Islands are a chain of volcanic islands that divide the Bering Sea (north) from the main Pacific Ocean (south); they extend about 1,800 km (1,118 mi) westward from the Alaskan Peninsula; the archipelago consists of 14 larger islands, 55 smaller islands, and hundreds of islets; there are 41 active volcanoes on the islands, which together form a large northern section of the Ring of Fire<br /><br /><strong>note 4: </strong>Mammoth Cave, in west-central Kentucky, is the world's longest known cave system with more than 650 km (405 miles) of surveyed passageways, which is nearly twice as long as the second-longest cave system, the Sac Actun underwater cave in Mexico (see \"Geography - note\" under Mexico)<br /><br /><strong>note 5:</strong> Kazumura Cave on the island of Hawaii is the world's longest and deepest lava-tube cave; it has been surveyed at 66 km (41 mi) long and 1,102 m (3,614 ft) deep <br /><br /><strong>note 6: </strong>Bracken Cave outside San Antonio, Texas is the world's largest bat cave and the summer home to the largest colony of bats in the world; an estimated 20 million Mexican free-tailed bats roost in the cave from March to October, making it the world's largest known concentration of mammals",
      "items": []

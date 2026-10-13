@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Central Europe, between Austria and Switzerland",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "47 16 N, 9 32 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "160 sq km"
-      },
-      {
-       "label": "land",
-       "text": "160 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "about 0.9 times the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,23 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "0 km (doubly landlocked)",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": "none (landlocked)",
-     "items": []
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "continental; cold, cloudy winters with frequent snow or rain; cool to moderately warm, cloudy, humid summers",
      "items": []
@@ -110,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly mountainous (Alps) with Rhine Valley in western third",
      "items": []
@@ -118,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -135,56 +82,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "hydroelectric potential, arable land",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "32.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 10.8% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0% (2022 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 21.5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "36.3% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "31.4% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "0 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major watersheds (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -197,7 +103,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "most of the population is found in the western half of the country along the Rhine River",
      "items": []
@@ -205,7 +111,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "avalanches, landslides",
      "items": []
@@ -213,7 +119,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "along with Uzbekistan, one of only two doubly landlocked countries in the world; variety of microclimatic variations based on elevation",
      "items": []

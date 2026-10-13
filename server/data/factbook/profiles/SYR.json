@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Middle East, bordering the Mediterranean Sea, between Lebanon and Turkey",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "35 00 N, 38 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Middle East",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "187,437 sq km"
-      },
-      {
-       "label": "land",
-       "text": "185,887 sq km"
-      },
-      {
-       "label": "water",
-       "text": "1,550 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> includes 1,295 sq km of Israeli-occupied territory"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly more than 1.5 times the size of Pennsylvania",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -90,32 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "193 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "mostly desert; hot, dry, sunny summers (June to August) and mild, rainy winters (December to February) along coast; cold weather with snow or sleet periodically in Damascus",
      "items": []
@@ -123,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "primarily semiarid and desert plateau; narrow coastal plain; mountains in west",
      "items": []
@@ -131,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -152,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "petroleum, phosphates, chrome and manganese ores, asphalt, iron ore, rock salt, marble, gypsum, hydropower",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "74.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 24% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 5.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 44.5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "2.9% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "23% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "9,820 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Major rivers (by length in km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Euphrates (shared with Turkey [s], Iran, and Iraq [m]) - 3,596 km; Tigris (shared with Turkey, Iran, and Iraq [m]) - 1,950 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -209,7 +102,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -222,7 +115,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "significant population density along the Mediterranean coast; larger concentrations found in the major cities of Damascus, Aleppo (the country's largest city), and Hims (Homs); more than half of the population lives in the coastal plain, the province of Halab, and the Euphrates River valley",
      "items": [
@@ -235,7 +128,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "dust storms, sandstorms <br /><br /><strong>volcanism:</strong> Syria's two historically active volcanoes, Es Safa and an unnamed volcano near the Turkish border, have not erupted in centuries",
      "items": []
@@ -243,7 +136,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "the capital of Damascus is located at an oasis fed by the Barada River and is thought to be one of the world's oldest continuously inhabited cities; there are Israeli settlements and civilian land-use sites in the Israeli-controlled Golan Heights (2017)",
      "items": []

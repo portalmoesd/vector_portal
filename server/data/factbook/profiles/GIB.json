@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southwestern Europe, bordering the Strait of Gibraltar, which links the Mediterranean Sea and the North Atlantic Ocean, on the southern coast of Spain",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "36 08 N, 5 21 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7 sq km"
-      },
-      {
-       "label": "land",
-       "text": "6.5 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "more than 10 times the size of the National Mall in Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,28 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "12 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "3 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "Mediterranean with mild winters and warm summers",
      "items": []
@@ -115,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "a narrow coastal lowland borders the Rock of Gibraltar",
      "items": []
@@ -123,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -140,44 +82,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "none",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "0% (2022 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "0% (2022 est.)"
-      },
-      {
-       "label": "other",
-       "text": "100% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "NA",
-     "items": []
-    }
-   },
-   {
     "field": "Natural hazards",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "occasional droughts; no streams or large bodies of water on the peninsula (all potable water comes from desalination)",
      "items": []
@@ -185,7 +98,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "strategic location on Strait of Gibraltar that links the North Atlantic Ocean and Mediterranean Sea",
      "items": []

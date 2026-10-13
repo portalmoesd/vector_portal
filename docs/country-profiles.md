@@ -53,8 +53,8 @@ Rules applied:
 ## Descriptive text (CIA World Factbook snapshot)
 
 The CIA discontinued The World Factbook on 4 February 2026 and took the site
-down. The profile page shows four of its sections — Introduction, Geography,
-People and Society, Government — from the final public-domain snapshot
+down. The profile page shows text from four of its sections — Introduction,
+Geography, People and Society, Government — from the final public-domain snapshot
 republished by the factbook.json project (CC0), which is the data openfactbook.org
 is built on. It is static: nothing refreshes it, and every block on the page is
 labelled "snapshot 2026-01 · publication discontinued on 04/02/2026".
@@ -65,9 +65,16 @@ labelled "snapshot 2026-01 · publication discontinued on 04/02/2026".
   maps to the Factbook's "West Bank" entry only.
 - `server/data/factbook/profiles/<ISO3>.json` holds the extracted sections
   (committed, 6 MB). `meta.json` records the upstream commit and snapshot date.
-- Officials are excluded at extraction: the two "Diplomatic representation"
-  fields and the chief of state / head of government / cabinet entries of
-  "Executive branch". HTML is reduced to `br`, `p`, `em`, `strong`, lists.
+- Excluded at extraction (never stored): officials — the two "Diplomatic
+  representation" fields and the chief of state / head of government / cabinet
+  entries of "Executive branch" — and the geography detail Location, Geographic
+  coordinates, Area, Area - comparative, Maritime claims, Land use, Irrigated
+  land. HTML is reduced to `br`, `p`, `em`, `strong`, lists.
+- Placement on the page is configured in `DISPLAY` (`factbook.js`): Introduction
+  → Introduction; the remaining Geography fields → Overview, with "Map references"
+  shown as "Continent"; People and Society → People (below the World Bank
+  indicators); Government → Government. The database keeps the source's own
+  section and field names; only the display label changes.
 - `stat_country_texts` stores one row per field with `content`,
   `original_content`, `edited_at` and `edited_by`, ready for an editor: an edit
   sets `edited_at`, and a re-import updates only `original_content` on edited

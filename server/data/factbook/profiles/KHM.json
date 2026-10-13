@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southeastern Asia, bordering the Gulf of Thailand, between Thailand, Vietnam, and Laos",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "13 00 N, 105 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Southeast Asia",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "181,035 sq km"
-      },
-      {
-       "label": "land",
-       "text": "176,515 sq km"
-      },
-      {
-       "label": "water",
-       "text": "4,520 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "1.5 times the size of Pennsylvania; slightly smaller than Oklahoma",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "443 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; rainy, monsoon season (May to November); dry season (December to April); little seasonal temperature variation",
      "items": []
@@ -127,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly low, flat plains; mountains in southwest and north",
      "items": []
@@ -135,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "oil and gas, timber, gemstones, iron ore, manganese, phosphates, hydropower potential, arable land",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "34.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 23.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 8.5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "39.4% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "25.8% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "3,540 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -218,7 +107,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Mekong (shared with China [s], Burma, Thailand, Laos, and Vietnam [m]) - 4,350 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -226,7 +115,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -239,7 +128,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "population concentrated in the southeast, particularly in and around the capital of Phnom Penh; further distribution is linked closely to the Tonle Sap and Mekong Rivers",
      "items": []
@@ -247,7 +136,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "monsoonal rains (June to November); flooding; occasional droughts",
      "items": []
@@ -255,7 +144,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "a land of paddies and forests dominated by the Mekong River and Tonle Sap (Southeast Asia's largest freshwater lake)",
      "items": []

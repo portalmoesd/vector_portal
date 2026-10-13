@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Middle East, bordering the Persian Gulf, between Iran and Kuwait",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "33 00 N, 44 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Middle East",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "438,317 sq km"
-      },
-      {
-       "label": "land",
-       "text": "437,367 sq km"
-      },
-      {
-       "label": "water",
-       "text": "950 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly more than three times the size of New York State",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,32 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "58 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "not specified"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "mostly desert; mild to cool winters with dry, hot, cloudless summers; northern mountainous regions along Iranian and Turkish borders experience cold winters with occasionally heavy snows that melt in early spring, sometimes causing extensive flooding in central and southern Iraq",
      "items": []
@@ -119,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly broad plains; reedy marshes along Iranian border in south with large flooded areas; mountains along borders with Iran and Turkey",
      "items": []
@@ -127,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -148,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "petroleum, natural gas, phosphates, sulfur",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "21.8% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 11.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 1.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 9.2% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "1.6% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "76.5% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "35,250 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -210,7 +107,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Euphrates river mouth (shared with Turkey[s], Syria, and Iran) - 3,596 km; Tigris river mouth (shared with Turkey[s], Syria, and Iran) - 1,950 km; the Tigris and Euphrates join to form the Shatt al Arab<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -218,7 +115,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -231,7 +128,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Arabian Aquifer System",
      "items": []
@@ -239,7 +136,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "population is concentrated in the north, center, and eastern parts of the country, with many of the larger urban agglomerations found along extensive parts of the Tigris and Euphrates Rivers; much of the western and southern areas are either lightly populated or uninhabited",
      "items": []
@@ -247,7 +144,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "dust storms; sandstorms; floods",
      "items": []
@@ -255,7 +152,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "strategic location on Shatt al Arab waterway and at the head of the Persian Gulf",
      "items": []

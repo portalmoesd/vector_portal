@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "two island groups in the North Atlantic Ocean, southeast of The Bahamas, north of Haiti; note - although the Turks and Caicos Islands do not border the Caribbean Sea, geopolitically they are often designated as being Caribbean",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "21 45 N, 71 35 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "948 sq km"
-      },
-      {
-       "label": "land",
-       "text": "948 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "2.5 times the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,32 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "389 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive fishing zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; marine; moderated by trade winds; sunny and relatively dry",
      "items": []
@@ -115,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "low, flat limestone; extensive marshes and mangrove swamps",
      "items": []
@@ -123,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -140,56 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "spiny lobster, conch",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "1.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 1.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0% (2022 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0% (2022 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "11.1% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "87.9% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "0 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "eight of the thirty islands are inhabited; the island of Providenciales is the most populated, but the most densely populated is Grand Turk",
      "items": []
@@ -197,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "frequent hurricanes",
      "items": []
@@ -205,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "include eight large islands and numerous smaller cays, islets, and reefs; only two of the Caicos Islands and six of the Turks group are inhabited",
      "items": []

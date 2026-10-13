@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southeastern Europe, between the Adriatic Sea and Serbia",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "42 30 N, 19 18 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "13,812 sq km"
-      },
-      {
-       "label": "land",
-       "text": "13,452 sq km"
-      },
-      {
-       "label": "water",
-       "text": "360 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Connecticut; slightly larger than twice the size of Delaware",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,32 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "293.5 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "defined by treaty"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "Mediterranean climate, hot dry summers and autumns and relatively cold winters with heavy snowfalls inland",
      "items": []
@@ -119,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "highly indented coastline with narrow coastal plain backed by rugged high limestone mountains and plateaus",
      "items": []
@@ -127,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -148,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "bauxite, hydroelectricity",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "19.6% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 0.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 18.5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "61.5% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "18.9% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "24 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -210,7 +107,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -223,7 +120,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "highest population density is concentrated in the south and southwest; the extreme eastern border is the least populated area",
      "items": []
@@ -231,7 +128,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "destructive earthquakes",
      "items": []
@@ -239,7 +136,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "strategic location along the Adriatic coast",
      "items": []

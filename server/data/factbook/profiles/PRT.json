@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southwestern Europe, bordering the North Atlantic Ocean, west of Spain",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "39 30 N, 8 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "92,090 sq km"
-      },
-      {
-       "label": "land",
-       "text": "91,470 sq km"
-      },
-      {
-       "label": "water",
-       "text": "620 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> includes Azores and Madeira Islands"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Virginia",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -90,40 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "1,793 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200-m depth or to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "maritime temperate; cool and rainy in north, warmer and drier in south",
      "items": []
@@ -131,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "the west-flowing Tagus River divides the country: the north is mountainous toward the interior, while the south is characterized by rolling plains",
      "items": []
@@ -139,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -160,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "fish, forests (cork), iron ore, copper, zinc, tin, tungsten, silver, gold, uranium, marble, clay, gypsum, salt, arable land, hydropower",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "43.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 10.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 9.6% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 23.6% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "36.6% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "5.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "5,662 sq km (2019)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "concentrations are primarily along or near the Atlantic coast; both Lisbon and the second largest city, Porto, are coastal cities",
      "items": []
@@ -217,7 +102,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Azores subject to severe earthquakes <br /><br /><strong>volcanism:</strong> limited volcanic activity in the Azores Islands; Fayal or Faial (1,043 m) last erupted in 1958; most volcanoes have not erupted in centuries; historically active volcanoes include Agua de Pau, Furnas, Pico, Picos Volcanic System, San Jorge, Sete Cidades, and Terceira",
      "items": []
@@ -225,7 +110,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Azores and Madeira Islands occupy strategic locations along western sea approaches to Strait of Gibraltar; they are two of the four North Atlantic archipelagos that make up Macaronesia; the others are the Canary Islands (Spain) and Cabo Verde",
      "items": []

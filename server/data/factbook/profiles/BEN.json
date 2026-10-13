@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Western Africa, bordering the Bight of Benin, between Nigeria and Togo",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "9 30 N, 2 15 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "112,622 sq km"
-      },
-      {
-       "label": "land",
-       "text": "110,622 sq km"
-      },
-      {
-       "label": "water",
-       "text": "2,000 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Pennsylvania",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,36 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "121 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "200 nm; note: the US does not recognize this claim"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm"
-      },
-      {
-       "label": "exclusive fishing zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; hot, humid in south; semiarid in north",
      "items": []
@@ -123,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly flat to undulating plain; some hills and low mountains",
      "items": []
@@ -131,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -152,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "small offshore oil deposits, limestone, marble, timber",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "41.8% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 31.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 5.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 4.9% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "28.5% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "29.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "530 sq km (2019)",
-     "items": []
-    }
-   },
-   {
     "field": "Major watersheds (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -214,7 +107,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "the population is primarily located in the south, with the highest concentration of people residing in and around the cities on the Atlantic coast; most of the north remains sparsely populated with higher concentrations of residents in the west, as shown in this population distribution map",
      "items": []
@@ -222,7 +115,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "hot, dry, dusty harmattan wind may affect north from December to March",
      "items": []
@@ -230,7 +123,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "sandbanks create difficult access to a coast with no natural harbors, river mouths, or islands",
      "items": []

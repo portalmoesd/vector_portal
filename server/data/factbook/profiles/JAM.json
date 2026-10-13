@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Caribbean, island in the Caribbean Sea, south of Cuba",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "18 15 N, 77 30 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "10,991 sq km"
-      },
-      {
-       "label": "land",
-       "text": "10,831 sq km"
-      },
-      {
-       "label": "water",
-       "text": "160 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "about half the size of New Jersey; slightly smaller than Connecticut",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,44 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "1,022 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or to edge of the continental margin"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note: </strong>measured from claimed archipelagic straight baselines"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; hot, humid; temperate interior",
      "items": []
@@ -127,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly mountains, with narrow, discontinuous coastal plain",
      "items": []
@@ -135,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +82,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "bauxite, alumina, gypsum, limestone",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "38.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 11.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 6.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 21.1% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "56.2% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "5.3% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "250 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "population density is high throughout, but increases in and around Kingston, Montego Bay, and Port Esquivel",
      "items": []
@@ -213,7 +98,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "hurricanes (especially July to November)",
      "items": []
@@ -221,7 +106,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "third largest island in the Caribbean (after Cuba and Hispaniola); strategic location between Cayman Trench and Jamaica Channel, the main sea lanes for the Panama Canal",
      "items": []

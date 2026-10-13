@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Western Africa, bordering the Gulf of Guinea, between Cote d'Ivoire and Togo",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "8 00 N, 2 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "238,533 sq km"
-      },
-      {
-       "label": "land",
-       "text": "227,533 sq km"
-      },
-      {
-       "label": "water",
-       "text": "11,000 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Oregon",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "539 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; warm and comparatively dry along southeast coast; hot and humid in southwest; hot and dry in north",
      "items": []
@@ -127,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly low plains with dissected plateau in south-central area",
      "items": []
@@ -135,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "gold, timber, industrial diamonds, bauxite, manganese, fish, rubber, hydropower, petroleum, silver, salt, limestone",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "55.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 20.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 11.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 22.8% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "30.7% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "13.9% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "360 sq km (2013)",
-     "items": []
-    }
-   },
-   {
     "field": "Major rivers (by length in km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Volta river mouth (shared with Burkina Faso [s]) - 1,600 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -213,7 +102,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -226,7 +115,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "population is concentrated in the southern half of the country, with the highest concentrations on or near the Atlantic coast, as shown in this population distribution map",
      "items": []
@@ -234,7 +123,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "dry, dusty, northeastern harmattan winds from January to March; droughts",
      "items": []
@@ -242,7 +131,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "Lake Volta is the world's largest artificial lake (manmade reservoir) by surface area (8,482 sq km; 3,275 sq mi); the lake was created after the Akosombo Dam was completed in 1965",
      "items": []

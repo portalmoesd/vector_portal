@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Northern Europe, bordering the Baltic Sea, Gulf of Bothnia, and Gulf of Finland, between Sweden and Russia",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "64 00 N, 26 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "338,145 sq km"
-      },
-      {
-       "label": "land",
-       "text": "303,815 sq km"
-      },
-      {
-       "label": "water",
-       "text": "34,330 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly more than two times the size of Georgia; slightly smaller than Montana",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "1,250 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm (in the Gulf of Finland - 3 nm)"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 m depth or to the depth of exploitation"
-      },
-      {
-       "label": "exclusive fishing zone",
-       "text": "12 nm; extends to continental shelf boundary with Sweden, Estonia, and Russia"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "cold temperate; potentially subarctic but comparatively mild because of moderating influence of the North Atlantic Current, Baltic Sea, and more than 60,000 lakes",
      "items": []
@@ -127,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly low, flat to rolling plains interspersed with lakes and low hills",
      "items": []
@@ -135,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "timber, iron ore, copper, lead, zinc, chromite, nickel, gold, silver, limestone",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "7.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 7.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "74.2% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "18.4% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "80 sq km (2016)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -218,7 +107,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "the vast majority of people are found in the south; the northern interior areas remain sparsely populated",
      "items": []
@@ -226,7 +115,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "severe winters in the north",
      "items": []
@@ -234,7 +123,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "long boundary with Russia; Helsinki is northernmost national capital on European continent; population concentrated on small southwestern coastal plain",
      "items": []

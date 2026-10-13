@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Northern South America, bordering the North Atlantic Ocean, between Suriname and Venezuela",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "5 00 N, 59 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "South America",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "214,969 sq km"
-      },
-      {
-       "label": "land",
-       "text": "196,849 sq km"
-      },
-      {
-       "label": "water",
-       "text": "18,120 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Idaho; almost twice the size of Tennessee",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,36 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "459 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or to the outer edge of the continental margin"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical; hot, humid, moderated by northeast trade winds; two rainy seasons (May to August, November to January)",
      "items": []
@@ -123,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly rolling highlands; low coastal plain; savanna in south",
      "items": []
@@ -131,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -152,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "bauxite, gold, diamonds, hardwood timber, shrimp, fish",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "3.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 0.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 2.8% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "87.1% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "9.5% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "1,430 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major watersheds (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -214,7 +107,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "population is heavily concentrated in the northeast in and around Georgetown, with notable concentrations along the Berbice River to the east; the remainder of the country is sparsely populated",
      "items": []
@@ -222,7 +115,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "flash flood threat during rainy seasons",
      "items": []
@@ -230,7 +123,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "the third-smallest country in South America after Suriname and Uruguay; contains some of the largest unspoiled rainforests on the continent",
      "items": []

@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Western Africa, bordering the Gulf of Guinea, between Benin and Cameroon",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "10 00 N, 8 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "923,768 sq km"
-      },
-      {
-       "label": "land",
-       "text": "910,768 sq km"
-      },
-      {
-       "label": "water",
-       "text": "13,000 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "about six times the size of Georgia; slightly more than twice the size of California",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,36 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "853 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200-m depth or to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "varies; equatorial in south, tropical in center, arid in north",
      "items": []
@@ -123,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "southern lowlands merge into central hills and plateaus; mountains in southeast, plains in north",
      "items": []
@@ -131,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -152,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "natural gas, petroleum, tin, iron ore, coal, limestone, niobium, lead, zinc, arable land",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "76.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 40.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 8.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 27.6% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "19.1% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "4.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "2,188 sq km (2017)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -214,7 +107,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Niger river mouth (shared with Guinea [s], Mali, Benin, and Niger) - 4,200 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -222,7 +115,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -239,7 +132,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Lake Chad Basin, Lullemeden-Irhazer Aquifer System",
      "items": []
@@ -247,7 +140,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "largest population of any African nation; significant population clusters are scattered throughout the country, with the highest density areas being in the south and southwest, as shown in this population distribution map",
      "items": []
@@ -255,7 +148,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "periodic droughts; flooding",
      "items": []
@@ -263,7 +156,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "the Niger River enters the country in the northwest and flows southward through tropical rainforests and swamps to its delta in the Gulf of Guinea",
      "items": []

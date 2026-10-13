@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southern South America, bordering the South Atlantic Ocean, between Argentina and Brazil",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "33 00 S, 56 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "South America",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "176,215 sq km"
-      },
-      {
-       "label": "land",
-       "text": "175,015 sq km"
-      },
-      {
-       "label": "water",
-       "text": "1,200 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "about the size of Virginia and West Virginia combined; slightly smaller than the state of Washington",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "660 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or the edge of continental margin"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "warm temperate; freezing temperatures almost unknown",
      "items": []
@@ -127,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly rolling plains and low hills; fertile coastal lowland",
      "items": []
@@ -135,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "arable land, hydropower, minor minerals, fish",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "81.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 12.6% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 68.6% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "11.4% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "7.3% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "2,230 sq km (2018)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -218,7 +107,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Rio de la Plata/Parana river mouth (shared with Brazil [s], Argentina, Paraguay) - 4,880 km; Uruguay river mouth (shared with Brazil [s] and Argentina) - 1,610 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -226,7 +115,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Guarani Aquifer System",
      "items": []
@@ -234,7 +123,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "most of the country's population resides in the southern half of the country; approximately 80% of the populace is urban; nearly half of the population lives in and around the capital of Montevideo",
      "items": []
@@ -242,7 +131,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "seasonally high winds (the pampero is a chilly and occasional violent wind that blows north from the Argentine pampas), droughts, floods; because of the absence of mountains, which act as weather barriers, all locations are particularly vulnerable to rapid changes from weather fronts",
      "items": []
@@ -250,7 +139,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "second-smallest South American country (after Suriname); most of the low-lying landscape (three-quarters of the country) is grassland, ideal for cattle and sheep",
      "items": []

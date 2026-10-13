@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Middle East, bordering the Gulf of Oman, the Persian Gulf, and the Caspian Sea, between Iraq and Pakistan",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "32 00 N, 53 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Middle East",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,648,195 sq km"
-      },
-      {
-       "label": "land",
-       "text": "1,531,595 sq km"
-      },
-      {
-       "label": "water",
-       "text": "116,600 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "almost 2.5 times the size of Texas; slightly smaller than Alaska",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,7 +41,7 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "2,440 km",
      "items": [
@@ -98,33 +53,8 @@
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "bilateral agreements or median lines in the Persian Gulf"
-      },
-      {
-       "label": "continental shelf",
-       "text": "natural prolongation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "mostly arid or semiarid, subtropical along Caspian coast",
      "items": []
@@ -132,7 +62,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "rugged, mountainous rim; high, central basin with deserts, mountains; small, discontinuous plains along both coasts",
      "items": []
@@ -140,7 +70,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -161,56 +91,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "petroleum, natural gas, coal, chromium, copper, iron ore, lead, manganese, zinc, sulfur",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "29% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 9.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 1.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 18.2% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "6.6% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "64.4% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "79,721 sq km (2020)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -223,7 +112,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Euphrates (shared with Turkey [s], Syria, and Iraq [m]) - 3,596 km; Tigris (shared with Turkey, Syria, and Iraq [m]) - 1,950 km; Helmand (shared with Afghanistan [s]) - 1,130 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -231,7 +120,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -244,7 +133,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "population is concentrated in the north, northwest, and west, reflecting the position of the Zagros and Elburz Mountains; the vast, dry areas in the center and eastern parts of the country, around the deserts of the Dasht-e Kavir and Dasht-e Lut, have a much lower population density",
      "items": []
@@ -252,7 +141,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "periodic droughts, floods; dust storms, sandstorms; earthquakes",
      "items": []
@@ -260,7 +149,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "strategic location on the Persian Gulf and Strait of Hormuz",
      "items": []

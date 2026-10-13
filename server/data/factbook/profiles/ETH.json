@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Eastern Africa, west of Somalia",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "8 00 N, 38 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,104,300 sq km"
-      },
-      {
-       "label": "land",
-       "text": "1,096,570 sq km"
-      },
-      {
-       "label": "water",
-       "text": "7,730 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> area numbers are approximate since a large portion of the Ethiopia-Somalia border is undefined"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly less than twice the size of Texas",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -90,23 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "0 km (landlocked)",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": "none (landlocked)",
-     "items": []
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical monsoon with wide topographic-induced variation",
      "items": []
@@ -114,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "high plateau with central mountain range divided by Great Rift Valley",
      "items": []
@@ -122,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -143,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "small reserves of gold, platinum, copper, potash, natural gas, hydropower",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "34.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 14.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 1.8% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 17.7% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "23.7% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "42.2% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "1,814 sq km (2020)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -209,7 +111,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "Blue Nile river source (shared with Sudan [m]) - 1,600 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -217,7 +119,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -230,7 +132,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Ogaden-Juba Basin, Sudd Basin (Umm Ruwaba Aquifer)",
      "items": []
@@ -238,7 +140,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "highest density is found in the highlands of the north and middle areas of the country, particularly around the centrally located capital city of Addis Ababa; the far east and southeast are sparsely populated, as shown in this population distribution map",
      "items": []
@@ -246,7 +148,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "geologically active Great Rift Valley susceptible to earthquakes, volcanic eruptions; frequent droughts <br /><br /><strong>volcanism:</strong> volcanic activity in the Great Rift Valley; Erta Ale (613 m) is the country's most active volcano; Dabbahu became active in 2005, forcing evacuations; other historically active volcanoes include Alayta, Dalaffilla, Dallol, Dama Ali, Fentale, Kone, Manda Hararo, and Manda-Inakir",
      "items": []
@@ -254,7 +156,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "the most populous landlocked country in the world; the Blue Nile, the chief headstream of the Nile by water volume, rises in T'ana Hayk (Lake Tana) in northwest Ethiopia",
      "items": []

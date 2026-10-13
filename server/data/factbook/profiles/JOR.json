@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Middle East, northwest of Saudi Arabia, between Israel (to the west) and Iraq",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "31 00 N, 36 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Middle East",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "89,342 sq km"
-      },
-      {
-       "label": "land",
-       "text": "88,802 sq km"
-      },
-      {
-       "label": "water",
-       "text": "540 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "about three-quarters the size of Pennsylvania; slightly smaller than Indiana",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,28 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "26 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "3 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "mostly arid desert; rainy season in west (November to April)",
      "items": []
@@ -115,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly arid desert plateau; a great north-south geological rift along the west of the country is the dominant topographical feature and includes the Jordan River Valley, the Dead Sea, and the Jordanian Highlands",
      "items": []
@@ -123,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -144,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "phosphates, potash, shale oil",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "11.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 2.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 8.4% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "0.8% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "87.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "875 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -206,7 +107,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -219,7 +120,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Arabian Aquifer System",
      "items": []
@@ -227,7 +128,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "population heavily concentrated in the west, and particularly the northwest, in and around the capital of Amman; a sizeable but smaller population is located in the southwest along the shore of the Gulf of Aqaba",
      "items": []
@@ -235,7 +136,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "droughts; periodic earthquakes; flash floods",
      "items": []
@@ -243,7 +144,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "strategic location at the head of the Gulf of Aqaba; the Arab country that shares the longest border with Israel and the West Bank; the Dead Sea, the lowest point in Asia and the second saltiest body of water in the world (after Lac Assal in Djibouti), lies on Jordan's western border with Israel and the West Bank; Jordan is almost landlocked but does have a 26 km southwestern coastline with a single port, Al 'Aqabah (Aqaba)",
      "items": []

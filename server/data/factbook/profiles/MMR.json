@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southeastern Asia, bordering the Andaman Sea and the Bay of Bengal, between Bangladesh and Thailand",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "22 00 N, 98 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Southeast Asia",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "676,578 sq km"
-      },
-      {
-       "label": "land",
-       "text": "653,508 sq km"
-      },
-      {
-       "label": "water",
-       "text": "23,070 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Texas",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "1,930 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or to the edge of the continental margin"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical monsoon; cloudy, rainy, hot, humid summers (southwest monsoon, June to September); less cloudy, scant rainfall, mild temperatures, lower humidity during winter (northeast monsoon, December to April)",
      "items": []
@@ -127,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "central lowlands ringed by steep, rugged highlands",
      "items": []
@@ -135,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "petroleum, timber, tin, antimony, zinc, copper, tungsten, lead, coal, marble, limestone, precious stones, natural gas, hydropower, arable land",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "19.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 16.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 2.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 0.7% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "42.4% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "37.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "17,140 sq km (2020)",
-     "items": []
-    }
-   },
-   {
     "field": "Major rivers (by length in km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Mekong (shared with China [s], Laos, Thailand, Cambodia, and Vietnam [m]) - 4,350 km; Salween river mouth (shared with China [s] and Thailand) - 3,060 km; Irrawaddy river mouth (shared with China [s]) - 2,809 km; Chindwin - 1,158 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
      "items": []
@@ -213,7 +102,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -230,7 +119,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "population concentrated along coastal areas and in general proximity to the shores of the Irrawaddy River; the extreme north is relatively underpopulated",
      "items": []
@@ -238,7 +127,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "destructive earthquakes and cyclones; flooding and landslides common during rainy season (June to September); periodic droughts",
      "items": []
@@ -246,7 +135,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "strategic location near major Indian Ocean shipping lanes; the north-south flowing Irrawaddy River is the country's largest and most important commercial waterway",
      "items": []

@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Caribbean, located in the Leeward Islands (northern) group; French part of the island of Saint Martin in the Caribbean Sea; Saint Martin lies east of the US Virgin Islands",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "18 05 N, 63 57 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "50 sq km"
-      },
-      {
-       "label": "land",
-       "text": "50 sq km"
-      },
-      {
-       "label": "water",
-       "text": "negligible"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "more than one-third the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,7 +41,7 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "58.9 km (for entire island)",
      "items": []
@@ -94,7 +49,7 @@
    },
    {
     "field": "Climate",
-    "order": 80,
+    "order": 40,
     "content": {
      "text": "temperature averages 27-29 degrees Celsius all year long; low humidity, gentle trade winds, brief, intense rain showers; hurricane season stretches from July to November",
      "items": []
@@ -102,7 +57,7 @@
    },
    {
     "field": "Elevation",
-    "order": 90,
+    "order": 50,
     "content": {
      "text": null,
      "items": [
@@ -119,36 +74,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 100,
+    "order": 60,
     "content": {
      "text": "salt",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 110,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "0% (2022 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "24.8% (2022 est.)"
-      },
-      {
-       "label": "other",
-       "text": "75.2% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "most of the population is found along the coast, with the largest concentration around the capital of Marigot, as well as Orleans and Grand-Case",
      "items": []
@@ -156,7 +90,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 130,
+    "order": 80,
     "content": {
      "text": "subject to hurricanes from July to November",
      "items": []
@@ -164,7 +98,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 140,
+    "order": 90,
     "content": {
      "text": "<strong>note 1:</strong> the southern border is shared with Sint Maarten, which is part of the Kingdom of the Netherlands; together, these two entities make up the smallest landmass in the world that is shared by two self-governing states<br /><br /><strong>note 2:</strong> Simpson Bay Lagoon (aka Simson Bay Lagoon or The Great Pond) is one of the largest inland lagoons in the West Indies; the border between the French and Dutch halves of the island runs across the center of the lagoon, which is shared by both of the island's entities",
      "items": []

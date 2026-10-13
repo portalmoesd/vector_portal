@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southeastern Europe, bordering the Adriatic Sea and Ionian Sea, between Greece to the south and Montenegro and Kosovo to the north",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "41 00 N, 20 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "28,748 sq km"
-      },
-      {
-       "label": "land",
-       "text": "27,398 sq km"
-      },
-      {
-       "label": "water",
-       "text": "1,350 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than Maryland",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,32 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "362 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200-m depth or to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "mild temperate; cool, cloudy, wet winters; hot, clear, dry summers; interior is cooler and wetter",
      "items": []
@@ -119,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly mountains and hills; small plains along coast",
      "items": []
@@ -127,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -148,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "petroleum, natural gas, coal, bauxite, chromite, copper, iron ore, nickel, salt, timber, hydropower, arable land",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "38.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 21.6% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 3.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 13.4% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "34.3% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "27.5% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "1,907 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -210,7 +107,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -223,7 +120,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "a fairly even distribution, with somewhat higher concentrations of people in the western and central parts of the country",
      "items": []
@@ -231,7 +128,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "destructive earthquakes; tsunamis occur along southwestern coast; floods; drought",
      "items": []
@@ -239,7 +136,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "strategic location along Strait of Otranto (links Adriatic Sea to Ionian Sea and Mediterranean Sea)",
      "items": []

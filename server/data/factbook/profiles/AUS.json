@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Oceania, continent between the Indian Ocean and the South Pacific Ocean",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "27 00 S, 133 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Oceania",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "7,741,220 sq km"
-      },
-      {
-       "label": "land",
-       "text": "7,682,300 sq km"
-      },
-      {
-       "label": "water",
-       "text": "58,920 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> includes Lord Howe Island and Macquarie Island"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly smaller than the 48 contiguous US states",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,40 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "25,760 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or to the edge of the continental margin"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "generally arid to semiarid; temperate in south and east; tropical in north",
      "items": []
@@ -127,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly low plateau with deserts; fertile plain in southeast",
      "items": []
@@ -135,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -156,7 +82,7 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "alumina, coal, iron ore, copper, lithium, tin, gold, silver, uranium, nickel, tungsten, rare earth elements, mineral sands, lead, zinc, diamonds, opals, natural gas, petroleum",
      "items": [
@@ -168,49 +94,8 @@
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "47.2% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 43.1% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "17.3% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "35.4% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "19,450 sq km (2022)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -227,7 +112,7 @@
    },
    {
     "field": "Major rivers (by length in km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "River Murray - 2,508 km; Darling River - 1,545 km; Murrumbidgee River - 1,485 km; Lachlan River - 1,339 km; Cooper Creek - 1,113 km; Flinders River - 1,004 km",
      "items": []
@@ -235,7 +120,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": null,
      "items": [
@@ -252,7 +137,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "Great Artesian Basin, Canning Basin",
      "items": []
@@ -260,7 +145,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "population is primarily located on the periphery, with the highest concentration of people residing in the east and southeast; a secondary population center is located in and around Perth in the west; of the states and territories, New South Wales has, by far, the largest population; the interior, or \"outback,\" has a very sparse population",
      "items": []
@@ -268,7 +153,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "cyclones along the coast; severe droughts; forest fires <br /><br /><strong>volcanism:</strong> volcanic activity on Heard and McDonald Islands",
      "items": []
@@ -276,7 +161,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 210,
+    "order": 140,
     "content": {
      "text": "<strong>note 1:</strong> world's smallest continent but sixth-largest country; the largest country in Oceania, the largest country entirely in the Southern Hemisphere, and the largest country without land borders<br /><br /><strong>note 2:</strong> the Great Dividing Range that runs along eastern Australia is that continent’s longest mountain range and the third-longest land-based range in the world; the term \"Great Dividing Range\" refers to the fact that the mountains form a watershed crest from which all of the rivers of eastern Australia flow – east, west, north, and south<br /><br /><strong>note 3:</strong> Australia is the only continent without glaciers; it is the driest inhabited continent on earth; Perth on the west coast is home to the invigorating sea breeze known as the \"Fremantle Doctor,\" one of the most consistent winds in the world; Australia hosts 10% of the world's biodiversity, and a great number of its flora and fauna exist nowhere else in the world",
      "items": []

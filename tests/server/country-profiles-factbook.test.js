@@ -6,7 +6,9 @@ const profile = {
   Introduction: { Background: { text: 'Once upon a time.<br><br>Then later.<script>alert(1)</script>' } },
   Geography: {
     Location: { text: 'Southwestern Asia' },
+    'Map references': { text: 'Asia' },
     Area: { 'total ': { text: '69,700 sq km' }, land: { text: '69,700 sq km' }, water: { text: '0 sq km' } },
+    Climate: { text: 'warm and pleasant' },
     'Empty field': {},
   },
   'People and Society': {
@@ -29,7 +31,8 @@ const profile = {
 test('extractProfile keeps the four sections, drops officials and empty fields, keeps order', () => {
   const { sections } = fb.extractProfile(profile);
   assert.deepStrictEqual(Object.keys(sections), ['Introduction', 'Geography', 'People and Society', 'Government']);
-  assert.deepStrictEqual(sections.Geography.map((r) => r.field), ['Location', 'Area']);
+  // Location and Area are excluded geography detail; Map references and Climate stay.
+  assert.deepStrictEqual(sections.Geography.map((r) => r.field), ['Map references', 'Climate']);
   assert.deepStrictEqual(sections.Geography.map((r) => r.order), [10, 20]);
   const gov = sections.Government;
   assert.deepStrictEqual(gov.map((r) => r.field), ['Country name', 'Executive branch', 'National holiday']);
@@ -37,6 +40,18 @@ test('extractProfile keeps the four sections, drops officials and empty fields, 
   assert.deepStrictEqual(exec.content.items.map((i) => i.label), ['election/appointment process']);
   assert.ok(!JSON.stringify(sections).includes('Ambassador Z'));
   assert.ok(!JSON.stringify(sections).includes('President X'));
+});
+
+test('displayPlacement sends geography to Overview with Map references shown as Continent', () => {
+  assert.deepStrictEqual(fb.displayPlacement('Geography', 'Map references'), { page: 'overview', label: 'Continent' });
+  assert.deepStrictEqual(fb.displayPlacement('Geography', 'Natural hazards'), { page: 'overview', label: 'Natural hazards' });
+  assert.deepStrictEqual(fb.displayPlacement('Introduction', 'Background'), { page: 'introduction', label: 'Background' });
+  assert.deepStrictEqual(fb.displayPlacement('People and Society', 'Languages'), { page: 'people', label: 'Languages' });
+  assert.deepStrictEqual(fb.displayPlacement('Government', 'Flag'), { page: 'government', label: 'Flag' });
+  assert.strictEqual(fb.displayPlacement('Economy', 'GDP').page, null);
+  for (const f of ['Location', 'Geographic coordinates', 'Area', 'Area - comparative', 'Maritime claims', 'Land use', 'Irrigated land']) {
+    assert.ok(fb.EXCLUDED_FIELDS.Geography.includes(f), f);
+  }
 });
 
 test('normalizeField trims sub-keys, sanitizes HTML and strips leading/trailing breaks', () => {
@@ -73,6 +88,9 @@ test('the committed snapshot covers the mapped economies and contains no officia
   assert.strictEqual(geo.gec, 'gg');
   assert.strictEqual(geo.name, 'Georgia');
   assert.ok(geo.sections.Introduction[0].content.text.includes('Colchis'));
+  const geoFields = geo.sections.Geography.map((r) => r.field);
+  assert.ok(!geoFields.includes('Location') && !geoFields.includes('Area') && !geoFields.includes('Land use'));
+  assert.ok(geoFields.includes('Map references') && geoFields.includes('Climate') && geoFields.includes('Natural resources'));
   const govFields = geo.sections.Government.map((r) => r.field);
   assert.ok(!govFields.includes('Diplomatic representation in the US'));
   const exec = geo.sections.Government.find((r) => r.field === 'Executive branch');

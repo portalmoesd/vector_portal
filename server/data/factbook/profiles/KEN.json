@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Eastern Africa, bordering the Indian Ocean, between Somalia and Tanzania",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "1 00 N, 38 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "580,367 sq km"
-      },
-      {
-       "label": "land",
-       "text": "569,140 sq km"
-      },
-      {
-       "label": "water",
-       "text": "11,227 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "five times the size of Ohio; slightly more than twice the size of Nevada",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -86,36 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "536 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200-m depth or to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "varies from tropical along coast to arid in interior",
      "items": []
@@ -123,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "low plains rise to central highlands bisected by Great Rift Valley; fertile plateau in west",
      "items": []
@@ -131,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -152,56 +86,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "limestone, soda ash, salt, gemstones, fluorspar, zinc, diatomite, gypsum, wildlife, hydropower",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "49.5% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 11.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 1.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 36.7% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "6.5% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "44% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "1,030 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -218,7 +111,7 @@
    },
    {
     "field": "Major watersheds (area sq km)",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": null,
      "items": [
@@ -231,7 +124,7 @@
    },
    {
     "field": "Major aquifers",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "Ogaden-Juba Basin",
      "items": []
@@ -239,7 +132,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "population heavily concentrated in the west along the shore of Lake Victoria; other areas of high density include the capital of Nairobi, and in the southeast along the Indian Ocean coast, as shown in this population distribution map",
      "items": []
@@ -247,7 +140,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 190,
+    "order": 120,
     "content": {
      "text": "recurring drought; flooding during rainy seasons <br /><br /><strong>volcanism:</strong> limited volcanic activity; the Barrier (1,032 m) last erupted in 1921; South Island is the only other historically active volcano",
      "items": []
@@ -255,7 +148,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 200,
+    "order": 130,
     "content": {
      "text": "the Kenyan Highlands comprise one of the most successful agricultural production regions in Africa; glaciers are found on Mount Kenya, Africa's second-highest peak; unique physiography supports abundant and varied wildlife of scientific and economic value; Lake Victoria, the world's largest tropical lake and the second-largest freshwater lake, is shared among three countries: Kenya, Tanzania, and Uganda",
      "items": []

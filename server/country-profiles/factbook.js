@@ -34,11 +34,36 @@ const SOURCE = {
 
 const SECTIONS = ['Introduction', 'Geography', 'People and Society', 'Government'];
 
-// Officials are out of scope for the portal: these fields, or sub-entries,
-// are dropped at extraction time and never stored.
+// Fields dropped at extraction time and never stored: officials (out of
+// scope for the portal) and the geography detail the page does not show.
 const EXCLUDED_FIELDS = {
+  Geography: [
+    'Location', 'Geographic coordinates', 'Area', 'Area - comparative', 'Maritime claims',
+    'Land use', 'Irrigated land',
+  ],
   Government: ['Diplomatic representation in the US', 'Diplomatic representation from the US'],
 };
+
+// Where each stored section lands on the profile page. A field-level entry
+// overrides the section default and may rename the field for display; the
+// source's own field name stays in the database.
+const PAGE_SECTIONS = ['introduction', 'overview', 'people', 'government'];
+const DISPLAY = {
+  Introduction: { page: 'introduction' },
+  Geography: {
+    page: 'overview',
+    fields: { 'Map references': { label: 'Continent' } },
+  },
+  'People and Society': { page: 'people' },
+  Government: { page: 'government' },
+};
+
+// Resolve the page section and display label for one stored row.
+function displayPlacement(section, field) {
+  const d = DISPLAY[section] || { page: null };
+  const f = (d.fields || {})[field] || {};
+  return { page: f.page || d.page || null, label: f.label || field };
+}
 const EXCLUDED_ITEMS = {
   Government: { 'Executive branch': ['chief of state', 'head of government', 'cabinet'] },
 };
@@ -177,6 +202,7 @@ async function importFactbook(db, { log = () => {} } = {}) {
     ? `${meta.upstream.repo}/tree/${meta.upstream.commit}` : SOURCE.url;
   const client = await db.pool.connect();
   let rows = 0; let countries = 0;
+  const keepSet = new Set(); const keep = [];
   try {
     await client.query('BEGIN');
     for (const file of files) {
@@ -184,6 +210,8 @@ async function importFactbook(db, { log = () => {} } = {}) {
       countries++;
       for (const [section, list] of Object.entries(p.sections || {})) {
         for (const r of list) {
+          const k = `${section}\u0000${r.field}`;
+          if (!keepSet.has(k)) { keepSet.add(k); keep.push({ section, field: r.field }); }
           await client.query(
             `INSERT INTO stat_country_texts
                (iso3, section, field, display_order, content, original_content, source_id, source_name, source_url, data_date, retrieved_at)
@@ -200,7 +228,16 @@ async function importFactbook(db, { log = () => {} } = {}) {
         }
       }
     }
+    // Fields no longer shipped (excluded since the last import) are removed,
+    // unless an admin has edited them.
+    const { rowCount: removed } = await client.query(
+      `DELETE FROM stat_country_texts t WHERE t.source_id = $1 AND t.edited_at IS NULL
+         AND NOT EXISTS (SELECT 1 FROM unnest($2::text[], $3::text[]) AS k(section, field)
+                         WHERE k.section = t.section AND k.field = t.field)`,
+      [SOURCE.id, keep.map((k) => k.section), keep.map((k) => k.field)]
+    );
     await client.query('COMMIT');
+    if (removed) log(`factbook: ${removed} rows of excluded fields removed`);
   } catch (err) {
     await client.query('ROLLBACK');
     throw err;
@@ -213,6 +250,6 @@ async function importFactbook(db, { log = () => {} } = {}) {
 }
 
 module.exports = {
-  SOURCE, SECTIONS, EXCLUDED_FIELDS, EXCLUDED_ITEMS, DATA_DIR, PROFILES_DIR, META_FILE,
+  SOURCE, SECTIONS, EXCLUDED_FIELDS, EXCLUDED_ITEMS, PAGE_SECTIONS, DISPLAY, displayPlacement, DATA_DIR, PROFILES_DIR, META_FILE,
   cleanText, normalizeField, extractProfile, factbookName, extractAll, readMeta, listProfiles, importFactbook,
 };

@@ -18,6 +18,15 @@
     "Government"
   ],
   "excludedFields": {
+    "Geography": [
+      "Location",
+      "Geographic coordinates",
+      "Area",
+      "Area - comparative",
+      "Maritime claims",
+      "Land use",
+      "Irrigated land"
+    ],
     "Government": [
       "Diplomatic representation in the US",
       "Diplomatic representation from the US"
@@ -32,6 +41,6 @@
       ]
     }
   },
-  "extractedAt": "2026-10-13T09:51:13.615Z",
+  "extractedAt": "2026-10-13T10:10:34.239Z",
   "profiles": 216
 }

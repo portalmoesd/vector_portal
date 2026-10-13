@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Northern Europe, island group between the Norwegian Sea and the North Atlantic Ocean, about halfway between Iceland and Norway",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "62 00 N, 7 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Europe",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "1,393 sq km"
-      },
-      {
-       "label": "land",
-       "text": "1,393 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km (some lakes and streams)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "eight times the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,36 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "1,117 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200 nm or agreed boundaries or median line"
-      },
-      {
-       "label": "exclusive fishing zone",
-       "text": "200 nm or agreed boundaries or median line"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "mild winters, cool summers; usually overcast; foggy, windy",
      "items": []
@@ -119,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "rugged, rocky, some low peaks; cliffs along most of coast",
      "items": []
@@ -127,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -144,48 +78,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "fish, whales, hydropower, possible oil and gas",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "70.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 0.1% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 0% (2022 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 70.1% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "0.1% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "29.8% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 140,
+    "order": 80,
     "content": {
      "text": "the island of Streymoy is by far the most populous with over 40% of the population; it has approximately twice as many inhabitants as Eysturoy, the second most populous island; seven of the inhabited islands have fewer than 100 people",
      "items": []
@@ -193,7 +94,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "strong winds and heavy rains can occur throughout the year",
      "items": []
@@ -201,7 +102,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "archipelago of 17 inhabited islands, one uninhabited island, and a few uninhabited islets; strategically located along important sea lanes in northeastern Atlantic; precipitous terrain limits habitation to small coastal lowlands",
      "items": []

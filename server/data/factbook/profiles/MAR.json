@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Northern Africa, bordering the North Atlantic Ocean and the Mediterranean Sea, between Algeria and Mauritania",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "28 30 N, 10 00 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Africa",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "716,550 sq km"
-      },
-      {
-       "label": "land",
-       "text": "716,300 sq km"
-      },
-      {
-       "label": "water",
-       "text": "250 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly larger than twice the size of California",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -90,40 +45,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "2,945 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "contiguous zone",
-       "text": "24 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "200-m depth or to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "Mediterranean in the north, becoming more extreme in the interior; in the south, hot, dry desert; rain is rare; cold offshore air currents produce fog and heavy dew",
      "items": [
@@ -136,7 +66,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mountainous northern coast (Rif Mountains) and interior (Atlas Mountains) bordered by large plateaus with intermontane valleys, and fertile coastal plains; the south is mostly low, flat desert with large areas of rocky or sandy surfaces",
      "items": []
@@ -144,7 +74,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -165,60 +95,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "phosphates, iron ore, manganese, lead, zinc, fish, salt",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "66.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 15.4% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 4.3% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 47.1% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "12.8% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "20.3% (2023 est.)"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> does not include the area of the former Western Sahara, which is almost exclusively desert"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "17,645 sq km (2019)",
-     "items": []
-    }
-   },
-   {
     "field": "Major rivers (by length in km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": "Draa - 1,100 km",
      "items": []
@@ -226,7 +111,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "the highest population density is found along the Atlantic and Mediterranean coasts; a number of densely populated agglomerations are scattered through the Atlas Mountains, as shown in this population distribution map",
      "items": []
@@ -234,7 +119,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "in the north, the mountains are geologically unstable and subject to earthquakes; periodic droughts; windstorms; flash floods; landslides; in the south, a hot, dry, dust/sand-laden sirocco wind can occur during winter and spring; widespread harmattan haze exists 60% of time, often severely restricting visibility",
      "items": []
@@ -242,7 +127,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "strategic location along Strait of Gibraltar; the only African nation to have both Atlantic and Mediterranean coastlines; the waters off the Atlantic coast are particularly rich fishing areas",
      "items": []

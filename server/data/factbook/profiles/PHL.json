@@ -15,61 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Southeastern Asia, archipelago between the Philippine Sea and the South China Sea, east of Vietnam",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "13 00 N, 122 00 E",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Southeast Asia",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "300,000 sq km"
-      },
-      {
-       "label": "land",
-       "text": "298,170 sq km"
-      },
-      {
-       "label": "water",
-       "text": "1,830 sq km"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "slightly less than twice the size of Georgia; slightly larger than Arizona",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -82,36 +37,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "36,289 km",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "irregular polygon extending up to 100 nm from coastline as defined by 1898 treaty; since late 1970s has also claimed polygonal-shaped area in South China Sea as wide as 285 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      },
-      {
-       "label": "continental shelf",
-       "text": "to the depth of exploitation"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical marine; northeast monsoon (November to April); southwest monsoon (May to October)",
      "items": []
@@ -119,7 +53,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "mostly mountains with narrow to extensive coastal lowlands",
      "items": []
@@ -127,7 +61,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -148,56 +82,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "timber, petroleum, nickel, cobalt, silver, gold, salt, copper",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "42.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: arable land",
-       "text": "arable land: 18.7% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent crops",
-       "text": "permanent crops: 18.9% (2023 est.)"
-      },
-      {
-       "label": "agricultural land: permanent pasture",
-       "text": "permanent pasture: 5% (2023 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "24.7% (2023 est.)"
-      },
-      {
-       "label": "other",
-       "text": "32.7% (2023 est.)"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Irrigated land",
-    "order": 140,
-    "content": {
-     "text": "16,270 sq km (2012)",
-     "items": []
-    }
-   },
-   {
     "field": "Major lakes (area sq km)",
-    "order": 150,
+    "order": 80,
     "content": {
      "text": null,
      "items": [
@@ -210,7 +103,7 @@
    },
    {
     "field": "Population distribution",
-    "order": 160,
+    "order": 90,
     "content": {
      "text": "population concentrated in areas with good farmland; highest concentrations are northwest and south-central Luzon, the southeastern extension of Luzon, and the islands of the Visayan Sea, particularly Cebu and Negros; Manila is home to one eighth of the national population",
      "items": []
@@ -218,7 +111,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 170,
+    "order": 100,
     "content": {
      "text": "astride typhoon belt, usually affected by several cyclonic storms each year; landslides; active volcanoes; destructive earthquakes; tsunamis <br /><br /><strong>volcanism:</strong> significant volcanic activity; Taal (311 m) has been deemed a Decade Volcano by the International Association of Volcanology and Chemistry of the Earth's Interior, worthy of study due to its explosive history and close proximity to human populations; Mayon (2,462 m), the country's most active volcano, erupted in 2009 and forced over 33,000 to be evacuated; other historically active volcanoes include Biliran, Babuyan Claro, Bulusan, Camiguin, Camiguin de Babuyanes, Didicas, Iraya, Jolo, Kanlaon, Makaturing, Musuan, Parker, Pinatubo, and Ragang; see note 2 under \"Geography - note\"",
      "items": []
@@ -226,7 +119,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 180,
+    "order": 110,
     "content": {
      "text": "<strong>note 1:</strong> for decades, the Philippine archipelago was reported as having 7,107 islands; in 2016, the national mapping authority reported that hundreds of new islands had been discovered and increased the number of islands to 7,641, though not all of the new islands have been verified<br /><br /><strong>note 2:</strong> the Philippines is one of the countries along the Ring of Fire, which is a belt bordering the Pacific Ocean that contains about 75% of the world's volcanoes and up to 90% of the world's earthquakes<strong><br /><br />note 3:</strong> the Philippines sits on the Pacific typhoon belt, and an average of 9 typhoons make landfall on the islands each year, with about 5 being destructive; the country is the most exposed in the world to tropical storms",
      "items": []

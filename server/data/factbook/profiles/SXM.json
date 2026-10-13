@@ -15,65 +15,16 @@
   ],
   "Geography": [
    {
-    "field": "Location",
-    "order": 10,
-    "content": {
-     "text": "Caribbean, located in the Leeward Islands (northern) group; Dutch part of the island of Saint Martin in the Caribbean Sea; Sint Maarten lies east of the US Virgin Islands",
-     "items": []
-    }
-   },
-   {
-    "field": "Geographic coordinates",
-    "order": 20,
-    "content": {
-     "text": "18 4 N, 63 4 W",
-     "items": []
-    }
-   },
-   {
     "field": "Map references",
-    "order": 30,
+    "order": 10,
     "content": {
      "text": "Central America and the Caribbean",
      "items": []
     }
    },
    {
-    "field": "Area",
-    "order": 40,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "total",
-       "text": "34 sq km"
-      },
-      {
-       "label": "land",
-       "text": "34 sq km"
-      },
-      {
-       "label": "water",
-       "text": "0 sq km"
-      },
-      {
-       "label": "note",
-       "text": "<strong>note:</strong> Dutch part of the island of Saint Martin"
-      }
-     ]
-    }
-   },
-   {
-    "field": "Area - comparative",
-    "order": 50,
-    "content": {
-     "text": "one-fifth the size of Washington, D.C.",
-     "items": []
-    }
-   },
-   {
     "field": "Land boundaries",
-    "order": 60,
+    "order": 20,
     "content": {
      "text": null,
      "items": [
@@ -90,32 +41,15 @@
    },
    {
     "field": "Coastline",
-    "order": 70,
+    "order": 30,
     "content": {
      "text": "58.9 km (for entire island)",
      "items": []
     }
    },
    {
-    "field": "Maritime claims",
-    "order": 80,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "territorial sea",
-       "text": "12 nm"
-      },
-      {
-       "label": "exclusive economic zone",
-       "text": "200 nm"
-      }
-     ]
-    }
-   },
-   {
     "field": "Climate",
-    "order": 90,
+    "order": 40,
     "content": {
      "text": "tropical marine climate, ameliorated by northeast trade winds, results in moderate temperatures; average rainfall of 150 cm/year; hurricane season stretches from July to November",
      "items": []
@@ -123,7 +57,7 @@
    },
    {
     "field": "Terrain",
-    "order": 100,
+    "order": 50,
     "content": {
      "text": "low, hilly terrain, volcanic origin",
      "items": []
@@ -131,7 +65,7 @@
    },
    {
     "field": "Elevation",
-    "order": 110,
+    "order": 60,
     "content": {
      "text": null,
      "items": [
@@ -148,36 +82,15 @@
    },
    {
     "field": "Natural resources",
-    "order": 120,
+    "order": 70,
     "content": {
      "text": "fish, salt",
      "items": []
     }
    },
    {
-    "field": "Land use",
-    "order": 130,
-    "content": {
-     "text": null,
-     "items": [
-      {
-       "label": "agricultural land",
-       "text": "0% (2022 est.)"
-      },
-      {
-       "label": "forest",
-       "text": "10.9% (2022 est.)"
-      },
-      {
-       "label": "other",
-       "text": "89.1% (2022 est.)"
-      }
-     ]
-    }
-   },
-   {
     "field": "Population distribution",
-    "order": 140,
+    "order": 80,
     "content": {
      "text": "the most populous areas are Lower Prince's Quarter (north of Philipsburg) and Cul de Sac",
      "items": []
@@ -185,7 +98,7 @@
    },
    {
     "field": "Natural hazards",
-    "order": 150,
+    "order": 90,
     "content": {
      "text": "subject to hurricanes from July to November",
      "items": []
@@ -193,7 +106,7 @@
    },
    {
     "field": "Geography - note",
-    "order": 160,
+    "order": 100,
     "content": {
      "text": "<strong>note 1:</strong> the northern border is shared with the French overseas collectivity of Saint Martin; together, these two entities make up the smallest landmass in the world that is shared by two self-governing states<br /><br /><strong>note 2:</strong> Simpson Bay Lagoon (aka, Simson Bay Lagoon or The Great Pond) is one of the largest inland lagoons in the West Indies; the border between the French and Dutch halves of the island of Saint Martin runs across the center of the lagoon, which is shared",
      "items": []
