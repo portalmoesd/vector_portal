@@ -104,6 +104,38 @@ function cleanText(raw) {
   return s || null;
 }
 
+// ── Keep rules ───────────────────────────────────────────────────────────
+// Applied twice: at extraction (so dropped content is never stored) and
+// again when the API reads rows, so a database that still holds rows from
+// an earlier, wider snapshot shows exactly the same thing as a fresh one.
+
+function isFieldKept(section, field) {
+  if (!SECTIONS.includes(section)) return false;
+  if ((EXCLUDED_FIELDS[section] || []).includes(field)) return false;
+  const only = INCLUDED_FIELDS[section] || null;
+  return !only || only.includes(field);
+}
+
+function isItemKept(section, field, label) {
+  if (((EXCLUDED_ITEMS[section] || {})[field] || []).includes(label)) return false;
+  const keep = (INCLUDED_ITEMS[section] || {})[field] || null;
+  return !keep || keep.includes(label);
+}
+
+// Whether a field's own free text is shown; fields reduced to an item
+// allow-list drop it.
+function isTextKept(section, field) {
+  return !((INCLUDED_ITEMS[section] || {})[field]);
+}
+
+// Apply the item rules to stored content. Returns null when nothing is left.
+function filterContent(section, field, content) {
+  if (!content || typeof content !== 'object') return null;
+  const text = isTextKept(section, field) ? (content.text || null) : null;
+  const items = (content.items || []).filter((it) => it && isItemKept(section, field, it.label));
+  return text || items.length ? { text, items } : null;
+}
+
 /**
  * Normalize one Factbook field: {text} or {sub: {text}, ...} (optionally
  * with its own "note") into { text, items: [{label, text}] }.
@@ -111,13 +143,10 @@ function cleanText(raw) {
 function normalizeField(section, field, value) {
   const out = { text: null, items: [] };
   if (!value || typeof value !== 'object') return out;
-  const dropItems = (EXCLUDED_ITEMS[section] || {})[field] || [];
-  const keepItems = (INCLUDED_ITEMS[section] || {})[field] || null;
   for (const [rawKey, v] of Object.entries(value)) {
     const key = rawKey.trim();
-    if (key === 'text') { if (!keepItems) out.text = cleanText(v); continue; }
-    if (dropItems.includes(key)) continue;
-    if (keepItems && !keepItems.includes(key)) continue;
+    if (key === 'text') { if (isTextKept(section, field)) out.text = cleanText(v); continue; }
+    if (!isItemKept(section, field, key)) continue;
     const text = v && typeof v === 'object' ? cleanText(v.text) : cleanText(v);
     if (text) out.items.push({ label: key, text });
   }
@@ -133,13 +162,10 @@ function extractProfile(profile) {
   for (const section of SECTIONS) {
     const src = profile && profile[section];
     if (!src || typeof src !== 'object') continue;
-    const skip = EXCLUDED_FIELDS[section] || [];
-    const only = INCLUDED_FIELDS[section] || null;
     const rows = [];
     let order = 0;
     for (const [field, value] of Object.entries(src)) {
-      if (skip.includes(field)) continue;
-      if (only && !only.includes(field)) continue;
+      if (!isFieldKept(section, field)) continue;
       const content = normalizeField(section, field, value);
       if (!content.text && !content.items.length) continue;
       rows.push({ field, order: (order += 10), content });
@@ -216,7 +242,7 @@ function listProfiles() {
  * an edited row (edited_at set) keeps its content, only its original_content
  * is refreshed. Returns { rows, countries, skippedEdited }.
  */
-async function importFactbook(db, { log = () => {} } = {}) {
+async function importFactbook(db, { log = () => {}, trigger = 'cli' } = {}) {
   const meta = readMeta();
   if (!meta) throw new Error(`no ${META_FILE}; run the extract step first`);
   const files = listProfiles();
@@ -231,7 +257,7 @@ async function importFactbook(db, { log = () => {} } = {}) {
     ? `${meta.upstream.repo}/tree/${meta.upstream.commit}` : SOURCE.url;
   const client = await db.pool.connect();
   let rows = 0; let countries = 0;
-  const keepSet = new Set(); const keep = [];
+  const keep = { iso3: [], section: [], field: [] }; // every (country, section, field) shipped
   try {
     await client.query('BEGIN');
     for (const file of files) {
@@ -239,8 +265,7 @@ async function importFactbook(db, { log = () => {} } = {}) {
       countries++;
       for (const [section, list] of Object.entries(p.sections || {})) {
         for (const r of list) {
-          const k = `${section}\u0000${r.field}`;
-          if (!keepSet.has(k)) { keepSet.add(k); keep.push({ section, field: r.field }); }
+          keep.iso3.push(p.iso3); keep.section.push(section); keep.field.push(r.field);
           await client.query(
             `INSERT INTO stat_country_texts
                (iso3, section, field, display_order, content, original_content, source_id, source_name, source_url, data_date, retrieved_at)
@@ -257,13 +282,14 @@ async function importFactbook(db, { log = () => {} } = {}) {
         }
       }
     }
-    // Fields no longer shipped (excluded since the last import) are removed,
-    // unless an admin has edited them.
+    // Rows no longer shipped (a field excluded since the last import, or
+    // one that became empty for a country) are removed, unless an admin has
+    // edited them.
     const { rowCount: removed } = await client.query(
       `DELETE FROM stat_country_texts t WHERE t.source_id = $1 AND t.edited_at IS NULL
-         AND NOT EXISTS (SELECT 1 FROM unnest($2::text[], $3::text[]) AS k(section, field)
-                         WHERE k.section = t.section AND k.field = t.field)`,
-      [SOURCE.id, keep.map((k) => k.section), keep.map((k) => k.field)]
+         AND NOT EXISTS (SELECT 1 FROM unnest($2::text[], $3::text[], $4::text[]) AS k(iso3, section, field)
+                         WHERE k.iso3 = t.iso3 AND k.section = t.section AND k.field = t.field)`,
+      [SOURCE.id, keep.iso3, keep.section, keep.field]
     );
     await client.query('COMMIT');
     if (removed) log(`factbook: ${removed} rows of excluded fields removed`);
@@ -274,11 +300,42 @@ async function importFactbook(db, { log = () => {} } = {}) {
     client.release();
   }
   const { rows: [{ count: edited }] } = await db.query('SELECT count(*)::int AS count FROM stat_country_texts WHERE edited_at IS NOT NULL');
+  // Record the run with the snapshot's extractedAt so needsImport() can tell
+  // whether the database already carries this version of the files.
+  await db.query(
+    `INSERT INTO stat_sync_runs (source_id, trigger, finished_at, status, ok_count, failed_count, log)
+     VALUES ($1, $2, now(), 'ok', $3, 0, $4::jsonb)`,
+    [SOURCE.id, trigger, rows, JSON.stringify([{
+      at: new Date().toISOString(), level: 'info', step: 'import',
+      message: `${rows} fields for ${countries} countries loaded, ${edited} edited rows kept`,
+      extractedAt: meta.extractedAt || null, snapshotDate: meta.snapshotDate || null,
+      upstreamCommit: (meta.upstream && meta.upstream.commit) || null,
+    }])]
+  );
   log(`factbook: ${rows} fields for ${countries} countries loaded (${edited} edited rows kept)`);
   return { rows, countries, edited };
 }
 
+/**
+ * True when the database does not yet carry the committed snapshot: the
+ * table is empty, or no successful import recorded this meta.extractedAt.
+ * A re-extract (new exclusions, newer upstream) changes extractedAt, so a
+ * server restart applies it without anyone running the CLI.
+ */
+async function needsImport(db) {
+  const meta = readMeta();
+  if (!meta) return false;
+  const { rows: [{ count }] } = await db.query('SELECT count(*)::int AS count FROM stat_country_texts');
+  if (count === 0) return true;
+  const { rows } = await db.query(
+    `SELECT 1 FROM stat_sync_runs WHERE source_id = $1 AND status = 'ok' AND log @> $2::jsonb LIMIT 1`,
+    [SOURCE.id, JSON.stringify([{ extractedAt: meta.extractedAt }])]
+  );
+  return rows.length === 0;
+}
+
 module.exports = {
   SOURCE, SECTIONS, EXCLUDED_FIELDS, INCLUDED_FIELDS, EXCLUDED_ITEMS, INCLUDED_ITEMS, PAGE_SECTIONS, DISPLAY, displayPlacement, DATA_DIR, PROFILES_DIR, META_FILE,
-  cleanText, normalizeField, extractProfile, factbookName, extractAll, readMeta, listProfiles, importFactbook,
+  isFieldKept, isItemKept, isTextKept, filterContent,
+  cleanText, normalizeField, extractProfile, factbookName, extractAll, readMeta, listProfiles, importFactbook, needsImport,
 };

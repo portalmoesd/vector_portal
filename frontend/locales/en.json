@@ -490,7 +490,15 @@
       "failedItems": "Failed: {items}",
       "statusOk": "completed",
       "statusPartial": "partial",
-      "statusFailed": "failed"
+      "statusFailed": "failed",
+      "factbookTitle": "Factbook text",
+      "factbookDesc": "Descriptive text from the discontinued CIA World Factbook, shipped with the application. It is loaded into the database automatically at start-up whenever the shipped version changed; use the button to apply it right away. Edited entries are never overwritten.",
+      "factbookSummary": "{countries} countries · {fields} fields · {edited} edited · snapshot {snapshot}",
+      "factbookPending": "a newer shipped version is waiting to be loaded",
+      "factbookCurrent": "database matches the shipped version",
+      "factbookReload": "Reload Factbook text",
+      "factbookLoading": "Loading…",
+      "factbookDone": "Loaded {fields} fields for {countries} countries ({edited} edited entries kept)."
     }
   },
   "library": {

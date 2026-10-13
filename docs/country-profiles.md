@@ -79,6 +79,9 @@ labelled "snapshot 2026-01 · publication discontinued on 04/02/2026".
     of government and cabinet; the "Legislative branch" fields keep only the
     chamber (or legislature) name and the number of seats.
   - HTML is reduced to `br`, `p`, `em`, `strong`, lists.
+- The same keep rules are applied again when the API reads the rows, so a
+  database still holding rows from an earlier, wider snapshot shows exactly
+  what a freshly imported one shows; the import only tidies the table.
 - Placement on the page is configured in `DISPLAY` (`factbook.js`): Introduction
   → Introduction; the remaining Geography fields → Overview, with "Map references"
   shown as "Continent"; People and Society → People (below the World Bank
@@ -95,7 +98,13 @@ node server/country-profiles/import-factbook.js --extract /path/to/factbook.json
                                                           # rebuild the committed files from an upstream checkout
 ```
 
-The server also loads the files at boot when `stat_country_texts` is empty.
+The server also loads the files at boot whenever the database does not yet
+carry the committed snapshot (table empty, or no successful import recorded
+for the current `meta.json` `extractedAt`). So after a re-extract that changes
+what is kept, a deploy or restart applies it. To apply it without restarting,
+use "Reload Factbook text" in Admin Panel → Data Uploads (it also shows whether
+a newer shipped version is waiting), or run the CLI. Edited rows are never
+touched by any of these paths.
 
 ## Storage (Postgres, `server/schema.sql`)
 
@@ -140,6 +149,7 @@ in-process schedule (e.g. when a Render cron job runs the CLI instead).
 - `GET /api/country-profiles/countries/:slug` — one profile: country facts, every indicator with its latest value/year/source, 20-year GDP and population series, and the Factbook text sections.
 - `GET /api/country-profiles/status` — counts and the last five runs.
 - `POST /api/country-profiles/sync` — start a sync (202; 409 if one is running).
+- `POST /api/country-profiles/import-factbook` — load the shipped Factbook snapshot now (runs inline, a few seconds; 409 if one is running).
 
 ## Tests
 

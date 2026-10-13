@@ -137,10 +137,15 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
     // factbook.js); `field` is the source's name, `label` what the page shows.
     const texts = { sections: {}, source: null };
     for (const r of txt) {
+      // The keep rules are applied here too, so rows left over from an
+      // earlier, wider snapshot never reach the page.
+      if (!factbook.isFieldKept(r.section, r.field)) continue;
+      const content = factbook.filterContent(r.section, r.field, r.content);
+      if (!content) continue;
       const { page, label } = factbook.displayPlacement(r.section, r.field);
       if (!page) continue;
       if (!texts.sections[page]) texts.sections[page] = [];
-      texts.sections[page].push({ section: r.section, field: r.field, label, content: r.content, edited: !!r.edited_at });
+      texts.sections[page].push({ section: r.section, field: r.field, label, content, edited: !!r.edited_at });
       if (!texts.source) {
         texts.source = { name: r.source_name, url: r.source_url, dataDate: r.data_date, retrievedAt: r.retrieved_at, discontinued: '2026-02-04' };
       }
@@ -177,7 +182,16 @@ router.get('/status', ...adminOnly, async (req, res) => {
               (SELECT count(*)::int FROM stat_observations WHERE source_id = $1) AS observations`,
       [SOURCE.id]
     );
-    res.json({ source: SOURCE, running: isRunning(), countries: counts.countries, observations: counts.observations, runs: rows.map(runRow) });
+    const { rows: [fbRow] } = await db.query(
+      `SELECT (SELECT count(*)::int FROM stat_country_texts) AS fields,
+              (SELECT count(DISTINCT iso3)::int FROM stat_country_texts) AS countries,
+              (SELECT count(*)::int FROM stat_country_texts WHERE edited_at IS NOT NULL) AS edited`
+    );
+    const fbMeta = factbook.readMeta();
+    res.json({
+      source: SOURCE, running: isRunning(), countries: counts.countries, observations: counts.observations, runs: rows.map(runRow),
+      factbook: { ...fbRow, snapshotDate: fbMeta && fbMeta.snapshotDate, extractedAt: fbMeta && fbMeta.extractedAt, pending: await factbook.needsImport(db) },
+    });
   } catch (err) {
     console.error('country-profiles status error:', err);
     res.status(500).json({ error: 'Internal server error' });
@@ -189,6 +203,24 @@ router.post('/sync', ...adminOnly, (req, res) => {
   if (isRunning()) return res.status(409).json({ error: 'A sync is already running' });
   startSync('admin');
   res.status(202).json({ started: true });
+});
+
+// POST /api/country-profiles/import-factbook — (re)load the committed
+// Factbook snapshot into the database now. Idempotent; edited rows are kept.
+// Runs inline: a full load is a few seconds.
+let factbookImportRunning = false;
+router.post('/import-factbook', ...adminOnly, async (req, res) => {
+  if (factbookImportRunning) return res.status(409).json({ error: 'A Factbook import is already running' });
+  factbookImportRunning = true;
+  try {
+    const r = await factbook.importFactbook(db, { log: (m) => console.log(`country-profiles: ${m}`), trigger: 'admin' });
+    res.json({ ok: true, rows: r.rows, countries: r.countries, edited: r.edited });
+  } catch (err) {
+    console.error('country-profiles factbook import error:', err);
+    res.status(500).json({ error: err.message });
+  } finally {
+    factbookImportRunning = false;
+  }
 });
 
 function startSync(trigger) {
@@ -220,11 +252,13 @@ async function bootCheck() {
   } catch (err) {
     console.warn('country-profiles: boot check skipped:', err.message);
   }
-  // The Factbook text ships with the repository; load it once into the
-  // database so it can be edited there later.
+  // The Factbook text ships with the repository; load it into the database
+  // (where it can be edited later) whenever the committed snapshot changed.
   try {
-    const { rows: [{ count }] } = await db.query('SELECT count(*)::int AS count FROM stat_country_texts');
-    if (count === 0) await factbook.importFactbook(db, { log: (m) => console.log(`country-profiles: ${m}`) });
+    if (await factbook.needsImport(db)) {
+      console.log('country-profiles: factbook snapshot not yet imported, loading it');
+      await factbook.importFactbook(db, { log: (m) => console.log(`country-profiles: ${m}`), trigger: 'boot' });
+    }
   } catch (err) {
     console.warn('country-profiles: factbook import skipped:', err.message);
   }

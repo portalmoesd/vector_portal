@@ -123,6 +123,14 @@
           <div id="cpSyncFailed" style="font-size:0.85rem;color:var(--accent-red);margin-bottom:10px;"></div>
           <button type="button" class="btn btn-primary" id="cpSyncBtn" data-i18n="admin.countryProfiles.syncNow">Sync now</button>
           <div id="cpSyncFeedback" style="margin-top:10px;font-size:0.9rem;"></div>
+
+          <h4 style="margin:18px 0 6px;font-size:0.95rem;" data-i18n="admin.countryProfiles.factbookTitle">Factbook text</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:10px;" data-i18n="admin.countryProfiles.factbookDesc">
+            Descriptive text from the discontinued CIA World Factbook, shipped with the application. It is loaded into the database automatically at start-up whenever the shipped version changed; use the button to apply it right away. Edited entries are never overwritten.
+          </p>
+          <div id="cpFactbookStatus" style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:10px;" data-i18n="admin.upload.loading">Loading…</div>
+          <button type="button" class="btn btn-outline" id="cpFactbookBtn" data-i18n="admin.countryProfiles.factbookReload">Reload Factbook text</button>
+          <div id="cpFactbookFeedback" style="margin-top:10px;font-size:0.9rem;"></div>
         </section>
       </div>
 

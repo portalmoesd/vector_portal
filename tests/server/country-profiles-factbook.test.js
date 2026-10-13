@@ -77,6 +77,31 @@ test('displayPlacement sends geography to Overview with Map references shown as 
   }
 });
 
+test('the keep rules also filter stored rows at read time (stale rows from a wider snapshot stay hidden)', () => {
+  assert.strictEqual(fb.isFieldKept('People and Society', 'Population'), false);
+  assert.strictEqual(fb.isFieldKept('People and Society', 'Religions'), true);
+  assert.strictEqual(fb.isFieldKept('Geography', 'Location'), false);
+  assert.strictEqual(fb.isFieldKept('Geography', 'Climate'), true);
+  assert.strictEqual(fb.isFieldKept('Government', 'Judicial branch'), false);
+  assert.strictEqual(fb.isFieldKept('Economy', 'GDP'), false);
+  // A legislative row stored with every sub-entry is reduced to the two kept ones.
+  const stored = { text: 'ignored', items: [
+    { label: 'legislature name', text: 'Parliament' }, { label: 'legislative structure', text: 'unicameral' },
+    { label: 'number of seats', text: '150' }, { label: 'note', text: 'x' },
+  ] };
+  assert.deepStrictEqual(fb.filterContent('Government', 'Legislative branch', stored), {
+    text: null, items: [{ label: 'legislature name', text: 'Parliament' }, { label: 'number of seats', text: '150' }],
+  });
+  // Officials entries stored earlier are dropped; the language sample too.
+  const exec = { text: null, items: [{ label: 'chief of state', text: 'President X' }, { label: 'election results', text: 'r' }] };
+  assert.deepStrictEqual(fb.filterContent('Government', 'Executive branch', exec).items.map((i) => i.label), ['election results']);
+  const lang = { text: null, items: [{ label: 'Languages', text: 'Georgian' }, { label: 'major-language sample(s)', text: 'slogan' }] };
+  assert.deepStrictEqual(fb.filterContent('People and Society', 'Languages', lang).items.map((i) => i.label), ['Languages']);
+  // Nothing left -> null, so the row disappears.
+  assert.strictEqual(fb.filterContent('Government', 'Executive branch', { text: null, items: [{ label: 'cabinet', text: 'c' }] }), null);
+  assert.strictEqual(fb.filterContent('Geography', 'Climate', { text: 'warm', items: [] }).text, 'warm');
+});
+
 test('normalizeField trims sub-keys, sanitizes HTML and strips leading/trailing breaks', () => {
   const area = fb.normalizeField('Geography', 'Area', profile.Geography.Area);
   assert.strictEqual(area.text, null);
