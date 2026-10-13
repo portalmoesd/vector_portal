@@ -200,6 +200,24 @@ router.post('/sync', ...adminOnly, (req, res) => {
   res.status(202).json({ started: true });
 });
 
+// POST /api/country-profiles/import-factbook — (re)load the committed
+// Factbook snapshot into the database now. Idempotent; edited rows are kept.
+// Runs inline: a full load is a few seconds.
+let factbookImportRunning = false;
+router.post('/import-factbook', ...adminOnly, async (req, res) => {
+  if (factbookImportRunning) return res.status(409).json({ error: 'A Factbook import is already running' });
+  factbookImportRunning = true;
+  try {
+    const r = await factbook.importFactbook(db, { log: (m) => console.log(`country-profiles: ${m}`), trigger: 'admin' });
+    res.json({ ok: true, rows: r.rows, countries: r.countries, edited: r.edited });
+  } catch (err) {
+    console.error('country-profiles factbook import error:', err);
+    res.status(500).json({ error: err.message });
+  } finally {
+    factbookImportRunning = false;
+  }
+});
+
 function startSync(trigger) {
   const log = (m) => console.log(`country-profiles: ${m}`);
   runSync({ db, trigger, log }).catch((err) => console.error('country-profiles: sync crashed:', err.message));

@@ -862,6 +862,9 @@
     const failedEl = document.getElementById('cpSyncFailed');
     const btn = document.getElementById('cpSyncBtn');
     const feedback = document.getElementById('cpSyncFeedback');
+    const fbStatusEl = document.getElementById('cpFactbookStatus');
+    const fbBtn = document.getElementById('cpFactbookBtn');
+    const fbFeedback = document.getElementById('cpFactbookFeedback');
     if (!statusEl || !btn) return;
     const tr = (k, p) => I18n.tr(k, p);
     const statusLabel = (s) => ({ ok: tr('admin.countryProfiles.statusOk'), partial: tr('admin.countryProfiles.statusPartial'), failed: tr('admin.countryProfiles.statusFailed') })[s] || s;
@@ -884,9 +887,32 @@
         }
         statusEl.textContent = lines.join(' · ');
         btn.disabled = !!j.running;
+        if (fbStatusEl && j.factbook) {
+          const f = j.factbook;
+          const parts = [tr('admin.countryProfiles.factbookSummary', { countries: f.countries, fields: Number(f.fields).toLocaleString(), edited: f.edited, snapshot: f.snapshotDate || '—' })];
+          parts.push(f.pending ? tr('admin.countryProfiles.factbookPending') : tr('admin.countryProfiles.factbookCurrent'));
+          fbStatusEl.textContent = parts.join(' · ');
+          fbStatusEl.style.color = f.pending ? '#a16207' : '';
+        }
       } catch (err) {
         statusEl.textContent = err.message;
       }
+    }
+
+    if (fbBtn) {
+      fbBtn.addEventListener('click', async () => {
+        fbBtn.disabled = true;
+        fbFeedback.textContent = tr('admin.countryProfiles.factbookLoading');
+        try {
+          const r = await Api.post('/api/country-profiles/import-factbook', {});
+          fbFeedback.textContent = tr('admin.countryProfiles.factbookDone', { fields: Number(r.rows).toLocaleString(), countries: r.countries, edited: r.edited });
+          await load();
+        } catch (err) {
+          fbFeedback.textContent = err.message;
+        } finally {
+          fbBtn.disabled = false;
+        }
+      });
     }
 
     btn.addEventListener('click', async () => {

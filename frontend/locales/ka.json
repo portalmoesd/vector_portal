@@ -490,7 +490,15 @@
       "failedItems": "წარუმატებელი: {items}",
       "statusOk": "დასრულდა",
       "statusPartial": "ნაწილობრივ",
-      "statusFailed": "ჩაიშალა"
+      "statusFailed": "ჩაიშალა",
+      "factbookTitle": "World Factbook-ის ტექსტი",
+      "factbookDesc": "აღწერილობითი ტექსტი შეწყვეტილი CIA World Factbook-იდან, რომელიც აპლიკაციასთან ერთად მოდის. ის ბაზაში ავტომატურად იტვირთება გაშვებისას, როცა მოწოდებული ვერსია შეიცვლება; ღილაკით შეგიძლიათ დაუყოვნებლივ გამოიყენოთ. რედაქტირებული ჩანაწერები არასდროს გადაიწერება.",
+      "factbookSummary": "{countries} ქვეყანა · {fields} ველი · {edited} რედაქტირებული · ვერსია {snapshot}",
+      "factbookPending": "მოწოდებული ახალი ვერსია ჩატვირთვას ელოდება",
+      "factbookCurrent": "ბაზა ემთხვევა მოწოდებულ ვერსიას",
+      "factbookReload": "World Factbook-ის ტექსტის გადატვირთვა",
+      "factbookLoading": "იტვირთება…",
+      "factbookDone": "ჩაიტვირთა {fields} ველი {countries} ქვეყნისთვის ({edited} რედაქტირებული ჩანაწერი შენარჩუნდა)."
     }
   },
   "library": {

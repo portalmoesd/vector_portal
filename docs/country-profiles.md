@@ -98,8 +98,10 @@ node server/country-profiles/import-factbook.js --extract /path/to/factbook.json
 The server also loads the files at boot whenever the database does not yet
 carry the committed snapshot (table empty, or no successful import recorded
 for the current `meta.json` `extractedAt`). So after a re-extract that changes
-what is kept, a deploy or restart applies it; the CLI is only needed to apply
-it without restarting. Edited rows are never touched by either path.
+what is kept, a deploy or restart applies it. To apply it without restarting,
+use "Reload Factbook text" in Admin Panel → Data Uploads (it also shows whether
+a newer shipped version is waiting), or run the CLI. Edited rows are never
+touched by any of these paths.
 
 ## Storage (Postgres, `server/schema.sql`)
 
@@ -144,6 +146,7 @@ in-process schedule (e.g. when a Render cron job runs the CLI instead).
 - `GET /api/country-profiles/countries/:slug` — one profile: country facts, every indicator with its latest value/year/source, 20-year GDP and population series, and the Factbook text sections.
 - `GET /api/country-profiles/status` — counts and the last five runs.
 - `POST /api/country-profiles/sync` — start a sync (202; 409 if one is running).
+- `POST /api/country-profiles/import-factbook` — load the shipped Factbook snapshot now (runs inline, a few seconds; 409 if one is running).
 
 ## Tests
 
