@@ -80,12 +80,13 @@
 
   // Data-year + source tag shown next to every World Bank figure. The full
   // source name and retrieval date sit in the tooltip; the section footer
-  // repeats them in full.
+  // repeats them in full. References are plain text: the source URLs are
+  // machine-readable API responses, not pages for a reader.
   function sourceTag(ind) {
     if (ind.value == null) return `<span class="cp-tag cp-tag--none">${escapeHtml(t('countryProfiles.noDataSource'))}</span>`;
     const retrieved = ind.retrievedAt ? `${t('countryProfiles.retrieved')} ${formatDate(ind.retrievedAt)}` : '';
     const title = `${ind.name} · ${ind.sourceName}${retrieved ? ` · ${retrieved}` : ''}`;
-    return `<a class="cp-tag" href="${escapeHtml(ind.sourceUrl)}" target="_blank" rel="noopener" title="${escapeHtml(title)}"><span class="cp-tag__year">${ind.year}</span><span class="cp-tag__src">${escapeHtml(t('countryProfiles.sourceShort'))}</span></a>`;
+    return `<span class="cp-tag" title="${escapeHtml(title)}"><span class="cp-tag__year">${ind.year}</span><span class="cp-tag__src">${escapeHtml(t('countryProfiles.sourceShort'))}</span></span>`;
   }
 
   function wbAttribution(indicators) {
@@ -93,14 +94,14 @@
     const src = withData[0];
     if (!src) return '';
     const retrieved = src.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(src.retrievedAt)}` : '';
-    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> <a href="${escapeHtml(src.sourceUrl)}" target="_blank" rel="noopener">${escapeHtml(src.sourceName)}</a>${escapeHtml(retrieved)} · ${escapeHtml(t('countryProfiles.latestYearNote'))}</div>`;
+    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${escapeHtml(src.sourceName)}${escapeHtml(retrieved)} · ${escapeHtml(t('countryProfiles.latestYearNote'))}</div>`;
   }
 
   function fbAttribution(src) {
     if (!src) return '';
     const when = src.dataDate ? t('countryProfiles.factbook.snapshot', { date: src.dataDate }) : '';
     const ended = src.discontinued ? t('countryProfiles.factbook.discontinued', { date: formatDate(src.discontinued) }) : '';
-    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> <a href="${escapeHtml(src.url)}" target="_blank" rel="noopener">${escapeHtml(src.name)}</a>${when ? ` · ${escapeHtml(when)}` : ''}${ended ? ` · ${escapeHtml(ended)}` : ''}</div>`;
+    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${escapeHtml(src.name)}${when ? ` · ${escapeHtml(when)}` : ''}${ended ? ` · ${escapeHtml(ended)}` : ''}</div>`;
   }
 
   // ── Table rows (one visual language for every section) ──────────────
@@ -209,8 +210,8 @@
 
     const fb = data.texts && data.texts.source;
     const srcLine = [
-      `<a href="${escapeHtml(c.sourceUrl || '#')}" target="_blank" rel="noopener">${escapeHtml(t('countryProfiles.countryListSource'))}</a>${c.retrievedAt ? ` (${escapeHtml(t('countryProfiles.retrieved'))} ${escapeHtml(formatDate(c.retrievedAt))})` : ''}`,
-      fb && gov.length ? `<a href="${escapeHtml(fb.url)}" target="_blank" rel="noopener">${escapeHtml(fb.name)}</a>${fb.dataDate ? ` (${escapeHtml(t('countryProfiles.factbook.snapshot', { date: fb.dataDate }))})` : ''}` : '',
+      `${escapeHtml(t('countryProfiles.countryListSource'))}${c.retrievedAt ? ` (${escapeHtml(t('countryProfiles.retrieved'))} ${escapeHtml(formatDate(c.retrievedAt))})` : ''}`,
+      fb && gov.length ? `${escapeHtml(fb.name)}${fb.dataDate ? ` (${escapeHtml(t('countryProfiles.factbook.snapshot', { date: fb.dataDate }))})` : ''}` : '',
     ].filter(Boolean).join(' · ');
 
     $('cpHeader').innerHTML = `
@@ -287,7 +288,7 @@
     // Overview: identity facts (World Bank list), surface area, then the
     // geography fields from the Factbook.
     const listSrc = { value: 1, year: null, sourceName: t('countryProfiles.countryListSource'), sourceUrl: c.sourceUrl, retrievedAt: c.retrievedAt, name: '' };
-    const listTag = `<a class="cp-tag" href="${escapeHtml(c.sourceUrl || '#')}" target="_blank" rel="noopener" title="${escapeHtml(`${listSrc.sourceName}${c.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(c.retrievedAt)}` : ''}`)}"><span class="cp-tag__src">${escapeHtml(t('countryProfiles.sourceShort'))}</span></a>`;
+    const listTag = `<span class="cp-tag" title="${escapeHtml(`${listSrc.sourceName}${c.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(c.retrievedAt)}` : ''}`)}"><span class="cp-tag__src">${escapeHtml(t('countryProfiles.sourceShort'))}</span></span>`;
     const overviewRows = [
       tr({ attrs: 'data-fact="region"', label: t('countryProfiles.region'), body: c.region.name ? escapeHtml(c.region.name) : noData(), meta: listTag }),
       tr({ attrs: 'data-fact="income"', label: t('countryProfiles.incomeLevel'), body: c.incomeLevel.name ? escapeHtml(c.incomeLevel.name) : noData(), meta: listTag }),
@@ -384,7 +385,7 @@
 
   function renderFooter(data) {
     const sync = data.lastSync && data.lastSync.finishedAt ? formatDateTime(data.lastSync.finishedAt) : '—';
-    $('cpFooter').innerHTML = `${escapeHtml(t('countryProfiles.source'))}: <a href="${escapeHtml(data.source.url)}" target="_blank" rel="noopener">${escapeHtml(data.source.name)}</a> · ${escapeHtml(t('countryProfiles.lastSync'))}: ${escapeHtml(sync)} · ${escapeHtml(t('countryProfiles.latestYearNote'))}`;
+    $('cpFooter').textContent = `${t('countryProfiles.source')}: ${data.source.name} · ${t('countryProfiles.lastSync')}: ${sync} · ${t('countryProfiles.latestYearNote')}`;
   }
 
   // ── Load ─────────────────────────────────────────────────────────────

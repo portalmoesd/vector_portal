@@ -51,8 +51,10 @@ Rules applied:
 - Every stored value carries the indicator code, value, data year, source
   name, source URL (the request URL it came from) and retrieval timestamp.
 - The page shows the latest available year per indicator next to each
-  figure, with a link to the source. A missing value is "No data"; nothing is
-  estimated or carried forward. Null values are not stored at all.
+  figure, with the source name as plain text (the stored source URLs are raw
+  API responses, so they are kept in the data but not shown as links). A
+  missing value is "No data"; nothing is estimated or carried forward. Null
+  values are not stored at all.
 - Names, regions and income groups are used exactly as the source gives them.
   In the Georgian UI the portal's own Georgian country name (matched on ISO2)
   is shown as a display translation, with the English source name underneath.

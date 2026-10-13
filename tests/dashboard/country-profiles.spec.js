@@ -169,7 +169,10 @@ test('profile: breadcrumb, hero, key figures with year and source, only sections
   const gdp = page.locator('.cp-kf__item[data-code="NY.GDP.MKTP.CD"]');
   await expect(gdp.locator('.cp-kf__value')).toHaveText('$33.3B');
   await expect(gdp.locator('.cp-tag__year')).toHaveText('2024');
-  await expect(gdp.locator('.cp-tag')).toHaveAttribute('href', SRC_URL);
+  // References are plain text (the source URLs are raw API responses), with
+  // the full indicator name, source and retrieval date in the tooltip.
+  await expect(gdp.locator('.cp-tag')).toHaveAttribute('title', 'GDP (current US$) · World Bank, World Development Indicators · retrieved 12/10/2026');
+  await expect(page.locator('.cp-kf a, .cp-section .cp-attrib a, .cp-hero__src a, #cpFooter a')).toHaveCount(0);
   await expect(page.locator('.cp-kf__item[data-code="SP.POP.TOTL"] .cp-kf__value')).toHaveText('3,694,600');
   await expect(page.locator('.cp-kf__item[data-code="AG.SRF.TOTL.K2"] .cp-kf__value')).toHaveText('69,700 km²');
   await expect(page.locator('.cp-kf__item[data-code="SL.UEM.TOTL.ZS"] .cp-kf__value')).toHaveText('No data');

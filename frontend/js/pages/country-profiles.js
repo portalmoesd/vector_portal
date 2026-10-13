@@ -90,7 +90,7 @@
   function renderFooter() {
     if (!data.source) { footerEl.textContent = ''; return; }
     const sync = data.lastSync && data.lastSync.finishedAt ? formatDateTime(data.lastSync.finishedAt) : '—';
-    footerEl.innerHTML = `${escapeHtml(t('countryProfiles.source'))}: <a href="${escapeHtml(data.source.url)}" target="_blank" rel="noopener">${escapeHtml(data.source.name)}</a> · ${escapeHtml(t('countryProfiles.lastSync'))}: ${escapeHtml(sync)}`;
+    footerEl.textContent = `${t('countryProfiles.source')}: ${data.source.name} · ${t('countryProfiles.lastSync')}: ${sync}`;
   }
 
   // ── Events ───────────────────────────────────────────────────────────
