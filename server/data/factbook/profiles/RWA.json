@@ -1,0 +1,1204 @@
+{
+ "iso3": "RWA",
+ "gec": "rw",
+ "name": "Rwanda",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Rwanda -- a small and centralized country dominated by rugged hills and fertile volcanic soil -- has exerted disproportionate influence over the African Great Lakes region for centuries. A Rwandan kingdom increasingly dominated the region from the mid-18th century onward, with the Tutsi monarchs gradually extending the power of the royal court into peripheral areas and expanding their borders through military conquest. While the current ethnic labels Hutu and Tutsi predate colonial rule, their flexibility and importance have varied significantly over time and often manifested more as a hierarchical class distinction than an ethnic or cultural distinction. The majority Hutu and minority Tutsi have long shared a common language and culture, and intermarriage was frequent. <br /><br />The Rwandan royal court centered on the Tutsi king (<em>mwami</em>), who relied on an extensive network of political, cultural, and economic relationships. Social categories became more rigid during the reign of RWABUGIRI (1860-1895), who focused on aggressive expansion and solidifying Rwanda’s bureaucratic structures. German colonial conquest began in the late 1890s, but the territory was ceded to Belgian forces in 1916 during World War I. Both European nations quickly realized the benefits of ruling through the already centralized Rwandan Tutsi kingdom. Colonial rule reinforced existing trends toward autocratic and exclusionary rule, leading to the elimination of traditional positions of authority for Hutus. Belgian administrators significantly increased requirements for communal labor and instituted harsh taxes, which fed the population's frustration. Changing political attitudes in Belgium contributed to colonial and Catholic officials shifting their support from Tutsi to Hutu leaders in the years leading up to independence.</p> <p>Simmering resentment of minority rule exploded in 1959, three years before independence from Belgium, when Hutus overthrew the Tutsi king. Thousands of Tutsis were killed over the next several years, and some 150,000 were driven into exile in neighboring countries. Army Chief of Staff Juvenal HABYARIMANA seized power in a coup in 1973 and ruled Rwanda as a single-party state for two decades. HABYARIMANA increasingly discriminated against Tutsis, and extremist Hutu factions gained prominence after multiple parties were introduced in the early 1990s. The children of Tutsi exiles later formed a rebel group, the Rwandan Patriotic Front (RPF) and began a civil war in 1990. The civil war exacerbated ethnic tensions and culminated in the shooting down of HABYARIMANA’s private jet in 1994. The event sparked a state-orchestrated genocide in which Rwandans killed more than 800,000 of their fellow citizens, including approximately three-quarters of the Tutsi population. The genocide ended later the same year when the predominantly Tutsi RPF, operating out of Uganda and northern Rwanda, defeated the national army and Hutu militias and established an RPF-led government of national unity. Rwanda held its first local elections in 1999 and its first post-genocide presidential and legislative elections in 2003, formalizing President Paul KAGAME’s de facto role as head of government. KAGAME was formally elected in 2010, and again in 2017 after changing the constitution to allow him to run for a third term.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Africa, east of the Democratic Republic of the Congo, north of Burundi",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "2 00 S, 30 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26,338 sq km"
+      },
+      {
+       "label": "land",
+       "text": "24,668 sq km"
+      },
+      {
+       "label": "water",
+       "text": "1,670 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Maryland",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "930 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Burundi 315 km; Democratic Republic of the Congo 221 km; Tanzania 222 km; Uganda 172 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate; two rainy seasons (February to April, November to January); mild in mountains with frost and snow possible",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly grassy uplands and hills; relief is mountainous with altitude declining from west to east",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Volcan Karisimbi 4,519 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Rusizi River 950 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,598 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "gold, cassiterite (tin ore), wolframite (tungsten ore), methane, hydropower, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "76.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 47% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 13.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 15.6% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "24.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "0% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "96 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lake Kivu (shared with Democratic Republic of Congo) - 2,220 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Nile river source (shared with Tanzania, Uganda, South Sudan, Sudan, and Egypt [m]) - 6,650 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Congo (3,730,881 sq km), <em>(Mediterranean Sea)</em> Nile (3,254,853 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "one of Africa's most densely populated countries; large concentrations tend to be in the central regions and along the shore of Lake Kivu in the west, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "periodic droughts; the volcanic Virunga Mountains are in the northwest along the border with Democratic Republic of the Congo <br /><br /><strong>volcanism:</strong> Visoke (3,711 m), on the border with the Democratic Republic of the Congo, is the country's only historically active volcano",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "landlocked; most of the country is intensively cultivated and rugged, with the population predominantly rural",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13,623,302 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "6,684,655"
+      },
+      {
+       "label": "female",
+       "text": "6,938,647"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Rwandan(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Rwandan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Hutu, Tutsi, Twa",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Kinyarwanda (official, universal Bantu vernacular) 93.2%, French (official) &lt;0.1%, English (official) &lt;0.1%, Swahili/Kiswahili (official, used in commercial centers) &lt;0.1%, more than one language, other 6.3%, unspecified 0.3% (2002 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Inkoranya nzimbuzi y'isi, isoko fatizo y'amakuru y'ibanze. (Kinyarwanda)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Catholic 39.9%, Pentecostal 21.3%, Protestant 14.6%, Adventist 12.2%, other Christians 4.2%, no religion 3.0%, Muslim 2.0%, other religions 2.0%; less than 1%: Jehovah Witness, not specified, Animist  (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "37.2% (male 2,561,884/female 2,508,218)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "59.7% (male 3,954,608/female 4,179,844)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.1% (2024 est.) (male 168,163/female 250,585)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "67.5 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "62.3 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.1 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "19.4 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "21.3 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "20.1 years"
+      },
+      {
+       "label": "female",
+       "text": "21.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "25.05 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "4.87 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.13 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "one of Africa's most densely populated countries; large concentrations tend to be in the central regions and along the shore of Lake Kivu in the west, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "17.9% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.07% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.248 million KIGALI (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.95 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.67 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.96 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "23 years (2019/20 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "229 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "27.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "27.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "22.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "66.6 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "64.6 years"
+      },
+      {
+       "label": "female",
+       "text": "68.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.2 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.58 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 88.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 60.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 65.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 11.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 39.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 34.9% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "7.3% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "9.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.09 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "0.7 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 91.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 87% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 87.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 8.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 13% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 12.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "5.8% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6.35 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.23 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.03 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "6 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11.4% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "6.3% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "7.7% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "49.9% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.3% (2020)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "5.5% (2020)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "0.4% (2020)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.7% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "13.9% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "78.8% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "81% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "76.7% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "13 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Rwanda"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Rwanda"
+      },
+      {
+       "label": "local long form",
+       "text": "Republika y'u Rwanda"
+      },
+      {
+       "label": "local short form",
+       "text": "Rwanda"
+      },
+      {
+       "label": "former",
+       "text": "Kingdom of Rwanda, Ruanda, German East Africa"
+      },
+      {
+       "label": "etymology",
+       "text": "the country is named for a local people, but the meaning of their own name is obscure"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Kigali"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "1 57 S, 30 03 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the city takes its name from nearby Mount Kigali; the name is composed of the Bantu prefix <em>ki-</em> and the Rwandan word <em>gali</em>, meaning \"broad,\" which is probably meant to describe the terrain"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "4 provinces (<em>provinces</em>, singular - <em>province </em>(French); <em>intara </em>for singular and plural (Kinyarwanda)) and 1 city* (<em>ville </em>(French); <em>umujyi </em>(Kinyarwanda)); Est (Eastern), Kigali*, Nord (Northern), Ouest (Western), Sud (Southern)",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil law, based on German and Belgian models, and customary law; Supreme Court reviews legislative acts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted by referendum 26 May 2003, effective 4 June 2003"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic (with Council of Ministers approval) or by two-thirds majority vote of both houses of Parliament; passage requires at least three-quarters majority vote in both houses; changes to constitutional articles on national sovereignty, the presidential term, the form and system of government, and political pluralism also require approval in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Rwanda; if the father is stateless or unknown, the mother must be a citizen"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by simple-majority popular vote for a 5-year term (eligible for a second term); prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4 August 2017"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024: </em>Paul KAGAME reelected president; Paul KAGAME (RPF) 99.2%, Frank HABINEZA (DGPR) 0.5%, Philippe MPAYIMANA (independent) 0.3%<br /><br /><em>2017:</em> Paul KAGAME reelected president; Paul KAGAME (RPF) 98.8%, Philippe MPAYIMANA (independent), other 1.2%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "15 July 2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> a constitutional amendment in 2016 reduced the presidential term from 7 to 5 years but included an exception that allowed President KAGAME to serve another 7-year term in 2017, potentially followed by two additional 5-year terms"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parlement (Parliament)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Chamber of Deputies (Chambre des Députés)"
+      },
+      {
+       "label": "number of seats",
+       "text": "80 (53 directly elected; 27 indirectly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "7/15/2024 to 7/16/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Rwandan Patriotic Front (FPR) and its allies (37); Liberal Party (PL) (5); Social Democratic Party (PSD) (5); Other (6)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "63.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "July 2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 24 women are selected for seats by special-interest groups, and 3 members are selected by youth and disability organizations"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Sénat)"
+      },
+      {
+       "label": "number of seats",
+       "text": "26 (18 indirectly elected; 8 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9/16/2024 to 9/16/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "53.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the chief and deputy chief justices and 5 judges; normally organized into 3-judge panels); High Court (consists of the court president, vice president, and a minimum of 24 judges and organized into 5 chambers)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges nominated by the president after consultation with the Cabinet and the Superior Council of the Judiciary (SCJ), a 27-member body of judges, other judicial officials, and legal professionals, and approved by the Senate; chief and deputy chief justices appointed for 8-year nonrenewable terms; tenure of judges NA; High Court president and vice president appointed by the president of the republic upon approval by the Senate; judges appointed by the Supreme Court chief justice upon approval of the SCJ; judge tenure NA"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Court of the Republic; commercial courts including the High Commercial Court; intermediate courts; primary courts; and military specialized courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Democratic Green Party of Rwanda or DGPR <br />Liberal Party or PL <br />Party for Progress and Concord or PPC <br />Rwandan Patriotic Front or RPF <br />Rwandan Patriotic Front Coalition (includes RPF, PPC, PSP, UDPR, PDI, PSR, PDC) <br />Social Democratic Party or PSD <br />Social Party Imberakuri or PS-Imberakuri",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, AU, CEPGL, COMESA, EAC, EADB, FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MINUSMA, NAM, OIF, OPCW, PCA, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMISS, UNOOSA, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "1 July 1962 (from Belgium-administered UN trusteeship)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 1 July (1962)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal bands of sky blue (top, double-width), yellow, and green, with a golden sun with 24 rays on the right end of the blue band<br /><br /><strong>meaning:</strong> blue stands for happiness and peace, yellow for economic development and mineral wealth, and green for hope for prosperity and natural resources; the sun symbolizes unity and enlightenment",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "traditional woven basket with peaked lid",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "blue, yellow, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Rwanda nziza\" (Rwanda, Our Beautiful Country)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Faustin MURIGO/Jean-Bosco HASHAKAIMANA"
+      },
+      {
+       "label": "history",
+       "text": "adopted 2001"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (1 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Memorial sites of the Genocide: Nyamata, Murambi, Gisozi and Bisesero (c); Nyungwe National Park (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

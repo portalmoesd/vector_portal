@@ -1,0 +1,1218 @@
+{
+ "iso3": "ROU",
+ "gec": "ro",
+ "name": "Romania",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "The principalities of Wallachia and Moldavia -- for centuries under the control of the Turkish Ottoman Empire -- secured their autonomy through the Treaty of Paris in 1856. They were de facto linked in 1859 and formally united in 1862 under the new name of Romania. The country joined the Allied Powers in World War I and subsequently acquired new territories -- most notably Transylvania -- that more than doubled its size. In 1940, Romania allied with the Axis powers and participated in the 1941 German invasion of the USSR. Three years later, overrun by the Soviets, Romania signed an armistice. The post-war Soviet occupation led to the formation of a communist \"people's republic\" in 1947 and the abdication of the king. The decades-long rule of dictator Nicolae CEAUSESCU, who took power in 1965, and his Securitate police state became increasingly oppressive and draconian through the 1980s. CEAUSESCU was overthrown and executed in late 1989. Former communists dominated the government until 1996 when they were swept from power. Romania joined NATO in 2004, the EU in 2007, and the Schengen Area for air and sea travel in 2024.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southeastern Europe, bordering the Black Sea, between Bulgaria and Ukraine",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "46 00 N, 25 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "238,391 sq km"
+      },
+      {
+       "label": "land",
+       "text": "229,891 sq km"
+      },
+      {
+       "label": "water",
+       "text": "8,500 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "twice the size of Pennsylvania; slightly smaller than Oregon",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,844 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Bulgaria 605 km; Hungary 424 km; Moldova 683 km; Serbia 531 km; Ukraine 601 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "225 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate; cold, cloudy winters with frequent snow and fog; sunny summers with frequent showers and thunderstorms",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "central Transylvanian Basin is separated from the Moldavian Plateau on the east by the Eastern Carpathian Mountains and separated from the Walachian Plain on the south by the Transylvanian Alps",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Moldoveanu 2,544 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Black Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "414 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum (reserves declining), timber, natural gas, coal, iron ore, salt, arable land, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "55.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 36.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 17% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "30.2% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "14.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "5,280 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Dunărea (Danube) river mouth (shared with Germany [s], Austria, Slovakia, Hungary, Croatia, Serbia, Bulgaria, Moldova, and Ukraine) - 2,888 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Black Sea)</em> Danube (795,656 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "urbanization is not particularly high, and the population distribution is fairly even throughout most of the country, with urban areas attracting larger and denser populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "earthquakes, most severe in south and southwest; geologic structure and climate promote landslides",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "controls the most easily traversable land route between the Balkans, Moldova, and Ukraine; the Carpathian Mountains dominate the center of the country, and the Danube River forms much of the southern boundary with Serbia and Bulgaria",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18,148,155 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "8,747,795"
+      },
+      {
+       "label": "female",
+       "text": "9,400,360"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Romanian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Romanian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Romanian 89.3%, Hungarian 6%, Romani 3.4%, Ukrainian 0.3%, German 0.1%, other 0.9% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent individuals who declared an ethnic group in the 2021 national census; 13% did not respond; Romani populations are usually underestimated in official statistics and may represent 5–11% of Romania's population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Romanian (official) 91.6%, Hungarian 6.3%, Romani 1.2%, other 0.7% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Cartea informativa a lumii, sursa indispensabila pentru informatii de baza. (Romanian)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent individuals who declared a maternal language in the 2021 national census; 13.1% did not respond"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Romanian Orthodox 85.3%, Roman Catholic 4.5%, Reformed 3%, Pentecostal 2.5%, other 4.7% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent individuals who declared a religion in the 2021 national census; 13.9% did not respond"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "15.4% (male 1,441,359/female 1,362,304)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "62% (male 5,618,366/female 5,632,718)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "22.6% (2024 est.) (male 1,688,070/female 2,405,338)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "61.3 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "24.9 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "36.4 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "2.7 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "45.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "44 years"
+      },
+      {
+       "label": "female",
+       "text": "46.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.86% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "8.45 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "14.28 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-2.81 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "urbanization is not particularly high, and the population distribution is fairly even throughout most of the country, with urban areas attracting larger and denser populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "54.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "-0.15% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.776 million BUCHAREST (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.7 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.93 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "27.1 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "12 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5.3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "5.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "76.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "73.4 years"
+      },
+      {
+       "label": "female",
+       "text": "80.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.63 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.79 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6.5% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "11.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "3.63 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "7.1 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 97.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 77.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 88.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 2.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 22.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 11.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "22.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10.96 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "5.33 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "3.38 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "2.25 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.7% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "36.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "17.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "56% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.5% (2021)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "6.9% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.3% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "8.8% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "99.2% (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "99% (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "99.3% (2021 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "14 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Romania"
+      },
+      {
+       "label": "local long form",
+       "text": "none"
+      },
+      {
+       "label": "local short form",
+       "text": "Romania"
+      },
+      {
+       "label": "former",
+       "text": "Kingdom of Romania, Romanian People's Republic, Socialist Republic of Romania"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Latin <em>Romani</em>, meaning \"people from Rome;\" the area was an outpost of the Roman Empire in the 2nd century A.D., and the current name was adopted when Moldavia and Wallachia merged in 1861"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Bucharest"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "44 26 N, 26 06 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is said to come from a shepherd named Bucur who is reputed to have founded the town in 1457, but a settlement probably already existed on the site; the name may come from the personal name of an early landowner"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "41 counties (<em>judete</em>, singular - <em>judet</em>) and 1 municipality* (<em>municipiu</em>); Alba, Arad, Arges, Bacau, Bihor, Bistrita-Nasaud, Botosani, Braila, Brasov, Bucuresti (Bucharest)*, Buzau, Calarasi, Caras-Severin, Cluj, Constanta, Covasna, Dambovita, Dolj, Galati, Gorj, Giurgiu, Harghita, Hunedoara, Ialomita, Iasi, Ilfov, Maramures, Mehedinti, Mures, Neamt, Olt, Prahova, Salaj, Satu Mare, Sibiu, Suceava, Teleorman, Timis, Tulcea, Vaslui, Valcea, Vrancea",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 21 November 1991, approved by referendum and effective 8 December 1991"
+      },
+      {
+       "label": "amendment process",
+       "text": "initiated by the president of Romania through a proposal by the government, by at least one fourth of deputies or senators in Parliament, or by petition of eligible voters representing at least half of Romania’s counties; passage requires at least two-thirds majority vote by both chambers or – if mediation is required - by three-fourths majority vote in a joint session, followed by approval in a referendum; articles, including those on national sovereignty, form of government, political pluralism, and fundamental rights and freedoms cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Romania"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); prime minister appointed by the president with consent of Parliament"
+      },
+      {
+       "label": "most recent election date",
+       "text": "18 May 2025"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2025: </em>Nicușor DAN elected president in runoff; percent of vote - Nicușor DAN (unaffiliated) 53.6%, George SIMION (AUR) 46.4%<em><br /><br />2019: </em>Klaus IOHANNIS reelected president in second round; percent of vote - Klaus IOHANNIS (PNL) 66.1%, Viorica DANCILA (PSD) 33.9%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2030"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the prime ministerial position will be rotated in 2027 from BOLOJAN to another coalition party member as part of a power-sharing agreement"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament of Romania (Parlamentul României)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Chamber of Deputies (Camera Deputatilor)"
+      },
+      {
+       "label": "number of seats",
+       "text": "331 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12/1/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Social Democratic Party (PSD) (86); Alliance for the Union of Romanians (AUR) (63); National Liberal Party (PNL) (49); Save Romania Union (USR) (40); S.O.S. Romania (28); Party of Young People (POT) (24); Democratic Union of Hungarians in Romania (UDMR) (22)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "22.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Senatul)"
+      },
+      {
+       "label": "number of seats",
+       "text": "136 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12/1/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Social Democratic Party (PSD) (36); Alliance for the Union of Romanians (AUR) (28); National Liberal Party (PNL) (22); Save Romania Union (USR) (19); S.O.S. Romania (12); Democratic Union of Hungarians in Romania (UDMR) (10); Party of Young People (POT) (7)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "20.9%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "High Court of Cassation and Justice (consists of 111 judges organized into civil, penal, commercial, contentious administrative and fiscal business, and joint sections); Supreme Constitutional Court (consists of 9 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "High Court of Cassation and Justice judges appointed by the president upon nomination by the Superior Council of Magistracy, a 19-member body of judges, prosecutors, and law specialists; judges appointed for 6-year renewable terms; Constitutional Court members - 6 elected by Parliament and 3 appointed by the president; members serve 9-year, nonrenewable terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; regional tribunals; first instance courts; military and arbitration courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Alliance for the Fatherland or APP <br />Alliance for the Unity of Romanians or AUR<br />Christian-Democratic National Peasants' Party or PNT-CD <br />Civic Hungarian Party<br />Democratic Union of Hungarians in Romania or UDMR <br />Ecologist Party of Romania or PER <br />Force of the Right or FD <br />Greater Romania Party or PRM <br />Green Party<br />National Liberal Party or PNL<br />Popular Movement Party or PMP <br />PRO Romania or PRO<br />Romanian Nationhood Party or PNR <br />Save Romania Union Party or USR <br />Social Democratic Party or PSD <br />Social Liberal Humanist Party or PUSL (formerly Humanist Power Party (Social-Liberal) or PPU-SL)<br />S.O.S. Romania <br />The Right Alternative or AD <br />United Romania Party or PRU <br />We are Renewing the European Project in Romania or REPER",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "Australia Group, BIS, BSEC, CBSS (observer), CD, CE, CEI, EAPC, EBRD, ECB, EIB, ESA, EU, FAO, G-9, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, MONUSCO, NATO, NSG, OAS (observer), OIF, OPCW, OSCE, PCA, SELEC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, Union Latina, UNMIL, UNMISS, UNOCI, UNOOSA,UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "9 May 1877 (independence proclaimed from the Ottoman Empire; 13 July 1878 (independence recognized by the Treaty of Berlin); 26 March 1881 (kingdom proclaimed); 30 December 1947 (republic proclaimed)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Unification Day (unification of Romania and Transylvania), 1 December (1918)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal vertical bands of blue (left side), yellow, and red<br /><br /><strong>meaning:</strong> the colors come from the principalities of Walachia (red and yellow) and Moldavia (red and blue), which united in 1862 to form Romania<br /><br /><strong>history:</strong> modeled on the French flag; the national coat of arms that used to be centered on the yellow band has been removed",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> similar to the flag of Chad, which has a darker blue band; also resembles the flags of Andorra and Moldova"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "golden eagle",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "blue, yellow, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Desteapta-te romane!\" (Wake up, Romanian!)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Andrei MURESIANU/Anton PANN"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1990; the anthem was written during the 1848 Revolution"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "11 (9 cultural, 2 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Danube Delta (n); Churches of Moldavia (c); Monastery of Horezu (c); Villages with Fortified Churches in Transylvania (c); Dacian Fortresses of the Orastie Mountains (c); Historic Center of Sighişoara (c); Wooden Churches of Maramureş (c); Ancient and Primeval Beech Forests of the Carpathians and Other Regions of Europe (n); Roșia Montană Mining Landscape (c); Brâncuși Monumental Ensemble of Târgu Jiu (c); Frontiers of the Roman Empire – Dacia (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

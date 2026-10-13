@@ -1,0 +1,960 @@
+{
+ "iso3": "SMR",
+ "gec": "sm",
+ "name": "San Marino",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Geographically the third-smallest state in Europe (after the Holy See and Monaco), San Marino also claims to be the world's oldest republic. According to tradition, it was founded by a Christian stonemason named MARINUS in A.D. 301. San Marino's foreign policy is aligned with that of the EU, although it is not a member.  San Marino is negotiating an Association Agreement that is expected to allow participation in the EU’s internal market and cooperation in other policy areas by late 2024. Social and political trends in the republic track closely with those of its larger neighbor, Italy.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Europe, an enclave in central Italy",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "43 46 N, 12 25 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "61 sq km"
+      },
+      {
+       "label": "land",
+       "text": "61 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about one-third the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "37 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Italy 37 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "Mediterranean; mild to cool winters; warm, sunny summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "rugged mountains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Monte Titano 739 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Torrente Ausa 55 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "building stone",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "38.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 33.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 5.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0% (2022 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "16.7% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "45% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "0 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 150,
+    "content": {
+     "text": "occasional earthquakes",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 160,
+    "content": {
+     "text": "landlocked; an enclave of (completely surrounded by) Italy; smallest independent state in Europe after the Holy See and Monaco; dominated by the Apennine Mountains",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "35,291 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17,035"
+      },
+      {
+       "label": "female",
+       "text": "18,256"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Sammarinese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Sammarinese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Sammarinese, Italian",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Italian"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "L'Almanacco dei fatti del mondo, l'indispensabile fonte per le informazioni di base. (Italian)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "14.2% (male 2,614/female 2,387)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "64.3% (male 10,916/female 11,648)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "21.5% (2024 est.) (male 3,414/female 4,116)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "56.5 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "22.2 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "34.3 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "2.9 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "46.3 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "44.5 years"
+      },
+      {
+       "label": "female",
+       "text": "47.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.55% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "9.04 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.9 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "5.36 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "97.8% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.41% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 140,
+    "content": {
+     "text": "4,000 SAN MARINO (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.09 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.1 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.94 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.83 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.93 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 160,
+    "content": {
+     "text": "31.9 years (2019)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "8 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6.1 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "7.4 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "84.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "81.7 years"
+      },
+      {
+       "label": "female",
+       "text": "87 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.54 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.74 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "29.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "4.63 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 250,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "2.9% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "13% national budget (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "99.9% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "99.9% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "99.9% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "16 years (2015 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15 years (2015 est.)"
+      },
+      {
+       "label": "female",
+       "text": "16 years (2015 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of San Marino"
+      },
+      {
+       "label": "conventional short form",
+       "text": "San Marino"
+      },
+      {
+       "label": "local long form",
+       "text": "Repubblica di San Marino"
+      },
+      {
+       "label": "local short form",
+       "text": "San Marino"
+      },
+      {
+       "label": "etymology",
+       "text": "named after Saint MARINUS, who founded a monastic settlement on Monte Titano in the early 4th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "San Marino (city)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "43 56 N, 12 25 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "named after Saint MARINUS, who founded a monastic settlement on Monte Titano in the early 4th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "9 municipalities (<em>castelli</em>, singular - <em>castello</em>); Acquaviva, Borgo Maggiore, Chiesanuova, Domagnano, Faetano, Fiorentino, Montegiardino, San Marino Citta, Serravalle",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system with Italian civil law influences",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "San Marino’s principal legislative instruments consist of old customs (<em>antiche consuetudini</em>), the Statutory Laws of San Marino (Leges Statutae Sancti Marini), old statutes (<em>antichi statute</em>) from the1600s, Brief Notes on the Constitutional Order and Institutional Organs of the Republic of San Marino (Brevi Cenni sull’Ordinamento Costituzionale e gli Organi Istituzionali della Repubblica di San Marino) and successive legislation, chief among them is the Declaration of the Rights of Citizens and Fundamental Principles of the San Marino Legal Order (Dichiarazione dei Diritti dei Cittadini e dei Principi Fondamentali dell’Ordinamento Sammarinese), approved 8 July 1974"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Great and General Council; passage requires two-thirds majority Council vote; Council passage by absolute majority vote also requires passage in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of San Marino"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "30 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "co-chiefs of state (captains regent) indirectly elected by the Grand and General Council for a single 6-month term; Secretary of State for Foreign and Political Affairs indirectly elected by the Grand and General Council for a single 5-year term"
+      },
+      {
+       "label": "most recent election date",
+       "text": "<em>co-chiefs of state:</em> 1 April 2025<br /><br /><em>secretary of state:</em> 28 December 2019"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2025</em>: Denise BRONZETTI (Reformist Alliance) and Italo RIGHI (Christian Democrat) elected captains regent: percent of Grand and General Council vote - NA<br /><br /><em>2024</em>: Francesca CIVERCHIA (PDCS) and Dalibor RICCARDI (Free San Marino) elected captains regent; percent of Grand and General Council vote - NA<br /><br /><em>2019:</em> Luca BECCARI (PDCS) elected Secretary of State for Foreign and Political Affairs; percent of Grand and General Council vote - NA"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "<em>co-chiefs of state:</em> September 2025"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the captains regent preside over meetings of the Grand and General Council and its cabinet (Congress of State), which has seven other members who are selected by the Grand and General Council; assisting the captains regent are seven secretaries of state; the secretary of state for Foreign Affairs has some prime ministerial roles"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Great and General Council (Consiglio grande e generale)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "60 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "6/9/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Christian Democratic Party of San Marino (PDCS) (22); Free (Libera) – Socialist Party (PS) (10); Future Republic (RF) (8); Party of Socialists and Democrats (PSD) (8); Tomorrow - Motus Liberi (5); Reformist Alliance (AR) (4); R.E.T.E. Citizens' Movement (3)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "35%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "June 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Council of Twelve or Consiglio dei XII (consists of 12 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges elected by the Grand and General Council from among its own to serve 5-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "first instance and first appeal criminal, administrative, and civil courts; Court for the Trust and Trustee Relations; justices of the peace or conciliatory judges"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the College of Guarantors for the Constitutionality and General Norms functions as San Marino's constitutional court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Domani - Modus Liberi or DML <br />Free San Marino (Libera San Marino) or Libera <br />Future Republic or RF <br />Party of Socialists and Democrats or PSD <br />Reformist Alliance or AR <br />RETE Movement <br />Sammarinese Christian Democratic Party or PDCS <br />Socialist Party or PS <br />Tomorrow in Movement coalition (includes RETE Movement, DML)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "CE, FAO, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM (observer), IPU, ITU, ITUC (NGOs), LAIA (observer), OPCW, OSCE, Schengen Convention (de facto member), UN, UNCTAD, UNESCO, Union Latina, UNWTO, UPU, WHO, WIPO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "3 September 301 (traditional founding date)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Founding of the Republic (or Feast of Saint Marinus), 3 September (A.D. 301)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> two equal horizontal bands of white (top) and light blue, with the national coat of arms in the center; the main colors come from the shield on the coat of arms, which features three white towers on mountain peaks on a blue field; a wreath and a crown are around the shield, above a scroll with the word LIBERTAS (Liberty)<br /><br /><strong>meaning: </strong>the towers represent the Guaita, Cesta, and Montale castles on Mount Titano; white and blue are said to stand for peace and liberty",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "three peaks, each displaying a tower",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "white, blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Inno Nazionale della Repubblica\" (National Anthem of the Republic)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "no lyrics/Federico CONSOLO"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1894; the music for the anthem, which has no lyrics, is based on a 10th-century chorale piece"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "San Marino Historic Center and Mount Titano"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

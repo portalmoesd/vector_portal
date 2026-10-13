@@ -1,0 +1,1169 @@
+{
+ "iso3": "MMR",
+ "gec": "bm",
+ "name": "Burma",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Burma is home to ethnic Burmans and scores of other ethnic and religious minority groups that have resisted external efforts to consolidate control of the country throughout its history. Britain conquered Burma over a period extending from the 1820s to the 1880s and administered it as a province of India until 1937, when Burma became a self-governing colony.  Burma gained full independence in 1948. In 1962, General NE WIN seized power and ruled the country until 1988 when a new military regime took control. <br /><br />In 1990, the military regime permitted an election but then rejected the results after the main opposition National League for Democracy (NLD) and its leader AUNG SAN SUU KYI (ASSK) won in a landslide. The military regime placed ASSK under house arrest until 2010. In 2007, rising fuel prices in Burma led pro-democracy activists and Buddhist monks to launch a \"Saffron Revolution\" consisting of large protests against the regime, which violently suppressed the movement. The regime prevented new elections until it had drafted a constitution designed to preserve the military's political control; it passed the new constitution in its 2008 referendum. The regime conducted an election in 2010, but the NLD boycotted the vote, and the military’s political proxy, the Union Solidarity and Development Party, easily won; international observers denounced the election as flawed. <br /><br />Burma nonetheless began a halting process of political and economic reforms. ASSK's return to government in 2012 eventually led to the NLD's sweeping victory in the 2015 election. With ASSK as the de facto head of state, Burma’s first credibly elected civilian government drew international criticism for blocking investigations into Burma’s military operations -- which the US Department of State determined constituted genocide -- against its ethnic Rohingya population. When the 2020 elections resulted in further NLD gains, the military denounced the vote as fraudulent. In 2021, the military's senior leader General MIN AUNG HLAING launched a coup that returned Burma to authoritarian rule, with military crackdowns that undid reforms and resulted in the detention of ASSK and thousands of pro-democracy actors.<br /><br />Pro-democracy organizations have formed in the wake of the coup, including the National Unity Government (NUG). Members of the NUG include representatives from the NLD, ethnic minority groups, and civil society. In 2021, the NUG announced the formation of armed militias called the People's Defense Forces (PDF) and an insurgency against the military junta. As of 2024, PDF units across the country continued to fight the regime with varying levels of support from and cooperation with the NUG and other anti-regime organizations, including armed ethnic groups that have been fighting the central government for decades.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southeastern Asia, bordering the Andaman Sea and the Bay of Bengal, between Bangladesh and Thailand",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "22 00 N, 98 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Southeast Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "676,578 sq km"
+      },
+      {
+       "label": "land",
+       "text": "653,508 sq km"
+      },
+      {
+       "label": "water",
+       "text": "23,070 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Texas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6,522 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Bangladesh 271 km; China 2,129 km; India 1,468 km; Laos 238 km; Thailand 2,416 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,930 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm or to the edge of the continental margin"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical monsoon; cloudy, rainy, hot, humid summers (southwest monsoon, June to September); less cloudy, scant rainfall, mild temperatures, lower humidity during winter (northeast monsoon, December to April)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "central lowlands ringed by steep, rugged highlands",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Gamlang Razi 5,870 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Andaman Sea/Bay of Bengal 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "702 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, timber, tin, antimony, zinc, copper, tungsten, lead, coal, marble, limestone, precious stones, natural gas, hydropower, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "19.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 16.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 2.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0.7% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "42.4% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "37.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "17,140 sq km (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Mekong (shared with China [s], Laos, Thailand, Cambodia, and Vietnam [m]) - 4,350 km; Salween river mouth (shared with China [s] and Thailand) - 3,060 km; Irrawaddy river mouth (shared with China [s]) - 2,809 km; Chindwin - 1,158 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Indian Ocean drainage",
+       "text": "Brahmaputra (651,335 sq km), Ganges (1,016,124 sq km), Irrawaddy (413,710 sq km), Salween (271,914 sq km)"
+      },
+      {
+       "label": "Pacific Ocean drainage",
+       "text": "Mekong (805,604 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "population concentrated along coastal areas and in general proximity to the shores of the Irrawaddy River; the extreme north is relatively underpopulated",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "destructive earthquakes and cyclones; flooding and landslides common during rainy season (June to September); periodic droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "strategic location near major Indian Ocean shipping lanes; the north-south flowing Irrawaddy River is the country's largest and most important commercial waterway",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "57,931,718 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "28,591,467"
+      },
+      {
+       "label": "female",
+       "text": "29,340,251"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Burmese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Burmese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Burman (Bamar) 68%, Shan 9%, Karen 7%, Rakhine 4%, Chinese 3%, Indian 2%, Mon 2%, other 5%",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the largest ethnic group — the Burman (or Bamar) — dominate politics, and the military ranks are largely drawn from this ethnic group; the Burman mainly populate the central parts of the country, while various ethnic minorities have traditionally lived in the peripheral regions that surround the plains in a horseshoe shape; the government recognizes 135 indigenous ethnic groups"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Burmese (official)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "ကမ္ဘာ့အချက်အလက်စာအုပ်- အခြေခံအချက်အလက်တွေအတွက် မရှိမဖြစ်တဲ့ အရင်းအမြစ် (Burmese)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> minority ethnic groups use their own languages"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Buddhist 87.9%, Christian 6.2%, Muslim 4.3%, Animist 0.8%, Hindu 0.5%, other 0.2%, none 0.1% (2014 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> religion estimate is based on the 2014 national census, including an estimate for the non-enumerated population of Rakhine State, which is assumed to mainly affiliate with the Islamic faith; as of December 2019, Muslims probably make up less than 3% of Burma's total population due to the large outmigration of the Rohingya population since 2017"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "24.4% (male 7,197,177/female 6,843,879)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.5% (male 19,420,361/female 19,998,625)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "7.1% (2024 est.) (male 1,770,293/female 2,296,804)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "45.7 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "35 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "10.7 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "9.3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "31.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "29.9 years"
+      },
+      {
+       "label": "female",
+       "text": "31.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.69% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "15.44 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "7.17 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.36 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population concentrated along coastal areas and in general proximity to the shores of the Irrawaddy River; the extreme north is relatively underpopulated",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "32.1% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.85% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "5.610 million RANGOON (Yangon) (capital), 1.532 million Mandalay (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.77 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.97 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "24.7 years (2015/16 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "185 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "30.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "35.4 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "28.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "70.3 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "68.5 years"
+      },
+      {
+       "label": "female",
+       "text": "72.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.95 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.95 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 93.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 77.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 82.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 6.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 22.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 17.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "5.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "2.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.76 physicians/1,000 population (2019)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "1.1 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 94.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 82% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 85.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 5.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 18% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 14.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "5.8% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.06 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.5 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "1.55 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "42.2% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "68.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "17.1% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "19.5% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "58% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "1.9% (2016)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "16% (2016)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "5% (2016)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "2% of GDP (2019 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "9.7% national budget (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "93.5% (2020 est.)"
+      },
+      {
+       "label": "male",
+       "text": "94.7% (2020 est.)"
+      },
+      {
+       "label": "female",
+       "text": "92.7% (2020 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "12 years (2018 est.)"
+      },
+      {
+       "label": "male",
+       "text": "11 years (2018 est.)"
+      },
+      {
+       "label": "female",
+       "text": "12 years (2018 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Union of Burma"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Burma"
+      },
+      {
+       "label": "local long form",
+       "text": "Pyidaungzu Thammada Myanma Naingngandaw (translated as the Republic of the Union of Myanmar)"
+      },
+      {
+       "label": "local short form",
+       "text": "Myanma Naingngandaw"
+      },
+      {
+       "label": "former",
+       "text": "Socialist Republic of the Union of Burma, Union of Myanmar"
+      },
+      {
+       "label": "etymology",
+       "text": "both \"Burma\" and \"Myanmar\" derive from the name of the majority Burman (Bamar) ethnic group, with the term <em>myanma</em>, or \"the strong,\" being the group's name for itself"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> since 1989 the military authorities in Burma and the deposed parliamentary government have promoted the name Myanmar as a conventional name for their state; the US Government has not officially adopted the name"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "military regime",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Rangoon (aka Yangon, continues to be recognized as the primary Burmese capital by the US Government); Nay Pyi Taw is the administrative capital"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "16 48 N, 96 10 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+6.5 (11.5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "Rangoon/Yangon derives from the Burmese words <em>yan</em> and <em>koun</em>, commonly translated as \"end of strife\"; Nay Pyi Taw translates as \"abode of kings\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "7 regions (<em>taing-myar</em>, singular - <em>taing</em>), 7 states (<em>pyi ne-myar</em>, singular - <em>pyi ne</em>), 1 union territory <br /><br /><strong>regions:</strong> Ayeyarwady (Irrawaddy), Bago, Magway, Mandalay, Sagaing, Tanintharyi, Yangon (Rangoon) <br /><br /><strong>states:</strong> Chin, Kachin, Kayah, Karen, Mon, Rakhine, Shan <br /><br /><strong>union territory:</strong> Nay Pyi Taw",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed legal system of English common law (as introduced in codifications designed for colonial India) and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1947, 1974 (suspended until 2008); latest drafted 9 April 2008, approved by referendum 29 May 2008"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposals require at least 20% approval by the Assembly of the Union membership; passage of amendments to sections of the constitution on basic principles, government structure, branches of government, state emergencies, and amendment procedures requires 75% approval by the Assembly and approval in a referendum by absolute majority of registered voters; passage of amendments to other sections requires only 75% Assembly approval; military granted 25% of parliamentary seats by default"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "both parents must be citizens of Burma"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "none"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> an applicant for naturalization must be the child or spouse of a citizen"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "prior to the military takeover in 2021, president was indirectly elected by simple majority vote by the full Assembly of the Union from among 3 vice-presidential candidates nominated by the Presidential Electoral College (consists of members of the lower and upper houses and military members); the other 2 candidates became vice presidents (president elected for a 5-year term)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "8 November 2020"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2020:  </em>the National League for Democracy (NLD) won 396 seats across both houses -- well above the 322 required for a parliamentary majority -- but on 1 February 2021, the military claimed the results of the election were illegitimate and deposed State Counsellor AUNG SAN SUU KYI and President WIN MYINT of the NLD, causing military-affiliated Vice President MYINT SWE (USDP) to become acting president; MYINT SWE subsequently handed power to coup leader MIN AUNG HLAING; WIN MYINT and other key leaders of the ruling NLD party were placed under arrest after the military takeover<br /><em><br />2018</em>: WIN MYINT elected president in an indirect by-election held on 28 March 2018 after the resignation of HTIN KYAW; Assembly of the Union vote for president - WIN MYINT (NLD) 403, MYINT SWE (USDP) 211, HENRY VAN THIO (NLD) 18, 4 votes canceled (636 votes cast)"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "on 31 July 2025, the military government announced that it was preparing for elections to be held in December 2025"
+      },
+      {
+       "label": "state counsellor",
+       "text": "State Counselor AUNG SAN SUU KYI (since 6 April 2016); note - under arrest since 1 February 2021"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1: </strong>on 31 July 2025, the military ended the state of emergency that had been in place since taking over the government in February 2021, although martial law continues to exist in parts of the country; at the same time, the military dissolved the State Administrative Council (SAC), which had been the official name of the military government in Burma, and replaced it with the National Security and Peace Commission (NSPC), chaired by Sr. Gen. MIN AUNG HLAING, who also retains his position as chief of the armed forces<br /><br /><strong>note 2: </strong>prior to the military takeover, the state counsellor served the equivalent term of the president and was similar to a prime minister"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Assembly of the Union (Pyidaungsu Hluttaw)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      },
+      {
+       "label": "most recent election date",
+       "text": "28 December 2025"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "on 31 July 2025, the military government announced that it was preparing for elections to be held in late December 2025"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> on 1 February 2021, the Burmese military claimed the results of the 2020 general election were illegitimate and launched a coup led by Sr. General MIN AUNG HLAING; the military subsequently dissolved the Assembly of the Union and replaced it with the military-led State Administration Council"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of the Union (consists of the chief justice and 7-11 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "chief justice and judges nominated by the president, with approval of the Lower House, and appointed by the president; judges normally serve until mandatory retirement at age 70"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Courts of the Region; High Courts of the State; Court of the Self-Administered Division; Court of the Self-Administered Zone; district and township courts; special courts (for juvenile, municipal, and traffic offenses); courts martial"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "according to the military regime, more than 50 parties registered and were approved for the December 2025 election, but only 9 contested nationwide; the remainder ran in regional or state constituencies<br /><br />the 9 parties included:<br /><br />Democratic Party of National Politics (DNP)<br />Myanmar Farmers Development Party (MFDP)<br />National Democratic Force Party (NDF)<br />National Unity Party (NUP)<br />People’s Party<br />People’s Pioneer Party (PPP)<br />Shan and Ethnic Democratic Party (SEDP)<br />Union Solidarity and Development Party (USDP)<br />Women’s Party (Mon)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note</strong>: more than 90 political parties participated in the 2020 elections; political parties continued to function after the 2021 coup, although some political leaders have been arrested by the military regime; in 2023, the regime announced a new law with several rules and restrictions on political parties and their ability to participate in elections; dozens of parties refused to comply with the new rules; the regime's election commission has subsequently banned more than 80 political parties, including the National League for Democracy"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ADB, ARF, ASEAN, BIMSTEC, CP, EAS, EITI (candidate country), FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, ITUC (NGOs), NAM, OPCW (signatory), SAARC (observer), UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "4 January 1948 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 4 January (1948); Union Day, 12 February (1947)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal stripes of yellow (top), green, and red; centered on the green band is a five-pointed white star that overlaps onto the yellow and red stripes<br /><br /><strong>history:</strong> the design revives the triband colors that Burma used from 1943 to 1945, during the Japanese occupation",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "chinthe (mythical lion)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "yellow, green, red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Kaba Ma Kyei\" (Till the End of the World)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "SAYA TIN"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1948"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (both cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Pyu Ancient Cities; Bagan"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

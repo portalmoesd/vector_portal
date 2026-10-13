@@ -1,0 +1,1109 @@
+{
+ "iso3": "FIN",
+ "gec": "fi",
+ "name": "Finland",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Finland was a province and then a grand duchy under Sweden from the 12th to the 19th centuries and an autonomous grand duchy of Russia after 1809. It gained complete independence in 1917. During World War II, Finland successfully defended its independence through cooperation with Germany and resisted subsequent invasions by the Soviet Union, albeit with some loss of territory. During the next half-century, Finland transformed from a farm/forest economy to a diversified modern industrial economy; per-capita income is among the highest in Western Europe. A member of the EU since 1995, Finland was the only Nordic state to join the euro single currency at its initiation in January 1999. In the 21st century, the key features of Finland's modern welfare state are high-quality education, promotion of equality, and a national social welfare system, although the system is currently facing the challenges of an aging population and the fluctuations of an export-driven economy. Following Russia's invasion of Ukraine in 2022, Finland opted to join NATO; it became the organization's 31st member in April 2023.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Northern Europe, bordering the Baltic Sea, Gulf of Bothnia, and Gulf of Finland, between Sweden and Russia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "64 00 N, 26 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "338,145 sq km"
+      },
+      {
+       "label": "land",
+       "text": "303,815 sq km"
+      },
+      {
+       "label": "water",
+       "text": "34,330 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly more than two times the size of Georgia; slightly smaller than Montana",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,563 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Norway 709 km; Sweden 545 km; Russia 1,309 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,250 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm (in the Gulf of Finland - 3 nm)"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 m depth or to the depth of exploitation"
+      },
+      {
+       "label": "exclusive fishing zone",
+       "text": "12 nm; extends to continental shelf boundary with Sweden, Estonia, and Russia"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "cold temperate; potentially subarctic but comparatively mild because of moderating influence of the North Atlantic Current, Baltic Sea, and more than 60,000 lakes",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly low, flat to rolling plains interspersed with lakes and low hills",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Halti (alternatively Haltia, Haltitunturi, Haltiatunturi) 1,328 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Baltic Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "164 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "timber, iron ore, copper, lead, zinc, chromite, nickel, gold, silver, limestone",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "7.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 7.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "74.2% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "18.4% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "80 sq km (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Saimaa - 1,760 sq km; Paijanne - 1,090 sq km; Inarijarvi - 1,000 sq km; Oulujarvi - 900 sq km; Pielinen - 850 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "the vast majority of people are found in the south; the northern interior areas remain sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "severe winters in the north",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "long boundary with Russia; Helsinki is northernmost national capital on European continent; population concentrated on small southwestern coastal plain",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,550,449 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2,750,057"
+      },
+      {
+       "label": "female",
+       "text": "2,800,392"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Finn(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Finnish"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Finnish, Swedish, Russian, Estonian, Romani, Sami",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 90.9% of the population has a Finnish background (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Finnish (official) 85.9%, Swedish (official) 5.2%, Russian 1.7%, other 7.2% (2022 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "World Factbook, korvaamaton perustietolähde. (Finnish)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Lutheran 66.6%, Greek Orthodox 1.1%, other 1.7%, none 30.6% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "16.2% (male 464,939/female 444,585)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "60.3% (male 1,725,072/female 1,668,604)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "23.5% (2024 est.) (male 583,645/female 739,569)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "62.3 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "23.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "39 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "2.6 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "44 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "41.8 years"
+      },
+      {
+       "label": "female",
+       "text": "44.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.02% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "7.75 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "11.01 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "3.44 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the vast majority of people are found in the south; the northern interior areas remain sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "85.8% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.42% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.338 million HELSINKI (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.79 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.97 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "29.5 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "8 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.9 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "1.9 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "82.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "79.3 years"
+      },
+      {
+       "label": "female",
+       "text": "85.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.28 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.63 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "10.2% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "14.8% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "3.61 physicians/1,000 population (2021)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "2.8 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "22.2% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.23 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "3.76 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "1.59 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "1.96 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.91 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.7% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "14.3% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "57.1% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 18",
+       "text": "0.1% (2017)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "6.4% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "12.1% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "18 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "21 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Finland"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Finland"
+      },
+      {
+       "label": "local long form",
+       "text": "Suomen tasavalta (Finnish)/ Republiken Finland (Swedish)"
+      },
+      {
+       "label": "local short form",
+       "text": "Suomi (Finnish)/ Finland (Swedish)"
+      },
+      {
+       "label": "etymology",
+       "text": "name derives from the Finns, an ethnic group in northeastern Europe; their name comes from the Germanic word <em>finna</em>, meaning \"fish scale;\" the local name, Suomi, may come from two local words: <em>suo</em>, meaning \"marsh,\" and <em>maa</em>, meaning \"land\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Helsinki"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "60 10 N, 24 56 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "the modern name is a Finnish derivation; King Gustav VASA of Sweden founded the city in 1550 as Helsingfors; the name came from <em>Helsing</em>, the Old Norwegian name for a local people, and the word <em>fors</em>, or \"waterfall,\" referring to a waterfall at the city's original location on the Vantaa River"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "19 regions (<em>maakunnat</em>, singular - <em>maakunta </em>(Finnish); <em>landskapen</em>, singular - <em>landskapet </em>(Swedish)); Aland (Swedish), Ahvenanmaa (Finnish); Etela-Karjala (Finnish), Sodra Karelen (Swedish) [South Karelia]; Etela-Pohjanmaa (Finnish), Sodra Osterbotten (Swedish) [South Ostrobothnia]; Etela-Savo (Finnish), Sodra Savolax (Swedish) [South Savo]; Kanta-Hame (Finnish), Egentliga Tavastland (Swedish); Kainuu (Finnish), Kajanaland (Swedish); Keski-Pohjanmaa (Finnish), Mellersta Osterbotten (Swedish) [Central Ostrobothnia]; Keski-Suomi (Finnish), Mellersta Finland (Swedish) [Central Finland]; Kymenlaakso (Finnish), Kymmenedalen (Swedish); Lappi (Finnish), Lappland (Swedish); Paijat-Hame (Finnish), Paijanne-Tavastland (Swedish); Pirkanmaa (Finnish), Birkaland (Swedish) [Tampere]; Pohjanmaa (Finnish), Osterbotten (Swedish) [Ostrobothnia]; Pohjois-Karjala (Finnish), Norra Karelen (Swedish) [North Karelia]; Pohjois-Pohjanmaa (Finnish), Norra Osterbotten (Swedish) [North Ostrobothnia]; Pohjois-Savo (Finnish), Norra Savolax (Swedish) [North Savo]; Satakunta (Finnish and Swedish); Uusimaa (Finnish), Nyland (Swedish) [Newland]; Varsinais-Suomi (Finnish), Egentliga Finland (Swedish) [Southwest Finland]",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the Swedish model",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1906, 1919; latest drafted 17 June 1997, approved by Parliament 11 June 1999, entered into force 1 March 2000"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by Parliament; passage normally requires simple majority vote in two readings in the first parliamentary session and at least two-thirds majority vote in a single reading by the newly elected Parliament; proposals declared \"urgent\" by five-sixths of Parliament members can be passed by at least two-thirds majority vote in the first parliamentary session only"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Finland"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 6-year term (eligible for a second term); prime minister appointed by Parliament"
+      },
+      {
+       "label": "most recent election date",
+       "text": "28 January 2024, with a runoff on 11 February 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024:  </em>Alexander STUBB elected in the second round; percent of vote in the first round - Alexander STUBB (KoK) 27.2%, Pekka HAAVISTO (Vihr) 25.8%, Jussi HALLA-AHO (PS) 19.0%, Olli REHN (Kesk) 15.3%; percent of vote in second round - STUBB 51.6%, HAAVISTO 48.4%<br /><em><br />2018: </em> Sauli NIINISTO reelected president; percent of vote - Sauli NIINISTO (independent) 62.7%, Pekka HAAVISTO (Vihr) 12.4%, Laura HUHTASAARI (PS) 6.9%, Paavo VAYRYNEN (independent) 6.2%, Matti VANHANEN (Kesk) 4.1%, other 7.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "by 28 January 2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Eduskunta - Riksdagen)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "200 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/2/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "National Coalition Party (KOK) (48); The Finns Party (PS) (46); Social Democratic Party (SDP) (43); Center Party (KESK) (23); The Greens (13); Left Alliance (Vas) (11); Other (16)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "45.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "April 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Korkein Oikeus (consists of the court president and 18 judges); Supreme Administrative Court (consists of 21 judges, including the court president; organized into 3 chambers)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court and Supreme Administrative Court judges appointed by the president of the republic; judges serve until mandatory retirement at age 68"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "6 Courts of Appeal; 8 regional administrative courts; 27 district courts; special courts for issues relating to markets, labor, insurance, impeachment, land, tenancy, and water rights"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Finland has a dual judicial system; courts with civil and criminal jurisdiction, and administrative courts with jurisdiction for litigation between individuals and administrative organs of the state and communities"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Aland Coalition (a coalition of several political parties on the Aland Islands)<br />Center Party or Kesk <br />Christian Democrats or KD <br />Finns Party or PS <br />Green League or Vihr <br />Left Alliance or Vas <br />Movement Now or Liike Nyt <br />National Coalition Party or Kok <br />Social Democratic Party or SDP <br />Swedish People's Party or RKP or SFP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ADB (nonregional member), AfDB (nonregional member), Arctic Council, Australia Group, BIS, CBSS, CD, CE, CERN, EAPC, EBRD, ECB, EIB, EITI (implementing country), EMU, ESA, EU, FAO, FATF, G-9, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NC, NEA, NIB, NSG, OAS (observer), OECD, OPCW, OSCE, Pacific Alliance (observer), Paris Club, PCA, PFP, Schengen Convention, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNIFIL, UNMIL, UNMOGIP, UNOOSA, UNRWA, UNSOM, UNTSO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "6 December 1917 (from Russia)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 6 December (1917)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> white with a blue cross extending to the edges of the flag; the cross is shifted to the left in the style of the Dannebrog (Danish flag)<br /><br /><strong>meaning:</strong> the blue stands for the country's thousands of lakes, and the white for snow",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "blue, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Maamme\" (Our Land)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Paavo Eemil KAJANDER, Johan Ludvig RUNEBERG/Fredrik PACIUS"
+      },
+      {
+       "label": "history",
+       "text": "in use since 1848; although never officially adopted, the anthem has been popular since a student group first sang it in 1848"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "7 (6 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Fortress of Suomenlinna (c); Old Rauma (c); Petäjävesi Old Church (c); Verla Groundwood and Board Mill (c); Bronze Age Burial Site of Sammallahdenmäki (c); High Coast / Kvarken Archipelago (n); Struve Geodetic Arc (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

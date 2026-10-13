@@ -1,0 +1,1156 @@
+{
+ "iso3": "TKM",
+ "gec": "tx",
+ "name": "Turkmenistan",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Present-day Turkmenistan has been at the crossroads of civilizations for centuries. Various Persian empires ruled the area in antiquity, and Alexander the Great, Muslim armies, the Mongols, Turkic warriors, and eventually the Russians conquered it. In medieval times, Merv (located in present-day Mary province) was one of the great cities of the Islamic world and an important stop on the Silk Road. Annexed by Russia in the late 1800s, Turkmen territories later figured prominently in the anti-Bolshevik resistance in Central Asia. In 1924, Turkmenistan became a Soviet republic; it achieved independence when the USSR dissolved in 1991. <br /><br />President for Life Saparmurat NIYAZOV died in 2006, and Gurbanguly BERDIMUHAMEDOV, a deputy chairman under NIYAZOW, emerged as the country's new president. BERDIMUHAMEDOV won Turkmenistan's first multi-candidate presidential election in 2007, and again in 2012 and 2017 with over 97% of the vote in elections widely regarded as undemocratic. In 2022, BERDIMUHAMEDOV announced that he would step down from the presidency and called for an election to replace him. His son, Serdar BERDIMUHAMEDOV, won the ensuing election with 73% of the vote. Gurbanguly BERDIMUHAMEDOV, although no longer head of state, maintains an influential political position as head of the Halk Maslahaty (People’s Council) and as National Leader of the Turkmen People, a title that provides additional privileges and immunity for him and his family. Since Gurbanguly BERDIMUHAMEDOV stepped down from the presidency, state-controlled media upgraded his honorific from Arkadag (protector) to Hero-Arkadag, and began referring to Serdar BERDIMUHAMEDOV as Arkadagly Serdar, which can be translated as \"Serdar who has a protector to support him.\"<br /><br />Turkmenistan has sought new export markets for its extensive hydrocarbon/natural gas reserves, which have yet to be fully exploited. Turkmenistan's reliance on gas exports has made the economy vulnerable to fluctuations in the global energy market, and economic hardships since the drop in energy prices in 2014 have led many citizens of Turkmenistan to emigrate, mostly to Turkey.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Asia, bordering the Caspian Sea, between Iran and Kazakhstan",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "40 00 N, 60 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "488,100 sq km"
+      },
+      {
+       "label": "land",
+       "text": "469,930 sq km"
+      },
+      {
+       "label": "water",
+       "text": "18,170 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly more than three times the size of Georgia; slightly larger than California",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,158 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Afghanistan 804 km; Iran 1,148 km; Kazakhstan 413 km; Uzbekistan 1,793 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Turkmenistan borders the Caspian Sea (1,768 km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "subtropical desert",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "flat-to-rolling sandy desert with dunes rising to mountains in the south; low mountains along border with Iran; borders Caspian Sea in west",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Gora Ayribaba 3,139 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Vpadina Akchanaya (Sarygamysh Koli is a lake in northern Turkmenistan with a water level that fluctuates above and below the elevation of Vpadina Akchanaya, the lake has dropped as low as -110 m) -81 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "230 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, natural gas, sulfur, salt",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "84.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 3.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 80.8% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "10.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "16,459 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "salt water lake(s)",
+       "text": "Caspian Sea (shared with Iran, Azerbaijan, Russia, and Kazakhstan) - 374,000 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Amu Darya (shared with Tajikistan [s], Afghanistan, and Uzbekistan [m]) - 2,620 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "<em>(Aral Sea basin)</em> Amu Darya (534,739 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "the most densely populated areas are the southern, eastern, and northeastern oases; approximately 50% of the population lives in and around the capital of Ashgabat",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "earthquakes; mudslides; droughts; dust storms; floods",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "landlocked; the western and central low-lying desolate portions of the country make up the great Garagum (Kara-Kum) desert, which occupies over 80% of the country; eastern part is plateau",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,744,151 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "2,842,870"
+      },
+      {
+       "label": "female",
+       "text": "2,901,281"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Turkmenistani(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Turkmenistani"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Turkmen 85%, Uzbek 5%, Russian 4%, other 6% (2003 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Turkmen (official) 72%, Russian 12%, Uzbek 9%, other 7%"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Dünýä Faktlar Kitaby – esasy maglumatlaryň wajyp çeşmesidir (Turkmen)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 93%, Christian 6.4%, Buddhist &lt;1%, folk religion &lt;1%, Jewish &lt;1%, other &lt;1%, unspecified &lt;1% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "24.5% (male 711,784/female 692,967)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.6% (male 1,956,740/female 1,984,333)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "6.9% (2024 est.) (male 174,346/female 223,981)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "45.8 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "35.6 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "10.1 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "9.9 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "31.6 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "30.7 years"
+      },
+      {
+       "label": "female",
+       "text": "31.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.88% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "16.43 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.99 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.66 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the most densely populated areas are the southern, eastern, and northeastern oases; approximately 50% of the population lives in and around the capital of Ashgabat",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "54% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.23% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "902,000 ASHGABAT (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.99 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.78 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.98 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "24.2 years (2019)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "5 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "35 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "43.6 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "27.7 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "72.4 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "69.4 years"
+      },
+      {
+       "label": "female",
+       "text": "75.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2.02 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.99 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "5.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "1.93 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "4 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "18.6% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.88 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.65 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "1.25 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.98 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.8% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9.4% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0.5% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "3.1% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "65% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.2% (2019)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "6.1% (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "2.7% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "29.6% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "99.9% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "99.9% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "99.9% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "12 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Turkmenistan"
+      },
+      {
+       "label": "local long form",
+       "text": "none"
+      },
+      {
+       "label": "local short form",
+       "text": "Turkmenistan"
+      },
+      {
+       "label": "former",
+       "text": "Turkmen Soviet Socialist Republic"
+      },
+      {
+       "label": "etymology",
+       "text": "the suffix -<em>stan </em>means \"land,\" so the country name means the \"Land of the Turkmen [people];\" the people's name means \"Turk-like,\" from the Persian words <em>tork </em>and <em>mandan</em>, referring to their formerly nomadic lifestyle that differed from the settled Turks of Turkey"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic; authoritarian",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Ashgabat (Ashkhabad)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "37 57 N, 58 23 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+5 (10 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "derived from the Turkmen words <em>ushq</em>, meaning \"love,\" and <em>abad</em>, meaning \"inhabited place\" or \"town;\"  the city was originally a military outpost built in 1881 that took its name from an ancient settlement on the site"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "5 provinces (<em>velayatlar</em>, singular - <em>velayat</em>) and 1 independent city*: Ahal Velayat (Arkadag), Ashgabat*, Balkan Velayat (Balkanabat), Dashoguz Velayat, Lebap Velayat (Turkmenabat), Mary Velayat",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> administrative divisions have the same names as their administrative centers; exceptions show the administrative center name in parentheses"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system with Islamic (sharia) law influences",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 14 September 2016"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Assembly or Mejlis; passage requires two-thirds majority vote or absolute majority approval in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Turkmenistan"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 7-year term (no term limits)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12 March 2022"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2022:</em> Serdar BERDIMUHAMEDOV elected president; percent of vote - Serdar BERDIMUHAMEDOV (DPT) 73%, Khydyr NUNNAYEV (independent) 11.1%, Agadzhan BEKMYRADOV (IAP) 7.2%, other 8.7%<br /><br /><em>2017:</em> Gurbanguly BERDIMUHAMEDOV reelected president in the first round; percent of vote - Gurbanguly BERDIMUHAMEDOV (DPT) 97.7%, other 2.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the president is both chief of state and head of government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Assembly (Mejlis)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "56 (48 indirectly elected; 8 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "3/28/2021"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Democratic Party of Turkmenistan (DPT) (65); Groups of citizens of Turkmenistan (28); Agrarian Party (24); Party of Industrialists and Entrepreneurs (8)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "25.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of Turkmenistan (consists of the court president and 21 associate judges and organized into civil, criminal, and military chambers)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges appointed by the president for 5-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Commercial Court; appellate courts; provincial, district, and city courts; military courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Agrarian Party of Turkmenistan or TAP<br />Party of Industrialists and Entrepreneurs of Turkmenistan or TSTP<br />The Democratic Party of Turkmenistan or TDP",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> all parties support President BERDIMUHAMEDOV; unofficial, small opposition movements exist abroad"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ADB, CIS (associate member, has not ratified the 1993 CIS charter although it participates in meetings and held the chairmanship of the CIS in 2012), EAPC, EBRD, ECO, FAO, G-77, IBRD, ICAO, ICRM, IDA, IDB, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM (observer), ISO (correspondent), ITU, MIGA, NAM, OIC, OPCW, OSCE, PFP, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "27 October 1991 (from the Soviet Union)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 27 October (1991)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> green field with a vertical red stripe near the left side; the stripe has five tribal <em>guls </em>(designs used in producing carpets) stacked above two crossed olive branches; five five-pointed white stars and a white crescent moon appear in the upper left corner of the main field<br /><br /><strong>meaning:</strong> the green color and crescent moon stand for Islam, the five stars for the country's regions, and the guls for national identity",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Akhal-Teke horse",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Garaşsyz, Bitarap Türkmenistanyň\" (Independent, Neutral, Turkmenistan State Anthem)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "collective/Veli MUKHATOV"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1997; lyrics revised in 2008 to eliminate references to deceased President Saparmurat NYYAZOW"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "5 (4 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Ancient Merv (c); Kunya-Urgench (c); Parthian Fortresses of Nisa (c); Cold Winter Deserts of Turan (n); Silk Roads: Zarafshan-Karakum Corridor (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

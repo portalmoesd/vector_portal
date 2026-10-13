@@ -1,0 +1,1049 @@
+{
+ "iso3": "TUV",
+ "gec": "tv",
+ "name": "Tuvalu",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Voyagers from either Samoa or Tonga first populated Tuvalu in the first millennium A.D., and the islands provided a stepping-stone for various Polynesian communities that subsequently settled in Melanesia and Micronesia. Tuvalu eventually came under Samoan and Tongan spheres of influence, although proximity to Micronesia allowed some Micronesian communities to flourish in Tuvalu, in particular on Nui Atoll. In the late 1700s and early 1800s, a series of American, British, Dutch, and Russian ships visited the islands, which were named the Ellice Islands in 1819. <br /><br />The UK declared a protectorate over islands in 1892 and merged them with the Micronesian Gilbert Islands. The Gilbert and Ellice Islands Protectorate became a colony in 1916. During World War II, the US set up military bases on a few islands, and in 1943, after Japan captured many of the northern Gilbert Islands, the UK transferred administration of the colony southward to Funafuti. After the war, Tarawa in the Gilbert Islands was once again made the colony’s capital, and the center of power was firmly in the Gilbert Islands, including the colony’s only secondary school. Amid growing tensions with the Gilbertese, Tuvaluans voted to secede from the colony in 1974, were granted self-rule in 1975, and gained independence in 1978 as Tuvalu. In 1979, the US relinquished its claims to the Tuvaluan islands in a treaty of friendship.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Oceania, island group consisting of nine coral atolls in the South Pacific Ocean, about half way from Hawaii to Australia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "8 00 S, 178 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Oceania",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26 sq km"
+      },
+      {
+       "label": "land",
+       "text": "26 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "24 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; moderated by easterly trade winds (March to November); westerly gales and heavy rain (November to March)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "low-lying and narrow coral atolls",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "unnamed location 5 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Pacific Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "2 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "fish, coconut (copra)",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "60% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0% (2022 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 60% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0% (2022 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "34.3% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "5.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "0 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "over half of the population resides on the atoll of Funafuti",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "severe tropical storms are usually rare, but in 1997 there were three cyclones; low levels of islands make them sensitive to changes in sea level",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "one of the smallest and most remote countries on earth; six of the nine coral atolls -- Nanumea, Nui, Vaitupu, Nukufetau, Funafuti, and Nukulaelae -- have lagoons open to the ocean; Nanumaya and Niutao have landlocked lagoons; Niulakita does not have a lagoon",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11,824 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5,865"
+      },
+      {
+       "label": "female",
+       "text": "5,959"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Tuvaluan(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Tuvaluan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Tuvaluan 97%, Tuvaluan/I-Kiribati 1.6%, Tuvaluan/other 0.8%, other 0.6% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Tuvaluan (official), English (official), Samoan, Kiribati (on the island of Nui)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Protestant 92.7% (Congregational Christian Church of Tuvalu 85.9%, Brethren 2.8%, Seventh Day Adventist 2.5%, Assemblies of God 1.5%), Baha'i 1.5%, Jehovah's Witness 1.5%, other 3.9%, none or refused 0.4% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "29.2% (male 1,754/female 1,672)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "63.2% (male 3,736/female 3,675)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "7.6% (2024 est.) (male 326/female 570)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "59 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "46.4 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "12.6 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "7.9 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "28.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "26.8 years"
+      },
+      {
+       "label": "female",
+       "text": "28.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.75% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "21.57 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "7.78 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-6.26 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "over half of the population resides on the atoll of Funafuti",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "66.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.08% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "7,000 FUNAFUTI (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.57 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.98 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "170 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "27.2 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "31.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "24 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "69 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "66.5 years"
+      },
+      {
+       "label": "female",
+       "text": "71.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.76 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.34 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 99.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.7% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "20% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "11.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "1.35 physicians/1,000 population (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 250,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 96.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 93.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 95.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 3.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 6.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 4.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 260,
+    "content": {
+     "text": "51.6% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.93 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.69 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.22 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "32.4% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "46.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "18.1% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 290,
+    "content": {
+     "text": "2.9% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 300,
+    "content": {
+     "text": "64.2% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 310,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0% (2020)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "1.8% (2020)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.7% (2020)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "12.8% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "16.8% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "100% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "100% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "100% (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Tuvalu"
+      },
+      {
+       "label": "local long form",
+       "text": "none"
+      },
+      {
+       "label": "local short form",
+       "text": "Tuvalu"
+      },
+      {
+       "label": "former",
+       "text": "Ellice Islands"
+      },
+      {
+       "label": "etymology",
+       "text": "the name in the local language means \"group of eight\" or \"eight standing together,\" referring to eight of the country's nine islands; the remaining island, Nui, was left out of the original grouping because its inhabitants spoke a different language; the former name was given in honor of Canadian shipping company owner Alexander Ellice, who owned a ship that visited the islands in 1819"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary democracy under a constitutional monarchy; a Commonwealth realm",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Funafuti"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "8 31 S, 179 13 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+12 (17 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the town has the same name as the island it is located on; the name may either come from the Polynesian word <em>futi </em>(banana) or the name Futi, one of the wives of a local ruler, with the word <em>funa </em>added as a feminine prefix"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the capital is an atoll of 29 islets; administrative offices are in Vaiaku Village on Fongafale Islet"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "7 island councils and 1 town council*; Funafuti*, Nanumaga, Nanumea, Niutao, Nui, Nukufetau, Nukulaelae, Vaitupu",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of English common law and local customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1978 (at independence); latest effective 1 October 1986"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the House of Assembly; passage requires at least two-thirds majority vote by the Assembly membership in the final reading"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "yes"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "yes; for a child born abroad, at least one parent must be a citizen of Tuvalu"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "na"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; governor general appointed by the monarch on recommendation of the prime minister and the parliament; prime minister and deputy prime minister elected by and from members of House of Assembly following parliamentary elections"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024: </em>TEO was the only candidate nominated by the House of Assembly<em><br /><br />2019: </em>Kausea NATANO elected prime minister by House of Assembly; House of Assembly vote - 10 to 6"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Palamene)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "chamber name",
+       "text": "Parliament of Tuvalu (Palamene o Tuvalu)"
+      },
+      {
+       "label": "number of seats",
+       "text": "16 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "1/26/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "0%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "January 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Appeal (consists of the chief justice and not less than 3 appeals judges); High Court (consists of the chief justice); appeals beyond the Court of Appeal are heard by the Judicial Committee of the Privy Council (in London)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Court of Appeal judges appointed by the governor general on the advice of the Cabinet; judge tenure based on terms of appointment; High Court chief justice appointed by the governor general on the advice of the Cabinet; chief justice serves for life; other judges appointed by the governor general on the advice of the Cabinet after consultation with chief justice; judge tenure set by terms of appointment"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "magistrates' courts; island courts; land courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "<strong>note:</strong> no political parties, but members of parliament usually align in informal groupings",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, ADB, AOSIS, C, FAO, IBRD, IDA, IFAD, IFRCS (observer), ILO, IMF, IMO, IOC, ITU, OPCW, PIF, Sparteca, SPC, UN, UNCTAD, UNESCO, UNIDO, UPU, WHO, WIPO, WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "1 October 1978 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 1 October (1978)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> light blue with the UK flag in the upper-left quadrant; the right half of the flag has nine five-pointed yellow stars  <br /><br /><strong>meaning: </strong>the stars represent a map of the country, with each symbolizing an atoll in the ocean",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "maneapa (native meeting house)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "light blue, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"God Save the King\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "unknown"
+      },
+      {
+       "label": "history",
+       "text": "used since 1745"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

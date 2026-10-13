@@ -1,0 +1,1092 @@
+{
+ "iso3": "STP",
+ "gec": "tp",
+ "name": "Sao Tome and Principe",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Portugal discovered and colonized the uninhabited Sao Tome and Principe islands in the late 15th century, setting up a sugar-based economy that gave way to coffee and cocoa in the 19th century -- all grown with African slave labor, a form of which lingered into the 20th century. While independence was achieved in 1975, democratic reforms were not instituted until the late 1980s. <br /><br />The country held its first free elections in 1991, but frequent internal wrangling among the various political parties precipitated repeated changes in leadership and failed, non-violent coup attempts in 1995, 1998, 2003, and 2009. In 2012, three opposition parties combined in a no-confidence vote to bring down the majority government of former Prime Minister Patrice TROVOADA, but legislative elections returned him to the office two years later. President Evaristo CARVALHO, of the same political party as TROVOADA, was elected in 2016, marking a rare instance in which the same party held the positions of president and prime minister. TROVOADA resigned in 2018 and was replaced by Jorge BOM JESUS. Carlos Vila NOVA was elected president in 2021. TROVOADA began his fourth stint as prime minister in 2022, after his party's victory in legislative elections. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Africa, islands in the Gulf of Guinea, just north of the Equator, west of Gabon",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "1 00 N, 7 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "964 sq km"
+      },
+      {
+       "label": "land",
+       "text": "964 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "more than five times the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "209 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>measured from claimed archipelagic baselines"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; hot, humid; one rainy season (October to May)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "volcanic, mountainous",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Pico de Sao Tome 2,024 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Atlantic Ocean 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "fish, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "44.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 4.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 39.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "57.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "0% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "100 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "Sao Tome, the capital city, has roughly a quarter of the nation's population; Santo Antonio is the largest town on Principe; the northern areas of both islands have the highest population densities, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "flooding",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "the second-smallest African country (after the Seychelles); the two main islands form part of a chain of extinct volcanoes, and both are mountainous",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "223,561 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "111,553"
+      },
+      {
+       "label": "female",
+       "text": "112,008"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Sao Tomean(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Sao Tomean"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Mestico, Angolares (descendants of Angolan slaves), Forros (descendants of freed slaves), Servicais (contract laborers from Angola, Mozambique, and Cabo Verde), Tongas (children of servicais born on the islands), Europeans (primarily Portuguese), Asians (mostly Chinese)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Portuguese 98.4% (official), Forro 36.2%, Cabo Verdian 8.5%, French 6.8%, Angolar 6.6%, English 4.9%, Lunguie 1%, other (including sign language) 2.4%; other Portuguese-based Creoles are also spoken (2012 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> shares of language sum to more than 100% because some respondents gave more than one answer on the census"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Catholic 55.7%, Adventist 4.1%, Assembly of God 3.4%, New Apostolic 2.9%, Mana 2.3%, Universal Kingdom of God 2%, Jehovah's Witness 1.2%, other 6.2%, none 21.2%, unspecified 1% (2012 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "36.4% (male 41,337/female 40,106)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "60.3% (male 67,101/female 67,775)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.2% (2024 est.) (male 3,115/female 4,127)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "65.8 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "60.4 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.4 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "18.6 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "21.2 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "20.4 years"
+      },
+      {
+       "label": "female",
+       "text": "21.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.39% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "25.87 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.84 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-6.15 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "Sao Tome, the capital city, has roughly a quarter of the nation's population; Santo Antonio is the largest town on Principe; the northern areas of both islands have the highest population densities, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "76.4% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.96% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "80,000 SAO TOME (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.99 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.75 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "19.4 years (2008/09 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-29"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "75 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "41.7 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "46.1 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "39 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "67.7 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "66 years"
+      },
+      {
+       "label": "female",
+       "text": "69.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.18 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.57 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 79.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 71.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 77.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 20.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 28.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 22.7% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "7.8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "14.9% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.46 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "2.9 beds/1,000 population (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 56.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 43.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 53.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 43.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 56.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 46.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "12.4% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.23 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.42 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "3.58 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.23 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7.3% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "1.7% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "5.4% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "53.1% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "5.4% (2019)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "28% (2019)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "3.1% (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "18.1% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "87.4% (2019 est.)"
+      },
+      {
+       "label": "male",
+       "text": "92.5% (2019 est.)"
+      },
+      {
+       "label": "female",
+       "text": "82.8% (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 years (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "13 years (2021 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Democratic Republic of Sao Tome and Principe"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Sao Tome and Principe"
+      },
+      {
+       "label": "local long form",
+       "text": "Republica Democratica de Sao Tome e Principe"
+      },
+      {
+       "label": "local short form",
+       "text": "Sao Tome e Principe"
+      },
+      {
+       "label": "etymology",
+       "text": "Sao Tome was named after Saint THOMAS the Apostle by the Portuguese who discovered the island on 21 December 1470 (or 1471), the saint's feast day; Principe is a shortening of the original Portuguese name of \"Ilha do Principe\" (Isle of the Prince), referring to Prince ALPHONSO of Portugal"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Sao Tome"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "0 20 N, 6 44 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "named after Saint THOMAS the Apostle by the Portuguese, who discovered the island on 21 December 1470 (or 1471), the saint's feast day"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "6 districts (<em>distritos</em>, singular - <em>distrito</em>), 1 autonomous region* (<em>regiao autonoma</em>); Agua Grande, Cantagalo, Caue, Lemba, Lobata, Me-Zochi, Principe*",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil law based on the Portuguese model and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "approved 5 November 1975"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the National Assembly; passage requires two-thirds majority vote by the Assembly; the Assembly can propose to the president of the republic that an amendment be submitted to a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Sao Tome and Principe"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); prime minister chosen by the National Assembly and approved by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "18 July 2021, with a runoff on 5 September 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2021: </em>Carlos Manuel VILA NOVA elected president in the second round; percent of vote in the first round - Carlos Manuel VILA NOVA (IDA) 39.5%; Guilherme POSSER DA COSTA (MLSTP-PSD) 20.8%; Delfim NEVES (PCD-GR) 16.9%; Abel BOM JESUS (independent) 3.6%; Maria DAS NEVES (independent) 3.3%; other 15.9%; percent of the vote in second round - Carlos Manuel VILA NOVA 57.5%, Guilherme POSSER DA COSTA 42.5%<em><br /><br /><em>2016: </em></em>Evaristo CARVALHO elected president; percent of vote - Evaristo CARVALHO (ADI) 49.8%, Manuel Pinto DA COSTA (independent) 24.8%, Maria DAS NEVES (MLSTP-PSD) 24.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Assembly (Assembleia Nacional)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "55 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9/25/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Independent Democratic Alliance (ADI) (30); Sao Tome and Principe Liberation Movement/Social Democratic Party (MLSTP - PSD) (18); Movement of Independent Citizens - Socialist Party (MCI - PS) - National Unity Party (PUN) (5); Other (2)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "14.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Supremo Tribunal Justica (consists of 5 judges); Constitutional Court or Tribunal Constitucional (consists of 5 judges, 3 of whom are from the Supreme Court)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges appointed by the National Assembly; judge tenure NA; Constitutional Court judges nominated by the president and elected by the National Assembly for 5-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of First Instance; Audit Court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "BASTA Movement <br />Independent Democratic Action or ADI <br />Movement for the Liberation of Sao Tome and Principe-Social Democratic Party or MLSTP-PSD <br />Movement of Independent Citizens of São Tomé and Príncipe - Socialist Party or MCI-PS <br />National Unity Party or PUN",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AOSIS, AU, CD, CEMAC, CPLP, EITI (candidate country), FAO, G-77, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM (observer), IPU, ITU, ITUC (NGOs), MIGA, NAM, OIF, OPCW, PCA, UN, UNCTAD, UNESCO, UNIDO, Union Latina, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO (observer)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "12 July 1975 (from Portugal)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 12 July (1975)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal bands of green (top), yellow (double-width), and green with two five-pointed black stars in the center of the yellow band and a red isosceles triangle based on the left side<br /><br /><strong>meaning:</strong> green stands for the country's rich vegetation, red for the struggle for independence, and yellow for cocoa, one of the country's main agricultural products; the two stars symbolize the main islands<br /><br /><strong>history:</strong> uses the colors of the Pan-African movement",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "palm tree",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, yellow, red, black",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Independencia total\" (Total Independence)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Alda Neves DA GRACA do Espirito Santo/Manuel dos Santos Barreto de Sousa e ALMEIDA"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1975"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,1154 @@
+{
+ "iso3": "UKR",
+ "gec": "up",
+ "name": "Ukraine",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Ukraine was the center of the first eastern Slavic state, Kyivan Rus, which was the largest and most powerful state in Europe during the 10th and 11th centuries. Weakened by internecine quarrels and Mongol invasions, Kyivan Rus was incorporated into the Grand Duchy of Lithuania and eventually into the Polish-Lithuanian Commonwealth. The cultural and religious legacy of Kyivan Rus laid the foundation for Ukrainian nationalism. A new Ukrainian state, the Cossack Hetmanate, was established during the mid-17th century after an uprising against the Poles. Despite continuous Muscovite pressure, the Hetmanate managed to remain autonomous for well over 100 years. During the latter part of the 18th century, the Russian Empire absorbed most Ukrainian territory. After czarist Russia collapsed in 1917, Ukraine -- which has long been known as the region's \"bread basket\" for its agricultural production -- achieved a short-lived period of independence (1917-20), but the country was reconquered and endured a Soviet rule that engineered two famines (1921-22 and 1932-33) in which over eight million died. In World War II, German and Soviet armies were responsible for seven to eight million more deaths. In 1986, a sudden power surge during a reactor-systems test at Ukraine's Chernobyl power station triggered the worst nuclear disaster in history, releasing massive amounts of radioactive material. Although Ukraine overwhelmingly voted for independence in 1991 as the Union of Soviet Socialist Republics (USSR) dissolved, democracy and prosperity remained elusive, with the legacy of state control, patronage politics, and endemic corruption stalling efforts at economic reform, privatization, and civil liberties.</p> <p>In 2004 and 2005, a mass protest dubbed the \"Orange Revolution\" forced the authorities to overturn a presidential election and allow a new internationally monitored vote that swept into power a reformist slate under Viktor YUSHCHENKO. Rival Viktor YANUKOVYCH became prime minister in 2006 and was elected president in 2010. In 2012, Ukraine held legislative elections that Western observers widely criticized as corrupt. In 2013, YANUKOVYCH backtracked on a trade and cooperation agreement with the EU -- in favor of closer economic ties with Russia -- and then used force against protestors who supported the agreement, leading to a three-month protestor occupation of Kyiv's central square. The government's use of violence to break up the protest camp in 2014 led to multiple deaths, international condemnation, a failed political deal, and the president's abrupt departure for Russia. Pro-West President Petro POROSHENKO took office later that year; Volodymyr ZELENSKYY succeeded him in 2019.</p> <p>Shortly after YANUKOVYCH's departure in 2014, Russian President Vladimir PUTIN ordered the invasion of Ukraine's Crimean Peninsula. In response, the UN passed a resolution confirming Ukraine's sovereignty and independence. In mid-2014, Russia began an armed conflict in two of Ukraine's eastern provinces. International efforts to end the conflict failed, and by 2022, more than 14,000 civilians were killed or wounded. On 24 February 2022, Russia escalated the conflict by invading the country on several fronts, in what has become the largest conventional military attack on a sovereign state in Europe since World War II. Russia made substantial gains in the early weeks of the invasion but underestimated Ukrainian resolve and combat capabilities. Despite Ukrainian resistance, Russia has laid claim to four Ukrainian oblasts -- Donetsk, Kherson, Luhansk, and Zaporizhzhia -- although none is fully under Russian control. The international community has not recognized the annexations. The invasion has also created Europe's largest refugee crisis since World War II, with over six million Ukrainian refugees recorded globally. It remains one of the two largest displacement crises worldwide (the other is the conflict in Syria). President ZELENSKYY has focused on boosting Ukrainian identity to unite the country behind the goals of ending the war through reclaiming territory and advancing Ukraine’s candidacy for EU membership. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Europe, bordering the Black Sea, between Poland, Belarus, Romania, and Moldova in the west and Russia in the east",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "49 00 N, 32 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "AsiaEurope",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "603,550 sq km"
+      },
+      {
+       "label": "land",
+       "text": "579,330 sq km"
+      },
+      {
+       "label": "water",
+       "text": "24,220 sq km"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Russia annexed Crimea in 2014, an area of approximately 27,000 sq km (10,400 sq miles)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "almost four times the size of Georgia; slightly smaller than Texas",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,581 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Belarus 1,111 km; Hungary 128 km; Moldova 1,202 km; Poland 498 km; Romania 601 km; Russia 1,944 km, Slovakia 97 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,782 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 m or to the depth of exploitation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate continental; Mediterranean only on the southern Crimean coast; precipitation disproportionately distributed, highest in west and north, lesser in east and southeast; winters vary from cool along the Black Sea to cold farther inland; warm summers across the greater part of the country, hot in the south",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly fertile plains (steppes) and plateaus, with mountains found only in the west (the Carpathians) or in the extreme south of the Crimean Peninsula",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Hora Hoverla 2,061 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Black Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "175 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "iron ore, coal, manganese, natural gas, oil, salt, sulfur, graphite, titanium, magnesium, kaolin, nickel, mercury, timber, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "71.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 56.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 13% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "17.3% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "10.4% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "1,000 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Dunay (Danube) (shared with Germany [s], Austria, Slovakia, Hungary, Croatia, Serbia, Bulgaria, Moldova, and Romania [m]) - 2,888 km; Dnipro (Dnieper) river mouth (shared with Russia [s] and Belarus) - 2,287 km; Dnister (Dniester) river source and mouth (shared with Moldova) - 1,411 km; Vistula (shared with Poland [s/m] and Belarus) - 1,213 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Black Sea)</em> Danube (795,656 sq km), Don (458,694 sq km), Dnieper (533,966 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "densest settlement in the eastern (Donbas) and western regions; notable concentrations in and around major urban areas of Kyiv, Kharkiv, Donets'k, Dnipropetrovs'k, and Odesa",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the ongoing war with Russia has shifted significant portions of the population, particularly in the east"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "occasional floods; occasional droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "strategic position at the crossroads between Europe and Asia; second-largest country in Europe after Russia",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "35,661,826 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17,510,149"
+      },
+      {
+       "label": "female",
+       "text": "18,151,677"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Ukrainian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Ukrainian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Ukrainian 77.8%, Russian 17.3%, Belarusian 0.6%, Moldovan 0.5%, Crimean Tatar 0.5%, Bulgarian 0.4%, Hungarian 0.3%, Romanian 0.3%, Polish 0.3%, Jewish 0.2%, other 1.8% (2001 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Ukrainian (official) 67.5%, Russian (regional language) 29.6%, other (includes Crimean Tatar, Moldovan/Romanian, and Hungarian) 2.9% (2001 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Свiтова Книга Фактiв – найкраще джерело базової інформації. (Ukrainian)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Orthodox (includes the Orthodox Church of Ukraine (OCU), Ukrainian Autocephalous Orthodox Church (UAOC), and the Ukrainian Orthodox - Moscow Patriarchate (UOC-MP)), Ukrainian Greek Catholic, Roman Catholic, Protestant, Muslim, Jewish (2013 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Ukraine's population is overwhelmingly Christian; the vast majority - up to two thirds - identify themselves as Orthodox, but many do not specify a particular branch; the OCU and the UOC-MP each represent less than a quarter of the country's population, the Ukrainian Greek Catholic Church accounts for 8-10%, and the UAOC accounts for 1-2%; Muslim and Jewish adherents each compose less than 1% of the total population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "12.3% (male 2,278,116/female 2,122,500)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "67.8% (male 12,784,928/female 11,376,460)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "19.9% (2024 est.) (male 2,447,105/female 4,652,717)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "47.6 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "18.2 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "29.4 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3.4 (2024 est.)"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data include Crimea"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "44.6 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "41.4 years"
+      },
+      {
+       "label": "female",
+       "text": "49.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.42% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "6.24 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "17.61 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "35.59 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "densest settlement in the eastern (Donbas) and western regions; notable concentrations in and around major urban areas of Kyiv, Kharkiv, Donets'k, Dnipropetrovs'k, and Odesa",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the ongoing war with Russia has shifted significant portions of the population, particularly in the east"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "70.1% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "-0.27% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.017 million KYIV (capital), 1.421 million Kharkiv, 1.008 million Odesa, 942,000 Dnipropetrovsk, 888,000 Donetsk (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.12 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.53 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.97 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "26.2 years (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "15 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "7.6 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "70.5 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "65.4 years"
+      },
+      {
+       "label": "female",
+       "text": "75.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.22 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.59 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 90.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 93.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 9.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 6.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "10.6% of national budget (2021 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "3.53 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "6.3 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "24.1% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5.69 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.44 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.32 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "2.88 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.05 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.4% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "35.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "8% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 310,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.1% of GDP (2021 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "12.7% national budget (2021 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "100%"
+      },
+      {
+       "label": "male",
+       "text": "100%"
+      },
+      {
+       "label": "female",
+       "text": "100% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 years (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "14 years (2021 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "none"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Ukraine"
+      },
+      {
+       "label": "local long form",
+       "text": "none"
+      },
+      {
+       "label": "local short form",
+       "text": "Ukraina"
+      },
+      {
+       "label": "former",
+       "text": "Ukrainian National Republic, Ukrainian State, Ukrainian Soviet Socialist Republic"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Old East Slavic or Old Russian word <em>ukraina</em>, meaning \"borderland,\" which was used to describe the area on medieval Russia's border at the time of the Tatar invasion in the 13th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Kyiv (Kiev is the transliteration from Russian)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "50 26 N, 30 31 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the name is unclear; traditionally, the name comes from a Prince Kiy, who is said to have founded the city in the 9th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "24 provinces (<em>oblasti</em>, singular - <em>oblast'</em>), 1 autonomous republic* (<em>avtonomna respublika</em>), and 2 municipalities** (<em>mista</em>, singular - <em>misto</em>) with oblast status; Cherkasy, Chernihiv, Chernivtsi, Crimea or Avtonomna Respublika Krym* (Simferopol), Dnipropetrovsk (Dnipro), Donetsk, Ivano-Frankivsk, Kharkiv, Kherson, Khmelnytskyi, Kirovohrad (Kropyvnytskyi), Kyiv**, Kyiv, Luhansk, Lviv, Mykolaiv, Odesa, Poltava, Rivne, Sevastopol**, Sumy, Ternopil, Vinnytsia, Volyn (Lutsk), Zakarpattia (Uzhhorod), Zaporizhzhia, Zhytomyr",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> administrative divisions have the same names as their administrative centers; exceptions show the administrative center name in parentheses <br /><br /><strong>note 2:</strong> the United States does not recognize Russia's annexation or renaming of Ukraine's Autonomous Republic of Crimea and the municipality of Sevastopol; it similarly does not recognize the annexation of the Ukrainian oblasts Donetsk, Luhansk, Zaporizhzhia, and Kherson"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system; judicial review of legislative acts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted and ratified 28 June 1996"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of Ukraine or by at least one third of the Supreme Council members; adoption requires simple majority vote by the Council and at least two-thirds majority vote in its next regular session; adoption of proposals relating to general constitutional principles, elections, and amendment procedures requires two-thirds majority vote by the Council and approval in a referendum; constitutional articles on personal rights and freedoms, national independence, and territorial integrity cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Ukraine"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); prime minister selected by the Verkhovna Rada"
+      },
+      {
+       "label": "most recent election date",
+       "text": "31 March and 21 April 2019"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2019:</em> Volodymyr ZELENSKYY elected president in second round; percent of vote in first round - Volodymyr ZELENSKYY (Servant of the People) 30.2%, Petro POROSHENKO (BPP-Solidarity) 15.6%, Yuliya TYMOSHENKO (Fatherland) 13.4%, Yuriy BOYKO (Opposition Platform-For Life) 11.7%, 35 other candidates 29.1%; percent of vote in the second round - Volodymyr ZELENSKYY 73.2%, Petro POROSHENKO 24.5%, other 2.3%; Denys SHMYHAL (independent) elected prime minister; Verkhovna Rada vote - 291-59<br /><br /><em>2014: </em>Petro POROSHENKO elected president in first round; percent of vote - Petro POROSHENKO (independent) 54.5%, Yuliya TYMOSHENKO (Fatherland) 12.9%, Oleh LYASHKO (Radical Party) 8.4%, other 24.2%; Volodymyr HROYSMAN (BPP) elected prime minister; Verkhovna Rada vote - 257-50"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "scheduled for March/April 2024, but not held because Ukraine has been under martial law since February 2022"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> a National Security and Defense Council or NSDC was created in 1992 and tasked with developing national security policy on domestic and international matters and advising the president; a presidential administration helps draft presidential edicts and provides policy support to the president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Verkhovna Rada)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "450 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "7/21/2019"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Servant of the People (254); Opposition Platform - For Life (43); Fatherland (26); European Solidarity (25); Independents (46); Other (30)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "21.2%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2025"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the next legislative election is expected to take place after the Russian-Ukrainian War ends<br /><br /><strong>note 2:</strong> voting not held in Crimea and parts of two Russian-occupied eastern oblasts leaving 26 seats vacant; although this brings the total to 424 elected members (of 450 potential), article 83 of the constitution mandates that a parliamentary majority consists of 226 seats"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of Ukraine or SCU (consists of 100 judges, organized into civil, criminal, commercial and administrative chambers, and a grand chamber); Constitutional Court (consists of 18 justices); High Anti-Corruption Court (consists of 39 judges, including 12 in the Appeals Chamber)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges recommended by the High Qualification Commission of Judges (a 16-member state body responsible for judicial candidate testing and assessment and judicial administration), submitted to the High Council of Justice, a 21-member independent body of judicial officials; judges serve until mandatory retirement at age 65; High Anti-Corruption Court judges are selected by the same process, with one addition – a majority of a combined High Qualification Commission of Judges and a 6-member Public Council of International Experts must vote in favor of potential judges in order to recommend their nomination to the High Council of Justice; Constitutional Court justices appointed - 6 each by the president, the Congress of Judges, and the Verkhovna Rada; judges serve 9-year nonrenewable terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; district courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "European Solidarity or YeS<br />Fatherland or VOB<br />Holos<br />Servant of the People or SN",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "Australia Group, BSEC, CBSS (observer), CD, CE, CEI, CICA (observer), CIS (participating member, has not signed the 1993 CIS charter), EAEC (observer), EAPC, EBRD, FAO, GCTU, GUAM, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITU, ITUC (NGOs), LAIA (observer), MIGA, MONUSCO, NAM (observer), NSG, OAS (observer), OIF (observer), OPCW, OSCE, PCA, PFP, SELEC (observer), UN, UNCTAD, UNESCO, UNFICYP, UNIDO, UNISFA, UNMIL, UNMISS, UNOCI, UNOOSA, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO, ZC",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note</strong>: Ukraine is an EU candidate country and must complete accession criteria before being granted full membership"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "24 August 1991 (from the Soviet Union); notable earlier dates: ca. 982 (VOLODYMYR I consolidates Kyivan Rus); 1199 (Principality (later Kingdom) of Ruthenia formed); 1648 (establishment of the Cossack Hetmanate); 22 January 1918 (from Soviet Russia)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 24 August (1991)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 22 January 1918, the day Ukraine first declared its independence from Soviet Russia, is now celebrated as Unity Day"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> two equal horizontal bands of blue (top) and yellow<br /><br /><strong>meaning: </strong>the colors date back to medieval heraldry, but they are sometimes said to represent grain fields under a blue sky",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "tryzub (trident), sunflower",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "blue, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Shche ne vmerla Ukraina\" (Ukraine Has Not Yet Perished)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Paul CHUBYNSKYI/Mikhail VERBYTSKYI"
+      },
+      {
+       "label": "history",
+       "text": "music adopted 1991, lyrics adopted 2003; current version of the anthem is the first verse of CHUBYNSKYI's poem, plus the chorus"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "8 (7 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Kyiv: Saint Sophia Cathedral and Related Monastic Buildings, Kyiv Pechersk Lavra (c); Lviv Historic Center (c); Residence of Bukovinian and Dalmatian Metropolitans, Chernivtsi (c); Ancient City of Tauric Chersonese, Sevastopol (c); Wooden Tserkvas of the Carpathian Region (c); Ancient and Primeval Beech Forests of the Carpathians (n); Struve Geodetic Arc (c); The Historic Centre of Odesa (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

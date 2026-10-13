@@ -1,0 +1,1002 @@
+{
+ "iso3": "SDN",
+ "gec": "su",
+ "name": "Sudan",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Long referred to as Nubia, modern-day Sudan was the site of the Kingdom of Kerma (ca. 2500-1500 B.C.) until it was absorbed into the New Kingdom of Egypt. By the 11th century B.C., the Kingdom of Kush gained independence from Egypt; it lasted in various forms until the middle of the 4th century A.D. After the fall of Kush, the Nubians formed three Christian kingdoms of Nobatia, Makuria, and Alodia, with the latter two enduring until around 1500. Between the 14th and 15th centuries, Arab nomads settled much of Sudan, leading to extensive Islamization between the 16th and 19th centuries. Following Egyptian occupation early in the 19th century, an agreement in 1899 set up a joint British-Egyptian government in Sudan, but it was effectively a British colony. <br /><br />Military regimes favoring Islamic-oriented governments have dominated national politics since Sudan gained independence from Anglo-Egyptian co-rule in 1956. During most of the second half of the 20th century, Sudan was embroiled in two prolonged civil wars rooted in northern domination of the largely non-Muslim, non-Arab southern portion of the country. The first civil war ended in 1972, but another broke out in 1983. Peace talks gained momentum in 2002-04, and the final North/South Comprehensive Peace Agreement in 2005 granted the southern rebels autonomy for six years, followed by a referendum on independence for Southern Sudan. South Sudan became independent in 2011, but Sudan and South Sudan have yet to fully implement security and economic agreements to normalize relations between the two countries. Sudan has also faced conflict in Darfur, Southern Kordofan, and Blue Nile starting in 2003.<br /><br />In 2019, after months of nationwide protests, the 30-year reign of President Omar Hassan Ahmad al-BASHIR ended when the military forced him out. Economist and former international civil servant Abdalla HAMDOUK al-Kinani was selected to serve as the prime minister of a transitional government as the country prepared for elections in 2022. In late 2021, however, the Sudanese military ousted HAMDOUK and his government and replaced civilian members of the Sovereign Council (Sudan’s collective Head of State) with individuals selected by the military. HAMDOUK was briefly reinstated but resigned in January 2022. General Abd-al-Fatah al-BURHAN Abd-al-Rahman, the Chair of Sudan’s Sovereign Council and Commander-in-Chief of the Sudanese Armed Forces, currently serves as de facto head of state and government. He presides over a Sovereign Council consisting of military leaders, former armed opposition group representatives, and military-appointed civilians. A cabinet of acting ministers handles day-to-day administration. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "north-eastern Africa, bordering the Red Sea, between Egypt and Eritrea",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "15 00 N, 30 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,861,484 sq km"
+      },
+      {
+       "label": "land",
+       "text": "1,731,671 sq km"
+      },
+      {
+       "label": "water",
+       "text": "129,813 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than one-fifth the size of the US",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6,819 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Central African Republic 174 km; Chad 1,403 km; Egypt 1,276 km; Eritrea 682 km; Ethiopia 744 km; Libya 382 km; South Sudan 2,158 km"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Sudan-South Sudan boundary represents 1 January 1956 alignment; final alignment pending negotiations and demarcation; final sovereignty status of Abyei region pending negotiations between Sudan and South Sudan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "853 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "18 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "hot and dry; arid desert; rainy season varies by region (April to November)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "generally flat, featureless plain; desert dominates the north",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Jabal Marrah 3,042 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Red Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "568 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum; small reserves of iron ore, copper, chromium ore, zinc, tungsten, mica, silver, gold; hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "60.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 11.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 49% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "12% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "27.7% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "15,504 sq km (2019)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "<p>An Nīl (Nile) (shared with Rwanda [s], Tanzania, Uganda, South Sudan, and Egypt [m]) - 6,650 km; Blue Nile river mouth (shared with Ethiopia [s]) - 1,600 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth</p>",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Mediterranean Sea)</em> Nile (3,254,853 sq km)"
+      },
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "Lake Chad (2,497,738 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 170,
+    "content": {
+     "text": "Nubian Aquifer System, Sudd Basin (Umm Ruwaba Aquifer)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "with the exception of a ribbon of settlement that corresponds to the banks of the Nile, northern Sudan is sparsely populated; sizeable areas of population are found around Khartoum, southeast between the Blue and White Nile Rivers, and throughout South Darfur, as shown on this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "dust storms and periodic persistent droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "the Nile is Sudan's primary water source; its major tributaries, the White Nile and the Blue Nile, meet at Khartoum to form the River Nile, which flows northward through Egypt to the Mediterranean Sea",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "50,467,278 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "25,335,092"
+      },
+      {
+       "label": "female",
+       "text": "25,132,186"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Sudanese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Sudanese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Sudanese Arab (approximately 70%), Fur, Beja, Nuba, Ingessana, Uduk, Fallata, Masalit, Dajo, Gimir, Tunjur, Berti; there are over 500 ethnic groups",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official), English (official), Nubian, Ta Bedawie, Fur"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information. (English)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Sunni Muslim, small Christian minority",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "40.1% (male 10,278,453/female 9,949,343)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "56.7% (male 14,211,514/female 14,390,486)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.2% (2024 est.) (male 845,125/female 792,357)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "76.4 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "70.7 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.7 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "17.5 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "19.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "19 years"
+      },
+      {
+       "label": "female",
+       "text": "19.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.54% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "32.95 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.55 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "with the exception of a ribbon of settlement that corresponds to the banks of the Nile, northern Sudan is sparsely populated; sizeable areas of population are found around Khartoum, southeast between the Blue and White Nile Rivers, and throughout South Darfur, as shown on this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "36.3% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.43% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "6.344 million KHARTOUM (capital), 1.057 million Nyala (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.99 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.01 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "256 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "39.7 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "46 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "34.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "67.8 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "65.5 years"
+      },
+      {
+       "label": "female",
+       "text": "70.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "4.41 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "2.15 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 74.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 59.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 64.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 25.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 40.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 35.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "2.8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "6.7% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "0.25 physicians/1,000 population (2017)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "0.7 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 260,
+    "content": {
+     "text": "6.6% (2014)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.93 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.29 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "1.63 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 280,
+    "content": {
+     "text": "33% (2014)",
+     "items": []
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7 years (2015 est.)"
+      },
+      {
+       "label": "male",
+       "text": "7 years (2015 est.)"
+      },
+      {
+       "label": "female",
+       "text": "7 years (2015 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of the Sudan"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Sudan"
+      },
+      {
+       "label": "local long form",
+       "text": "Jumhuriyat as-Sudan"
+      },
+      {
+       "label": "local short form",
+       "text": "As-Sudan"
+      },
+      {
+       "label": "former",
+       "text": "Anglo-Egyptian Sudan, Democratic Republic of the Sudan"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Arabic <em>balad-as-sudan</em>, meaning \"Land of the Black [peoples]\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Khartoum"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "15 36 N, 32 32 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Arabic words <em>ras </em>(head or end) and <em>al-khurtum</em> (elephant's trunk), referring to the narrow strip of land between the Blue and White Niles where the city is located"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "18 states (<em>wilayat</em>, singular - <em>wilayah</em>); Blue Nile, Central Darfur, East Darfur, Gedaref, Gezira, Kassala, Khartoum, North Darfur, North Kordofan, Northern, Red Sea, River Nile, Sennar, South Darfur, South Kordofan, West Darfur, West Kordofan, White Nile",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the peace agreement signed in 2020 included a provision to establish a system of governance to restructure the country's current 18 states into regions"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of Islamic law and English common law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1973, 1998, 2005 (interim constitution, which was suspended in April 2019); latest initial draft completed by Transitional Military Council in May 2019; revised draft known as the \"Draft Constitutional Charter for the 2019 Transitional Period,\" or “2019 Constitutional Declaration” was signed by the Council and opposition coalition on 4 August 2019"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>amended 2020 to incorporate the Juba Agreement for Peace in Sudan; the military suspended several provisions of the Constitutional Declaration in October 2021"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; withdrew acceptance of ICCt jurisdiction in 2008",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Sudan"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "17 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "military members of the Sovereign Council are selected by the leadership of the security forces; representatives of former armed groups to the Sovereign Council are selected by the signatories of the Juba Peace Agreement"
+      },
+      {
+       "label": "election results",
+       "text": "NA"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "supposed to be held in 2022 or 2023, but the methodology for elections has still not been defined"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the 2019 Constitutional Declaration established a collective chief of state of the \"Sovereign Council,\" which was chaired by al-BURHAN; on 25 October 2021, al-BURHAN dissolved the Sovereign Council but reinstated it on 11 November 2021, replacing its civilian members (previously selected by the umbrella civilian coalition the Forces for Freedom and Change) with civilians of the military’s choosing, but then relieved the newly appointed civilian members of their duties on 6 July 2022<br /><br /><strong>note 2:</strong> Sovereign Council currently consists of 5 generals"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong>  the Parliament of Sudan was dissolved after a coup in April 2019; the August 2019 Constitutional Declaration established Sudan's transitional government; a Transitional Legislative Council (TLC) was to have served as the national legislature during the transitional period until elections could be held, but the TLC has not been created"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "National Supreme Court (consists of 70 judges organized into panels of 3 judges and includes 4 circuits that operate outside the capital); a Constitutional Court was required in the 2019 Constitutional Declaration, but it has yet to be implemented"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "National Supreme Court and Constitutional Court judges selected by the Supreme Judicial Council"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeal; other national courts; public courts; district, town, and rural courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Democratic Unionist Party<br />Democratic Unionist Party or DUP<br />Federal Umma Party<br />Muslim Brotherhood or MB<br />National Congress Party or NCP<br />National Umma Party or NUP<br />Popular Congress Party or PCP<br />Reform Movement Now<br />Sudan National Front<br />Sudanese Communist Party or SCP<br />Sudanese Congress Party or SCoP<br />Umma Party for Reform and Development<br />Unionist Movement Party or UMP",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:  </strong>in November 2019, the transitional government banned the National Congress Party"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ABEDA, ACP, AfDB, AFESD, AMF, AU (suspended), CAEU, COMESA, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IGAD, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OIC, OPCW, PCA, UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (observer)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "1 January 1956 (from Egypt and the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 1 January (1956)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of red (top), white, and black, with a green isosceles triangle based on the left side<br /><br /><strong>meaning:</strong> red stands for the struggle for freedom; white for peace, light, and love, black for the people; green for Islam, agriculture, and prosperity<br /><br /><strong>history:</strong> colors and design are based on the Arab Revolt flag of World War I",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "secretary bird",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, white, black, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Nahnu Djundulla Djundulwatan\" (We Are the Army of God and of Our Land)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Sayed Ahmad Muhammad SALIH/Ahmad MURJAN"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1956; originally served as the anthem of the Sudanese military"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "3 (2 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Gebel Barkal and the Sites of the Napatan Region (c); Archaeological Sites of the Island of Meroe (c); Sanganeb Marine National Park and Dungonab Bay – Mukkawar Island Marine National Park (n)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

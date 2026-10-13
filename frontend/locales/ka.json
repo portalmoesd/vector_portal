@@ -1233,8 +1233,11 @@
     "noDataSource": "წყაროს მიერ მნიშვნელობა არ არის გამოქვეყნებული",
     "onThisPage": "ამ გვერდზე",
     "sections": {
+      "introduction": "შესავალი",
       "overview": "მიმოხილვა",
+      "geography": "გეოგრაფია",
       "people": "მოსახლეობა",
+      "government": "მმართველობა",
       "economy": "ეკონომიკა",
       "trade": "ვაჭრობა"
     },
@@ -1258,6 +1261,12 @@
       "title": "მშპ და მოსახლეობა, ბოლო 20 წელი",
       "gdp": "მშპ (მიმდინარე აშშ დოლარი)",
       "population": "მოსახლეობა"
+    },
+    "factbook": {
+      "fromFactbook": "მსოფლიო ფაქტების წიგნიდან (World Factbook)",
+      "snapshot": "ვერსია: {date}",
+      "discontinued": "გამოცემა შეწყდა {date}",
+      "edited": "რედაქტირებული"
     },
     "source": "წყარო",
     "countryListSource": "მსოფლიო ბანკის ქვეყნების სია",

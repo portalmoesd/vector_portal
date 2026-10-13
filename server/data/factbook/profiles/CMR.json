@@ -1,0 +1,1209 @@
+{
+ "iso3": "CMR",
+ "gec": "cm",
+ "name": "Cameroon",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Powerful chiefdoms ruled much of the area of present-day Cameroon before it became a German colony known as Kamerun in 1884. After World War I, the territory was divided between France and the UK as League of Nations mandates. French Cameroon became independent in 1960 as the Republic of Cameroon. The following year, the southern portion of neighboring British Cameroon voted to merge with the new country to form the Federal Republic of Cameroon. In 1972, a new constitution replaced the federation with a unitary state, the United Republic of Cameroon. The country has generally enjoyed stability, which has enabled the development of agriculture, roads, and railways, as well as a petroleum industry. Nonetheless, unrest and violence in the country's two western, English-speaking regions have persisted since 2016. Movement toward democratic reform is slow, and political power remains firmly in the hands of President Paul BIYA.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Africa, bordering the Bight of Biafra, between Equatorial Guinea and Nigeria",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "6 00 N, 12 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "475,440 sq km"
+      },
+      {
+       "label": "land",
+       "text": "472,710 sq km"
+      },
+      {
+       "label": "water",
+       "text": "2,730 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than California; about four times the size of Pennsylvania",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5,018 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Central African Republic 901 km; Chad 1,116 km; Republic of the Congo 494 km; Equatorial Guinea 183 km; Gabon 349 km; Nigeria 1975 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "402 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "varies with terrain, from tropical along coast to semiarid and hot in north",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "diverse, with coastal plain in southwest, dissected plateau in center, mountains in west, plains in north",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Fako on Mont Cameroun 4,045 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Atlantic Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "667 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, bauxite, iron ore, timber, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "20.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 13.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 3.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 4.2% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "41% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "38.1% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "290 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lake Chad (endorheic lake shared with Niger, Nigeria, and Chad) - 10,360-25,900 sq km<br />note - area varies by season and year to year"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Congo (3,730,881 sq km), Niger (2,261,741 sq km)"
+      },
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "Lake Chad (2,497,738 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 170,
+    "content": {
+     "text": "Lake Chad Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "population concentrated in the west and north, with the interior of the country sparsely populated, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "volcanic activity with periodic releases of poisonous gases from Lake Nyos and Lake Monoun volcanoes <br /><br /><strong>volcanism:</strong> Mt. Cameroon (4,095 m), which last erupted in 2000, is the most frequently active volcano in West Africa; lakes in the Oku volcanic field sometimes release fatal levels of gas, which killed about 1,700 people in 1986",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "sometimes referred to as the hinge of Africa because of its central location on the continent and its position at the west-south juncture of the Gulf of Guinea; areas of thermal springs and indications of current or prior volcanic activity; Mount Cameroon, the highest mountain in Sub-Saharan west Africa, is an active volcano",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "31,518,954 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15,683,611"
+      },
+      {
+       "label": "female",
+       "text": "15,835,343"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Cameroonian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Cameroonian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Bamileke-Bamu 22.2%, Biu-Mandara 16.4%, Arab-Choa/Hausa/Kanuri 13.5%, Beti/Bassa, Mbam 13.1%, Grassfields 9.9%, Adamawa-Ubangi, 9.8%, Cotier/Ngoe/Oroko 4.6%, Southwestern Bantu 4.3%, Kako/Meka 2.3%, foreign/other ethnic group 3.8% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "24 major African language groups, English (official), French (official)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "The World Factbook, the indispensable source for basic information. (English)<br /><br />The World Factbook, une source indispensable d'informations de base. (French)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 33.1%, Muslim 30.6%, Protestant 27.1% other Christian 6.1%, animist 1.3%, other 0.7%, none 1.2% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "41.5% (male 6,477,438/female 6,364,987)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "55.3% (male 8,488,522/female 8,638,519)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.2% (2024 est.) (male 463,628/female 533,011)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "77.6 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "71.8 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "17.3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "19.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "18.6 years"
+      },
+      {
+       "label": "female",
+       "text": "19.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.37% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "30.79 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.73 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.32 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population concentrated in the west and north, with the interior of the country sparsely populated, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "59.3% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.43% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "4.509 million YAOUNDE (capital), 4.063 million Douala (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.98 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.87 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.99 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "20.1 years (2018 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "258 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "44.6 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "50.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "41.3 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "64.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "62.3 years"
+      },
+      {
+       "label": "female",
+       "text": "66.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.87 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.91 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 81.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 52.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 69.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 18.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 47.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 30.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "3.8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "3.9% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.14 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "2.6 beds/1,000 population (2016 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 83.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 27.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 60.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 16.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 72.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 39.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "11.4% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "2.36 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.16 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "1.56 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9.2% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "11% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "58.1% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "10.7% (2018)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "29.8% (2018)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "2.9% (2018)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "2.8% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "13.8% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "72.6% (2018 est.)"
+      },
+      {
+       "label": "male",
+       "text": "79.7% (2018 est.)"
+      },
+      {
+       "label": "female",
+       "text": "66.2% (2018 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "10 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Cameroon"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Cameroon"
+      },
+      {
+       "label": "local long form",
+       "text": "République du Cameroun (French)/Republic of Cameroon (English)"
+      },
+      {
+       "label": "local short form",
+       "text": "Cameroun/Cameroon"
+      },
+      {
+       "label": "former",
+       "text": "Kamerun, French Cameroon, British Cameroon, Federal Republic of Cameroon, United Republic of Cameroon"
+      },
+      {
+       "label": "etymology",
+       "text": "in the 16th century, Portuguese explorers named an estuary near the mouth of the Wouri River the Rio dos Camaroes (River of Prawns) after the abundant shrimp in the water; the name Camaroes evolved into \"Cameroon\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Yaounde"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "3 52 N, 11 31 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "Germans founded the city in 1888, but the name comes from the native Ewondo people; the meaning of the name is unclear"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "10 regions (<em>régions</em>, singular - <em>région</em>); Adamaoua, Centre, East (Est), Far North (Extrême-Nord), Littoral, North (Nord), North-West (Nord-Ouest), West (Ouest), South (Sud), South-West (Sud-Ouest)",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of English common law, French civil law, and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest effective 18 January 1996"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or by Parliament; amendment drafts require approval of at least one third of the membership in either house of Parliament; passage requires absolute majority vote of the Parliament membership; passage of drafts requested by the president for a second reading in Parliament requires two-thirds majority vote of its membership; the president can opt to submit drafts to a referendum, in which case passage requires a simple majority; constitutional articles on Cameroon’s unity and territorial integrity and its democratic principles cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Cameroon"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "20 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by simple-majority popular vote for a 7-year term (no term limits); prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12 October 2025"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2025- </em>Paul BIYA reelected president;<em> </em>percent of vote - Paul BIYA (CPDM) 53.7%, Issa Tchiroma BAKARY (CNSF) 35.2%, Cabral LIBII (PCRN) 3.4%, Bello Boubou MAIGARI (UNDP)2.4%, other 5.3%   <em><br /><br />2018:</em> Paul BIYA reelected president; percent of vote - Paul BIYA (CPDM) 71.3%, Maurice KAMTO (MRC) 14.2%, Cabral LIBII (Univers) 6.3%, other 8.2%<br /> (2018)"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2032"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parlement - Parliament"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Assemblée nationale - National Assembly)"
+      },
+      {
+       "label": "number of seats",
+       "text": "180 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "3/12/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Cameroon People's Democratic Movement (RDPC/CPDM) (152); Other (28)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "33.9%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "February 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Sénat - Senate)"
+      },
+      {
+       "label": "number of seats",
+       "text": "100 (70 indirectly elected; 30 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "2/9/2020 to 3/22/2020"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "33%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "March 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of Cameroon (consists of 9 titular and 6 surrogate judges and organized into judicial, administrative, and audit chambers); Constitutional Council (consists of 11 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges appointed by the president with the advice of the Higher Judicial Council of Cameroon, a body chaired by the president and includes the minister of justice, selected magistrates, and representatives of the National Assembly; judge term NA; Constitutional Council members appointed by the president for renewable 6-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Parliamentary Court of Justice (jurisdiction limited to cases involving the president and prime minister); appellate and first instance courts; circuit and magistrates' courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Alliance for Democracy and Development <br />Cameroon People's Democratic Movement or CPDM <br />Cameroon People's Party or CPP <br />Cameroon Renaissance Movement or MRC <br />Cameroonian Democratic Union or UDC <br />Cameroonian Party for National Reconciliation or PCRN <br />Front for the National Salvation of Cameroon or FSNC <br />Movement for the Defense of the Republic or MDR <br />Movement for the Liberation and Development of Cameroon or MLDC <br />National Union for Democracy and Progress or UNDP <br />Progressive Movement or MP <br />Social Democratic Front or SDF <br />Union of Peoples of Cameroon or UPC <br />Union of Socialist Movements",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, AU, BDEAC, C, CEMAC, EITI (compliant country), FAO, FZ, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LCBC, MIGA, MNJTF, MONUSCO, NAM, OIC, OIF, OPCW, PCA, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNMISS, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "1 January 1960 (from French-administered UN trusteeship)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "State Unification Day (National Day), 20 May (1972)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal vertical bands of green (left side), red, and yellow, with a small five-pointed yellow star centered in the red band<br /><br /><strong>meaning:</strong> red stands for unity; yellow for the sun, happiness, and the northern savannahs; green for hope and the southern forests; the star is called the \"star of unity;\" the vertical tricolor design is similar to the French flag<br /><br /><strong>history:</strong> uses the colors of the Pan-African movement",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "green, red, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"O Cameroun, Berceau de Nos Ancêtres\" (O Cameroon, Cradle of Our Forefathers)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Rene Djam AFAME, Samuel Minkio BAMBA, Moise Nyatte NKO'O [French], Benard Nsokika FONLON [English]/Rene Djam AFAME"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1957; lyrics were changed slightly to the current version in 1978"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "3 (two natural and one cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Dja Faunal Reserve (n); Sangha Trinational Forest (n); Diy-Gid-Biy Cultural Landscape of the Mandara Mountains (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

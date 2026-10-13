@@ -1,0 +1,1126 @@
+{
+ "iso3": "YEM",
+ "gec": "ym",
+ "name": "Yemen",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The Kingdom of Yemen (colloquially known as North Yemen) became independent from the Ottoman Empire in 1918 and in 1962 became the Yemen Arab Republic. The British, who had set up a protectorate area around the southern port of Aden in the 19th century, withdrew in 1967 from what became the People's Republic of Southern Yemen (colloquially known as South Yemen). Three years later, the southern government adopted a Marxist orientation and changed the country's name to the People's Democratic Republic of Yemen. The exodus of hundreds of thousands of Yemenis from the south to the north contributed to two decades of hostility between the states, which were formally unified as the Republic of Yemen in 1990. A southern secessionist movement and brief civil war in 1994 was quickly subdued. In 2000, Saudi Arabia and Yemen agreed to delineate their border. Fighting in the northwest between the government and the Houthis, a Zaydi Shia Muslim minority, continued intermittently from 2004 to 2010, and then again from 2014 to the present. The southern secessionist movement was revitalized in 2007.</p> <p>Public rallies in Sana'a against then President Ali Abdallah SALIH -- inspired by similar Arab Spring demonstrations in Tunisia and Egypt -- slowly gained momentum in 2011, fueled by complaints over high unemployment, poor economic conditions, and corruption. Some protests resulted in violence, and the demonstrations spread to other major cities. The Gulf Cooperation Council (GCC) mediated the crisis with the GCC Initiative, an agreement in which the president would step down in exchange for immunity from prosecution. SALIH eventually agreed to step down and transfer some powers to Vice President Abd Rabuh Mansur HADI. After HADI's uncontested election victory in 2012, SALIH formally transferred all presidential powers. In accordance with the GCC Initiative, Yemen launched a National Dialogue Conference (NDC) in 2013 to discuss key constitutional, political, and social issues. HADI concluded the NDC in 2014 and planned to proceed with constitutional drafting, a constitutional referendum, and national elections.</p> <p>The Houthis, perceiving their grievances were not addressed in the NDC, joined forces with SALIH and expanded their influence in northwestern Yemen, which culminated in a major offensive against military units and rival tribes and enabled their forces to overrun the capital, Sana'a, in 2014. In 2015, the Houthis surrounded key government facilities, prompting HADI and the cabinet to resign. HADI fled first to Aden -- where he rescinded his resignation -- and then to Oman before moving to Saudi Arabia and asking the GCC to intervene militarily in Yemen. Saudi Arabia assembled a coalition of Arab militaries and began airstrikes, and ground fighting continued through 2016. In 2016, the UN initiated peace talks that ended without agreement. Rising tensions between the Houthis and SALIH culminated in Houthi forces killing SALIH. In 2018, the Houthis and the Yemeni Government participated in UN-brokered peace talks, agreeing to a limited cease-fire and the establishment of a UN mission. <br /><br />In 2019, Yemen’s parliament convened for the first time since the conflict broke out in 2014. Violence then erupted between HADI's government and the pro-secessionist Southern Transitional Council (STC) in southern Yemen. HADI's government and the STC signed a power-sharing agreement to end the fighting, and in 2020, the signatories formed a new cabinet. In 2020 and 2021, fighting continued as the Houthis gained territory and also conducted regular UAV and missile attacks against targets in Saudi Arabia. In 2022, the UN brokered a temporary truce between the Houthis and the Saudi-led coalition. HADI and his vice-president resigned and were replaced by an eight-person Presidential Leadership Council. Although the truce formally expired in 2022, the parties nonetheless refrained from large-scale conflict through the end of 2023. Saudi Arabia, after the truce expired, continued to negotiate with the Yemeni Government and Houthis on a roadmap agreement that would include a permanent ceasefire and a peace process under UN auspices.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Middle East, bordering the Arabian Sea, Gulf of Aden, and Red Sea, between Oman and Saudi Arabia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "15 00 N, 48 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Middle East",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "527,968 sq km"
+      },
+      {
+       "label": "land",
+       "text": "527,968 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> includes Perim, Socotra, the former Yemen Arab Republic (YAR or North Yemen), and the former People's Democratic Republic of Yemen (PDRY or South Yemen)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "almost four times the size of Alabama; slightly larger than twice the size of Wyoming",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,601 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Oman 294 km; Saudi Arabia 1,307 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,906 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm or to the edge of the continental margin"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "mostly desert; hot and humid along west coast; temperate in western mountains affected by seasonal monsoon; extraordinarily hot, dry, harsh desert in east",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "narrow coastal plain backed by flat-topped hills and rugged mountains; dissected upland desert plains in center slope into the desert interior of the Arabian Peninsula",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Jabal an Nabi Shu'ayb 3,666 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Arabian Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "999 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, fish, rock salt, marble; small deposits of coal, gold, lead, nickel, and copper; fertile soil in west",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "44.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 2.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 41.7% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "54.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "6,800 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "the vast majority of the population is found in the Asir Mountains (part of the larger Sarawat Mountain system), located in the far western region of the country",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "sandstorms and dust storms in summer <br /><br /><strong>volcanism:</strong> limited volcanic activity; Jebel at Tair (Jabal al-Tair, Jebel Teir, Jabal al-Tayr, Jazirat at-Tair) (244 m), which forms an island in the Red Sea, became active in 2007; other historically active volcanoes include Harra of Arhab, Harras of Dhamar, Harra es-Sawad, and Jebel Zubair, although many of these have not erupted in over a century",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "strategic location on Bab el Mandeb, the strait linking the Red Sea and the Gulf of Aden and one of world's most active shipping lanes",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "34,505,496 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17,275,539"
+      },
+      {
+       "label": "female",
+       "text": "17,229,957"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Yemeni(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Yemeni"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "predominantly Arab; but also Afro-Arab, South Asian, European",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> a distinct Socotri language is widely used on Socotra Island and Archipelago; Mahri is still fairly widely spoken in eastern Yemen"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim 99.1% (official; virtually all are citizens, an estimated 65% are Sunni and 35% are Shia), other 0.9% (includes Jewish, Baha'i, Hindu, and Christian; many are refugees or temporary foreign residents) (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "34.4% (male 5,622,998/female 5,430,285)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "62.2% (male 10,112,603/female 9,865,805)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.4% (2024 est.) (male 485,538/female 623,214)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "70.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "64.8 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.4 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "18.4 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.9 years"
+      },
+      {
+       "label": "female",
+       "text": "22.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.22% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "29.07 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.21 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.65 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the vast majority of the population is found in the Asir Mountains (part of the larger Sarawat Mountain system), located in the far western region of the country",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "39.8% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.71% annual rate of change (2015-20 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.292 million SANAA (capital), 1.080 million Aden, 941,000 Taiz, 772,000 Ibb (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.78 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.02 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "20.8 years (2013 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "118 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "42.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "49.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "39 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "68.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "65.8 years"
+      },
+      {
+       "label": "female",
+       "text": "70.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.65 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.78 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 77.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 51.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 61.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 22.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 48.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 38.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "4.3% of GDP (2015)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "2.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.1 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 83.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 44.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 59.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 16.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 55.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 40.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "17.1% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.02 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.2% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "33.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "7.3% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "40.7% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "63.9% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "6.5% (2023)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "29.6% (2023)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "female",
+       "text": "54.1% (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Yemen"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Yemen"
+      },
+      {
+       "label": "local long form",
+       "text": "Al Jumhuriyah al Yamaniyah"
+      },
+      {
+       "label": "local short form",
+       "text": "Al Yaman"
+      },
+      {
+       "label": "former",
+       "text": "Yemen Arab Republic [Yemen (Sanaa) or North Yemen] and People's Democratic Republic of Yemen [Yemen (Aden) or South Yemen]"
+      },
+      {
+       "label": "etymology",
+       "text": "the name origin is unclear but may come from the Arabic word <em>al-yamin</em>, meaning \"the right,\" as a reference to its geographic position in relation to Mecca"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "in transition",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Sanaa"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "15 21 N, 44 12 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is reputed to mean \"fortified place\" in an ancient language"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "22 governorates (<em>muhafazat</em>, singular - <em>muhafazah</em>); Abyan, 'Adan (Aden), Ad Dali', Al Bayda', Al Hudaydah, Al Jawf, Al Mahrah, Al Mahwit, Amanat al 'Asimah (Sanaa City), 'Amran, Arkhabil Suqutra (Socotra Archipelago), Dhamar, Hadramawt, Hajjah, Ibb, Lahij, Ma'rib, Raymah, Sa'dah, San'a' (Sanaa), Shabwah, Ta'izz",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of Islamic (sharia) law, Napoleonic law, English common law, and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "adopted by referendum 16 May 1991 (following unification)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Yemen; if the father is unknown, the mother must be a citizen"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "formerly, the president was directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 7-year term (eligible for a second term); vice president appointed by the president; prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "21 February 2012"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2012:</em> Abd Rabuh Mansur HADI (GPC) elected consensus president"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> on 7 April 2022, President Abd Rabuh Mansur HADI announced his abdication, the dismissal of Vice President ALI MUHSIN al-Ahmar and the formation of a Presidential Leadership Council, an eight-member body chaired by former minister Rashad AL-ALIMI; on 19 April 2022, the Council was sworn in before Parliament and began assuming the responsibilities of the president and vice president and carrying out the political, security, and military duties of the government; in May 2025, Chairperson al-ALIMI made changes to his cabinet"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Majlis)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      },
+      {
+       "label": "note",
+       "text": "note: the last legislative election occurred in 2003, and the six-year term for the House of Representatives expired in 2009. Ongoing instability, beginning in 2011, has since prevented new elections. A new Shura Council was appointed in 2021 and is currently chaired by Dr. Ahmed Obaid bin Dagher (as of Jan 2025)."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of Representatives (Majlis Annowab)"
+      },
+      {
+       "label": "number of seats",
+       "text": "301 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "6 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/27/2003"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "General People's Congress (GPC) (238); Yemeni Congregation for Reform (Islah) (46); Other (17)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "0%"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Shura Council (Majlis Alshoora)"
+      },
+      {
+       "label": "number of seats",
+       "text": "111 (all appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/28/2001"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "1.1%"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the Shura Council serves in an advisory role to the president; it has no legislative responsibilities"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the court president, 2 deputies, and nearly 50 judges; court organized into constitutional, civil, commercial, family, administrative, criminal, military, and appeals scrutiny divisions)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges appointed by the Supreme Judicial Council, which is chaired by the president of the republic and includes 10 high-ranking judicial officers; judges serve for life with mandatory retirement at age 65"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "appeal courts; district or first instance courts; commercial courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "General People’s Congress or GPC (3 factions: pro-Hadi, pro-Houthi, pro-Salih)<br />Nasserist Unionist People's Organization<br />National Arab Socialist Ba'ath Party<br />Southern Transitional Council or STC<br />Yemeni Reform Grouping or Islah<br />Yemeni Socialist Party or YSP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "AFESD, AMF, CAEU, CD, EITI (temporarily suspended), FAO, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAS, MIGA, MINURSO, MINUSMA, MONUSCO, NAM, OAS (observer), OIC, OPCW, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNISFA, UNMHA, UNMIL, UNMIS, UNOCI, UNVIM, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "22 May 1990 (Republic of Yemen established with the merger of the Yemen Arab Republic [Yemen (Sanaa) or North Yemen] and the People's Democratic Republic of Yemen [Yemen (Aden) or South Yemen]); notable earlier dates: 1 November 1918 (North Yemen independent from the Ottoman Empire), 27 September 1962 (North Yemen becomes republic), 30 November 1967 (South Yemen independent from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Unification Day, 22 May (1990)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of red (top), white, and black<br /><br /><strong>meaning:</strong> the band colors come from the Arab Liberation flag and represent oppression (black) overcome through bloody struggle (red), to be replaced by a bright future (white)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> similar to the flags of Iraq (Arabic inscription centered in the white band) and Egypt (heraldic eagle centered in the white band)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "golden eagle",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, white, black",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Al-qumhuriyatu l-muttahida\" (United Republic)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Abdullah Abdulwahab NOA'MAN/Ayyoab Tarish ABSI"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1990; the music first served as the anthem for South Yemen before unification with North Yemen in 1990"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "5 (4 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Old Walled City of Shibam (c); Old City of Sana'a (c); Historic Town of Zabid (c); Socotra Archipelago (n); Landmarks of the Ancient Kingdom of Saba, Marib (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,966 @@
+{
+ "iso3": "GNQ",
+ "gec": "ek",
+ "name": "Equatorial Guinea",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Equatorial Guinea consists of a continental territory and five inhabited islands; it is one of the smallest countries by area and population in Africa. The mainland region was most likely predominantly inhabited by Pygmy ethnic groups prior to the migration of various Bantu-speaking ethnic groups around the second millennium BC. The island of Bioko, the largest of Equatorial Guinea’s five inhabited islands and the location of the country’s capital of Malabo, has been occupied since at least 1000 B.C. In the early 1470s, Portuguese explorers landed on Bioko Island, and Portugal soon after established control of the island and other areas of modern Equatorial Guinea. In 1778, Portugal ceded its colonial hold over present-day Equatorial Guinea to Spain in the Treaty of El Pardo. The borders of modern-day Equatorial Guinea would evolve between 1778 and 1968 as the area remained under European colonial rule.<br /><br />In 1968, Equatorial Guinea was granted independence from Spain and elected Francisco MACIAS NGUEMA as its first president. MACIAS consolidated power soon after his election and ruled brutally for over a decade. Under his regime, Equatorial Guinea experienced mass suppression, purges, and killings. Some estimates indicate that a third of the population either went into exile or was killed under MACIAS’ rule. In 1979, present-day President OBIANG Nguema Mbasogo, then a senior military officer, deposed MACIAS in a violent coup. OBIANG has ruled since and has been elected in non-competitive contests several times, most recently in 2022. The president exerts near-total control over the political system. <br /><br />Equatorial Guinea experienced rapid economic growth in the early years of the 21st century due to the discovery of large offshore oil reserves in 1996. Production peaked in 2004 and has declined since. The country's economic windfall from oil production resulted in massive increases in government revenue, a significant portion of which was earmarked for infrastructure development. Systemic corruption, however, has hindered socio-economic development, and the population has seen only limited improvements to living standards. Equatorial Guinea continues to seek to diversify its economy, increase foreign investment, and assume a greater role in regional and international affairs.&amp;nbsp",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Africa, bordering the Bight of Biafra, between Cameroon and Gabon",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "2 00 N, 10 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "28,051 sq km"
+      },
+      {
+       "label": "land",
+       "text": "28,051 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Maryland",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "528 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Cameroon 183 km; Gabon 345 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "296 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; always hot, humid",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "coastal plains rise to interior hills; islands are volcanic",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Pico Basile 3,008 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Atlantic Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "577 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, natural gas, timber, gold, bauxite, diamonds, tantalum, sand and gravel, clay",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "3.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 1.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0.2% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "86.4% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "9.9% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "NA",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "the two large cities are Bata on the mainland and the capital Malabo on the island of Bioko; small communities are scattered throughout the mainland and the five inhabited islands, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "violent windstorms; flash floods <br /><br /><strong>volcanism:</strong> Santa Isabel (3,007 m), which last erupted in 1923, is the country's only historically active volcano; Santa Isabel and two dormant volcanoes form Bioko Island in the Gulf of Guinea",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "insular and continental regions widely separated; despite its name, no part of the equator passes through Equatorial Guinea -- the mainland part of the country is located just north of the equator",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,795,834 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "962,385"
+      },
+      {
+       "label": "female",
+       "text": "833,449"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Equatorial Guinean(s) or Equatoguinean(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Equatorial Guinean or Equatoguinean"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Fang 78.1%, Bubi 9.4%, Ndowe 2.8%, Nanguedambo 2.7%, Bisio 0.9%, foreigner 5.3%, other 0.7%, unspecified 0.2% (2011 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Spanish (official) 67.6%, other (includes Fang, Bubi, Portuguese (official), French (official), Fa d'Ambo spoken in Annobon) 32.4% (1994 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 88%, Protestant 5%, Muslim 2%, other 5% (animist, Baha'i, Jewish) (2015 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "35.6% (male 330,636/female 309,528)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "59.4% (male 585,139/female 481,121)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "5% (2024 est.) (male 46,610/female 42,800)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "68.4 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "60 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "8.4 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "11.9 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22.3 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "22.7 years"
+      },
+      {
+       "label": "female",
+       "text": "21.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "3.1% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "28.55 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.81 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "11.29 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the two large cities are Bata on the mainland and the capital Malabo on the island of Bioko; small communities are scattered throughout the mainland and the five inhabited islands, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "74.4% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.62% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "297,000 MALABO (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.22 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "1.09 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.16 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "174 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "76.9 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "83.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "71.3 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "63.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "61.6 years"
+      },
+      {
+       "label": "female",
+       "text": "66.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "4.05 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.99 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "3.4% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "4.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 230,
+    "content": {
+     "text": "0.15 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 240,
+    "content": {
+     "text": "8% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 250,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6.11 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "3.83 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "1.24 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.99 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.05 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Equatorial Guinea"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Equatorial Guinea"
+      },
+      {
+       "label": "local long form",
+       "text": "Republica de Guinea Ecuatorial (Spanish)/ République de Guinée équatoriale (French)"
+      },
+      {
+       "label": "local short form",
+       "text": "Guinea Ecuatorial (Spanish)/Guinée équatoriale (French)"
+      },
+      {
+       "label": "former",
+       "text": "Spanish Guinea"
+      },
+      {
+       "label": "etymology",
+       "text": "the country is named for the Guinea region of West Africa that lies along the Gulf of Guinea and stretches north to the Sahel; the \"equatorial\" refers to the fact that the country lies just north of the Equator"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Malabo; note - Malabo is on the island of Bioko; some months of the year, the government operates out of Bata on the mainland region."
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "3 45 N, 8 47 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "English settlers who founded the city in 1827 named it Port Clarence after the Duke of CLARENCE; the Spanish renamed it Santa Isabel in 1843, for Queen ISABELLA II of Spain; it was renamed again in 1973 after King MALABO (1837–1937), the last king of the Bubi (local ethnic group)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "8 provinces (<em>provincias</em>, singular - <em>provincia</em>); Annobon, Bioko Norte, Bioko Sur, Centro Sur, Djibloho, Kie-Ntem, Litoral, Wele-Nzas",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1968, 1973, 1982; approved by referendum 17 November 1991"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or supported by three fourths of the membership in either house of the National Assembly; passage requires three-fourths majority vote by both houses of the Assembly and approval in a referendum if requested by the president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Equatorial Guinea"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by simple-majority popular vote for a 7-year term (eligible for a second term); prime minister and deputy prime ministers appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "20 November 2022"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2022: </em>OBIANG Nguema Mbasogo reelected president; percent of vote - OBIANG Nguema Mbasogo (PDGE) 95%, other 6.1%<br /><br /><em>2016: </em>OBIANG Nguema Mbasogo reelected president; percent of vote - OBIANG Nguema Mbasogo (PDGE) 93.5%, other 6.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Parlamento)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Chamber of Deputies (Cámara de los Diputados)"
+      },
+      {
+       "label": "number of seats",
+       "text": "100 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/20/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Democratic Party of Equatorial Guinea (PDGE) and its allies (100)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "31%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Senado)"
+      },
+      {
+       "label": "number of seats",
+       "text": "70 (55 directly elected; 15 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11/20/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Democratic Party of Equatorial Guinea (PDGE) and its allies (55)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "25%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "November 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of Justice (consists of the President of the Supreme Court and nine judges organized into civil, criminal, commercial, labor, administrative, and customary sections); Constitutional Court (consists of the court president and 4 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges appointed by the president for five-year terms; Constitutional Court members appointed by the president, 2 of whom are nominated by the Chamber of Deputies"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Guarantees; military courts; Courts of Appeal; first instance tribunals; district and county tribunals"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Center Right Union or UCD<br />Convergence Party for Social Democracy or CPDS <br />Democratic Party for Equatorial Guinea or PDGE <br />Liberal Democratic Convention or CLD <br />Liberal Party or PL <br />National Congress of Equatorial Guinea (CNGE) <br />National Democratic Party (PNDGE) <br />National Democratic Union or UDENA <br />National Union for Democracy PUNDGE <br />Popular Action of Equatorial Guinea or APGE <br />Popular Union or UP <br />Progressive Democratic Alliance or ADP <br />Social and Popular Convergence Party or CSDP <br />Social Democratic Coalition Party (PCSD) <br />Social Democratic Party of Equatorial Guinea or PSDGE <br />Social Democratic Union or UDS <br />Socialist Party of Equatorial Guinea",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, AU, BDEAC, CEMAC, CPLP, FAO, Francophonie, FZ, G-77, IBRD, ICAO, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IPU, ITSO, ITU, MIGA, NAM, OAS (observer), OIF, OPCW, UN, UNCTAD, UNESCO, UNIDO, UNWTO, UPU, WHO, WIPO, WTO (observer)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "12 October 1968 (from Spain)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 12 October (1968)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of green (top), white, and red, with a blue isosceles triangle based on the left side and the coat of arms centered in the white band; the coat of arms has six six-pointed yellow stars (representing the mainland and five offshore islands) above a gray shield with a silk-cotton tree; below is a scroll with the motto UNIDAD, PAZ, JUSTICIA (Unity, Peace, Justice)<br /><br /><strong>meaning:</strong> green stands for the jungle and natural resources, blue for the sea, white for peace, and red for the fight for independence",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "silk cotton tree",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "green, white, red, blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 220,
+    "content": {
+     "text": "the national symbol, the silk cotton tree, is in the center of the coat of arms; the tree represents the location where the first treaty was signed between local rulers and the Portuguese; the stars above the tree symbolize the mainland and the five offshore islands; a ribbon below the shield displays the national motto, “Unidad, Paz, Justicia” (Unity, Peace, Justice)",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Caminemos pisando la senda\" (Let Us Tread the Path)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Atanasio Ndongo MIYONO/Atanasio Ndongo MIYONO or Ramiro Sanchez LOPEZ (disputed)"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1968"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

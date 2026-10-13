@@ -1,0 +1,1188 @@
+{
+ "iso3": "TGO",
+ "gec": "to",
+ "name": "Togo",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>From the 11th to the 16th centuries, various ethnic groups settled the Togo region. From the 16th to the 18th centuries, the coastal region became a major trading center for enslaved people, and the surrounding region took on the name of \"The Slave Coast.\" In 1884, Germany declared the area a protectorate called Togoland, which included present-day Togo. After World War I, colonial rule over Togo was transferred to France. French Togoland became Togo upon independence in 1960. <br /><br />Gen. Gnassingbe EYADEMA, installed as military ruler in 1967, ruled Togo with a heavy hand for almost four decades. Despite the facade of multi-party elections instituted in the early 1990s, EYADEMA largely dominated the government. His Rally of the Togolese People (RPT) party has been in power almost continually since 1967, with its successor, the Union for the Republic, maintaining a majority of seats in today's legislature. Upon EYADEMA's death in 2005, the military installed his son, Faure GNASSINGBE, as president and then engineered his formal election two months later. Togo held its first relatively free and fair legislative elections in 2007. Since then, GNASSINGBE has started the country along a gradual path to democratic reform. Togo has held multiple presidential and legislative elections, and in 2019, the country held its first local elections in 32 years. <br /><br />Despite those positive moves, political reconciliation has moved slowly, and the country experiences periodic outbursts of protests from frustrated citizens, leading to violence between security forces and protesters. Constitutional changes in 2019 to institute a runoff system in presidential elections and to establish term limits have done little to reduce the resentment many Togolese feel after more than 50 years of one-family rule. GNASSINGBE became eligible for his current fourth term and one additional fifth term under the new rules. The next presidential election is set for 2025. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Western Africa, bordering the Bight of Benin, between Benin and Ghana",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "8 00 N, 1 10 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "56,785 sq km"
+      },
+      {
+       "label": "land",
+       "text": "54,385 sq km"
+      },
+      {
+       "label": "water",
+       "text": "2,400 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than West Virginia",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,880 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Benin 651 km; Burkina Faso 131 km; Ghana 1,098 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "56 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "30 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the US does not recognize the territorial sea claim"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; hot, humid in south; semiarid in north",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "gently rolling savanna in north; central hills; southern plateau; low coastal plain with extensive lagoons and marshes",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mont Agou 986 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Atlantic Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "236 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "phosphates, limestone, marble, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "70.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 48.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 3.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 18.4% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "22.4% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "7.4% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "70 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Volta (410,991 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "one of the more densely populated African nations, with most of the population residing in rural communities; density is highest in the south on or near the Atlantic coast, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "hot, dry harmattan wind can reduce visibility in north during winter; periodic droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "stretches through six distinct geographic regions; climate varies from tropical to savanna",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9,143,439 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "4,488,825"
+      },
+      {
+       "label": "female",
+       "text": "4,654,614"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Togolese (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Togolese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Adja-Ewe/Mina 42.4%, Kabye/Tem 25.9%, Para-Gourma/Akan 17.1%, Akposso/Akebu 4.1%, Ana-Ife 3.2%, other Togolese 1.7%, foreigners 5.2%, no response 0.4% (2013-14 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Togo has an estimated 37 ethnic groups"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "French (official, language of commerce), Ewe and Mina (in the south), Kabye (sometimes spelled Kabiye) and Dagomba (in the north)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Christian 42.3%, folk religion 36.9%, Muslim 14%, Hindu &lt;1%, Buddhist &lt;1%, Jewish &lt;1%, other &lt;1%, none 6.2% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "38.7% (male 1,749,533/female 1,699,084)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "57% (male 2,486,142/female 2,597,914)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4.3% (2024 est.) (male 159,596/female 225,725)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "74.7 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "66.7 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "12.6 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.9 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "19.9 years"
+      },
+      {
+       "label": "female",
+       "text": "21.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.37% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "30.17 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "4.64 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.85 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "one of the more densely populated African nations, with most of the population residing in rural communities; density is highest in the south on or near the Atlantic coast, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "44.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.6% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.982 million LOME (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.96 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.71 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.97 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "25 years (2017 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-29"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "349 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "34.5 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "43 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "33.7 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "72.1 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "69.5 years"
+      },
+      {
+       "label": "female",
+       "text": "74.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "4.03 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.99 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 87% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 58.5% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 71% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 13% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 41.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 29% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "5.6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "2.6% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.08 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "0.6 beds/1,000 population (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 82% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 19.2% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 46.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 18% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 80.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 53.3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "8.4% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.4 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.78 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.2 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.33 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "9.3% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "0.7% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "15.2% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "63.7% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "6.4% (2017)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "24.8% (2017)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "2.6% (2017)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.1% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "11.6% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "72.6% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "82.8% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "63.7% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "12 years (2017 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2017 est.)"
+      },
+      {
+       "label": "female",
+       "text": "11 years (2017 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Togolese Republic"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Togo"
+      },
+      {
+       "label": "local long form",
+       "text": "République Togolaise"
+      },
+      {
+       "label": "local short form",
+       "text": "none"
+      },
+      {
+       "label": "former",
+       "text": "French Togoland"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the town of Togodo (now Togoville) on the northern shore of Lake Togo; the town's name probably comes from the lake's name, which is composed of the Ewe words <em>to </em>(\"water\") and <em>go </em>(\"shore\")"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Lome"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "6 07 N, 1 13 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC 0 (5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name comes from a local word meaning \"little market\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "5 regions (<em>régions</em>, singular - <em>région</em>); Centrale, Kara, Maritime, Plateaux, Savanes",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "customary law system",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted 27 September 1992, effective 14 October 1992; revised 6 May 2024"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or supported by at least one fifth of the National Assembly membership; passage requires four-fifths majority vote by the Assembly; a referendum is required if approved by only two-thirds majority of the Assembly or if requested by the president; constitutional articles on the republican and secular form of government cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Togo"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president is appointed by the national assembly for one six-year term; the president of the council of ministers is the leader of the majority party in the national assembly and is confirmed by the Constitutional Court with no term limits"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2020:</em> Faure GNASSINGBE reelected president; percent of vote - Faure GNASSINGBE (UNIR) 70.8%, Agbeyome KODJO (MPDD) 19.5%, Jean-Pierre FABRE (ANC) 4.7%, other 5%<br /><br /><em>2015:</em> Faure GNASSINGBE reelected president; percent of vote - Faure GNASSINGBE (UNIR) 58.8%, Jean-Pierre FABRE (ANC) 35.2%, Tchaboure GOGUE (ADDI) 4%, other 2%"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in May 2024, the President signed into law changes to the constitution that converted the presidential system to a parliamentary republic and created the President of Council of Ministers position"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> party lists are required to contain equal numbers of men and women"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Assemblée nationale)"
+      },
+      {
+       "label": "number of seats",
+       "text": "113 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "6 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/29/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Union for the Republic (UNIR) (108); Other (5)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "15%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "April 2030"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Sénat)"
+      },
+      {
+       "label": "number of seats",
+       "text": "61 (41 directly elected; 20 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "6 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "2/15/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Union for the Republic (UNIR) (34); Independents (3); Other (4)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "24.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "February 2031"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Cour Suprême (organized into criminal and administrative chambers, each with a chamber president and advisors); Constitutional Court (consists of 9 judges, including the court president)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court president appointed by decree of the president of the republic on the proposal of the Supreme Council of the Magistracy, a 9-member judicial, advisory, and disciplinary body; other judicial appointments and judge tenure NA; Constitutional Court judges appointed by the National Assembly; judge tenure NA"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Assizes (sessions court); Appeal Court; tribunals of first instance (divided into civil, commercial, and correctional chambers; Court of State Security; military tribunal"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Action Committee for Renewal or CAR <br />Alliance of Democrats for Integral Development or ADDI <br />Democratic Convention of African Peoples or CDPA <br />Democratic Forces for the Republic or FDR <br />National Alliance for Change or ANC <br />New Togolese Commitment <br />Pan-African National Party or PNP <br />Pan-African Patriotic Convergence or CPP <br />Patriotic Movement for Democracy and Development or MPDD <br />Socialist Pact for Renewal or PSR <br />The Togolese Party <br />Union of Forces for Change or UFC <br />Union for the Republic or UNIR",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, AIIB, AU, ECOWAS, EITI (compliant country), Entente, FAO, FZ, G-77, IAEA, IBRD, ICAO, ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, MINURSO, NAM, OIC, OIF, OPCW, PCA, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNMIL, UNOCI, UNWTO, UPU, WADB (regional), WAEMU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "27 April 1960 (from French-administered UN trusteeship)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 27 April (1960)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> five equal horizontal bands of green (top and bottom) alternating with yellow; a five-pointed white star on a red square is in the upper-left corner<br /><br /><strong>meaning:</strong> the five horizontal stripes stand for the country's regions; red stands for the people's loyalty and patriotism; green for hope, fertility, and agriculture; yellow for mineral wealth and faith that hard work and strength will bring prosperity; the star symbolizes life, purity, peace, dignity, and national independence<br /><br /><strong>history:</strong> uses the colors of the Pan-African movement",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "green, yellow, red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Salut à toi, pays de nos aieux\" (Hail to Thee, Land of Our Forefathers)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Alex CASIMIR-DOSSEH"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1960, restored 1992; anthem was replaced during one-party rule between 1979 and 1992"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Koutammakou; the Land of the Batammariba"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

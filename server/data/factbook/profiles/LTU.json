@@ -1,0 +1,1109 @@
+{
+ "iso3": "LTU",
+ "gec": "lh",
+ "name": "Lithuania",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Lithuanian lands were united under MINDAUGAS in 1236; over the next century, Lithuania extended its territory through alliances and conquest to include most of present-day Belarus and Ukraine. By the end of the 14th century, Lithuania was the largest state in Europe. An alliance with Poland in 1386 led the two countries into a union through a common ruler. In 1569, Lithuania and Poland formally united into a single dual state, the Polish-Lithuanian Commonwealth. This entity survived until 1795 when surrounding countries partitioned its remnants. Lithuania regained its independence after World War I, but the USSR annexed it in 1940 -- an action never recognized by the US and many other countries. In 1990, Lithuania became the first of the Soviet republics to declare its independence, but Moscow did not recognize this proclamation until 1991. The last Russian troops withdrew in 1993. Lithuania subsequently restructured its economy for integration into West European institutions; it joined both NATO and the EU in 2004. In 2015, Lithuania joined the euro zone, and it joined the Organization for Economic Cooperation and Development in 2018.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Europe, bordering the Baltic Sea, between Latvia and Russia, west of Belarus",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "56 00 N, 24 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "65,300 sq km"
+      },
+      {
+       "label": "land",
+       "text": "62,680 sq km"
+      },
+      {
+       "label": "water",
+       "text": "2,620 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than West Virginia",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,545 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Belarus 640 km; Latvia 544 km; Poland 100 km; Russia (Kaliningrad) 261 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "90 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "transitional, between maritime and continental; wet, moderate winters and summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "lowland, many scattered small lakes, fertile soil",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Aukstojas 294 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Baltic Sea 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "110 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "peat, arable land, amber",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "45.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 36.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 8.6% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "35.3% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "18.8% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "61 sq km (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "salt water lake(s)",
+       "text": "Curonian Lagoon (shared with Russia) - 1,620 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "fairly even population distribution throughout the country, but somewhat greater concentrations in the southern cities of Vilnius and Kaunas, as well as the western port of Klaipeda",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "occasional floods, droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "fertile central plains are separated by hilly uplands that are ancient glacial deposits",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,815,687 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "1,334,600"
+      },
+      {
+       "label": "female",
+       "text": "1,481,087"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Lithuanian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Lithuanian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Lithuanian 84.6%, Polish 6.5%, Russian 5%, Belarusian 1%, other 1.1%, unspecified 1.8% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Lithuanian (official) 85.3%, Russian 6.8%, Polish 5.1%, other 1.1%, two mother tongues 1.7% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Pasaulio enciklopedija – naudingas bendrosios informacijos šaltinis. (Lithuanian)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 74.2%, Russian Orthodox 3.7%, Old Believer 0.6%, Evangelical Lutheran 0.6%, Evangelical Reformist 0.2%, other (including Sunni Muslim, Jewish, Greek Catholic, and Karaite) 0.9%, none 6.1%, unspecified 13.7% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "15.2% (male 205,154/female 194,386)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "62.6% (male 808,435/female 837,908)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "22.2% (2024 est.) (male 201,405/female 380,898)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "56.5 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "23.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "33.3 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "44 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "40.9 years"
+      },
+      {
+       "label": "female",
+       "text": "49.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.71% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "7.01 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "14.1 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "fairly even population distribution throughout the country, but somewhat greater concentrations in the southern cities of Vilnius and Kaunas, as well as the western port of Klaipeda",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "68.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "-0.12% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "541,000 VILNIUS (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.96 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.53 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.86 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "28.2 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "8 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2.5 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "4 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "3.1 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "76.1 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "70.8 years"
+      },
+      {
+       "label": "female",
+       "text": "81.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.22 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.6 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 93.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 98% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 6.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "7.5% of GDP (2022)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "13% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "6.1 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "6 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 91.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 96.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 8.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 3.3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "26.3% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11.93 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "4.61 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.88 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "4.96 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "1.48 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.6% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "38% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "16.7% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "1.1% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "51.8% (2024 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0% (2022)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "0.2% (2022)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.3% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "11.8% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "17 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Lithuania"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Lithuania"
+      },
+      {
+       "label": "local long form",
+       "text": "Lietuvos Respublika"
+      },
+      {
+       "label": "local short form",
+       "text": "Lietuva"
+      },
+      {
+       "label": "former",
+       "text": "Lithuanian Soviet Socialist Republic (while occupied by the USSR)"
+      },
+      {
+       "label": "etymology",
+       "text": "meaning of the name is obscure; may be derived from the local words <em>lietava</em>, meaning \"small river,\" or <em>lietus</em>, meaning \"rain\" or \"land of rain,\" or the Latin word <em>litus</em>, meaning \"shore\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Vilnius"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "54 41 N, 25 19 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "named after the Vilnia River; the river name is said to derive from the Lithuanian word <em>vilnis</em>, meaning \"wave\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "60 municipalities (<em>savivaldybe</em>, singular - <em>savivaldybe</em>); Akmene, Alytaus Miestas, Alytus, Anksciai, Birstonas, Birzai, Druskininkai, Elektrenai, Ignalina, Jonava, Joniskis, Jurbarkas, Kaisiadorys, Kalvarija, Kauno Miestas, Kaunas, Kazlu Rudos, Kedainiai, Kelme, Klaipedos Miestas, Klaipeda, Kretinga, Kupiskis, Lazdijai, Marijampole, Mazeikiai, Moletai, Neringa, Pagegiai, Pakruojis, Palangos Miestas, Panevezio Miestas, Panevezys, Pasvalys, Plunge, Prienai, Radviliskis, Raseiniai, Rietavas, Rokiskis, Sakiai, Salcininkai, Siauliu Miestas, Siauliai, Silale, Silute, Sirvintos, Skuodas, Svencionys, Taurage, Telsiai, Trakai, Ukmerge, Utena, Varena, Vilkaviskis, Vilniaus Miestas, Vilnius, Visaginas, Zarasai",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system; legislative acts can be appealed to the Constitutional Court",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest adopted by referendum 25 October 1992, entered into force 2 November 1992"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by at least one fourth of all Parliament members or by petition of at least 300,000 voters; passage requires two-thirds majority vote of Parliament in each of two readings three months apart and a presidential signature; amendments to constitutional articles on national sovereignty and constitutional amendment procedure also require three-fourths voter approval in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Lithuania"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); prime minister appointed by the president, approved by Parliament"
+      },
+      {
+       "label": "most recent election date",
+       "text": "26 May 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024: </em>Gitanas NAUSEDA elected president in second round; percent of vote -Gitanas NAUSEDA (independent) 75.6%, Ingrida SIMONYTE (TS-LKD) 24.4%<br /><em><br />2019:</em> Gitanas NAUSEDA elected president in second round; percent of vote - Gitanas NAUSEDA (independent) 66.7%, Ingrida SIMONYTE (independent) 33.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Seimas)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "141 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/13/2024 to 10/27/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Lithuanian Social Democratic Party (LSDP) (52); Homeland Union - Lithuanian Christian Democrats (TS-LKD) (28); Political Party \"The Dawn of Nemunas\" (PPNA) (20); Union of Democrats “For Lithuania” (DSVL) (14); Liberals Movement of the Republic of Lithuania (LS) (12); Lithuanian Farmers and Greens Union (LVŽS) (8); Other (7)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "28.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of 37 judges); Constitutional Court (consists of 9 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges nominated by the president and appointed by the Seimas; judges serve 5-year renewable terms; Constitutional Court judges appointed by the Seimas from nominations - 3 each by the president of the republic, the Seimas speaker, and the Supreme Court president; judges serve 9-year, nonrenewable terms; one third of membership reconstituted every 3 years"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeals; district and local courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Center-Right Union or CDS<br />Dawn of Nemunas or PPNA<br />Electoral Action of Poles in Lithuania - Christian Families Alliance or LLRA–KŠS<br />Homeland Union or TS-LKD<br />Lithuanian Farmers and Greens Union or LVŽS<br />Liberals' Movement or LRLS<br />National Alliance or NS<br />Social Democratic Party of Lithuania or LSDP<br />Union of Democrats for Lithuania or DSVL",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "Australia Group, BA, BIS, CBSS, CD, CE, EAPC, EBRD, ECB, EIB, EU, FAO, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITU, ITUC (NGOs), MIGA, NATO, NIB, NSG, OAS (observer), OECD, OIF (observer), OPCW, OSCE, PCA, Schengen Convention, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNWTO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "16 February 1918 (from Soviet Russia and Germany); 11 March 1990 (declared from the Soviet Union); 6 September 1991 (recognized by the Soviet Union); notable earlier dates: 6 July 1253 (coronation of MINDAUGAS, traditional founding date); 1 July 1569 (Polish-Lithuanian Commonwealth created)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day (or National Day), 16 February (1918)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 16 February 1918 was the date Lithuania established its statehood and independence from Soviet Russia and Germany; 11 March 1990 was the date it declared the restoration of statehood and independence from the Soviet Union"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of yellow (top), green, and red<br /><br /><strong>meaning:</strong> yellow stands for golden fields, the sun, light, and goodness; green for the forests, nature, freedom, and hope; red for courage and the blood spilled in defense of the homeland",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "mounted knight known as Vytis (the Chaser), white stork",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "yellow, green, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Tautiska giesme\" (The National Song)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Vincas KUDIRKA"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1918, restored 1990; written in 1898 when Lithuania was part of Russia; banned during the Soviet occupation from 1940 to 1990"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "5 (all cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Vilnius Historic Center; Curonian Spit; Kernavė Archaeological Site; Struve Geodetic Arc; Modernist Kaunas: Architecture of Optimism, 1919-1939"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

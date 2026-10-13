@@ -1,0 +1,1179 @@
+{
+ "iso3": "TUN",
+ "gec": "ts",
+ "name": "Tunisia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Many empires have controlled Tunisia, including the Phoenicians (as early as the 12 century B.C.), Carthaginians, Romans, Vandals, Byzantines, various Arab and Berber kingdoms, and Ottomans (16th to late-19th centuries). Rivalry between French and Italian interests in Tunisia culminated in a French invasion in 1881 and the creation of a protectorate. Agitation for independence in the decades after World War I finally convinced the French to recognize Tunisia as an independent state in 1956. The country's first president, Habib BOURGUIBA, established a strict one-party state. He dominated the country for 31 years, repressing Islamic fundamentalism and establishing rights for women. In 1987, Zine el Abidine BEN ALI replaced BOURGUIBA in a bloodless coup. <br /><br />Street protests that began in Tunis in 2010 over high unemployment, corruption, widespread poverty, and high food prices escalated in 2011, culminating in rioting that led to hundreds of deaths and later became known as the start of the regional Arab Spring uprising. BEN ALI dismissed the government and fled the country, and a \"national unity government\" was formed. Elections for the new Constituent Assembly were held later that year, and human rights activist Moncef MARZOUKI was elected as interim president. The Assembly began drafting a new constitution in 2012 and, after several iterations and a months-long political crisis that stalled the transition, ratified the document in 2014. Parliamentary and presidential elections for a permanent government were held at the end of 2014. Beji CAID ESSEBSI was elected as the first president under the country's new constitution. After ESSEBSI’s death in office in 2019, Kais SAIED was elected. SAIED's term, as well as that of Tunisia's 217-member parliament, was set to expire in 2024. However, in 2021, SAIED used the exceptional powers allowed under Tunisia's constitution to dismiss the prime minister and suspend the legislature. Tunisians approved a new constitution through public referendum in 2022, expanding presidential powers and creating a new bicameral legislature. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Northern Africa, bordering the Mediterranean Sea, between Algeria and Libya",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "34 00 N, 9 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "163,610 sq km"
+      },
+      {
+       "label": "land",
+       "text": "155,360 sq km"
+      },
+      {
+       "label": "water",
+       "text": "8,250 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than Georgia",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,495 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Algeria 1,034 km; Libya 461 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,148 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "12 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate in north with mild, rainy winters and hot, dry summers; desert in south",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mountains in north; hot, dry central plain; semiarid south merges into the Sahara",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Jebel ech Chambi 1,544 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Shatt al Gharsah -17 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "246 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, phosphates, iron ore, lead, zinc, salt",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "62.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 18.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 13.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 30.6% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "4.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "33.1% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "3,920 sq km (2013)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 150,
+    "content": {
+     "text": "North Western Sahara Aquifer System",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "the overwhelming majority of the population is located in the northern half of the country; the south remains largely underpopulated, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "flooding; earthquakes; droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "strategic location in central Mediterranean",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11,962,995 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5,926,741"
+      },
+      {
+       "label": "female",
+       "text": "6,036,254"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Tunisian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Tunisian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Arab 98%, European 1%, Jewish and other 1%",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official, one of the languages of commerce), French (commerce), Tamazight"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، أحسن كتاب تتعلم به المعلومات الأساسية (Arabic)<br /><br />The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> despite having no official status, French plays a major role in the country and is spoken by about two thirds of the population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim (official; Sunni) 99%, other (includes Christian, Jewish, Shia Muslim, and Baha'i) &lt;1%",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "24.4% (male 1,516,871/female 1,426,522)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "65.2% (male 3,861,731/female 3,990,802)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "10.4% (2024 est.) (male 593,640/female 659,281)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "50.7 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "35.6 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "15.1 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "6.6 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "34.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "33.6 years"
+      },
+      {
+       "label": "female",
+       "text": "35.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.38% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "11.35 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.4 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.16 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the overwhelming majority of the population is located in the northern half of the country; the south remains largely underpopulated, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "70.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.34% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "2.475 million TUNIS (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.9 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.98 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "36 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10.6 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "9.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "77.3 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "75.7 years"
+      },
+      {
+       "label": "female",
+       "text": "79.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.59 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.77 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 93.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 97.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 6.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 2.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "7% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "11.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "1.32 physicians/1,000 population (2021)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "2.4 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 99.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "26.9% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.51 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.99 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.32 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.17 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.03 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "19% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "37.6% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "1.4% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "1.6% (2018 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "52.5% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0% (2018)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "1.5% (2018)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "0% (2018)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "6.7% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "17.3% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "86.2% (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "92.7% (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "80.1% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14 years (2016 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14 years (2016 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15 years (2016 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Tunisia"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Tunisia"
+      },
+      {
+       "label": "local long form",
+       "text": "Al Jumhuriyah at Tunisiyah"
+      },
+      {
+       "label": "local short form",
+       "text": "Tunis"
+      },
+      {
+       "label": "etymology",
+       "text": "the country name derives from the capital city of Tunis"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Tunis"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "36 48 N, 10 11 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the ancient name is unclear; it is sometimes associated with the name of the Phoenician goddess Tanith"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "24 governorates (<em>wilayat</em>, singular - <em>wilayah</em>); Beja (Bajah), Ben Arous (Bin 'Arus), Bizerte (Banzart), Gabes (Qabis), Gafsa (Qafsah), Jendouba (Jundubah), Kairouan (Al Qayrawan), Kasserine (Al Qasrayn), Kebili (Qibili), Kef (Al Kaf), L'Ariana (Aryanah), Mahdia (Al Mahdiyah), Manouba (Manubah), Medenine (Madanin), Monastir (Al Munastir), Nabeul (Nabul), Sfax (Safaqis), Sidi Bouzid (Sidi Bu Zayd), Siliana (Silyanah), Sousse (Susah), Tataouine (Tatawin), Tozeur (Tawzar), Tunis, Zaghouan (Zaghwan)",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of civil law, based on the French civil code and Islamic (sharia) law; Supreme Court reviews some legislative acts in joint session",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous; latest draft published by the president 30 June 2022, approved by referendum 25 July 2022, and adopted 27 July 2022"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or one third of the Assembly of the Representatives of the People membership; following Constitutional Court review, approval to proceed requires an absolute majority vote in the Assembly, and final passage requires a two-thirds Assembly majority vote; the president can opt to submit an amendment to a referendum, which requires an absolute majority of votes cast for passage"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Tunisia"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal except for active government security forces (including the police and the military), people with mental disabilities, people who have served more than three months in prison (criminal cases only), and people given a suspended sentence of more than six months",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "6 October 2024"
+      },
+      {
+       "label": "election results",
+       "text": "2024: Kais SAIED reelected president in first round - Kais SAIED (independent) 90.7%, Ayachi ZAMMEL (Long Live Tunisia) 7.3%, Zouhair MAGHZAOUI (People's Movement) 2%<em><br /><br />2019:</em> Kais SAIED elected president in second round; percent of vote in first round - Kais SAIED (independent) 18.4%, Nabil KAROUI (Heart of Tunisia) 15.6%, Abdelfattah MOUROU (Nahda Movement) 12.9%, Abdelkrim ZBIDI (independent) 10.7%, Youssef CHAHED (Long Live Tunisia) 7.4%, Safi SAID (independent) 7.1%, Lotfi MRAIHI (Republican People's Union) 6.6%, other 21.3%; percent of vote in second round - Kais SAIED 72.7%, Nabil KAROUI 27.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2029"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the president can dismiss any member of government on his own initiative or in consultation with the prime minister"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in 2022, President SAIED issued a new electoral law that requires all legislative candidates to run as independents"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Assembly of People's Representatives (Majlis Nawwab ash-Sha'ab)"
+      },
+      {
+       "label": "number of seats",
+       "text": "161 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12/17/2022 to 1/29/2023"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "15.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Council of Regions and Districts"
+      },
+      {
+       "label": "number of seats",
+       "text": "77 (all indirectly elected)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/19/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "13%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "April 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Cassation (consists of the first president, chamber presidents, and magistrates; organized into 27 civil and 11 criminal chambers)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges nominated by the Supreme Judicial Council, an independent 4-part body consisting mainly of elected judges and the remainder legal specialists; judge tenure based on terms of appointment; Constitutional Court (established in the 2014 and 2022 constitutions, but never implemented)"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; administrative courts; Court of Audit; Housing Court; courts of first instance; lower district courts; military courts"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the Tunisian constitution of January 2014 called for the establishment of a constitutional court by the end of 2015, but the court was never formed; the new constitution of July 2022 calls for the establishment of a constitutional court consisting of 9 members appointed by presidential decree; members to include former senior judges of other courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Afek Tounes<br />Al Badil Al-Tounisi (The Tunisian Alternative)<br />Al-Amal Party<br />Call for Tunisia Party (Nidaa Tounes)<br />Current of Love (formerly the Popular Petition party)<br />Democratic Current<br />Democratic Patriots' Unified Party<br />Dignity Coalition or Al Karama Coalition<br />Ennahda Movement (The Renaissance)<br />Ettakatol Party<br />Free Destourian Party or PDL<br />Green Tunisia Party<br />Harakat Hak<br />Heart of Tunisia (Qalb Tounes)<br />July 25 Movement<br />Labor and Achievement Party<br />Long Live Tunisia (Tahya Tounes)<br />Movement of Socialist Democrats or MDS<br />National Coalition Party<br />National Salvation Front<br />New Carthage Party<br />Party of the Democratic Arab Vanguard<br />People's Movement<br />Republican Party (Al Joumhouri)<br />The Movement Party (Hizb Harak)<br />Third Republic Party<br />Tunisian Ba'ath Movement<br />Voice of the Republic<br />Workers' Party",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> President SAIED in 2022 issued a decree that forbids political parties' participation in legislative elections; although parties remain a facet of Tunisian political life, they have lost significant influence"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ABEDA, AfDB, AFESD, AIIB, AMF, AMU, AU, BSEC (observer), CAEU, CD, EBRD, FAO, G-11, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAS, MIGA, MONUSCO, NAM, OAS (observer), OIC, OIF, OPCW, OSCE (partner), UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNOCI, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "20 March 1956 (from France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 20 March (1956); Revolution and Youth Day, 14 January (2011)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> red with a white disk in the center that displays a red crescent around a five-pointed red star<br /><br /><strong>meaning:</strong> red stands for martyrs' blood shed the fight against oppression, and white for peace; the crescent and star are traditional symbols of Islam<br /><br /><strong>history:</strong> resembles the Ottoman flag (red banner with white crescent and star), a reference to Tunisia's history as part of the Ottoman Empire",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "red crescent moon and five-pointed star in a white circle",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Humat Al Hima\" (Defenders of the Homeland)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Mustafa Sadik AL-RAFII and Aboul-Qacem ECHEBBI/Mohamad Abdel WAHAB"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1957, replaced 1958, restored 1987; Mohamad Abdel WAHAB also composed the music for the anthem of the United Arab Emirates"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "9 (8 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Amphitheatre of El Jem (c); Archaeological Site of Carthage (c); Medina of Tunis (c); Ichkeul National Park (n); Punic Town of Kerkuane (c); Kairouan (c); Medina of Sousse (c); Dougga / Thugga (c); Djerba: Testimony to a settlement pattern in an island territory (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

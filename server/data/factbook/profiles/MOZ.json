@@ -1,0 +1,1151 @@
+{
+ "iso3": "MOZ",
+ "gec": "mz",
+ "name": "Mozambique",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>In the first half of the second millennium A.D., northern Mozambican port towns were frequented by traders from Somalia, Ethiopia, Egypt, Arabia, Persia, and India. The Portuguese were able to wrest much of the coastal trade from Arab Muslims in the centuries after 1500, and they set up their own colonies. Portugal did not relinquish Mozambique until 1975. Large-scale emigration, economic dependence on South Africa, a severe drought, and a prolonged civil war hindered the country's development until the mid-1990s. <br /><br />The ruling Front for the Liberation of Mozambique (FRELIMO) party formally abandoned Marxism in 1989, and a new constitution the following year provided for multiparty elections and a free-market economy. A UN-negotiated peace agreement between FRELIMO and rebel Mozambique National Resistance (RENAMO) forces ended the fighting in 1992. In 2004, Mozambique underwent a delicate transition as Joaquim CHISSANO stepped down after 18 years in office. His elected successor, Armando GUEBUZA, served two terms and then passed executive power to Filipe NYUSI in 2015. RENAMO’s residual armed forces intermittently engaged in a low-level insurgency after 2012, but a 2016 cease-fire eventually led to the two sides signing a comprehensive peace deal in 2019. <br /><br />Since 2017, violent extremists -- who an official ISIS media outlet recognized as ISIS's network in Mozambique for the first time in 2019 -- have been conducting attacks against civilians and security services in the northern province of Cabo Delgado. In 2021, Rwanda and the Southern African Development Community deployed forces to support Mozambique’s efforts to counter the extremist group.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southeastern Africa, bordering the Mozambique Channel, between South Africa and Tanzania",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "18 15 S, 35 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "799,380 sq km"
+      },
+      {
+       "label": "land",
+       "text": "786,380 sq km"
+      },
+      {
+       "label": "water",
+       "text": "13,000 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly more than five times the size of Georgia; slightly less than twice the size of California",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,783 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Malawi 1498 km; South Africa 496 km; Eswatini 108 km; Tanzania 840 km; Zambia 439 km; Zimbabwe 1,402 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,470 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical to subtropical",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly coastal lowlands, uplands in center, high plateaus in northwest, mountains in west",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Monte Binga 2,436 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Indian Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "345 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "coal, titanium, natural gas, hydropower, tantalum, graphite",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "52.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 7.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 45.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "41.7% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "5.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "1,180 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lake Malawi (shared with Malawi and Tanzania) - 22,490"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Rio Zambeze (Zambezi) river mouth (shared with Zambia [s]), Angola, Namibia, Botswana, and Zimbabwe) - 2,740 km; Rio Limpopo river mouth (shared with South Africa [s], Botswana, and Zimbabwe) - 1,800 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Indian Ocean drainage",
+       "text": "Zambezi (1,332,412 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "three large population clusters are found along the southern coast between Maputo and Inhambane, in the central area between Beira and Chimoio along the Zambezi River, and in and around the northern cities of Nampula, Cidade de Nacala, and Pemba; the northwest and southwest are the least populated areas, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "severe droughts; devastating cyclones and floods in central and southern provinces",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "the Zambezi River flows through the north-central and most fertile part of the country",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "34,206,144 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16,880,529"
+      },
+      {
+       "label": "female",
+       "text": "17,325,615"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Mozambican(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Mozambican"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "African 99% (Makhuwa, Tsonga, Lomwe, Sena, and others), Mestizo 0.8%, other (includes European, Indian, Pakistani, Chinese) 0.2% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Makhuwa 26.1%, Portuguese (official) 16.6%, Tsonga 8.6%, Nyanja 8.1, Sena 7.1%, Lomwe 7.1%, Chuwabo 4.7%, Ndau 3.8%, Tswa 3.8%, other Mozambican languages 11.8%, other 0.5%, unspecified 1.8% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Catholic 27.3%, Islam 19.1%, Pentecostal 16.7%, Saio/Zione 16.3%, no religion 13.5%, other 4.3%, Anglican 1.7%, unknown 1.2% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "44.7% (male 7,548,247/female 7,350,012)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "52.4% (male 8,428,457/female 9,061,065)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "2.9% (2024 est.) (male 473,030/female 490,143)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "89.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "83.7 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.5 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "18.3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16.7 years"
+      },
+      {
+       "label": "female",
+       "text": "17.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.53% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "36.07 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "9.34 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-1.46 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "three large population clusters are found along the southern coast between Maputo and Inhambane, in the central area between Beira and Chimoio along the Zambezi River, and in and around the northern cities of Nampula, Cidade de Nacala, and Pemba; the northwest and southwest are the least populated areas, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "38.8% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "4.24% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.852 million Matola, 1.163 million MAPUTO (capital), 969,000 Nampula (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.93 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.97 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.97 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "19.2 years (2011 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 20-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "82 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "56.7 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "60.1 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "56.2 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "58.3 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "57.1 years"
+      },
+      {
+       "label": "female",
+       "text": "59.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "4.58 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "2.26 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 87.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 48.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 63.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 12.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 51.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 36.8% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "9.1% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.18 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "0.7 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 71.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 24.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 42.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 28.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 75.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 57.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "7.2% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.46 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "1.03 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.22 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.21 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14.3% (2020 est.)"
+      },
+      {
+       "label": "male",
+       "text": "23% (2020 est.)"
+      },
+      {
+       "label": "female",
+       "text": "5.6% (2020 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "15.4% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "64.8% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "16.8% (2015)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "52.9% (2015)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "9.7% (2015)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "6% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "20.4% national budget (2021 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "61.7% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "74.1% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "50.9% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10 years (2017 est.)"
+      },
+      {
+       "label": "male",
+       "text": "11 years (2017 est.)"
+      },
+      {
+       "label": "female",
+       "text": "10 years (2017 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Mozambique"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Mozambique"
+      },
+      {
+       "label": "local long form",
+       "text": "Republica de Mocambique"
+      },
+      {
+       "label": "local short form",
+       "text": "Mocambique"
+      },
+      {
+       "label": "former",
+       "text": "Portuguese East Africa, People's Republic of Mozambique"
+      },
+      {
+       "label": "etymology",
+       "text": "named for an offshore island; the island was named after Mussa bin BIQUE (or Mussa Ibn MALIK), an influential Arab slave trader who set himself up as sultan on the island in the 15th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Maputo"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "25 57 S, 32 35 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "named after the Maputo River, which drains into Maputo Bay south of the city; the river is said to be named after the son of Muagobe, a local chief in the 18th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "10 provinces (<em>provincias</em>, singular - <em>provincia</em>), 1 city (<em>cidade</em>)*; Cabo Delgado, Gaza, Inhambane, Manica, Maputo, Cidade de Maputo*, Nampula, Niassa, Sofala, Tete, Zambezia",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of Portuguese civil law and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1975, 1990; latest adopted 16 November 2004, effective 21 December 2004"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic or supported by at least one third of the Assembly of the Republic membership; passage of amendments affecting constitutional provisions, including the independence and sovereignty of the state, the republican form of government, basic rights and freedoms, and universal suffrage, requires at least a two-thirds majority vote by the Assembly and approval in a referendum; referenda not required for passage of other amendments"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Mozambique"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president elected directly by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for 2 consecutive terms); prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 October 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024</em>: Daniel CHAPO elected president in first round; percent of vote - Daniel CHAPO (FRELIMO) 65.2%, Venâncio MONDLANE (PODEMOS) 24.2%, Ossufo MOMADE (RENAMO) 6.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Assembly of the Republic (Assembleia da Republica)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "250 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/9/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Mozambique Liberation Front (FRELIMO) (171); Optimist Party for the Development of Mozambique (PODEMOS) (43); Mozambican National Resistance (RENAMO) (28); Other (8)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "38.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of the court president, vice president, and 5 judges); Constitutional Council (consists of 7 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court president appointed by the president of the republic; vice president appointed by the president in consultation with the Higher Council of the Judiciary (CSMJ) and ratified by the Assembly of the Republic; other judges elected by the Assembly; judges serve 5-year renewable terms; Constitutional Council judges appointed - 1 by the president, 5 by the Assembly, and 1 by the CSMJ; judges serve 5-year nonrenewable terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Administrative Court (capital city only); provincial courts or Tribunais Judicias de Provincia; District Courts or Tribunais Judicias de Districto; customs courts; maritime courts; courts marshal; labor courts; community courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Democratic Movement of Mozambique (Movimento Democratico de Mocambique) or MDM<br />Liberation Front of Mozambique (Frente de Liberatacao de Mocambique) or FRELIMO<br />Mozambican National Resistance (Resistencia Nacional Mocambicana) or RENAMO",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, AfDB, AU, C, CD, CPLP, EITI (compliant country), FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), MIGA, NAM, OIC, OIF (observer), OPCW, SADC, UN, UNCTAD, UNDP, UNEP,  UNESCO, UNHCR, UNIDO, UNWTO, Union Latina, UPU, WCO, WFP, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "25 June 1975 (from Portugal)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 25 June (1975)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of green (top), black, and yellow, with a red isosceles triangle based on the left side; the black band is edged in white; centered in the triangle is a five-pointed yellow star with a crossed black-and-white rifle and hoe, on top of an open white book<br /><br /><strong>meaning:</strong> green stands for the riches of the land, white for peace, black for the African continent, yellow for the country's minerals, and red for the fight for independence; the rifle stands for defense and vigilance, the hoe for agriculture, the open book for the importance of education, and the star for Marxism and internationalism",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> one of two national flags featuring a firearm; the other is Guatemala"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "rifle, hoe, and book",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, black, yellow, white, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "“Pátria Amada” (Lovely Fatherland)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Salomão J. MANHICA/unkown"
+      },
+      {
+       "label": "history",
+       "text": "adopted 2002; the new anthem reflects the new multi-party political system"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Island of Mozambique"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

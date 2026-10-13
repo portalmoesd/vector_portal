@@ -1,0 +1,1183 @@
+{
+ "iso3": "BDI",
+ "gec": "by",
+ "name": "Burundi",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Established in the 1600s, the Burundi Kingdom has had borders similar to those of modern Burundi since the 1800s. Burundi’s two major ethnic groups, the majority Hutu and minority Tutsi, share a common language and culture and largely lived in peaceful cohabitation under Tutsi monarchs in pre-colonial Burundi. Regional, class, and clan distinctions contributed to social status in the Burundi Kingdom, yielding a complex class structure. German colonial rule in the late 19th and early 20th centuries and Belgian rule after World War I preserved Burundi’s monarchy. Seeking to simplify administration, Belgian colonial officials reduced the number of chiefdoms and eliminated most Hutu chiefs from positions of power. In 1961, the Burundian Tutsi king’s oldest son, Louis RWAGASORE, was murdered by a competing political faction shortly before he was set to become prime minister, triggering increased political competition that contributed to later instability. <br /><br />Burundi gained its independence from Belgium in 1962 as the Kingdom of Burundi. Revolution in neighboring Rwanda stoked ethnic polarization as the Tutsi increasingly feared violence and loss of political power. A failed Hutu-led coup in 1965 triggered a purge of Hutu officials and set the stage for Tutsi officers to overthrow the monarchy in 1966 and establish a Tutsi-dominated republic. A Hutu rebellion in 1972 resulted in the deaths of several thousand Tutsi civilians and sparked brutal Tutsi-led military reprisals against Hutu civilians which ultimately killed 100,000-200,000 people. International pressure led to a new constitution in 1992 and democratic elections in 1993. Tutsi military officers feared Hutu domination and assassinated Burundi's first democratically elected president, Hutu Melchior NDADAYE, in 1993 after only 100 days in office, sparking a civil war. In 1994, his successor, Cyprien NTARYAMIRA, died when the Rwandan president’s plane he was traveling on was shot down, which triggered the Rwandan genocide and further entrenched ethnic conflict in Burundi. The internationally brokered Arusha Agreement, signed in 2000, and subsequent cease-fire agreements with armed movements ended the 1993-2005 civil war. Burundi’s second democratic elections were held in 2005, resulting in the election of Pierre NKURUNZIZA as president. He was reelected in 2010 and again in 2015 after a controversial court decision allowed him to circumvent a term limit. President Evariste NDAYISHIMIYE -- from NKURUNZIZA’s ruling party -- was elected in 2020.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Africa, east of the Democratic Republic of the Congo, west of Tanzania",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "3 30 S, 30 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "27,830 sq km"
+      },
+      {
+       "label": "land",
+       "text": "25,680 sq km"
+      },
+      {
+       "label": "water",
+       "text": "2,150 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than Maryland",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,140 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Democratic Republic of the Congo 236 km; Rwanda 315 km; Tanzania 589 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "equatorial; high plateau with considerable altitude variation (772 m to 2,670 m above sea level); average annual temperature varies with altitude from 23 to 17 degrees Celsius but is generally moderate; average annual rainfall is about 150 cm with two wet seasons (February to May and September to November) and two dry seasons (June to August and December to January)",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "hilly and mountainous, dropping to a plateau in east, some plains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "unnamed elevation on Mukike Range 2,685 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Lake Tanganyika 772 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,504 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "nickel, uranium, rare earth oxides, peat, cobalt, copper, platinum, vanadium, arable land, hydropower, niobium, tantalum, gold, tin, tungsten, kaolin, limestone",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "83.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 51.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 13.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 18.8% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "10.9% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "5.2% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "230 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lake Tanganyika (shared with Democratic Republic of Congo, Tanzania, and Zambia) - 32,000 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Congo (3,730,881 sq km), <em>(Mediterranean Sea)</em> Nile (3,254,853 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "one of Africa's most densely populated countries; concentrations tend to be in the north and along the northern shore of Lake Tanganyika in the west; most people live on farms near areas of fertile volcanic soil, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "flooding; landslides; drought",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "landlocked; straddles crest of the Nile-Congo watershed; the Kagera, which drains into Lake Victoria, is the most remote headstream of the White Nile",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13,590,102 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "6,755,456"
+      },
+      {
+       "label": "female",
+       "text": "6,834,646"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Burundian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Burundian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Hutu, Tutsi, Twa, South Asian",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Kirundi (official), French (official), English (official, least spoken), Swahili (2008 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Igitabo Mpuzamakungu c'ibimenyetso bifatika, isoko ntabanduka ku nkuru z'urufatiro. (Kirundi)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent languages read and written by people 10 years of age or older; spoken Kirundi is nearly universal"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Christian 93.9% (Roman Catholic 58.6%, Protestant 35.3% [includes Adventist 2.7% and other Protestant religions 32.6%]), Muslim 3.4%, other 1.3%, none 1.3% (2016-17 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "42.3% (male 2,895,275/female 2,848,286)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "54.4% (male 3,662,688/female 3,727,022)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.4% (2024 est.) (male 197,493/female 259,338)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "83.9 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "77.7 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.2 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "16.2 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17.6 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "18 years"
+      },
+      {
+       "label": "female",
+       "text": "18.7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.96% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "35.91 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.51 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.81 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "one of Africa's most densely populated countries; concentrations tend to be in the north and along the northern shore of Lake Tanganyika in the west; most people live on farms near areas of fertile volcanic soil, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "14.8% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "5.43% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.207 million BUJUMBURA (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.98 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.76 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.99 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "21.5 years (2016/17 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "392 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "35.3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "39.7 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "31.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "68.1 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "66 years"
+      },
+      {
+       "label": "female",
+       "text": "70.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "4.94 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "2.43 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 90.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 57.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 62.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 9.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 42.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 37.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "9.1% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "4.7% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.08 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 87.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 53.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 58.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 12.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 46.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 41.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "5.4% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.07 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "1.84 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "2.23 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "4.3% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "28.3% (2024 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "58.2% (2017 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "2.8% (2017)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "19% (2017)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.4% (2017)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.9% of GDP (2021 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "14.4% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "71.4% (2020 est.)"
+      },
+      {
+       "label": "male",
+       "text": "78.2% (2020 est.)"
+      },
+      {
+       "label": "female",
+       "text": "66.2% (2020 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10 years (2018 est.)"
+      },
+      {
+       "label": "male",
+       "text": "10 years (2018 est.)"
+      },
+      {
+       "label": "female",
+       "text": "10 years (2018 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Burundi"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Burundi"
+      },
+      {
+       "label": "local long form",
+       "text": "République du Burundi (French)/ Republika y'u Burundi (Kirundi)"
+      },
+      {
+       "label": "local short form",
+       "text": "Burundi"
+      },
+      {
+       "label": "former",
+       "text": "Urundi, German East Africa, Ruanda-Urundi, Kingdom of Burundi"
+      },
+      {
+       "label": "etymology",
+       "text": "name dates from 1966 and is derived from the name of the local Bantu people, the Rundi or Barundi; <em>ba</em>- is the prefix for the people, and <em>bu</em>- is the prefix for the country; the former name, Urundi, is the Swahili version"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Gitega (political capital), Bujumbura (commercial capital)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "3 25 S, 29 55 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the name Bujumbura is unclear, but \"bu-\" is a Bantu prefix meaning \"place\""
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in January 2019, the Burundian parliament voted to make Gitega the political capital of the country while Bujumbura would remain its economic capital; as of 2023, the government's move to Gitega remains incomplete"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "5 provinces: Buhumuza, Bujumbura, Burunga, Butanyerera, Gitega",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed legal system of Belgian civil law and customary law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous, ratified by referendum 28 February 2005"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic after consultation with the government or by absolute majority support of the membership in both houses of Parliament; passage requires at least two-thirds majority vote by the Senate membership and at least four-fifths majority vote by the National Assembly; the president can opt to submit amendment bills to a referendum; constitutional articles including those on national unity, the secularity of Burundi, its democratic form of government, and its sovereignty cannot be amended"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; withdrew from ICCt in October 2017",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Burundi"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 7-year term (eligible for a second term); vice presidents nominated by the president, endorsed by Parliament"
+      },
+      {
+       "label": "most recent election date",
+       "text": "20 May 2020"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2020: </em>Evariste NDAYISHIMIYE elected president; percent of vote - Evariste NDAYISHIMIYE (CNDD-FDD) 71.5%, Agathon RWASA (CNL) 25.2%, Gaston SINDIMWO (UPRONA) 1.7%, other 1.6%<br /><br /><em>2015:</em> Pierre NKURUNZIZA reelected president; percent of vote - Pierre NKURUNZIZA (CNDD-FDD) 69.4%, Agathon RWASA (Hope of Burundians - Amizerio y'ABARUNDI) 19%, other 11.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Parlement)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly (Inama Nshingamateka)"
+      },
+      {
+       "label": "number of seats",
+       "text": "111 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "6/5/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "National Council for the Defense of Democracy - Front for the Defense of Democracy (CNDD-FDD) (108); Other (3)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "39.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "June 2030"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 60% of seats in the National Assembly are allocated to Hutus and 40% to Tutsis; 3 seats are reserved for Twas; 30% of total seats are reserved for women"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Inama Nkenguzamateka)"
+      },
+      {
+       "label": "number of seats",
+       "text": "13 (all indirectly elected)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "7/23/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "National Council for the Defense of Democracy - Front for the Defense of Democracy (CNDD-FDD) (10)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "46.2%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "July 2030"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 3 seats in the Senate are reserved for Twas, and 30% of all votes are reserved for women"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of 9 judges and organized into judicial, administrative, and cassation chambers); Constitutional Court (consists of 7 members)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges nominated by the Judicial Service Commission, a 15-member body of judicial and legal profession officials), appointed by the president and confirmed by the Senate; judge tenure NA; Constitutional Court judges appointed by the president and confirmed by the Senate and serve 6-year nonrenewable terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; County Courts; Courts of Residence; Martial Court; Commercial Court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Council for Democracy and the Sustainable Development of Burundi or CODEBU <br />Front for Democracy in Burundi-Sahwanya or FRODEBU-Sahwanya <br />National Council for the Defense of Democracy - Front for the Defense of Democracy or CNDD-FDD <br />National Congress for Liberty or CNL <br />National Liberation Forces or FNL <br />Union for National Progress (Union pour le Progress Nationale) or UPRONA",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, ATMIS, AU, CEMAC, CEPGL, CICA, COMESA, EAC, FAO, G-77, IBRD, ICAO, ICGLR, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, Interpol, IOC, IOM, IPU, ISO (correspondent), ITU, ITUC (NGOs), MIGA, NAM, OIF, OPCW, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNISFA, UNMISS, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "1 July 1962 (from UN trusteeship under Belgian administration)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 1 July (1962)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> divided by a white diagonal cross into red triangles (top and bottom) and green triangles (on each side) with a white disk at the center bearing three six-pointed red stars outlined in green and arranged in a triangular design<br /><br /><strong>meaning:</strong> green stands for hope and optimism, white for purity and peace, and red for the blood shed in the struggle for independence; the three stars represent the major ethnic groups (Hutu, Twa, Tutsi), as well as unity, work, and progress",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, white, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Burundi Bwacu\" (Our Beloved Burundi)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Jean-Baptiste NTAHOKAJA/Marc BARENGAYABO"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1962"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

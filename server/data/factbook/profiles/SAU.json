@@ -1,0 +1,1098 @@
+{
+ "iso3": "SAU",
+ "gec": "sa",
+ "name": "Saudi Arabia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Saudi Arabia is the birthplace of Islam and home to Islam's two holiest shrines in Mecca and Medina. The king's official title is the Custodian of the Two Holy Mosques. ABD AL-AZIZ bin Abd al-Rahman AL SAUD (Ibn Saud) founded the modern Saudi state in 1932 after a 30-year campaign to unify most of the Arabian Peninsula. One of his male descendants rules the country today, as required by the country's 1992 Basic Law. After Iraq invaded Kuwait in 1990, Saudi Arabia took in the Kuwaiti royal family and 400,000 refugees, while allowing Western and Arab troops to deploy on its soil and liberate Kuwait the following year. Major terrorist attacks in 2003 spurred a strong ongoing campaign against domestic terrorism and extremism. US troops returned to the Kingdom in 2019 after attacks on Saudi oil infrastructure.</p> <p>From 2005 to 2015, King ABDALLAH bin Abd al-Aziz Al Saud incrementally modernized the Kingdom through a series of social and economic initiatives that included expanding employment and social opportunities for women, attracting foreign investment, increasing the private sector's role in the economy, and discouraging the hiring of foreign workers. Saudi Arabia saw some protests during the 2011 Arab Spring but not the level of bloodshed seen in protests elsewhere in the region; Riyadh took a cautious but firm approach, arresting and quickly releasing some protesters and using its state-sponsored clerics to counter political and Islamist activism. The government held its first-ever elections in 2005 and 2011, when Saudis voted for municipal councilors. King ABDALLAH's reforms accelerated under King SALMAN bin Abd al-Aziz, who ascended to the throne in 2015 and lifted the Kingdom's ban on women driving, implemented education reforms, funded green initiatives, and allowed cinemas to operate for the first time in decades. In 2015, women were allowed to vote and stand as candidates for the first time in municipal elections, with 19 women winning seats. King SALMAN initially named his nephew, MUHAMMAD BIN NAYIF bin Abd al-Aziz Al Saud, as the Crown Prince, but a palace coup in 2017 resulted in King SALMAN's son, Deputy Crown Prince MUHAMMAD BIN SALMAN bin Abd al-Aziz Al Saud, taking over as Crown Prince. King SALMAN appointed MUHAMMAD BIN SALMAN as prime minister in 2022.<br /><br />In 2015, Saudi Arabia led a coalition of 10 countries in a military campaign to restore Yemen's legitimate government, which had been ousted by Houthi forces. The war in Yemen has drawn international criticism for civilian casualties and its effect on the country’s dire humanitarian situation. The same year, MUHAMMAD BIN SALMAN announced that Saudi Arabia would lead a multi-nation Islamic Coalition to fight terrorism, and in 2017, Saudi Arabia inaugurated the Global Center for Combatting Extremist Ideology (also known as \"Etidal\"). </p> <p>The country remains a leading producer of oil and natural gas and holds about 17% of the world's proven oil reserves as of 2020. The government continues to pursue economic reform and diversification -- particularly since Saudi Arabia's accession to the WTO in 2005 -- and promotes foreign investment in the Kingdom. In 2016, the Saudi Government announced broad socio-economic reforms known as Vision 2030. Low global oil prices in 2015 and 2016 significantly lowered Saudi Arabia’s governmental revenue, prompting cuts to subsidies on water, electricity, and gasoline; reduced government-employee compensation; and new land taxes. In coordination with OPEC and some key non-OPEC countries, Saudi Arabia agreed to cut oil output in 2017 to regulate supply and help boost global prices. In 2020, this agreement collapsed, and Saudi Arabia launched a price war by flooding the market with low-priced oil before returning to the negotiating table to agree to a major output cut that helped buoy prices. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Middle East, bordering the Persian Gulf and the Red Sea, north of Yemen",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "25 00 N, 45 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Middle East",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,149,690 sq km"
+      },
+      {
+       "label": "land",
+       "text": "2,149,690 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly more than one-fifth the size of the US",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,272 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Iraq 811 km; Jordan 731 km; Kuwait 221 km; Oman 658 km; Qatar 87 km; UAE 457 km; Yemen 1,307 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,640 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "18 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "not specified"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "harsh, dry desert with great temperature extremes",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly sandy desert",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "As Sarawat range, 3,000 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Persian Gulf 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "665 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, natural gas, iron ore, gold, copper",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "80.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 1.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 79.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "1.3% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "17.9% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "7,575 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Indian Ocean drainage",
+       "text": "<em>(Persian Gulf)</em> Tigris and Euphrates (918,044 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 160,
+    "content": {
+     "text": "Arabian Aquifer System",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "historically a population that was mostly nomadic or semi-nomadic, the Saudi population has become more settled since oil was discovered in the 1930s; most of the country's population is now concentrated in a wide area across the middle of the peninsula, from Ad Dammam in the east through Riyadh in the interior to Mecca-Medina in the west near the Red Sea",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "frequent sand and dust storms <br /><br /><strong>volcanism:</strong> little activity in the past few centuries, despite many volcanic formations; volcanoes include Harrat Rahat, Harrat Khaybar, Harrat Lunayyir, and Jabal Yar",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "Saudi Arabia is the largest country in the world without a river; extensive coastlines on the Persian Gulf and Red Sea allow for considerable shipping (especially of crude oil) through the Persian Gulf and Suez Canal",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "36,544,431 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "20,700,838"
+      },
+      {
+       "label": "female",
+       "text": "15,843,593"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Saudi(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Saudi or Saudi Arabian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Arab 90%, Afro-Asian 10%",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim (official; citizens are 85-90% Sunni and 10-12% Shia), other (includes Eastern Orthodox, Protestant, Roman Catholic, Jewish, Hindu, Buddhist, and Sikh) (2020 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> despite having a large expatriate community of various faiths (more than 30% of the population), most forms of public religious expression inconsistent with the government-sanctioned interpretation of Sunni Islam are restricted; non-Muslims are not allowed to have Saudi citizenship and non-Muslim places of worship are not permitted (2013)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "22.9% (male 4,266,720/female 4,097,270)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "72.7% (male 15,577,133/female 10,994,061)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4.4% (2024 est.) (male 856,985/female 752,262)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "37.5 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "31.5 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "6.1 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "16.5 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "32.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "34.6 years"
+      },
+      {
+       "label": "female",
+       "text": "29.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.72% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "13.41 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "3.51 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "7.35 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "historically a population that was mostly nomadic or semi-nomadic, the Saudi population has become more settled since oil was discovered in the 1930s; most of the country's population is now concentrated in a wide area across the middle of the peninsula, from Ad Dammam in the east through Riyadh in the interior to Mecca-Medina in the west near the Red Sea",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "85% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.69% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "7.682 million RIYADH (capital), 4.863 million Jeddah, 2.150 million Mecca, 1.573 million Medina, 1.329 million Ad Dammam, 872,000 million Hufuf-Mubarraz (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.42 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "1.14 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.31 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "7 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "11.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "10.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "77.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "75.6 years"
+      },
+      {
+       "label": "female",
+       "text": "78.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "1.84 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.9 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 98.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 1.4% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "12.8% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "3.41 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "2.2 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 99.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "35.4% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17.6% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "28.3% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "2% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "3.5% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "55.3% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.1% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "14.8% national budget (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "97.9% (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "98.6% (2024 est.)"
+      },
+      {
+       "label": "female",
+       "text": "96.7% (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "16 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "18 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Kingdom of Saudi Arabia"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Saudi Arabia"
+      },
+      {
+       "label": "local long form",
+       "text": "Al Mamlakah al Arabiyah as Suudiyah"
+      },
+      {
+       "label": "local short form",
+       "text": "Al Arabiyah as Suudiyah"
+      },
+      {
+       "label": "etymology",
+       "text": "named after the ruling dynasty of the country, the House of Saud; the name Arabia can be traced back at least as far as the ancient Romans, who referred to the peninsula as \"Arabia Felix\" (Arabia the Fortunate)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "absolute monarchy",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Riyadh"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "24 39 N, 46 42 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Arabic word <em>riyadh</em>, meaning \"gardens;\" the city was built around a small oasis"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "13 regions (<em>manatiq</em>, singular - <em>mintaqah</em>); Al Bahah, Al Hudud ash Shamaliyah (Northern Border), Al Jawf, Al Madinah al Munawwarah (Medina), Al Qasim, Ar Riyad (Riyadh), Ash Sharqiyah (Eastern), 'Asir, Ha'il, Jazan, Makkah al Mukarramah (Mecca), Najran, Tabuk",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "Islamic (sharia) system with some elements of Egyptian, French, and customary law; commercial disputes handled by special committees",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "1 March 1992 -- Basic Law of Government, issued by royal decree, serves as the constitutional framework and is based on the Qur'an and the life and traditions of the Prophet Muhammad"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the king directly or proposed to the king by the Consultative Assembly or by the Council of Ministers; passage by the king through royal decree"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "the father must be a citizen of Saudi Arabia; a child born out of wedlock in Saudi Arabia to a Saudi mother and unknown father"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal for municipal elections",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "none; the monarchy is hereditary; an Allegiance Council created by royal decree in 2006 established a committee of Saudi princes who have a voice in selecting future Saudi kings"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Shura Council (Majlis Ash-Shura)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "151 (all appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9/2/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "19.9%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "August 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "High Court (consists of the court chief; organized into circuits with 3-judge panels, except for the criminal circuit, which has a 5-judge panel for cases involving major punishments)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "High Court chief and chiefs of the High Court Circuits appointed by royal decree on the recommendation of the Supreme Judiciary Council, a 10-member body of high-level judges and other judicial heads; new judges and assistant judges serve 1- and 2-year probations, respectively, before permanent assignment"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeals; Specialized Criminal Court, first-degree courts composed of general, criminal, personal status, and commercial courts; Labor Court; a hierarchy of administrative courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "none",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ABEDA, AfDB (nonregional member), AFESD, AMF, BIS, BRICS, CAEU, CP, FAO, G-20, G-77, GCC, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IDB, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM (observer), IPU, ISO, ITSO, ITU, LAS, MIGA, NAM, OAPEC, OAS (observer), OIC, OPCW, OPEC, PCA, UN, UNCTAD, UNESCO, UNIDO, UNOOSA, UNRWA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "23 September 1932 (unification of the kingdom)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Saudi National Day (Unification of the Kingdom), 23 September (1932)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> green (traditional Islamic color) with the Shahada, or Muslim creed, in large white Arabic script that translates as, \"There is no god but God; Muhammad is the messenger of God;\" the text is above a white horizontal saber pointing to the left <br /><br /><strong>history:</strong> design dates to the early 20th century and is closely associated with the Al Saud family that established the kingdom in 1932; the flag has different sides so that the text reads correctly from right to left and the saber points in the same direction on both sides",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the only national flag that has an inscription as its primary design<br /><br /><strong>note 2:</strong> one of three national flags that differ on each side -- the others are Moldova and Paraguay"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "palm tree over two crossed swords",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Aash Al Maleek\" (Long Live Our Beloved King)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Ibrahim KHAFAJI/Abdul Rahman al-KHATEEB"
+      },
+      {
+       "label": "history",
+       "text": "music adopted 1947, lyrics adopted 1984"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "7 (7 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Hegra Archaeological Site (al-Hijr / Madā ͐ in Ṣāliḥ) (c); At-Turaif District in ad-Dir'iyah (c); Historic Jeddah, the Gate to Makkah (c); Rock Art in the Hail Region of Saudi Arabia (c); Al-Ahsa Oasis, an Evolving Cultural Landscape (c); Ḥimā Cultural Area (c); ‘Uruq Bani Ma’arid (n);The Cultural Landscape of Al-Faw Archaeological Area (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

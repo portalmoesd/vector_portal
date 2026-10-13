@@ -1,0 +1,1088 @@
+{
+ "iso3": "TLS",
+ "gec": "tt",
+ "name": "Timor-Leste",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The island of Timor was actively involved in Southeast Asian trading networks for centuries, and by the 14th century, it exported sandalwood, slaves, honey, and wax. The sandalwood trade attracted the Portuguese, who arrived in the early 16th century; by mid-century, they had colonized the island, which was previously ruled by local chieftains. In 1859, Portugal ceded the western portion of the island to the Dutch. Imperial Japan occupied Portuguese Timor from 1942 to 1945, but Portugal resumed colonial authority after the Japanese defeat in World War II. The eastern part of Timor declared itself independent from Portugal on 28 November 1975, but Indonesian forces invaded and occupied the area nine days later. It was incorporated into Indonesia in 1976 as the province of Timor Timur (East Timor or Timor Leste). Indonesia conducted an unsuccessful pacification campaign in the province over the next two decades, during which as many as 250,000 people died. <br /><br />In a UN-supervised referendum in 1999, an overwhelming majority of the people of Timor-Leste voted for independence from Indonesia. However, anti-independence Timorese militias -- organized and supported by the Indonesian military -- began a large-scale, scorched-earth campaign of retribution, killing approximately 1,400 Timorese and displacing nearly 500,000. Most of the country's infrastructure was destroyed, including homes, irrigation systems, water supply systems, schools, and most of the electrical grid. Australian-led peacekeeping troops eventually deployed to the country and ended the violence. In 2002, Timor-Leste was internationally recognized as an independent state.</p> <p>In 2006, Australia and the UN had to step in again to stabilize the country, which allowed presidential and parliamentary elections to be conducted in 2007 in a largely peaceful atmosphere. In 2008, rebels staged an unsuccessful attack against the president and prime minister. Since that attack, Timor-Leste has made considerable progress in building stability and democratic institutions, holding a series of successful parliamentary and presidential elections since 2012. Nonetheless, weak and unstable political coalitions have led to periodic episodes of stalemate and crisis. The UN continues to provide assistance on economic development and strengthening governing institutions. Currently, Timor-Leste is one of the world's poorest nations, with an economy that relies heavily on energy resources in the Timor Sea.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southeastern Asia, northwest of Australia in the Lesser Sunda Islands at the eastern end of the Indonesian archipelago; note - Timor-Leste includes the eastern half of the island of Timor, the Oecussi (Ambeno) region on the northwest portion of the island of Timor, and the islands of Pulau Atauro and Pulau Jaco",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "8 50 S, 125 55 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Southeast Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14,874 sq km"
+      },
+      {
+       "label": "land",
+       "text": "14,874 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than Connecticut; almost half the size of Maryland",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "253 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Indonesia 253 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "706 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive fishing zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; hot, humid; distinct rainy and dry seasons",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mountainous",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Foho Tatamailau 2,963 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Timor Sea, Savu Sea, and Banda Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "gold, petroleum, natural gas, manganese, marble",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "23% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 7.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 5.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 10.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "71% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "6% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "350 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "most of the population is concentrated in the western third of the country, particularly around Dili",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "floods and landslides are common; earthquakes; tsunamis; tropical cyclones",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "the island of Timor is part of the Malay Archipelago and is the largest and easternmost of the Lesser Sunda Islands; the district of Oecussi is an exclave separated from Timor-Leste proper by Indonesia; Timor-Leste is the only Asian country located completely in the Southern Hemisphere",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,404,785 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "693,940"
+      },
+      {
+       "label": "female",
+       "text": "710,845"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Timorese"
+      },
+      {
+       "label": "adjective",
+       "text": "Timorese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Austronesian (Malayo-Polynesian) (includes Tetun, Mambai, Tokodede, Galoli, Kemak, Baikeno), Melanesian-Papuan (includes Bunak, Fataluku, Bakasai), small Chinese minority",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "Tetun Prasa 30.6%, Mambai 16.6%, Makasai 10.5%, Tetun Terik 6.1%, Baikenu 5.9%, Kemak 5.8%, Bunak 5.5%, Tokodede 4%, Fataluku 3.5%, Waima'a 1.8%, Galoli 1.4%, Naueti 1.4%, Idate 1.2%, Midiki 1.2%, other 4.5% (2015 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent population by mother tongue; Tetun and Portuguese are official languages; Indonesian and English are working languages; there are about 32 indigenous languages"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Catholic 90.7%, other 7.1%, Protestant Evangelical 1.9%; less than 1%: Islam, Buddhist, Hindu (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "38.7% (male 299,929/female 283,416)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "56.8% (male 418,493/female 437,727)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4.5% (2024 est.) (male 32,243/female 35,101)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "62 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "54.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "7.7 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "12.9 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "23 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "19.8 years"
+      },
+      {
+       "label": "female",
+       "text": "21.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.28% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "23.39 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.86 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-3.73 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of the population is concentrated in the western third of the country, particularly around Dili",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "32.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "3.31% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "281,000 DILI (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.96 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.92 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.99 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "23 years (2016 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "192 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "41.9 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "35.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "28.9 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "70.5 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "68.9 years"
+      },
+      {
+       "label": "female",
+       "text": "72.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2.79 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.35 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 81.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 87% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 18.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 13% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "11.4% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8.9% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.75 physicians/1,000 population (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 94.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 64% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 73.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 5.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 36% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 26.3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "3.8% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.41 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.27 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.05 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "36.1% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "62.6% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "8.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "31.9% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "56.4% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "2.6% (2016)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "14.9% (2016)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.2% (2016)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.2% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "4.3% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "72.5% (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "73.1% (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "71.8% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "People - note",
+    "order": 350,
+    "content": {
+     "text": "one of only two predominantly Christian nations in Southeast Asia, the other being the Philippines",
+     "items": []
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Democratic Republic of Timor-Leste"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Timor-Leste"
+      },
+      {
+       "label": "local long form",
+       "text": "Republika Demokratika Timor Lorosa'e (Tetum)/ Republica Democratica de Timor-Leste (Portuguese)"
+      },
+      {
+       "label": "local short form",
+       "text": "Timor Lorosa'e (Tetum)/ Timor-Leste (Portuguese)"
+      },
+      {
+       "label": "former",
+       "text": "East Timor, Portuguese Timor"
+      },
+      {
+       "label": "etymology",
+       "text": "the name partly derives from the Indonesian and Malay word <em>timur</em>, meaning \"east;\" <em>leste </em>is the Portuguese word for \"east,\" so \"Timor-Leste\" literally means \"Eastern-East\""
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> pronounced TEE-mor LESS-tay"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "semi-presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Dili"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "8 35 S, 125 36 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+9 (14 hours ahead of Washington, DC, during Standard Time)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "12 municipalities (<em>municipios</em>, singular - <em>municipio</em>) and 1 special adminstrative region* (<em>regiao administrativa especial</em>); Aileu, Ainaro, Baucau, Bobonaro (Maliana), Covalima (Suai), Dili, Ermera (Gleno), Lautem (Lospalos), Liquica, Manatuto, Manufahi (Same), Oe-Cusse Ambeno* (Pante Macassar), Viqueque",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> administrative divisions have the same names as their administrative centers; exceptions show the administrative center name in parentheses"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the Portuguese model",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "drafted 2001, approved 22 March 2002, entered into force 20 May 2002"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by Parliament and parliamentary groups; consideration of amendments requires at least four-fifths majority approval by Parliament; passage requires two-thirds majority vote by Parliament and promulgation by the president of the republic; passage of amendments to the republican form of government and the flag requires approval in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Timor-Leste"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "10 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "17 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); following parliamentary elections, the president appoints the leader of the majority party or majority coalition as the prime minister"
+      },
+      {
+       "label": "most recent election date",
+       "text": "19 March 2022, with a runoff on 19 April 2022"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2022</em>: José RAMOS-HORTA elected president in second round - RAMOS-HORTA (CNRT) 62.1%, Francisco GUTERRES (FRETILIN) 37.9%<br /><em><br />2017</em>: Francisco GUTERRES elected president; Francisco GUTERRES (FRETILIN) 57.1%, António da CONCEICAO (PD) 32.5%, other 10.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "April 2027"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the president is commander in chief of the military and can veto legislation, dissolve parliament, and call national elections"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Parliament"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "65 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/21/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "National Congress for the Reconstruction of Timor-Leste (CNRT) (31); Revolutionary Front for an independent East Timor (FRETILIN) (19); Democratic Party (PD) (6); Kmanek Haburas Unidade Nasional Timor Oan (KHUNTO) (5); People's Liberation Party (PLP) (4)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "35.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Appeals (consists of the court president and NA judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "court president appointed by the president of the republic from among the other court judges to serve a 4-year term; other court judges appointed - 1 by the Parliament and the others by the Supreme Council for the Judiciary, a body chaired by the court president and that includes mostly presidential and parliamentary appointees; other judges serve for life"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Appeal; High Administrative, Tax, and Audit Court; district courts; magistrates' courts; military courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Democratic Party or PD <br />National Congress for Timorese Reconstruction or CNRT <br />National Unity of the Sons of Timor (Haburas Unidade Nasional Timor Oan or KHUNTO) <br />People's Liberation Party or PLP <br />Revolutionary Front of Independent Timor-Leste or FRETILIN",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, ADB, AOSIS, ARF, ASEAN, CPLP, EITI (compliant country), FAO, G-77, IBRD, ICAO, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ITU, MIGA, NAM, OPCW, PIF (observer), UN, UNCTAD, UNESCO, UNIDO, Union Latina, UNWTO, UPU, WCO, WHO, WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "28 November 1975 (from Portugal); 20 May 2002 (from Indonesia)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Restoration of Independence Day, 20 May (2002); Proclamation of Independence Day, 28 November (1975)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> red with a black isosceles triangle (based on the left side) on a slightly longer yellow arrowhead that extends to the center of the flag; a white star is in the center of the black triangle<br /><br /><strong>meaning:</strong> yellow stands for past colonialism, black for obscurantism that needs to be overcome, and red for the struggle for freedom; the white star represents peace and a guiding light",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "Mount Ramelau",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, yellow, black, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Patria\" (Fatherland)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Fransisco Borja DA COSTA/Afonso DE ARAUJO"
+      },
+      {
+       "label": "history",
+       "text": "adopted 2002; the song was first used as an anthem when Timor-Leste declared its independence from Portugal in 1975; the lyricist, Francisco Borja DA COSTA, was killed in the Indonesian invasion just days after independence was declared"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

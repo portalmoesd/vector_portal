@@ -144,8 +144,34 @@
       <div class="cp-row__value${value ? '' : ' cp-nodata'}">${value ? escapeHtml(value) : escapeHtml(t('countryProfiles.noData'))}</div><div class="cp-row__src"></div></div>`;
   }
 
+  // ── Factbook text blocks ─────────────────────────────────────────────
+  // Content is sanitized server-side at import time (a small tag
+  // vocabulary: br, p, em, strong, lists), so it is rendered as HTML here.
+  function textField(row) {
+    const c = row.content || {};
+    const items = (c.items || []).map((it) => `<div class="cp-text-item"><dt>${escapeHtml(it.label)}</dt><dd>${it.text}</dd></div>`).join('');
+    return `<div class="cp-text-field" data-field="${escapeHtml(row.field)}">
+      <div class="cp-text-field__label">${escapeHtml(row.field)}${row.edited ? ` <span class="pill pill-blue">${escapeHtml(t('countryProfiles.factbook.edited'))}</span>` : ''}</div>
+      <div class="cp-text-field__body">${c.text ? `<div class="cp-text-field__text">${c.text}</div>` : ''}${items ? `<dl class="cp-text-items">${items}</dl>` : ''}</div>
+    </div>`;
+  }
+
+  function factbookAttribution(src) {
+    if (!src) return '';
+    const when = src.dataDate ? t('countryProfiles.factbook.snapshot', { date: src.dataDate }) : '';
+    const ended = src.discontinued ? t('countryProfiles.factbook.discontinued', { date: formatDate(src.discontinued) }) : '';
+    return `<div class="cp-fb-note">${escapeHtml(t('countryProfiles.source'))}: <a href="${escapeHtml(src.url)}" target="_blank" rel="noopener">${escapeHtml(src.name)}</a>${when ? ` · ${escapeHtml(when)}` : ''}${ended ? ` · ${escapeHtml(ended)}` : ''}</div>`;
+  }
+
+  function textBlock(rows, src, { heading = null } = {}) {
+    if (!rows || !rows.length) return '';
+    return `<div class="cp-text-block">${heading ? `<h3 class="cp-text-block__title">${escapeHtml(heading)}</h3>` : ''}${rows.map(textField).join('')}${factbookAttribution(src)}</div>`;
+  }
+
   function renderSections(data) {
     const { country: c, indicators, series } = data;
+    const texts = (data.texts && data.texts.sections) || {};
+    const fbSrc = data.texts && data.texts.source;
     const bySection = {};
     for (const s of SECTIONS) bySection[s] = indicators.filter((i) => i.section === s);
     const hasData = (list) => list.some((i) => i.value != null);
@@ -158,6 +184,11 @@
         <h2 class="cp-section__title" id="h-${id}">${escapeHtml(t(`countryProfiles.sections.${id}`))}</h2>${inner}</section>`);
     };
 
+    // Introduction: the Factbook background text, when present.
+    if (texts.Introduction && texts.Introduction.length) {
+      section('introduction', textBlock(texts.Introduction, fbSrc));
+    }
+
     // Overview: header facts plus surface area; always has region/income.
     section('overview', `<div class="cp-rows">
       ${factRow(t('countryProfiles.region'), c.region.name)}
@@ -166,7 +197,21 @@
       ${bySection.overview.map(row).join('')}
     </div>`);
 
-    for (const id of ['people', 'economy', 'trade']) {
+    if (texts.Geography && texts.Geography.length) {
+      section('geography', textBlock(texts.Geography, fbSrc));
+    }
+
+    // People: World Bank indicators first, then the Factbook fields.
+    const peopleText = texts['People and Society'] || [];
+    if (hasData(bySection.people) || peopleText.length) {
+      section('people', `${hasData(bySection.people) ? `<div class="cp-rows">${bySection.people.map(row).join('')}</div>` : ''}${textBlock(peopleText, fbSrc, { heading: hasData(bySection.people) ? t('countryProfiles.factbook.fromFactbook') : null })}`);
+    }
+
+    if (texts.Government && texts.Government.length) {
+      section('government', textBlock(texts.Government, fbSrc));
+    }
+
+    for (const id of ['economy', 'trade']) {
       if (!hasData(bySection[id])) continue;
       let extra = '';
       if (id === 'economy' && window.Chart && chartHasData(series)) {

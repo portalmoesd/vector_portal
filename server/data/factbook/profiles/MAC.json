@@ -1,0 +1,808 @@
+{
+ "iso3": "MAC",
+ "gec": "mc",
+ "name": "Macau",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Portuguese ships began arriving in 1513. In the 1550s, Portuguese paying tribute to China settled in Macau, which became the official entrepôt for all international trade with China and Japan and the first European settlement in the Far East.  The first governor was appointed in the 17th century, but the Portuguese remained largely under the control of the Chinese. In the 1930s and ’40s Macau was declared a neutral territory during the Sino-Japanese War and World War II and became a refuge for both Chinese and Europeans. Portugal officially made Macau an overseas province in 1951.  <br /><br />In April 1987, Portugal and China reached an agreement to return Macau to Chinese rule in 1999, using the Hong Kong Joint Declaration between China and the UK as a model. In this agreement, China promised that, under its \"one country, two systems\" formula, China's political and economic system would not be imposed on Macau, and that Macau would enjoy a \"high degree of autonomy\" in all matters except foreign affairs and defense for the next 50 years. However, after China's multi-year crackdown against the pro-democracy movement in nearby Hong Kong, the governments of China and the Macau Special Administrative Region worked to limit Macau's political autonomy by suppressing opposition activity in the 2021 legislative elections.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Asia, bordering the South China Sea and China",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "22 10 N, 113 33 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Southeast Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "28 sq km"
+      },
+      {
+       "label": "land",
+       "text": "28.2 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "less than one-sixth the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3 km"
+      },
+      {
+       "label": "regional borders",
+       "text": "China 3 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "41 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "not specified",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "subtropical; marine with cool winters, warm summers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "generally flat",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Alto Coloane 172 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "South China Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "NEGL",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "0% (2022 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "0% (2022 est.)"
+      },
+      {
+       "label": "other",
+       "text": "100% (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "0 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "population fairly equally distributed",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "typhoons",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "primarily urban; an area of land reclaimed from the sea measuring 5.2 sq km (2 sq mi) and known as Cotai now connects the islands of Coloane and Taipa; the island area is connected to the mainland peninsula by three bridges",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "644,426 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "304,988"
+      },
+      {
+       "label": "female",
+       "text": "339,438"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Chinese"
+      },
+      {
+       "label": "adjective",
+       "text": "Chinese"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Chinese 89.4%, Chinese and Portuguese 1%, Portuguese 0.8%, Chinese and non-Portuguese 0.2%, Portuguese and others 0.2%, other 8.5% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Cantonese 81%, Mandarin 4.7%, other Chinese dialects 5.4%, English 3.6%, Tagalog 2.9%, Portuguese 0.6%, other 1.8% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "<p>世界概况, 必須擁有的基本資料参考书 (Cantonese)</p> <br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Chinese and Portuguese are official languages; Macanese or Patua, a Portuguese-based Creole, is also spoken"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "folk religion 58.9%, Buddhist 17.3%, Christian 7.2%, other 1.2%, none 15.4% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "14.4% (male 47,346/female 45,216)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "69.9% (male 210,059/female 240,577)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "15.7% (2024 est.) (male 47,583/female 53,645)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "43 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "20.5 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "22.5 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "4.5 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "43 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "41.5 years"
+      },
+      {
+       "label": "female",
+       "text": "43.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.64% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "8.31 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.02 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "3.08 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population fairly equally distributed",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "100% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.46% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "682,000 Macau (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "0.87 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.89 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.9 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "4.5 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "4.3 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "85.3 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "82.5 years"
+      },
+      {
+       "label": "female",
+       "text": "88.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 190,
+    "content": {
+     "text": "1.25 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 200,
+    "content": {
+     "text": "0.61 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 220,
+    "content": {
+     "text": "6.3% of GDP (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18 years"
+      },
+      {
+       "label": "male",
+       "text": "17 years"
+      },
+      {
+       "label": "female",
+       "text": "19 years (2021)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Macau Special Administrative Region"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Macau"
+      },
+      {
+       "label": "official long form",
+       "text": "Aomen Tebie Xingzhengqu (Chinese)/ Regiao Administrativa Especial de Macau (Portuguese)"
+      },
+      {
+       "label": "official short form",
+       "text": "Aomen (Chinese)/ Macau (Portuguese)"
+      },
+      {
+       "label": "etymology",
+       "text": "name derived from the Chinese <em>ama-gao</em>, or “Bay of Ama,” for Ama, the patron goddess of sailors"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "executive-led limited democracy; a special administrative region of the People's Republic of China",
+     "items": []
+    }
+   },
+   {
+    "field": "Dependency status",
+    "order": 30,
+    "content": {
+     "text": "special administrative region of the People's Republic of China",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 40,
+    "content": {
+     "text": "civil law system based on the Portuguese model",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 50,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1976 (Organic Statute of Macau, under Portuguese authority); latest adopted 31 March 1993, effective 20 December 1999 (Basic Law of the Macau Special Administrative Region of the People's Republic of China serves as Macau's constitution)"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the Standing Committee of the National People’s Congress (NPC), the People’s Republic of China State Council, and the Macau Special Administrative Region; submittal of proposals to the NPC requires two-thirds majority vote by the Legislative Assembly of Macau, approval by two thirds of Macau's deputies to the NPC, and consent of the Macau chief executive; final passage requires approval by the NPC"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 60,
+    "content": {
+     "text": "see China",
+     "items": []
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 70,
+    "content": {
+     "text": "18 years of age in direct elections for some legislative positions, universal for permanent residents living in Macau for the past 7 years",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> indirect elections are limited to organizations registered as \"corporate voters\" and an election committee for the chief executive drawn from broad regional groupings, municipal organizations, central government bodies, and elected Macau officials"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected by National People's Congress for a 5-year term (eligible for a second term); chief executive chosen by a 400-member Election Committee for a 5-year term (eligible for a second term)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "<em>president:</em> 10 March 2023<br /><br /><em>chief executive:</em> 13 October 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024:</em> Sam Hou FAI (unopposed; received 394 out of 400 votes)<br /><br /><em>2019:</em> HO lat Seng (unopposed; received 392 out of 400 votes)"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "<em>president: </em>March 2028<br /><br /><em>chief executive:</em> 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 90,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Legislative Assembly (Regiao Administrativa Especial de Macau)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "33 (14 directly elected, 12 indirectly elected, 7 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9/12/2021"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "United Citizens Association of Macau (ACUM) (3); Union for Development (UPD) (2); Macau-Guangdong Union (UGM) (2); Union for Promoting Progress (UPP) (2); Alliance for a Happy Home (ABL) (2); New Hope (NE) (2); Association of Synergy of Macau (PS) (1)"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "September 2025"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Final Appeal of Macau Special Administrative Region (consists of the court president and 2 associate justices)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "justices appointed by the Macau chief executive upon the recommendation of an independent commission of judges, lawyers, and \"eminent\" persons; judge tenure NA"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Second Instance; Court of First instance; Lower Court; Administrative Court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 110,
+    "content": {
+     "text": "Alliance for a Happy Home or ABL<br />Association of Synergy of Macau (\"Synergy Power\" or Poder da Singeria) or PS <br />Macau-Guangdong Union or UGM <br />New Hope or NE <br />Union for Development or UPD <br />Union for Promoting Progress or UPP or UNIPRO <br />United Citizens Association of Macau or ACUM",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> there is no political party ordinance, so there are no registered political parties; politically active groups register as societies or companies"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 120,
+    "content": {
+     "text": "ICC (national committees), IHO, IMF, IMO (associate), Interpol (subbureau), ISO (correspondent), UNESCO (associate), UNWTO (associate), UPU, WCO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 130,
+    "content": {
+     "text": "none (special administrative region of China)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 140,
+    "content": {
+     "text": "National Day (anniversary of the Founding of the People's Republic of China), 1 October (1949)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 20 December (1999) is celebrated as Macau Special Administrative Region Establishment Day"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 150,
+    "content": {
+     "text": "<strong>description:</strong> green with a lotus flower above a stylized bridge and water in white, under an arc of five five-pointed gold stars<br /><br /><strong>meaning:</strong> the lotus is the national floral emblem, and the three petals represent the country's peninsula and two islands; the five stars echo the Chinese flag",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 160,
+    "content": {
+     "text": "lotus blossom",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 170,
+    "content": {
+     "text": "green, white, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Yiyongjun Jinxingqu\" (The March of the Volunteers)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "TIAN Han/NIE Er"
+      },
+      {
+       "label": "history",
+       "text": "official anthem, as a Special Administrative Region of China"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

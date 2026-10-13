@@ -1,0 +1,916 @@
+{
+ "iso3": "DMA",
+ "gec": "do",
+ "name": "Dominica",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "Dominica was the last of the Caribbean islands to be colonized by Europeans, due chiefly to the fierce resistance of the native Caribs. France ceded possession to Britain in 1763, and Dominica became a British colony in 1805. Slavery ended in 1833, and in 1835, the first three men of African descent were elected to the legislative assembly of Dominica. In 1871, Dominica became first part of the British Leeward Islands and then the British Windward Islands until 1958. In 1967, Dominica became an associated state of the UK, formally taking responsibility for its internal affairs, and the country gained its independence in 1978. In 1980, Dominica's fortunes improved when Mary Eugenia CHARLES -- the first female prime minister in the Caribbean -- replaced a corrupt and tyrannical administration, and she served for the next 15 years. In 2017, Hurricane Maria passed over the island, causing extensive damage to structures, roads, communications, and the power supply, and largely destroying critical agricultural areas.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Caribbean, island between the Caribbean Sea and the North Atlantic Ocean, about halfway between Puerto Rico and Trinidad and Tobago",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "15 25 N, 61 20 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Central America and the Caribbean",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "751 sq km"
+      },
+      {
+       "label": "land",
+       "text": "751 sq km"
+      },
+      {
+       "label": "water",
+       "text": "NEGL"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly more than four times the size of Washington, D.C.",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "148 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; moderated by northeast trade winds; heavy rainfall",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "rugged mountains of volcanic origin",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Morne Diablotins 1,447 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Caribbean Sea 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "timber, hydropower, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "33.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 22.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 2.7% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "76.6% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "0% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "NA",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "population is mostly clustered along the coast, with roughly a third living in the parish of St. George, in or around the capital of Roseau; the volcanic interior is sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "flash floods are a constant threat; destructive hurricanes can be expected during the late summer months <br /><br /><strong>volcanism:</strong> Dominica lies in the middle of the volcanic-island arc of the Lesser Antilles that extends from the island of Saba in the north to Grenada in the south; of the 16 volcanoes that make up this arc, five are located on Dominica, more than any other island in the Caribbean: Morne aux Diables (861 m), Morne Diablotins (1,430 m), Morne Trois Pitons (1,387 m), Watt Mountain (1,224 m), which last erupted in 1997, and Morne Plat Pays (940 m); the two best-known volcanic features on Dominica, the Valley of Desolation and the Boiling Lake thermal areas, lie on the flanks of Watt Mountain, and both are popular tourist destinations",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "known as \"The Nature Island of the Caribbean\" due to its lush and varied flora and fauna, which are protected by an extensive natural park system; the most mountainous of the Lesser Antilles, its volcanic peaks are cones of lava craters and include Boiling Lake, the second-largest thermally active lake in the world",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "74,661 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "37,753"
+      },
+      {
+       "label": "female",
+       "text": "36,908"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Dominican(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Dominican"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "African descent 84.5%, mixed 9%, Indigenous 3.8%, other 2.1%, unspecified 0.6% (2011 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": "English (official), French patois",
+     "items": []
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 52.7%, Protestant 29.7% (includes Seventh Day Adventist 6.7%, Pentecostal 6.1%, Baptist 5.2%, Christian Union Church 3.9%, Methodist 2.6%, Gospel Mission 2.1%, other Protestant 3.1%), Jehovah's Witness 1.3%, Rastafarian 1.1%, other 4.3%, none 9.4%, unspecified 1.4% (2011 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "20.7% (male 7,891/female 7,530)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "65.6% (male 25,000/female 24,009)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "13.7% (2024 est.) (male 4,862/female 5,369)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "52.3 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "31.5 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "20.9 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "4.8 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "37.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "36.5 years"
+      },
+      {
+       "label": "female",
+       "text": "37.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "-0.04% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "13.02 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.15 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-5.31 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population is mostly clustered along the coast, with roughly a third living in the parish of St. George, in or around the capital of Roseau; the volcanic interior is sparsely populated",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "72% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.84% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "15,000 ROSEAU (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.91 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.02 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "36 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10.5 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14.5 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "6.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "78.7 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "75.8 years"
+      },
+      {
+       "label": "female",
+       "text": "81.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.01 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "0.98 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "6.5% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "6.2% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 230,
+    "content": {
+     "text": "1.16 physicians/1,000 population (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 240,
+    "content": {
+     "text": "3 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 250,
+    "content": {
+     "text": "27.9% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6.32 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "1.64 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.29 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "4.39 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.4% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "5.8% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "People - note",
+    "order": 280,
+    "content": {
+     "text": "3,000-3,500 Kalinago (Carib) still living on Dominica are the only pre-Columbian population remaining in the Caribbean; only 70-100 may be \"pure\" Kalinago because of years of integration into the broader population",
+     "items": []
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Commonwealth of Dominica"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Dominica"
+      },
+      {
+       "label": "etymology",
+       "text": "the island was named by explorer Christopher COLUMBUS for the day of the week on which he spotted it, Sunday (<em>Domingo </em>in Spanish, <em>dominica dies </em>in Latin), 3 November 1493"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Roseau"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "15 18 N, 61 24 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is French for \"reed;\" the first settlement was named after the river reeds that grew in the area"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "10 parishes; Saint Andrew, Saint David, Saint George, Saint John, Saint Joseph, Saint Luke, Saint Mark, Saint Patrick, Saint Paul, Saint Peter",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "common law based on the English model",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1967 (pre-independence); latest presented 25 July 1978, entered into force 3 November 1978"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the House of Assembly; passage of amendments to constitutional sections such as fundamental rights and freedoms, the government structure, and constitutional amendment procedures requires approval by three fourths of the Assembly membership in the final reading of the amendment bill, approval by simple majority in a referendum, and assent of the president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "yes"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "yes"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president nominated by the prime minister and leader of the opposition party and elected by the House of Assembly for a 5-year term (eligible for a second term); prime minister appointed by the president"
+      },
+      {
+       "label": "most recent election date",
+       "text": "27 September 2023"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2023:</em> parliament elects Sylvanie BURTON (DLP) with 20 votes for and five against<br /><br /><em>2018:</em> Charles A. SAVARIN (DLP) reelected president unopposed"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "House of Assembly"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "32 (21 directly elected; 9 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "12/6/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Dominica Labor Party (DLP) (19); Independents (2)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "40.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "the Eastern Caribbean Supreme Court (ECSC) is the superior court of the Organization of Eastern Caribbean States; the ECSC is headquartered on St. Lucia and consists of the Court of Appeal -- headed by the chief justice and 4 judges -- and the High Court with 18 judges; the Court of Appeal travels to member states on a schedule to hear appeals from the High Court and subordinate courts; the Caribbean Court of Justice is the final court of appeal"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "chief justice of Eastern Caribbean Supreme Court appointed by the British monarch; other justices and judges appointed by the Judicial and Legal Services Commission, an independent body of judicial officials; Court of Appeal justices appointed for life with mandatory retirement at age 65; High Court judges appointed for life with mandatory retirement at age 62"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of Summary Jurisdiction; magistrates' courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Dominica Freedom Party or DFP<br />Dominica Labor Party or DLP<br />Dominica United Workers Party or UWP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ACP, ACS, AOSIS, C, Caricom, CD, CDB, CELAC, Commonwealth of Nations, ECCU, FAO, G-77, IAEA, IBRD, ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, ISO (correspondent), ITU, ITUC (NGOs), MIGA, NAM, OAS, OECS, OIF, OPANAL, OPCW, Petrocaribe, UN, UNCTAD, UNESCO, UNIDO, UPU, WFTU, WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "3 November 1978 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 3 November (1978)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description: </strong>green with a centered cross of three equal bands in yellow, black, and white; in the center of the cross is a red disk with a Sisserou parrot surrounded by 10 five-pointed green stars edged in yellow<br /><br /><strong>meaning:</strong> the stars represent the 10 administrative divisions (parishes); green symbolizes the island's lush vegetation; the tricolor cross represents the Christian Trinity; yellow stands for sunshine, the primary agricultural products (citrus and bananas), and the Carib people; black for the rich soil and the African heritage of most citizens; white for rivers, waterfalls, and the purity of aspirations; the red disc for social justice",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "sisserou parrot, Carib wood flower",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "green, yellow, black, white, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "the coat of arms was adopted on July 21, 1961, and features two sisserou parrots supporting a shield that is divided into four sections by a cross, a reference to the island’s discovery on a Sunday; the quadrants feature a palm tree, a banana tree, a frog that is native to the island, and a canoe on the Caribbean Sea; the golden lion symbolizes Dominica’s past colonial ties with the UK; below the shield is the national motto, which means \"After God is the Earth\"",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Isle of Beauty\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Wilfred Oscar Morgan POND/Lemuel McPherson CHRISTIAN"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1967"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,1088 @@
+{
+ "iso3": "MKD",
+ "gec": "mk",
+ "name": "North Macedonia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>North Macedonia gained its independence peacefully from Yugoslavia in 1991 under the name of \"Macedonia.\" Greece objected to the new country’s name, insisting it implied territorial pretensions to the northern Greek province of Macedonia, and democratic backsliding for several years stalled North Macedonia's movement toward Euro-Atlantic integration. Immediately after Macedonia declared independence, Greece sought to block its efforts to gain UN membership if the name \"Macedonia\" was used. The country was eventually admitted to the UN in 1993 as \"The former Yugoslav Republic of Macedonia,\" and at the same time it agreed to UN-sponsored negotiations on the name dispute. In 1995, Greece lifted a 20-month trade embargo and the two countries agreed to normalize relations, but the issue of the name remained unresolved amid ongoing negotiations. As an interim measure, the US and over 130 other nations recognized Macedonia by its constitutional name, Republic of Macedonia. <br /><br />Ethnic Albanian grievances over perceived political and economic inequities escalated into an armed conflict in 2001 that eventually led to the internationally brokered Ohrid Framework Agreement, which ended the fighting and established guidelines for constitutional amendments and new laws that enhanced the rights of minorities. In 2018, the government adopted a new law on languages, which elevated the Albanian language to an official language at the national level and kept the Macedonian language as the sole official language in international relations, but ties between ethnic Macedonians and ethnic Albanians remain complicated.</p> <p>In 2018, Macedonia and Greece signed the Prespa Agreement whereby Macedonia agreed to change its name to North Macedonia, and the agreement went in to force on 12 February 2019. North Macedonia joined NATO in 2020 after amending its constitution as agreed and opened EU accession talks in 2022 after a two-year veto by Bulgaria over identity, language, and historical disputes. The 2014 legislative and presidential election triggered a political crisis that lasted almost three years and escalated in 2015 when the opposition party began releasing wiretapped material revealing alleged widespread government corruption and abuse. The country still faces challenges, including fully implementing reforms to overcome years of democratic backsliding, stimulating economic growth and development, and fighting organized crime and corruption. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southeastern Europe, north of Greece",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "41 50 N, 22 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "25,713 sq km"
+      },
+      {
+       "label": "land",
+       "text": "25,433 sq km"
+      },
+      {
+       "label": "water",
+       "text": "280 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly larger than Vermont; almost four times the size of Delaware",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "838 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Albania 181 km; Bulgaria 162 km; Greece 234 km; Kosovo 160 km; Serbia 101 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "warm, dry summers and autumns; relatively cold winters with heavy snowfall",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mountainous with deep basins and valleys; three large lakes, each divided by a frontier line; country bisected by the Vardar River",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Golem Korab (Maja e Korabit) 2,764 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Vardar River 50 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "741 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "low-grade iron ore, copper, lead, zinc, chromite, manganese, nickel, tungsten, gold, silver, asbestos, gypsum, timber, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "49.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 16.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 31.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "40.9% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "9.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "844 sq km (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Black Sea)</em> Danube (795,656 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country, with urban areas attracting larger and denser populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "high seismic risks",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "landlocked; major transportation corridor from Western and Central Europe to Aegean Sea and Southern Europe to Western Europe",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "2,137,556 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "1,065,634"
+      },
+      {
+       "label": "female",
+       "text": "1,071,922"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Macedonian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Macedonian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Macedonian 58.4%, Albanian 24.3%, Turkish 3.9%, Romani 2.5%, Serb 1.3%, other 2.3%, no ethnic affiliation data available 7.2% (2021 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent total resident population; Romani populations are usually underestimated in official statistics and may represent 6.5–13% of North Macedonia’s population"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Macedonian (official) 61.4%, Albanian (official) 24.3%, Turkish 3.4%, Romani 1.7%, other (includes Aromanian (Vlach) and Bosnian) 2%, unspecified 7.2% (2021 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Книга на Светски Факти, неопходен извор на основни информации. (Macedonian)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent mother tongue; minority languages are co-official with Macedonian in municipalities where at least 20% of the population are speakers, with Albanian co-official in Tetovo, Brvenica, Vrapciste, and other municipalities, Turkish in Centar Zupa and Plasnica, Romani in Suto Orizari, Aromanian in Krusevo, Serbian in Cucer Sandevo"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Orthodox 46.1%, Islam 32.2%, Christian 13.2%, Other 7.2%; less than 1%: atheist, Catholic, other religions, not specified, Protestant (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "16% (male 176,423/female 164,945)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.4% (male 740,649/female 719,627)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "15.6% (2024 est.) (male 147,655/female 186,323)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "46.9 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "23.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "23.6 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "4.2 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "40.9 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "39.4 years"
+      },
+      {
+       "label": "female",
+       "text": "41.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.08% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "10.07 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "9.62 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0.38 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "a fairly even distribution throughout most of the country, with urban areas attracting larger and denser populations",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "59.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.61% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "611,000 SKOPJE (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.79 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.99 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "26.9 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "3 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "6.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "7.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "6 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "77.3 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "75.3 years"
+      },
+      {
+       "label": "female",
+       "text": "79.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.53 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.74 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 98.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 97.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 97.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 1.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 2.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 2.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "8.5% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "12.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "2.94 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "4.2 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 98.6% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 99.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 1.4% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.6% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "22.4% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3.9 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "1.93 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "1.03 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.9 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.03 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 300,
+    "content": {
+     "text": "0.9% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "66.1% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "0.3% (2019)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "7.5% (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "female",
+       "text": "97.8% (2018 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "15 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "14 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of North Macedonia"
+      },
+      {
+       "label": "conventional short form",
+       "text": "North Macedonia"
+      },
+      {
+       "label": "local long form",
+       "text": "Republika Severna Makedonija"
+      },
+      {
+       "label": "local short form",
+       "text": "Severna Makedonija"
+      },
+      {
+       "label": "former",
+       "text": "Democratic Federal Macedonia, People's Republic of Macedonia, Socialist Republic of Macedonia, Republic of Macedonia"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the ancient kingdom of Macedon (7th to 2nd centuries B.C.), whose name origin is unclear; it may derive from the mythological Macedon, the son of the Greek god Zeus; alternatively, it may come from the Greek word <em>makednos</em>, meaning \"tail,\" or the Illyrian word <em>maketia</em>, meaning \"cattle\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Skopje"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "42 00 N, 21 26 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is of Illyrian or Macedonian origin, and the meaning is unclear; derives from Scupi, its name during the Roman era"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "80 municipalities (<em>opstini</em>, singular - <em>opstina</em>) and 1 city* (<em>grad</em>); Aracinovo, Berovo, Bitola, Bogdanci, Bogovinje, Bosilovo, Brvenica, Caska, Centar Zupa, Cesinovo-Oblesevo, Cucer Sandevo, Debar, Debarca, Delcevo, Demir Hisar, Demir Kapija, Dojran, Dolneni, Gevgelija, Gostivar, Gradsko, Ilinden, Jegunovce, Karbinci, Kavadarci, Kicevo, Kocani, Konce, Kratovo, Kriva Palanka, Krivogastani, Krusevo, Kumanovo, Lipkovo, Lozovo, Makedonska Kamenica, Makedonski Brod, Mavrovo i Rostuse, Mogila, Negotino, Novaci, Novo Selo, Ohrid, Pehcevo, Petrovec, Plasnica, Prilep, Probistip, Radovis, Rankovce, Resen, Rosoman, Skopje*, Sopiste, Staro Nagoricane, Stip, Struga, Strumica, Studenicani, Sveti Nikole, Tearce, Tetovo, Valandovo, Vasilevo, Veles, Vevcani, Vinica, Vrapciste, Zelenikovo, Zelino, Zrnovci<br /><br />*the Greater Skopje area is composed of 10 municipalities: Aerodrom, Butel, Centar, Chair, Gazi Baba, Gjorce Petrov, Karposh, Kisela Voda, Saraj, and Shuto Orizari",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system; judicial review of legislative acts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "several previous (since 1944); latest adopted 17 November 1991, effective 20 November 1991"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the president of the republic, by the government, by at least 30 members of the Assembly, or by petition of at least 150,000 citizens; final approval requires a two-thirds majority vote by the Assembly"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of North Macedonia"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president directly elected using a modified 2-round system; a candidate can only be elected in the first round with an absolute majority from all registered voters; in the second round, voter turnout must be at least 40% for the result to be valid; president elected for a 5-year term (eligible for a second term); following legislative elections, the Assembly usually elects the leader of the majority party or majority coalition as prime minister"
+      },
+      {
+       "label": "most recent election date",
+       "text": "24 April and 8 May 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024: </em>Hristijan MICKOSKI elected prime minister; Assembly vote - 77 for, 22 against<em><br /><br />2024: </em>Gordana SILJANOVSKA-DAVKOVA elected president in the second round; percent of vote - Gordana SILJANOVSKA-DAVKOVA (VMRO-DPMNE) 69%, Stevo PENDAROVSKI (SDSM) 31%<em><br /><br />2024: </em>Talat XHAFERI elected caretaker prime minister; Assembly vote - 65 for (opposition boycott)<em><br /><br />2022: </em>Dimitar KOVACEVSKI elected prime minister; Assembly vote - NA"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Assembly of the Republic (Sobranie)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "123 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "mixed system"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/8/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Coalition \"Your Macedonia\" (led by VMRO-DPMNE) (58); Coalition \"European Front\" (led by the Democratic Union for Integration – DUI) (18); Coalition \"For a European Future\" (led by the Social Democratic Union of Macedonia – SDSM) (18); Coalition VLEN (14); ZNAM (Movement \"I know\": For our Macedonia) (6); The Left (Levica) (6)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "39.2%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of 22 judges); Constitutional Court (consists of 9 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court judges nominated by the Judicial Council, a 7-member body of legal professionals, and appointed by the Assembly; judge tenure NA; Constitutional Court judges appointed by the Assembly for nonrenewable, 9-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of Appeal; Basic Courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Alliance for Albanians or AfA or ASH<br />Alternative (Alternativa) or AAA<br />Besa Movement or BESA<br />Citizen Option for Macedonia or GROM <br />Democratic Alliance or DS<br />Democratic Movement or LD <br />Democratic Party of Albanians or PDSH<br />Democratic Party of Serbs or DPSM<br />Democratic Renewal of Macedonia or DOM<br />Democratic Union for Integration or BDI<br />European Democratic Party or PDE <br />Internal Macedonian Revolutionary Organization - Democratic Party for Macedonian National Unity or VMRO-DPMNE<br />Internal Macedonian Revolutionary Organization - People's Party or VMRO-NP<br />Liberal Democratic Party or LDP<br />New Social-Democratic Party or NSDP<br />Social Democratic Union of Macedonia or SDSM<br />Socialist Party of Macedonia or SPM<br />Srpska Stranka in Macedonia or SSM<br />The Left (Levica) <br />The People Movement or LP<br />Turkish Democratic Party or TDP <br />Turkish Movement Party or THP <br />We Can! (coalition includes SDSM/BESA/VMRO-NP, DPT, LDP)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "BIS, CD, CE, CEI, EAPC, EBRD, EU (candidate country), FAO, IAEA, IBRD, ICAO, ICC (NGOs), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO, ITU, ITUC (NGOs), MIGA, NATO, OAS (observer), OIF, OPCW, OSCE, PCA, PFP, SELEC, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNWTO, UPU, WCO, WHO, WIPO, WMO, WTO",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>North Macedonia is an EU candidate country whose satisfactory completion of accession criteria is required before being granted full EU membership"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "8 September 1991 (referendum endorsed independence from Yugoslavia)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Independence Day, 8 September (1991), also known as National Day",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> a red field with a yellow sun (the Sun of Liberty) in the center, with eight broadening rays extending to the edges<br /><br /><strong>meaning:</strong> the red and yellow colors have long been associated with Macedonia",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "eight-rayed sun",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, yellow",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Denes nad Makedonija\" (Today Over Macedonia)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Vlado MALESKI/Todor SKALOVSKI"
+      },
+      {
+       "label": "history",
+       "text": "written in 1943 and adopted in 1991, the song previously served as the anthem of the Socialist Republic of Macedonia, when it was part of Yugoslavia"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (both natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Natural and Cultural Heritage of the Ohrid Region; Ancient and Primeval Beech Forests of the Carpathians"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

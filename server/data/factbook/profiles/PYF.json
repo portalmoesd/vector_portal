@@ -1,0 +1,896 @@
+{
+ "iso3": "PYF",
+ "gec": "fp",
+ "name": "French Polynesia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "French Polynesia consists of five archipelagos -- the Austral Islands, the Gambier Islands, the Marquesas Islands, the Society Islands, and the Tuamotu Archipelago. The Marquesas were first settled around 200 B.C. and the Society Islands around A.D. 300. Raiatea in the Society Islands became a center for religion and culture. Exploration of the other islands emanated from Raiatea, and by 1000, there were small permanent settlements in all the island groups. Ferdinand MAGELLAN was the first European to see the islands of French Polynesia in 1520. In 1767, British explorer Samuel WALLIS was the first European to visit Tahiti, followed by French navigator Louis Antoine de BOUGAINVILLE in 1768 and British explorer James COOK in 1769. King POMARE I united Tahiti and surrounding islands into the Kingdom of Tahiti in 1788. Protestant missionaries arrived in 1797, and POMARE I’s successor converted in the 1810s, along with most Tahitians. In the 1830s, Queen POMARE IV refused to allow French Catholic missionaries to operate, leading France to declare a protectorate over Tahiti and fight the French-Tahitian War of the 1840s in an attempt to annex the islands. <br /><br />In 1880, King POMARE V ceded Tahiti and its possessions to France, changing its status into a colony. France then claimed the Gambier Islands and Tuamotu Archipelago and by 1901 had incorporated all five island groups into its establishments in Oceania. A Tahitian nationalist movement formed in 1940, leading France to grant French citizenship to the islanders in 1946 and change it to an overseas territory. In 1957, the islands’ name was changed to French Polynesia, and the following year, 64% of voters chose to stay part of France when they approved a new constitution. Uninhabited Mururoa Atoll was established as a French nuclear test site in 1962, and tests were conducted between 1966 and 1992 (underground beginning in 1975). France also conducted tests at Fangataufa Atoll, including its last nuclear test in 1996.<br /><br />France granted French Polynesia partial internal autonomy in 1977 and expanded autonomy in 1984. French Polynesia was converted into an overseas collectivity in 2003 and renamed an overseas territory in 2004. Pro-independence politicians won a surprise majority in local elections that same year, but in subsequent elections, they have been relegated to a vocal minority. In 2013, French Polynesia was relisted on the UN List of Non-Self-Governing Territories.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Oceania, five archipelagoes (Archipel des Tuamotu, Iles Gambier, Iles Marquises, Iles Tubuai, Society Islands) in the South Pacific Ocean about halfway between South America and Australia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "15 00 S, 140 00 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Oceania",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,167 sq km (118 islands and atolls; 67 are inhabited)"
+      },
+      {
+       "label": "land",
+       "text": "3,827 sq km"
+      },
+      {
+       "label": "water",
+       "text": "340 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than one-third the size of Connecticut",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,525 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical, but moderate",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mixture of rugged high islands and low islands with reefs",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mont Orohena 2,241 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Pacific Ocean 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "timber, fish, cobalt, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "8.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 7.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 0.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "43.1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "48.3% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "10 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "the majority of the population lives in the Society Islands, one of five archipelagos that includes the most populous island, Tahiti, with approximately 70% of the nation's population",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "occasional cyclonic storms in January",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "includes five archipelagoes: four volcanic (Iles Gambier, Iles Marquises, Iles Tubuai, Society Islands) and one coral (Archipel des Tuamotu); the Tuamotu Archipelago forms the largest group of atolls in the world -- 78 in total, 48 inhabited; Makatea in the Tuamotu Archipelago is one of the three great phosphate rock islands in the Pacific Ocean -- the others are Banaba (Ocean Island) in Kiribati and Nauru",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "305,507 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "156,084"
+      },
+      {
+       "label": "female",
+       "text": "149,423"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "French Polynesian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "French Polynesian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Polynesian 78%, Chinese 12%, local French 6%, metropolitan French 4%",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "French (official) 73.5%, Tahitian 20.1%, Marquesan 2.6%, Austral languages 1.2%, Paumotu 1%, other 1.6% (2017 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Protestant 54%, Roman Catholic 30%, other 10%, no religion 6%",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "20.3% (male 31,659/female 30,006)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.7% (male 107,162/female 101,228)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "11% (2024 est.) (male 16,317/female 17,168)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "46 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "29.3 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "16.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "6 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "35.8 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "35 years"
+      },
+      {
+       "label": "female",
+       "text": "35.6 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.63% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "12.7 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "5.84 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-0.56 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "the majority of the population lives in the Society Islands, one of five archipelagos that includes the most populous island, Tahiti, with approximately 70% of the nation's population",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "62.3% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.65% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "136,000 PAPEETE (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.06 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.95 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.05 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.2 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5.2 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "3.4 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "78.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "76.6 years"
+      },
+      {
+       "label": "female",
+       "text": "81.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 190,
+    "content": {
+     "text": "1.78 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 200,
+    "content": {
+     "text": "0.87 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 220,
+    "content": {
+     "text": "0.02 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 97% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 3% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 240,
+    "content": {
+     "text": "66.8% (2017 est.)",
+     "items": []
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Overseas Lands of French Polynesia"
+      },
+      {
+       "label": "conventional short form",
+       "text": "French Polynesia"
+      },
+      {
+       "label": "local long form",
+       "text": "Pays d'outre-mer de la Polynésie française"
+      },
+      {
+       "label": "local short form",
+       "text": "Polynésie Française"
+      },
+      {
+       "label": "former",
+       "text": "Establishments in Oceania, French Establishments in Oceania"
+      },
+      {
+       "label": "etymology",
+       "text": "the term \"Polynesia\" is an 18th-century construct composed of two Greek words, <em>poly </em>(many) and <em>nesoi </em>(islands), and refers to the more than 1,000 islands scattered over the central and southern Pacific Ocean"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary democracy (Assembly of French Polynesia); an overseas collectivity of France",
+     "items": []
+    }
+   },
+   {
+    "field": "Dependency status",
+    "order": 30,
+    "content": {
+     "text": "overseas country of France",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> overseas territory of France from 1946-2003; overseas collectivity of France since 2003, but it is often referred to as an overseas country due to its degree of autonomy"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Papeete (located on Tahiti)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "17 32 S, 149 34 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-10 (5 hours behind Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Tahitian words <em>pape </em>(water) and <em>ete </em>(basket), referring to a place where people came to get water"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 50,
+    "content": {
+     "text": "5 administrative subdivisions (<em>subdivisions administratives</em>, singular - <em>subdivision administrative</em>): Iles Australes (Austral Islands), Iles du Vent (Windward Islands), Iles Marquises (Marquesas Islands), Iles Sous-le-Vent (Leeward Islands), Iles Tuamotu-Gambier",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the Leeward Islands and the Windward Islands together make up the Society Islands (Iles de la Société)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 60,
+    "content": {
+     "text": "the laws of France apply",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "4 October 1958 (French Constitution)"
+      },
+      {
+       "label": "amendment process",
+       "text": "French constitution amendment procedures apply"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": "see France",
+     "items": []
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "French president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); high commissioner appointed by the French president on the advice of the French Ministry of Interior; French Polynesia president indirectly elected by Assembly of French Polynesia for a 5-year term (no term limits)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Assembly of French Polynesia (Assemblée de la Polynésie française)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "57 (directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/30/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "People's Servant People (38); List of the People (15); I Love Polynesia (3); Rally of the Mahoi People (1)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "49.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2028"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> elections held in two rounds; in the second round, 38 members are directly elected in multi-seat constituencies by a closed-list proportional representation vote; the party receiving the most votes gets an additional 19 seats<br /><br /><strong>note 2:</strong> French Polynesia indirectly elects 2 senators to the French Senate for 6-year terms with one-half the membership renewed every 3 years and directly elects 3 deputies to the French National Assembly for 5-year terms"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Appeal or Cour d'Appel (composition NA)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges assigned from France for 3 years"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Court of the First Instance or Tribunal de Première Instance; Court of Administrative Law or Tribunal Administratif"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>appeals beyond the French Polynesia Court of Appeal are heard by the Court of Cassation (in Paris)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "I Love Polynesia (A here la Porinetia) <br />List of the People (Tapura Huiraatira) <br />People's Servant Party (Tavini Huiraatira) <br />Rally of the Maohi People (Amuitahiraʻa o te Nunaʻa Maohi) (formerly known as Popular Rally (Tahoeraa Huiraatira))",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ITUC (NGOs), PIF, SPC, UPU, WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "none (overseas land of France)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Fête de la Fédération, 14 July (1790)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the local holiday is Internal Autonomy Day, 29 June (1880)<br /><br /><strong>note 2:</strong> often incorrectly referred to as Bastille Day, France's national celebration commemorates the storming of the Bastille prison on 14 July 1789 and the establishment of a constitutional monarchy; other names for the holiday are <em>la Fête nationale</em> (National Holiday) and <em>le Quatorze Juillet</em> (14th of July)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> two horizontal red bands flank a wide white band in a 1:2:1 ratio; centered on the white band is a disk with a blue-and-white wave pattern depicting the sea on the lower half and a gold-and-white ray pattern depicting the sun on the upper half; a stylized  red Polynesian canoe on the disk has a crew of five, represented by five stars <br /><br /><strong>meaning: </strong>the stars symbolize the five island groups; red and white are traditional Polynesian colors",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> similar to the red-white-red flag of Tahiti, the largest and most populous of the French Polynesian islands, but the Tahitian flag has no emblem on the white band<br /><br /><strong>note 2:</strong> the flag of France is used for official occasions"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "outrigger canoe, Tahitian gardenia flower (<em>Gardenia taitensis</em>)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"La Marseillaise\" (The Song of Marseille)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Claude-Joseph ROUGET de Lisle"
+      },
+      {
+       "label": "history",
+       "text": "official anthem, as a French territory"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "2 (1 cultural, 1 mixed); note - excerpted from the France entry"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Taputapuātea (c); Te Henua Enata – The Marquesas Islands (m)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government - note",
+    "order": 220,
+    "content": {
+     "text": "French Polynesia has acquired autonomy from France in all areas except those relating to police, monetary policy, tertiary education, immigration, and defense and foreign affairs; the duties of its president are similar to those of the French prime minister",
+     "items": []
+    }
+   }
+  ]
+ }
+}

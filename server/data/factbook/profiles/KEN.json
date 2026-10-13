@@ -1,0 +1,1196 @@
+{
+ "iso3": "KEN",
+ "gec": "ke",
+ "name": "Kenya",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Trade centers such as Mombasa have existed along the Kenyan and Tanzanian coastlines, known as the Land of Zanj, since at least the 2nd century. These centers traded with the outside world, including China, India, Indonesia, the Middle East, North Africa, and Persia. By around the 9th century, the mix of Africans, Arabs, and Persians who lived and traded there became known as Swahili (\"people of the coast\") with a distinct language (KiSwahili) and culture. The Portuguese arrived in the 1490s and, using Mombasa as a base, sought to monopolize trade in the Indian Ocean. The Portuguese were pushed out in the late 1600s by the combined forces of Oman and Pate, an island off the coast. In 1890, Germany and the UK divided up the region, with the UK taking the north and the Germans the south, including present-day Tanzania, Burundi, and Rwanda. In 1895, the British established the East Africa Protectorate, which in 1920 was converted into a colony, and named Kenya after its highest mountain. Numerous political disputes between the colony and the UK led to the violent Mau Mau Uprising, which began in 1952, and the eventual declaration of independence in 1963.</p> Jomo KENYATTA, the founding president and an icon of the liberation struggle, led Kenya from independence in 1963 until his death in 1978, when Vice President Daniel Arap MOI took power in a constitutional succession. The country was a de facto one-party state from 1969 until 1982, after which time the ruling Kenya African National Union (KANU) changed the constitution to make itself the sole legal political party. MOI gave in to internal and external pressure for political liberalization in 1991, but the ethnically fractured opposition failed to dislodge KANU from power in elections in 1992 and 1997, which were marred by violence and fraud. MOI stepped down in 2002 after fair and peaceful elections. Mwai KIBAKI, running as the candidate of the multiethnic, united opposition group, the National Rainbow Coalition (NARC), defeated KANU candidate Uhuru KENYATTA, the son of the founding president, and assumed the presidency following a campaign centered on an anticorruption platform. <br /><br />Opposition candidate Raila ODINGA challenged KIBAKI's reelection in 2007 on the grounds of widespread vote rigging, leading to two months of ethnic violence that caused more than 1,100 deaths and displaced hundreds of thousands. African Union-sponsored mediation resulted in a power-sharing accord that brought ODINGA into the government as prime minister and outlined a reform agenda. In 2010, Kenyans overwhelmingly voted to adopt a new constitution that eliminated the prime minister, introduced additional checks and balances to executive power, and devolved power and resources to 47 newly created counties. Uhuru KENYATTA won the first presidential election under the new constitution in 2013. He won a second and final term in office in 2017 after a contentious repeat election. In 2022, William RUTO won a close presidential election; he assumed the office the following month after the Kenyan Supreme Court upheld the victory.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Eastern Africa, bordering the Indian Ocean, between Somalia and Tanzania",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "1 00 N, 38 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "580,367 sq km"
+      },
+      {
+       "label": "land",
+       "text": "569,140 sq km"
+      },
+      {
+       "label": "water",
+       "text": "11,227 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "five times the size of Ohio; slightly more than twice the size of Nevada",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3,457 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Ethiopia 867 km; Somalia 684 km; South Sudan 317 km; Tanzania 775 km; Uganda 814 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "536 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200-m depth or to the depth of exploitation"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "varies from tropical along coast to arid in interior",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "low plains rise to central highlands bisected by Great Rift Valley; fertile plateau in west",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mount Kenya 5,199 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Indian Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "762 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "limestone, soda ash, salt, gemstones, fluorspar, zinc, diatomite, gypsum, wildlife, hydropower",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "49.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 11.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 36.7% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "6.5% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "44% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "1,030 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lake Victoria (shared with Tanzania and Uganda) - 62,940 sq km"
+      },
+      {
+       "label": "salt water lake(s)",
+       "text": "Lake Turkana (shared with Ethiopia) - 6,400 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "<em>(Mediterranean Sea)</em> Nile (3,254,853 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 170,
+    "content": {
+     "text": "Ogaden-Juba Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "population heavily concentrated in the west along the shore of Lake Victoria; other areas of high density include the capital of Nairobi, and in the southeast along the Indian Ocean coast, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "recurring drought; flooding during rainy seasons <br /><br /><strong>volcanism:</strong> limited volcanic activity; the Barrier (1,032 m) last erupted in 1921; South Island is the only other historically active volcano",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "the Kenyan Highlands comprise one of the most successful agricultural production regions in Africa; glaciers are found on Mount Kenya, Africa's second-highest peak; unique physiography supports abundant and varied wildlife of scientific and economic value; Lake Victoria, the world's largest tropical lake and the second-largest freshwater lake, is shared among three countries: Kenya, Tanzania, and Uganda",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "55,751,717 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "27,857,519"
+      },
+      {
+       "label": "female",
+       "text": "27,894,198"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Kenyan(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Kenyan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Kikuyu 17.1%, Luhya 14.3%, Kalenjin 13.4%, Luo 10.7%, Kamba 9.8%, Somali 5.8%, Kisii 5.7%, Mijikenda 5.2%, Meru 4.2%, Maasai 2.5%, Turkana 2.1%, non-Kenyan 1%, other 8.2% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "English (official), Kiswahili (official), numerous indigenous languages"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "The World Factbook, the indispensable source for basic information. (English)<br /><br />The World Factbook, Chanzo cha Lazima Kuhusu Habari ya Msingi. (Kiswahili)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Christian 85.5% (Protestant 33.4%, Catholic 20.6%, Evangelical 20.4%, African Instituted Churches 7%, other Christian 4.1%), Muslim 10.9%, other 1.8%, none 1.6%, don't know/no answer 0.2% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "35.8% (male 10,464,384/female 10,366,997)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "60.9% (male 17,731,068/female 17,723,012)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "3.4% (2024 est.) (male 896,348/female 1,064,569)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "64 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "58.5 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "5.5 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "18.2 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "21.5 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21.1 years"
+      },
+      {
+       "label": "female",
+       "text": "21.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "2.15% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "25.93 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "4.72 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0.26 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population heavily concentrated in the west along the shore of Lake Victoria; other areas of high density include the capital of Nairobi, and in the southeast along the Indian Ocean coast, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "29.5% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "4.09% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "5.325 million NAIROBI (capital), 1.440 million Mombassa (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.84 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "20.3 years (2014 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "379 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "29 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "23.1 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "70.4 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "68.6 years"
+      },
+      {
+       "label": "female",
+       "text": "72.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "3.09 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.53 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 86.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 53.3% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 62.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 13.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 46.7% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 37.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "4.5% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "8.7% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.29 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "1.3 beds/1,000 population (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 84.7% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 51.1% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 60.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 15.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 48.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 39.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "7.1% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1.68 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.81 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.04 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0.81 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.03 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.6% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "15.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "1.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "9.8% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "53.2% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "2.2% (2022)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "12.5% (2022)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "1.8% (2022)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4% of GDP (2024 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "28.5% national budget (2025 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of Kenya"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Kenya"
+      },
+      {
+       "label": "local long form",
+       "text": "Republic of Kenya (English)/ Jamhuri ya Kenya (Swahili)"
+      },
+      {
+       "label": "local short form",
+       "text": "Kenya"
+      },
+      {
+       "label": "former",
+       "text": "British East Africa"
+      },
+      {
+       "label": "etymology",
+       "text": "named for Mount Kenya; the mountain's name may derive from the Kikuyu word <em>kere nyaga</em>, or \"white mountain\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Nairobi"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "1 17 S, 36 49 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+3 (8 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Maasai expression meaning \"cool waters,\" which was used to refer to a local water hole, Enkare Nairobi"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "47 counties; Baringo, Bomet, Bungoma, Busia, Elgeyo/Marakwet, Embu, Garissa, Homa Bay, Isiolo, Kajiado, Kakamega, Kericho, Kiambu, Kilifi, Kirinyaga, Kisii, Kisumu, Kitui, Kwale, Laikipia, Lamu, Machakos, Makueni, Mandera, Marsabit, Meru, Migori, Mombasa, Murang'a, Nairobi City, Nakuru, Nandi, Narok, Nyamira, Nyandarua, Nyeri, Samburu, Siaya, Taita/Taveta, Tana River, Tharaka-Nithi, Trans Nzoia, Turkana, Uasin Gishu, Vihiga, Wajir, West Pokot",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "mixed system of English common law, Islamic law, and customary law; Supreme Court reviews laws",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "current constitution passed by referendum on 4 August 2010"
+      },
+      {
+       "label": "amendment process",
+       "text": "amendments can be proposed by either house of Parliament or by petition of at least one million eligible voters; passage of amendments by Parliament requires approval by at least two-thirds majority vote of both houses in each of two readings, approval in a referendum by majority of votes cast by at least 20% of eligible voters in at least one half of Kenya’s counties, and approval by the president; passage of amendments introduced by petition requires approval by a majority of county assemblies, approval by majority vote of both houses, and approval by the president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Kenya"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "4 out of the previous 7 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president and deputy president directly elected on the same ballot by majority vote nationwide and at least 25% of the votes cast in at least 24 of the 47 counties; failure to meet these thresholds requires a runoff between the top two candidates"
+      },
+      {
+       "label": "most recent election date",
+       "text": "9 August 2022"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2022</em>:  William RUTO elected president in first round; percent of vote - William RUTO (UDA) 50.5%, Raila ODINGA (ODM) 48.9%, other 0.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "10 August 2027"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>the president is both chief of state and head of government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament of Kenya"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Assembly"
+      },
+      {
+       "label": "number of seats",
+       "text": "350 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "8/9/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "United Democratic Alliance (UDA) (145); Orange Democratic Movement (ODM) (86); Jubilee Party (JP) (28); Wiper Democratic Movement-Kenya (WDM-K) (26); Others (19); Other (45)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "23.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "August 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate"
+      },
+      {
+       "label": "number of seats",
+       "text": "68 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "8/9/2022"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Kenya Kwanza Alliance (33); Azimio la Umoja - One Kenya Coalition Party (32); Other (1)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "31.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "August 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of chief and deputy chief justices and 5 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "chief and deputy chief justices nominated by Judicial Service Commission (JSC) and appointed by the president with approval of the National Assembly; other judges nominated by the JSC and appointed by president; chief justice serves a nonrenewable 10-year term or until age 70, whichever comes first; other judges serve until age 70"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Court; Court of Appeal; military courts; magistrates' courts; religious courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Azimio La Umoja–One Kenya Coalition Party<br />Amani National Congress or ANC<br />Chama Cha Kazi or CCK<br />Democratic Action Party or DAP-K<br />Democratic Party or DP<br />Forum for the Restoration of Democracy–Kenya or FORD-Kenya<br />Grand Dream Development Party or GDDP         <br />Jubilee Party or JP<br />Kenya African National Union or KANU<br />Kenya Kwanza coalition<br />Kenya Union Party or KUP<br />Maendeleo Chap Chap Party or MCC<br />Movement for Democracy and Growth or MDG<br />National Agenda Party or NAP-K                       <br />National Ordinary People Empowerment Union or NOPEU<br />Orange Democratic Movement or ODM<br />Pamoja African Alliance or PAA]<br />The Service Party or TSP<br />United Democratic Alliance or UDA<br />United Democratic Movement or UDM<br />United Democratic Party or UDP<br />United Party of Independent Alliance or UPIA                                      <br />United Progressive Alliance or UPA                                        <br />Wiper Democratic Movement-Kenya or WDM-K",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, AfDB, ATMIS, AU, C, CD, COMESA, EAC, EADB, FAO, G-15, G-77, IAEA, IBRD, ICAO, ICCT, ICRM, IDA, IFAD, IFC, IFRCS, IGAD, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, MONUSCO, NAM, OPCW, PCA, UN, UNAMID, UNCTAD, UNESCO, UNHCR, UNIDO, UNIFIL, UNISFA, UNMIL, UNMISS, UNOOSA, UNSOM, UNWTO, UPU, WCO, WHO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "12 December 1963 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Jamhuri Day (Independence Day), 12 December (1963)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Madaraka Day, 1 June (1963), marks the day Kenya attained internal self-rule"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of black (top), red, and green; the red band is edged in white; a large Maasai warrior's shield covering crossed spears is at the center<br /><br /><strong>meaning:</strong> black stands for the majority population, red for the blood shed in the struggle for freedom, green for natural wealth, and white for peace; the shield and crossed spears symbolize the defense of freedom",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "lion",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "black, red, green, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 220,
+    "content": {
+     "text": "the two lions symbolize protection as they hold a traditional East African shield and spears in defense of freedom and unity; the shield features the national colors: black for the people, green for agriculture and natural resources, red for the struggle for freedom, and white for unity and peace; on the shield, a rooster greets the new day, and the axe represents both authority and the Kenya Africa National Union (KANU) that led the country to independence; at the base of the shield is Mount Kenya, Africa’s second-highest peak; the scroll has the Swahili word <em>Harambee</em>, meaning “all for one” or “pulling together”",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Ee Mungu Nguvu Yetu\" (O God of All Creation)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Graham HYSLOP, Thomas KALUME, Peter KIBUKOSYA, Washington OMONDI, and George W. SENOGA-ZAKE/traditional, adapted by Graham HYSLOP, Thomas KALUME, Peter KIBUKOSYA, Washington OMONDI, and George W. SENOGA-ZAKE"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1963; based on a traditional Kenyan folk song"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "8(5 cultural, 3 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Lake Turkana National Parks (n); Mount Kenya National Park/Natural Forest (n); Lamu Old Town (c); Sacred Mijikenda Kaya Forests (c); Fort Jesus, Mombasa (c); Kenya Lake System in the Great Rift Valley (n); Thimlich Ohinga Archaeological Site (c); The Historic Town and Archaeological Site of Gedi (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,895 @@
+{
+ "iso3": "NCL",
+ "gec": "nc",
+ "name": "New Caledonia",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "The first humans settled in New Caledonia around 1600 B.C. The Lapita were skilled navigators, and evidence of their pottery around the Pacific has served as a guide for understanding human expansion in the region. Successive waves of migrants from other islands in Melanesia intermarried with the Lapita, giving rise to the Kanak ethnic group considered indigenous to New Caledonia. British explorer James COOK was the first European to visit New Caledonia in 1774, giving it the Latin name for Scotland. Missionaries first landed in New Caledonia in 1840. In 1853, France annexed New Caledonia to preclude any British attempt to claim the island. France declared it a penal colony in 1864 and sent more than 20,000 prisoners to New Caledonia in the ensuing three decades.<br /><br />Nickel was discovered in 1864, and French prisoners were directed to mine it. France brought in indentured servants and enslaved labor from elsewhere in Southeast Asia to work the mines, blocking Kanaks from accessing the most profitable part of the local economy. In 1878, High Chief ATAI led a rebellion against French rule. The Kanaks were relegated to reservations, leading to periodic smaller uprisings and culminating in a large revolt in 1917 that colonial authorities brutally suppressed. During World War II, New Caledonia became an important base for Allied troops, and the US moved its South Pacific headquarters to the island in 1942. Following the war, France made New Caledonia an overseas territory and granted French citizenship to all inhabitants in 1953, thereby permitting the Kanaks to move off the reservations.<br /><br />The Kanak nationalist movement began in the 1950s, but most voters chose to remain a territory in an independence referendum in 1958. The European population of New Caledonia boomed in the 1970s with a renewed focus on nickel mining, reigniting Kanak nationalism. Key Kanak leaders were assassinated in the early 1980s, leading to escalating violence and dozens of fatalities. The Matignon Accords of 1988 provided for a 10-year transition period. The Noumea Accord of 1998 transferred increasing governing responsibility from France to New Caledonia over a 20-year period and provided for three independence referenda. In the first held in 2018, voters rejected independence by 57% to 43%; in the second held in 2020, voters rejected independence 53% to 47%. In the third referendum held in 2021, voters rejected independence 96% to 4%; however, a boycott by key Kanak groups spurred challenges about the legitimacy of the vote. Pro-independence parties subsequently won a majority in the New Caledonian Government for the first time. France and New Caledonia officials remain in talks about the status of the territory.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Oceania, islands in the South Pacific Ocean, east of Australia",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "21 30 S, 165 30 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Oceania",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18,575 sq km"
+      },
+      {
+       "label": "land",
+       "text": "18,275 sq km"
+      },
+      {
+       "label": "water",
+       "text": "300 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly smaller than New Jersey",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "2,254 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical; modified by southeast trade winds; hot, humid",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "coastal plains with interior mountains",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mont Panie 1,628 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Pacific Ocean 0 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "nickel, chrome, iron, cobalt, manganese, silver, gold, lead, copper",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "10.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 0.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 9.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "48.8% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "41.1% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "100 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 150,
+    "content": {
+     "text": "most of the populace lives in the southern part of the main island, in and around the capital of Noumea",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 160,
+    "content": {
+     "text": "cyclones, most frequent from November to March <br /><br /><strong>volcanism:</strong> Matthew and Hunter Islands are historically active",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 170,
+    "content": {
+     "text": "consists of the main island of New Caledonia (one of the largest in the Pacific Ocean), the archipelago of Iles Loyauté, and numerous small, sparsely populated islands and atolls",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "307,612 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "153,036"
+      },
+      {
+       "label": "female",
+       "text": "154,576"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "New Caledonian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "New Caledonian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Kanak 39.1%, European 27.1%, Wallisian, Futunian 8.2%, Tahitian 2.1%, Indonesian 1.4%, Ni-Vanuatu 1%, Vietnamese 0.9%, other 17.7%, unspecified 2.5% (2014 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "French (official), 33 Melanesian-Polynesian dialects"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "The World Factbook, une source indispensable d'informations de base. (French)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Christian 85.2%, Muslim 2.8%, other 1.6%, unaffiliated 10.4% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "20.7% (male 32,238/female 30,858)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.4% (male 104,825/female 103,349)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "10.8% (2024 est.) (male 14,326/female 18,571)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "46.2 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "30 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "16.2 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "6.2 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "34.6 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "33.5 years"
+      },
+      {
+       "label": "female",
+       "text": "35.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.11% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "13.6 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "3.54 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "most of the populace lives in the southern part of the main island, in and around the capital of Noumea",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "72.7% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.72% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "198,000 NOUMEA (capital) (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.01 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.77 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.99 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5.8 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "3.9 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "79.3 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "75.4 years"
+      },
+      {
+       "label": "female",
+       "text": "83.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 190,
+    "content": {
+     "text": "1.82 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 200,
+    "content": {
+     "text": "0.89 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 99.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 220,
+    "content": {
+     "text": "0.24 physicians/1,000 population (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 240,
+    "content": {
+     "text": "46.4% (2019 est.)",
+     "items": []
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Territory of New Caledonia and Dependencies"
+      },
+      {
+       "label": "conventional short form",
+       "text": "New Caledonia"
+      },
+      {
+       "label": "local long form",
+       "text": "Territoire des Nouvelle-Calédonie et dépendances"
+      },
+      {
+       "label": "local short form",
+       "text": "Nouvelle-Calédonie"
+      },
+      {
+       "label": "etymology",
+       "text": "the name came from British explorer Captain James COOK in 1774 and uses the Latin name for Scotland, Caledonia"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary democracy (Territorial Congress); an overseas collectivity of France",
+     "items": []
+    }
+   },
+   {
+    "field": "Dependency status",
+    "order": 30,
+    "content": {
+     "text": "special collectivity of France",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> independence referenda took place in 2018, 2020, and 2021, with a majority voting in each case to reject independence in favor of the status quo"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Noumea"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "22 16 S, 166 27 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+11 (16 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "established in 1854 as Port-de-France, the settlement was renamed Noumea in 1866 to avoid confusion with Fort-de-France in Martinique; the name Noumea may come from the local name of the peninsula the city was founded on"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 50,
+    "content": {
+     "text": "3 provinces; Province Iles (Islands Province), Province Nord (North Province), and Province Sud (South Province)",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 60,
+    "content": {
+     "text": "civil law system based on French civil law",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "4 October 1958 (French Constitution with changes as reflected in the Noumea Accord of 5 May 1998)"
+      },
+      {
+       "label": "amendment process",
+       "text": "French constitution amendment procedures apply"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": "see France",
+     "items": []
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "French president directly elected by absolute-majority popular vote in 2 rounds, if needed, for a 5-year term (eligible for a second term); high commissioner appointed by the French president on the advice of the French Ministry of Interior; president of New Caledonia elected by Territorial Congress for a 5-year term (no term limits)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "8 July 2021"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2025: </em>Alcide PONGA (The Republicans) elected president by Territorial Congress with 6 of 11 votes<em><br /><br />2021:</em> Louis MAPOU (PALIKA) elected president by Territorial Congress with 6 of 11 votes"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Territorial Congress (Congrès du Territoire)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "number of seats",
+       "text": "54 (indirectly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/12/2019"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Future With Confidence 18, UNI 9, UC 9, CE 7, FLNKS 6, Oceanic Awakening 3, PT 1, LKS 1 (Anti-Independence 28, Pro-Independence 26)"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2025"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the Customary Senate is the assembly of the various traditional councils of the Kanaks, the indigenous population; it rules on laws affecting Kanaks <br /><strong><br />note 2:</strong> New Caledonia indirectly elects 2 members to the French Senate and directly elects 2 members to the French National Assembly (see France entry for electoral details)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Court of Appeal or Cour d'Appel; organized into civil, commercial, social, and pre-trial investigation chambers; court bench normally includes the court president and 2 counselors); Administrative Court (number of judges NA)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judge appointment and tenure based on France's judicial system"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Courts of First Instance include: civil, juvenile, commercial, labor, police, criminal, assizes, and also a pre-trial investigation chamber; Joint Commerce Tribunal; administrative courts"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> final appeals beyond the Court of Appeal are referred to the Court of Cassation or Cour de Cassation (in Paris); final appeals beyond the Administrative Court are referred to the Administrative Court of Appeal (in Paris)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 130,
+    "content": {
+     "text": "Caledonia Together or CE <br />Caledonian Union or UC <br />Future With Confidence or AEC <br />Kanak Socialist Front for National Liberation or FLNKS (alliance includes PALIKA, UNI, UC, and UPM) <br />Labor Party or PT <br />National Union for Independence or UNI <br />Oceanian Awakening <br />Party of Kanak Liberation or PALIKA <br />Socialist Kanak Liberation or LKS <br />The Republicans (formerly The Rally or UMP)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 140,
+    "content": {
+     "text": "ITUC (NGOs), PIF, SPC, UPU, WFTU (NGOs), WMO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 150,
+    "content": {
+     "text": "none (overseas collectivity of France)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in three independence referenda, on 4 November 2018, 4 October 2020, and 12 December 2021, the majority voted to reject independence in favor of maintaining the status quo"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 160,
+    "content": {
+     "text": "Fête de la Fédération, 14 July (1790)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the local holiday is New Caledonia Day, 24 September (1853)<br /><br /><strong>note 2:</strong> often incorrectly referred to as Bastille Day, France's national celebration commemorates the storming of the Bastille prison on 14 July 1789 and the establishment of a constitutional monarchy; other names for the holiday are <em>la Fête nationale</em> (National Holiday) and <em>le Quatorze Juillet</em> (14th of July)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 170,
+    "content": {
+     "text": "<strong>description:</strong> the country has two official flags with equal status, the flag of France and the Kanak (ethnic Melanesian) flag; the latter consists of three equal horizontal bands of blue (top), red, and green; a large yellow disk shifted slightly to the left side is edged in black and displays a black <em>fleche faîtière</em> symbol, a native rooftop adornment",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 180,
+    "content": {
+     "text": "flèche faîtière (native rooftop adornment), kagu bird",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 190,
+    "content": {
+     "text": "grey, red",
+     "items": []
+    }
+   },
+   {
+    "field": "National coat of arms",
+    "order": 200,
+    "content": {
+     "text": "the emblem features two symbols of the local Kanak people: the flèche faîtière, which is a common rooftop adornment on houses, and the nautilus shell, which represents the sea; the third part of the emblem is a stylized representation of a New Caledonia pine tree",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 210,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"La Marseillaise\" (The Song of Marseille)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Claude-Joseph ROUGET de Lisle"
+      },
+      {
+       "label": "history",
+       "text": "official anthem, as a self-governing French territory"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (natural); note - excerpted from the France entry"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Lagoons of New Caledonia"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

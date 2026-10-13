@@ -1,0 +1,1177 @@
+{
+ "iso3": "NLD",
+ "gec": "nl",
+ "name": "Netherlands",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The Dutch United Provinces declared their independence from Spain in 1581; during the 17th century, they became a leading seafaring and commercial power, with settlements and colonies around the world. After 18 years of French domination, the Netherlands regained its independence in 1813. In 1830, Belgium seceded and formed a separate kingdom. The Netherlands remained neutral in World War I but suffered German invasion and occupation in World War II. A modern, industrialized nation, the Netherlands is also a large exporter of agricultural products. The country was a founding member of NATO and the EEC (now the EU) and participated in the introduction of the euro in 1999. In 2010, the former Netherlands Antilles was dissolved and the three smallest islands -- Bonaire, Sint Eustatius, and Saba -- became special municipalities in the Netherlands administrative structure. The larger islands of Sint Maarten and Curacao joined the Netherlands and Aruba as constituent countries forming the Kingdom of the Netherlands.</p> <p>In 2018, the Sint Eustatius island council (governing body) was dissolved and replaced by a government commissioner to restore the integrity of public administration. According to the Dutch Government, the intervention will be as \"short as possible and as long as needed.\"</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Western Europe, bordering the North Sea, between Belgium and Germany",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "52 31 N, 5 46 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "41,543 sq km"
+      },
+      {
+       "label": "land",
+       "text": "33,893 sq km"
+      },
+      {
+       "label": "water",
+       "text": "7,650 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than twice the size of New Jersey",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,053 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Belgium 478 km; Germany 575 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "451 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive fishing zone",
+       "text": "200 nm"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate; marine; cool summers and mild winters",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly coastal lowland and reclaimed land (polders); some hills in southeast",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Mount Scenery (on the island of Saba in the Caribbean, now considered an integral part of the Netherlands following the dissolution of the Netherlands Antilles) 862 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Zuidplaspolder -7 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "30 m"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the highest point on continental Netherlands is Vaalserberg at 322 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "natural gas, petroleum, peat, limestone, salt, sand and gravel, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "53.5% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 30% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 1.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 22.5% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "10.9% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "35.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "2,969 sq km (2019)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 150,
+    "content": {
+     "text": "Rijn (Rhine) river mouth (shared with Switzerland [s], Germany, and France) - 1,233 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Rhine-Maas (198,735 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "an area known as the Randstad, anchored by the cities of Amsterdam, Rotterdam, the Hague, and Utrecht, is the most densely populated region; the north tends to be less dense, but sizeable communities can be found throughout the entire country",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "flooding <br /><br /><strong>volcanism:</strong> Mount Scenery (887 m), located on the island of Saba in the Caribbean, last erupted in 1640; Round Hill (601 m), a dormant volcano also known as \"The Quill,\" is located on the island of St. Eustatius in the Caribbean; these islands are at the northern end of the volcanic island arc of the Lesser Antilles that extends south to Grenada",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "located at mouths of three major European rivers (Rhine (Rijn), Meuse (Maas), and Scheldt (Schelde)); about a quarter of the country lies below sea level and only about half of the land exceeds one meter above sea level",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17,833,885 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "8,874,366"
+      },
+      {
+       "label": "female",
+       "text": "8,959,519"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Dutchman(men), Dutchwoman(women)"
+      },
+      {
+       "label": "adjective",
+       "text": "Dutch"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Dutch 75.4%, EU (excluding Dutch) 6.4%, Turkish 2.4%, Moroccan 2.4%, Surinamese 2.1%, Indonesian 2%, other 9.3% (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Dutch (official), Frisian (official in Fryslan province)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Het Wereld Feitenboek, een onmisbare bron van informatie. (Dutch)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>Frisian, Low Saxon, Limburgish, Romani, and Yiddish have protected status; Dutch is the official language of the three special municipalities of the Caribbean Netherlands; English is a recognized regional language on Sint Eustatius and Saba; Papiamento is a recognized regional language on Bonaire"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 20.1%, Protestant 14.8% (includes Dutch Reformed, Protestant Church of The Netherlands, Calvinist), Muslim 5%, other 5.9% (includes Hindu, Buddhist, Jewish), none 54.1% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "15.2% (male 1,384,142/female 1,312,455)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "64.1% (male 5,750,034/female 5,640,691)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "20.7% (2024 est.) (male 1,709,924/female 1,975,132)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "56.8 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "23.7 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "33 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "42.2 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "40.9 years"
+      },
+      {
+       "label": "female",
+       "text": "43.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.3% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "10.68 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "9.7 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "2.01 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "an area known as the Randstad, anchored by the cities of Amsterdam, Rotterdam, the Hague, and Utrecht, is the most densely populated region; the north tends to be less dense, but sizeable communities can be found throughout the entire country",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "93.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.59% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.174 million AMSTERDAM (capital), 1.018 million Rotterdam (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.87 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.99 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "30.2 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "4 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3.6 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "3.9 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "3.3 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "81.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "80.3 years"
+      },
+      {
+       "label": "female",
+       "text": "83.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.62 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.79 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "11.3% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "15.9% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "3.88 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "2.9 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "20.4% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8.23 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "3.95 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "2.92 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "1.36 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "18.7% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "21% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "16.4% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "53.5% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "5.2% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "12% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "19 years (2021 est.)"
+      },
+      {
+       "label": "male",
+       "text": "18 years (2021 est.)"
+      },
+      {
+       "label": "female",
+       "text": "19 years (2021 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Kingdom of the Netherlands"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Netherlands"
+      },
+      {
+       "label": "local long form",
+       "text": "Koninkrijk der Nederlanden"
+      },
+      {
+       "label": "local short form",
+       "text": "Nederland"
+      },
+      {
+       "label": "abbreviation",
+       "text": "NL"
+      },
+      {
+       "label": "etymology",
+       "text": "the English name is derived from the country's Dutch name, which means \"the lowlands\" and describes the geographic area; only about half the Netherlands is more than 1 meter (3.3 ft) above sea level"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "parliamentary constitutional monarchy; part of the Kingdom of the Netherlands",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Amsterdam"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "52 21 N, 4 55 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "time zone note",
+       "text": "time descriptions apply to the continental Netherlands only, for the constituent countries in the Caribbean, the time difference is UTC-4"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is derived from the Dutch name of the local river, the Amstel, and the Dutch word <em>dam</em>, which has the same meaning in English; the river name is said to derive from the Germanic words <em>ama </em>(current) and <em>stelle </em>(place)"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> The Hague is the seat of government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "12 provinces (<em>provincies</em>, singular - <em>provincie</em>), 3 public entities* (<em>openbare lichamen</em>, singular - <em>openbaar lichaam</em> (Dutch); <em>entidatnan publiko</em>, singular - <em>entidat publiko</em> (Papiamento)); Bonaire*, Drenthe, Flevoland, Fryslan (Friesland), Gelderland, Groningen, Limburg, Noord-Brabant (North Brabant), Noord-Holland (North Holland), Overijssel, Saba*, Sint Eustatius*, Utrecht, Zeeland (Zealand), Zuid-Holland (South Holland)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the Netherlands is one of four constituent countries of the Kingdom of the Netherlands; the other three, Aruba, Curacao, and Sint Maarten, are Caribbean islands; all four are considered equal partners, but the Netherlands makes up about 98% of the Kingdom's total land area and population and administers most of the Kingdom's affairs  <br /><br /><strong>note 2:</strong> although Bonaire, Saba, and Sint Eustatius are officially incorporated into the country of the Netherlands under the broad designation of \"public entities,\" Dutch government sources often call them \"special municipalities;\" Bonaire, Saba, and Sint Eustatius are collectively referred to as the Caribbean Netherlands"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the French system; constitution does not permit judicial review of acts of the States General",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "many previous to adoption of the \"Basic Law of the Kingdom of the Netherlands\" on 24 August 1815; revised 8 times, the latest in 1983"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed as an Act of Parliament by or on behalf of the king or by the Second Chamber of the States General; the Second Chamber is dissolved after its first reading of the Act; passage requires a second reading by both the First Chamber and the newly elected Second Chamber, followed by at least two-thirds majority vote of both chambers, and ratification by the king"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of the Netherlands"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "the monarchy is hereditary; following Second Chamber elections, the monarch usually appoints the leader of the majority party or majority coalition as prime minister; deputy prime ministers are also appointed by the monarch"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Prime Minister Dick SCHOOF resigned on 3 June 2025 after a party withdrew from his governing coalition, but he will continue in a caretaker capacity until new elections are held, probably in the fall of 2025"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "States General (Staten-Generaal)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of Representatives (Tweede Kamer der Staten-Generaal)"
+      },
+      {
+       "label": "number of seats",
+       "text": "150 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/29/2025"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Democrats 66 (D66) (26); Party for Freedom (PVV) (26); People's Party for Freedom and Democracy (VVD) (22); Green Left - Labour Party (PvdA) (20); Christian Democratic Appeal (CDA) (18); JA21 (9); Other (29)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "42.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Eerste Kamer der Staten-Generaal)"
+      },
+      {
+       "label": "number of seats",
+       "text": "75 (all indirectly elected)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/30/2023"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "40%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court or Hoge Raad (consists of 41 judges: the president, 6 vice presidents, 31 justices, and 3 justices in exceptional service); the court is divided into criminal, civil, tax, and ombuds chambers"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "justices appointed by the monarch from a list provided by the House of Representatives of the States General; justices appointed for life or until mandatory retirement at age 70"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "courts of appeal; district courts, each with up to 5 subdistrict courts; Netherlands Commercial Court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Christian Democratic Appeal or CDA <br />Christian Union or CU<br />Correct Answer 2021 or JA21<br />Democrats 66 or D66 <br />Denk <br />Farmer-Citizen Movement or BBB <br />50Plus <br />Forum for Democracy or FvD <br />Green Left (GroenLinks) or GL <br />Labor Party or PvdA <br />New Social Contract or NSC <br />Party for Freedom or PVV <br />Party for the Animals or PvdD <br />People's Party for Freedom and Democracy or VVD <br />Reformed Political Party or SGP <br />Socialist Party or SP <br />Together or BIJ1 <br />Volt Netherlands or Volt",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ADB (nonregional member), AfDB (nonregional member), Arctic Council (observer), Australia Group, Benelux, BIS, CBSS (observer), CD, CE, CERN, EAPC, EBRD, ECB, EIB, EITI (implementing country), EMU, ESA, EU, FAO, FATF, G-10, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IGAD (partners), IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), MIGA, NATO, NEA, NSG, OAS (observer), OECD, OPCW, OSCE, Pacific Alliance (observer), Paris Club, PCA, Schengen Convention, SELEC (observer), UN, UNCTAD, UNESCO, UNHCR, UNHRC, UNIDO, UNMISS, UNOOSA, UNRWA, UN Security Council (temporary), UNTSO, UNWTO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO, ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "26 July 1581",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the northern provinces of the Low Countries formally declared their independence with an Act of Abjuration in 1581, but, it was not until 30 January 1648 and the Peace of Westphalia that Spain recognized this independence"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "King's Day (birthday of King WILLEM-ALEXANDER), 27 April (1967)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> observed on the ruling monarch's birthday; celebrated on 26 April if 27 April is a Sunday"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of bright red (top), white, and cobalt blue<br /><br /><strong>history:</strong> the colors come from WILLIAM I, Prince of Orange; originally the upper band was orange, but the dye would turn red over time, so red was eventually made the permanent color",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>similar to the flag of Luxembourg, which uses a lighter blue and is wider"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "lion, daisy",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "orange",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Het Wilhelmus\" (The William)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Philips VAN MARNIX van Sint Aldegonde (presumed)/unknown"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1932, in use since the 17th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "13 (12 cultural, 1 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Schokland and Surroundings (c); Dutch Water Defense Lines (c); Van Nellefabriek (c); Mill Network at Kinderdijk-Elshout (c); Droogmakerij de Beemster (Beemster Polder) (c); Rietveld Schröderhuis (Rietveld Schröder House) (c); Wadden Sea (n); Seventeenth Century Canal Ring Area of Amsterdam inside the Singelgracht (c); Colonies of Benevolence (c); Frontiers of the Roman Empire - The Lower German Limes (c)"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>includes one site in Curacao"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

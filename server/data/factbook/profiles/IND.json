@@ -1,0 +1,1235 @@
+{
+ "iso3": "IND",
+ "gec": "in",
+ "name": "India",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The Indus Valley civilization, one of the world's oldest, flourished during the 3rd and 2nd millennia B.C. and extended into northwestern India. Aryan tribes from the northwest infiltrated the Indian subcontinent about 1500 B.C.; their merger with the earlier Dravidian inhabitants created the classical Indian culture. The Maurya Empire of the 4th and 3rd centuries B.C. -- which reached its zenith under ASHOKA -- united much of South Asia. The Gupta dynasty (4th to 6th centuries A.D.) ushered in The Golden Age, which saw a flowering of Indian science, art, and culture. Islam spread across the subcontinent over a period of 700 years. In the 10th and 11th centuries, Turks and Afghans invaded India and established the Delhi Sultanate. In the early 16th century, the Emperor BABUR established the Mughal Dynasty, which ruled large sections of India for more than three centuries. European explorers began establishing footholds in India during the 16th century.</p> <p>By the 19th century, Great Britain had become the dominant political power on the subcontinent, and India was seen as the \"Jewel in the Crown\" of the British Empire. The British Indian Army played a vital role in both World Wars. Years of nonviolent resistance to British rule, led by Mohandas GANDHI and Jawaharlal NEHRU, eventually resulted in Indian independence in 1947. Large-scale communal violence took place before and after the subcontinent partition into two separate states -- India and Pakistan. The neighboring countries have fought three wars since independence, the last of which was in 1971 and resulted in East Pakistan becoming the separate nation of Bangladesh. India's nuclear weapons tests in 1998 emboldened Pakistan to conduct its own tests that same year. In 2008, terrorists originating from Pakistan conducted a series of coordinated attacks in Mumbai, India's financial capital. India's economic growth after economic reforms in 1991, a massive youth population, and a strategic geographic location have contributed to the country's emergence as a regional and global power. However, India still faces pressing problems such as extensive poverty, widespread corruption, and environmental degradation, and its restrictive business climate challenges economic growth expectations.</p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Southern Asia, bordering the Arabian Sea and the Bay of Bengal, between Burma and Pakistan",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "20 00 N, 77 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Asia",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3,287,263 sq km"
+      },
+      {
+       "label": "land",
+       "text": "2,973,193 sq km"
+      },
+      {
+       "label": "water",
+       "text": "314,070 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly more than one-third the size of the US",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13,888 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Bangladesh 4,142 km; Bhutan 659 km; Burma 1,468 km; China 2,659 km; Nepal 1,770 km; Pakistan 3,190 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "7,000 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm or to the edge of the continental margin"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "varies from tropical monsoon in south to temperate in north",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "upland plain (Deccan Plateau) in south, flat to rolling plain along the Ganges, deserts in west, Himalayas in north",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Kanchenjunga 8,586 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Indian Ocean 0 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "160 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "coal (fourth-largest reserves in the world), antimony, iron ore, lead, manganese, mica, bauxite, rare earth elements, titanium ore, chromite, natural gas, diamonds, petroleum, limestone, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "60.1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 51.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 4.9% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 3.4% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "24.4% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "15.5% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "754,562 sq km (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "salt water lake(s)",
+       "text": "Chilika Lake - 1,170 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Brahmaputra (shared with China [s] and Bangladesh [m]) - 3,969 km; Indus (shared with China [s] and Pakistan [m]) - 3,610 km; Ganges river source (shared with Bangladesh [m]) - 2,704 km; Godavari - 1,465 km; Sutlej (shared with China [s] and Pakistan [m]) - 1,372 km; Yamuna - 1,370 km; Narmada - 1,289 km; Chenab river source (shared with Pakistan [m]) - 1,086 km ; Ghaghara river mouth (shared with China [s] and Nepal) - 1,080 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Indian Ocean drainage",
+       "text": "Brahmaputra (651,335 sq km), Ganges (1,016,124 sq km), Indus (1,081,718 sq km), Irrawaddy (413,710 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 180,
+    "content": {
+     "text": "Indus-Ganges-Brahmaputra Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 190,
+    "content": {
+     "text": "a very high population density exists throughout most of the country, with the notable exception of the deserts in the northwest and the mountain fringe in the north; the core of the population is in the north along the banks of the Ganges, with other river valleys and southern coastal areas also having large population concentrations",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 200,
+    "content": {
+     "text": "droughts; flash floods, as well as widespread and destructive flooding from monsoonal rains; severe thunderstorms; earthquakes <br /><br /><strong>volcanism:</strong> Barren Island (354 m) in the Andaman Sea has been active in recent years",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 210,
+    "content": {
+     "text": "dominates South Asian subcontinent; near important Indian Ocean trade routes; Kanchenjunga, third tallest mountain in the world, lies on the border with Nepal",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,419,316,933 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "730,902,574"
+      },
+      {
+       "label": "female",
+       "text": "688,414,359"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Indian(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Indian"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Indo-Aryan 72%, Dravidian 25%, and other 3% (2000)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Hindi 43.6%, Bengali 8%, Marathi 6.9%, Telugu 6.7%, Tamil 5.7%, Gujarati 4.6%, Urdu 4.2%, Kannada 3.6%, Odia 3.1%, Malayalam 2.9%, Punjabi 2.7%, Assamese 1.3%, Maithili 1.1%, other 5.6%;  English is the subsidiary official language but is the most important one for national, political, and commercial communication (2011 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "<p>विश्व फ़ैक्टबुक, आधारभूत जानकारी का एक अनिवार्य स्रोत (Hindi)</p> The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note 1: </strong>there are 22 other recognized languages -- Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kashmiri, Konkani, Maithili, Malayalam, Manipuri, Marathi, Nepali, Odia, Punjabi, Sanskrit, Santali, Sindhi, Tamil, Telugu, Urdu <br /><strong>note 2: </strong>Hindustani is a popular variant of Hindi/Urdu spoken widely throughout northern India but is not an official language"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Hindu 79.8%, Muslim 14.2%, Christian 2.3%, Sikh 1.7%, other and unspecified 2% (2011 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "24.5% (male 181,115,052/female 163,647,028)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "68.7% (male 500,568,593/female 467,593,781)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "6.8% (2024 est.) (male 44,101,180/female 52,102,662)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "45 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "35 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "10 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "10 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "30.1 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "29.1 years"
+      },
+      {
+       "label": "female",
+       "text": "30.5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.72% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "15.91 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.7 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "0.03 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "a very high population density exists throughout most of the country, with the notable exception of the deserts in the northwest and the mountain fringe in the north; the core of the population is in the north along the banks of the Ganges, with other river valleys and southern coastal areas also having large population concentrations",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "36.4% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "2.33% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "32.941 million NEW DELHI (capital), 21.297 million Mumbai, 15.333 million Kolkata, 13.608 million Bangalore, 11.776 million Chennai, 10.801 million Hyderabad (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.1 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.11 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.07 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.85 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.06 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "21.2 years (2019/21)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "80 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "30.5 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "30 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "30.8 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "68.2 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "66.5 years"
+      },
+      {
+       "label": "female",
+       "text": "70.1 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.95 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 95.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 91.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 93.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 4.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 8.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 6.7% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "3.3% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "4.5% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "0.72 physicians/1,000 population (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "1.6 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 99.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 83% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 88.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 17% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 11.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "3.9% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3.09 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0.23 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "2.85 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "21.8% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "34.1% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "8.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "31.5% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "72.3% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "4.8% (2021)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "23.3% (2021)"
+      },
+      {
+       "label": "men married by age 18",
+       "text": "2.6% (2021)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.1% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "14.2% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "81.7% (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "88.3% (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "74.9% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "13 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2024 est.)"
+      },
+      {
+       "label": "female",
+       "text": "13 years (2024 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Republic of India"
+      },
+      {
+       "label": "conventional short form",
+       "text": "India"
+      },
+      {
+       "label": "local long form",
+       "text": "Republic of India (English)/ Bharatiya Ganarajya (Hindi)"
+      },
+      {
+       "label": "local short form",
+       "text": "India (English)/ Bharat (Hindi)"
+      },
+      {
+       "label": "etymology",
+       "text": "the English name derives from the Indus River; the Indian name, Bharat, may derive from the Bharatas tribe mentioned in the Sanskrit Vedas (Hindu religious texts); the name is also associated with Emperor Bharata, the legendary conqueror of India"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "federal parliamentary republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "New Delhi"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "28 36 N, 77 12 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+5.5 (10.5 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is of unknown origin; one theory says it may come from the Hindi word <em>dehli </em>(threshold), because of the city's location between the Indus and the Ganges Rivers"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "28 states and 8 union territories*; Andaman and Nicobar Islands*, Andhra Pradesh, Arunachal Pradesh, Assam, Bihar, Chandigarh*, Chhattisgarh, Dadra and Nagar Haveli and Daman and Diu*, Delhi*, Goa, Gujarat, Haryana, Himachal Pradesh, Jammu and Kashmir*, Jharkhand, Karnataka, Kerala, Ladakh*, Lakshadweep*, Madhya Pradesh, Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland, Odisha, Puducherry*, Punjab, Rajasthan, Sikkim, Tamil Nadu, Telangana, Tripura, Uttar Pradesh, Uttarakhand, West Bengal",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the official name of Delhi is National Capital Territory of Delhi, even though it is considered a union territory"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "common law system based on the English model; separate personal law codes apply to Muslims, Christians, and Hindus; judicial review of legislative acts",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1935 (pre-independence); latest draft completed 4 November 1949, adopted 26 November 1949, effective 26 January 1950"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by either the Council of States or the House of the People; passage requires majority participation of the total membership in each house and at least two-thirds majority of voting members of each house, followed by assent of the president of India; proposed amendments to the constitutional amendment procedures also must be ratified by at least one half of the India state legislatures before presidential assent"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of India"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president indirectly elected for a 5-year term (no term limits) by an electoral college consisting of elected members of both houses of Parliament"
+      },
+      {
+       "label": "most recent election date",
+       "text": "18 July 2022"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2022:</em> Droupadi MURMU elected president; percent of electoral college vote - Droupadi MURMU (BJP) 64%, Yashwant SINHA (AITC) 35.9%; Jagdeep DHANKHAR elected vice president; percent of electoral college vote - Jagdeep DHANKHAR (BJP) 74.4%, Margaret ALVA (INC) 25.6%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "July 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Parliament (Sansad)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in September 2023, both Rajya Sabha and Lok Sabha passed a bill that reserves one third of the House seats for women; implementation could begin for the House election in 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "House of the People (Lok Sabha)"
+      },
+      {
+       "label": "number of seats",
+       "text": "545 (543 directly elected; 2 appointed)"
+      },
+      {
+       "label": "electoral system",
+       "text": "plurality/majority"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "5 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "4/19/2024 to 6/1/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Bharatiya Janata Party (BJP) (240); Indian National Congress (INC) (99); Samajwadi Party (SP) (37); All India Trinamool Congress (AITC) (29); Other (138)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "13.8%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "April 2029"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Council of States (Rajya Sabha)"
+      },
+      {
+       "label": "number of seats",
+       "text": "245 (233 indirectly elected; 12 appointed)"
+      },
+      {
+       "label": "scope of elections",
+       "text": "partial renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "6 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "1/12/2024 to 6/30/2024"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "16.7%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "January 2026"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court (consists of 28 judges, including the chief justice)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "justices appointed by the president to serve until age 65"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "High Courts; District Courts; Labour Court"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Aam Aadmi Party or AAP<br />All India Trinamool Congress or AITC<br />Bahujan Samaj Party or BSP<br />Bharatiya Janata Party or BJP<br />Biju Janata Dal or BJD<br />Communist Party of India-Marxist or CPI(M)<br />Dravida Munnetra Khazhagam<br />Indian National Congress or INC<br />Nationalist Congress Party or NCP<br />Rashtriya Janata Dal or RJD<br />Samajwadi Party or SP<br />Shiromani Akali Dal or SAD<br />Shiv Sena or SS<br />Telegana Rashtra Samithi or TRS<br />Telugu Desam Party or TDP<br />YSR Congress or YSRCP or YCP",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ADB, AfDB (nonregional member), Arctic Council (observer), ARF, ASEAN (dialogue partner), BIMSTEC, BIS, BRICS, C, CD, CERN (observer), CICA, CP, EAS, FAO, FATF, G-15, G-20, G-24, G-5, G-77, IAEA, IBRD, ICAO, ICC (national committees), ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAS (observer), MIGA, MINURSO, MONUSCO, NAM, OAS (observer), OECD, OPCW, Pacific Alliance (observer), PCA, PIF (partner), Quad, SAARC, SACEP, SCO (observer), UN, UNCTAD, UNDOF, UNESCO, UNHCR, UNHRC, UNIDO, UNIFIL, UNISFA, UNITAR, UNMISS, UNOCI, UNOOSA, UNSOM, UNWTO, UPU, Wassenaar Arrangement, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "15 August 1947 (from the UK)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Republic Day, 26 January (1950)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> three equal horizontal bands of saffron (top), white, and green, with a blue <em>chakra </em>(24-spoked wheel) centered in the white band<br /><br /><strong>meaning: </strong>saffron stands for courage, sacrifice, and the spirit of renunciation; white for purity and truth; green for faith and fertility; the chakra symbolizes the wheel of life in movement and death in stagnation",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> similar to the flag of Niger, which has a small orange disk centered in the white band"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "the Lion Capital of Ashoka, which depicts four Asiatic lions standing back-to-back and mounted on a circular abacus (official); Bengal tiger and lotus flower (traditional)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "saffron, white, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Jana-Gana-Mana\" (Thou Art the Ruler of the Minds of All People)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Rabindranath TAGORE"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1950; Rabindranath TAGORE, a Nobel laureate, also wrote Bangladesh's national anthem"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "44 (36 cultural, 7 natural, 1 mixed)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "<p>Taj Mahal (c); Agra Fort (c); Elphanta Caves (c); Hill Forts of Rajasthan (c); Sundarbans National Park (n); Rock Shelters of Bhimbetka (c); Champaner-Pavagadh Archaeological Park (c); Jaipur (c); Mahabodhi Temple Complex at Bodh Gaya (c); Manas Wildlife Sanctuary (n); Nanda Devi and Valley of Flowers National Parks (n); Khangchendzonga National Park (m); Group of Monuments at Mahabalipuram (c); Sun Temple, Konârak (c); Kaziranga National Park (n); Churches and Convents of Goa (c); Great Living Chola Temples (c); Group of Monuments at Pattadakal (c); Buddhist Monuments at Sanchi (c); Humayun's Tomb, Delhi (c); Qutb Minar and its Monuments, Delhi (c); Great Himalayan National Park Conservation Area (n); Rani-ki-Vav (the Queen’s Stepwell) at Patan, Gujarat (c); Archaeological Site of Nalanda Mahavihara at Nalanda, Bihar (c); Historic City of Ahmadabad (c); Victorian Gothic and Art Deco Ensembles of Mumbai (c); Jaipur City, Rajasthan (c); Kakatiya Rudreshwara (Ramappa) Temple, Telangana (c); Moidams – the Mound-Burial System of the Ahom Dynasty (c); Maratha Military Landscapes of India (c) </p>"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

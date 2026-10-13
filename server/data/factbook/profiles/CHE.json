@@ -1,0 +1,1185 @@
+{
+ "iso3": "CHE",
+ "gec": "sz",
+ "name": "Switzerland",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>The Swiss Confederation was founded in 1291 as a defensive alliance among three cantons. In succeeding years, other localities joined the original three. The Swiss Confederation secured its independence from the Holy Roman Empire in 1499. A constitution of 1848, which was modified in 1874 to allow voters to introduce referenda on proposed laws, replaced the confederation with a centralized federal government. The major European powers have long honored Switzerland's sovereignty and neutrality, and the country was not involved in either World War. The political and economic integration of Europe over the past half-century, as well as Switzerland's role in many UN and international organizations, has strengthened Switzerland's ties with its neighbors. However, the country did not officially become a UN member until 2002. Switzerland remains active in many UN and international organizations but retains a strong commitment to neutrality.</p> <p> </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Central Europe, east of France, north of Italy",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "47 00 N, 8 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Europe",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "41,277 sq km"
+      },
+      {
+       "label": "land",
+       "text": "39,997 sq km"
+      },
+      {
+       "label": "water",
+       "text": "1,280 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly less than twice the size of New Jersey",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,770 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Austria 158 km; France 525 km; Italy 698 km; Liechtenstein 41 km; Germany 348 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "0 km (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": "none (landlocked)",
+     "items": []
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "temperate, but varies with altitude; cold, cloudy, rainy/snowy winters; cool to warm, cloudy, humid summers with occasional showers",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly mountains (Alps in south, Jura in northwest) with a central plateau of rolling hills, plains, and large lakes",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Dufourspitze on Monte Rosa 4,634 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Lake Maggiore 195 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "1,350 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "hydropower potential, timber, salt",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "37.8% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 10% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.6% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 27.1% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "32% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "32.6% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "494 sq km (2020)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "fresh water lake(s)",
+       "text": "Lake Constance (shared with Germany and Austria) - 540 sq km; Lake Geneva (shared with France) - 580 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major rivers (by length in km)",
+    "order": 160,
+    "content": {
+     "text": "Rhein (Rhine) river source (shared with Germany, France, and Netherlands [m]) - 1,233 km<br /><br /><strong>note:</strong> [s] after country name indicates river source; [m] after country name indicates river mouth",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 170,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Atlantic Ocean drainage",
+       "text": "Rhine-Maas (198,735 sq km), <em>(Black Sea)</em> Danube (795,656 sq km), <em>(Adriatic Sea)</em> Po (76,997 sq km), <em>(Mediterranean Sea) </em>Rhone (100,543 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 180,
+    "content": {
+     "text": "population distribution corresponds to elevation, with the northern and western areas far more heavily populated; the higher Alps of the south limit settlement",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 190,
+    "content": {
+     "text": "avalanches, landslides; flash floods",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 200,
+    "content": {
+     "text": "landlocked; crossroads of northern and southern Europe; along with southeastern France, northern Italy, and southwestern Austria, has the highest elevations in the Alps",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "8,925,741 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "4,436,858"
+      },
+      {
+       "label": "female",
+       "text": "4,488,883"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Swiss (singular and plural)"
+      },
+      {
+       "label": "adjective",
+       "text": "Swiss"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Swiss 69.2%, German 4.2%, Italian 3.2%, Portuguese 2.5%, French 2.1%, Kosovan 1.1%, Turkish 1%, other 16.7% (2020 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represent permanent and non-permanent resident population by country of birth"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "German (or Swiss German) (official) 62.1%, French (official) 22.8%, Italian (official) 8%, English 5.7%, Portuguese 3.5%, Albanian 3.3%, Serbo-Croatian 2.3%, Spanish 2.3%, Romansh (official) 0.5%, other 7.9% (2019 est.)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "Das World Factbook, die unverzichtbare Quelle für grundlegende Informationen. (German)<br /><br />The World Factbook, une source indispensable d'informations de base. (French)<br /><br />L'Almanacco dei fatti del mondo, l'indispensabile fonte per le informazioni di base. (Italian)<br /><br />The World Factbook, the indispensable source for basic information."
+      },
+      {
+       "label": "note",
+       "text": "<strong>note</strong>: shares sum to more than 100% because respondents could indicate more than one main language"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Roman Catholic 34.4%, Protestant 22.5%, other Christian 5.7%, Muslim 5.4%, other 1.5%, none 29.4%, unspecified 1.1% (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "15.1% (male 685,221/female 650,802)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "64.6% (male 2,887,767/female 2,834,842)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "20.3% (2024 est.) (male 830,117/female 971,825)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "55.8 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "23.5 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "32.3 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "3.1 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "44.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "43.5 years"
+      },
+      {
+       "label": "female",
+       "text": "44.9 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.72% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "10.01 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "8.61 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "5.79 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "population distribution corresponds to elevation, with the northern and western areas far more heavily populated; the higher Alps of the south limit settlement",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "74.2% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "0.79% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.432 million Zurich, 441,000 BERN (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.02 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.85 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "0.99 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "31.1 years (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "5 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "3 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "3.4 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "2.5 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "83.9 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "82 years"
+      },
+      {
+       "label": "female",
+       "text": "85.8 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "1.59 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "0.78 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "11.8% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "12.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "4.48 physicians/1,000 population (2022)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "4.4 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 100% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 100% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 0% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "19.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9.41 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "3.17 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "4.35 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "1.76 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.12 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "22.8% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "25.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "20.1% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 310,
+    "content": {
+     "text": "57.5% (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 320,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "4.9% of GDP (2022 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "15.4% national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "17 years (2023 est.)"
+      },
+      {
+       "label": "male",
+       "text": "17 years (2023 est.)"
+      },
+      {
+       "label": "female",
+       "text": "17 years (2023 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Swiss Confederation"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Switzerland"
+      },
+      {
+       "label": "local long form",
+       "text": "Schweizerische Eidgenossenschaft (German)/ Confederation Suisse (French)/ Confederazione Svizzera (Italian)/ Confederaziun Svizra (Romansh)"
+      },
+      {
+       "label": "local short form",
+       "text": "Schweiz (German)/ Suisse (French)/ Svizzera (Italian)/ Svizra (Romansh)"
+      },
+      {
+       "label": "abbreviation",
+       "text": "CH"
+      },
+      {
+       "label": "etymology",
+       "text": "name derives from the canton of Schwyz, one of the founding cantons of the Swiss Confederacy formed in the late 13th century"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "federal republic (formally a confederation)",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Bern"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "46 55 N, 7 28 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+1 (6 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "daylight saving time",
+       "text": "+1hr, begins last Sunday in March; ends last Sunday in October"
+      },
+      {
+       "label": "etymology",
+       "text": "the origin of the name is uncertain; it is sometimes associated with the German word <em>Baer </em>(bear), but a more likely origin is an Indo-European root word <em>ber</em>, meaning \"marshy place\""
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "26 cantons (<em>cantons</em>, singular - <em>canton </em>in French; <em>cantoni</em>, singular - <em>cantone </em>in Italian; <em>Kantone</em>, singular - <em>Kanton </em>in German); Aargau, Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Berne/Bern, Fribourg/Freiburg, Genève (Geneva), Glarus, Graubuenden/Grigioni/Grischun, Jura, Luzern (Lucerne), Neuchatel, Nidwalden, Obwalden, Sankt Gallen, Schaffhausen, Schwyz, Solothurn, Thurgau, Ticino, Uri, Valais/Wallis, Vaud, Zug, Zuerich",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note 1:</strong> the names listed above are in the canton's official language(s), with conventional names in parentheses<br /><br /><strong>note 2: </strong>6 of the cantons -- Appenzell Ausserrhoden, Appenzell Innerrhoden, Basel-Landschaft, Basel-Stadt, Nidwalden, Obwalden -- are referred to as half cantons because they elect only one member (instead of two) to the Council of States, and in popular referendums where a majority of popular votes and cantonal votes are required, these 6 cantons have a half vote"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system; judicial review of legislative acts, except federal decrees of a general obligatory character",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1848, 1874; latest adopted by referendum 18 April 1999, effective 1 January 2000"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by the two houses of the Federal Assembly or by petition of at least one hundred thousand voters (called the \"federal popular initiative\"); passage of proposals requires majority vote in a referendum; following drafting of an amendment by the Assembly, its passage requires approval by majority vote in a referendum and approval by the majority of cantons"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction with reservations; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of Switzerland"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "12 years including at least 3 of the last 5 years prior to application"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president and vice president elected by the Federal Assembly from among members of the Federal Council for a 1-year, non-consecutive term"
+      },
+      {
+       "label": "most recent election date",
+       "text": "11 December 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em>2024: </em>Karin KELLER-SUTTER elected president for 2025; Federal Assembly vote - Karin KELLER-SUTTER (FDP.The Liberals) 168 of 203; Guy PARLEMIN (SVP) elected vice president for 2025; Federal Assembly vote - 196 of 219<em><br /><br />2023:  </em>Viola AMHERD elected president for 2024; Federal Assembly vote - Viola AMHERD (The Center) 158 of 204; Karin KELLER-SUTTER (FDP.The Liberals) elected vice president for 2024; Federal Assembly vote - 138 of 196<br /><br /><em>2022:  </em>Alain BERSET elected president for 2023; Federal Assembly vote - Alain BERSET (SP) 140 OF 181; Viola AMHERD elected vice president; Federal assembly vote - 207 of 223"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2025"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the Federal Council, composed of 7 federal councilors, constitutes the federal government of Switzerland; council members rotate the 1-year term of federal president"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "Federal Assembly (Bundesversammlung - Assemblée fédérale - Assemblea federale)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "National Council (Nationalrat - Conseil national - Consiglio nazionale)"
+      },
+      {
+       "label": "number of seats",
+       "text": "200 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/22/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Swiss People's Party (SVP/UDC) (62); Socialist Party (SP/PS) (41); Centre Party (29); FDP/The Liberals (FDP/PLR) (28); Green Party (GPS/PES) (23); Liberal Green Party (GLP/PVL) (10); Other (7)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "39.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Council of States (Ständerat - Conseil des Etats - Consiglio degli Stati)"
+      },
+      {
+       "label": "number of seats",
+       "text": "46 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "other systems"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "10/22/2023"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Centre Party (15); FDP/The Liberals (FDP/PLR) (11); Socialist Party (SP/PS) (9); Swiss People's Party (SVP/UDC) (6); Green Party (GPS/PES) (3); Other (2)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "33.3%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "October 2027"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Federal Supreme Court (consists of 38 justices and 19 deputy justices organized into 7 divisions)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "judges elected by the Federal Assembly for 6-year terms; judges are affiliated with political parties and are elected according to linguistic and regional criteria in approximate proportion to party representation in the Federal Assembly"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "Federal Criminal Court (established in 2004); Federal Administrative Court (established in 2007)"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>each of Switzerland's 26 cantons has its own courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "The Center (Die Mitte, Alleanza del Centro, Le Centre, Allianza dal Center) (merger of the Christian Democratic People's Party and the Conservative Democratic Party)<br />Evangelical Peoples' Party or EVP/PEV <br />Federal Democrats or EDU <br />Geneva Citizens Movement or MCR/MCG <br />Green Liberal Party (Gruenliberale Partei or GLP, Parti vert liberale or PVL, Partito Verde-Liberale or PVL, Partida Verde Liberale or PVL) <br />Green Party (Gruene Partei der Schweiz or Gruene, Parti Ecologiste Suisse or Les Verts, Partito Ecologista Svizzero or I Verdi, Partida Ecologica Svizra or La Verda)<br />The Liberals or FDP.The Liberals (FDP.Die Liberalen, PLR.Les Liberaux-Radicaux, PLR.I Liberali, Ils Liberals)<br />Social Democratic Party (Sozialdemokratische Partei der Schweiz or SP, Parti Socialiste Suisse or PSS, Partito Socialista Svizzero or PSS, Partida Socialdemocratica de la Svizra or PSS) <br />Swiss People's Party (Schweizerische Volkspartei or SVP, Union Democratique du Centre or UDC, Unione Democratica di Centro or UDC, Uniun Democratica dal Center or UDC)",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ADB (nonregional member), AfDB (nonregional member), Australia Group, BIS, CD, CE, CERN, EAPC, EBRD, EFTA, EITI (implementing country), ESA, FAO, FATF, G-10, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IEA, IFAD, IFC, IFRCS, IGAD (partners), ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, ITUC (NGOs), LAIA (observer), MIGA, MONUSCO, NEA, NSG, OAS (observer), OECD, OIF, OPCW, OSCE, Pacific Alliance (observer), Paris Club, PCA, PFP, Schengen Convention, UN, UNCTAD, UNESCO, UNHCR, UNIDO, UNITAR, UNMISS, UNMOGIP, UNOOSA, UNRWA, UNTSO, UNWTO, UPU, Wassenaar Arrangement, WCO, WHO, WIPO, WMO, WTO, ZC",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "1 August 1291 (founding of the Swiss Confederation)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Founding of the Swiss Confederation in 1291",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> celebrated as Swiss National Day since 1 August 1891"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> red square with an equal-armed white cross in the center that does not extend to the edges of the flag<br /><br /><strong>history: </strong>the origin of the flag is unclear, but a white cross was used to identify Swiss Confederation troops at the Battle of Laupen (1339)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> in 1863, the newly formed International Red Cross chose the inverse of the Swiss flag -- a red cross on a white field -- as its symbol"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "Swiss cross (white cross on red field)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, white",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "the Swiss anthem has four names: \"Schweizerpsalm\" [German] \"Cantique Suisse\" [French] \"Salmo svizzero,\" [Italian] \"Psalm svizzer\" [Romansch] (Swiss Psalm)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Leonhard WIDMER [German], Charles CHATELANAT [French], Camillo VALSANGIACOMO [Italian], and Flurin CAMATHIAS [Romansch]/Alberik ZWYSSIG"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1981; all four of the versions (German, French, Italian, Romansch) are considered official"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "13 (9 cultural, 4 natural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Old City of Berne (c); Swiss Alps Jungfrau-Aletsch (n); Monte San Giorgio (n); Abbey of St Gall (c); Three Castles, Defensive Wall, and Ramparts of the Market-Town of Bellinzona (c); Rhaetian Railway in the Albula/Bernina Landscapes (c); La Chaux-de-Fonds/Le Locle, Watchmaking Town Planning (c); Prehistoric Pile Dwellings around the Alps (c); Benedictine Convent of St John at Müstair (c); Lavaux, Vineyard Terraces (c)"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

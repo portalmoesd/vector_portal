@@ -12,6 +12,7 @@ const db = require('../db');
 const { requireAuth, requireRole } = require('../middleware/auth');
 const { runSync, isRunning } = require('../country-profiles/sync');
 const { SOURCE } = require('../country-profiles/worldbank');
+const factbook = require('../country-profiles/factbook');
 
 const router = express.Router();
 const adminOnly = [requireAuth, requireRole('ADMIN')];
@@ -126,6 +127,21 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
     for (const code of CHART_SERIES) series[code] = [];
     for (const r of ser) series[r.indicator_code].push({ year: Number(r.year), value: Number(r.value) });
 
+    // Descriptive text (Factbook snapshot), grouped by section in display order.
+    const { rows: txt } = await db.query(
+      `SELECT section, field, display_order, content, source_name, source_url, data_date, retrieved_at, edited_at
+       FROM stat_country_texts WHERE iso3 = $1 ORDER BY section, display_order`,
+      [c.iso3]
+    );
+    const texts = { sections: {}, source: null };
+    for (const r of txt) {
+      if (!texts.sections[r.section]) texts.sections[r.section] = [];
+      texts.sections[r.section].push({ field: r.field, content: r.content, edited: !!r.edited_at });
+      if (!texts.source) {
+        texts.source = { name: r.source_name, url: r.source_url, dataDate: r.data_date, retrievedAt: r.retrieved_at, discontinued: '2026-02-04' };
+      }
+    }
+
     res.json({
       source: SOURCE,
       lastSync: await lastRun(),
@@ -136,6 +152,7 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
       },
       indicators,
       series,
+      texts,
     });
   } catch (err) {
     console.error('country-profiles country error:', err);
@@ -198,6 +215,14 @@ async function bootCheck() {
     if (count === 0) { console.log('country-profiles: no data yet, running the first sync'); startSync('boot'); }
   } catch (err) {
     console.warn('country-profiles: boot check skipped:', err.message);
+  }
+  // The Factbook text ships with the repository; load it once into the
+  // database so it can be edited there later.
+  try {
+    const { rows: [{ count }] } = await db.query('SELECT count(*)::int AS count FROM stat_country_texts');
+    if (count === 0) await factbook.importFactbook(db, { log: (m) => console.log(`country-profiles: ${m}`) });
+  } catch (err) {
+    console.warn('country-profiles: factbook import skipped:', err.message);
   }
 }
 

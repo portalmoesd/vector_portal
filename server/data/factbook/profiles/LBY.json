@@ -1,0 +1,964 @@
+{
+ "iso3": "LBY",
+ "gec": "ly",
+ "name": "Libya",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "<p>Berbers have inhabited central north Africa since ancient times, but Phoenicians, Greeks, Carthaginians, Persians, Egyptians, Romans, and Vandals have all settled and ruled the region. In the 7th century, Islam spread through the area. In the mid-16th century, Ottoman rule began; the Italians supplanted the Ottoman Turks in the area around Tripoli in 1911 and held it until 1943, when they were defeated in World War II. Libya then came under UN administration and achieved independence in 1951. Col. Muammar al-QADHAFI assumed leadership with a military coup in 1969 and began to espouse a political system that combined socialism and Islam. During the 1970s, QADHAFI used oil revenues to promote his ideology outside Libya, supporting subversive and terrorist activities that included the downing of two airliners -- one over Scotland and another in Northern Africa -- and a discotheque bombing in Berlin. UN sanctions in 1992 isolated QADHAFI politically and economically; the sanctions were lifted in 2003 when Libya accepted responsibility for the bombings and agreed to claimant compensation. QADHAFI also agreed to end Libya's program to develop weapons of mass destruction, and he made significant strides in normalizing relations with Western nations.</p> <p>Unrest that began in several Middle Eastern and North African countries in 2010 erupted in Libyan cities in 2011. QADHAFI's brutal crackdown on protesters spawned an eight-month civil war that saw the emergence of a National Transitional Council (NTC), UN authorization of air and naval intervention by the international community, and the toppling of the QADHAFI regime. In 2012, the NTC handed power to an elected parliament, the General National Congress (GNC), which was replaced two years later with the House of Representatives (HoR). In 2015, the UN brokered the Libyan Political Agreement (LPA) among a broad array of political parties and social groups, establishing an interim executive body. However, hardliners continued to oppose and hamper the LPA implementation, leaving Libya with eastern and western-based rival governments. In 2018, the international community supported a recalibrated plan that aimed to break the political deadlock with a National Conference in 2019. These plans, however, were derailed when the eastern-based, self-described Libyan National Army (LNA) launched an offensive to seize Tripoli. The LNA offensive collapsed in 2020, and a subsequent UN-sponsored cease-fire helped formalize the pause in fighting between rival camps. <br /><br />In 2021, the UN-facilitated Libyan Political Dialogue Forum selected a new prime minister for an interim government -- the Government of National Unity (GNU) -- and a new presidential council charged with preparing for elections and uniting the country’s state institutions. The HoR approved the GNU and its cabinet the same year, providing Libya with its first unified government since 2014, but the parliament then postponed the planned presidential election to an undetermined date in the future. In 2022, the HoR voted to replace GNU interim Prime Minister, Abdul Hamid DUBAYBAH, with another government led by Fathi BASHAGHA. GNU allegations of an illegitimate HoR vote allowed DUBAYBAH to remain in office and rebuff BASHAGHA's attempts to seat his government in Tripoli. In 2023, the HoR voted to replace BASHAGHA with Osma HAMAD. Special Representative of the UN Security-General for Libya, Abdoulaye BATHILY, is leading international efforts to persuade key Libyan political actors to resolve the core issues impeding elections. </p>",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Northern Africa, bordering the Mediterranean Sea, between Egypt, Tunisia, and Algeria",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "25 00 N, 17 00 E",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Africa",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "1,759,540 sq km"
+      },
+      {
+       "label": "land",
+       "text": "1,759,540 sq km"
+      },
+      {
+       "label": "water",
+       "text": "0 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "about 2.5 times the size of Texas; slightly larger than Alaska",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "4,339 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Algeria 989 km; Chad 1,050 km; Egypt 1,115 km; Niger 342 km; Sudan 382 km; Tunisia 461 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,770 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "exclusive fishing zone",
+       "text": "62 nm"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> Gulf of Sidra closing line - 32 degrees, 30 minutes north"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "Mediterranean along coast; dry, extreme desert interior",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "mostly barren, flat to undulating plains, plateaus, depressions",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Bikku Bitti 2,267 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Sabkhat Ghuzayyil -47 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "423 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "petroleum, natural gas, gypsum",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "8.7% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 1% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 0.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 7.6% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "0.1% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "91.2% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "4,700 sq km (2012)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major watersheds (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Internal (endorheic basin) drainage",
+       "text": "Lake Chad (2,497,738 sq km)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major aquifers",
+    "order": 160,
+    "content": {
+     "text": "Nubian Aquifer System, North Western Sahara Aquifer System, Murzuk-Djado Basin",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 170,
+    "content": {
+     "text": "over 90% of the population lives along the Mediterranean coast in and between Tripoli to the west and Al Bayda to the east; the interior remains vastly underpopulated due to the Sahara and its lack of surface water, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 180,
+    "content": {
+     "text": "hot, dry, dust-laden ghibli is a southern wind lasting one to four days in spring and fall; dust storms, sandstorms",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 190,
+    "content": {
+     "text": "<strong>note 1:</strong> more than 90% of the country is desert or semidesert<br /><br /><strong>note 2:</strong> the volcano Waw an Namus lies in south central Libya in the middle of the Sahara; the caldera is an oasis -- the name means \"oasis of mosquitoes\" -- containing several small lakes that host many species of insects and birds",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "7,361,263 (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "3,747,364"
+      },
+      {
+       "label": "female",
+       "text": "3,613,899"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> immigrants make up just over 12% of the total population, according to UN data (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Libyan(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Libyan"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "Amazigh and Arab 97%, other 3% (includes Egyptian, Greek, Indian, Italian, Maltese, Pakistani, Tunisian, and Turkish)",
+     "items": []
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Arabic (official), Italian, English (all widely understood in the major cities); Tamazight (Nafusi, Ghadamis, Suknah, Awjilah, Tamasheq)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "كتاب حقائق العالم، المصدر الذي لا يمكن الاستغناء عنه للمعلومات الأساسية (Arabic)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Muslim (official; virtually all Sunni) 96.6%, Christian 2.7%, Buddhist &lt;1%, Hindu &lt;1%, Jewish &lt;1%, folk religion &lt;1%, other &lt;1%, unaffiliated &lt;1% (2020 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> non-Sunni Muslims include native Ibadhi Muslims (&lt;1% of the population) and foreign Muslims"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "32.3% (male 1,211,087/female 1,165,648)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "63.2% (male 2,385,152/female 2,263,780)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "4.6% (2024 est.) (male 151,125/female 184,471)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "58.3 (2024 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "51.1 (2024 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "7.2 (2024 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "13.9 (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "26.4 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "26.3 years"
+      },
+      {
+       "label": "female",
+       "text": "26.2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "1.35% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "19.83 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "3.48 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-2.89 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "over 90% of the population lives along the Mediterranean coast in and between Tripoli to the west and Al Bayda to the east; the interior remains vastly underpopulated due to the Sahara and its lack of surface water, as shown in this population distribution map",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "81.6% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.45% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "1.183 million TRIPOLI (capital), 984,000 Misratah, 859,000 Benghazi (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.05 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.82 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.04 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 170,
+    "content": {
+     "text": "59 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 180,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10.4 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "12.1 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "9.3 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "77.7 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "75.5 years"
+      },
+      {
+       "label": "female",
+       "text": "80 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 200,
+    "content": {
+     "text": "2.96 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 210,
+    "content": {
+     "text": "1.44 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 99.9% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.1% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 230,
+    "content": {
+     "text": "5.1% of national budget (2022 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 240,
+    "content": {
+     "text": "2.04 physicians/1,000 population (2017)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 250,
+    "content": {
+     "text": "3.2 beds/1,000 population (2021 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 260,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: total",
+       "text": "total: 99.3% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 0.7% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 270,
+    "content": {
+     "text": "32.5% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 280,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.01 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 290,
+    "content": {
+     "text": "4.3% (2022 est.)",
+     "items": []
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "State of Libya"
+      },
+      {
+       "label": "conventional short form",
+       "text": "Libya"
+      },
+      {
+       "label": "local long form",
+       "text": "Dawlat Libiya"
+      },
+      {
+       "label": "local short form",
+       "text": "Libiya"
+      },
+      {
+       "label": "etymology",
+       "text": "the name probably derives from the Libu, a North African tribe first mentioned in texts from the 13th century B.C.; the ancient Greeks and Romans used the name for the entire North African coast west of Egypt"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "in transition",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Tripoli (Tarabulus)"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "32 53 N, 13 10 E"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC+2 (7 hours ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name derives from the Greek words <em>tri </em>and <em>polis</em>, meaning \"three cities;\" the modern-day city was founded in the 14th century to replace the three ancient cities of Pallantium, Tegea, and Mantineia"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "22 governorates (<em>muhafazah</em>, singular - <em>muhafazat</em>); Al Butnan, Al Jabal al Akhdar, Al Jabal al Gharbi, Al Jafarah, Al Jufrah, Al Kufrah, Al Marj, Al Marqab, Al Wahat, An Nuqat al Khams, Az Zawiyah, Banghazi (Benghazi), Darnah, Ghat, Misratah, Murzuq, Nalut, Sabha, Surt, Tarabulus (Tripoli), Wadi al Hayat, Wadi ash Shati",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "Libya's post-revolution system is in flux and driven by state and non-state entities",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "previous 1951, 1977, 2011 (interim)"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>a draft constitution was approved in 2017, but it is not yet ratified"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "has not submitted an ICJ jurisdiction declaration; non-party state to the ICCt",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent or grandparent must be a citizen of Libya"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "no"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "varies from 3 to 5 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age, universal",
+     "items": []
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "first direct presidential election was not held as planned"
+      },
+      {
+       "label": "most recent election date",
+       "text": "scheduled for 24 December 2021 but not held"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "no new date has been set for elections"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislative structure",
+       "text": "unicameral"
+      },
+      {
+       "label": "chamber name",
+       "text": "House of Representatives (Majlis Al-Nuwaab)"
+      },
+      {
+       "label": "number of seats",
+       "text": "200 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "other systems"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "most recent election date",
+       "text": "6/25/2014"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "16.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "December 2026"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> 32 seats are reserved for women"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Libya's judicial system consists of a supreme court, central high courts (in Tripoli, Benghazi, and Sabha), and a series of lower courts"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 130,
+    "content": {
+     "text": "ABEDA, AfDB, AFESD, AMF, AMU, AU, BDEAC, CAEU, COMESA, FAO, G-77, IAEA, IBRD, ICAO, ICC (NGOs), ICRM, IDA, IDB, IFAD, IFC, IFRCS, ILO, IMF, IMO, IMSO, Interpol, IOC, IOM, IPU, ISO, ITSO, ITU, LAS, LCBC, MIGA, NAM, OAPEC, OIC, OPCW, OPEC, PCA, UN, UNCTAD, UNESCO, UNHRC, UNIDO, UNOOSA, UNSMIL, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO (observer)",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 140,
+    "content": {
+     "text": "24 December 1951 (from UN trusteeship)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 150,
+    "content": {
+     "text": "Liberation Day, 23 October (2011)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 160,
+    "content": {
+     "text": "<strong>description:</strong> three horizontal bands of red (top), black (double-width), and green, with a white crescent and star centered on the black stripe<br /><br /><strong>meaning:</strong> the colors represent the three major regions of the country: red stands for Fezzan, black for Cyrenaica, and green for Tripolitania; the crescent and star represent Islam<br /><br /><strong>history:</strong> the National Transitional Council reintroduced this flag design from the former Kingdom of Libya (1951-69) in 2011 to replace the all-green banner of the QADHAFI regime",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 170,
+    "content": {
+     "text": "star and crescent, hawk",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 180,
+    "content": {
+     "text": "red, black, green",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Libya, Libya, Libya\""
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Al Bashir AL AREBI/Mohamad Abdel WAHAB"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1951, but replaced in 1969 when QADHAFI came to power; readopted 2011 with some modification to the lyrics; also known as \"Ya Beladi\" (O My Country)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "5 (all cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Archaeological Site of Cyrene; Archaeological Site of Leptis Magna, Archaeological Site of Sabratha; Rock-Art Sites of Tadrart Acacus; Old Town of Ghadamès"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

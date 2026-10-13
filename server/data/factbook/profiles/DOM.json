@@ -1,0 +1,1214 @@
+{
+ "iso3": "DOM",
+ "gec": "dr",
+ "name": "The Dominican",
+ "sections": {
+  "Introduction": [
+   {
+    "field": "Background",
+    "order": 10,
+    "content": {
+     "text": "The Taino -- indigenous inhabitants of Hispaniola prior to the arrival of Europeans -- divided the island now known as the Dominican Republic and Haiti into five chiefdoms and territories. Christopher COLUMBUS explored and claimed the island on his first voyage in 1492; it became a springboard for Spanish conquest of the Caribbean and the American mainland. In 1697, Spain recognized French dominion over the western third of the island, which in 1804 became Haiti. The remainder of the island, by then known as Santo Domingo, sought to gain its own independence in 1821, but the Haitians conquered and ruled it for 22 years; it finally attained independence as the Dominican Republic in 1844. In 1861, the Dominicans voluntarily returned to the Spanish Empire, but two years later, they launched a war that restored independence in 1865. <br /><br />A legacy of unsettled and mostly non-representative rule followed, capped by the dictatorship of Rafael Leonidas TRUJILLO from 1930 to 1961. Juan BOSCH was elected president in 1962 but was deposed in a military coup in 1963. In 1965, the US led an intervention in the midst of a civil war sparked by an uprising to restore BOSCH. In 1966, Joaquin BALAGUER defeated BOSCH in the presidential election. BALAGUER maintained a tight grip on power for most of the next 30 years, until international reaction to flawed elections forced him to curtail his term in 1996. Since then, regular competitive elections have been held.",
+     "items": []
+    }
+   }
+  ],
+  "Geography": [
+   {
+    "field": "Location",
+    "order": 10,
+    "content": {
+     "text": "Caribbean, eastern two-thirds of the island of Hispaniola, between the Caribbean Sea and the North Atlantic Ocean, east of Haiti",
+     "items": []
+    }
+   },
+   {
+    "field": "Geographic coordinates",
+    "order": 20,
+    "content": {
+     "text": "19 00 N, 70 40 W",
+     "items": []
+    }
+   },
+   {
+    "field": "Map references",
+    "order": 30,
+    "content": {
+     "text": "Central America and the Caribbean",
+     "items": []
+    }
+   },
+   {
+    "field": "Area",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "48,670 sq km"
+      },
+      {
+       "label": "land",
+       "text": "48,320 sq km"
+      },
+      {
+       "label": "water",
+       "text": "350 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Area - comparative",
+    "order": 50,
+    "content": {
+     "text": "slightly more than twice the size of New Jersey",
+     "items": []
+    }
+   },
+   {
+    "field": "Land boundaries",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "376 km"
+      },
+      {
+       "label": "border countries",
+       "text": "Haiti 376 km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Coastline",
+    "order": 70,
+    "content": {
+     "text": "1,288 km",
+     "items": []
+    }
+   },
+   {
+    "field": "Maritime claims",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "territorial sea",
+       "text": "12 nm"
+      },
+      {
+       "label": "contiguous zone",
+       "text": "24 nm"
+      },
+      {
+       "label": "exclusive economic zone",
+       "text": "200 nm"
+      },
+      {
+       "label": "continental shelf",
+       "text": "200 nm or to the edge of the continental margin"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note: </strong>measured from claimed archipelagic straight baselines"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Climate",
+    "order": 90,
+    "content": {
+     "text": "tropical maritime; little seasonal temperature variation; seasonal variation in rainfall",
+     "items": []
+    }
+   },
+   {
+    "field": "Terrain",
+    "order": 100,
+    "content": {
+     "text": "rugged highlands and mountains interspersed with fertile valleys",
+     "items": []
+    }
+   },
+   {
+    "field": "Elevation",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest point",
+       "text": "Pico Duarte 3,098 m"
+      },
+      {
+       "label": "lowest point",
+       "text": "Lago Enriquillo -46 m"
+      },
+      {
+       "label": "mean elevation",
+       "text": "424 m"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Natural resources",
+    "order": 120,
+    "content": {
+     "text": "nickel, bauxite, gold, silver, arable land",
+     "items": []
+    }
+   },
+   {
+    "field": "Land use",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "agricultural land",
+       "text": "55.4% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: arable land",
+       "text": "arable land: 20.2% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent crops",
+       "text": "permanent crops: 11.3% (2023 est.)"
+      },
+      {
+       "label": "agricultural land: permanent pasture",
+       "text": "permanent pasture: 23.8% (2023 est.)"
+      },
+      {
+       "label": "forest",
+       "text": "46.6% (2023 est.)"
+      },
+      {
+       "label": "other",
+       "text": "0% (2023 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Irrigated land",
+    "order": 140,
+    "content": {
+     "text": "2,981 sq km (2018)",
+     "items": []
+    }
+   },
+   {
+    "field": "Major lakes (area sq km)",
+    "order": 150,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "salt water lake(s)",
+       "text": "Lago de Enriquillo - 500 sq km"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 160,
+    "content": {
+     "text": "coastal development is significant, especially in the southern coastal plains and the Cibao Valley, where population density is highest; smaller population clusters exist in the interior mountains (Cordillera Central)",
+     "items": []
+    }
+   },
+   {
+    "field": "Natural hazards",
+    "order": 170,
+    "content": {
+     "text": "lies in the middle of the hurricane belt and subject to severe storms from June to October; occasional flooding; periodic droughts",
+     "items": []
+    }
+   },
+   {
+    "field": "Geography - note",
+    "order": 180,
+    "content": {
+     "text": "shares island of Hispaniola with Haiti (eastern two-thirds makes up the Dominican Republic, western one-third is Haiti); the second largest country in the Antilles (after Cuba); geographically diverse with the Caribbean's tallest mountain, Pico Duarte, and lowest elevation and largest lake, Lago Enriquillo",
+     "items": []
+    }
+   }
+  ],
+  "People and Society": [
+   {
+    "field": "Population",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "10,899,292 (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "5,506,679"
+      },
+      {
+       "label": "female",
+       "text": "5,392,613"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Nationality",
+    "order": 20,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "noun",
+       "text": "Dominican(s)"
+      },
+      {
+       "label": "adjective",
+       "text": "Dominican"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Ethnic groups",
+    "order": 30,
+    "content": {
+     "text": "mixed 70.4% (Mestizo/Indio 58%, Mulatto 12.4%), Black 15.8%, White 13.5%, other 0.3% (2014 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> respondents self-identified their race; the term \"indio\" in the Dominican Republic is not associated with people of indigenous ancestry but people of mixed ancestry or skin color between light and dark"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Languages",
+    "order": 40,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Languages",
+       "text": "Spanish (official)"
+      },
+      {
+       "label": "major-language sample(s)",
+       "text": "La Libreta Informativa del Mundo, la fuente indispensable de información básica. (Spanish)<br /><br />The World Factbook, the indispensable source for basic information."
+      }
+     ]
+    }
+   },
+   {
+    "field": "Religions",
+    "order": 50,
+    "content": {
+     "text": "Evangelical 50.2%, Roman Catholic 30.1%, none 18.5%, unspecified 1.2% (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Age structure",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "0-14 years",
+       "text": "25.5% (male 1,402,847/female 1,358,833)"
+      },
+      {
+       "label": "15-64 years",
+       "text": "66.9% (male 3,667,584/female 3,563,848)"
+      },
+      {
+       "label": "65 years and over",
+       "text": "7.6% (2024 est.) (male 395,345/female 427,400)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Dependency ratios",
+    "order": 70,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total dependency ratio",
+       "text": "49.6 (2025 est.)"
+      },
+      {
+       "label": "youth dependency ratio",
+       "text": "37.8 (2025 est.)"
+      },
+      {
+       "label": "elderly dependency ratio",
+       "text": "11.8 (2025 est.)"
+      },
+      {
+       "label": "potential support ratio",
+       "text": "8.5 (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Median age",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "29.6 years (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "29.1 years"
+      },
+      {
+       "label": "female",
+       "text": "29.4 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Population growth rate",
+    "order": 90,
+    "content": {
+     "text": "0.78% (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Birth rate",
+    "order": 100,
+    "content": {
+     "text": "17.4 births/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Death rate",
+    "order": 110,
+    "content": {
+     "text": "6.97 deaths/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Net migration rate",
+    "order": 120,
+    "content": {
+     "text": "-2.63 migrant(s)/1,000 population (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Population distribution",
+    "order": 130,
+    "content": {
+     "text": "coastal development is significant, especially in the southern coastal plains and the Cibao Valley, where population density is highest; smaller population clusters exist in the interior mountains (Cordillera Central)",
+     "items": []
+    }
+   },
+   {
+    "field": "Urbanization",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "urban population",
+       "text": "84.4% of total population (2023)"
+      },
+      {
+       "label": "rate of urbanization",
+       "text": "1.64% annual rate of change (2020-25 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Major urban areas - population",
+    "order": 150,
+    "content": {
+     "text": "3.524 million SANTO DOMINGO (capital) (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sex ratio",
+    "order": 160,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "at birth",
+       "text": "1.04 male(s)/female"
+      },
+      {
+       "label": "0-14 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "15-64 years",
+       "text": "1.03 male(s)/female"
+      },
+      {
+       "label": "65 years and over",
+       "text": "0.93 male(s)/female"
+      },
+      {
+       "label": "total population",
+       "text": "1.02 male(s)/female (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Mother's mean age at first birth",
+    "order": 170,
+    "content": {
+     "text": "20.9 years (2013 est.)",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> data represents median age at first birth among women 25-49"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Maternal mortality ratio",
+    "order": 180,
+    "content": {
+     "text": "124 deaths/100,000 live births (2023 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Infant mortality rate",
+    "order": 190,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "20.8 deaths/1,000 live births (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "24.3 deaths/1,000 live births"
+      },
+      {
+       "label": "female",
+       "text": "19 deaths/1,000 live births"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Life expectancy at birth",
+    "order": 200,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "72.6 years (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "71 years"
+      },
+      {
+       "label": "female",
+       "text": "74.3 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Total fertility rate",
+    "order": 210,
+    "content": {
+     "text": "2.17 children born/woman (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Gross reproduction rate",
+    "order": 220,
+    "content": {
+     "text": "1.06 (2025 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Drinking water source",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 97.8% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 91.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 96.8% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 2.2% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 8.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 3.2% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Health expenditure",
+    "order": 240,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Health expenditure (as % of GDP)",
+       "text": "4.9% of GDP (2021)"
+      },
+      {
+       "label": "Health expenditure (as % of national budget)",
+       "text": "14.4% of national budget (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Physician density",
+    "order": 250,
+    "content": {
+     "text": "2.43 physicians/1,000 population (2023)",
+     "items": []
+    }
+   },
+   {
+    "field": "Hospital bed density",
+    "order": 260,
+    "content": {
+     "text": "1.4 beds/1,000 population (2020 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Sanitation facility access",
+    "order": 270,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "improved: urban",
+       "text": "urban: 97.4% of population (2022 est.)"
+      },
+      {
+       "label": "improved: rural",
+       "text": "rural: 91.9% of population (2022 est.)"
+      },
+      {
+       "label": "improved: total",
+       "text": "total: 96.5% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: urban",
+       "text": "urban: 2.6% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: rural",
+       "text": "rural: 8.1% of population (2022 est.)"
+      },
+      {
+       "label": "unimproved: total",
+       "text": "total: 3.5% of population (2022 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Obesity - adult prevalence rate",
+    "order": 280,
+    "content": {
+     "text": "27.6% (2016)",
+     "items": []
+    }
+   },
+   {
+    "field": "Alcohol consumption per capita",
+    "order": 290,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "5.56 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "beer",
+       "text": "3.15 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "wine",
+       "text": "0.17 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "spirits",
+       "text": "2.18 liters of pure alcohol (2019 est.)"
+      },
+      {
+       "label": "other alcohols",
+       "text": "0.06 liters of pure alcohol (2019 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Tobacco use",
+    "order": 300,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "9.7% (2025 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13.5% (2025 est.)"
+      },
+      {
+       "label": "female",
+       "text": "5.9% (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Children under the age of 5 years underweight",
+    "order": 310,
+    "content": {
+     "text": "3% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Currently married women (ages 15-49)",
+    "order": 320,
+    "content": {
+     "text": "53.2% (2019 est.)",
+     "items": []
+    }
+   },
+   {
+    "field": "Child marriage",
+    "order": 330,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "women married by age 15",
+       "text": "9.4% (2019)"
+      },
+      {
+       "label": "women married by age 18",
+       "text": "31.5% (2019)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Education expenditure",
+    "order": 340,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "Education expenditure (% GDP)",
+       "text": "3.8% of GDP (2023 est.)"
+      },
+      {
+       "label": "Education expenditure (% national budget)",
+       "text": "20.9% national budget (2025 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Literacy",
+    "order": 350,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total population",
+       "text": "94% (2024 est.)"
+      },
+      {
+       "label": "male",
+       "text": "93.6% (2024 est.)"
+      },
+      {
+       "label": "female",
+       "text": "94.4% (2024 est.)"
+      }
+     ]
+    }
+   },
+   {
+    "field": "School life expectancy (primary to tertiary education)",
+    "order": 360,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total",
+       "text": "14 years (2022 est.)"
+      },
+      {
+       "label": "male",
+       "text": "13 years (2022 est.)"
+      },
+      {
+       "label": "female",
+       "text": "15 years (2022 est.)"
+      }
+     ]
+    }
+   }
+  ],
+  "Government": [
+   {
+    "field": "Country name",
+    "order": 10,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "conventional long form",
+       "text": "Dominican Republic"
+      },
+      {
+       "label": "conventional short form",
+       "text": "The Dominican"
+      },
+      {
+       "label": "local long form",
+       "text": "República Dominicana"
+      },
+      {
+       "label": "local short form",
+       "text": "La Dominicana"
+      },
+      {
+       "label": "former",
+       "text": "Santo Domingo (the capital city's name formerly applied to the entire country)"
+      },
+      {
+       "label": "etymology",
+       "text": "the name is a latinized form of the Spanish term <em>Santo Domingo</em>, meaning \"holy Sunday;\" Spanish explorers originally settled the island on a Sunday in 1496, and the name was first given to the island of Hispaniola as a whole in 1697"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Government type",
+    "order": 20,
+    "content": {
+     "text": "presidential republic",
+     "items": []
+    }
+   },
+   {
+    "field": "Capital",
+    "order": 30,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "name",
+       "text": "Santo Domingo"
+      },
+      {
+       "label": "geographic coordinates",
+       "text": "18 28 N, 69 54 W"
+      },
+      {
+       "label": "time difference",
+       "text": "UTC-4 (1 hour ahead of Washington, DC, during Standard Time)"
+      },
+      {
+       "label": "etymology",
+       "text": "named after Saint Domingo de GUZMAN (1170-1221), founder of the Dominican Order; the city's full name was originally Santo Domingo de Guzman"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Administrative divisions",
+    "order": 40,
+    "content": {
+     "text": "31 provinces (<em>provincias</em>, singular - <em>provincia</em>), 1 district* (<em>distrito</em>); Azua, Baoruco, Barahona, Dajabón, Distrito Nacional*, Duarte, Elías Piña, El Seibo, Espaillat, Hato Mayor, Hermanas Mirabal, Independencia, La Altagracia, La Romana, La Vega, María Trinidad Sánchez, Monseñor Nouel, Monte Cristi, Monte Plata, Pedernales, Peravia, Puerto Plata, Samaná, Sánchez Ramírez, San Cristóbal, San José de Ocoa, San Juan, San Pedro de Macorís, Santiago, Santiago Rodríguez, Santo Domingo, Valverde",
+     "items": []
+    }
+   },
+   {
+    "field": "Legal system",
+    "order": 50,
+    "content": {
+     "text": "civil law system based on the French civil code; Criminal Procedures Code modified in 2004 to include important elements of an accusatory system",
+     "items": []
+    }
+   },
+   {
+    "field": "Constitution",
+    "order": 60,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "history",
+       "text": "many previous (38 total); latest proclaimed 13 June 2015"
+      },
+      {
+       "label": "amendment process",
+       "text": "proposed by a special session of the National Congress called the National Revisory Assembly; passage requires at least two-thirds majority approval by at least one half of those present in both houses of the Assembly; passage of amendments to constitutional articles, such as fundamental rights and guarantees, territorial composition, nationality, or the procedures for constitutional reform, also requires approval in a referendum"
+      }
+     ]
+    }
+   },
+   {
+    "field": "International law organization participation",
+    "order": 70,
+    "content": {
+     "text": "accepts compulsory ICJ jurisdiction; accepts ICCt jurisdiction",
+     "items": []
+    }
+   },
+   {
+    "field": "Citizenship",
+    "order": 80,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "citizenship by birth",
+       "text": "no"
+      },
+      {
+       "label": "citizenship by descent only",
+       "text": "at least one parent must be a citizen of the Dominican Republic"
+      },
+      {
+       "label": "dual citizenship recognized",
+       "text": "yes"
+      },
+      {
+       "label": "residency requirement for naturalization",
+       "text": "2 years"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Suffrage",
+    "order": 90,
+    "content": {
+     "text": "18 years of age; universal and compulsory; married persons can vote, regardless of age",
+     "items": [
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> members of the armed forces and national police by law cannot vote"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Executive branch",
+    "order": 100,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "election/appointment process",
+       "text": "president and vice president directly elected on the same ballot by absolute vote in 2 rounds, if needed, for a 4-year term (eligible for a maximum of two consecutive terms)"
+      },
+      {
+       "label": "most recent election date",
+       "text": "19 May 2024"
+      },
+      {
+       "label": "election results",
+       "text": "<em><br />2024:</em> Luis Rodolfo ABINADER Corona reelected president; percent of vote - Luis Rodolfo ABINADER Corona (PRM) 57.5%, Leonel Antonio FERNÁNDEZ Reyna (FP) 28.8%, Abel MARTÍNEZ (PLD) 10.4%, other 3.3%<br /><br /><em>2020:</em> Luis Rodolfo ABINADER Corona elected president in first round; percent of vote - Luis Rodolfo ABINADER Corona (PRM) 52.5%, Gonzalo CASTILLO Terrero (PLD) 37.5%, Leonel Antonio FERNÁNDEZ Reyna (FP) 8.9%, other 1.1%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "21 May 2028"
+      },
+      {
+       "label": "note",
+       "text": "<strong>note:</strong> the president is both chief of state and head of government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch",
+    "order": 110,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "legislature name",
+       "text": "National Congress of the Republic (Congreso Nacional de la República)"
+      },
+      {
+       "label": "legislative structure",
+       "text": "bicameral"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - lower chamber",
+    "order": 120,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Chamber of Deputies (Cámara de Diputados)"
+      },
+      {
+       "label": "number of seats",
+       "text": "190 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/19/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Modern Revolutionary Party (PRM) and its allies (146); People’s Force (FP) and its allies (28); Other (16)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "37.4%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Legislative branch - upper chamber",
+    "order": 130,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "chamber name",
+       "text": "Senate (Senado)"
+      },
+      {
+       "label": "number of seats",
+       "text": "32 (all directly elected)"
+      },
+      {
+       "label": "electoral system",
+       "text": "proportional representation"
+      },
+      {
+       "label": "scope of elections",
+       "text": "full renewal"
+      },
+      {
+       "label": "term in office",
+       "text": "4 years"
+      },
+      {
+       "label": "most recent election date",
+       "text": "5/19/2024"
+      },
+      {
+       "label": "parties elected and seats per party",
+       "text": "Modern Revolutionary Party (PRM) and its allies (24); People’s Force (FP) and its allies (3); Other (5)"
+      },
+      {
+       "label": "percentage of women in chamber",
+       "text": "12.5%"
+      },
+      {
+       "label": "expected date of next election",
+       "text": "May 2028"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Judicial branch",
+    "order": 140,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "highest court(s)",
+       "text": "Supreme Court of Justice or Suprema Corte de Justicia (consists of a minimum of 16 magistrates); Constitutional Court or Tribunal Constitucional (consists of 13 judges)"
+      },
+      {
+       "label": "judge selection and term of office",
+       "text": "Supreme Court and Constitutional Court judges appointed by the National Council of the Judiciary composed of the president, the leaders of both chambers of congress, the president of the Supreme Court, and a non-governing party congressional representative; Supreme Court judges appointed for 7-year terms; Constitutional Court judges appointed for 9-year terms"
+      },
+      {
+       "label": "subordinate courts",
+       "text": "courts of appeal; courts of first instance; justices of the peace; special courts for juvenile, labor, and land cases; Contentious Administrative Court for cases filed against the government"
+      }
+     ]
+    }
+   },
+   {
+    "field": "Political parties",
+    "order": 150,
+    "content": {
+     "text": "Alliance for Democracy or APD<br />Broad Front (Frente Amplio)<br />Country Alliance or AP<br />Dominican Liberation Party or PLD<br />Dominican Revolutionary Party or PRD<br />Dominicans For Change or DXC<br />Independent Revolutionary Party or PRI<br />Institutional Social Democratic Bloc or BIS<br />Liberal Reformist Party or PRL (formerly the Liberal Party of the Dominican Republic or PLRD)<br />Modern Revolutionary Party or PRM<br />National Progressive Front or FNP<br />People's First Party or PPG<br />People's Force or FP<br />Social Christian Reformist Party or PRSC",
+     "items": []
+    }
+   },
+   {
+    "field": "International organization participation",
+    "order": 160,
+    "content": {
+     "text": "ACP, ACS, AOSIS, BCIE, Caricom (observer), CD, CELAC, FAO, G-77, IADB, IAEA, IBRD, ICAO, ICC (national committees), ICCt, ICRM, IDA, IFAD, IFC, IFRCS, IHO, ILO, IMF, IMO, Interpol, IOC, IOM, IPU, ISO (correspondent), ITSO, ITU, ITUC (NGOs), LAES, LAIA, MIGA, MINUSMA, NAM, OAS, OIF (observer), OPANAL, OPCW, Pacific Alliance (observer), PCA, Petrocaribe, SICA (associated member), UN, UNCTAD, UNESCO, UNHRC, UNIDO, Union Latina, UNOOSA, UNWTO, UPU, WCO, WFTU (NGOs), WHO, WIPO, WMO, WTO",
+     "items": []
+    }
+   },
+   {
+    "field": "Independence",
+    "order": 170,
+    "content": {
+     "text": "27 February 1844 (from Haiti)",
+     "items": []
+    }
+   },
+   {
+    "field": "National holiday",
+    "order": 180,
+    "content": {
+     "text": "Independence Day, 27 February (1844)",
+     "items": []
+    }
+   },
+   {
+    "field": "Flag",
+    "order": 190,
+    "content": {
+     "text": "<strong>description:</strong> a centered white cross extends to the edges and divides the flag into four rectangles; the top ones are ultramarine blue (left side) and vermilion red, and the bottom ones are vermilion red (left side) and ultramarine blue; a small coat of arms with a shield supported by a laurel branch and a palm branch is at the center of the cross; above the shield, a blue ribbon displays the motto DIOS, PATRIA, LIBERTAD (God, Fatherland, Liberty); below the shield, REPUBLICA DOMINICANA is on a red ribbon; on the shield, a Bible is opened to a verse that reads \"Y la verdad nos hara libre\" (And the truth shall set you free)<br /><br /><strong>meaning:</strong> blue stands for liberty, white for salvation, and red for the blood of heroes",
+     "items": []
+    }
+   },
+   {
+    "field": "National symbol(s)",
+    "order": 200,
+    "content": {
+     "text": "palmchat (bird)",
+     "items": []
+    }
+   },
+   {
+    "field": "National color(s)",
+    "order": 210,
+    "content": {
+     "text": "red, white, blue",
+     "items": []
+    }
+   },
+   {
+    "field": "National anthem(s)",
+    "order": 220,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "title",
+       "text": "\"Himno Nacional\" (National Anthem)"
+      },
+      {
+       "label": "lyrics/music",
+       "text": "Emilio PRUD'HOMME/Jose REYES"
+      },
+      {
+       "label": "history",
+       "text": "adopted 1934; also known as \"Quisqueyanos valientes\" (Valiant Sons of Quisqueye); the anthem refers to the Dominican people as Quisqueyanos, which comes from the ethnic name for the island"
+      }
+     ]
+    }
+   },
+   {
+    "field": "National heritage",
+    "order": 230,
+    "content": {
+     "text": null,
+     "items": [
+      {
+       "label": "total World Heritage Sites",
+       "text": "1 (cultural)"
+      },
+      {
+       "label": "selected World Heritage Site locales",
+       "text": "Colonial City of Santo Domingo"
+      }
+     ]
+    }
+   }
+  ]
+ }
+}
