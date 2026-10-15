@@ -13,6 +13,8 @@ const { requireAuth, requireRole } = require('../middleware/auth');
 const { runSync, isRunning } = require('../country-profiles/sync');
 const { SOURCE, INDICATORS } = require('../country-profiles/worldbank');
 const factbook = require('../country-profiles/factbook');
+const products = require('../country-profiles/comtrade-products');
+const { productName } = require('../export-potential/results');
 
 const router = express.Router();
 const adminOnly = [requireAuth, requireRole('ADMIN')];
@@ -129,6 +131,18 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
     for (const code of CHART_SERIES) series[code] = [];
     for (const r of ser) series[r.indicator_code].push({ year: Number(r.year), value: Number(r.value) });
 
+    // Main traded products (UN Comtrade, top HS4 shares), per flow.
+    const { rows: prodRows } = await db.query(
+      `SELECT flow, year, rank, hs4, share, source_name, source_url, retrieved_at
+       FROM stat_country_products WHERE iso3 = $1 ORDER BY flow, rank`,
+      [c.iso3]
+    );
+    const mainProducts = {};
+    for (const r of prodRows) {
+      if (!mainProducts[r.flow]) mainProducts[r.flow] = { year: Number(r.year), sourceName: r.source_name, sourceUrl: r.source_url, retrievedAt: r.retrieved_at, items: [] };
+      mainProducts[r.flow].items.push({ rank: Number(r.rank), hs4: r.hs4, name: productName(r.hs4), share: Number(r.share) });
+    }
+
     // Descriptive text (Factbook snapshot), grouped by section in display order.
     const { rows: txt } = await db.query(
       `SELECT section, field, display_order, content, source_name, source_url, data_date, retrieved_at, edited_at
@@ -163,6 +177,7 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
       },
       indicators,
       series,
+      mainProducts,
       texts,
     });
   } catch (err) {
@@ -190,9 +205,18 @@ router.get('/status', ...adminOnly, async (req, res) => {
               (SELECT count(*)::int FROM stat_country_texts WHERE edited_at IS NOT NULL) AS edited`
     );
     const fbMeta = factbook.readMeta();
+    const { rows: [prod] } = await db.query(
+      `SELECT count(DISTINCT iso3)::int AS countries, count(*)::int AS rows, min(year)::int AS min_year, max(year)::int AS max_year FROM stat_country_products`
+    );
+    const { rows: prodRuns } = await db.query(
+      `SELECT id, trigger, started_at, finished_at, status, ok_count, failed_count, log
+       FROM stat_sync_runs WHERE source_id = $1 ORDER BY started_at DESC LIMIT 1`,
+      [products.SOURCE.id]
+    );
     res.json({
       source: SOURCE, running: isRunning(), countries: counts.countries, observations: counts.observations, runs: rows.map(runRow),
       factbook: { ...fbRow, snapshotDate: fbMeta && fbMeta.snapshotDate, extractedAt: fbMeta && fbMeta.extractedAt, pending: await factbook.needsImport(db) },
+      products: { ...prod, keyConfigured: products.hasKey(), running: products.isRunning(), lastRun: prodRuns[0] ? runRow(prodRuns[0]) : null },
     });
   } catch (err) {
     console.error('country-profiles status error:', err);
@@ -224,6 +248,21 @@ router.post('/import-factbook', ...adminOnly, async (req, res) => {
     factbookImportRunning = false;
   }
 });
+
+// POST /api/country-profiles/sync-products — start a Comtrade products sync
+router.post('/sync-products', ...adminOnly, (req, res) => {
+  if (!products.hasKey()) return res.status(409).json({ error: 'COMTRADE_API_KEY is not set on the server' });
+  if (products.isRunning()) return res.status(409).json({ error: 'A products sync is already running' });
+  startProductsSync('admin');
+  res.status(202).json({ started: true });
+});
+
+function startProductsSync(trigger) {
+  const log = (m) => console.log(`country-products: ${m}`);
+  let budget = Infinity;
+  try { budget = require('../export-potential/scoring').loadConfig().pipeline.comtrade.dailyCallBudget || Infinity; } catch (_) { /* default */ }
+  products.syncProducts({ db, trigger, log, budget }).catch((err) => console.error('country-products: sync crashed:', err.message));
+}
 
 function startSync(trigger) {
   const log = (m) => console.log(`country-profiles: ${m}`);
@@ -268,6 +307,20 @@ async function bootCheck() {
   } catch (err) {
     console.warn('country-profiles: boot check skipped:', err.message);
   }
+  // Main products: with a Comtrade key, pull economies that have none yet
+  // (a resumable run; already-current economies cost no call).
+  try {
+    if (products.hasKey()) {
+      const { rows: [{ count }] } = await db.query(
+        `SELECT count(*)::int AS count FROM stat_countries c WHERE NOT EXISTS (SELECT 1 FROM stat_country_products p WHERE p.iso3 = c.iso3)`
+      );
+      if (count > 0) { console.log(`country-products: ${count} economies without products yet, pulling them`); startProductsSync('boot'); }
+    } else {
+      console.log('country-products: COMTRADE_API_KEY not set; main products are not pulled');
+    }
+  } catch (err) {
+    console.warn('country-products: boot check skipped:', err.message);
+  }
   // The Factbook text ships with the repository; load it into the database
   // (where it can be edited later) whenever the committed snapshot changed.
   try {
@@ -280,8 +333,24 @@ async function bootCheck() {
   }
 }
 
+// Monthly products refresh (Comtrade annual data moves slowly): the 2nd of
+// each month at 10:40 Tbilisi, after the weekly World Bank run has had its turn.
+function scheduleMonthlyProducts() {
+  const UTC_HOUR = 6, UTC_MINUTE = 40, DAY = 2;
+  const now = new Date();
+  let next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), DAY, UTC_HOUR, UTC_MINUTE, 0, 0));
+  if (next <= now) next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, DAY, UTC_HOUR, UTC_MINUTE, 0, 0));
+  const delay = next - now;
+  console.log(`country-products: next scheduled sync in ${(delay / 3600000).toFixed(1)}h (${next.toISOString()})`);
+  setTimeout(() => {
+    if (products.hasKey()) startProductsSync('scheduled');
+    scheduleMonthlyProducts();
+  }, delay);
+}
+
 if (process.env.NODE_ENV !== 'test' && !process.env.COUNTRY_PROFILES_NO_SCHEDULE) {
   scheduleWeeklySync();
+  scheduleMonthlyProducts();
   setTimeout(bootCheck, 30_000);
 }
 

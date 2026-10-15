@@ -865,6 +865,9 @@
     const fbStatusEl = document.getElementById('cpFactbookStatus');
     const fbBtn = document.getElementById('cpFactbookBtn');
     const fbFeedback = document.getElementById('cpFactbookFeedback');
+    const prStatusEl = document.getElementById('cpProductsStatus');
+    const prBtn = document.getElementById('cpProductsBtn');
+    const prFeedback = document.getElementById('cpProductsFeedback');
     if (!statusEl || !btn) return;
     const tr = (k, p) => I18n.tr(k, p);
     const statusLabel = (s) => ({ ok: tr('admin.countryProfiles.statusOk'), partial: tr('admin.countryProfiles.statusPartial'), failed: tr('admin.countryProfiles.statusFailed') })[s] || s;
@@ -887,6 +890,17 @@
         }
         statusEl.textContent = lines.join(' · ');
         btn.disabled = !!j.running;
+        if (prStatusEl && j.products) {
+          const p = j.products;
+          const parts = [];
+          if (!p.keyConfigured) parts.push(tr('admin.countryProfiles.productsNoKey'));
+          parts.push(p.countries ? tr('admin.countryProfiles.productsSummary', { countries: p.countries, from: p.min_year, to: p.max_year }) : tr('admin.countryProfiles.productsNever'));
+          if (p.running) parts.push(tr('admin.countryProfiles.running'));
+          else if (p.lastRun) parts.push(tr('admin.countryProfiles.lastRun', { finished: p.lastRun.finishedAt ? new Date(p.lastRun.finishedAt).toLocaleString() : '—', status: statusLabel(p.lastRun.status), ok: p.lastRun.okCount, failed: p.lastRun.failedCount }));
+          prStatusEl.textContent = parts.join(' · ');
+          prStatusEl.style.color = p.keyConfigured ? '' : '#a16207';
+          if (prBtn) prBtn.disabled = !p.keyConfigured || !!p.running;
+        }
         if (fbStatusEl && j.factbook) {
           const f = j.factbook;
           const parts = [tr('admin.countryProfiles.factbookSummary', { countries: f.countries, fields: Number(f.fields).toLocaleString(), edited: f.edited, snapshot: f.snapshotDate || '—' })];
@@ -897,6 +911,21 @@
       } catch (err) {
         statusEl.textContent = err.message;
       }
+    }
+
+    if (prBtn) {
+      prBtn.addEventListener('click', async () => {
+        prBtn.disabled = true;
+        prFeedback.textContent = '';
+        try {
+          await Api.post('/api/country-profiles/sync-products', {});
+          prFeedback.textContent = tr('admin.countryProfiles.started');
+          setTimeout(load, 1500);
+        } catch (err) {
+          prFeedback.textContent = err.message;
+          prBtn.disabled = false;
+        }
+      });
     }
 
     if (fbBtn) {

@@ -70,6 +70,15 @@ const GEORGIA = {
     'NY.GDP.MKTP.CD': [{ year: 2022, value: 24.6e9 }, { year: 2023, value: 30.5e9 }, { year: 2024, value: 33.3e9 }],
     'SP.POP.TOTL': [{ year: 2022, value: 3712500 }, { year: 2023, value: 3728282 }, { year: 2024, value: 3694600 }],
   },
+  mainProducts: {
+    X: { year: 2024, sourceName: 'UN Comtrade', sourceUrl: 'https://comtradeplus.un.org/', retrievedAt: '2026-10-15T00:00:00Z', items: [
+      { rank: 1, hs4: '8703', name: { en: 'Motor Cars', ka: 'მსუბუქი ავტომობილები' }, share: 0.2934 },
+      { rank: 2, hs4: '2204', name: { en: 'Wine', ka: 'ღვინო' }, share: 0.0712 },
+      { rank: 3, hs4: '7202', name: { en: 'Ferro-Alloys', ka: 'ფეროშენადნობები' }, share: 0.041 },
+      { rank: 4, hs4: '2603', name: { en: 'Copper Ores', ka: 'სპილენძის მადანი' }, share: 0.038 },
+      { rank: 5, hs4: '0802', name: { en: 'Nuts', ka: 'კაკალი' }, share: 0.03 },
+    ] },
+  },
   texts: {
     source: { name: 'CIA World Factbook', url: 'https://github.com/factbook/factbook.json/tree/abc', dataDate: '2026-01', retrievedAt: '2026-10-13T00:00:00Z', discontinued: '2026-02-04' },
     // Keyed by page section; `label` is what the page shows, `field` the source name.
@@ -192,8 +201,18 @@ test('profile: breadcrumb, hero, key figures with year and source, only sections
   const trade = page.locator('#cpTrade');
   await expect(trade.locator('.cp-kf__item')).toHaveCount(2);
   await expect(trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"] .cp-kf__value')).toHaveText('$7.29B');
-  await expect(trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"] .cp-tag__src')).toHaveText('WTO');
+  await expect(trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"] .cp-kf__meta .cp-tag__src')).toHaveText('WTO');
   await expect(trade.locator('.cp-kf__item[data-code="TM.VAL.MRCH.CD.WT"] .cp-kf__value')).toHaveText('No data');
+  // Main products: top five HS4 headings with shares under the export tile,
+  // their own Comtrade year tag; the import tile has none and says so.
+  const exportsTile = trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"]');
+  await expect(exportsTile.locator('.cp-products__item')).toHaveCount(5);
+  await expect(exportsTile.locator('.cp-products__item').first()).toHaveText('Motor Cars29.3%');
+  await expect(exportsTile.locator('.cp-products__item').first()).toHaveAttribute('title', 'HS 8703');
+  await expect(exportsTile.locator('.cp-products .cp-tag__year')).toHaveText('2024');
+  await expect(exportsTile.locator('.cp-products .cp-tag__src')).toHaveText('UN Comtrade');
+  await expect(trade.locator('.cp-kf__item[data-code="TM.VAL.MRCH.CD.WT"] .cp-products--none')).toContainText('No data');
+  await expect(page.locator('.cp-kf .cp-attrib').nth(2)).toContainText('Main products: UN Comtrade, top five HS4 headings');
   await expect(page.locator('.cp-kf .cp-attrib').nth(1)).toContainText('World Trade Organization figures, published in the World Bank, World Development Indicators');
   await expect(page.locator('.cp-kf__item[data-code="NY.GDP.MKTP.CD"] .cp-tag__src')).toHaveText('World Bank');
 
@@ -234,6 +253,7 @@ test('pages are bilingual: Georgian names and labels in the ka locale', async ({
   await expect(page.locator('.cp-hero__name')).toHaveText('საქართველო');
   await expect(page.locator('.cp-hero__official')).toContainText('Georgia');
   await expect(page.locator('.cp-kf__item[data-code="SL.UEM.TOTL.ZS"] .cp-kf__value')).toHaveText('მონაცემები არ არის');
+  await expect(page.locator('#cpTrade .cp-products__item').first()).toContainText('მსუბუქი ავტომობილები');
   await expect(page.locator('#cpTocList a').first()).toHaveText('შესავალი');
   await expect(page.locator('#cpTocList a').nth(1)).toHaveText('მიმოხილვა');
 });

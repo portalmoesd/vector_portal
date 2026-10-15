@@ -131,6 +131,14 @@
           <div id="cpFactbookStatus" style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:10px;" data-i18n="admin.upload.loading">Loading…</div>
           <button type="button" class="btn btn-outline" id="cpFactbookBtn" data-i18n="admin.countryProfiles.factbookReload">Reload Factbook text</button>
           <div id="cpFactbookFeedback" style="margin-top:10px;font-size:0.9rem;"></div>
+
+          <h4 style="margin:18px 0 6px;font-size:0.95rem;" data-i18n="admin.countryProfiles.productsTitle">Main traded products</h4>
+          <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:10px;" data-i18n="admin.countryProfiles.productsDesc">
+            Top five HS4 headings by share of exports and imports, from UN Comtrade. Needs COMTRADE_API_KEY on the server; runs monthly, at start-up for economies without products, and on demand here. One call per economy and flow against the daily Comtrade budget shared with Export Potential; a run stopped by the budget resumes next time.
+          </p>
+          <div id="cpProductsStatus" style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:10px;" data-i18n="admin.upload.loading">Loading…</div>
+          <button type="button" class="btn btn-outline" id="cpProductsBtn" data-i18n="admin.countryProfiles.productsSync">Sync main products</button>
+          <div id="cpProductsFeedback" style="margin-top:10px;font-size:0.9rem;"></div>
         </section>
       </div>
 

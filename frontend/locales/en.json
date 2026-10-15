@@ -498,7 +498,13 @@
       "factbookCurrent": "database matches the shipped version",
       "factbookReload": "Reload Factbook text",
       "factbookLoading": "Loading…",
-      "factbookDone": "Loaded {fields} fields for {countries} countries ({edited} edited entries kept)."
+      "factbookDone": "Loaded {fields} fields for {countries} countries ({edited} edited entries kept).",
+      "productsTitle": "Main traded products",
+      "productsDesc": "Top five HS4 headings by share of exports and imports, from UN Comtrade. Needs COMTRADE_API_KEY on the server; runs monthly, at start-up for economies without products, and on demand here. One call per economy and flow against the daily Comtrade budget shared with Export Potential; a run stopped by the budget resumes next time.",
+      "productsSummary": "{countries} economies with products · data years {from}–{to}",
+      "productsNever": "No products pulled yet.",
+      "productsNoKey": "COMTRADE_API_KEY is not set on the server",
+      "productsSync": "Sync main products"
     }
   },
   "library": {
@@ -1267,6 +1273,12 @@
       "title": "GDP and population, last 20 years",
       "gdp": "GDP (current US$)",
       "population": "Population"
+    },
+    "products": {
+      "title": "Main products",
+      "sourceShort": "UN Comtrade",
+      "shareNote": "Share of the flow, top HS4 headings",
+      "attribution": "Main products: {source}, top five HS4 headings by share of the flow, latest annual year the reporter has published"
     },
     "factbook": {
       "fromFactbook": "From the World Factbook",
