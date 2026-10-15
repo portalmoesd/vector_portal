@@ -1256,9 +1256,7 @@
       "gdpGrowth": "GDP growth",
       "inflation": "Inflation",
       "unemployment": "Unemployment",
-      "exports": "Exports of goods and services",
       "merchandiseExports": "Merchandise exports",
-      "imports": "Imports of goods and services",
       "merchandiseImports": "Merchandise imports",
       "lifeExpectancy": "Life expectancy at birth",
       "urbanPopulation": "Urban population"
@@ -1283,6 +1281,8 @@
     "lastSync": "Data synced",
     "latestYearNote": "Each figure shows the latest year the source has published.",
     "keyFigures": "Key figures",
-    "sourceShort": "World Bank"
+    "sourceShort": "World Bank",
+    "sourceShortWto": "WTO",
+    "wtoAttribution": "World Trade Organization figures, published in the {source}"
   }
 }

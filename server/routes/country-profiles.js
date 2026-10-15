@@ -100,15 +100,17 @@ router.get('/countries/:slug', ...adminOnly, async (req, res) => {
          WHERE o.indicator_code = i.code AND o.iso3 = $1
          ORDER BY year DESC LIMIT 1
        ) o ON true
-       WHERE i.source_id = $2
+       WHERE i.source_id = $2 AND i.code = ANY($3::text[])
        ORDER BY i.display_order`,
-      [c.iso3, SOURCE.id]
+      [c.iso3, SOURCE.id, INDICATORS.map((i) => i.code)]
     );
+    const compilerOf = new Map(INDICATORS.map((i) => [i.code, i.compiler || null]));
     const indicators = ind.map((r) => ({
       code: r.code,
       name: r.name,
       unit: r.unit,
       section: r.section,
+      compiler: compilerOf.get(r.code) || null,
       value: r.value == null ? null : Number(r.value),
       year: r.year == null ? null : Number(r.year),
       sourceName: r.source_name || SOURCE.name,
