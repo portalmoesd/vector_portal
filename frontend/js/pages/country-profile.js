@@ -35,8 +35,6 @@
     'NY.GDP.MKTP.KD.ZG': 'gdpGrowth',
     'FP.CPI.TOTL.ZG': 'inflation',
     'SL.UEM.TOTL.ZS': 'unemployment',
-    'NE.EXP.GNFS.CD': 'exports',
-    'NE.IMP.GNFS.CD': 'imports',
     'TX.VAL.MRCH.CD.WT': 'merchandiseExports',
     'TM.VAL.MRCH.CD.WT': 'merchandiseImports',
     'SP.DYN.LE00.IN': 'lifeExpectancy',
@@ -88,15 +86,19 @@
     if (ind.value == null) return `<span class="cp-tag cp-tag--none">${escapeHtml(t('countryProfiles.noDataSource'))}</span>`;
     const retrieved = ind.retrievedAt ? `${t('countryProfiles.retrieved')} ${formatDate(ind.retrievedAt)}` : '';
     const title = `${ind.name} · ${ind.sourceName}${retrieved ? ` · ${retrieved}` : ''}`;
-    return `<span class="cp-tag" title="${escapeHtml(title)}"><span class="cp-tag__year">${ind.year}</span><span class="cp-tag__src">${escapeHtml(t('countryProfiles.sourceShort'))}</span></span>`;
+    return `<span class="cp-tag" title="${escapeHtml(title)}"><span class="cp-tag__year">${ind.year}</span><span class="cp-tag__src">${escapeHtml(shortSource(ind))}</span></span>`;
   }
+
+  // "WTO" for figures the World Bank republishes from the WTO, else "World Bank".
+  const shortSource = (ind) => (ind.compiler === 'WTO' ? t('countryProfiles.sourceShortWto') : t('countryProfiles.sourceShort'));
 
   function wbAttribution(indicators) {
     const withData = indicators.filter((i) => i.value != null);
     const src = withData[0];
     if (!src) return '';
     const retrieved = src.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(src.retrievedAt)}` : '';
-    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${escapeHtml(src.sourceName)}${escapeHtml(retrieved)} · ${escapeHtml(t('countryProfiles.latestYearNote'))}</div>`;
+    const name = withData.every((i) => i.compiler === 'WTO') ? t('countryProfiles.wtoAttribution', { source: src.sourceName }) : src.sourceName;
+    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${escapeHtml(name)}${escapeHtml(retrieved)} · ${escapeHtml(t('countryProfiles.latestYearNote'))}</div>`;
   }
 
   function fbAttribution(src) {

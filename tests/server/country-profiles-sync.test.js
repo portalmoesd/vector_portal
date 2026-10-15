@@ -112,8 +112,9 @@ test('fetchJson retries on failure and then reports the last error', async () =>
 test('the configured indicator list matches the brief', () => {
   assert.deepStrictEqual(wb.INDICATORS.map((i) => i.code), [
     'SP.POP.TOTL', 'AG.SRF.TOTL.K2', 'NY.GDP.MKTP.CD', 'NY.GDP.PCAP.CD', 'NY.GDP.MKTP.KD.ZG',
-    'FP.CPI.TOTL.ZG', 'SL.UEM.TOTL.ZS', 'NE.EXP.GNFS.CD', 'TX.VAL.MRCH.CD.WT', 'NE.IMP.GNFS.CD', 'TM.VAL.MRCH.CD.WT',
-    'SP.DYN.LE00.IN', 'SP.URB.TOTL.IN.ZS',
+    'FP.CPI.TOTL.ZG', 'SL.UEM.TOTL.ZS', 'TX.VAL.MRCH.CD.WT', 'TM.VAL.MRCH.CD.WT', 'SP.DYN.LE00.IN', 'SP.URB.TOTL.IN.ZS',
   ]);
+  // Trade figures are the WTO's, republished in the WDI; everything else is the World Bank's own.
+  for (const i of wb.INDICATORS) assert.strictEqual(i.compiler || null, i.section === 'trade' ? 'WTO' : null, i.code);
   for (const i of wb.INDICATORS) assert.ok(['overview', 'people', 'economy', 'trade'].includes(i.section), i.code);
 });

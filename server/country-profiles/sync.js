@@ -105,6 +105,16 @@ async function runSync({ db, trigger = 'cli', log = defaultLog, indicators = nul
         note('error', ind.code, `pull failed, previous values kept: ${err.message}`);
       }
     }
+
+    // ── 3. Indicators no longer configured are removed ─────────────────
+    if (!dryRun) {
+      try {
+        const removed = await removeUnconfigured(db);
+        if (removed.length) note('info', 'cleanup', `removed indicators no longer configured: ${removed.join(', ')}`);
+      } catch (err) {
+        note('error', 'cleanup', `could not remove unconfigured indicators: ${err.message}`);
+      }
+    }
   } finally {
     running = false;
   }
@@ -118,6 +128,31 @@ async function runSync({ db, trigger = 'cli', log = defaultLog, indicators = nul
   }
   log(`done in ${((Date.now() - started) / 1000).toFixed(1)}s: ${status} (${ok} ok, ${failed} failed)${dryRun ? ' [dry run]' : ''}`);
   return { runId, status, ok, failed, entries, dryRun };
+}
+
+// Delete the rows of indicators that were dropped from INDICATORS, so the
+// database (and the page, which lists stored indicators) follows the config.
+async function removeUnconfigured(db) {
+  const configured = wb.INDICATORS.map((i) => i.code);
+  const { rows } = await db.query(
+    'SELECT code FROM stat_indicators WHERE source_id = $1 AND NOT (code = ANY($2::text[]))',
+    [wb.SOURCE.id, configured]
+  );
+  const codes = rows.map((r) => r.code);
+  if (!codes.length) return codes;
+  const client = await db.pool.connect();
+  try {
+    await client.query('BEGIN');
+    await client.query('DELETE FROM stat_observations WHERE source_id = $1 AND indicator_code = ANY($2::text[])', [wb.SOURCE.id, codes]);
+    await client.query('DELETE FROM stat_indicators WHERE source_id = $1 AND code = ANY($2::text[])', [wb.SOURCE.id, codes]);
+    await client.query('COMMIT');
+  } catch (err) {
+    await client.query('ROLLBACK');
+    throw err;
+  } finally {
+    client.release();
+  }
+  return codes;
 }
 
 async function replaceCountries(db, list) {

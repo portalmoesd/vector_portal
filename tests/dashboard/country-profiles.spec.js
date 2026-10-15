@@ -61,8 +61,8 @@ const GEORGIA = {
     ind('NY.GDP.MKTP.KD.ZG', 'GDP growth (annual %)', 'pct', 'economy', 9.4, 2024),
     ind('FP.CPI.TOTL.ZG', 'Inflation, consumer prices (annual %)', 'pct', 'economy', 1.1, 2024),
     ind('SL.UEM.TOTL.ZS', 'Unemployment, total (% of total labor force) (modeled ILO estimate)', 'pct', 'economy', null, null),
-    ind('NE.EXP.GNFS.CD', 'Exports of goods and services (current US$)', 'usd', 'trade', null, null),
-    ind('NE.IMP.GNFS.CD', 'Imports of goods and services (current US$)', 'usd', 'trade', null, null),
+    { ...ind('TX.VAL.MRCH.CD.WT', 'Merchandise exports (current US$)', 'usd', 'trade', 7290000000, 2025), compiler: 'WTO' },
+    { ...ind('TM.VAL.MRCH.CD.WT', 'Merchandise imports (current US$)', 'usd', 'trade', null, null), compiler: 'WTO' },
     ind('SP.DYN.LE00.IN', 'Life expectancy at birth, total (years)', 'years', 'people', 73.7, 2023),
     ind('SP.URB.TOTL.IN.ZS', 'Urban population (% of total population)', 'pct', 'people', 61.2, 2024),
   ],
@@ -182,10 +182,17 @@ test('profile: breadcrumb, hero, key figures with year and source, only sections
   await expect(page.locator('.cp-kf__item[data-code="SL.UEM.TOTL.ZS"] .cp-kf__value')).toHaveText('No data');
   await expect(page.locator('.cp-kf .cp-attrib')).toContainText('World Bank, World Development Indicators');
 
-  // Trade has no values at all, so the section and its nav entry are absent.
-  await expect(page.locator('.cp-section')).toHaveCount(5);
-  await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'People', 'Government', 'Economy']);
-  await expect(page.locator('#section-trade')).toHaveCount(0);
+  await expect(page.locator('.cp-section')).toHaveCount(6);
+  await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'People', 'Government', 'Economy', 'Trade']);
+
+  // Trade: WTO merchandise figures only, credited to the WTO; a missing one reads "No data".
+  const trade = page.locator('#section-trade');
+  await expect(trade.locator('.cp-kf__item')).toHaveCount(2);
+  await expect(trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"] .cp-kf__value')).toHaveText('$7.29B');
+  await expect(trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"] .cp-tag__src')).toHaveText('WTO');
+  await expect(trade.locator('.cp-kf__item[data-code="TM.VAL.MRCH.CD.WT"] .cp-kf__value')).toHaveText('No data');
+  await expect(trade.locator('.cp-attrib')).toContainText('World Trade Organization figures, published in the World Bank, World Development Indicators');
+  await expect(page.locator('.cp-kf__item[data-code="NY.GDP.MKTP.CD"] .cp-tag__src')).toHaveText('World Bank');
 
   // Tables: World Bank rows carry a year tag, Factbook rows sit under a group
   // caption with the display label and sub-entries as a list.

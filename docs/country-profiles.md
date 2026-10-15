@@ -41,10 +41,8 @@ Source: World Bank WDI, `https://api.worldbank.org/v2`. Country list from
 | NY.GDP.MKTP.KD.ZG | Economy | GDP growth (tile) |
 | FP.CPI.TOTL.ZG | Economy | Inflation (tile) |
 | SL.UEM.TOTL.ZS | Economy | Unemployment (tile) |
-| NE.EXP.GNFS.CD | Trade | Exports of goods and services |
-| NE.IMP.GNFS.CD | Trade | Imports of goods and services |
-| TX.VAL.MRCH.CD.WT | Trade | Merchandise exports (goods only, customs basis, WTO figures) |
-| TM.VAL.MRCH.CD.WT | Trade | Merchandise imports (goods only, customs basis, WTO figures) |
+| TX.VAL.MRCH.CD.WT | Trade | Merchandise exports (goods, customs basis; WTO figures republished in the WDI, credited to the WTO on the page) |
+| TM.VAL.MRCH.CD.WT | Trade | Merchandise imports (goods, customs basis; WTO figures, as above) |
 | SP.DYN.LE00.IN | People | Life expectancy at birth |
 | SP.URB.TOTL.IN.ZS | People | Urban population, % |
 
@@ -145,7 +143,9 @@ when the API is responsive; individual WDI requests have taken 30–90 s on
 slow days, so each request has a 120 s timeout and three retries.
 
 The sync is idempotent. The country list and each indicator are replaced in
-their own transaction only after the whole pull succeeded; a failed pull is
+their own transaction only after the whole pull succeeded; indicators removed
+from the configuration are deleted from the database at the end of a run (the
+profile API also lists only configured indicators, so a stale row never shows); a failed pull is
 logged on the run row and the previous values stay in place. The run exits 0
 on `ok`/`partial`, 2 on `failed`.
 
