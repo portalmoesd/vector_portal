@@ -15,10 +15,10 @@ only from those tables.
 
 Profile layout: a hero (flag, name, official long-form name, region and
 income pills, capital),
-a "Key figures" strip of seven World Bank indicators, then the sections
-Introduction, Overview, People, Government, Economy (with the 20-year GDP and
-population chart) and Trade, each rendered only when it has data, with a sticky
-"On this page" nav. Every section uses the same table: label, value, and a
+a "Key figures" card (the seven headline World Bank indicators as a strip, then
+the 20-year GDP and population chart beside the two WTO merchandise trade
+tiles), then the sections Introduction, Overview, People and Government, each
+rendered only when it has data, with a sticky "On this page" nav. Every section uses the same table: label, value, and a
 year + source tag for each World Bank figure; Factbook rows sit under a
 "From the World Factbook" caption with one attribution line per section.
 

@@ -168,7 +168,7 @@ test('profile: breadcrumb, hero, key figures with year and source, only sections
   await expect(page.locator('.cp-hero')).not.toContainText('parliamentary republic');
 
   // Key figures: seven, each with its year tag linking to the source.
-  const kf = page.locator('.cp-kf .cp-kf__item');
+  const kf = page.locator('.cp-kf .cp-kf__grid .cp-kf__item');
   await expect(kf).toHaveCount(7);
   const gdp = page.locator('.cp-kf__item[data-code="NY.GDP.MKTP.CD"]');
   await expect(gdp.locator('.cp-kf__value')).toHaveText('$33.3B');
@@ -180,23 +180,25 @@ test('profile: breadcrumb, hero, key figures with year and source, only sections
   await expect(page.locator('.cp-kf__item[data-code="SP.POP.TOTL"] .cp-kf__value')).toHaveText('3,694,600');
   await expect(page.locator('.cp-kf__item[data-code="AG.SRF.TOTL.K2"] .cp-kf__value')).toHaveText('69,700 km²');
   await expect(page.locator('.cp-kf__item[data-code="SL.UEM.TOTL.ZS"] .cp-kf__value')).toHaveText('No data');
-  await expect(page.locator('.cp-kf .cp-attrib')).toContainText('World Bank, World Development Indicators');
+  await expect(page.locator('.cp-kf .cp-attrib').first()).toContainText('World Bank, World Development Indicators');
 
-  await expect(page.locator('.cp-section')).toHaveCount(6);
-  await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'People', 'Government', 'Economy', 'Trade']);
+  // Economy and Trade live inside Key figures; the sections below are text and people.
+  await expect(page.locator('.cp-section')).toHaveCount(4);
+  await expect(page.locator('#cpTocList a')).toHaveText(['Introduction', 'Overview', 'People', 'Government']);
+  await expect(page.locator('#section-economy')).toHaveCount(0);
+  await expect(page.locator('.cp-kf__item[data-code="NY.GDP.MKTP.CD"] .cp-kf__value')).toHaveAttribute('title', '$33,320,000,000');
 
   // Trade: WTO merchandise figures only, credited to the WTO; a missing one reads "No data".
-  const trade = page.locator('#section-trade');
+  const trade = page.locator('#cpTrade');
   await expect(trade.locator('.cp-kf__item')).toHaveCount(2);
   await expect(trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"] .cp-kf__value')).toHaveText('$7.29B');
   await expect(trade.locator('.cp-kf__item[data-code="TX.VAL.MRCH.CD.WT"] .cp-tag__src')).toHaveText('WTO');
   await expect(trade.locator('.cp-kf__item[data-code="TM.VAL.MRCH.CD.WT"] .cp-kf__value')).toHaveText('No data');
-  await expect(trade.locator('.cp-attrib')).toContainText('World Trade Organization figures, published in the World Bank, World Development Indicators');
+  await expect(page.locator('.cp-kf .cp-attrib').nth(1)).toContainText('World Trade Organization figures, published in the World Bank, World Development Indicators');
   await expect(page.locator('.cp-kf__item[data-code="NY.GDP.MKTP.CD"] .cp-tag__src')).toHaveText('World Bank');
 
   // Tables: World Bank rows carry a year tag, Factbook rows sit under a group
   // caption with the display label and sub-entries as a list.
-  await expect(page.locator('#section-economy .cp-tr[data-code="SL.UEM.TOTL.ZS"] .cp-tr__value')).toHaveText('No data');
   await expect(page.locator('#section-people .cp-tr[data-code="SP.DYN.LE00.IN"] .cp-tr__value')).toHaveText('73.7 years');
   await expect(page.locator('#section-people .cp-tr[data-code="SP.DYN.LE00.IN"] .cp-tag__year')).toHaveText('2023');
   await expect(page.locator('#section-introduction .cp-prose')).toContainText('kingdoms of Colchis');
