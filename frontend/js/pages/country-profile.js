@@ -216,30 +216,63 @@
   // The seven headline indicators as a strip, then the 20-year GDP and
   // population chart beside the two merchandise trade tiles. Compact values
   // carry the exact figure in their tooltip.
-  function kfItem(ind) {
+  function kfItem(ind, extraHtml = '') {
     const v = fmtValue(ind);
     const exact = ind.value == null ? '' : fmtValue(ind, { compact: false });
     return `<div class="cp-kf__item" data-code="${escapeHtml(ind.code)}">
       <div class="cp-kf__label" title="${escapeHtml(ind.name)}">${escapeHtml(label(ind.code))}</div>
       <div class="cp-kf__value${v == null ? ' cp-kf__value--none' : ''}"${exact && exact !== v ? ` title="${escapeHtml(exact)}"` : ''}>${v == null ? escapeHtml(t('countryProfiles.noData')) : escapeHtml(v)}</div>
-      <div class="cp-kf__meta">${sourceTag(ind)}</div>
+      <div class="cp-kf__meta">${sourceTag(ind)}</div>${extraHtml}
     </div>`;
   }
 
-  function renderKeyFigures(indicators, series) {
+  // Main products under a trade tile: top HS4 headings with their share of
+  // the flow, from UN Comtrade, with their own year tag (Comtrade's latest
+  // annual year can differ from the WTO figure's year).
+  const FLOW_OF = { 'TX.VAL.MRCH.CD.WT': 'X', 'TM.VAL.MRCH.CD.WT': 'M' };
+  function mainProductsHtml(flowData) {
+    if (!flowData || !flowData.items || !flowData.items.length) {
+      return `<div class="cp-products cp-products--none"><span class="cp-products__title">${escapeHtml(t('countryProfiles.products.title'))}</span><span class="cp-nodata">${escapeHtml(t('countryProfiles.noData'))}</span></div>`;
+    }
+    const items = flowData.items.map((p) => {
+      const name = isKa() ? (p.name && (p.name.ka || p.name.en)) : (p.name && p.name.en);
+      return `<li class="cp-products__item" title="HS ${escapeHtml(p.hs4)}"><span class="cp-products__name">${escapeHtml(name || `HS ${p.hs4}`)}</span><span class="cp-products__share">${escapeHtml(fmtDec(p.share * 100, 1))}%</span></li>`;
+    }).join('');
+    const retrieved = flowData.retrievedAt ? `${t('countryProfiles.retrieved')} ${formatDate(flowData.retrievedAt)}` : '';
+    const title = `${t('countryProfiles.products.shareNote')} · ${flowData.sourceName}${retrieved ? ` · ${retrieved}` : ''}`;
+    return `<div class="cp-products">
+      <div class="cp-products__head"><span class="cp-products__title">${escapeHtml(t('countryProfiles.products.title'))}</span><span class="cp-tag" title="${escapeHtml(title)}"><span class="cp-tag__year">${flowData.year}</span><span class="cp-tag__src">${escapeHtml(t('countryProfiles.products.sourceShort'))}</span></span></div>
+      <ol class="cp-products__list">${items}</ol>
+    </div>`;
+  }
+
+  function tradeTile(ind, mainProducts) {
+    const flow = FLOW_OF[ind.code];
+    return kfItem(ind, flow ? mainProductsHtml(mainProducts && mainProducts[flow]) : '');
+  }
+
+  function productsAttribution(mainProducts) {
+    const flows = Object.values(mainProducts || {}).filter((f) => f && f.items && f.items.length);
+    if (!flows.length) return '';
+    const src = flows[0];
+    const retrieved = src.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(src.retrievedAt)}` : '';
+    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${escapeHtml(t('countryProfiles.products.attribution', { source: src.sourceName }))}${escapeHtml(retrieved)}</div>`;
+  }
+
+  function renderKeyFigures(indicators, series, mainProducts) {
     const byCode = new Map(indicators.map((i) => [i.code, i]));
     const strip = KEY_FIGURES.filter((c) => byCode.has(c)).map((c) => byCode.get(c));
     const trade = indicators.filter((i) => i.section === 'trade');
     const showChart = !!(window.Chart && chartHasData(series));
     const lower = (showChart || trade.length) ? `<div class="cp-kf__lower${showChart ? '' : ' cp-kf__lower--no-chart'}">
         ${showChart ? `<div class="cp-chart"><h3 class="cp-chart__title">${escapeHtml(t('countryProfiles.chart.title'))}</h3><div class="cp-chart__canvas"><canvas id="cpChart" role="img" aria-label="${escapeHtml(t('countryProfiles.chart.title'))}"></canvas></div></div>` : ''}
-        ${trade.length ? `<div class="cp-kf__trade" id="cpTrade"><h3 class="cp-kf__subtitle">${escapeHtml(t('countryProfiles.sections.trade'))}</h3>${trade.map(kfItem).join('')}</div>` : ''}
+        ${trade.length ? `<div class="cp-kf__trade" id="cpTrade"><h3 class="cp-kf__subtitle">${escapeHtml(t('countryProfiles.sections.trade'))}</h3>${trade.map((i) => tradeTile(i, mainProducts)).join('')}</div>` : ''}
       </div>` : '';
     $('cpTiles').innerHTML = `<section class="card cp-kf" aria-labelledby="cpKfTitle">
       <div class="cp-section__head"><h2 class="cp-section__title" id="cpKfTitle">${escapeHtml(t('countryProfiles.keyFigures'))}</h2></div>
-      <div class="cp-kf__grid">${strip.map(kfItem).join('')}</div>
+      <div class="cp-kf__grid">${strip.map((i) => kfItem(i)).join('')}</div>
       ${lower}
-      ${wbAttribution(strip)}${trade.length ? wbAttribution(trade, { note: false }) : ''}
+      ${wbAttribution(strip)}${trade.length ? wbAttribution(trade, { note: false }) : ''}${productsAttribution(mainProducts)}
     </section>`;
     if (showChart) drawChart(series);
   }
@@ -364,7 +397,7 @@
     const data = await Api.get(`/api/country-profiles/countries/${encodeURIComponent(slug)}`);
     renderBreadcrumb(data.country);
     renderHero(data);
-    renderKeyFigures(data.indicators, data.series);
+    renderKeyFigures(data.indicators, data.series, data.mainProducts);
     renderSections(data);
     renderFooter(data);
     profileEl.classList.remove('hidden');

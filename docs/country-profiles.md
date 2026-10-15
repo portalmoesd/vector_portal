@@ -61,6 +61,36 @@ Rules applied:
 - Flags: the bundled MIT-licensed circle-flags set under
   `frontend/assets/flags/`, keyed by ISO alpha-2. No hotlinking.
 
+## Main traded products (UN Comtrade)
+
+Each trade tile lists the economy's top five HS4 headings by share of the
+flow (exports or imports), with a year tag of its own: Comtrade's latest
+annual year for that reporter, which can differ from the WTO figure's year.
+Shares only are stored and shown (`stat_country_products`), no trade values,
+following the publishing rule of the export potential results. Product names
+come from the portal's HS4 lists (`frontend/data/hs4-names-*.csv`).
+
+- `server/country-profiles/comtrade-products.js` reuses the export potential
+  Comtrade client (disk cache, one call a second, daily budget, key from
+  `COMTRADE_API_KEY`). One metered call per reporter, year and flow at HS4 with
+  the world as partner; the response is reduced to five shares before storing.
+- Resumable: an economy whose stored year equals its latest published year
+  costs no call, so a run stopped by the daily budget (shared with Export
+  Potential, 480 calls) continues next time. A full first load is about 430
+  calls, so it can span two days.
+- Economies that do not report to Comtrade, or have no annual HS data in the
+  last five years, show "No data" for products.
+
+```
+npm run sync:country-products                      # every economy
+node server/country-profiles/comtrade-products.js --countries GEO,TUR --budget 50
+node server/country-profiles/comtrade-products.js --dry-run
+```
+
+Schedule: monthly (2nd of the month, 10:40 Tbilisi), at start-up for economies
+with no products yet, and "Sync main products" in Admin → Data Uploads. Without
+a key the server logs that products are not pulled and the admin panel says so.
+
 ## Descriptive text (CIA World Factbook snapshot)
 
 The CIA discontinued The World Factbook on 4 February 2026 and took the site
@@ -125,6 +155,7 @@ touched by any of these paths.
 - `stat_observations` — (source, indicator, iso3, year) → value, plus source name/URL and `retrieved_at`.
 - `stat_sync_runs` — one row per sync with status (`ok` / `partial` / `failed`) and a per-indicator log.
 - `stat_country_texts` — Factbook text per (iso3, section, field), with edit tracking.
+- `stat_country_products` — top-five HS4 shares per (iso3, flow), with the reporter's data year.
 
 Adding a source means a new `stat_sources` row, its indicators in
 `stat_indicators`, and a fetcher that writes `stat_observations`; the tables
@@ -165,10 +196,12 @@ in-process schedule (e.g. when a Render cron job runs the CLI instead).
 - `GET /api/country-profiles/status` — counts and the last five runs.
 - `POST /api/country-profiles/sync` — start a sync (202; 409 if one is running).
 - `POST /api/country-profiles/import-factbook` — load the shipped Factbook snapshot now (runs inline, a few seconds; 409 if one is running).
+- `POST /api/country-profiles/sync-products` — start a Comtrade products sync in the background (202; 409 without a key or if one is running).
 
 ## Tests
 
 - `tests/server/country-profiles-sync.test.js` — parsing (aggregate exclusion, null handling, latest year, API error reporting, pagination, retries).
 - `tests/server/country-profiles-filter.test.js` — index search/region filtering.
 - `tests/server/country-profiles-factbook.test.js` — Factbook extraction (officials removed, HTML sanitized, snapshot coverage).
+- `tests/server/country-products.test.js` — top-five share reduction, latest-year selection, no-key behaviour.
 - `tests/dashboard/country-profiles.spec.js` — Playwright smoke tests for both pages (mocked API).

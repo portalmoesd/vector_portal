@@ -499,4 +499,22 @@ CREATE TABLE IF NOT EXISTS stat_country_texts (
 );
 CREATE INDEX IF NOT EXISTS stat_country_texts_country_idx ON stat_country_texts (iso3, section, display_order);
 
+-- Main traded products per economy (top-N HS4 headings by share of the
+-- flow), derived from UN Comtrade annual data by the country-profiles
+-- products sync. Shares only — no trade values are stored, in line with
+-- Comtrade's publishing terms (same rule as the export potential results).
+CREATE TABLE IF NOT EXISTS stat_country_products (
+  iso3          CHAR(3) NOT NULL,
+  flow          CHAR(1) NOT NULL,            -- 'X' exports | 'M' imports
+  year          SMALLINT NOT NULL,           -- the reporter's latest annual year
+  rank          SMALLINT NOT NULL,
+  hs4           CHAR(4) NOT NULL,
+  share         DOUBLE PRECISION NOT NULL,   -- 0..1 share of the flow's total
+  source_id     TEXT NOT NULL REFERENCES stat_sources(id),
+  source_name   TEXT NOT NULL,
+  source_url    TEXT NOT NULL,
+  retrieved_at  TIMESTAMPTZ NOT NULL,
+  PRIMARY KEY (iso3, flow, rank)
+);
+
 COMMIT;

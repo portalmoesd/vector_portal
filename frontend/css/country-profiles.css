@@ -233,10 +233,30 @@ a.cp-pill:hover { filter: brightness(.95); }
   align-items: stretch;
 }
 .cp-kf__lower--no-chart { grid-template-columns: 1fr; }
-.cp-kf__lower .cp-chart { margin-top: 0; }
+.cp-kf__lower .cp-chart { margin-top: 0; display: flex; flex-direction: column; }
+.cp-kf__lower .cp-chart__canvas { flex: 1; min-height: 300px; }
 .cp-kf__trade { display: flex; flex-direction: column; gap: 10px; }
-.cp-kf__trade .cp-kf__item { flex: 1; justify-content: center; }
+.cp-kf__trade .cp-kf__item { flex: 1; justify-content: flex-start; }
 .cp-kf__trade .cp-kf__meta { margin-top: 2px; }
+
+/* Main products inside a trade tile */
+.cp-products { margin-top: 10px; padding-top: 8px; border-top: 1px dashed var(--border-color); }
+.cp-products__head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 4px; }
+.cp-products__title { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-secondary); }
+.cp-products--none { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.cp-products__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; counter-reset: cp-prod; }
+.cp-products__item {
+  display: grid;
+  grid-template-columns: 1.1em minmax(0, 1fr) auto;
+  gap: 6px;
+  align-items: baseline;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  counter-increment: cp-prod;
+}
+.cp-products__item::before { content: counter(cp-prod) '.'; color: var(--text-muted); font-variant-numeric: tabular-nums; font-size: 0.75rem; }
+.cp-products__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cp-products__share { font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text-primary); }
 .cp-kf__subtitle { margin: 0; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--text-secondary); padding: 2px 2px 0; }
 .cp-kf__item {
   display: flex;
@@ -371,6 +391,7 @@ a.cp-pill:hover { filter: brightness(.95); }
   .cp-hero__official { font-size: 0.9rem; }
   .cp-section, .cp-kf { padding: 16px 16px 14px; }
   .cp-kf__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cp-kf__trade { grid-template-columns: 1fr; }
   .cp-kf__value { font-size: 1.25rem; }
   .cp-tr { grid-template-columns: 1fr; gap: 3px; padding: 10px 12px; }
   .cp-tr__meta { grid-column: 1; }
