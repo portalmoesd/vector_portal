@@ -41,7 +41,7 @@
     'SP.URB.TOTL.IN.ZS': 'urbanPopulation',
   };
   const KEY_FIGURES = ['SP.POP.TOTL', 'AG.SRF.TOTL.K2', 'NY.GDP.MKTP.CD', 'NY.GDP.PCAP.CD', 'NY.GDP.MKTP.KD.ZG', 'FP.CPI.TOTL.ZG', 'SL.UEM.TOTL.ZS'];
-  const SECTIONS = ['overview', 'people', 'economy', 'trade'];
+  const SECTIONS = ['overview', 'people'];
 
   // ── Formatting ───────────────────────────────────────────────────────
   const numLocale = () => 'en-US';
@@ -92,13 +92,13 @@
   // "WTO" for figures the World Bank republishes from the WTO, else "World Bank".
   const shortSource = (ind) => (ind.compiler === 'WTO' ? t('countryProfiles.sourceShortWto') : t('countryProfiles.sourceShort'));
 
-  function wbAttribution(indicators) {
+  function wbAttribution(indicators, { note = true } = {}) {
     const withData = indicators.filter((i) => i.value != null);
     const src = withData[0];
     if (!src) return '';
     const retrieved = src.retrievedAt ? ` · ${t('countryProfiles.retrieved')} ${formatDate(src.retrievedAt)}` : '';
     const name = withData.every((i) => i.compiler === 'WTO') ? t('countryProfiles.wtoAttribution', { source: src.sourceName }) : src.sourceName;
-    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${escapeHtml(name)}${escapeHtml(retrieved)} · ${escapeHtml(t('countryProfiles.latestYearNote'))}</div>`;
+    return `<div class="cp-attrib"><span class="cp-attrib__label">${escapeHtml(t('countryProfiles.source'))}</span> ${escapeHtml(name)}${escapeHtml(retrieved)}${note ? ` · ${escapeHtml(t('countryProfiles.latestYearNote'))}` : ''}</div>`;
   }
 
   function fbAttribution(src) {
@@ -213,28 +213,40 @@
   }
 
   // ── Key figures ──────────────────────────────────────────────────────
+  // The seven headline indicators as a strip, then the 20-year GDP and
+  // population chart beside the two merchandise trade tiles. Compact values
+  // carry the exact figure in their tooltip.
   function kfItem(ind) {
     const v = fmtValue(ind);
+    const exact = ind.value == null ? '' : fmtValue(ind, { compact: false });
     return `<div class="cp-kf__item" data-code="${escapeHtml(ind.code)}">
       <div class="cp-kf__label" title="${escapeHtml(ind.name)}">${escapeHtml(label(ind.code))}</div>
-      <div class="cp-kf__value${v == null ? ' cp-kf__value--none' : ''}">${v == null ? escapeHtml(t('countryProfiles.noData')) : escapeHtml(v)}</div>
+      <div class="cp-kf__value${v == null ? ' cp-kf__value--none' : ''}"${exact && exact !== v ? ` title="${escapeHtml(exact)}"` : ''}>${v == null ? escapeHtml(t('countryProfiles.noData')) : escapeHtml(v)}</div>
       <div class="cp-kf__meta">${sourceTag(ind)}</div>
     </div>`;
   }
 
-  function renderKeyFigures(indicators) {
+  function renderKeyFigures(indicators, series) {
     const byCode = new Map(indicators.map((i) => [i.code, i]));
-    const list = KEY_FIGURES.filter((c) => byCode.has(c)).map((c) => byCode.get(c));
+    const strip = KEY_FIGURES.filter((c) => byCode.has(c)).map((c) => byCode.get(c));
+    const trade = indicators.filter((i) => i.section === 'trade');
+    const showChart = !!(window.Chart && chartHasData(series));
+    const lower = (showChart || trade.length) ? `<div class="cp-kf__lower${showChart ? '' : ' cp-kf__lower--no-chart'}">
+        ${showChart ? `<div class="cp-chart"><h3 class="cp-chart__title">${escapeHtml(t('countryProfiles.chart.title'))}</h3><div class="cp-chart__canvas"><canvas id="cpChart" role="img" aria-label="${escapeHtml(t('countryProfiles.chart.title'))}"></canvas></div></div>` : ''}
+        ${trade.length ? `<div class="cp-kf__trade" id="cpTrade"><h3 class="cp-kf__subtitle">${escapeHtml(t('countryProfiles.sections.trade'))}</h3>${trade.map(kfItem).join('')}</div>` : ''}
+      </div>` : '';
     $('cpTiles').innerHTML = `<section class="card cp-kf" aria-labelledby="cpKfTitle">
       <div class="cp-section__head"><h2 class="cp-section__title" id="cpKfTitle">${escapeHtml(t('countryProfiles.keyFigures'))}</h2></div>
-      <div class="cp-kf__grid">${list.map(kfItem).join('')}</div>
-      ${wbAttribution(list)}
+      <div class="cp-kf__grid">${strip.map(kfItem).join('')}</div>
+      ${lower}
+      ${wbAttribution(strip)}${trade.length ? wbAttribution(trade, { note: false }) : ''}
     </section>`;
+    if (showChart) drawChart(series);
   }
 
   // ── Sections ─────────────────────────────────────────────────────────
   function renderSections(data) {
-    const { country: c, indicators, series } = data;
+    const { country: c, indicators } = data;
     const texts = (data.texts && data.texts.sections) || {};
     const fbSrc = data.texts && data.texts.source;
     const txt = (id) => texts[id] || [];
@@ -280,21 +292,8 @@
       section('government', `${table(txt('government').map(textRow).join(''))}${fbAttribution(fbSrc)}`);
     }
 
-    if (hasData(bySection.economy)) {
-      let chart = '';
-      if (window.Chart && chartHasData(series)) {
-        chart = `<div class="cp-chart"><h3 class="cp-chart__title">${escapeHtml(t('countryProfiles.chart.title'))}</h3><div class="cp-chart__canvas"><canvas id="cpChart" role="img" aria-label="${escapeHtml(t('countryProfiles.chart.title'))}"></canvas></div></div>`;
-      }
-      section('economy', `${table(bySection.economy.map(indicatorRow).join(''))}${chart}${wbAttribution(bySection.economy)}`);
-    }
-
-    if (hasData(bySection.trade)) {
-      section('trade', `<div class="cp-kf__grid cp-kf__grid--pair">${bySection.trade.map(kfItem).join('')}</div>${wbAttribution(bySection.trade)}`);
-    }
-
     $('cpSections').innerHTML = parts.join('');
     $('cpTocList').innerHTML = toc.map((id) => `<li><a href="#section-${id}" data-target="section-${id}">${escapeHtml(t(`countryProfiles.sections.${id}`))}</a></li>`).join('');
-    if (window.Chart && document.getElementById('cpChart')) drawChart(series);
     observeSections();
   }
 
@@ -365,7 +364,7 @@
     const data = await Api.get(`/api/country-profiles/countries/${encodeURIComponent(slug)}`);
     renderBreadcrumb(data.country);
     renderHero(data);
-    renderKeyFigures(data.indicators);
+    renderKeyFigures(data.indicators, data.series);
     renderSections(data);
     renderFooter(data);
     profileEl.classList.remove('hidden');
