@@ -1257,7 +1257,9 @@
       "inflation": "Inflation",
       "unemployment": "Unemployment",
       "exports": "Exports of goods and services",
+      "merchandiseExports": "Merchandise exports",
       "imports": "Imports of goods and services",
+      "merchandiseImports": "Merchandise imports",
       "lifeExpectancy": "Life expectancy at birth",
       "urbanPopulation": "Urban population"
     },

@@ -37,6 +37,8 @@
     'SL.UEM.TOTL.ZS': 'unemployment',
     'NE.EXP.GNFS.CD': 'exports',
     'NE.IMP.GNFS.CD': 'imports',
+    'TX.VAL.MRCH.CD.WT': 'merchandiseExports',
+    'TM.VAL.MRCH.CD.WT': 'merchandiseImports',
     'SP.DYN.LE00.IN': 'lifeExpectancy',
     'SP.URB.TOTL.IN.ZS': 'urbanPopulation',
   };

@@ -34,7 +34,10 @@ const INDICATORS = [
   { code: 'FP.CPI.TOTL.ZG', section: 'economy', unit: 'pct', order: 60, fallbackName: 'Inflation, consumer prices (annual %)' },
   { code: 'SL.UEM.TOTL.ZS', section: 'economy', unit: 'pct', order: 70, fallbackName: 'Unemployment, total (% of total labor force) (modeled ILO estimate)' },
   { code: 'NE.EXP.GNFS.CD', section: 'trade', unit: 'usd', order: 80, fallbackName: 'Exports of goods and services (current US$)' },
+  // Goods only, customs basis (WTO figures as republished in WDI).
+  { code: 'TX.VAL.MRCH.CD.WT', section: 'trade', unit: 'usd', order: 82, fallbackName: 'Merchandise exports (current US$)' },
   { code: 'NE.IMP.GNFS.CD', section: 'trade', unit: 'usd', order: 90, fallbackName: 'Imports of goods and services (current US$)' },
+  { code: 'TM.VAL.MRCH.CD.WT', section: 'trade', unit: 'usd', order: 92, fallbackName: 'Merchandise imports (current US$)' },
   { code: 'SP.DYN.LE00.IN', section: 'people', unit: 'years', order: 100, fallbackName: 'Life expectancy at birth, total (years)' },
   { code: 'SP.URB.TOTL.IN.ZS', section: 'people', unit: 'pct', order: 110, fallbackName: 'Urban population (% of total population)' },
 ];
