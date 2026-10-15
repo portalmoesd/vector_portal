@@ -11,7 +11,7 @@ const express = require('express');
 const db = require('../db');
 const { requireAuth, requireRole } = require('../middleware/auth');
 const { runSync, isRunning } = require('../country-profiles/sync');
-const { SOURCE } = require('../country-profiles/worldbank');
+const { SOURCE, INDICATORS } = require('../country-profiles/worldbank');
 const factbook = require('../country-profiles/factbook');
 
 const router = express.Router();
@@ -248,7 +248,21 @@ function scheduleWeeklySync() {
 async function bootCheck() {
   try {
     const { rows: [{ count }] } = await db.query('SELECT count(*)::int AS count FROM stat_countries');
-    if (count === 0) { console.log('country-profiles: no data yet, running the first sync'); startSync('boot'); }
+    if (count === 0) {
+      console.log('country-profiles: no data yet, running the first sync');
+      startSync('boot');
+    } else {
+      // A deploy that adds an indicator should not wait for the weekly run:
+      // pull just the configured indicators the database has no row for.
+      const { rows } = await db.query('SELECT code FROM stat_indicators WHERE source_id = $1', [SOURCE.id]);
+      const have = new Set(rows.map((r) => r.code));
+      const missing = INDICATORS.map((i) => i.code).filter((c) => !have.has(c));
+      if (missing.length) {
+        console.log(`country-profiles: ${missing.length} configured indicator(s) not synced yet (${missing.join(', ')}), pulling them`);
+        runSync({ db, trigger: 'boot', log: (m) => console.log(`country-profiles: ${m}`), indicators: missing })
+          .catch((err) => console.error('country-profiles: sync crashed:', err.message));
+      }
+    }
   } catch (err) {
     console.warn('country-profiles: boot check skipped:', err.message);
   }

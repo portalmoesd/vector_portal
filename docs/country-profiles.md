@@ -150,8 +150,10 @@ logged on the run row and the previous values stay in place. The run exits 0
 on `ok`/`partial`, 2 on `failed`.
 
 Schedule: the server runs the sync every Monday at 10:20 Tbilisi (in-process,
-same pattern as the tourism and trade refreshes in `routes/statistics.js`)
-and once at boot if the tables are empty. Admin Panel → Data Uploads →
+same pattern as the tourism and trade refreshes in `routes/statistics.js`),
+once at boot if the tables are empty, and at boot for any configured indicator
+the database has no row for yet (so a deploy that adds an indicator shows it
+within about a minute, without waiting for Monday). Admin Panel → Data Uploads →
 "Country Profiles data" shows the last run, any failed indicators, and a
 "Sync now" button. Set `COUNTRY_PROFILES_NO_SCHEDULE=1` to disable the
 in-process schedule (e.g. when a Render cron job runs the CLI instead).
