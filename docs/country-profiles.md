@@ -43,6 +43,8 @@ Source: World Bank WDI, `https://api.worldbank.org/v2`. Country list from
 | SL.UEM.TOTL.ZS | Economy | Unemployment (tile) |
 | NE.EXP.GNFS.CD | Trade | Exports of goods and services |
 | NE.IMP.GNFS.CD | Trade | Imports of goods and services |
+| TX.VAL.MRCH.CD.WT | Trade | Merchandise exports (goods only, customs basis, WTO figures) |
+| TM.VAL.MRCH.CD.WT | Trade | Merchandise imports (goods only, customs basis, WTO figures) |
 | SP.DYN.LE00.IN | People | Life expectancy at birth |
 | SP.URB.TOTL.IN.ZS | People | Urban population, % |
 
