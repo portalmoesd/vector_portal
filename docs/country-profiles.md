@@ -87,9 +87,13 @@ node server/country-profiles/comtrade-products.js --countries GEO,TUR --budget 5
 node server/country-profiles/comtrade-products.js --dry-run
 ```
 
-Schedule: monthly (2nd of the month, 10:40 Tbilisi), at start-up for economies
-with no products yet, and "Sync main products" in Admin → Data Uploads. Without
-a key the server logs that products are not pulled and the admin panel says so.
+Refresh: the products follow the trade figures. A products check runs after
+every World Bank sync (weekly and at start-up) and from "Sync main products"
+in Admin → Data Uploads; an economy is re-pulled only when Comtrade has
+published a newer year than the one stored, so when the trade year moves on
+(2025 → 2026) the products move with it as soon as Comtrade carries that year.
+Without a key the server logs that products are not pulled and the admin
+panel says so.
 
 ## Descriptive text (CIA World Factbook snapshot)
 

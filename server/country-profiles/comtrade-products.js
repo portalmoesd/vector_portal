@@ -10,8 +10,10 @@
  *
  * Idempotent and resumable: an economy whose stored year already equals
  * its latest available year costs no call, so a run interrupted by the
- * daily budget picks up where it stopped. Shares use the sum of the HS4
- * rows as denominator.
+ * daily budget picks up where it stopped. The products therefore follow
+ * the trade data: the check runs after every trade sync, and an economy
+ * is re-pulled only when Comtrade has published a newer year than the
+ * one stored. Shares use the sum of the HS4 rows as denominator.
  */
 'use strict';
 
@@ -127,7 +129,9 @@ async function syncProducts({ db, trigger = 'cli', log = () => {}, only = null, 
         const year = reporterCode != null ? latestYearFor(da, reporterCode) : null;
         if (reporterCode == null || year == null) { skipped++; note('info', iso3, reporterCode == null ? 'not a Comtrade reporter' : 'no annual HS data in the look-back window'); continue; }
         for (const flow of FLOWS) {
-          if (storedYear.get(`${iso3}:${flow}`) === year) { skipped++; continue; } // already current
+          const have = storedYear.get(`${iso3}:${flow}`);
+          if (have === year) { skipped++; continue; } // already current
+          if (have != null && have > year) { skipped++; continue; } // never replace with an older year
           try {
             const res = await comtrade.getTrade({ reporterCode, period: year, flowCode: flow, partnerCode: 0, cmdCode: 'AG4' }, { budget });
             if (!res.fromCache) calls++;
@@ -136,7 +140,7 @@ async function syncProducts({ db, trigger = 'cli', log = () => {}, only = null, 
             if (!top.length) throw new Error('no HS4 rows returned');
             if (!dryRun) await replaceProducts(db, iso3, flow, year, top, reporterCode);
             ok++;
-            note('info', `${iso3}/${flow}`, `${year}: ${top.map((p) => `${p.hs4} ${(p.share * 100).toFixed(1)}%`).join(', ')}`);
+            note('info', `${iso3}/${flow}`, `${have != null ? `${have} -> ` : ''}${year}: ${top.map((p) => `${p.hs4} ${(p.share * 100).toFixed(1)}%`).join(', ')}`);
           } catch (err) {
             if (err instanceof comtrade.BudgetExhausted) { stoppedByBudget = true; note('warn', 'budget', `${err.message}; remaining economies resume on the next run`); break; }
             failed++;

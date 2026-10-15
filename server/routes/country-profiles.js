@@ -264,9 +264,15 @@ function startProductsSync(trigger) {
   products.syncProducts({ db, trigger, log, budget }).catch((err) => console.error('country-products: sync crashed:', err.message));
 }
 
+// A World Bank sync is followed by a products check: the trade figures and
+// the main products move together, so whenever the trade data is refreshed,
+// every economy whose stored products year is older than Comtrade's latest
+// published year is re-pulled (economies already current cost no call).
 function startSync(trigger) {
   const log = (m) => console.log(`country-profiles: ${m}`);
-  runSync({ db, trigger, log }).catch((err) => console.error('country-profiles: sync crashed:', err.message));
+  runSync({ db, trigger, log })
+    .then(() => { if (products.hasKey()) startProductsSync(trigger); })
+    .catch((err) => console.error('country-profiles: sync crashed:', err.message));
 }
 
 // Weekly refresh on Mondays at 10:20 Tbilisi (06:20 UTC, Georgia has no DST),
@@ -301,23 +307,20 @@ async function bootCheck() {
       if (missing.length) {
         console.log(`country-profiles: ${missing.length} configured indicator(s) not synced yet (${missing.join(', ')}), pulling them`);
         runSync({ db, trigger: 'boot', log: (m) => console.log(`country-profiles: ${m}`), indicators: missing })
+          .then(() => { if (products.hasKey()) startProductsSync('boot'); })
           .catch((err) => console.error('country-profiles: sync crashed:', err.message));
+        return; // the products check follows that run
       }
     }
   } catch (err) {
     console.warn('country-profiles: boot check skipped:', err.message);
   }
-  // Main products: with a Comtrade key, pull economies that have none yet
-  // (a resumable run; already-current economies cost no call).
+  // Main products: with a Comtrade key, run the products check at boot
+  // (economies with no products, or with a newer Comtrade year than stored,
+  // are pulled; everything else costs no call). Resumable across the budget.
   try {
-    if (products.hasKey()) {
-      const { rows: [{ count }] } = await db.query(
-        `SELECT count(*)::int AS count FROM stat_countries c WHERE NOT EXISTS (SELECT 1 FROM stat_country_products p WHERE p.iso3 = c.iso3)`
-      );
-      if (count > 0) { console.log(`country-products: ${count} economies without products yet, pulling them`); startProductsSync('boot'); }
-    } else {
-      console.log('country-products: COMTRADE_API_KEY not set; main products are not pulled');
-    }
+    if (products.hasKey()) startProductsSync('boot');
+    else console.log('country-products: COMTRADE_API_KEY not set; main products are not pulled');
   } catch (err) {
     console.warn('country-products: boot check skipped:', err.message);
   }
@@ -333,24 +336,8 @@ async function bootCheck() {
   }
 }
 
-// Monthly products refresh (Comtrade annual data moves slowly): the 2nd of
-// each month at 10:40 Tbilisi, after the weekly World Bank run has had its turn.
-function scheduleMonthlyProducts() {
-  const UTC_HOUR = 6, UTC_MINUTE = 40, DAY = 2;
-  const now = new Date();
-  let next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), DAY, UTC_HOUR, UTC_MINUTE, 0, 0));
-  if (next <= now) next = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + 1, DAY, UTC_HOUR, UTC_MINUTE, 0, 0));
-  const delay = next - now;
-  console.log(`country-products: next scheduled sync in ${(delay / 3600000).toFixed(1)}h (${next.toISOString()})`);
-  setTimeout(() => {
-    if (products.hasKey()) startProductsSync('scheduled');
-    scheduleMonthlyProducts();
-  }, delay);
-}
-
 if (process.env.NODE_ENV !== 'test' && !process.env.COUNTRY_PROFILES_NO_SCHEDULE) {
   scheduleWeeklySync();
-  scheduleMonthlyProducts();
   setTimeout(bootCheck, 30_000);
 }
 
