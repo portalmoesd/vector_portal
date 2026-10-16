@@ -51,6 +51,23 @@ test('latestYearFor picks the newest annual HS year of the reporter', () => {
   assert.strictEqual(cp.latestYearFor(da, 999), null);
 });
 
+test('pickReporter resolves duplicate ISO3 areas to the one with recent data, never a historical one', () => {
+  const da = [
+    { reporterCode: 276, period: 2025, classificationCode: 'H6' },
+    { reporterCode: 276, period: 2024, classificationCode: 'H6' },
+    { reporterCode: 842, period: 2024, classificationCode: 'H6' },
+    { reporterCode: 840, period: 2024, classificationCode: 'H6' },
+    { reporterCode: 757, period: 2025, classificationCode: 'H6' },
+  ];
+  // Germany: the historical area comes first in the reference file and has no data.
+  assert.deepStrictEqual(cp.pickReporter([{ code: 280, text: 'Fed. Rep. of Germany (...1990)' }, { code: 276, text: 'Germany' }], da), { code: 276, year: 2025 });
+  // Tie on year: prefer the area without a closing year in its name; a plain tie keeps the first.
+  assert.deepStrictEqual(cp.pickReporter([{ code: 841, text: 'USA and Puerto Rico (...1980)' }, { code: 840, text: 'United States of America' }, { code: 842, text: 'USA' }], da), { code: 840, year: 2024 });
+  assert.deepStrictEqual(cp.pickReporter([{ code: 756, text: 'Switzerland ' }, { code: 757, text: 'Switzerland' }], da), { code: 757, year: 2025 });
+  assert.strictEqual(cp.pickReporter([{ code: 999, text: 'Nowhere' }], da), null);
+  assert.strictEqual(cp.pickReporter([], da), null);
+});
+
 test('configuration: top five, both flows, derived shares only', () => {
   assert.strictEqual(cp.TOP_N, 5);
   assert.deepStrictEqual(cp.FLOWS, ['X', 'M']);
