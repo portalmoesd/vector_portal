@@ -63,6 +63,24 @@ function topProducts(rows, n = TOP_N) {
 }
 
 /**
+ * Comtrade's reference list maps one ISO3 code to several areas for some
+ * economies, historical ones included ("Fed. Rep. of Germany (...1990)"
+ * precedes "Germany" in the file; the USA has 840, 841 and 842). Pick the
+ * candidate with the latest published annual HS year; on a tie prefer a
+ * name without a "(...YYYY)" closing year. Returns { code, year } or null.
+ */
+function pickReporter(candidates, daRows) {
+  let best = null;
+  for (const c of candidates || []) {
+    const year = latestYearFor(daRows, c.code);
+    if (year == null) continue;
+    const historical = /\(\.\.\./.test(c.text || '');
+    if (!best || year > best.year || (year === best.year && best.historical && !historical)) best = { code: c.code, year, historical };
+  }
+  return best ? { code: best.code, year: best.year } : null;
+}
+
+/**
  * From the public data-availability rows, the latest annual HS year a
  * reporter has published, or null. `rows` are getDataAvailability() rows.
  */
@@ -114,8 +132,12 @@ async function syncProducts({ db, trigger = 'cli', log = () => {}, only = null, 
       const thisYear = new Date().getUTCFullYear();
       const years = []; for (let y = thisYear - LOOKBACK_YEARS; y <= thisYear; y++) years.push(y);
       const [areas, da] = await Promise.all([comtrade.getPartnerAreas(), comtrade.getDataAvailability(years)]);
-      const codeByIso3 = new Map();
-      for (const a of areas) if (a.iso3 && !a.isGroup && !codeByIso3.has(a.iso3)) codeByIso3.set(a.iso3, a.code);
+      const candidatesByIso3 = new Map();
+      for (const a of areas) {
+        if (!a.iso3 || a.isGroup) continue;
+        if (!candidatesByIso3.has(a.iso3)) candidatesByIso3.set(a.iso3, []);
+        candidatesByIso3.get(a.iso3).push({ code: a.code, text: a.text });
+      }
 
       const { rows: countries } = await db.query(
         `SELECT iso3 FROM stat_countries ${only ? 'WHERE iso3 = ANY($1::text[])' : ''} ORDER BY iso3`,
@@ -125,9 +147,10 @@ async function syncProducts({ db, trigger = 'cli', log = () => {}, only = null, 
       const storedYear = new Map(stored.map((r) => [`${r.iso3}:${r.flow}`, Number(r.year)]));
 
       for (const { iso3 } of countries) {
-        const reporterCode = codeByIso3.get(iso3);
-        const year = reporterCode != null ? latestYearFor(da, reporterCode) : null;
-        if (reporterCode == null || year == null) { skipped++; note('info', iso3, reporterCode == null ? 'not a Comtrade reporter' : 'no annual HS data in the look-back window'); continue; }
+        const candidates = candidatesByIso3.get(iso3);
+        const picked = candidates ? pickReporter(candidates, da) : null;
+        if (!picked) { skipped++; note('info', iso3, !candidates ? 'not a Comtrade reporter' : 'no annual HS data in the look-back window'); continue; }
+        const { code: reporterCode, year } = picked;
         for (const flow of FLOWS) {
           const have = storedYear.get(`${iso3}:${flow}`);
           if (have === year) { skipped++; continue; } // already current
@@ -211,6 +234,6 @@ async function main() {
   process.exit(r.status === 'failed' ? 2 : 0);
 }
 
-module.exports = { SOURCE, TOP_N, FLOWS, topProducts, latestYearFor, syncProducts, isRunning, hasKey };
+module.exports = { SOURCE, TOP_N, FLOWS, topProducts, latestYearFor, pickReporter, syncProducts, isRunning, hasKey };
 
 if (require.main === module) main().catch((err) => { console.error(err); process.exit(1); });

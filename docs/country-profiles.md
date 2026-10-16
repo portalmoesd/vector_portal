@@ -78,6 +78,10 @@ come from the portal's HS4 lists (`frontend/data/hs4-names-*.csv`).
   costs no call, so a run stopped by the daily budget (shared with Export
   Potential, 480 calls) continues next time. A full first load is about 430
   calls, so it can span two days.
+- Comtrade's reference list maps some ISO codes to several areas (Germany is
+  276 and the historical 280; the USA is 840, 841 and 842; Switzerland 756 and
+  757). The sync resolves each economy to the area with the latest published
+  annual HS year, never a historical one.
 - Economies that do not report to Comtrade, or have no annual HS data in the
   last five years, show "No data" for products.
 
