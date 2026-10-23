@@ -26,6 +26,15 @@
     ka: 'ქვეყნების სია მიუწვდომელია — სცადეთ მოგვიანებით',
     en: 'Country list unavailable — try again later',
   };
+  // Geostat's English classificatory still labels some countries with
+  // outdated names. Map them to the current official English short form
+  // before they reach the dropdown, the report text and the PDF/Word
+  // exports. The raw Geostat label is kept on `c.label`, so searching by
+  // the old name still finds the country.
+  const COUNTRY_NAME_EN_OVERRIDES = {
+    'Turkey': 'Türkiye',
+  };
+  const canonicalEnName = (name) => COUNTRY_NAME_EN_OVERRIDES[name] || name;
   // Mode-switch pill labels. Chrome, not report content — these follow the
   // site interface locale, like the page title and the Generate button.
   const MODE_LABELS = {
@@ -321,7 +330,7 @@
     if (enJson && enJson.success && enJson.data) {
       classDataEn = enJson.data;
       for (const c of (enJson.data.countries || [])) {
-        countryNameEnMap[c.value] = c.label.replace(/^\d+\s+/, '');
+        countryNameEnMap[c.value] = canonicalEnName(c.label.replace(/^\d+\s+/, ''));
       }
     }
     if (kaJson && kaJson.success && kaJson.data) {
