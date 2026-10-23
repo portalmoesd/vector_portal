@@ -804,6 +804,33 @@
   }
 
   // ── Trade section ──────────────────────────────────────────────────────
+  // One flow's product blocks: main products table plus the two movers
+  // tables. When the flow grew the increase table leads; otherwise the
+  // drop table does. `periodText` is the title suffix ("Jan-Aug 2026" or
+  // "2025").
+  function buildFlowBlocks(flow, products, change, growing, periodText, t, lang) {
+    const isExport = flow === 'export';
+    const mainLabel = isExport ? t.mainExport : t.mainImport;
+    const incLabel = isExport ? t.exportIncrease : t.importIncrease;
+    const dropLabel = isExport ? t.exportDrop : t.importDrop;
+    const blocks = [withTitle(
+      subTitle(`${mainLabel}, ${periodText}`),
+      buildProductsTable(products, t, periodText, null, isExport, lang),
+    )];
+    const ordered = growing
+      ? [[incLabel, change && change.increase], [dropLabel, change && change.drop]]
+      : [[dropLabel, change && change.drop], [incLabel, change && change.increase]];
+    for (const [label, prods] of ordered) {
+      if (prods && prods.length) {
+        blocks.push(withTitle(
+          subTitle(`${label}, ${periodText}`),
+          buildChangeTable(prods, t, periodText, null, lang),
+        ));
+      }
+    }
+    return blocks;
+  }
+
   function buildTradeSection(trade, charts, t, country, lang) {
     if (!trade) return [];
 
@@ -858,56 +885,20 @@
       });
     }
 
-    // Export products + changes
+    // Product tables: current period, then the same four tables for the
+    // previous full year (titled by year alone, change vs the year before).
+    const yearLabel = `${periodLabel} ${trade.latestYear}`;
     if (trade.hasExport) {
-      blocks.push(withTitle(
-        subTitle(`${t.mainExport}, ${periodLabel} ${trade.latestYear}`),
-        buildProductsTable(trade.exportProducts, t, periodLabel, trade.latestYear, true, lang),
-      ));
-
-      const incLabel = trade.exportGrowing ? t.exportIncrease : t.exportDrop;
-      const dropLabel = trade.exportGrowing ? t.exportDrop : t.exportIncrease;
-      const incProds = trade.exportGrowing ? trade.exportChange.increase : trade.exportChange.drop;
-      const dropProds = trade.exportGrowing ? trade.exportChange.drop : trade.exportChange.increase;
-
-      if (incProds && incProds.length) {
-        blocks.push(withTitle(
-          subTitle(`${incLabel}, ${periodLabel} ${trade.latestYear}`),
-          buildChangeTable(incProds, t, periodLabel, trade.latestYear, lang),
-        ));
-      }
-      if (dropProds && dropProds.length) {
-        blocks.push(withTitle(
-          subTitle(`${dropLabel}, ${periodLabel} ${trade.latestYear}`),
-          buildChangeTable(dropProds, t, periodLabel, trade.latestYear, lang),
-        ));
-      }
+      blocks.push(...buildFlowBlocks('export', trade.exportProducts, trade.exportChange, trade.exportGrowing, yearLabel, t, lang));
     }
-
-    // Import products + changes
     if (trade.hasImport) {
-      blocks.push(withTitle(
-        subTitle(`${t.mainImport}, ${periodLabel} ${trade.latestYear}`),
-        buildProductsTable(trade.importProducts, t, periodLabel, trade.latestYear, false, lang),
-      ));
-
-      const incLabel = trade.importGrowing ? t.importIncrease : t.importDrop;
-      const dropLabel = trade.importGrowing ? t.importDrop : t.importIncrease;
-      const incProds = trade.importGrowing ? trade.importChange.increase : trade.importChange.drop;
-      const dropProds = trade.importGrowing ? trade.importChange.drop : trade.importChange.increase;
-
-      if (incProds && incProds.length) {
-        blocks.push(withTitle(
-          subTitle(`${incLabel}, ${periodLabel} ${trade.latestYear}`),
-          buildChangeTable(incProds, t, periodLabel, trade.latestYear, lang),
-        ));
-      }
-      if (dropProds && dropProds.length) {
-        blocks.push(withTitle(
-          subTitle(`${dropLabel}, ${periodLabel} ${trade.latestYear}`),
-          buildChangeTable(dropProds, t, periodLabel, trade.latestYear, lang),
-        ));
-      }
+      blocks.push(...buildFlowBlocks('import', trade.importProducts, trade.importChange, trade.importGrowing, yearLabel, t, lang));
+    }
+    if (trade.hasExportPrev) {
+      blocks.push(...buildFlowBlocks('export', trade.exportProductsPrev, trade.exportChangePrev, trade.exportGrowingPrev, String(trade.prevYear), t, lang));
+    }
+    if (trade.hasImportPrev) {
+      blocks.push(...buildFlowBlocks('import', trade.importProductsPrev, trade.importChangePrev, trade.importGrowingPrev, String(trade.prevYear), t, lang));
     }
 
     return blocks;
