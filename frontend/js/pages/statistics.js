@@ -126,6 +126,43 @@
   const importIncreaseTable = document.getElementById('importIncreaseTable');
   const importDropHeader = document.getElementById('importDropHeader');
   const importDropTable = document.getElementById('importDropTable');
+  // Previous full-year product tables (same shape as the six above).
+  const exportPrevHeader = document.getElementById('exportPrevHeader');
+  const exportPrevTable = document.getElementById('exportPrevTable');
+  const exportPrevIncreaseHeader = document.getElementById('exportPrevIncreaseHeader');
+  const exportPrevIncreaseTable = document.getElementById('exportPrevIncreaseTable');
+  const exportPrevDropHeader = document.getElementById('exportPrevDropHeader');
+  const exportPrevDropTable = document.getElementById('exportPrevDropTable');
+  const importPrevHeader = document.getElementById('importPrevHeader');
+  const importPrevTable = document.getElementById('importPrevTable');
+  const importPrevIncreaseHeader = document.getElementById('importPrevIncreaseHeader');
+  const importPrevIncreaseTable = document.getElementById('importPrevIncreaseTable');
+  const importPrevDropHeader = document.getElementById('importPrevDropHeader');
+  const importPrevDropTable = document.getElementById('importPrevDropTable');
+  // Element sets per flow for renderFlowTables (current period + previous
+  // full year). Declared with the refs so it exists before any generate.
+  const FLOW_ELS = {
+    export: {
+      header: exportHeader, table: exportTable,
+      firstHeader: exportIncreaseHeader, firstTable: exportIncreaseTable,
+      secondHeader: exportDropHeader, secondTable: exportDropTable,
+    },
+    import: {
+      header: importHeader, table: importTable,
+      firstHeader: importIncreaseHeader, firstTable: importIncreaseTable,
+      secondHeader: importDropHeader, secondTable: importDropTable,
+    },
+    exportPrev: {
+      header: exportPrevHeader, table: exportPrevTable,
+      firstHeader: exportPrevIncreaseHeader, firstTable: exportPrevIncreaseTable,
+      secondHeader: exportPrevDropHeader, secondTable: exportPrevDropTable,
+    },
+    importPrev: {
+      header: importPrevHeader, table: importPrevTable,
+      firstHeader: importPrevIncreaseHeader, firstTable: importPrevIncreaseTable,
+      secondHeader: importPrevDropHeader, secondTable: importPrevDropTable,
+    },
+  };
   const turnoverChartHeader = document.getElementById('turnoverChartHeader');
   const turnoverChartCanvas = document.getElementById('turnoverChart');
   const dynamicsChartHeader = document.getElementById('dynamicsChartHeader');
@@ -678,6 +715,12 @@
     'importHeader', 'importTable',
     'importIncreaseHeader', 'importIncreaseTable',
     'importDropHeader', 'importDropTable',
+    'exportPrevHeader', 'exportPrevTable',
+    'exportPrevIncreaseHeader', 'exportPrevIncreaseTable',
+    'exportPrevDropHeader', 'exportPrevDropTable',
+    'importPrevHeader', 'importPrevTable',
+    'importPrevIncreaseHeader', 'importPrevIncreaseTable',
+    'importPrevDropHeader', 'importPrevDropTable',
     'turnoverChartHeader', 'dynamicsChartHeader',
     'tourismSummary', 'tourismTable', 'tourismChartHeader',
     'investmentsSummary', 'fdiTable', 'fdiChartHeader',
@@ -697,6 +740,8 @@
   const SNAPSHOT_CARD_HEADER_IDS = [
     'exportHeader', 'exportIncreaseHeader', 'exportDropHeader',
     'importHeader', 'importIncreaseHeader', 'importDropHeader',
+    'exportPrevHeader', 'exportPrevIncreaseHeader', 'exportPrevDropHeader',
+    'importPrevHeader', 'importPrevIncreaseHeader', 'importPrevDropHeader',
   ];
 
   function captureReportSnapshot() {
@@ -872,11 +917,15 @@
     const allHeaders = [
       overviewHeader, exportHeader, exportIncreaseHeader, exportDropHeader,
       importHeader, importIncreaseHeader, importDropHeader,
+      exportPrevHeader, exportPrevIncreaseHeader, exportPrevDropHeader,
+      importPrevHeader, importPrevIncreaseHeader, importPrevDropHeader,
       turnoverChartHeader, dynamicsChartHeader,
     ];
     const allTables = [
       overviewTable, exportTable, exportIncreaseTable, exportDropTable,
       importTable, importIncreaseTable, importDropTable,
+      exportPrevTable, exportPrevIncreaseTable, exportPrevDropTable,
+      importPrevTable, importPrevIncreaseTable, importPrevDropTable,
     ];
     for (const el of allHeaders) el.innerHTML = '';
     for (const el of allTables) el.innerHTML = '';
@@ -885,6 +934,8 @@
     const hiddenCards = [
       exportHeader, exportIncreaseHeader, exportDropHeader,
       importHeader, importIncreaseHeader, importDropHeader,
+      exportPrevHeader, exportPrevIncreaseHeader, exportPrevDropHeader,
+      importPrevHeader, importPrevIncreaseHeader, importPrevDropHeader,
     ];
     for (const el of hiddenCards) hideCard(el);
 
@@ -934,6 +985,13 @@
         fetchAllTradeData(13, [latestYear], monthsYTD, countryId),
         fetchAllTradeData(11, [latestYear], monthsYTD, countryId),
         fetchAllTradeData(11, [prevYear], monthsYTD, countryId),
+        // Previous full-year product tables: last complete calendar year
+        // vs the year before it.
+        fetchAllTradeData(10, [prevYear], allMonths, countryId),
+        fetchAllTradeData(10, [prevPrevYear], allMonths, countryId),
+        fetchAllTradeData(13, [prevYear], allMonths, countryId),
+        fetchAllTradeData(11, [prevYear], allMonths, countryId),
+        fetchAllTradeData(11, [prevPrevYear], allMonths, countryId),
       ];
 
       // Chart data: export & import for each of 5 years (full year)
@@ -949,16 +1007,18 @@
 
       const results = await Promise.all(fetchPromises);
 
-      // Unpack overview & product table results (first 13)
+      // Unpack overview & product table results (first 18)
       const [
         expFullCurr, expFullPrev, expMonthCurr, expMonthPrev,
         impFullCurr, impFullPrev, impMonthCurr, impMonthPrev,
         expHsCurrent, expHsPrev, reexHsCurrent,
         impHsCurrent, impHsPrev,
+        expHsPrevFull, expHsPrevPrevFull, reexHsPrevFull,
+        impHsPrevFull, impHsPrevPrevFull,
       ] = results;
 
       // Unpack chart year results (next chartYears.length * 2)
-      let idx = 13;
+      let idx = 18;
       const chartYearExports = [];
       const chartYearImports = [];
       for (let i = 0; i < chartYears.length; i++) {
@@ -1014,69 +1074,37 @@
       const importGrowing = overview.latestPeriod.import >= overview.latestPeriod.importPrev;
 
       // ── 3. Export products tables (only if export > 0) ─────────────
+      const exportProducts = hasExport ? buildProductList(expHsCurrent, expHsPrev, reexHsCurrent) : null;
+      const exportChange = hasExport ? buildChangeLists(expHsCurrent, expHsPrev) : null;
       if (hasExport) {
-        const exportProducts = buildProductList(expHsCurrent, expHsPrev, reexHsCurrent);
-        renderSectionHeader(exportHeader, 'export', periodLabel, latestYear);
-        renderProductTable(exportTable, exportProducts, periodLabel, latestYear, true);
-        showCard(exportHeader);
-
-        const { increase, drop } = buildChangeLists(expHsCurrent, expHsPrev);
-        if (exportGrowing) {
-          if (increase.length > 0) {
-            renderSectionHeader(exportIncreaseHeader, 'exportIncrease', periodLabel, latestYear);
-            renderChangeTable(exportIncreaseTable, increase, periodLabel, latestYear);
-            showCard(exportIncreaseHeader);
-          }
-          if (drop.length > 0) {
-            renderSectionHeader(exportDropHeader, 'exportDrop', periodLabel, latestYear);
-            renderChangeTable(exportDropTable, drop, periodLabel, latestYear);
-            showCard(exportDropHeader);
-          }
-        } else {
-          if (drop.length > 0) {
-            renderSectionHeader(exportIncreaseHeader, 'exportDrop', periodLabel, latestYear);
-            renderChangeTable(exportIncreaseTable, drop, periodLabel, latestYear);
-            showCard(exportIncreaseHeader);
-          }
-          if (increase.length > 0) {
-            renderSectionHeader(exportDropHeader, 'exportIncrease', periodLabel, latestYear);
-            renderChangeTable(exportDropTable, increase, periodLabel, latestYear);
-            showCard(exportDropHeader);
-          }
-        }
+        renderFlowTables(FLOW_ELS.export, 'export', exportProducts, exportChange, exportGrowing, periodLabel, latestYear);
       }
 
       // ── 4. Import products tables (only if import > 0) ─────────────
+      const importProducts = hasImport ? buildProductList(impHsCurrent, impHsPrev, null) : null;
+      const importChange = hasImport ? buildChangeLists(impHsCurrent, impHsPrev) : null;
       if (hasImport) {
-        const importProducts = buildProductList(impHsCurrent, impHsPrev, null);
-        renderSectionHeader(importHeader, 'import', periodLabel, latestYear);
-        renderProductTable(importTable, importProducts, periodLabel, latestYear, false);
-        showCard(importHeader);
+        renderFlowTables(FLOW_ELS.import, 'import', importProducts, importChange, importGrowing, periodLabel, latestYear);
+      }
 
-        const { increase: impIncrease, drop: impDrop } = buildChangeLists(impHsCurrent, impHsPrev);
-        if (importGrowing) {
-          if (impIncrease.length > 0) {
-            renderSectionHeader(importIncreaseHeader, 'importIncrease', periodLabel, latestYear);
-            renderChangeTable(importIncreaseTable, impIncrease, periodLabel, latestYear);
-            showCard(importIncreaseHeader);
-          }
-          if (impDrop.length > 0) {
-            renderSectionHeader(importDropHeader, 'importDrop', periodLabel, latestYear);
-            renderChangeTable(importDropTable, impDrop, periodLabel, latestYear);
-            showCard(importDropHeader);
-          }
-        } else {
-          if (impDrop.length > 0) {
-            renderSectionHeader(importIncreaseHeader, 'importDrop', periodLabel, latestYear);
-            renderChangeTable(importIncreaseTable, impDrop, periodLabel, latestYear);
-            showCard(importIncreaseHeader);
-          }
-          if (impIncrease.length > 0) {
-            renderSectionHeader(importDropHeader, 'importIncrease', periodLabel, latestYear);
-            renderChangeTable(importDropTable, impIncrease, periodLabel, latestYear);
-            showCard(importDropHeader);
-          }
-        }
+      // ── 5. Previous full year: the same four tables ────────────────
+      // Last complete calendar year, change vs the year before it. Shown
+      // below the current-period block; gated on the full-year totals the
+      // overview already fetched. An empty period label makes the titles
+      // and column headers read "2025" rather than "Jan-Dec 2025".
+      const hasExportPrev = overview.fullYear.export > 0;
+      const hasImportPrev = overview.fullYear.import > 0;
+      const exportGrowingPrev = overview.fullYear.export >= overview.fullYear.exportPrev;
+      const importGrowingPrev = overview.fullYear.import >= overview.fullYear.importPrev;
+      const exportProductsPrev = hasExportPrev ? buildProductList(expHsPrevFull, expHsPrevPrevFull, reexHsPrevFull) : null;
+      const exportChangePrev = hasExportPrev ? buildChangeLists(expHsPrevFull, expHsPrevPrevFull) : null;
+      const importProductsPrev = hasImportPrev ? buildProductList(impHsPrevFull, impHsPrevPrevFull, null) : null;
+      const importChangePrev = hasImportPrev ? buildChangeLists(impHsPrevFull, impHsPrevPrevFull) : null;
+      if (hasExportPrev) {
+        renderFlowTables(FLOW_ELS.exportPrev, 'export', exportProductsPrev, exportChangePrev, exportGrowingPrev, '', prevYear);
+      }
+      if (hasImportPrev) {
+        renderFlowTables(FLOW_ELS.importPrev, 'import', importProductsPrev, importChangePrev, importGrowingPrev, '', prevYear);
       }
 
       // Fetch ranking + share for the PDF trade-summary paragraph. If it
@@ -1122,10 +1150,10 @@
         prevYear, prevPrevYear, latestYear, latestMonth,
         periodLabel, monthNames,
         hasExport, hasImport, exportGrowing, importGrowing,
-        exportProducts: hasExport ? buildProductList(expHsCurrent, expHsPrev, reexHsCurrent) : null,
-        importProducts: hasImport ? buildProductList(impHsCurrent, impHsPrev, null) : null,
-        exportChange: hasExport ? buildChangeLists(expHsCurrent, expHsPrev) : null,
-        importChange: hasImport ? buildChangeLists(impHsCurrent, impHsPrev) : null,
+        exportProducts, importProducts, exportChange, importChange,
+        // Previous full-year product tables (prevYear vs prevPrevYear).
+        hasExportPrev, hasImportPrev, exportGrowingPrev, importGrowingPrev,
+        exportProductsPrev, importProductsPrev, exportChangePrev, importChangePrev,
         ranking,
         // For countries with zero trade across the whole lookback window,
         // the summary widens the "no trade" sentence from the latest
@@ -1752,7 +1780,7 @@
 
     const isKa = reportLocale === 'ka';
     const hProduct = isKa ? 'პროდუქცია (HS 4-ნიშნა)' : 'Product (HS 4-digit)';
-    const hValue = isKa ? `${periodLabel} ${year}<br>მლნ. $` : `${periodLabel} ${year}<br>mln $`;
+    const hValue = `${periodTitle(periodLabel, year)}<br>${isKa ? 'მლნ. $' : 'mln $'}`;
     const hChange = isKa ? 'ცვლილება<br>%' : 'Change<br>%';
     const hDiff = isKa ? 'სხვაობა<br>მლნ. $' : 'Difference<br>mln $';
 
@@ -1891,6 +1919,43 @@
     return `HS ${hs4Code || '????'}`;
   }
 
+  // ── Period title ("Jan-Aug 2026" or, with no month range, "2025") ───────
+
+  function periodTitle(periodLabel, year) {
+    return periodLabel ? `${periodLabel} ${year}` : String(year);
+  }
+
+  // ── Render one flow's product tables ─────────────────────────────────────
+  // Main products card plus the two movers cards. When the flow grew, the
+  // increase table leads; when it declined, the drop table takes the first
+  // slot. Used for the current period and for the previous full year.
+
+  function renderFlowTables(els, flow, products, change, growing, periodLabel, year) {
+    renderSectionHeader(els.header, flow, periodLabel, year);
+    renderProductTable(els.table, products, periodLabel, year, flow === 'export');
+    showCard(els.header);
+
+    const incType = `${flow}Increase`;
+    const dropType = `${flow}Drop`;
+    const first = growing
+      ? { type: incType, products: change.increase }
+      : { type: dropType, products: change.drop };
+    const second = growing
+      ? { type: dropType, products: change.drop }
+      : { type: incType, products: change.increase };
+
+    if (first.products.length > 0) {
+      renderSectionHeader(els.firstHeader, first.type, periodLabel, year);
+      renderChangeTable(els.firstTable, first.products, periodLabel, year);
+      showCard(els.firstHeader);
+    }
+    if (second.products.length > 0) {
+      renderSectionHeader(els.secondHeader, second.type, periodLabel, year);
+      renderChangeTable(els.secondTable, second.products, periodLabel, year);
+      showCard(els.secondHeader);
+    }
+  }
+
   // ── Render section header ────────────────────────────────────────────────
 
   function renderSectionHeader(el, type, periodLabel, year) {
@@ -1903,7 +1968,7 @@
       importIncrease: isKa ? 'იმპორტში ყველაზე მეტად გაზრდილი პროდუქცია' : 'Most Increased Import Products',
       importDrop: isKa ? 'იმპორტში ყველაზე მეტად შემცირებული პროდუქცია' : 'Most Decreased Import Products',
     };
-    const t = `${selectedCountry.displayLabel} - ${labels[type]}, ${periodLabel} ${year}`;
+    const t = `${selectedCountry.displayLabel} - ${labels[type]}, ${periodTitle(periodLabel, year)}`;
     el.innerHTML = `<h3 class="stat-report__title">${escapeHtml(t)}</h3>`;
   }
 
@@ -1917,7 +1982,7 @@
 
     const isKa = reportLocale === 'ka';
     const hProduct = isKa ? 'პროდუქცია (HS 4-ნიშნა)' : 'Product (HS 4-digit)';
-    const hValue = isKa ? `${periodLabel} ${year}<br>მლნ. $` : `${periodLabel} ${year}<br>mln $`;
+    const hValue = `${periodTitle(periodLabel, year)}<br>${isKa ? 'მლნ. $' : 'mln $'}`;
     const hChange = isKa ? 'ცვლილება<br>%' : 'Change<br>%';
     const hReexport = isKa ? 'რეექსპორტის წილი<br>%' : 'Re-export share<br>%';
 
