@@ -1288,12 +1288,9 @@
     const lm = trade.latestMonth;
     const mn = trade.monthNames || [];
     const rank = ranking && ranking.country ? ranking.country : null;
-    // Trade ranks below the top 20 aren't useful in the prose ("47th
-    // among partners" tells the reader the partner isn't material).
-    // Hide that sentence when rank > 20; the table still shows the
-    // actual rank — only the prose is suppressed.
-    const TOP_RANK_LIMIT = 20;
-    const inTop = (r) => r && r.rank <= TOP_RANK_LIMIT;
+    // Every rank is stated in the prose; a sentence is skipped only when
+    // Geostat returned no ranking for that flow.
+    const inTop = (r) => !!(r && r.rank);
     const ov = trade.overview;
 
     const periodGen = isKa
@@ -1398,7 +1395,7 @@
         const domPct = (100 * domVal / curExp).toFixed(0);
         const reVal = rank.reExport ? rank.reExport.valueMln : (curExp - domVal);
         const rePct = (100 * reVal / curExp).toFixed(0);
-        // Volumes stay regardless; only the rank sentence drops when > 20.
+        // Volumes stay regardless; the rank sentence needs a ranking.
         const geRankSent = inTop(rank.domesticExport)
           ? ` ადგილობრივი ექსპორტით ${escapeHtml(countryName)} იკავებს ${b(`${geP(rank.domesticExport.rank)} ადგილს`)} საქართველოს სავაჭრო პარტნიორებს შორის.`
           : '';

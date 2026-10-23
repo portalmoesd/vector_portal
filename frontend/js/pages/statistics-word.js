@@ -1444,10 +1444,9 @@
     const periodLoc = isKa ? gePeriodLoc(trade.latestYear, trade.latestMonth) : null;
     const periodEn  = !isKa ? enPeriod(trade.latestYear, trade.latestMonth)  : null;
     const rank = trade.ranking && trade.ranking.country ? trade.ranking.country : null;
-    // Hide rank-prose when the country sits outside the top 20 — bare
-    // ordinals like "47th" don't add value. Volumes still render.
-    const TOP_RANK_LIMIT = 20;
-    const inTop = (r) => r && r.rank <= TOP_RANK_LIMIT;
+    // Every rank is stated in the prose; a sentence is skipped only when
+    // Geostat returned no ranking for that flow.
+    const inTop = (r) => !!(r && r.rank);
 
     const B = (s) => ({ text: s, bold: true });
     const I = (s) => ({ text: s, italics: true });
